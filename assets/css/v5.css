@@ -154,6 +154,13 @@ hr {
     color: #fff !important;
 }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .social-tags .tag {
+        padding: 1rem .5rem !important;
+        padding-top: 1.05rem !important;
+    }
+}
+
 .tag.is-primary {
     background-color: #4285F4 !important;
 }
