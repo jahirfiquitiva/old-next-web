@@ -1,0 +1,244 @@
+html, body, button, input, select, textarea {
+    font-family: 'Roboto Mono', monospace !important;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-weight: 500 !important;
+    color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.is-primary {
+    background-color: #4285F4 !important;
+}
+
+.is-primary-text {
+    color: #4285F4 !important;
+}
+
+#particles-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: -1;
+    opacity: 0.75;
+}
+
+.navbar {
+    background-color: #fafafa !important;
+}
+
+.has-shadow {
+    -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.15);
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.15);
+}
+
+.is-active {
+    color: #4285F4 !important;
+}
+
+.circular {
+    border-radius: 50% !important;
+}
+
+.container {
+    text-align: center !important;
+}
+
+.container-content {
+    display: inline-block !important;
+    text-align: center !important;
+}
+
+.content {
+    margin: auto !important;
+}
+
+@media screen
+and (min-device-width: 1200px) {
+    .container {
+        text-align: center !important;
+        max-width: 90% !important;
+    }
+
+    .content {
+        max-width: 90% !important;
+        margin: auto !important;
+    }
+}
+
+.image.avatar {
+    height: 156px;
+    width: 156px;
+}
+
+.section {
+    padding-top: 4.8rem !important;
+    padding-bottom: 0 !important;
+}
+
+.section:nth-of-type(1) {
+    padding-top: 4.8rem !important;
+}
+
+.section:nth-of-type(2n) {
+    background-color: rgba(0, 0, 0, 0.02) !important;
+}
+
+.has-text-justified {
+    text-align: justify !important;
+}
+
+hr {
+    margin-top: 4.8rem !important;
+    margin-bottom: 0.01rem !important;
+}
+
+#supporters hr {
+    margin-top: 0.1rem !important;
+    margin-bottom: 0.1rem !important;
+}
+
+.box {
+    padding: 1.6rem !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.box:hover,
+.box:focus {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.box .image {
+    text-align: center !important;
+    margin: auto !important;
+    margin-bottom: 0.8rem !important;
+}
+
+.box .title {
+    margin-top: 1.2rem !important;
+    margin-bottom: 0.8rem !important;
+    text-align: start;
+}
+
+.box .subtitle {
+    margin-top: 0 !important;
+    line-height: 1.4rem !important;
+}
+
+.tag.is-light {
+    background-color: #dfe4ea !important;
+    color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.tag.is-success {
+    background-color: #7bed9f !important;
+    color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.tag.is-danger {
+    background-color: #ff6b81 !important;
+    color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.social-tags .tag {
+    padding: 1rem .5rem !important;
+    color: #fff !important;
+}
+
+.tag.is-primary {
+    background-color: #4285F4 !important;
+}
+
+.tag.is-twitter {
+    background-color: #1da1f2 !important;
+}
+
+.tag.is-linked-in {
+    background-color: #0077b5 !important;
+}
+
+.tag.is-google-plus {
+    background-color: #ea4335 !important;
+}
+
+.tag.is-google-play {
+    background-color: #7bed9f !important;
+    color: rgba(0, 0, 0, 0.54) !important;
+}
+
+.tag.is-github {
+    background-color: #333 !important;
+}
+
+.tag.is-dribbble {
+    background-color: #ea4c89 !important;
+}
+
+.tag.is-instagram {
+    background-color: #833ab4 !important;
+}
+
+.tag.is-youtube {
+    background-color: #ff0000 !important;
+}
+
+.footer {
+    margin-top: 4.8rem !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 2.4rem !important;
+    background-color: rgba(0, 0, 0, 0.025) !important;
+}
+
+.footer .content {
+    margin-top: 1.6rem !important;
+}
+
+.box.supporter {
+    padding: 0.4rem 0.8rem !important;
+}
+
+.box.supporter .image {
+    margin: 0 !important;
+}
+
+.box.supporter h6 {
+    margin: 0 !important;
+    margin-left: 0.8rem !important;
+}
+
+.box.supporter h6:hover,
+.box.supporter h6:focus {
+    color: #4285F4 !important;
+}
+
+.bmc-button img {
+    width: 27px !important;
+    margin-bottom: 3px !important;
+    margin-right: 4px !important;
+    box-shadow: none !important;
+    border: none !important;
+    vertical-align: middle !important;
+}
+
+.paypal {
+    color: #ffffff !important;
+    background-color: #003087 !important;
+}
+
+.box.supporter.btns a:hover,
+.box.supporter.btns a:focus {
+    color: #ffffff !important;
+}
+
+.paypal .mdi {
+    margin-right: 0.8rem !important;
+}

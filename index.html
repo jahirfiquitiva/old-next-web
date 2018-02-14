@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+        <!--[if IE]>
+        <meta http-equiv="cleartype" content="on"/><![endif]-->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Jahir Fiquitiva</title>
+        <meta name="description"
+              content="A website to show information about me, my skills and my portfolio">
+        <meta name="author" content="Jahir Fiquitiva">
+        <meta name="keywords"
+              content="portfolio, skills, developer, development, android, material, material design, kotlin, java, javascript, css, html, python, c, c++, design, iconography, illustration">
+
+        <meta property="og:title" content="Jahir Fiquitiva"/>
+        <meta property="og:site_name" content="Jahir Fiquitiva"/>
+
+        <!-- Schema.org markup for Google+ -->
+        <meta itemprop="name" content="Jahir Fiquitiva">
+        <meta itemprop="description"
+              content="A website to show information about me, my skills and my portfolio">
+        <meta itemprop="image"
+              content="https://github.com/jahirfiquitiva/Website-Resources/raw/master/myself/logo-full-sm.png">
+
+        <!-- Open Graph data -->
+        <meta property="og:title" content="Jahir Fiquitiva"/>
+        <meta property="og:type" content="portfolio"/>
+        <meta property="og:url" content="https://www.jahirfiquitiva.me/"/>
+        <meta property="og:image"
+              content="https://github.com/jahirfiquitiva/Website-Resources/raw/master/myself/logo-full-sm.png"/>
+        <meta property="og:description"
+              content="A website to show information about me, my skills and my portfolio"/>
+        <meta property="og:site_name" content="Jahir Fiquitiva"/>
+        <meta property="og:locale" content="en_US"/>
+        <link rel="canonical" href="https://www.jahirfiquitiva.me/"/>
+
+        <!-- Twitter -->
+        <!-- Twitter Card data -->
+        <meta name="twitter:card"
+              content="A website to show information about me, my skills and my portfolio">
+        <meta name="twitter:site" content="@jahirfiquitiva">
+        <meta name="twitter:title" content="Jahir Fiquitiva">
+        <meta name="twitter:description"
+              content="A website to show information about me, my skills and my portfolio">
+        <meta name="twitter:creator" content="@jahirfiquitiva">
+        <!-- Twitter summary card with large image must be at least 280x150px -->
+        <meta name="twitter:image:src"
+              content="https://github.com/jahirfiquitiva/Website-Resources/raw/master/myself/logo-full-sm.png">
+
+        <!-- Google Verification -->
+        <link href="https://plus.google.com/+JahirFiquitivaR/" rel="publisher"/>
+        <meta name="google-site-verification"
+              content="lJwL3cKpjX_Eqp6yEY4hsydJazQl85xv29ZUmEg4oEE"/>
+
+        <!-- Theme Colors -->
+        <meta name="theme-color" content="#FAFAFA">
+        <meta name="msapplication-TileColor" content="#FAFAFA">
+        <meta name="msapplication-navbutton-color" content="#FAFAFA">
+
+        <!-- Favicons -->
+        <link rel="shortcut icon"
+              href="https://github.com/jahirfiquitiva/Website-Resources/raw/master/myself/favicon32.png">
+        <link rel="apple-touch-icon"
+              href="https://github.com/jahirfiquitiva/Website-Resources/raw/master/myself/favicon57.png">
+        <link rel="apple-touch-icon" sizes="72x72"
+              href="https://github.com/jahirfiquitiva/Website-Resources/raw/master/myself/favicon72.png">
+        <link rel="apple-touch-icon" sizes="114x114"
+              href="https://github.com/jahirfiquitiva/Website-Resources/raw/master/myself/favicon114.png">
+        <link rel="apple-touch-icon-precomposed"
+              href="https://github.com/jahirfiquitiva/Website-Resources/raw/master/myself/favicon32.png">
+        <link rel="icon"
+              href="https://github.com/jahirfiquitiva/Website-Resources/raw/master/myself/favicon32.png"
+              sizes="32x32">
+        <meta name="msapplication-TileImage"
+              content="https://github.com/jahirfiquitiva/Website-Resources/raw/master/myself/favicon32.png">
+
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"/>
+
+        <link rel="stylesheet"
+              href="https://cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
+
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700">
+
+        <link rel="stylesheet" href="assets/css/v5.css" media="all">
+    </head>
+    <body>
+        <div id="particles-bg"></div>
+
+        <nav class="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item is-primary-text" href="/">
+                    <img src="assets/img/logo-small.svg" alt="Jahir Fiquitiva" height="48"
+                         width="48" id="logo">
+                    Jahir Fiquitiva
+                </a>
+
+                <button class="button navbar-burger" data-target="nav-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-menu" id="nav-menu">
+                    <a class="navbar-item is-active" onclick="scrollToItem('home')" id="home-link">
+                        Home
+                    </a>
+                    <a class="navbar-item" onclick="scrollToItem('skills')" id="skills-link">
+                        Skills
+                    </a>
+                    <a class="navbar-item" onclick="scrollToItem('portfolio')" id="portfolio-link">
+                        Portfolio
+                    </a>
+                    <a class="navbar-item" href="https://www.jahirfiquitiva.me/thanks/">
+                        Supporters
+                    </a>
+                    <a class="navbar-item" href="https://github.com/jahirfiquitiva/ama">
+                        AMA
+                    </a>
+                    <a class="navbar-item" href="https://www.jahirfiquitiva.me/contact/">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="section" id="home">
+            <div class="container is-vcentered">
+                <div class="container-content has-text-centered">
+                    <figure class="image avatar">
+                        <img src="https://raw.githubusercontent.com/jahirfiquitiva/Website-Resources/master/myself/me-square.png"
+                             class="circular has-shadow">
+                    </figure>
+                </div>
+                <br><br><br>
+                <div class="content has-text-justified">
+                    <h1>Hi, I am Jahir Fiquitiva</h1>
+                    <h4>A passionate and creative Android and Front-End developer</h4>
+                    <p>I was born on January 28th, 1997 in Duitama, <a
+                            href="https://www.youtube.com/watch?v=rTsPaAIJdnw"
+                            target="_blank">Colombia</a>.<br>
+                       I code, design, translate and consult.
+                    </p>
+                    <p>Ever since I was a child, I have been interested in technology, software and
+                       robotics.<br>
+                       After I graduated from <a
+                                href="http://www.salesianosbogota.org/index.php/duitama"
+                                target="_blank">Salesian School</a> in 2012, I started creating,
+                       designing
+                       and programming a couple of robots.<br>
+                       Then I got interested in learning to develop Android apps. I started with
+                       simple things, like customization and theme apps, which you can find and
+                       download <a href="https://play.google.com/store/apps/developer?id=MinDesigns"
+                                   target="_blank">clicking here</a>.
+                    </p>
+                    <p>
+                        While I was working with robots and small Android projects, I got even more
+                        interested in programming, and since late 2014 I have been learning many
+                        things that have allowed me to start building and developing
+                        <a onclick="scrollToItem('portfolio')">my own apps</a>.
+                    </p>
+                    <p>I am currently studying <b>Systems and Computing Engineering</b>
+                        <i>(an equivalent to Computer Science)</i> at
+                        <b>Pedagogical and Technological University of Colombia</b> and
+                       I am the <b>Lead Android Developer</b> at
+                        <a href="https://vez.io/" target="_blank">Vezio, Inc.</a>
+                    </p>
+                    <p>I consider myself a inquisitive person, always trying to learn new skills or
+                       improve existing ones. I'd also like to be part of your next project!</p>
+                    <p>Additionally, if you like any of the things I do, please consider
+                        <a href="https://www.jahirfiquitiva.me/donate/" target="_blank">
+                            supporting my work</a>.<br>
+                        <a href="https://www.jahirfiquitiva.me/thanks/" target="_blank">
+                            Huge thanks to all the amazing people that already do!</a>
+                    </p>
+                    <p>
+                        You can also <b>find me on</b>:
+                    <div class="tags social-tags is-vcentered">
+                        <a class="tag is-github is-medium" target="_blank"
+                           href="https://github.com/jahirfiquitiva">
+                            <i class="mdi mdi-18px mdi-github-circle"></i>
+                        </a>
+                        <a class="tag is-twitter is-medium" target="_blank"
+                           href="https://twitter.com/jahirfiquitiva">
+                            <i class="mdi mdi-18px mdi-twitter"></i>
+                        </a>
+                        <a class="tag is-google-plus is-medium" target="_blank"
+                           href="https://google.com/+JahirFiquitivaR">
+                            <i class="mdi mdi-18px mdi-google-plus"></i>
+                        </a>
+                        <a class="tag is-linked-in is-medium" target="_blank"
+                           href="https://www.linkedin.com/in/jahir-fiquitiva-co">
+                            <i class="mdi mdi-18px mdi-linkedin"></i>
+                        </a>
+                        <a class="tag is-google-play is-medium" target="_blank"
+                           href="https://play.google.com/store/apps/dev?id=7438639276314720952">
+                            <i class="mdi mdi-18px mdi-google-play"></i>
+                        </a>
+                        <a class="tag is-instagram is-medium" target="_blank"
+                           href="http://instagram.com/_u/jahirfiquitiva">
+                            <i class="mdi mdi-18px mdi-instagram"></i>
+                        </a>
+                        <a class="tag is-dribbble is-medium" target="_blank"
+                           href="https://dribbble.com/jahirfiquitiva">
+                            <i class="mdi mdi-18px mdi-dribbble"></i>
+                        </a>
+                        <a class="tag is-primary is-medium"
+                           href="https://www.jahirfiquitiva.me/contact/">
+                            <i class="mdi mdi-18px mdi-email"></i>
+                        </a>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="container is-vcentered">
+                <div class="content has-text-justified">
+                    <h1>Skills</h1>
+                    <h4>Learning is a never-ending process</h4>
+                    <br>
+                    <div class="columns is-multiline is-mobile">
+                        <div class="column is-mobile is-one-third-tablet is-one-third-desktop">
+                            <h6>Programming Languages</h6>
+                            <ul>
+                                <li>Kotlin</li>
+                                <li>Java</li>
+                                <li>Python</li>
+                                <li>JavaScript</li>
+                                <li>HTML5/CSS3</li>
+                            </ul>
+                        </div>
+                        <div class="column is-mobile is-one-third-tablet is-one-third-desktop">
+                            <h6>General</h6>
+                            <ul>
+                                <li>Android Development</li>
+                                <li>Git</li>
+                                <li>Material Design</li>
+                                <li>Adobe Illustrator</li>
+                                <li>Product Iconography</li>
+                                <li>Illustration</li>
+                                <li>UI/UX</li>
+                            </ul>
+                        </div>
+                        <div class="column is-mobile is-one-third-tablet is-one-third-desktop">
+                            <h6>Languages</h6>
+                            <ul>
+                                <li>Spanish (native)</li>
+                                <li>English (fluid)</li>
+                                <li>Italian (basic)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="portfolio">
+            <div class="container is-vcentered">
+                <div class="content has-text-justified">
+                    <h1>Portfolio</h1>
+                    <h4>Current and past projects of mine</h4>
+                    <br>
+                    <div class="columns is-multiline is-mobile">
+                        <div class="column is-mobile is-one-third-tablet is-one-third-desktop">
+                            <a href="https://github.com/jahirfiquitiva/Blueprint/" target="_blank">
+                                <div class="box">
+                                    <figure class="image is-128x128">
+                                        <img src="https://github.com/jahirfiquitiva/Blueprint/raw/master/art/app_logo.png"
+                                             alt="Blueprint icon">
+                                    </figure>
+                                    <h5 class="title"><b>Blueprint</b> <span class="tag is-success">new</span>
+                                        <span class="tag is-light">dashboard</span>
+                                    </h5>
+                                    <p class="subtitle is-6">A Material Design dashboard for
+                                                             creating Android icon packs
+                                                             easily.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="column is-mobile is-one-third-tablet is-one-third-desktop">
+                            <a href="https://github.com/jahirfiquitiva/Frames/" target="_blank">
+                                <div class="box">
+                                    <figure class="image is-128x128">
+                                        <img src="https://www.jahirfiquitiva.me/assets/img/portfolio/apps/frames.png"
+                                             alt="Frames icon">
+                                    </figure>
+                                    <h5 class="title"><b>Frames</b> <span class="tag is-light">dashboard</span>
+                                    </h5>
+                                    <p class="subtitle is-6">A Material Design dashboard for
+                                                             creating Android wallpapers apps
+                                                             easily.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="column is-mobile is-one-third-tablet is-one-third-desktop">
+                            <a href="https://github.com/jahirfiquitiva/Kuper/" target="_blank">
+                                <div class="box">
+                                    <figure class="image is-128x128">
+                                        <img src="https://www.jahirfiquitiva.me/assets/img/portfolio/apps/kuper.png"
+                                             alt="Kuper icon">
+                                    </figure>
+                                    <h5 class="title"><b>Kuper</b> <span class="tag is-light">dashboard</span>
+                                    </h5>
+                                    <p class="subtitle is-6">A Material Design dashboard for Zooper
+                                                             and Kustom widget packs.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="column is-mobile is-one-third-tablet is-one-third-desktop">
+                            <a href="https://github.com/jahirfiquitiva/FABsMenu/" target="_blank">
+                                <div class="box">
+                                    <figure class="image is-128x128">
+                                        <img src="https://www.jahirfiquitiva.me/assets/img/portfolio/libs/fabsmenu.png"
+                                             alt="FABsMenu icon">
+                                    </figure>
+                                    <h5 class="title"><b>FABsMenu</b> <span class="tag is-light">library</span>
+                                    </h5>
+                                    <p class="subtitle is-6">An Android library to create a Floating
+                                                             Action Button Menus following Material
+                                                             Design guidelines.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="column is-mobile is-one-third-tablet is-one-third-desktop">
+                            <a href="https://play.google.com/store/apps/details?id=jahirfiquitiva.apps.queep"
+                               target="_blank">
+                                <div class="box">
+                                    <figure class="image is-128x128">
+                                        <img src="https://www.jahirfiquitiva.me/assets/img/portfolio/apps/tap-keep.png"
+                                             alt="Tap for Keep icon">
+                                    </figure>
+                                    <h5 class="title"><b>Tap for Keep</b> <span
+                                            class="tag is-light">app</span></h5>
+                                    <p class="subtitle is-6">A Floating Action Button for quickly
+                                                             creating notes in Google Keep.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="column is-mobile is-one-third-tablet is-one-third-desktop">
+                            <a href="https://play.google.com/store/apps/details?id=jahirfiquitiva.apps.tap"
+                               target="_blank">
+                                <div class="box">
+                                    <figure class="image is-128x128">
+                                        <img src="https://www.jahirfiquitiva.me/assets/img/portfolio/apps/tap-todoist.png"
+                                             alt="Tap for Todoist icon">
+                                    </figure>
+                                    <h5 class="title"><b>Tap for Todoist</b> <span
+                                            class="tag is-light">app</span></h5>
+                                    <p class="subtitle is-6">A Floating Action Button for quickly
+                                                             creating tasks in Todoist.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="column is-mobile is-one-third-tablet is-one-third-desktop">
+                            <a href="https://play.google.com/store/apps/details?id=jahirfiquitiva.themes.meliornui"
+                               target="_blank">
+                                <div class="box">
+                                    <figure class="image is-128x128">
+                                        <img src="https://www.jahirfiquitiva.me/assets/img/portfolio/apps/melior-nui.png"
+                                             alt="Melior NUI icon">
+                                    </figure>
+                                    <h5 class="title"><b>Melior NUI</b> <span class="tag is-light">theme</span>
+                                    </h5>
+                                    <p class="subtitle is-6">A Material Design theme for LineageOS
+                                                             Theme Engine.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="column is-mobile is-one-third-tablet is-one-third-desktop">
+                            <a href="https://play.google.com/store/apps/details?id=com.heinrichreimersoftware.androidissuereporter.example"
+                               target="_blank">
+                                <div class="box">
+                                    <figure class="image is-128x128">
+                                        <img src="https://www.jahirfiquitiva.me/assets/img/portfolio/iconography/androidissuereporter_product_icon.png"
+                                             alt="Android Issue Reporter icon">
+                                    </figure>
+                                    <h5 class="title"><b>Android Issue Reporter</b> <span
+                                            class="tag is-light">icon</span></h5>
+                                    <p class="subtitle is-6">A product icon for the app.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="column is-mobile is-one-third-tablet is-one-third-desktop">
+                            <a href="https://play.google.com/store/apps/details?id=com.NxIndustries.Sapphire"
+                               target="_blank">
+                                <div class="box">
+                                    <figure class="image is-128x128">
+                                        <img src="https://www.jahirfiquitiva.me/assets/img/portfolio/iconography/sapphirelauncher_product_icon.png"
+                                             alt="Sapphire Launcher icon">
+                                    </figure>
+                                    <h5 class="title"><b>Sapphire Launcher</b> <span
+                                            class="tag is-light">icon</span></h5>
+                                    <p class="subtitle is-6">A product icon for the app.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="column is-mobile is-one-third-tablet is-one-third-desktop">
+                            <a href="https://play.google.com/store/apps/details?id=com.heinrichreimersoftware.singleinputform.example"
+                               target="_blank">
+                                <div class="box">
+                                    <figure class="image is-128x128">
+                                        <img src="https://www.jahirfiquitiva.me/assets/img/portfolio/iconography/singleform_product_icon.png"
+                                             alt="Material Single Input Form icon">
+                                    </figure>
+                                    <h5 class="title"><b>Material Single Input Form</b> <span
+                                            class="tag is-light">icon</span></h5>
+                                    <p class="subtitle is-6">A product icon for the app.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="column is-mobile is-one-third-tablet is-one-third-desktop">
+                            <a href="https://play.google.com/store/apps/details?id=com.heinrichreimersoftware.materialdrawerdemo"
+                               target="_blank">
+                                <div class="box">
+                                    <figure class="image is-128x128">
+                                        <img src="https://www.jahirfiquitiva.me/assets/img/portfolio/iconography/materialdrawer_product_icon.png"
+                                             alt="Material Drawer icon">
+                                    </figure>
+                                    <h5 class="title"><b>Material Drawer</b> <span
+                                            class="tag is-light">icon</span></h5>
+                                    <p class="subtitle is-6">A product icon for the app.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="column is-mobile is-one-third-tablet is-one-third-desktop">
+                            <a href="https://github.com/jahirfiquitiva/IconShowcase-Dashboard/"
+                               target="_blank">
+                                <div class="box">
+                                    <figure class="image is-128x128">
+                                        <img src="https://www.jahirfiquitiva.me/assets/img/portfolio/apps/iconshowcase.png"
+                                             alt="IconShowcase icon">
+                                    </figure>
+                                    <h5 class="title"><b>IconShowcase</b> <span
+                                            class="tag is-danger">deprecated</span>
+                                        <span class="tag is-light">dashboard</span>
+                                    </h5>
+                                    <p class="subtitle is-6">A Material Design dashboard for
+                                                             creating Android icon packs
+                                                             easily.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="container-content">
+                    <div class="tags social-tags is-vcentered">
+                        <a class="tag is-github is-medium" target="_blank"
+                           href="https://github.com/jahirfiquitiva">
+                            <i class="mdi mdi-18px mdi-github-circle"></i>
+                        </a>
+                        <a class="tag is-twitter is-medium" target="_blank"
+                           href="https://twitter.com/jahirfiquitiva">
+                            <i class="mdi mdi-18px mdi-twitter"></i>
+                        </a>
+                        <a class="tag is-google-plus is-medium" target="_blank"
+                           href="https://google.com/+JahirFiquitivaR">
+                            <i class="mdi mdi-18px mdi-google-plus"></i>
+                        </a>
+                        <a class="tag is-linked-in is-medium" target="_blank"
+                           href="https://www.linkedin.com/in/jahir-fiquitiva-co">
+                            <i class="mdi mdi-18px mdi-linkedin"></i>
+                        </a>
+                        <a class="tag is-google-play is-medium" target="_blank"
+                           href="https://play.google.com/store/apps/dev?id=7438639276314720952">
+                            <i class="mdi mdi-18px mdi-google-play"></i>
+                        </a>
+                        <a class="tag is-instagram is-medium" target="_blank"
+                           href="http://instagram.com/_u/jahirfiquitiva">
+                            <i class="mdi mdi-18px mdi-instagram"></i>
+                        </a>
+                        <a class="tag is-dribbble is-medium" target="_blank"
+                           href="https://dribbble.com/jahirfiquitiva">
+                            <i class="mdi mdi-18px mdi-dribbble"></i>
+                        </a>
+                        <a class="tag is-primary is-medium"
+                           href="https://www.jahirfiquitiva.me/contact/">
+                            <i class="mdi mdi-18px mdi-email"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="content has-text-centered">
+                    <p>
+                        <i class="mdi mdi-code-tags mdi-18px"></i> with
+                        <i class="mdi mdi-heart mdi-18px"></i> by
+                        <a href="#"><b>Jahir Fiquitiva</b></a> © 2018
+                    </p>
+                    <p>
+                        Previous versions of this website can be found <a
+                            href="https://github.com/jahirfiquitiva/jahirfiquitiva.me/"
+                            target="_blank">on GitHub</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Particles -->
+        <script type="text/javascript" src="assets/libs/js/particles.min.js"></script>
+        <!-- Theme -->
+        <script type="text/javascript" src="assets/js/main.js"></script>
+        <script type="text/javascript" src="assets/js/scroll.js"></script>
+        <!-- ReCaptcha -->
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+    </body>
+</html>
