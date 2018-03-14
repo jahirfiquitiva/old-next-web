@@ -88,6 +88,8 @@
               href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700">
 
         <link rel="stylesheet" href="assets/css/v5.css" media="all">
+        <link rel="stylesheet" href="assets/css/recaptcha.css" media="all">
+        <link rel="stylesheet" href="assets/css/snackbar.css" media="all" id="snack-css">
     </head>
     <body>
         <div id="particles-bg"></div>
@@ -118,14 +120,11 @@
                     <a class="navbar-item" onclick="scrollToItem('portfolio')" id="portfolio-link">
                         Portfolio
                     </a>
+                    <a class="navbar-item" onclick="scrollToItem('contact')" id="contact-link">
+                        Contact
+                    </a>
                     <a class="navbar-item" href="https://www.jahirfiquitiva.me/thanks/">
                         Supporters
-                    </a>
-                    <a class="navbar-item" href="https://github.com/jahirfiquitiva/ama">
-                        AMA
-                    </a>
-                    <a class="navbar-item" href="https://www.jahirfiquitiva.me/contact/">
-                        Contact
                     </a>
                 </div>
             </div>
@@ -212,7 +211,7 @@
                             <i class="mdi mdi-18px mdi-dribbble"></i>
                         </a>
                         <a class="tag is-primary is-medium"
-                           href="https://www.jahirfiquitiva.me/contact/">
+                           onclick="scrollToItem('contact')">
                             <i class="mdi mdi-18px mdi-email"></i>
                         </a>
                     </div>
@@ -452,10 +451,118 @@
                         </div>
                     </div>
                 </div>
+                <hr>
             </div>
         </section>
 
-        <footer class="footer">
+        <section class="section contacto" id="contact">
+            <div class="container is-vcentered">
+                <div class="content has-text-justified">
+                    <h1>Get in Touch</h1>
+                    <h4>Don't hesitate contacting me!</h4>
+                    <br>
+                    <form id="contact-form" action="assets/contact/submit.php"
+                          method="post" onsubmit="return submitForm();">
+                        <div class="field is-horizontal">
+                            <div class="field-label is-normal">
+                                <label class="label">From</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <p class="control is-expanded has-icons-left">
+                                        <input class="input" type="text" placeholder="Jon Doe"
+                                               id="name" name="name"
+                                               required aria-required="true">
+                                        <span class="icon is-small is-left">
+                                         <i class="mdi mdi-account"></i>
+                                    </span>
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <p class="control is-expanded has-icons-left has-icons-right">
+                                        <input class="input" type="email" id="email" name="email"
+                                               placeholder="jon.doe@example.com"
+                                               required aria-required="true">
+                                        <span class="icon is-small is-left">
+                                         <i class="mdi mdi-email"></i>
+                                    </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal">
+                            <div class="field-label is-normal">
+                                <label class="label">Subject</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <input class="input" type="text"
+                                               placeholder="e.g. Let's work together"
+                                               id="subject" name="subject"
+                                               required aria-required="true">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal">
+                            <div class="field-label is-normal">
+                                <label class="label">Message</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                    <textarea class="textarea"
+                                              placeholder="Hi Jahir..."
+                                              id="message" name="message"
+                                              required aria-required="true"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal">
+                            <div class="field-label">
+                                <!-- Left empty for spacing -->
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <div id="captcha" class="g-recaptcha"
+                                             data-sitekey="6Lc-aCkTAAAAAOoMbUV54l-MyK4wWuqOLpMnS4pe">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field is-horizontal">
+                            <div class="field-label">
+                                <!-- Left empty for spacing -->
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control">
+                                        <button class="button is-primary"
+                                                name="action" type="submit" id="submit">
+                                            Send message
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div id="coming-soon" class="snackbar">Coming soon! :D</div>
+        <div id="captcha-snack" class="snackbar">Please confirm you are a human</div>
+        <div id="email-snack" class="snackbar">Please enter a correct email address</div>
+
+        <footer class="footer no-top-margin">
             <div class="container">
                 <div class="container-content">
                     <div class="tags social-tags is-vcentered">
@@ -488,7 +595,7 @@
                             <i class="mdi mdi-18px mdi-dribbble"></i>
                         </a>
                         <a class="tag is-primary is-medium"
-                           href="https://www.jahirfiquitiva.me/contact/">
+                           onclick="scrollToItem('contact')">
                             <i class="mdi mdi-18px mdi-email"></i>
                         </a>
                     </div>
@@ -499,11 +606,6 @@
                         <i class="mdi mdi-heart mdi-18px"></i> by
                         <a href="#"><b>Jahir Fiquitiva</b></a> © 2018
                     </p>
-                    <p>
-                        Previous versions of this website can be found <a
-                            href="https://github.com/jahirfiquitiva/jahirfiquitiva.me/"
-                            target="_blank">on GitHub</a>
-                    </p>
                 </div>
             </div>
         </footer>
@@ -513,6 +615,7 @@
         <!-- Theme -->
         <script type="text/javascript" src="assets/js/main.js"></script>
         <script type="text/javascript" src="assets/js/scroll.js"></script>
+        <script type="text/javascript" src="assets/js/contact.js"></script>
         <!-- ReCaptcha -->
         <script src='https://www.google.com/recaptcha/api.js'></script>
     </body>

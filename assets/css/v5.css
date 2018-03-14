@@ -1,10 +1,82 @@
 html, body, button, input, select, textarea {
     font-family: 'Roboto Mono', monospace !important;
+    line-height: 1.8 !important;
+    color: #424242;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar-brand {
     font-weight: 500 !important;
     color: rgba(0, 0, 0, 0.87) !important;
+}
+
+a,
+a:visited {
+    color: #4a4a4a !important;
+}
+
+a:focus,
+a:hover {
+    color: #4285F4 !important;
+    opacity: 1.0;
+    font-weight: bold;
+}
+
+a {
+    color: #4a4a4a !important;
+    border: 0.12rem #4285F4 !important;
+    border-bottom-style: solid !important;
+}
+
+nav a,
+.social-tags .tag,
+#supporters a,
+#donation a {
+    border: 0 rgba(0, 0, 0, 0) !important;
+    padding-bottom: 0.4rem !important;
+}
+
+.content h1,
+.content h4 {
+    margin-top: 0.6rem !important;
+    margin-bottom: 1.6rem !important;
+}
+
+.content blockquote:not(:last-child),
+.content dl:not(:last-child),
+.content ol:not(:last-child),
+.content p:not(:last-child),
+.content pre:not(:last-child),
+.content table:not(:last-child),
+.content ul:not(:last-child) {
+    margin-bottom: 1.6rem !important;
+    margin-top: 1.6rem !important;
+}
+
+.navbar-brand .navbar-item {
+    font-size: 1.1rem !important;
+    color: #4285F4 !important;
+}
+
+.navbar-menu .navbar-item {
+    text-transform: uppercase !important;
+    color: rgba(0, 0, 0, 0.54) !important;
+    padding-left: 1.05rem !important;
+    padding-right: 1.05rem !important;
+    letter-spacing: 0.05rem !important;
+}
+
+button,
+.button {
+    text-transform: uppercase !important;
+    line-height: 1.5 !important;
+    font-weight: 500 !important;
+}
+
+.navbar-menu .navbar-item:hover,
+.navbar-menu .navbar-item:focus,
+.navbar-menu .navbar-item.is-active {
+    font-weight: bold !important;
+    color: #4285F4 !important;
 }
 
 .is-primary {
@@ -131,7 +203,7 @@ hr {
 
 .box .subtitle {
     margin-top: 0 !important;
-    line-height: 1.4rem !important;
+    line-height: 1.55rem !important;
 }
 
 .tag.is-light {
@@ -150,7 +222,7 @@ hr {
 }
 
 .social-tags .tag {
-    padding: 1rem .5rem !important;
+    padding: 1.05rem .5rem !important;
     color: #fff !important;
 }
 
@@ -203,6 +275,14 @@ hr {
     border-top: 1px solid rgba(0, 0, 0, 0.12);
     padding: 2.4rem !important;
     background-color: rgba(0, 0, 0, 0.025) !important;
+}
+
+.no-top-margin {
+    margin-top: 0 !important;
+}
+
+.contacto {
+    padding-bottom: 4.8rem !important;
 }
 
 .footer .content {

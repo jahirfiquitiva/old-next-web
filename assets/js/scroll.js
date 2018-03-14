@@ -2,12 +2,15 @@ window.addEventListener('scroll', function () {
     var yPosition = (window.pageYOffset | document.body.scrollTop) + 2;
     var skillsTop = getElementTop('skills');
     var portfolioTop = getElementTop('portfolio');
+    var contactTop = getElementTop('contact');
     if (yPosition < skillsTop) {
         toggleLink('home');
     } else if (yPosition < portfolioTop) {
         toggleLink('skills');
-    } else {
+    } else if (yPosition < contactTop) {
         toggleLink('portfolio');
+    } else {
+        toggleLink('contact');
     }
 });
 
