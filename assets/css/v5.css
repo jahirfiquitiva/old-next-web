@@ -4,6 +4,24 @@ html, body, button, input, select, textarea {
     color: #424242;
 }
 
+[data-balloon]:after {
+    font-family: 'Roboto Mono', monospace !important;
+    font-weight: 400 !important;
+    font-size: 0.8rem !important;
+}
+
+[data-balloon-length] {
+  word-break: break-word !important;
+}
+
+[data-balloon][data-balloon-pos="up"]:after {
+    margin-bottom: 12px !important;
+}
+
+[data-balloon][data-balloon-pos="down"]:after {
+    margin-top: 10px !important;
+}
+
 h1, h2, h3, h4, h5, h6, .navbar-brand {
     font-weight: 500 !important;
     color: rgba(0, 0, 0, 0.87) !important;
