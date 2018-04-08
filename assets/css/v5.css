@@ -1,17 +1,30 @@
-html, body, button, input, select, textarea {
-    font-family: 'Roboto Mono', monospace !important;
-    line-height: 1.8 !important;
+@font-face {
+    font-family: "Track";
+    src: url(../fonts/Track.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Fira Code";
+    src: url(https://github.com/tonsky/FiraCode/raw/master/distr/ttf/FiraCode-Retina.ttf) format("monospace");
+}
+
+html, body, button, input, select, textarea,
+#supporters h6 {
+    font-family: 'Rubik', sans-serif !important;
+    line-height: 2 !important;
+    font-weight: 400 !important;
     color: #424242;
+    color: rgba(0, 0, 0, 0.87) !important;
 }
 
 [data-balloon]:after {
-    font-family: 'Roboto Mono', monospace !important;
-    font-weight: 400 !important;
+    font-family: 'Rubik', sans-serif !important;
+    font-weight: 500 !important;
     font-size: 0.8rem !important;
 }
 
 [data-balloon-length] {
-  word-break: break-word !important;
+    word-break: break-word !important;
 }
 
 [data-balloon][data-balloon-pos="up"]:after {
@@ -22,7 +35,36 @@ html, body, button, input, select, textarea {
     margin-top: 10px !important;
 }
 
+h1 {
+    font-size: 2.4rem !important;
+}
+
+h2 {
+    font-size: 2.0rem !important;
+}
+
+h3 {
+    font-size: 1.7rem !important;
+}
+
+h4 {
+    font-size: 1.4rem !important;
+}
+
+h5 {
+    font-size: 1.3rem !important;
+}
+
+h6 {
+    font-size: 1.2rem !important;
+}
+
+body {
+    font-size: 1.1rem !important;
+}
+
 h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Track', sans-serif !important;
     font-weight: 500 !important;
     color: rgba(0, 0, 0, 0.87) !important;
 }
@@ -41,16 +83,29 @@ a:hover {
 
 a {
     color: #4a4a4a !important;
+    padding-bottom: 0.1rem !important;
     border: 0.12rem #4285F4 !important;
     border-bottom-style: solid !important;
 }
 
 nav a,
-.social-tags .tag,
+.social-tags, .tag,
 #supporters a,
 #donation a {
     border: 0 rgba(0, 0, 0, 0) !important;
     padding-bottom: 0.4rem !important;
+}
+
+.title .tag {
+    border: 0 rgba(0, 0, 0, 0) !important;
+    font-size: 0.7rem !important;
+    padding-top: 0.2rem !important;
+    padding-bottom: 0 !important;
+}
+
+.patreon {
+    margin-top: 0.6rem !important;
+    padding-bottom: 0 !important;
 }
 
 .content h1,
@@ -73,14 +128,29 @@ nav a,
 .navbar-brand .navbar-item {
     font-size: 1.1rem !important;
     color: #4285F4 !important;
+    padding-bottom: 0rem !important;
+}
+
+.navbar-item img {
+    padding-bottom: 0.4rem !important;
 }
 
 .navbar-menu .navbar-item {
+    font-size: 1.1rem !important;
+    font-family: 'Track', sans-serif !important;
     text-transform: uppercase !important;
     color: rgba(0, 0, 0, 0.54) !important;
+    padding-bottom: 0rem !important;
     padding-left: 1.05rem !important;
     padding-right: 1.05rem !important;
     letter-spacing: 0.05rem !important;
+    font-weight: 500 !important;
+}
+
+.navbar-menu .navbar-item:hover,
+.navbar-menu .navbar-item:focus,
+.navbar-menu .navbar-item.is-active {
+    color: #4285F4 !important;
 }
 
 button,
@@ -90,15 +160,9 @@ button,
     font-weight: 500 !important;
 }
 
-.navbar-menu .navbar-item:hover,
-.navbar-menu .navbar-item:focus,
-.navbar-menu .navbar-item.is-active {
-    font-weight: bold !important;
-    color: #4285F4 !important;
-}
-
 .is-primary {
     background-color: #4285F4 !important;
+    color: #fff !important;
 }
 
 .is-primary-text {
@@ -122,7 +186,7 @@ button,
 }
 
 .navbar {
-    background-color: #fafafa !important;
+    background-color: #fcfcfc !important;
 }
 
 .has-shadow {
@@ -165,8 +229,8 @@ and (min-device-width: 1200px) {
 }
 
 .image.avatar {
-    height: 156px;
-    width: 156px;
+    height: 192px;
+    width: 192px;
 }
 
 .section {
@@ -189,6 +253,7 @@ and (min-device-width: 1200px) {
 hr {
     margin-top: 4.8rem !important;
     margin-bottom: 0.01rem !important;
+    height: 0.075rem !important;
 }
 
 #supporters hr {
@@ -197,20 +262,22 @@ hr {
 }
 
 .box {
+    border-radius: 3px !important;
     padding: 1.6rem !important;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1);;
     transition: box-shadow 0.3s ease-in-out;
 }
 
 .box:hover,
 .box:focus {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1);;
 }
 
 .box .image {
     text-align: center !important;
-    margin: auto !important;
-    margin-bottom: 0.8rem !important;
+    margin: 0 auto 1.75rem !important;
 }
 
 .box .title {
@@ -220,8 +287,9 @@ hr {
 }
 
 .box .subtitle {
-    margin-top: 0 !important;
+    margin-top: 0.4rem !important;
     line-height: 1.55rem !important;
+    color: rgba(0, 0, 0, 0.87) !important;
 }
 
 .tag.is-light {
