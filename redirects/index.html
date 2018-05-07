@@ -30,7 +30,8 @@
                             var url = social[args.t].url + (args.d != null ? "/"
                                       + StringUtil.format(args.d, social[args.t].name) : "");
                             document.getElementById("container").innerHTML =
-                                "Redirecting to... <a href=\"" + url + "\">" + url + "</a>"
+                                "Redirecting you to: <a href=\"" + url + "\">" + url
+                                + "</a> ... Please wait 😄";
                             window.location = url;
                             return;
                         }
