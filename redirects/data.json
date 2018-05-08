@@ -1,21 +1,33 @@
 {
+  "main": {
+    "url": "http://jahirfiquitiva.com"
+  },
   "twitter": {
     "url": "https://twitter.com/jahirfiquitiva",
     "name": "Jahir Fiquitiva"
   },
   "googleplus": {
-    "url": "https://plus.google.com/+JahirFiquitivaR"
+    "url": "https://google.com/+JahirFiquitivaR"
   },
   "github": {
     "url": "https://github.com/jahirfiquitiva",
     "name": "Jahir Fiquitiva"
   },
   "instagram": {
-    "url": "https://www.instagram.com/jahirfiquitiva/",
+    "url": "https://instagram.com/_u/jahirfiquitiva",
     "name": "Jahir Fiquitiva"
   },
   "googleplay": {
     "url": "https://play.google.com/store/apps/dev?id=7438639276314720952"
+  },
+  "linkedin": {
+    "url": "https://www.linkedin.com/in/jahirfiquitiva"
+  },
+  "dribbble": {
+    "url": "https://dribbble.com/jahirfiquitiva"
+  },
+  "contact": {
+    "url": "http://jahirfiquitiva.com/contact/"
   },
   "medium": {
     "url": "https://medium.com/@jahirfiquitiva",
