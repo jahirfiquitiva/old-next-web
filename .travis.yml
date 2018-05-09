@@ -5,6 +5,7 @@ dist: trusty
 
 rvm:
   - 2.5
+  - ruby-head
 
 before_install:
   - bash -c "yes | gem uninstall -i /home/travis/.rvm/gems/ruby-2.5.0@global rake"
