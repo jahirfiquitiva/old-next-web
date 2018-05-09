@@ -47,15 +47,19 @@ function validateEmail(email) {
 }
 
 function sendEmail(email, subject, body) {
-    Email.send(email,
-               "to@them.com",
-               subject,
-               body,
-               {
-                   token: "4790479d-783a-42fc-bf9a-2835bbdb47d5",
-                   callback: function done(message) {
-                       alert("Message sent")
+    try{
+        Email.send(email,
+                   "to@them.com",
+                   subject,
+                   body,
+                   {
+                       token: "4790479d-783a-42fc-bf9a-2835bbdb47d5",
+                       callback: function done(message) {
+                           alert("Message sent")
+                       }
                    }
-               }
-    );
+        );
+    }catch (e) {
+        alert("Error!")
+    }
 }
