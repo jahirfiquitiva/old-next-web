@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Parcial HTML</title>
+        <meta name="keywords" content="parcial, html, css, javascript">
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="content">
+            <h1>PARCIAL HTML</h1>
+            <br>
+            <div id="real_content">
+                <b>Dirección IP:</b> <input type="text" id="ipInput"
+                                     onkeypress="return validateField(event)">
+                <button onclick="showIPInfo()">Calcular</button>
+
+                <p id="ipClass"></p>
+                <p id="ipDir"></p>
+                <p id="networkMask"></p>
+                <p id="subnetwork"></p>
+                <p id="hosts"></p>
+            </div>
+        </div>
+
+        <div id="foot">
+            <footer>
+                Autor: Jahir Fiquitiva - Código: 201521721<br>
+                Todos los derechos reservados &copy; 2016-2017
+            </footer>
+        </div>
+
+        <script src="assets/js/calculations.js"></script>
+    </body>
+</html>

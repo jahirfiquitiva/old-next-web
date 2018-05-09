@@ -1,0 +1,124 @@
+body {
+    font-family: 'Heebo', sans-serif !important;
+}
+
+.is-primary,
+.is-turquoise {
+    background-color: #3F51B5 !important;
+}
+
+.navbar-brand a:hover {
+    background-color: #5C6BC0 !important;
+}
+
+.has-text-primary,
+.has-text-turquoise {
+    color: #3F51B5 !important;
+}
+
+.tabs.is-toggle li.is-active a {
+    background-color: #3F51B5 !important;
+    border-color: #3F51B5 !important;
+}
+
+.tabs li.is-active a {
+    color: #3F51B5 !important;
+    border-color: #3F51B5 !important;
+}
+
+.is-checkradio[type="radio"]:hover:not([disabled]) + label::before,
+.is-checkradio[type="checkbox"]:hover:not([disabled]) + label::before {
+    border-color: #3F51B5 !important;
+}
+
+.is-checkradio[type="checkbox"] + label::after {
+    box-sizing: border-box;
+    transform: rotate(45deg);
+    border-width: .1rem;
+    border-style: solid;
+    border-color: #3F51B5 !important;
+    border-top: 0;
+    border-left: 0;
+}
+
+.is-checkradio[type="checkbox"].is-primary:hover:not([disabled]) + label::before {
+    border-color: #3F51B5 !important;
+}
+
+.is-checkradio[type="checkbox"].is-primary:checked + label::after {
+    border-color: #3F51B5 !important;
+}
+
+.is-checkradio[type="checkbox"].is-primary:checked.has-background-color + label::before {
+    border-color: #3F51B5 !important;
+    background-color: #3F51B5 !important;
+}
+
+.is-checkradio[type="checkbox"].is-primary:checked.has-background-color + label::after {
+    border-color: #3F51B5 !important;
+}
+
+.is-checkradio[type="checkbox"].is-primary:checked.is-block + label {
+    color: #fff;
+    border-color: #3F51B5 !important;
+    background: #3F51B5;
+}
+
+.footer {
+    padding: 3rem 1.5rem 3rem !important;
+}
+
+.carousel {
+    width: 15% !important;
+}
+
+textarea {
+    resize: none;
+}
+
+input,
+textarea {
+    background: none;
+    color: #424242;
+    font-size: 16px !important;
+    padding: 8px !important;
+    display: block !important;
+    border: none !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid #424242 !important;
+    margin-bottom: 4px !important;
+    box-shadow: none !important;
+    --webkit-box-shadow: none !important;
+}
+
+input:focus {
+    outline: none !important;
+}
+
+::-webkit-scrollbar {
+    background-color: #ffffff
+}
+
+::-webkit-scrollbar-track {
+    color: #ffffff;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+
+}
+
+.body {
+    padding-bottom: 110px;
+}
+
+.footer {
+    background-color: #ffffff !important;
+}
+
+@media screen and (max-width: 1024px) {
+    #generateButton {
+        margin-right: 24px;
+    }
+}
