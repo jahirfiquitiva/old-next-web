@@ -416,7 +416,12 @@ hr {
     margin-right: 0.8rem !important;
 }
 
+#bot .b-agent-demo .server-response,
 .b-agent-demo .server-response {
     background-color: #4285F4 !important;
     color: #fff !important;
+}
+
+#bot{
+
 }
