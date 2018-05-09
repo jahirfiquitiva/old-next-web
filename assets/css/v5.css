@@ -422,7 +422,8 @@ hr {
     color: #fff !important;
 }
 
-#bot {
+#bot,
+.bot-box {
     border-radius: 3px !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
