@@ -966,6 +966,6 @@ Project available at: [http://j.mp/JFSimpleKotlinApp](http://j.mp/JFSimpleKotlin
 <br>
 
 Find me on:
-* Google+:  [+JahirFiquitivaR](https://plus.jahirfiquitiva.me/)
-* Twitter:  [@jahirfiquitiva](https://twitter.jahirfiquitiva.me/)
-* GitHub:   [https://github.com/jahirfiquitiva](https://github.com/jahirfiquitiva)
+* Google+:  [+JahirFiquitivaR](https://jahirfiquitiva.com/redirects/?t=googleplus)
+* Twitter:  [@jahirfiquitiva](https://jahirfiquitiva.com/redirects/?t=twitter)
+* GitHub:   [https://github.com/jahirfiquitiva](https://jahirfiquitiva.com/redirects/?t=github)

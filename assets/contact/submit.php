@@ -1,7 +1,7 @@
 <?php
 
 error_reporting(0);
-$emailAddress = 'hi@jahirfiquitiva.me';
+$emailAddress = 'hi@jahirfiquitiva.com';
 
 require "class.phpmailer.php";
 require_once "recaptchalib.php";
