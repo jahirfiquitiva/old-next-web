@@ -5,9 +5,9 @@ const sendForm = event => {
     event.preventDefault();
     const message = {
         sender: document.querySelector("#email").value,
-        name: document.querySelector("#form-name").value,
-        subject: document.querySelector("#form-subject").value,
-        text: document.querySelector("#form-message").value
+        name: document.querySelector("#name").value,
+        subject: document.querySelector("#subject").value,
+        text: document.querySelector("#message").value
     };
     smtpJS(message);
 };
