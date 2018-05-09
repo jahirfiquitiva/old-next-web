@@ -24,9 +24,9 @@ RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
 RewriteRule ^(.*)\.html$ /$1 [R=301,L]
 
 # Now, let's redirect people to custom sites when errors happen
-ErrorDocument 403 https://www.jahirfiquitiva.me/error.html
-ErrorDocument 404 https://www.jahirfiquitiva.me/error.html
-ErrorDocument 500 https://www.jahirfiquitiva.me/error.html
+ErrorDocument 403 https://jahirfiquitiva.com/error.html
+ErrorDocument 404 https://jahirfiquitiva.com/error.html
+ErrorDocument 500 https://jahirfiquitiva.com/error.html
 
 # Gzip assets before sending to client
 AddOutputFilterByType DEFLATE text/html text/event-stream text/xml text/css text/javascript application/javascript application/json
