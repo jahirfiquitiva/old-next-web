@@ -51,5 +51,11 @@ function sendEmail(email, subject, body) {
                "to@them.com",
                subject,
                body,
-               {token: "4790479d-783a-42fc-bf9a-2835bbdb47d5"});
+               {
+                   token: "4790479d-783a-42fc-bf9a-2835bbdb47d5",
+                   callback: function done(message) {
+                       alert("Message sent")
+                   }
+               }
+    );
 }
