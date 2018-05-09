@@ -415,3 +415,8 @@ hr {
 .paypal .mdi {
     margin-right: 0.8rem !important;
 }
+
+.b-agent-demo .server-response {
+    background-color: #4285F4 !important;
+    color: #fff !important;
+}
