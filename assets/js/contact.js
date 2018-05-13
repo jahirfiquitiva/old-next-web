@@ -31,10 +31,8 @@ function submitForm() {
     }
 }
 
-
-
 function sendEmail(email, subject, body) {
-    try{
+    try {
         Email.send(email,
                    "to@them.com",
                    subject,
@@ -46,7 +44,7 @@ function sendEmail(email, subject, body) {
                        }
                    }
         );
-    }catch (e) {
+    } catch (e) {
         alert("Error!")
     }
 }
