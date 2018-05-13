@@ -48,13 +48,13 @@ const smtpJS = message => {
                 token: token,
                 callback: function done(message) {
                     // alert("sent");
-                    window.location = 'contacted.html';
+                    window.location = '/contacted.html';
                 }
             }
         );
     } catch (e) {
         // alert("Error! D:");
-        window.location = 'contact-error.html';
+        window.location = '/contact-error.html';
     }
 };
 
