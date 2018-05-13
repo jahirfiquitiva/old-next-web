@@ -3,8 +3,8 @@ function generateBlueprintXML() {
 
     var start = '<?xml version="1.0" encoding="utf-8"?>\n<resources>';
     content.push(start);
-	
-	content.push(createStringTag("icons_preview_picture", ""));
+
+    content.push(createStringTag("icons_preview_picture", ""));
 
     content.push(
         createStringTag("email", document.getElementById('designer-email').value));

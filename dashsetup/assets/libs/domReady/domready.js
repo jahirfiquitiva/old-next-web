@@ -1,4 +1,4 @@
-(function(exports, d) {
+(function (exports, d) {
     function domReady(fn, context) {
 
         function onReady(event) {
@@ -14,7 +14,7 @@
         }
 
         d.addEventListener && d.addEventListener("DOMContentLoaded", onReady) ||
-        d.attachEvent      && d.attachEvent("onreadystatechange", onReadyIe);
+        d.attachEvent && d.attachEvent("onreadystatechange", onReadyIe);
     }
 
     exports.domReady = domReady;

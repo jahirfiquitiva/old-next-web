@@ -29,7 +29,7 @@
             link.type = 'text/css';
             link.href =
                 window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css'
-                    : 'css/print/paper.css';
+                                                            : 'css/print/paper.css';
             document.getElementsByTagName('head')[0].appendChild(link);
         </script>
 
@@ -486,13 +486,13 @@ Reveal.addEventListener( 'customevent', function() {
                                   dependencies: [
                                       {
                                           src: 'lib/js/classList.js', condition: function () {
-                                          return !document.body.classList;
-                                      }
+                                              return !document.body.classList;
+                                          }
                                       },
                                       {
                                           src: 'plugin/markdown/marked.js', condition: function () {
-                                          return !!document.querySelector('[data-markdown]');
-                                      }
+                                              return !!document.querySelector('[data-markdown]');
+                                          }
                                       },
                                       {
                                           src: 'plugin/markdown/markdown.js',
