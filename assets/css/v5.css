@@ -160,9 +160,25 @@ button,
     font-weight: 500 !important;
 }
 
-.is-primary {
+.is-primary,
+button.is-primary,
+button.is-primary,
+.button.is-primary,
+.button.is-primary {
     background-color: #4285F4 !important;
     color: #fff !important;
+}
+
+.is-primary :hover,
+.is-primary :focus,
+button.is-primary:hover,
+button.is-primary:focus,
+.button.is-primary:hover,
+.button.is-primary:focus {
+    background-color: #4285F4 !important;
+    color: #fff !important;
+    -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.2);
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.2);
 }
 
 .is-primary-text {
@@ -432,4 +448,10 @@ hr {
 .bot-box {
     border-radius: 3px !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.button.is-primary.is-inverted {
+    background-color: #fff !important;
+    color: #4285f4 !important;
+    border: 0.1rem solid #dbdbdb !important;
 }
