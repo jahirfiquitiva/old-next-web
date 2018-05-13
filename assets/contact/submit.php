@@ -105,7 +105,7 @@ if (($response == null) || (!($response->success))) {
 
 if (count($err)) {
     echo "<script>
-            window.location = '../../contact-error.html';
+            window.location = '/contact-error.html';
           </script>";
     exit();
 } else {
@@ -149,11 +149,11 @@ $mail->Subject = $_POST['subject'];
 $mail->MsgHTML($msg);
 if (!$mail->send()) {
     echo "<script>
-            window.location = '../../contact-error.html';
+            window.location = '/contact-error.html';
           </script>";
 } else {
     echo "<script>
-            window.location = '../../contacted.html';
+            window.location = '/contacted.html';
           </script>";
 }
 unset($_SESSION['post']);
