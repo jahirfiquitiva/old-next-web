@@ -80,8 +80,9 @@
 
         <link rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"/>
-        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
+
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
 
         <link rel="stylesheet"
               href="https://cdn.materialdesignicons.com/2.3.54/css/materialdesignicons.min.css">
@@ -132,8 +133,7 @@
                     <h1>Get in Touch</h1>
                     <h4>Don't hesitate contacting me!</h4>
                     <br>
-                    <form id="contact-form" action="../assets/contact/submit.php"
-                          method="post" onsubmit="return submitForm();">
+                    <form id="contact-form">
                         <div class="field is-horizontal">
                             <div class="field-label is-normal">
                                 <label class="label">From</label>
@@ -290,11 +290,13 @@
         </footer>
 
         <!-- Particles -->
-        <script type="text/javascript" src="../assets/libs/js/particles.min.js"></script>
+        <script type="text/javascript" src="/assets/libs/js/particles.min.js"></script>
         <!-- Theme -->
-        <script type="text/javascript" src="../assets/js/main.js"></script>
-        <script type="text/javascript" src="../assets/js/contact.js"></script>
+        <script type="text/javascript" src="/assets/js/main.js"></script>
+        <script type="text/javascript" src="/assets/js/contact.js"></script>
         <!-- ReCaptcha -->
         <script src='https://www.google.com/recaptcha/api.js'></script>
+        <!-- Emails -->
+        <script src="https://smtpjs.com/v2/smtp.js"></script>
     </body>
 </html>
