@@ -12,7 +12,7 @@ function GetLatestReleaseInfo() {
                 } else {
                     var link = "https://github.com/jahirfiquitiva/" + repo + "/releases/latest/";
                     document.getElementById("message").innerHTML =
-                        "Error :( Redirecting you to <a href=\"" + link
+                        "An unexpected error occurred 😞<br>I will redirect you to <a href=\"" + link
                         + "\">GitHub releases</a>...";
                     window.location.href = link;
                 }
