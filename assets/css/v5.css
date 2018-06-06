@@ -356,6 +356,10 @@ hr {
     color: rgba(0, 0, 0, 0.54) !important;
 }
 
+.tag.is-medium-blog {
+    background-color: #00ab6c !important;
+}
+
 .tag.is-github {
     background-color: #333 !important;
 }
