@@ -203,6 +203,16 @@ button.is-primary:focus,
 
 .navbar {
     background-color: #fcfcfc !important;
+    min-height: 3.75rem !important;
+}
+
+.navbar-burger {
+    height: 3.75rem !important;
+    width: 3.75rem !important;
+}
+
+.navbar-item {
+    line-height: 2;
 }
 
 .has-shadow {
