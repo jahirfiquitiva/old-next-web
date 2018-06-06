@@ -206,8 +206,13 @@ button.is-primary:focus,
 }
 
 .has-shadow {
-    -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.15);
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.15);
+    -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.15) !important;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.15) !important;
+}
+
+.navbar.has-shadow {
+    -webkit-box-shadow: 0 2px 4px rgba(10, 10, 10, 0.2) !important;
+    box-shadow: 0 2px 4px rgba(10, 10, 10, 0.2) !important;
 }
 
 .is-active {
