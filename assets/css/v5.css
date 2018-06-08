@@ -1,9 +1,4 @@
 @font-face {
-    font-family: "Track";
-    src: url(../fonts/Track.ttf) format("truetype");
-}
-
-@font-face {
     font-family: "Fira Code";
     src: url(https://github.com/tonsky/FiraCode/raw/master/distr/ttf/FiraCode-Retina.ttf) format("monospace");
 }
@@ -48,37 +43,45 @@ h3 {
 }
 
 h4 {
-    font-size: 1.4rem !important;
+    font-size: 1.5rem !important;
 }
 
 h5 {
-    font-size: 1.3rem !important;
+    font-size: 1.4rem !important;
 }
 
 h6 {
+    font-size: 1.3rem !important;
+}
+
+body, p {
     font-size: 1.2rem !important;
 }
 
-body {
-    font-size: 1.1rem !important;
+b, .label, label {
+    font-weight: 500 !important;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar-brand {
-    font-family: 'Track', sans-serif !important;
+    font-family: 'Rubik', sans-serif !important;
     font-weight: 500 !important;
     color: rgba(0, 0, 0, 0.87) !important;
+}
+
+h4, h5, h6 {
+    text-transform: none !important;
 }
 
 a,
 a:visited {
     color: #4a4a4a !important;
+    opacity: 1.0 !important;
 }
 
 a:focus,
 a:hover {
     color: #4285F4 !important;
-    opacity: 1.0;
-    font-weight: bold;
+    opacity: 1.0 !important;
 }
 
 a {
@@ -128,7 +131,9 @@ nav a,
 .navbar-brand .navbar-item {
     font-size: 1.1rem !important;
     color: #4285F4 !important;
-    padding-bottom: 0rem !important;
+    padding-bottom: 0.25rem !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
 }
 
 .navbar-item img {
@@ -137,10 +142,9 @@ nav a,
 
 .navbar-menu .navbar-item {
     font-size: 1.1rem !important;
-    font-family: 'Track', sans-serif !important;
     text-transform: uppercase !important;
     color: rgba(0, 0, 0, 0.54) !important;
-    padding-bottom: 0rem !important;
+    padding-bottom: 0.25rem !important;
     padding-left: 1.05rem !important;
     padding-right: 1.05rem !important;
     letter-spacing: 0.05rem !important;
@@ -151,6 +155,7 @@ nav a,
 .navbar-menu .navbar-item:focus,
 .navbar-menu .navbar-item.is-active {
     color: #4285F4 !important;
+    background-color: #F7F7F7 !important;
 }
 
 button,
@@ -260,8 +265,8 @@ and (min-device-width: 1200px) {
 }
 
 .image.avatar {
-    height: 192px;
-    width: 192px;
+    height: 168px;
+    width: 168px;
 }
 
 .section {
@@ -473,4 +478,37 @@ hr {
     background-color: #fff !important;
     color: #4285f4 !important;
     border: 0.1rem solid #dbdbdb !important;
+}
+
+.tabs.is-fullwidth {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+}
+
+.tabs.is-toggle {
+    padding: 0 !important;
+    margin: -1.5rem 0 3rem !important;
+}
+
+.tabs.is-toggle a {
+    border: 1px solid #dbdbdb !important;
+}
+
+.tabs.is-toggle a span {
+    padding-bottom: 0.24rem !important;
+}
+
+.tabs.is-toggle a:hover,
+.tabs.is-toggle a:focus {
+    font-weight: normal !important;
+}
+
+.tabs .is-active a {
+    color: #fff !important;
+    border: 0 !important;
+}
+
+.tabs.is-toggle ul {
+    margin: 0 !important;
 }

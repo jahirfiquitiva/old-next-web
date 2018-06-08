@@ -46,3 +46,17 @@ function toggleLink(itemId) {
     }
     document.getElementById(itemId + "-link").classList.add("is-active");
 }
+
+function togglePortfolio(itemId) {
+    var portfolioTabs = document.getElementsByClassName('portfolio-tab');
+    for (var i = 0; i < portfolioTabs.length; i++) {
+        portfolioTabs[i].classList.remove('is-active');
+    }
+
+    var portfolioSections = document.getElementsByClassName('portfolio-section');
+    for (var i = 0; i < portfolioSections.length; i++) {
+        portfolioSections[i].style.display = "none";
+    }
+    document.getElementById("portfolio-" + itemId).style.display = "flex";
+    document.getElementById(itemId + "-tab").classList.add("is-active");
+}

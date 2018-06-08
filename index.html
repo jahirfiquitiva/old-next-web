@@ -143,7 +143,11 @@
                 </div>
                 <br><br><br>
                 <div class="content has-text-justified">
-                    <h1 class="custom-title">Hi, I am Jahir Fiquitiva 👋</h1>
+                    <h2 class="custom-title">Hi, I am Jahir Fiquitiva 👋</h2>
+                    <p>And I am a passionate and creative developer from <a
+                            href="https://www.youtube.com/watch?v=rTsPaAIJdnw"
+                            target="_blank">Colombia 🇨🇴</a></p>
+                    <!--
                     <h4>A passionate and creative developer</h4>
                     <p>I was born in 1997 in Duitama, <a
                             href="https://www.youtube.com/watch?v=rTsPaAIJdnw"
@@ -163,6 +167,7 @@
                                                                                apps </a> which also
                         helped me realize that I wanted to start a Software Development career.
                     </p>
+                    -->
                     <p>I am currently studying Systems and Computing Engineering
                         <i>(an equivalent to Computer Science)</i> at
                         <a href="http://www.uptc.edu.co/" target="_blank">Pedagogical and
@@ -175,32 +180,34 @@
                         Let's work together! You can download my <a
                             href="/share/Jahir-Fiquitiva-Resume.pdf" target="_blank">resume here</a>.
                     </b></p>
+                    <!--
                     <p>Additionally, if you like any of the things I do, please consider
                         <a href="/donate/" target="_blank">
                             supporting my work</a>.<br>
                         <a href="/thanks/" target="_blank">
                             Huge thanks to all the amazing people that already do!</a>
                     </p>
+                    -->
                     <p>
                         You can also <b>find me on</b> 👇:
                     <div class="tags social-tags is-vcentered">
                         <a class="tag is-github is-medium" target="_blank"
-                           data-balloon="GitHub" data-balloon-pos="down"
+                           data-balloon="GitHub" data-balloon-pos="up"
                            href="/redirects/?t=github">
                             <i class="mdi mdi-18px mdi-github-circle"></i>
                         </a>
                         <a class="tag is-twitter is-medium" target="_blank"
-                           data-balloon="Twitter" data-balloon-pos="down"
+                           data-balloon="Twitter" data-balloon-pos="up"
                            href="/redirects/?t=twitter">
                             <i class="mdi mdi-18px mdi-twitter"></i>
                         </a>
                         <a class="tag is-google-plus is-medium" target="_blank"
-                           data-balloon="Google+" data-balloon-pos="down"
+                           data-balloon="Google+" data-balloon-pos="up"
                            href="/redirects/?t=googleplus">
                             <i class="mdi mdi-18px mdi-google-plus"></i>
                         </a>
                         <a class="tag is-linked-in is-medium" target="_blank"
-                           data-balloon="LinkedIn" data-balloon-pos="down"
+                           data-balloon="LinkedIn" data-balloon-pos="up"
                            href="/redirects/?t=linkedin">
                             <i class="mdi mdi-18px mdi-linkedin"></i>
                         </a>
@@ -210,22 +217,22 @@
                             <i class="mdi mdi-18px mdi-medium"></i>
                         </a>
                         <a class="tag is-google-play is-medium" target="_blank"
-                           data-balloon="Google Play Store" data-balloon-pos="down"
+                           data-balloon="Google Play Store" data-balloon-pos="up"
                            href="/redirects/?t=googleplay">
                             <i class="mdi mdi-18px mdi-google-play"></i>
                         </a>
                         <a class="tag is-instagram is-medium" target="_blank"
-                           data-balloon="Instagram" data-balloon-pos="down"
+                           data-balloon="Instagram" data-balloon-pos="up"
                            href="/redirects/?t=instagram">
                             <i class="mdi mdi-18px mdi-instagram"></i>
                         </a>
                         <a class="tag is-dribbble is-medium" target="_blank"
-                           data-balloon="Dribbble" data-balloon-pos="down"
+                           data-balloon="Dribbble" data-balloon-pos="up"
                            href="/redirects/?t=dribbble">
                             <i class="mdi mdi-18px mdi-dribbble"></i>
                         </a>
                         <a class="tag is-primary is-medium"
-                           data-balloon="Contact" data-balloon-pos="down"
+                           data-balloon="Contact" data-balloon-pos="up"
                            onclick="scrollToItem('contact')">
                             <i class="mdi mdi-18px mdi-email"></i>
                         </a>
@@ -286,7 +293,38 @@
                     <h1>Portfolio</h1>
                     <h4>Current and past projects of mine</h4>
                     <br>
-                    <div class="columns is-multiline is-mobile">
+
+                    <div class="tabs is-toggle">
+                        <ul>
+                            <li class="portfolio-tab is-active" id="android-tab"
+                                onclick="togglePortfolio('android');">
+                                <a>
+                                    <span class="icon is-small"><i class="mdi mdi-android"
+                                                                   aria-hidden="true"></i></span>
+                                    <span>Android</span>
+                                </a>
+                            </li>
+                            <li class="portfolio-tab" id="design-tab"
+                                onclick="togglePortfolio('design');">
+                                <a>
+                                    <span class="icon is-small"><i class="mdi mdi-brush"
+                                                                   aria-hidden="true"></i></span>
+                                    <span>Design</span>
+                                </a>
+                            </li>
+                            <li class="portfolio-tab" id="others-tab"
+                                onclick="togglePortfolio('others');">
+                                <a>
+                                    <span class="icon is-small"><i class="mdi mdi-plus"
+                                                                   aria-hidden="true"></i></span>
+                                    <span>Others</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="columns is-multiline is-mobile portfolio-section"
+                         id="portfolio-android">
                         <div class="column is-12-mobile is-one-third-tablet is-one-quarter-desktop">
                             <a href="https://github.com/jahirfiquitiva/Blueprint/" target="_blank">
                                 <div class="box">
@@ -294,10 +332,7 @@
                                         <img src="https://github.com/jahirfiquitiva/Blueprint/raw/master/art/app_logo.png"
                                              alt="Blueprint icon">
                                     </figure>
-                                    <h5 class="title">Blueprint
-                                        <br>
-                                        <span class="tag is-light">dashboard</span>
-                                    </h5>
+                                    <h5 class="title">Blueprint</h5>
                                     <p class="subtitle is-6">A Material Design dashboard for
                                                              creating Android icon packs
                                                              easily.</p>
@@ -311,10 +346,7 @@
                                         <img src="/assets/img/portfolio/apps/frames.png"
                                              alt="Frames icon">
                                     </figure>
-                                    <h5 class="title">Frames
-                                        <br>
-                                        <span class="tag is-light">dashboard</span>
-                                    </h5>
+                                    <h5 class="title">Frames</h5>
                                     <p class="subtitle is-6">A Material Design dashboard for
                                                              creating Android wallpapers apps
                                                              easily.</p>
@@ -328,10 +360,7 @@
                                         <img src="/assets/img/portfolio/apps/kuper.png"
                                              alt="Kuper icon">
                                     </figure>
-                                    <h5 class="title">Kuper
-                                        <br>
-                                        <span class="tag is-light">dashboard</span>
-                                    </h5>
+                                    <h5 class="title">Kuper</h5>
                                     <p class="subtitle is-6">A Material Design dashboard for Zooper
                                                              and Kustom widget packs.</p>
                                 </div>
@@ -345,44 +374,10 @@
                                         <img src="/assets/img/portfolio/apps/chipview.png"
                                              alt="ChipView icon">
                                     </figure>
-                                    <h5 class="title">ChipView
-                                        <br>
-                                        <span class="tag is-light">library</span></h5>
+                                    <h5 class="title">ChipView</h5>
                                     <p class="subtitle is-6">An Android custom view to provide the
                                                              Material Design specs Chip
                                                              component</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="column is-12-mobile is-one-third-tablet is-one-quarter-desktop">
-                            <a href="/touri/"
-                               target="_blank">
-                                <div class="box">
-                                    <figure class="image is-128x128">
-                                        <img src="/assets/img/portfolio/apps/touri.png"
-                                             alt="Touri icon">
-                                    </figure>
-                                    <h5 class="title">Touri
-                                        <br>
-                                        <span class="tag is-light">bot</span></h5>
-                                    <p class="subtitle is-6">A bot to answer tourism related
-                                                             questions.</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="column is-12-mobile is-one-third-tablet is-one-quarter-desktop">
-                            <a href="https://github.com/jahirfiquitiva/stanbot"
-                               target="_blank">
-                                <div class="box">
-                                    <figure class="image is-128x128">
-                                        <img src="/assets/img/portfolio/apps/stan.png"
-                                             alt="Stan icon">
-                                    </figure>
-                                    <h5 class="title">Stan
-                                        <br>
-                                        <span class="tag is-light">bot</span></h5>
-                                    <p class="subtitle is-6">A Slack bot to help with text-based
-                                                             SCRUM stand-ups.</p>
                                 </div>
                             </a>
                         </div>
@@ -394,9 +389,7 @@
                                         <img src="/assets/img/portfolio/apps/tap-keep.png"
                                              alt="Tap for Keep icon">
                                     </figure>
-                                    <h5 class="title">Tap for Keep
-                                        <br>
-                                        <span class="tag is-light">app</span></h5>
+                                    <h5 class="title">Tap for Keep</h5>
                                     <p class="subtitle is-6">A Floating Action Button for quickly
                                                              creating notes in Google Keep.</p>
                                 </div>
@@ -410,9 +403,7 @@
                                         <img src="/assets/img/portfolio/apps/tap-todoist.png"
                                              alt="Tap for Todoist icon">
                                     </figure>
-                                    <h5 class="title">Tap for Todoist
-                                        <br>
-                                        <span class="tag is-light">app</span></h5>
+                                    <h5 class="title">Tap for Todoist</h5>
                                     <p class="subtitle is-6">A Floating Action Button for quickly
                                                              creating tasks in Todoist.</p>
                                 </div>
@@ -426,15 +417,34 @@
                                         <img src="/assets/img/portfolio/apps/melior-nui.png"
                                              alt="Melior NUI icon">
                                     </figure>
-                                    <h5 class="title">Melior NUI
-                                        <br>
-                                        <span class="tag is-light">theme</span>
-                                    </h5>
+                                    <h5 class="title">Melior NUI</h5>
                                     <p class="subtitle is-6">A Material Design theme for LineageOS
                                                              Theme Engine.</p>
                                 </div>
                             </a>
                         </div>
+                        <div class="column is-12-mobile is-one-third-tablet is-one-quarter-desktop">
+                            <a href="https://github.com/jahirfiquitiva/FABsMenu/" target="_blank">
+                                <div class="box">
+                                    <figure class="image is-128x128">
+                                        <img src="/assets/img/portfolio/libs/fabsmenu.png"
+                                             alt="FABsMenu icon">
+                                    </figure>
+                                    <h5 class="title">FABsMenu</h5>
+                                    <p class="subtitle is-6">An Android library to create a Floating
+                                                             Action Button Menus.</p>
+                                    <p></p>
+                                    <a href="https://github.com/leinardi/FloatingActionButtonSpeedDial"
+                                       target="_blank"
+                                       class="button is-small is-primary">Alternative</a>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="columns is-multiline is-mobile portfolio-section"
+                         id="portfolio-design"
+                         style="display: none;">
                         <div class="column is-12-mobile is-one-third-tablet is-one-quarter-desktop">
                             <a href="https://play.google.com/store/apps/details?id=com.heinrichreimersoftware.androidissuereporter.example"
                                target="_blank">
@@ -443,9 +453,7 @@
                                         <img src="/assets/img/portfolio/iconography/androidissuereporter_product_icon.png"
                                              alt="Android Issue Reporter icon">
                                     </figure>
-                                    <h5 class="title">Android Issue Reporter
-                                        <br>
-                                        <span class="tag is-light">icon</span></h5>
+                                    <h5 class="title">Android Issue Reporter</h5>
                                     <p class="subtitle is-6">A product icon for the app.</p>
                                 </div>
                             </a>
@@ -458,9 +466,7 @@
                                         <img src="/assets/img/portfolio/iconography/sapphirelauncher_product_icon.png"
                                              alt="Sapphire Launcher icon">
                                     </figure>
-                                    <h5 class="title">Sapphire Launcher
-                                        <br>
-                                        <span class="tag is-light">icon</span></h5>
+                                    <h5 class="title">Sapphire Launcher</h5>
                                     <p class="subtitle is-6">A product icon for the app.</p>
                                 </div>
                             </a>
@@ -473,9 +479,7 @@
                                         <img src="/assets/img/portfolio/iconography/singleform_product_icon.png"
                                              alt="Material Single Input Form icon">
                                     </figure>
-                                    <h5 class="title">Material Single Input Form
-                                        <br>
-                                        <span class="tag is-light">icon</span></h5>
+                                    <h5 class="title">Material Single Input Form</h5>
                                     <p class="subtitle is-6">A product icon for the app.</p>
                                 </div>
                             </a>
@@ -488,54 +492,41 @@
                                         <img src="/assets/img/portfolio/iconography/materialdrawer_product_icon.png"
                                              alt="Material Drawer icon">
                                     </figure>
-                                    <h5 class="title">Material Drawer
-                                        <br>
-                                        <span class="tag is-light">icon</span></h5>
+                                    <h5 class="title">Material Drawer</h5>
                                     <p class="subtitle is-6">A product icon for the app.</p>
                                 </div>
                             </a>
                         </div>
+                    </div>
+
+                    <div class="columns is-multiline is-mobile portfolio-section"
+                         id="portfolio-others"
+                         style="display: none;">
                         <div class="column is-12-mobile is-one-third-tablet is-one-quarter-desktop">
-                            <a href="https://github.com/jahirfiquitiva/FABsMenu/" target="_blank">
+                            <a href="/touri/"
+                               target="_blank">
                                 <div class="box">
                                     <figure class="image is-128x128">
-                                        <img src="/assets/img/portfolio/libs/fabsmenu.png"
-                                             alt="FABsMenu icon">
+                                        <img src="/assets/img/portfolio/apps/touri.png"
+                                             alt="Touri icon">
                                     </figure>
-                                    <h5 class="title">FABsMenu
-                                        <br>
-                                        <span class="tag is-light">library</span>
-                                        <span class="tag is-danger">deprecated</span>
-                                    </h5>
-                                    <p class="subtitle is-6">An Android library to create a Floating
-                                                             Action Button Menus.</p>
-                                    <p></p>
-                                    <a href="https://github.com/leinardi/FloatingActionButtonSpeedDial"
-                                       target="_blank"
-                                       class="button is-small is-primary">Alternative</a>
+                                    <h5 class="title">Touri</h5>
+                                    <p class="subtitle is-6">A bot to answer tourism related
+                                                             questions.</p>
                                 </div>
                             </a>
                         </div>
                         <div class="column is-12-mobile is-one-third-tablet is-one-quarter-desktop">
-                            <a href="https://github.com/jahirfiquitiva/IconShowcase-Dashboard/"
+                            <a href="https://github.com/jahirfiquitiva/stanbot"
                                target="_blank">
                                 <div class="box">
                                     <figure class="image is-128x128">
-                                        <img src="/assets/img/portfolio/apps/iconshowcase.png"
-                                             alt="IconShowcase icon">
+                                        <img src="/assets/img/portfolio/apps/stan.png"
+                                             alt="Stan icon">
                                     </figure>
-                                    <h5 class="title">IconShowcase
-                                        <br>
-                                        <span class="tag is-light">dashboard</span>
-                                        <span class="tag is-danger">deprecated</span>
-                                    </h5>
-                                    <p class="subtitle is-6">A dashboard for
-                                                             creating Android icon packs
-                                                             easily.</p>
-                                    <p></p>
-                                    <a href="https://github.com/jahirfiquitiva/Blueprint/"
-                                       target="_blank"
-                                       class="button is-small is-primary">Alternative</a>
+                                    <h5 class="title">Stan</h5>
+                                    <p class="subtitle is-6">A Slack bot to help with text-based
+                                                             SCRUM stand-ups.</p>
                                 </div>
                             </a>
                         </div>
