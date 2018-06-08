@@ -495,6 +495,10 @@ hr {
     border: 1px solid #dbdbdb !important;
 }
 
+.tabs.is-toggle li {
+    background: #FFFFFF !important;
+}
+
 .tabs.is-toggle a span {
     padding-bottom: 0.24rem !important;
 }
