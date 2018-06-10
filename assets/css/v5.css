@@ -520,3 +520,8 @@ hr {
 .content li + li {
     margin-top: 0 !important;
 }
+
+.icon.is-small {
+    height: 2.3rem !important;
+    width: 2.4rem !important;
+}
