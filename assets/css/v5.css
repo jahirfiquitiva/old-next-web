@@ -508,11 +508,15 @@ hr {
     font-weight: normal !important;
 }
 
-.tabs .is-active a {
+.tabs.is-toggle .is-active a {
     color: #fff !important;
-    border: 0 !important;
+    border: 1px solid #4285f4 !important;
 }
 
 .tabs.is-toggle ul {
     margin: 0 !important;
+}
+
+.content li + li {
+    margin-top: 0 !important;
 }
