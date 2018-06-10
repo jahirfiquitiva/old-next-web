@@ -521,7 +521,16 @@ hr {
     margin-top: 0 !important;
 }
 
-.icon.is-small {
+#contact-form .icon.is-small {
     height: 2.3rem !important;
     width: 2.4rem !important;
+}
+
+#portfolio-tabs .icon.is-small {
+    height: 2rem !important;
+    width: 1.6rem !important;
+}
+
+.tabs a {
+    padding-left: .8rem !important;
 }
