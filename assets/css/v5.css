@@ -206,12 +206,6 @@ button.is-primary:focus,
     opacity: 0.75;
 }
 
-nav,
-section,
-footer {
-    z-index: 1 !important;
-}
-
 .navbar {
     background-color: #fcfcfc !important;
     min-height: 3.75rem !important;
