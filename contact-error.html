@@ -86,10 +86,10 @@
               href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
 
         <link rel="stylesheet"
-              href="https://cdn.materialdesignicons.com/2.3.54/css/materialdesignicons.min.css">
+              href="https://cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css">
 
         <link rel="stylesheet"
-              href="https://fonts.googleapis.com/css?family=Rubik:400,500,700">
+              href="https://fonts.googleapis.com/css?family=Meera+Inimai:400,500,700">
 
         <link rel="stylesheet" href="assets/css/v5.css" media="all">
     </head>
@@ -150,7 +150,7 @@
             </div>
         </section>
 
-        <footer class="footer">
+        <footer class="footer no-top-margin">
             <div class="container">
                 <div class="container-content">
                     <div class="tags social-tags is-vcentered">
@@ -194,19 +194,25 @@
                            href="/redirects/?t=dribbble">
                             <i class="mdi mdi-18px mdi-dribbble"></i>
                         </a>
+                        <a class="tag is-telegram is-medium" target="_blank"
+                           data-balloon="Telegram" data-balloon-pos="up"
+                           href="/redirects/?t=telegram">
+                            <i class="mdi mdi-18px mdi-telegram"></i>
+                        </a>
                         <a class="tag is-primary is-medium"
                            data-balloon="Contact" data-balloon-pos="up"
-                           href="/contact/">
+                           onclick="scrollToItem('contact')">
                             <i class="mdi mdi-18px mdi-email"></i>
                         </a>
                     </div>
                 </div>
-                <div class="content has-text-centered">
+                <div class="container-content">
                     <p>
                         <i class="mdi mdi-code-tags mdi-18px"></i> with
                         <i class="mdi mdi-heart mdi-18px"></i> by
-                        <a href="/"><b>Jahir Fiquitiva</b></a> © 2018
+                        <a href="/" target="_self">Jahir Fiquitiva</a>
                     </p>
+                    <p id="copyright-notice"></p>
                 </div>
             </div>
         </footer>
