@@ -440,6 +440,9 @@ hr {
     border-top: 1px solid rgba(0, 0, 0, 0.12);
     padding: 2.4rem !important;
     background-color: rgba(0, 0, 0, 0.025) !important;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .no-top-margin {
