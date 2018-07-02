@@ -14,10 +14,10 @@ function setup() {
     if (month === 6) {
         logoName = '6';
     }
-    logo.setAttribute('src', 'assets/img/brand/logo-' + logoName + '.svg');
+    logo.setAttribute('src', '/assets/img/brand/logo-' + logoName + '.svg');
     logo.setAttribute('onerror',
         'this.onerror=null;' +
-        'this.src=\'assets/img/brand/logo-' + logoName + '.png\'');
+        'this.src=\'/assets/img/brand/logo-' + logoName + '.png\'');
 
     let copy = document.getElementById('copyright-notice');
     copy.innerHTML = 'Copyright ' + date.getFullYear() + ' © All Rights Reserved';
