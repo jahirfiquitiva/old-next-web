@@ -436,6 +436,7 @@ hr {
 }
 
 .footer {
+    position: absolute;
     margin-top: 4.8rem !important;
     border-top: 1px solid rgba(0, 0, 0, 0.12);
     padding: 2.4rem !important;
