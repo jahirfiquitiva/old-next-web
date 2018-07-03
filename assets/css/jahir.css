@@ -12,6 +12,10 @@
     --disabled-text-inverse: rgba(255, 255, 255, 0.5);
 }
 
+* {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" style="font-size:14px"><text y="16">🌀</text></svg>'), auto !important;
+}
+
 #particles-bg {
     position: fixed;
     top: 0;
@@ -25,10 +29,6 @@
     max-width: 100%;
     max-height: 100%;
     opacity: 0.4;
-}
-
-* {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" style="font-size:14px"><text y="16">🌀</text></svg>'), auto !important;
 }
 
 html, body, main {
