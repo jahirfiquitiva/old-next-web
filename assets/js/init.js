@@ -19,6 +19,13 @@ function setup() {
     years.innerHTML = date.getFullYear() - 1997;
 }
 
+function loadParticles() {
+    particlesJS.load('particles-bg', '/assets/config/particles.json',
+                     function () {
+                         console.log('Particles ready! :D');
+                     });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     // Get all "navbar-burger" elements
     let $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
