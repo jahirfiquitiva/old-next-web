@@ -34,12 +34,12 @@ nav, .nav {
     min-width: 100vw !important;
 }
 
-section:nth-of-type(2n+1),
+section:nth-of-type(2n),
 .white-section {
     background-color: var(--white) !important;
 }
 
-section:nth-of-type(2n) {
+section:nth-of-type(2n+1) {
     background-color: var(--bg);
 }
 
@@ -326,8 +326,23 @@ footer, .footer {
     border-radius: 50% !important;
 }
 
-.avatar {
+.image.avatar {
+    height: 168px;
+    width: 168px;
+    top: 0 !important;
     margin: auto !important;
+}
+
+#home .columns {
+    margin-bottom: 1rem !important;
+}
+
+#home .content h2 {
+    margin-top: 1.2rem !important;
+}
+
+#home .content h5 {
+    margin-bottom: 0 !important;
 }
 
 .home {
