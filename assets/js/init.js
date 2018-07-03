@@ -37,26 +37,6 @@ let useCharacterAsCursor = (function() {
     };
 }());
 
-(function init() {
-    let textInput = document.querySelector(".js-textInput");
-    let selectInput = document.querySelector(".js-selectInput");
-
-    let onTextInputChange = function(event) {
-        selectInput.value = "custom";
-        useCharacterAsCursor(this.value);
-    };
-
-    let onSelectInputChange = function(event) {
-        textInput.value = "";
-        useCharacterAsCursor(this.value);
-    };
-
-    textInput.addEventListener("change", onTextInputChange);
-    selectInput.addEventListener("change", onSelectInputChange);
-
-    useCharacterAsCursor(selectInput.value);
-}());
-
 function setup() {
     let date = new Date();
     let month = date.getMonth() + 1;
