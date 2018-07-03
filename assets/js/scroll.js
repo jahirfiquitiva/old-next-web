@@ -1,14 +1,14 @@
 window.addEventListener('scroll', function () {
     let yPosition = (window.pageYOffset | document.body.scrollTop) + 2;
-    let skillsTop = getElementTop('skills');
     let portfolioTop = getElementTop('portfolio');
+    let skillsTop = getElementTop('skills');
     let contactTop = getElementTop('contact');
-    if (yPosition < skillsTop) {
+    if (yPosition < portfolioTop) {
         toggleLink('home');
-    } else if (yPosition < portfolioTop) {
-        toggleLink('skills');
-    } else if (yPosition < contactTop) {
+    } else if (yPosition < skillsTop) {
         toggleLink('portfolio');
+    } else if (yPosition < contactTop) {
+        toggleLink('skills');
     } else {
         toggleLink('contact');
     }
