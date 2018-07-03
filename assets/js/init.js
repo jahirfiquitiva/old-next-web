@@ -1,4 +1,4 @@
-let useCharacterAsCursor = (function() {
+let useCharacterAsCursor = (function () {
     let size = 24,
         canvas,
         context;
@@ -14,7 +14,7 @@ let useCharacterAsCursor = (function() {
     context.textBaseline = "middle";
     context.textAlign = "center";
 
-    return function(character) {
+    return function (character) {
         if (!character) {
             // If no character is provided, reset to default 
             // to make sure there's a cursor shown
@@ -46,16 +46,22 @@ function setup() {
     if (month === 6) {
         logoName = '6';
     }
-    logo.setAttribute('src', '/assets/img/brand/logo-' + logoName + '.svg');
-    logo.setAttribute('onerror',
-        'this.onerror=null;' +
-        'this.src=\'/assets/img/brand/logo-' + logoName + '.png\'')
+    if (logo !== null && logo !== undefined) {
+        logo.setAttribute('src', '/assets/img/brand/logo-' + logoName + '.svg');
+        logo.setAttribute('onerror',
+            'this.onerror=null;' +
+            'this.src=\'/assets/img/brand/logo-' + logoName + '.png\'');
+    }
 
     let copy = document.getElementById('copyright-notice');
-    copy.innerHTML = 'Copyright ' + date.getFullYear() + ' © All Rights Reserved';
+    if (copy !== null && copy !== undefined) {
+        copy.innerHTML = 'Copyright ' + date.getFullYear() + ' © All Rights Reserved';
+    }
 
     let years = document.getElementById('age-text');
-    years.innerHTML = date.getFullYear() - 1997;
+    if (years !== null && year !== undefined) {
+        years.innerHTML = date.getFullYear() - 1997;
+    }
 }
 
 function loadParticles() {
