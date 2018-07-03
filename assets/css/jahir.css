@@ -162,6 +162,10 @@ a:focus:after {
     transform: scaleX(1);
 }
 
+a.button {
+    padding-top: 0.6rem !important;
+}
+
 footer, .footer {
     padding: 3rem 2.4rem !important;
     background-color: var(--bg);
