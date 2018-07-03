@@ -1,8 +1,8 @@
 window.addEventListener('scroll', function () {
-    var yPosition = (window.pageYOffset | document.body.scrollTop) + 2;
-    var skillsTop = getElementTop('skills');
-    var portfolioTop = getElementTop('portfolio');
-    var contactTop = getElementTop('contact');
+    let yPosition = (window.pageYOffset | document.body.scrollTop) + 2;
+    let skillsTop = getElementTop('skills');
+    let portfolioTop = getElementTop('portfolio');
+    let contactTop = getElementTop('contact');
     if (yPosition < skillsTop) {
         toggleLink('home');
     } else if (yPosition < portfolioTop) {
@@ -15,9 +15,9 @@ window.addEventListener('scroll', function () {
 });
 
 function getElementTop(itemId) {
-    var elementTop = 0;
+    let elementTop = 0;
     if (itemId !== null && itemId !== undefined) {
-        var bodyRect = document.body.getBoundingClientRect(),
+        let bodyRect = document.body.getBoundingClientRect(),
             elemRect = document.getElementById(itemId).getBoundingClientRect();
         elementTop = elemRect.top - bodyRect.top;
         // elementTop = $("#" + itemId).offset().top;
@@ -28,7 +28,7 @@ function getElementTop(itemId) {
 
 function scrollToItem(itemId) {
     try {
-        var elementTop = getElementTop(itemId);
+        let elementTop = getElementTop(itemId);
         /*
         // $('html, body').stop().animate({scrollTop: top}, 1000);
         document.body.scrollTop = document.documentElement.scrollTop = elementTop;
@@ -40,23 +40,30 @@ function scrollToItem(itemId) {
 }
 
 function toggleLink(itemId) {
-    var navLinks = document.getElementsByClassName('navbar-item');
-    for (var i = 0; i < navLinks.length; i++) {
+    let navLinks = document.getElementsByClassName('navbar-item');
+    for (let i = 0; i < navLinks.length; i++) {
         navLinks[i].classList.remove('is-active');
     }
     document.getElementById(itemId + "-link").classList.add("is-active");
 }
 
 function togglePortfolio(itemId) {
-    var portfolioTabs = document.getElementsByClassName('portfolio-tab');
-    for (var i = 0; i < portfolioTabs.length; i++) {
-        portfolioTabs[i].classList.remove('is-active');
+    let portfolioFilters = document.getElementsByClassName('portfolio-filter');
+    for (let i = 0; i < portfolioFilters.length; i++) {
+        portfolioFilters[i].classList.remove('is-primary');
     }
 
-    var portfolioSections = document.getElementsByClassName('portfolio-section');
-    for (var i = 0; i < portfolioSections.length; i++) {
-        portfolioSections[i].style.display = "none";
+    let portfolioSections = document.getElementsByClassName('portfolio-section');
+    for (let i = 0; i < portfolioSections.length; i++) {
+        let ele = portfolioSections[i];
+        if (ele.id !== 'portfolio-' + itemId && ele.style.display !== 'none') {
+            fade(portfolioSections[i], 'out', 100);
+        }
+        // portfolioSections[i].style.display = "none";
     }
-    document.getElementById("portfolio-" + itemId).style.display = "flex";
-    document.getElementById(itemId + "-tab").classList.add("is-active");
+    for (let j = 0; j < 2000; j++) {
+    }
+    // document.getElementById("portfolio-" + itemId).style.display = "flex";
+    fade(document.getElementById("portfolio-" + itemId), 'in', 750, "flex");
+    document.getElementById(itemId + "-filter").classList.add("is-primary");
 }

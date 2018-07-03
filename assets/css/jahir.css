@@ -1,0 +1,589 @@
+:root {
+    --white: #FFFFFF;
+    --bg: #fafafa;
+    --primary: #f5f5f5;
+    --card: #ffffff;
+    --accent: #4285F4;
+    --primary-text: rgba(0, 0, 0, 0.9);
+    --secondary-text: rgba(0, 0, 0, 0.7);
+    --disabled-text: rgba(0, 0, 0, 0.5);
+    --primary-text-inverse: var(--white);
+    --secondary-text-inverse: rgba(255, 255, 255, 0.7);
+    --disabled-text-inverse: rgba(255, 255, 255, 0.5);
+}
+
+* {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" style="font-size:14px"><text y="16">🌀</text></svg>'), auto !important;
+}
+
+html, body, main {
+    font-family: 'Meera Inimai', sans-serif;
+    letter-spacing: 0.04rem !important;
+    background-color: var(--bg);
+    color: var(--secondary-text);
+    margin: 0;
+    min-width: 100vw !important;
+}
+
+nav, .nav {
+    z-index: 10 !important;
+}
+
+.hero.is-fullheight {
+    min-height: calc(100vh - 3.25rem) !important;
+    min-width: 100vw !important;
+}
+
+section:nth-of-type(2n+1),
+.white-section {
+    background-color: var(--white) !important;
+}
+
+section:nth-of-type(2n) {
+    background-color: var(--bg);
+}
+
+hr {
+    margin: 0 !important;
+}
+
+h1 {
+    font-size: 3.2rem !important;
+    font-weight: bolder;
+    color: var(--primary-text);
+}
+
+h2 {
+    font-size: 2.8rem !important;
+    font-weight: bold;
+    color: var(--primary-text);
+}
+
+h3 {
+    font-size: 2.4rem !important;
+}
+
+h4 {
+    font-size: 2.0rem !important;
+}
+
+h5 {
+    font-size: 1.6rem !important;
+}
+
+body, h6, p {
+    font-size: 1.2rem !important;
+}
+
+.navbar,
+#burger,
+.navbar-item {
+    background-color: var(--primary) !important;
+}
+
+@media screen and (max-width: 1087px) {
+    .navbar-menu {
+        background-color: var(--primary) !important;
+        box-shadow: none;
+        padding: .5rem 0;
+    }
+}
+
+.navbar-item {
+    padding: 0.8rem 1rem 0.4rem !important;
+    vertical-align: center;
+    font-size: 1.2rem !important;
+    color: var(--secondary-text);
+}
+
+.is-logo {
+    color: var(--primary-text) !important;
+}
+
+.is-logo:hover {
+    color: var(--accent) !important;
+}
+
+a.navbar-item:hover,
+a.navbar-item.is-active {
+    background-color: #f0f0f0 !important;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.navbar.has-shadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1)
+}
+
+.navbar-item img {
+    margin-bottom: 0.4rem !important;
+}
+
+a {
+    color: var(--accent);
+    display: inline-block;
+    /* border-bottom: solid 0.12rem var(--accent) !important; */
+}
+
+a:hover,
+a:focus {
+    color: var(--accent);
+}
+
+a:after {
+    display: block;
+    border-bottom: solid 0.16rem var(--accent);
+    color: var(--accent);
+    content: '';
+    margin: 0;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    bottom: -48px !important;
+}
+
+a:hover:after,
+a:focus:after {
+    transform: scaleX(1);
+}
+
+footer, .footer {
+    padding: 3rem 2.4rem !important;
+    background-color: var(--bg);
+    color: var(--secondary-text);
+}
+
+.social-tags, .tag,
+#supporters a,
+#donation a {
+    border: 0 rgba(0, 0, 0, 0) !important;
+    padding-bottom: 0.4rem !important;
+}
+
+.social-tags .tag {
+    padding: 1.05rem .5rem !important;
+    padding-top: 1.2rem !important;
+    color: var(--white) !important;
+    background-color: var(--card) !important;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .social-tags .tag {
+        padding: 1rem .5rem !important;
+        padding-top: 1.05rem !important;
+    }
+}
+
+.tag.is-primary {
+    background-color: var(--accent) !important;
+}
+
+.tag.is-twitter {
+    background-color: #1da1f2 !important;
+}
+
+.tag.is-linked-in {
+    background-color: #0077b5 !important;
+}
+
+.tag.is-google-plus {
+    background-color: #ea4335 !important;
+}
+
+.tag.is-google-play {
+    background-color: #7bed9f !important;
+    color: rgba(0, 0, 0, 0.54) !important;
+}
+
+.tag.is-medium-blog {
+    background-color: #00ab6c !important;
+}
+
+.tag.is-github {
+    background-color: #4078c0 !important;
+}
+
+.tag.is-dribbble {
+    background-color: #ea4c89 !important;
+}
+
+.tag.is-instagram {
+    background-color: #833ab4 !important;
+}
+
+.tag.is-telegram {
+    background-color: #179cde !important;
+}
+
+.tag.is-youtube {
+    background-color: #ff0000 !important;
+}
+
+.parallax {
+    min-height: calc(100vh - 3.25rem) !important;
+    width: 100vw !important;
+    /* 8 - 10*/
+    background: url('../img/hero/hero-1.jpg') no-repeat fixed center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.parallax::after {
+    content: "";
+    background-color: var(--primary-text);
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;
+}
+
+.hero-body {
+    z-index: 1 !important;
+}
+
+@media screen and (max-width: 1030px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container {
+        max-width: 65% !important;
+        width: 65% !important;
+    }
+}
+
+.card {
+    -webkit-border-radius: 0.36rem !important;
+    -moz-border-radius: 0.36rem !important;
+    border-radius: 0.36rem !important;
+    background-color: var(--card);
+    color: var(--primary-text);
+}
+
+.card-content {
+    padding: 2rem !important;
+    color: var(--primary-text) !important;
+}
+
+@media only screen and (max-width: 720px) {
+    .card-content {
+        padding: 1.2rem !important;
+    }
+
+    .home-content {
+        text-align: start !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .custom-title {
+        font-size: 2.4rem !important;
+    }
+}
+
+.media-left {
+    margin-right: 2.4rem !important;
+}
+
+.is-primary {
+    background-color: var(--accent) !important;
+}
+
+.is-primary-text {
+    color: var(--primary-text) !important;
+}
+
+.is-secondary-text {
+    color: var(--secondary-text) !important;
+}
+
+.is-disabled-text {
+    color: var(--disabled-text) !important;
+}
+
+.is-primary-text-inverse {
+    color: var(--primary-text-inverse) !important;
+}
+
+.is-secondary-text-inverse {
+    color: var(--secondary-text-inverse) !important;
+}
+
+.is-disabled-text-inverse {
+    color: var(--disabled-text-inverse) !important;
+}
+
+.circle {
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+.avatar {
+    margin: auto !important;
+}
+
+.home {
+    z-index: 2;
+}
+
+.home-content {
+    text-align: justify;
+}
+
+[data-balloon]:after {
+    font-weight: 500 !important;
+    font-size: 0.8rem !important;
+}
+
+[data-balloon-length] {
+    word-break: break-word !important;
+}
+
+[data-balloon][data-balloon-pos="up"]:after {
+    margin-bottom: 10px !important;
+    bottom: 100% !important;
+}
+
+[data-balloon][data-balloon-pos="down"]:after {
+    margin-top: 10px !important;
+}
+
+.content {
+    margin: auto;
+    left: 50%;
+    right: 50%;
+}
+
+#portfolio {
+    padding-top: 3.5rem !important;
+}
+
+#portfolio a:hover:after,
+#portfolio a:focus:after,
+#thanks a:hover:after,
+#thanks a:focus:after,
+#touri a:hover:after,
+#touri a:focus:after {
+    transform: scaleX(0) !important;
+}
+
+#portfolio .box,
+#thanks .box {
+    transition: .2s box-shadow;
+}
+
+#portfolio .box:hover,
+#portfolio .box:focus,
+#thanks .box:hover,
+#thanks .box:focus {
+    -webkit-box-shadow: 0 2px 10px rgba(10, 10, 10, .2), 0 0 0 1px rgba(10, 10, 10, .1);
+    -moz-box-shadow: 0 2px 10px rgba(10, 10, 10, .2), 0 0 0 1px rgba(10, 10, 10, .1);
+    box-shadow: 0 2px 10px rgba(10, 10, 10, .2), 0 0 0 1px rgba(10, 10, 10, .1);
+}
+
+#portfolio .icon {
+    margin: auto !important;
+    margin-bottom: 1.2rem !important;
+}
+
+.portfolio-toggles {
+    margin-bottom: 2rem !important;
+}
+
+.portfolio-toggles .button {
+    margin-bottom: 1rem !important;
+    padding-top: .6rem !important;
+}
+
+.toggle-content {
+    display: none;
+    opacity: 0;
+    -webkit-transition: opacity 750ms ease-in-out;
+    -moz-transition: opacity 750ms ease-in-out;
+    -ms-transition: opacity 750ms ease-in-out;
+    -o-transition: opacity 750ms ease-in-out;
+    transition: opacity 750ms ease-in-out;
+}
+
+.toggle-content.is-visible {
+    display: flex;
+    opacity: 1;
+    -webkit-transition: opacity 750ms ease-in-out;
+    -moz-transition: opacity 750ms ease-in-out;
+    -ms-transition: opacity 750ms ease-in-out;
+    -o-transition: opacity 750ms ease-in-out;
+    transition: opacity 750ms ease-in-out;
+}
+
+/* ReCaptcha styles */
+@media screen and (max-width: 240px) {
+    .g-recaptcha {
+        transform: scale(0.5) !important;
+        -webkit-transform: scale(0.5) !important;
+    }
+}
+
+@media screen and (min-width: 241px) and (max-width: 320px) {
+    .g-recaptcha {
+        transform: scale(0.65) !important;
+        -webkit-transform: scale(0.65) !important;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+    .g-recaptcha {
+        transform: scale(0.75) !important;
+        -webkit-transform: scale(0.75) !important;
+    }
+}
+
+.g-recaptcha {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform-origin: left top !important;
+    -webkit-transform-origin: left top !important;
+}
+
+.box.supporter {
+    padding: 0.4rem 0.8rem !important;
+}
+
+.box.supporter .image {
+    margin: 0 !important;
+}
+
+.box.supporter h6 {
+    margin: 0 !important;
+    margin-left: 0.8rem !important;
+    padding-top: 0.5rem !important;
+}
+
+.box.supporter h6:hover,
+.box.supporter h6:focus {
+    color: var(--accent) !important;
+}
+
+.box.supporter.btns {
+    padding: 0.6rem 0.8rem 0.4rem !important;
+    transition: .2s box-shadow;
+}
+
+.box.supporter.btns a:hover,
+.box.supporter.btns a:focus {
+    color: #ffffff !important;
+    -webkit-box-shadow: 0 2px 10px rgba(10, 10, 10, .2), 0 0 0 1px rgba(10, 10, 10, .1);
+    -moz-box-shadow: 0 2px 10px rgba(10, 10, 10, .2), 0 0 0 1px rgba(10, 10, 10, .1);
+    box-shadow: 0 2px 10px rgba(10, 10, 10, .2), 0 0 0 1px rgba(10, 10, 10, .1);
+}
+
+.paypal {
+    color: #ffffff !important;
+    background-color: #003087 !important;
+    padding-top: 0.4rem !important;
+}
+
+.telegram {
+    color: #ffffff !important;
+    background-color: #179cde !important;
+}
+
+.paypal .mdi,
+.telegram .mdi {
+    margin-right: 0.8rem !important;
+}
+
+#bot .b-agent-demo .server-response,
+.b-agent-demo .server-response {
+    background-color: var(--accent) !important;
+    color: #fff !important;
+}
+
+#bot,
+.bot-box {
+    border-radius: 3px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+.snackbar {
+    display: none;
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-height: 1rem;
+    min-width: 2rem; /* Set a default minimum width */
+    margin-left: 1.2rem; /* Divide value of min-width by 2 */
+    background-color: #323232; /* Black background color */
+    color: #FFF; /* White text color */
+    text-align: left; /* Centered text */
+    border-radius: 0.3rem; /* Rounded borders */
+    position: fixed; /* Sit on top of the screen */
+    padding: 1rem !important;
+    padding-top: .6rem !important;
+    padding-bottom: .6rem !important;
+    z-index: 2; /* Add a z-index if needed */
+    bottom: 1.2rem; /* Margin from the bottom */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+.snackbar.show {
+    display: block;
+    visibility: visible; /* Show the snackbar */
+
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 1.2rem;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 1.2rem;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 1.2rem;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 1.2rem;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
