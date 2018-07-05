@@ -7,11 +7,22 @@ code {
     font-family: 'Fira Code', monospace !important;
 }
 
-.hero,
-.hero-body,
-#changes-content,
-.container {
+#changes .container {
     max-width: 100% !important;
+}
+
+@media screen and (min-width: 1024px) {
+    #changes .container {
+        max-width: 80% !important;
+        width: 80% !important;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #changes .container {
+        max-width: 65% !important;
+        width: 65% !important;
+    }
 }
 
 #changes-content .tag:not(body).is-medium {
