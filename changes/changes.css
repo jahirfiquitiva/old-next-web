@@ -3,8 +3,15 @@
     src: url(https://github.com/tonsky/FiraCode/raw/master/distr/ttf/FiraCode-Retina.ttf) format("monospace");
 }
 
-code{
+code {
     font-family: 'Fira Code', monospace !important;
+}
+
+.hero,
+.hero-body,
+#changes-content,
+.container {
+    max-width: 100% !important;
 }
 
 #changes-content .tag:not(body).is-medium {
@@ -33,6 +40,12 @@ a.button {
 
 .release-date {
     margin-top: 0.4rem !important;
+}
+
+.release-body {
+    max-width: 100% !important;
+    text-overflow: ellipsis !important;
+    overflow: auto !important;
 }
 
 #changes .box {

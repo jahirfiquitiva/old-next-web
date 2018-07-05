@@ -68,6 +68,7 @@ function getLatestReleaseInfo(user, repo, updateWiki, key) {
                     let html = converter.makeHtml(body);
                     if (html !== null && html !== undefined) {
                         let changesEle = document.createElement('p');
+                        changesEle.classList.add('release-body');
                         if (changesEle !== null && changesEle !== undefined) {
                             changesEle.innerHTML = html;
                         }
