@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Fira Code";
+    src: url(https://github.com/tonsky/FiraCode/raw/master/distr/ttf/FiraCode-Retina.ttf) format("monospace");
+}
+
+code{
+    font-family: 'Fira Code', monospace !important;
+}
+
+#changes-content .tag:not(body).is-medium {
+    font-size: 0.8rem !important;
+    padding-top: 0.8rem !important;
+    margin-bottom: 0.2rem !important;
+    margin-left: 0.4rem !important;
+}
+
+.content ul {
+    margin-left: 1em !important;
+}
+
+a.button {
+    margin-right: 1.2rem !important;
+}
+
+.button.is-github {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+
+#changes .mdi {
+    padding-right: 0.6rem !important;
+}
+
+.release-date {
+    margin-top: 0.4rem !important;
+}
+
+#changes .box {
+    padding: 2rem !important;
+}
+
+.button.is-loading {
+    color: rgba(0, 0, 0, 0.9) !important;
+    padding-left: 2.4rem !important;
+}
+
+.button.is-loading::after {
+    left: 0 !important;
+    top: calc(50% - (1em / 2) - 0.1em) !important;
+}
+
+.button.is-loading::after, .control.is-loading::after, .loader, .select.is-loading::after {
+    border-bottom-color: #4285F4 !important;
+    border-left-color: #4285F4 !important;
+}
