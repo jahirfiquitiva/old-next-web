@@ -1,4 +1,4 @@
-function getLatestReleaseInfo(user, repo, updateWiki, key) {
+function getLatestReleaseInfo(user, repo, updateWiki, translate, key) {
     let xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://api.github.com/repos/' + user + '/' + repo + '/releases/latest', true);
     xhr.onreadystatechange = function () {
@@ -98,7 +98,6 @@ function getLatestReleaseInfo(user, repo, updateWiki, key) {
             box.appendChild(repoBtn);
 
             // Create How to update Button
-
             if (updateWiki) {
                 let wikiBtn = document.createElement('a');
                 wikiBtn.classList.add('button');
@@ -113,6 +112,23 @@ function getLatestReleaseInfo(user, repo, updateWiki, key) {
                 wikiBtn.innerHTML =
                     wikiBtnIcon.outerHTML + ' How to Update';
                 box.appendChild(wikiBtn);
+            }
+
+            // Create translation button
+            if (translate) {
+                let translateBtn = document.createElement('a');
+                translateBtn.classList.add('button');
+                translateBtn.classList.add('is-crowdin');
+                translateBtn.href = 'https://crowdin.com/project/' + repoNameId;
+                translateBtn.target = '_blank';
+
+                let translateBtnIcon = document.createElement('i');
+                translateBtnIcon.classList.add('mdi');
+                translateBtnIcon.classList.add('mdi-translate');
+
+                translateBtn.innerHTML =
+                    translateBtnIcon.outerHTML + ' Translate';
+                box.appendChild(translateBtn);
             }
 
             // Create download button
@@ -177,16 +193,16 @@ function formatBytes(a, b) {
 
 function getInfoOf(repoId) {
     let repos = [
-        {user: 'jahirfiquitiva', name: 'Frames', updateWiki: true},
-        {user: 'jahirfiquitiva', name: 'Kuper', updateWiki: true},
-        {user: 'jahirfiquitiva', name: 'Blueprint', updateWiki: true},
-        {user: 'jahirfiquitiva', name: 'ChipView', updateWiki: false},
-        {user: 'jahirfiquitiva', name: 'FABsMenu', updateWiki: false},
-        {user: 'javiersantos', name: 'PiracyChecker', updateWiki: false}
+        {user: 'jahirfiquitiva', name: 'Frames', updateWiki: true, translate: true},
+        {user: 'jahirfiquitiva', name: 'Kuper', updateWiki: true, translate: true},
+        {user: 'jahirfiquitiva', name: 'Blueprint', updateWiki: true, translate: true},
+        {user: 'jahirfiquitiva', name: 'ChipView', updateWiki: false, translate: false},
+        {user: 'jahirfiquitiva', name: 'FABsMenu', updateWiki: false, translate: false},
+        {user: 'javiersantos', name: 'PiracyChecker', updateWiki: false, translate: false}
     ];
     let repo = repos[repoId];
     if (repo !== null && repo !== undefined) {
-        getLatestReleaseInfo(repo.user, repo.name, repo.updateWiki, repoId)
+        getLatestReleaseInfo(repo.user, repo.name, repo.updateWiki, repo.translate, repoId)
     }
 }
 

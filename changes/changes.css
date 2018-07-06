@@ -81,3 +81,8 @@ a.button {
     border-bottom-color: #4285F4 !important;
     border-left-color: #4285F4 !important;
 }
+
+.is-crowdin {
+    background-color: #9bbc44 !important;
+    color: rgba(0, 0, 0, 0.9) !important;
+}
