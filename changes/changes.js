@@ -197,7 +197,6 @@ function getInfoOf(repoId) {
         {user: 'jahirfiquitiva', name: 'Kuper', updateWiki: true, translate: true},
         {user: 'jahirfiquitiva', name: 'Blueprint', updateWiki: true, translate: true},
         {user: 'jahirfiquitiva', name: 'ChipView', updateWiki: false, translate: false},
-        {user: 'jahirfiquitiva', name: 'FABsMenu', updateWiki: false, translate: false},
         {user: 'javiersantos', name: 'PiracyChecker', updateWiki: false, translate: false}
     ];
     let repo = repos[repoId];
