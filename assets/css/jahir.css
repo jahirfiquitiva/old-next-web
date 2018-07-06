@@ -166,10 +166,6 @@ a.button {
     padding-top: 0.6rem !important;
 }
 
-.button {
-    border-color: transparent !important;
-}
-
 footer, .footer {
     padding: 3rem 2.4rem !important;
     background-color: var(--bg);
