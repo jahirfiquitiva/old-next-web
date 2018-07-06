@@ -70,6 +70,7 @@ a.button {
 .button.is-loading {
     color: rgba(0, 0, 0, 0.9) !important;
     padding-left: 2.4rem !important;
+    border-color: transparent !important;
 }
 
 .button.is-loading::after {
