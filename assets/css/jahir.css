@@ -241,11 +241,6 @@ a.link:focus {
     .textarea, textarea {
         min-width: 50% !important;
     }
-
-    .hero-body {
-        padding-left: 0.8rem !important;
-        padding-right: 0.8rem !important;
-    }
 }
 
 footer, .footer {
@@ -360,6 +355,13 @@ footer, .footer {
 
 .hero-body {
     z-index: 1 !important;
+}
+
+@media screen and (max-width: 425px) {
+    .hero-body {
+        padding-left: 0.8rem !important;
+        padding-right: 0.8rem !important;
+    }
 }
 
 @media screen and (max-width: 1030px) {
