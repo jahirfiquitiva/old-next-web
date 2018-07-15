@@ -62,6 +62,7 @@ a.button {
     overflow: auto !important;
     padding: 0.24rem !important;
     margin-bottom: 0.6rem !important;
+    color: var(--secondary-text) !important;
 }
 
 #changes .box {
