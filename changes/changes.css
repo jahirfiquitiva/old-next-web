@@ -27,7 +27,7 @@ code {
 
 #changes-content .tag:not(body).is-medium {
     font-size: 0.8rem !important;
-    padding-top: 0.8rem !important;
+    padding-top: 0.4rem !important;
     margin-bottom: 0.2rem !important;
     margin-left: 0.4rem !important;
 }
@@ -39,6 +39,7 @@ code {
 a.button {
     margin-right: 1.2rem !important;
     margin-top: 0.6rem !important;
+    border-color: transparent !important;
 }
 
 .button.is-github {
@@ -70,7 +71,7 @@ a.button {
 .button.is-loading {
     color: rgba(0, 0, 0, 0.9) !important;
     padding-left: 2.4rem !important;
-    border-color: transparent !important;
+    border: none transparent !important;
 }
 
 .button.is-loading::after {
