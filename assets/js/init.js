@@ -47,11 +47,6 @@ function setup() {
 }
 
 function loadParticles() {
-    let particlesScript = document.createElement("script");
-    particlesScript.type = "text/javascript";
-    particlesScript.src = "/assets/js/particles.min.js";
-    document.body.appendChild(particlesScript);
-
     particlesJS.load('particles-bg', '/assets/config/particles.json',
                      function () {
                          console.log('Particles ready! :D');

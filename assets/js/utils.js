@@ -10,8 +10,7 @@ function fade(el, type, ms, display) {
         opacity = isIn ? 0 : 1,
         interval = 50,
         duration = ms,
-        gap = interval / duration,
-        self = this;
+        gap = interval / duration;
 
     if (isIn) {
         el.style.display = display || 'block';
