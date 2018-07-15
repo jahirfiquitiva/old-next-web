@@ -23,6 +23,32 @@ function setup() {
     if (years !== null && years !== undefined) {
         years.innerHTML = (date.getFullYear() - 1997).toString();
     }
+
+    let particlesScript = document.createElement("script");
+    particlesScript.type = "text/javascript";
+    particlesScript.src = "/assets/js/particles.min.js";
+    document.body.appendChild(particlesScript);
+
+    let hasContactEle = document.querySelector('meta[property="has-contact"]');
+    let hasContact = hasContactEle && hasContactEle.getAttribute("content");
+    if (hasContact !== undefined && hasContact !== null) {
+        if (hasContact === "true") {
+            let captchaScript = document.createElement("script");
+            captchaScript.type = "text/javascript";
+            captchaScript.src = "https://www.google.com/recaptcha/api.js";
+            document.body.appendChild(captchaScript);
+
+            let contactScript = document.createElement("script");
+            contactScript.type = "text/javascript";
+            contactScript.src = "/assets/js/email.min.js";
+            document.body.appendChild(contactScript);
+
+            let emailScript = document.createElement("script");
+            emailScript.type = "text/javascript";
+            emailScript.src = "https://smtpjs.com/v2/smtp.js";
+            document.body.appendChild(emailScript);
+        }
+    }
 }
 
 function loadParticles() {
@@ -47,10 +73,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Toggle the class on both the "navbar-burger" and the "navbar-menu"
                 $el.classList.toggle('is-active');
                 $target.classList.toggle('is-active');
-
             });
         });
     }
+
     setup();
     loadParticles();
 });
