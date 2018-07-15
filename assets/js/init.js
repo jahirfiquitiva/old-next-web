@@ -16,7 +16,7 @@ function setup() {
 
     let copy = document.getElementById('copyright-notice');
     if (copy !== null && copy !== undefined) {
-        copy.innerHTML = 'Copyright ' + date.getFullYear() + ' © All Rights Reserved';
+        copy.innerHTML = 'Copyright © ' + date.getFullYear() + '<br>All Rights Reserved';
     }
 
     let years = document.getElementById('age-text');
