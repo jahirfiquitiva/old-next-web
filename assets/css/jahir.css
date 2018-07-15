@@ -50,7 +50,7 @@ html, body, main {
     line-height: 1.6 !important;
 }
 
-@media screen and (min-width: 375px) {
+@media only screen and (min-width: 375px) {
     html, body, main {
         line-height: 1.8 !important;
         white-space: normal !important;
@@ -160,14 +160,14 @@ button:focus,
     box-shadow: 0 2px 3px rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .1);
 }
 
-@media screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .column.is-12-mobile {
         flex: none !important;
         width: 100% !important;
     }
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .column.is-12-mobile {
         flex: none !important;
         width: 33.3333% !important;
@@ -180,7 +180,7 @@ button:focus,
     background-color: var(--primary) !important;
 }
 
-@media screen and (max-width: 1087px) {
+@media only screen and (max-width: 1087px) {
     .navbar-menu {
         background-color: var(--primary) !important;
         box-shadow: none;
@@ -232,7 +232,7 @@ a.link:focus {
     margin-top: 0.6rem !important;
 }
 
-@media screen and (max-width: 320px) {
+@media only screen and (max-width: 320px) {
     .input, .textarea, textarea {
         max-width: 70% !important;
         width: 70% !important;
@@ -249,7 +249,7 @@ footer, .footer {
     color: var(--secondary-text);
 }
 
-@media screen and (max-width: 1280px) {
+@media only screen and (max-width: 1280px) {
     footer, .footer {
         padding-left: 1.5rem !important;
         padding-right: 1.5rem !important;
@@ -357,20 +357,20 @@ footer, .footer {
     z-index: 1 !important;
 }
 
-@media screen and (max-width: 425px) {
+@media only screen and (max-width: 425px) {
     .hero-body {
         padding-left: 0.8rem !important;
         padding-right: 0.8rem !important;
     }
 }
 
-@media screen and (max-width: 1030px) {
+@media only screen and (max-width: 1030px) {
     .parallax {
         background-attachment: scroll;
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media only screen and (min-width: 1280px) {
     .container {
         max-width: 65% !important;
         width: 65% !important;
@@ -551,21 +551,21 @@ footer, .footer {
 }
 
 /* ReCaptcha styles */
-@media screen and (max-width: 240px) {
+@media only screen and (max-width: 240px) {
     .g-recaptcha {
         transform: scale(0.6) !important;
         -webkit-transform: scale(0.6) !important;
     }
 }
 
-@media screen and (min-width: 241px) and (max-width: 320px) {
+@media only screen and (min-width: 241px) and (max-width: 320px) {
     .g-recaptcha {
         transform: scale(0.7) !important;
         -webkit-transform: scale(0.7) !important;
     }
 }
 
-@media screen and (min-width: 321px) and (max-width: 375px) {
+@media only screen and (min-width: 321px) and (max-width: 375px) {
     .g-recaptcha {
         transform: scale(0.8) !important;
         -webkit-transform: scale(0.8) !important;
