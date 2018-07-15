@@ -583,8 +583,8 @@ footer, .footer {
 .g-recaptcha {
     transform: scale(0.9);
     -webkit-transform: scale(0.9);
-    left: 0 !important;
-    margin-left: 0 !important;
+    transform-origin: left top !important;
+    -webkit-transform-origin: left top !important;
 }
 
 .box.supporter {
