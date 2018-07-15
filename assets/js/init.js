@@ -24,24 +24,19 @@ function setup() {
         years.innerHTML = (date.getFullYear() - 1997).toString();
     }
 
-    let particlesScript = document.createElement("script");
-    particlesScript.type = "text/javascript";
-    particlesScript.src = "/assets/js/particles.min.js";
-    document.body.appendChild(particlesScript);
-
     let hasContactEle = document.querySelector('meta[property="has-contact"]');
     let hasContact = hasContactEle && hasContactEle.getAttribute("content");
     if (hasContact !== undefined && hasContact !== null) {
         if (hasContact === "true") {
-            let captchaScript = document.createElement("script");
-            captchaScript.type = "text/javascript";
-            captchaScript.src = "https://www.google.com/recaptcha/api.js";
-            document.body.appendChild(captchaScript);
-
             let contactScript = document.createElement("script");
             contactScript.type = "text/javascript";
             contactScript.src = "/assets/js/email.min.js";
             document.body.appendChild(contactScript);
+
+            let captchaScript = document.createElement("script");
+            captchaScript.type = "text/javascript";
+            captchaScript.src = "https://www.google.com/recaptcha/api.js";
+            document.body.appendChild(captchaScript);
 
             let emailScript = document.createElement("script");
             emailScript.type = "text/javascript";
@@ -52,6 +47,11 @@ function setup() {
 }
 
 function loadParticles() {
+    let particlesScript = document.createElement("script");
+    particlesScript.type = "text/javascript";
+    particlesScript.src = "/assets/js/particles.min.js";
+    document.body.appendChild(particlesScript);
+
     particlesJS.load('particles-bg', '/assets/config/particles.json',
                      function () {
                          console.log('Particles ready! :D');
