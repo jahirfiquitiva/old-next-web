@@ -15,7 +15,8 @@ window.addEventListener('scroll', function () {
 });
 
 function getElementTop(itemId) {
-    let elementTop = 0;
+    let bodyRect = document.body.getBoundingClientRect();
+    let elementTop = bodyRect.top;
     if (itemId !== null && itemId !== undefined) {
         let element = document.getElementById(itemId);
         let bodyRect = document.body.getBoundingClientRect();
