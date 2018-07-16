@@ -73,6 +73,16 @@ a.button {
     color: rgba(0, 0, 0, 0.9) !important;
     padding-left: 2.4rem !important;
     border: none transparent !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.button.is-loading:hover,
+.button.is-loading:focus {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 .button.is-loading::after {
