@@ -78,12 +78,6 @@ function getLatestReleaseInfo(user, repo, updateWiki, translate, key) {
             }
 
             // Create View on GitHub button
-
-            let releaseUrl = release.html_url;
-            if (releaseUrl !== null && releaseUrl !== undefined) {
-                repoUrl = releaseUrl;
-            }
-
             let repoBtn = document.createElement('a');
             repoBtn.classList.add('button');
             repoBtn.classList.add('is-github');
