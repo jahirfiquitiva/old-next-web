@@ -221,14 +221,23 @@ a.navbar-item.is-active {
 
 a.link {
     color: inherit !important;
-    padding-bottom: 0.1rem !important;
     font-weight: bold !important;
+    border-bottom: 0.09rem solid !important;
+    line-height: 0.8;
+    text-shadow: 2px 2px 0 var(--bg),
+    2px -2px 0 var(--bg),
+    -2px 2px 0 var(--bg), -2px -2px 0 var(--bg),
+    2px 0 0 var(--bg),
+    0 2px 0 var(--bg),
+    -2px 0 0 var(--bg),
+    0 -2px 0 var(--bg);
 }
 
 a.link:hover,
 a.link:focus {
     color: var(--accent) !important;
-    border-bottom: 2px solid !important;
+    border-bottom: 0.09rem solid !important;
+    line-height: 0.8;
 }
 
 .input, .textarea, textarea {
@@ -717,4 +726,21 @@ footer, .footer {
         bottom: 0;
         opacity: 0;
     }
+}
+
+.jf-photo {
+    -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .1);
+    -moz-box-shadow: 0 2px 3px rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .1);
+    box-shadow: 0 2px 3px rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .1);
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.jf-photo:hover {
+    -webkit-box-shadow: 0 2px 10px rgba(10, 10, 10, .2), 0 0 0 1px rgba(10, 10, 10, .1);
+    -moz-box-shadow: 0 2px 10px rgba(10, 10, 10, .2), 0 0 0 1px rgba(10, 10, 10, .1);
+    box-shadow: 0 2px 10px rgba(10, 10, 10, .2), 0 0 0 1px rgba(10, 10, 10, .1);
 }
