@@ -429,6 +429,10 @@ footer, .footer {
     z-index: 1 !important;
 }
 
+#about .hero-body {
+    padding: 2rem 1.5rem !important;
+}
+
 @media only screen and (max-width: 425px) {
     .hero-body {
         padding-left: 0.8rem !important;
