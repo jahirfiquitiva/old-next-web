@@ -29,8 +29,9 @@
                         if (social != null && social[args.t] != null) {
                             var url = social[args.t].url + (args.d != null ? "/"
                                       + StringUtil.format(args.d, social[args.t].name) : "");
+                            var title = social[args.t].name;
                             document.getElementById("container").innerHTML =
-                                "Redirecting you to: <a href=\"" + url + "\">" + url
+                                "Redirecting you to <a href=\"" + url + "\">" + title
                                 + "</a> ... Please wait 😅";
                             window.location = url;
                             return;
