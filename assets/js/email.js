@@ -85,18 +85,12 @@ function validateEmail(email) {
 function getEmailContent(name, email, subject, message) {
     return 'You have been contacted by ' + name + '<br/><br/><table'
            + ' style="margin: 0;width: 100%;border: 1px solid #f5f5f5;'
-           + 'border-collapse: collapse;border-spacing: 0;"><tr><td style='
-           + '"width:25%;background:#263238;color:#eceff1;padding: 10px;'
-           + 'text-transform: uppercase;">Field</td><td style="width:75%;'
-           + 'background:#263238;color:#eceff1;padding: 10px;text-transform: '
-           + 'uppercase;">Entry</td></tr><tr><td style="padding: 10px 8px;">'
-           + 'Name:</td><td style="padding: 10px 8px;">' + name + '</td></tr><tr>'
+           + 'border-collapse: collapse;border-spacing: 0;"><tr>'
            + '<td style="padding: 10px 8px;background: #f5f5f5;">Email:</td>'
            + '<td style="padding: 10px 8px;background: #f5f5f5;">' + email + '</td>'
            + '</tr><tr><td style="padding: 10px 8px;">Subject:</td>'
            + '<td style="padding: 10px 8px;">' + subject + '</td></tr><tr>'
            + '<td style="padding: 10px 8px;background: #f5f5f5;">Message:</td>'
            + '<td style="padding: 10px 8px;background: #f5f5f5;">' + message + '</td>'
-           + '</tr></table><br>You can contact ' + name + ' via the email ' + email
-           + ' <br/>';
+           + '</tr></table><br/>';
 }
