@@ -221,10 +221,7 @@ button:focus,
     padding-right: 0 !important;
 }
 
-.navbar-dropdown .navbar-item {
-    background-color: var(--primary) !important;
-}
-
+.navbar-dropdown .navbar-item,
 .navbar-dropdown .navbar-item:hover,
 .navbar-dropdown .navbar-item:focus {
     background-color: var(--primary-hover) !important;
