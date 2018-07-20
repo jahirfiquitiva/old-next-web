@@ -86,7 +86,7 @@
         <link rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
 
-        <link href="/assets/css/jahir.min.css" rel="stylesheet">
+        <link href="assets/css/jahir.css" rel="stylesheet">
         <meta property="has-contact" content="true">
     </head>
     <body>
@@ -99,7 +99,8 @@
                         <nav class="navbar is-fixed-top has-shadow" role="navigation"
                              aria-label="main navigation">
                             <div class="navbar-brand">
-                                <a class="navbar-item is-primary-text is-logo" href="/">
+                                <a class="navbar-item is-primary-text is-logo"
+                                   onclick="scrollToItem('home')">
                                     <img src="assets/img/brand/logo-def.svg" alt="JF" height="48"
                                          width="48" id="logo">
                                     Jahir Fiquitiva
@@ -124,16 +125,15 @@
                                        id="portfolio-link">
                                         Portfolio
                                     </a>
-                                    <a class="navbar-item" onclick="scrollToItem('skills')"
-                                       id="skills-link">
-                                        Skills
+                                    <a class="navbar-item" href="/about/" id="about-link">
+                                        About
+                                    </a>
+                                    <a class="navbar-item" href="/thanks/">
+                                        Supporters
                                     </a>
                                     <a class="navbar-item" onclick="scrollToItem('contact')"
                                        id="contact-link">
                                         Contact
-                                    </a>
-                                    <a class="navbar-item" href="/thanks/">
-                                        Supporters
                                     </a>
                                 </div>
                             </div>
@@ -166,59 +166,60 @@
                                 </h5>
                             </div>
                         </div>
+                        <br>
                         <div class="home-content">
-                            <p>I am <span id="age-text"></span> years old and I am currently a
-                               Computer Science student at
-                                <a class="link" href="http://www.uptc.edu.co/" target="_blank">
-                                    Pedagogical and Technological University of Colombia</a>.
-                               I consider myself a curious and inquisitive person, so on my spare
-                               time I like to work on
-                                <a class="link" onclick="scrollToItem('portfolio')">
-                                    side projects</a>
-                               and try to constantly learn something new to improve my <a
-                                        class="link" onclick="scrollToItem('skills')">skillset</a>.
-                            </p>
-                            <p>
-                                Let's work together!
-                            </p>
-                            <a class="button is-primary"
-                               href="https://jahirfiquitiva.com/resume/"
-                               target="_blank">
-                                Download Resume
-                            </a>
-                            <br><br>
-                            <p>You can also find me on 👇</p>
-                            <div class="tags social-tags is-vcentered has-text-centered">
-                                <a class="tag is-github is-medium" target="_blank"
-                                   data-balloon="GitHub" data-balloon-pos="down"
-                                   href="/redirects/?t=github">
-                                    <i class="mdi mdi-18px mdi-github-circle"></i>
-                                </a>
-                                <a class="tag is-twitter is-medium" target="_blank"
-                                   data-balloon="Twitter" data-balloon-pos="down"
-                                   href="/redirects/?t=twitter">
-                                    <i class="mdi mdi-18px mdi-twitter"></i>
-                                </a>
-                                <a class="tag is-google-plus is-medium" target="_blank"
-                                   data-balloon="Google+" data-balloon-pos="down"
-                                   href="/redirects/?t=googleplus">
-                                    <i class="mdi mdi-18px mdi-google-plus"></i>
-                                </a>
-                                <a class="tag is-linked-in is-medium" target="_blank"
-                                   data-balloon="LinkedIn" data-balloon-pos="down"
-                                   href="/redirects/?t=linkedin">
-                                    <i class="mdi mdi-18px mdi-linkedin"></i>
-                                </a>
-                                <a class="tag is-google-play is-medium" target="_blank"
-                                   data-balloon="Google Play Store" data-balloon-pos="down"
-                                   href="/redirects/?t=googleplay">
-                                    <i class="mdi mdi-18px mdi-google-play"></i>
-                                </a>
-                                <a class="tag is-telegram is-medium" target="_blank"
-                                   data-balloon="Telegram" data-balloon-pos="down"
-                                   href="/redirects/?t=telegram">
-                                    <i class="mdi mdi-18px mdi-telegram"></i>
-                                </a>
+                            <div class="columns is-multiline is-mobile">
+                                <div class="column is-12-mobile is-6-tablet is-one-third-desktop">
+                                    <p>
+                                        Read more about me
+                                    </p>
+                                    <a class="button is-primary" href="/about/" target="_blank">
+                                        About
+                                    </a>
+                                </div>
+                                <div class="column is-12-mobile is-6-tablet is-one-third-desktop">
+                                    <p>
+                                        Let's work together!
+                                    </p>
+                                    <a class="button is-primary" href="/resume/" target="_blank">
+                                        Download Resume
+                                    </a>
+                                </div>
+                                <div class="column is-12-mobile is-6-tablet is-one-third-desktop">
+                                    <p>You can also find me on 👇</p>
+                                    <div class="tags social-tags is-vcentered has-text-centered">
+                                        <a class="tag is-github is-medium" target="_blank"
+                                           data-balloon="GitHub" data-balloon-pos="down"
+                                           href="/redirects/?t=github">
+                                            <i class="mdi mdi-18px mdi-github-circle"></i>
+                                        </a>
+                                        <a class="tag is-twitter is-medium" target="_blank"
+                                           data-balloon="Twitter" data-balloon-pos="down"
+                                           href="/redirects/?t=twitter">
+                                            <i class="mdi mdi-18px mdi-twitter"></i>
+                                        </a>
+                                        <a class="tag is-google-plus is-medium" target="_blank"
+                                           data-balloon="Google+" data-balloon-pos="down"
+                                           href="/redirects/?t=googleplus">
+                                            <i class="mdi mdi-18px mdi-google-plus"></i>
+                                        </a>
+                                        <a class="tag is-linked-in is-medium" target="_blank"
+                                           data-balloon="LinkedIn" data-balloon-pos="down"
+                                           href="/redirects/?t=linkedin">
+                                            <i class="mdi mdi-18px mdi-linkedin"></i>
+                                        </a>
+                                        <a class="tag is-google-play is-medium" target="_blank"
+                                           data-balloon="Google Play Store" data-balloon-pos="down"
+                                           href="/redirects/?t=googleplay">
+                                            <i class="mdi mdi-18px mdi-google-play"></i>
+                                        </a>
+                                        <a class="tag is-telegram is-medium" target="_blank"
+                                           data-balloon="Telegram" data-balloon-pos="down"
+                                           href="/redirects/?t=telegram">
+                                            <i class="mdi mdi-18px mdi-telegram"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -504,54 +505,6 @@
 
         <hr>
 
-        <section class="hero is-fullheight" id="skills">
-            <div class="hero-body">
-                <div class="container">
-                    <div class="content">
-                        <h1 class="is-primary-text anchored">Skills 🚀</h1>
-                        <h5 class="is-secondary-text">
-                            Learning is a never-ending process
-                        </h5>
-                        <br>
-                        <div class="columns is-multiline is-mobile is-mobile">
-                            <div class="column is-12-mobile is-one-third-tablet is-one-third-desktop">
-                                <h6 class="is-primary-text"><b>Programming 💻</b></h6>
-                                <ul>
-                                    <li>Android Development</li>
-                                    <li>Kotlin</li>
-                                    <li>Java</li>
-                                    <li>Python</li>
-                                    <li>JavaScript</li>
-                                    <li>HTML5/CSS3</li>
-                                </ul>
-                            </div>
-                            <div class="column is-12-mobile is-one-third-tablet is-one-third-desktop">
-                                <h6 class="is-primary-text">General ⚡️</h6>
-                                <ul>
-                                    <li>Git</li>
-                                    <li>Material Design</li>
-                                    <li>Adobe Illustrator</li>
-                                    <li>Product Iconography</li>
-                                    <li>Illustration</li>
-                                    <li>UI/UX</li>
-                                </ul>
-                            </div>
-                            <div class="column is-12-mobile is-one-third-tablet is-one-third-desktop">
-                                <h6 class="is-primary-text">Languages 🗣</h6>
-                                <ul>
-                                    <li>Spanish (native)</li>
-                                    <li>English (fluid)</li>
-                                    <li>Italian (basic)</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <hr>
-
         <section class="hero is-fullheight" id="contact">
             <div class="hero-body">
                 <div class="container is-vcentered">
@@ -700,7 +653,7 @@
                             <p>
                                 <i class="mdi mdi-code-tags mdi-18px"></i> with
                                 <i class="mdi mdi-heart mdi-18px"></i> by
-                                <a href="/" target="_self">Jahir Fiquitiva</a>
+                                <a onclick="scrollToItem('home')">Jahir Fiquitiva</a>
                             </p>
                             <p id="copyright-notice"></p>
                         </div>

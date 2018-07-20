@@ -31,13 +31,13 @@
                                       + StringUtil.format(args.d, social[args.t].name) : "");
                             document.getElementById("container").innerHTML =
                                 "Redirecting you to: <a href=\"" + url + "\">" + url
-                                + "</a> ... Please wait 😄";
+                                + "</a> ... Please wait 😅";
                             window.location = url;
                             return;
                         }
                     }
                     console.error(args, social);
-                    window.location = "/error.html";
+                    window.location = "/404.html";
                 }
             };
             requestContent.open("GET", "data.json", true);
