@@ -222,12 +222,23 @@ button:focus,
 }
 
 .navbar-dropdown .navbar-item {
-    background-color: var(--white) !important;
+    background-color: var(--primary) !important;
 }
 
 .navbar-dropdown .navbar-item:hover,
 .navbar-dropdown .navbar-item:focus {
-    background-color: var(--primary) !important;
+    background-color: var(--primary-hover) !important;
+}
+
+@media screen and (min-width: 1088px) {
+    .navbar-dropdown .navbar-item {
+        background-color: var(--white) !important;
+    }
+
+    .navbar-dropdown .navbar-item:hover,
+    .navbar-dropdown .navbar-item:focus {
+        background-color: var(--primary) !important;
+    }
 }
 
 .is-logo {
