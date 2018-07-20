@@ -14,9 +14,13 @@ window.addEventListener('scroll', function () {
 function getElementTop(itemId) {
     let elementTop = 0;
     if (itemId !== null && itemId !== undefined) {
-        let bodyRect = document.body.getBoundingClientRect(),
-            elemRect = document.getElementById(itemId).getBoundingClientRect();
-        elementTop = elemRect.top - bodyRect.top;
+        try {
+            let bodyRect = document.body.getBoundingClientRect(),
+                elemRect = document.getElementById(itemId).getBoundingClientRect();
+            elementTop = elemRect.top - bodyRect.top;
+        } catch (e) {
+          // Ignore errors here :P
+        }
         // elementTop = $("#" + itemId).offset().top;
         // elementTop = top - convertRemToPixels(7);
     }
