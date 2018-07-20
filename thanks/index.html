@@ -119,12 +119,29 @@
                                     <a class="navbar-item" href="/" id="home-link">
                                         Home
                                     </a>
-                                    <a class="navbar-item" href="/contact/">
-                                        Contact
+                                    <a class="navbar-item" href="/#portfolio" id="portfolio-link">
+                                        Portfolio
                                     </a>
+                                    <div class="navbar-item has-dropdown is-hoverable">
+                                        <a class="navbar-link" href="/about/">
+                                            About
+                                        </a>
+                                        <div class="navbar-dropdown is-boxed is-right">
+                                            <a class="navbar-item" href="/about/#skills">
+                                                Skills
+                                            </a>
+                                            <a class="navbar-item" href="/about/#opinions">
+                                                Opinions
+                                            </a>
+                                        </div>
+                                    </div>
                                     <a class="navbar-item is-active"
-                                       onclick="scrollToItem('thanks')">
+                                       onclick="scrollToItem('thanks')"
+                                       id="thanks-link">
                                         Supporters
+                                    </a>
+                                    <a class="navbar-item" href="/contact/" id="contact-link">
+                                        Contact
                                     </a>
                                 </div>
                             </div>

@@ -1,7 +1,8 @@
 :root {
     --white: #FFFFFF;
     --bg: #FCFCFC;
-    --primary: #F9F9F9;
+    --primary: #f9fafb;
+    --primary-hover: #f2f4f7;
     --card: #FFFFFF;
     --accent: #4285F4;
     --primary-text: #1f2b38; /* #263238; */
@@ -206,6 +207,36 @@ button:focus,
     color: var(--secondary-text);
 }
 
+.navbar-link {
+    padding-left: 0 !important;
+    font-size: 1.2rem !important;
+    color: var(--secondary-text) !important;
+}
+
+.navbar-item .navbar-link::after {
+    border-color: var(--secondary-text) !important;
+}
+
+.navbar-item .navbar-link:hover::after,
+.navbar-item .navbar-link:focus::after,
+.navbar-item:hover .navbar-link::after,
+.navbar-item:focus .navbar-link::after {
+    border-color: var(--accent) !important;
+}
+
+.navbar-item.has-dropdown {
+    padding-right: 0 !important;
+}
+
+.navbar-dropdown .navbar-item {
+    background-color: var(--white) !important;
+}
+
+.navbar-dropdown .navbar-item:hover,
+.navbar-dropdown .navbar-item:focus {
+    background-color: var(--primary) !important;
+}
+
 .is-logo {
     color: var(--primary-text) !important;
 }
@@ -214,11 +245,13 @@ button:focus,
     color: var(--accent) !important;
 }
 
-a.navbar-item:hover,
-a.navbar-item.is-active {
-    background-color: #f0f0f0 !important;
-    color: var(--accent);
-    font-weight: bold;
+.navbar-item:hover,
+.navbar-item:focus,
+.navbar-item.is-active,
+.navbar-item:hover .navbar-link,
+.navbar-item:focus .navbar-link {
+    background-color: var(--primary-hover) !important;
+    color: var(--accent) !important;
 }
 
 .navbar.has-shadow {

@@ -118,15 +118,30 @@
                                     <a class="navbar-item" href="/" id="home-link">
                                         Home
                                     </a>
-                                    <a class="navbar-item is-active"
-                                       onclick="scrollToItem('about')">
-                                        About
+                                    <a class="navbar-item" href="/#portfolio" id="portfolio-link">
+                                        Portfolio
                                     </a>
-                                    <a class="navbar-item" href="/contact/">
-                                        Contact
-                                    </a>
+                                    <div class="navbar-item has-dropdown is-hoverable is-active">
+                                        <a class="navbar-link" id="about-link"
+                                           onclick="scrollToItem('about')">
+                                            About
+                                        </a>
+                                        <div class="navbar-dropdown is-boxed is-right">
+                                            <a class="navbar-item" id="skills-link"
+                                               onclick="scrollToItem('skills')">
+                                                Skills
+                                            </a>
+                                            <a class="navbar-item" id="opinions-link"
+                                               onclick="scrollToItem('opinions')">
+                                                Opinions
+                                            </a>
+                                        </div>
+                                    </div>
                                     <a class="navbar-item" href="/thanks/">
                                         Supporters
+                                    </a>
+                                    <a class="navbar-item" href="/contact/" id="contact-link">
+                                        Contact
                                     </a>
                                 </div>
                             </div>
