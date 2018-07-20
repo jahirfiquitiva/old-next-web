@@ -3,6 +3,14 @@
     "url": "http://jahirfiquitiva.com",
     "name": "Main Website"
   },
+  "donate": {
+    "url": "https://jahirfiquitiva.com/thanks/#become",
+    "name": "Donation Site"
+  },
+  "contact": {
+    "url": "http://jahirfiquitiva.com/contact/",
+    "name": "Contact Site"
+  },
   "twitter": {
     "url": "https://twitter.com/jahirfiquitiva",
     "name": "Twitter"
@@ -34,10 +42,6 @@
   "telegram": {
     "url": "https://t.me/jahirfiquitiva",
     "name": "Telegram"
-  },
-  "contact": {
-    "url": "http://jahirfiquitiva.com/contact/",
-    "name": "Contact Site"
   },
   "medium": {
     "url": "https://medium.com/@jahirfiquitiva",
