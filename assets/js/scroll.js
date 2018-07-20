@@ -7,7 +7,10 @@ window.addEventListener('scroll', function () {
     } else if (yPosition < contactTop) {
         toggleLink('portfolio');
     } else {
-        toggleLink('contact');
+        let ele = document.getElementById('contact');
+        if (ele !== null && ele !== undefined) {
+            toggleLink('contact');
+        }
     }
 });
 
@@ -51,8 +54,6 @@ function toggleLink(itemId) {
     let ele = document.getElementById(itemId + "-link");
     if (ele !== null && ele !== undefined) {
         ele.classList.add("is-active");
-    } else {
-        console.error("Couldn't find item: '" + itemId + "-link'")
     }
 }
 

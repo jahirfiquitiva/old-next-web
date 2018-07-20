@@ -637,6 +637,32 @@ footer, .footer {
     -webkit-transform-origin: left top !important;
 }
 
+.column figure {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.bcm-btn {
+    margin-left: 0.75rem !important;
+    margin-top: 0.25rem !important;
+}
+
+#become-cols .column {
+    padding-top: 0.5rem !important;
+    padding-right: 0.25rem !important;
+    padding-bottom: 0.75rem !important;
+    padding-left: 0.75rem !important;
+}
+
+#become-cols-wfield .column .field {
+    margin-left: 0.5rem !important;
+}
+
+#become-cols .go {
+    margin-top: 0.5rem !important;
+    margin-left: 0.75rem !important;
+}
+
 .box.supporter {
     padding: 0.5rem 0.8rem !important;
 }
@@ -651,13 +677,22 @@ footer, .footer {
 }
 
 .box.supporter.btns {
-    padding: 0.2rem 0.8rem 0.2rem !important;
+    padding: 0 0.6rem !important;
     transition: .2s box-shadow;
 }
 
 .box.supporter.btns a:hover,
 .box.supporter.btns a:focus {
     color: #ffffff !important;
+}
+
+.bmc-button img {
+    width: 27px !important;
+    margin-bottom: 3px !important;
+    margin-right: 4px !important;
+    box-shadow: none !important;
+    border: none !important;
+    vertical-align: middle !important;
 }
 
 .paypal {
