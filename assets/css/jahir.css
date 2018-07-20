@@ -7,7 +7,7 @@
     --accent: #4285F4;
     --primary-text: #1f2b38; /* #263238; */
     --secondary-text: #283848; /* #37474F; */
-    --disabled-text: rgba(0, 0, 0, 0.5);
+    --disabled-text: #53606d;
     --primary-text-inverse: var(--white);
     --secondary-text-inverse: rgba(255, 255, 255, 0.7);
     --disabled-text-inverse: rgba(255, 255, 255, 0.5);
