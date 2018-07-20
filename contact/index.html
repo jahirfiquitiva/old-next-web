@@ -87,7 +87,6 @@
               href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
 
         <link href="/assets/css/jahir.min.css" rel="stylesheet">
-        <meta property="has-contact" content="true">
     </head>
     <body>
         <div id="particles-bg"></div>
@@ -147,7 +146,8 @@
                         <h1>Get in Touch 📮</h1>
                         <h4>Don't hesitate contacting me!</h4>
                         <br>
-                        <form id="contact-form">
+                        <form id="contact-form" action="https://formspree.io/hi@jahirfiquitiva.com"
+                              method="POST">
                             <div class="field is-horizontal">
                                 <div class="field-label is-normal">
                                     <label class="label">From</label>
@@ -166,7 +166,7 @@
                                     <div class="field">
                                         <p class="control is-expanded has-icons-left has-icons-right">
                                             <input class="input" type="email" id="email"
-                                                   name="email"
+                                                   name="_replyto"
                                                    placeholder="jon.doe@example.com"
                                                    required aria-required="true">
                                             <span class="icon is-small is-left">
@@ -186,7 +186,7 @@
                                         <div class="control">
                                             <input class="input" type="text"
                                                    placeholder="e.g. Let's work together"
-                                                   id="subject" name="subject"
+                                                   id="subject" name="_subject"
                                                    required aria-required="true">
                                         </div>
                                     </div>
@@ -223,6 +223,8 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <input type="hidden" name="_next" value="https://jahirfiquitiva.com/contacted" />
 
                             <div class="field is-horizontal">
                                 <div class="field-label">
