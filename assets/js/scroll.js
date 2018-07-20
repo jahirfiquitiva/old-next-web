@@ -19,7 +19,7 @@ function getElementTop(itemId) {
                 elemRect = document.getElementById(itemId).getBoundingClientRect();
             elementTop = elemRect.top - bodyRect.top;
         } catch (e) {
-          // Ignore errors here :P
+            // Ignore errors here :P
         }
         // elementTop = $("#" + itemId).offset().top;
         // elementTop = top - convertRemToPixels(7);
@@ -43,9 +43,17 @@ function scrollToItem(itemId) {
 function toggleLink(itemId) {
     let navLinks = document.getElementsByClassName('navbar-item');
     for (let i = 0; i < navLinks.length; i++) {
-        navLinks[i].classList.remove('is-active');
+        let ele = navLinks[i];
+        if (ele !== null && ele !== undefined) {
+            ele.classList.remove('is-active');
+        }
     }
-    document.getElementById(itemId + "-link").classList.add("is-active");
+    let ele = document.getElementById(itemId + "-link");
+    if (ele !== null && ele !== undefined) {
+        ele.classList.add("is-active");
+    } else {
+        console.error("Couldn't find item: '" + itemId + "-link'")
+    }
 }
 
 function togglePortfolio(itemId) {
