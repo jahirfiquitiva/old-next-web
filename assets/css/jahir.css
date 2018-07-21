@@ -668,16 +668,9 @@ footer, .footer {
     margin-right: 0 !important;
 }
 
-.bcm-btn {
-    margin-left: 0.75rem !important;
-    margin-top: 0.25rem !important;
-}
-
-#become-cols .column {
-    padding-top: 0.5rem !important;
-    padding-right: 0.25rem !important;
-    padding-bottom: 0.75rem !important;
-    padding-left: 0.75rem !important;
+#become-cols .column,
+#bmc-cols .column {
+    padding: 0.5rem 0.25rem 0.75rem 0.75rem !important;
 }
 
 #become-cols-wfield .column .field {
@@ -705,17 +698,28 @@ footer, .footer {
 .box.supporter.btns {
     padding: 0 0.6rem !important;
     transition: .2s box-shadow;
+    -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .1);
+    -moz-box-shadow: 0 2px 3px rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .1);
+    box-shadow: 0 2px 3px rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .1);
 }
 
-.box.supporter.btns a:hover,
-.box.supporter.btns a:focus {
-    color: #ffffff !important;
+.box.supporter.btns:hover,
+.box.supporter.btns:focus {
+    -webkit-box-shadow: 0 2px 10px rgba(10, 10, 10, .2), 0 0 0 1px rgba(10, 10, 10, .1);
+    -moz-box-shadow: 0 2px 10px rgba(10, 10, 10, .2), 0 0 0 1px rgba(10, 10, 10, .1);
+    box-shadow: 0 2px 10px rgba(10, 10, 10, .2), 0 0 0 1px rgba(10, 10, 10, .1);
+}
+
+.bmc-button {
+    color: var(--secondary-text) !important;
+    background-color: var(--white) !important;
+    padding-top: 0.4rem !important;
 }
 
 .bmc-button img {
-    width: 27px !important;
-    margin-bottom: 3px !important;
-    margin-right: 4px !important;
+    width: 24px !important;
+    height: 24px !important;
+    margin-right: 0.6rem !important;
     box-shadow: none !important;
     border: none !important;
     vertical-align: middle !important;
@@ -733,6 +737,7 @@ footer, .footer {
 }
 
 .paypal .mdi,
+.bmc-button .mdi,
 .telegram .mdi {
     margin-right: 0.8rem !important;
 }
