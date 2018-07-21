@@ -30,7 +30,7 @@ function getElementTop(itemId) {
     return elementTop;
 }
 
-function scrollToItem(itemId) {
+function scrollToItem(itemId, toggle = true) {
     try {
         let elementTop = getElementTop(itemId);
         /*
@@ -38,7 +38,11 @@ function scrollToItem(itemId) {
         document.body.scrollTop = document.documentElement.scrollTop = elementTop;
         */
         window.scroll({top: elementTop, left: 0, behavior: 'smooth'});
-        toggleLink(itemId);
+        if (toggle !== null && toggle !== undefined) {
+            if (toggle) {
+                toggleLink(itemId);
+            }
+        }
     } catch (err) {
     }
 }
