@@ -18,7 +18,6 @@ function getLatestRelease() {
                     document.getElementById("message").innerHTML =
                         "Download started! 😀<br>Feel free to close this tab 😉";
                     window.location.href = downloadUrl;
-                    closeThis();
                 } else {
                     document.getElementById("message").innerHTML =
                         "An unexpected error occurred 😞<br>I will redirect you to <a href=\""
