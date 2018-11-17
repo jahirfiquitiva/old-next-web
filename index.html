@@ -1,10 +1,287 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="has-navbar-fixed-top">
     <head>
         <meta charset="UTF-8">
         <title>Jahir Fiquitiva 🌀</title>
+
+        <link href="assets/libs/css/bulma.css" rel="stylesheet">
+        <link href="assets/libs/fonts/manrope/manrope.css" rel="stylesheet">
+        <link href="assets/libs/fonts/mdi/materialdesignicons.css" rel="stylesheet">
+
+        <link href="assets/css/base.css" rel="stylesheet">
     </head>
     <body>
+        <div class="hero" id="particles-bg"></div>
 
+        <section class="hero is-fullheight-with-navbar" id="home">
+            <div class="hero-head">
+                <nav class="navbar is-fixed-top has-shadow">
+                    <div class="container">
+                        <div class="navbar-brand">
+                            <a class="navbar-item is-logo">
+                                <img src="/assets/img/brand/logo-def.svg" alt="JF" height="48"
+                                     width="48" id="logo"
+                                     onerror="this.onerror=null;this.src='/assets/img/brand/logo-def.png'">
+                                Jahir Fiquitiva
+                            </a>
+                            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+                        <div id="navbarMenuHeroA" class="navbar-menu">
+                            <div class="navbar-end">
+                                <a id="home-link" class="navbar-item is-active is-accent-text"
+                                   onclick="scrollToItem('home')">
+                                    Home
+                                </a>
+                                <a id="projects-link"
+                                   class="navbar-item"
+                                   onclick="scrollToItem('projects')">
+                                    Projects
+                                </a>
+                                <a id="about-link"
+                                   class="navbar-item"
+                                   href="/about">
+                                    About
+                                </a>
+                                <a id="thanks-link"
+                                   class="navbar-item"
+                                   href="/thanks">
+                                    Thanks
+                                </a>
+                                <a id="contact-link"
+                                   class="navbar-item"
+                                   onclick="scrollToItem('contact')">
+                                    Contact
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <figure class="image avatar has-text-centered">
+                        <img src="assets/images/me/me.jpg"
+                             class="circle has-shadow shadowed">
+                    </figure>
+                    <p></p>
+                    <h3 id="hello"
+                        class="bold is-primary-text shadowed"
+                        data-shadow-color="yel">
+                        Hello, world! 👋</h3>
+                    <h2 class="is-primary-text shadowed" data-shadow-color="blu">
+                        I am Jahir Fiquitiva</h2>
+                    <br>
+                    <div class="home-content">
+                        <p>
+                            I'm a freelance, passionate and creative developer from
+                            <a href="https://www.google.com/maps/place/Colombia/@4.645345,-74.3390061,5z/"
+                               class="link" target="_blank">Colombia 🇨🇴</a>
+                            who aims to build quality products by taking into account good
+                            development practices and focusing on UI and UX, while also trying
+                            to provide accessible experiences.
+                        </p>
+                        <p>
+                            <a class="button is-primary ripple"
+                               data-ripple-style="dark"
+                               href="/about/">
+                                More about me
+                            </a>
+                        </p>
+                        <br>
+                        <p class="bold">You can also find me on:</p>
+                        <div class="buttons is-centered">
+                            <a class="button social-btn is-github"
+                               href="https://jahir.xyz/github" target="_blank"
+                               data-balloon="GitHub" data-balloon-pos="down">
+                                <i class="mdi mdi-18px mdi-github-circle"></i>
+                            </a>
+                            <a class="button social-btn is-twitter"
+                               href="https://jahir.xyz/twitter" target="_blank"
+                               data-balloon="Twitter" data-balloon-pos="down">
+                                <i class="mdi mdi-18px mdi-twitter"></i>
+                            </a>
+                            <a class="button social-btn is-plus"
+                               href="https://jahir.xyz/gplus" target="_blank"
+                               data-balloon="Google+" data-balloon-pos="down">
+                                <i class="mdi mdi-18px mdi-google-plus"></i>
+                            </a>
+                            <a class="button social-btn is-linkedin"
+                               href="https://jahir.xyz/lnkdn" target="_blank"
+                               data-balloon="LinkedIn" data-balloon-pos="down">
+                                <i class="mdi mdi-18px mdi-linkedin"></i>
+                            </a>
+                            <a class="button social-btn is-play"
+                               href="https://jahir.xyz/gplay" target="_blank"
+                               data-balloon="Google Play Store" data-balloon-pos="down">
+                                <i class="mdi mdi-18px mdi-google-play"></i>
+                            </a>
+                            <a class="button social-btn is-telegram"
+                               href="https://jahir.xyz/tlgrm" target="_blank"
+                               data-balloon="Telegram" data-balloon-pos="down">
+                                <i class="mdi mdi-18px mdi-telegram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-foot">
+                <div class="down-indicator has-text-centered">
+                    <h4>👇</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero is-fullheight" id="projects">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="content">
+                        <h1 class="has-text-centered shadowed" data-shadow-color="blu">
+                            Projects 👨‍💻
+                        </h1>
+                        <div class="buttons is-centered">
+                            <span id="android-filter"
+                                  class="button android filter w-border is-rounded is-active">Android</span>
+                            <span id="web-filter"
+                                  class="button web filter w-border is-rounded">Web</span>
+                            <span id="design-filter"
+                                  class="button design filter w-border is-rounded">Design</span>
+                            <span id="other-filter"
+                                  class="button other filter w-border is-rounded">Other</span>
+                        </div>
+                        <br>
+                        <div class="columns is-multiline is-mobile">
+                            <div class="column is-12-mobile is-one-third-tablet is-one-third-desktop">
+                                <a href="https://github.com/jahirfiquitiva/Blueprint/"
+                                   target="_blank" id="blueprint">
+                                    <div class="card has-same-height">
+                                        <div class="card-content">
+                                            <figure class="image icon is-128x128 is-centered">
+                                                <img src="assets/images/projects/blueprint.png"
+                                                     alt="Blueprint">
+                                            </figure>
+                                            <h6 class="title">Blueprint</h6>
+                                            <p class="subtitle">
+                                                Material Design dashboard for creating Android icon
+                                                packs easily.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="column is-12-mobile is-one-third-tablet is-one-third-desktop">
+                                <a href="https://github.com/jahirfiquitiva/Frames/"
+                                   target="_blank" id="frames">
+                                    <div class="card has-same-height">
+                                        <div class="card-content">
+                                            <figure class="image icon is-128x128 is-centered">
+                                                <img src="assets/images/projects/frames.png"
+                                                     alt="Frames">
+                                            </figure>
+                                            <h6 class="title">Frames</h6>
+                                            <p class="subtitle">
+                                                Material Design dashboard for creating Android
+                                                wallpapers apps easily.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="column is-12-mobile is-one-third-tablet is-one-third-desktop">
+                                <a href="https://github.com/jahirfiquitiva/Kuper/"
+                                   target="_blank" id="kuper">
+                                    <div class="card has-same-height">
+                                        <div class="card-content">
+                                            <figure class="image icon is-128x128 is-centered">
+                                                <img src="assets/images/projects/kuper.png"
+                                                     alt="Kuper">
+                                            </figure>
+                                            <h6 class="title">Kuper</h6>
+                                            <p class="subtitle">
+                                                Material Design dashboard for Zooper and Kustom
+                                                widget packs.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="column is-12-mobile is-one-third-tablet is-one-third-desktop">
+                                <a href="https://jahir.xyz/PalsApp"
+                                   target="_blank" id="pals">
+                                    <div class="card has-same-height">
+                                        <div class="card-content">
+                                            <figure class="image icon is-128x128 is-centered">
+                                                <img src="assets/images/projects/pals.png"
+                                                     alt="Blueprint">
+                                            </figure>
+                                            <h6 class="title">Pals</h6>
+                                            <p class="subtitle">
+                                                Creates color palettes from any color or image.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="column is-12-mobile is-one-third-tablet is-one-third-desktop">
+                                <a href="https://jahir.xyz/TapApp"
+                                   target="_blank" id="tap">
+                                    <div class="card has-same-height">
+                                        <div class="card-content">
+                                            <figure class="image icon is-128x128 is-centered">
+                                                <img src="assets/images/projects/tap.png"
+                                                     alt="Frames">
+                                            </figure>
+                                            <h6 class="title">Tap</h6>
+                                            <p class="subtitle">
+                                                Floating Action Button for quickly creating Google
+                                                Keep notes and Todoist tasks
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="column is-12-mobile is-one-third-tablet is-one-third-desktop">
+                                <a href="https://github.com/jahirfiquitiva/ChipView/"
+                                   target="_blank" id="chip">
+                                    <div class="card has-same-height">
+                                        <div class="card-content">
+                                            <figure class="image icon is-128x128 is-centered">
+                                                <img src="assets/images/projects/chipview.png"
+                                                     alt="ChipView">
+                                            </figure>
+                                            <h6 class="title">ChipView</h6>
+                                            <p class="subtitle">
+                                                Android custom view to provide the Material Design
+                                                specs
+                                                Chip component.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="buttons is-centered">
+                            <span id="android-filter-2"
+                                  class="button android filter w-border is-rounded is-active">Android</span>
+                            <span id="web-filter-2"
+                                  class="button web filter w-border is-rounded">Web</span>
+                            <span id="design-filter-2"
+                                  class="button design filter w-border is-rounded">Design</span>
+                            <span id="other-filter-2"
+                                  class="button other filter w-border is-rounded">Other</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="assets/libs/js/particles.js"></script>
+        <script src="assets/js/scroll.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
