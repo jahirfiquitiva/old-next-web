@@ -1,10 +1,77 @@
 <!DOCTYPE html>
-<html lang="en" class="has-navbar-fixed-top">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--[if IE]>
+        <meta http-equiv="cleartype" content="on"/>
+        <![endif]-->
+
         <title>Jahir Fiquitiva 🌀</title>
 
+        <meta name="description"
+              content="Passionate and creative developer. This website contains information about me, my skills and my portfolio.">
+        <meta name="author" content="Jahir Fiquitiva">
+        <meta name="keywords"
+              content="portfolio, skills, developer, development, android, material, material design, kotlin, java, javascript, css, html, python, c, c++, design, iconography, illustration">
+
+        <meta property="og:title" content="Jahir Fiquitiva"/>
+        <meta property="og:site_name" content="Jahir Fiquitiva"/>
+
+        <!-- Schema.org markup for Google+ -->
+        <meta itemprop="name" content="Jahir Fiquitiva">
+        <meta itemprop="description"
+              content="Passionate and creative developer. This website contains information about me, my skills and my portfolio.">
+        <meta itemprop="image"
+              content="/assets/img/brand/logo-full-me.png">
+
+        <!-- Open Graph data -->
+        <meta property="og:title" content="Jahir Fiquitiva"/>
+        <meta property="og:type" content="portfolio"/>
+        <meta property="og:url" content="https://jahirfiquitiva.com/"/>
+        <meta property="og:image"
+              content="/assets/img/brand/logo-full-me.png"/>
+        <meta property="og:description"
+              content="Passionate and creative developer. This website contains information about me, my skills and my portfolio."/>
+        <meta property="og:site_name" content="Jahir Fiquitiva"/>
+        <meta property="og:locale" content="en_US"/>
+        <link rel="canonical" href="https://jahirfiquitiva.com/"/>
+
+        <!-- Twitter -->
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:creator" content="@jahirfiquitiva">
+        <meta name="twitter:site" content="@jahirfiquitiva">
+        <meta name="twitter:title" content="Jahir Fiquitiva">
+        <meta name="twitter:description"
+              content="Passionate and creative developer. This website contains information about me, my skills and my portfolio.">
+        <!-- Twitter summary card with large image must be at least 280x150px -->
+        <meta name="twitter:image:src"
+              content="https://jahirfiquitiva.com/assets/img/brand/logo-full-me.png">
+
+        <!-- Google Verification -->
+        <link href="https://plus.google.com/+JahirFiquitivaR/" rel="publisher"/>
+        <meta name="google-site-verification"
+              content="lJwL3cKpjX_Eqp6yEY4hsydJazQl85xv29ZUmEg4oEE"/>
+
+        <!-- Theme Colors -->
+        <meta name="theme-color" content="#f9fafb">
+        <meta name="msapplication-TileColor" content="#f9fafb">
+        <meta name="msapplication-navbutton-color" content="#f9fafb">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#f9fafb">
+
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="/assets/img/brand/favicon32.png">
+        <link rel="apple-touch-icon" href="/assets/img/brand/favicon57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/brand/favicon72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/brand/favicon114.png">
+        <link rel="apple-touch-icon-precomposed" href="/assets/img/brand/favicon32.png">
+        <link rel="icon" sizes="32x32" href="/assets/img/brand/favicon32.png">
+        <meta name="msapplication-TileImage" content="/assets/img/brand/favicon32.png">
+
         <link href="assets/libs/css/bulma.css" rel="stylesheet">
+        <link href="assets/libs/css/balloon.css" rel="stylesheet">
         <link href="assets/libs/fonts/manrope/manrope.css" rel="stylesheet">
         <link href="assets/libs/fonts/mdi/materialdesignicons.css" rel="stylesheet">
 
@@ -256,8 +323,7 @@
                                             <h6 class="title">ChipView</h6>
                                             <p class="subtitle">
                                                 Android custom view to provide the Material Design
-                                                specs
-                                                Chip component.
+                                                specs Chip component.
                                             </p>
                                         </div>
                                     </div>
@@ -280,6 +346,151 @@
             </div>
         </section>
 
+        <section class="hero" id="contact">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="content">
+                        <h1 class="has-text-centered is-primary-text shadowed"
+                            data-shadow-color="red">Get in Touch 📮</h1>
+                        <h5 class="has-text-centered is-secondary-text">
+                            Don't hesitate contacting me!
+                        </h5>
+                        <br>
+
+                        <form id="contact-form" name="contactForm" netlify>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Your name</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <p class="control has-icons-left has-icons-right">
+                                            <input class="input" type="text" placeholder="Jon Doe"
+                                                   id="name" name="name"
+                                                   required aria-required="true">
+                                            <span class="icon is-small is-left">
+                                              <i class="mdi mdi-account"></i>
+                                            </span>
+                                        </p>
+                                        <p class="help is-danger" id="name-help">
+                                            <i class="mdi mdi-alert mdi-18px"></i> Please fill this
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Your email</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <p class="control has-icons-left has-icons-right">
+                                            <input class="input" type="email" id="email"
+                                                   name="email" placeholder="jon.doe@example.com"
+                                                   required aria-required="true">
+                                            <span class="icon is-small is-left">
+                                              <i class="mdi mdi-email"></i>
+                                            </span>
+                                        </p>
+                                        <p class="help is-danger" id="email-help">
+                                            <i class="mdi mdi-alert mdi-18px"></i> Please enter a
+                                                                                   valid email
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Subject</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <p class="control">
+                                            <input class="input" type="text"
+                                                   placeholder="e.g. Let's work together"
+                                                   id="subject" name="subject"
+                                                   required aria-required="true">
+                                        </p>
+                                        <p class="help is-danger" id="subject-help">
+                                            <i class="mdi mdi-alert mdi-18px"></i> Please fill this
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Message</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <textarea class="textarea" type="text"
+                                                      placeholder="Hi Jahir..."
+                                                      id="message" name="message"
+                                                      required aria-required="true"></textarea>
+                                        </div>
+                                        <p class="help is-danger" id="message-help">
+                                            <i class="mdi mdi-alert mdi-18px"></i> Please fill this
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <div class="label"></div>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div id="captcha" class="g-recaptcha"
+                                             data-sitekey="6Lc-aCkTAAAAAOoMbUV54l-MyK4wWuqOLpMnS4pe">
+                                        </div>
+                                        <p class="help is-danger extra" id="captcha-help">
+                                            <i class="mdi mdi-alert mdi-18px"></i> Please confirm
+                                                                                   you're human
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <p class="control">
+                                            <button class="button is-primary"
+                                                    name="action" type="submit" id="submit">
+                                                Send message
+                                            </button>
+                                        </p>
+                                        <p class="help" id="sent">
+                                            Thanks for your message! 😀<br>I'll get back to
+                                            you as soon as possible. 🙌
+                                        </p>
+                                        <p class="help" id="not-sent">
+                                            Unfortunately an error occurred 😔<br>Please try
+                                            again later! 🙌
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <input id="honey" name="honey" type="text" value=""> -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script src="assets/js/email.js"></script> -->
         <script src="assets/libs/js/particles.js"></script>
         <script src="assets/js/scroll.js"></script>
         <script src="assets/js/main.js"></script>
