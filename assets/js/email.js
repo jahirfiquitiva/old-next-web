@@ -58,17 +58,15 @@ const sendForm = event => {
                     isValid = true;
                     try {
                         let request = new XMLHttpRequest();
-                        /*
                         request.onreadystatechange = function () {
                             if (this.readyState !== 4) return;
                             if (this.status >= 200 && this.status < 300) {
-                                // window.location.href = $formContact.getAttribute('action');
+                                window.location.href = $formContact.getAttribute('action');
                             } else {
                                 alert(
                                     "An unexpected error occurred while trying to send your message");
                             }
                         };
-                        */
                         request.open('POST', $formContact.getAttribute('action'), true);
                         request.setRequestHeader('Content-Type',
                                                  'application/x-www-form-urlencoded; charset=UTF-8');
