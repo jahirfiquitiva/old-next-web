@@ -113,32 +113,31 @@
 
             <div class="hero-body">
                 <div class="container has-text-centered">
-                    <div class="error-content">
-                        <h2 class="is-primary-text bold shadowed has-text-centered">
-                            Thanks for your message</h2>
-                        <br>
-                        <!--
-                        <h6 class="is-primary-text">
-                            Unfortunately the site you were trying to reach does not exist or has
-                            been moved. 😥
-                        </h6>
-                        -->
-                    </div>
-                    <br>
-                    <a href="/" class="button is-primary">Go Back Home</a>
-                    <br><br>
-                    <a href="/" style="cursor: pointer !important;">
-                        <div class="columns is-mobile is-centered"
-                             style="margin-bottom: 0 !important; padding-bottom: 0 !important;cursor: pointer !important;">
-                            <div class="column is-half-tablet is-half-desktop"
-                                 style="margin-bottom: 0 !important; padding-bottom: 0 !important;cursor: pointer !important;">
-                                <figure class="image" style="cursor: pointer !important;">
-                                    <img style="cursor: pointer !important;"
-                                         src="assets/images/site/404.gif">
-                                </figure>
-                            </div>
+                    <div class="content">
+                        <iframe name="touri-frame" id="touri-frame"
+                                width="410" height="450" id="bot" class="bot-box"
+                                contenteditable="true"
+                                onload="updateTouriTheme()"
+                                src="https://console.dialogflow.com/api-client/demo/embedded/127c24c0-c5d9-42cc-8d00-aa6b349f3893"></iframe>
+                        <br><br>
+                        <div class="buttons is-centered">
+                            <a class="button is-twitter"
+                               href="https://twitter.com/TouriBot" target="_blank">
+                                <i class="mdi mdi-18px mdi-twitter"
+                                   style="color:var(--white);margin-right: .8rem !important;"></i>
+                                Chat in Twitter
+                            </a>
+                            <a class="button is-telegram"
+                               href="https://t.me/touri_bbot" target="_blank">
+                                <i class="mdi mdi-18px mdi-telegram"
+                                   style="color:var(--white);margin-right: .8rem !important;"></i>
+                                Chat in Telegram
+                            </a>
                         </div>
-                    </a>
+                        <a href="/">
+                            <button class="button is-primary">Go Back home</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -231,5 +230,18 @@
         <script src="assets/libs/js/particles.js"></script>
         <script src="assets/js/scroll.js"></script>
         <script src="assets/js/main.js"></script>
+        <script>
+            function updateTouriTheme() {
+                try {
+                    let frameElement = document.getElementById("touri-frame");
+                    let doc = frameElement.contentWindow.document;
+                    doc.head.contentEditable = true;
+                    doc.head.innerHTML = doc.head.innerHTML + '<style>' +
+                                         '.b-agent-demo .user-request{float:right!important}.b-agent-demo .server-response{background-color:#4285F4!important;float:left!important}'
+                                         + '</style>'
+                } catch (e) {
+                }
+            };
+        </script>
     </body>
 </html>

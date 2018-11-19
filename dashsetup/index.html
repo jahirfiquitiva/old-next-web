@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+        <!--[if IE]>
+        <meta http-equiv="cleartype" content="on"/><![endif]-->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>JF's Dashboards Setup</title>
+
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+
+        <link rel="stylesheet"
+              href="https://cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css">
+
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+
+        <link rel="stylesheet" href="assets/css/base.css" media="all">
+        <link rel="stylesheet" href="assets/css/db-stp.css" media="all" id="theme_css">
+    </head>
+    <body>
+
+        <header class="navbar" id="header">
+            <section class="navbar-section brand-logo">
+                <a href="#" class="navbar-brand mr-2 primary">Dashboards Setup</a>
+            </section>
+            <section class="navbar-section">
+                <a target="_blank" href="/support/"
+                   class="btn btn-link"><i
+                        class="mdi mdi-24px mdi-gift primary"></i></a>
+                <a target="_blank" href="/" class="btn btn-link"><i
+                        class="mdi mdi-24px mdi-account primary"></i></a>
+            </section>
+        </header>
+
+        <div class="tabs-at-top">
+            <ul class="tab">
+                <li class="tab-item active" id="info">
+                    <a onclick="toggleSection('info')"><i class="mdi mdi-18px mdi-information"></i>Disclaimer</a>
+                </li>
+                <li class="tab-item" id="strings">
+                    <a onclick="toggleSection('strings')"><i
+                            class="mdi mdi-18px mdi-clipboard-text"></i>Strings</a>
+                </li>
+                <li class="tab-item" id="colors">
+                    <a onclick="toggleSection('colors')"><i class="mdi mdi-18px mdi-palette"></i>Colors</a>
+                </li>
+                <li class="tab-item" id="general">
+                    <a onclick="toggleSection('general')"><i class="mdi mdi-18px mdi-settings"></i>General</a>
+                </li>
+                <li class="tab-item" id="frames">
+                    <a onclick="toggleSection('frames')"><i class="mdi mdi-18px mdi-image"></i>Frames</a>
+                </li>
+                <li class="tab-item" id="kuper">
+                    <a onclick="toggleSection('kuper')"><i class="mdi mdi-18px mdi-widgets"></i>Kuper</a>
+                </li>
+                <li class="tab-item" id="blueprint">
+                    <a onclick="toggleSection('blueprint')"><i class="mdi mdi-18px mdi-android"></i>Blueprint</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="container">
+                <!-- INFORMATION SECTION START -->
+                <div id="section-info">
+                    <h2 class="title is-spaced">Disclaimer</h2>
+                    <h6 class="subtitle">Please read carefully!</h6>
+                    <br>
+                    <p>After many requests and reports of my dashboards being "too hard" to setup, I
+                       decided to create this website as a tool to help you get started using any of
+                       my dashboards (<a href="https://github.com/jahirfiquitiva/Frames"
+                                         target="_blank">Frames</a>, <a
+                                href="https://github.com/jahirfiquitiva/Kuper"
+                                target="_blank">Kuper</a> and <a
+                                href="https://github.com/jahirfiquitiva/Blueprint" target="_blank">Blueprint</a>).
+                    </p>
+                    <p>I have really spent a long time working on my dashboards and also this
+                       website, so I really want to kindly ask you to support my work by doing a
+                       small donation to me.<br>
+                        <b>Whatever you can help me with, I will appreciate it a lot!</b> 🙏🏼
+                    </p>
+                    <a class="btn btn-primary" href="/support"
+                       target="_blank">Donate</a>
+                    <br><br><br>
+                    <h4>Information Privacy and Security</h4>
+                    <p>All the information provided by you in this website is only available for
+                       this website and during the current session. Nothing is shared anywhere.<br>
+                        <b>If you refresh the site, everything will be lost.</b> Keep this in mind
+                       so you <b>don't</b> lose your progress.
+                    </p>
+                    <br><br>
+                    <h4>Do I have to fill <b>all</b> the fields and forms in this website?</h4>
+                    <h6><b>TL;DR: NO!</b></h6>
+                    <p>This website contains all the default options from the dashboards already
+                       set. Which means, whatever you don't want to change, you can just
+                       ignore it. The website will still generate the files correctly.
+                    </p>
+                    <p>Anyway, I <b>highly</b> recommend you to fill (at least) the 'Strings'
+                       section
+                       completely, because it has important info for the app.
+                    </p>
+                    <br><br>
+                    <h4>What will I get with this?</h4>
+                    <p>With this website you will get all the configuration files required for any
+                       of my dashboards, those include:</p>
+                    <ul>
+                        <li><code>strings.xml</code></li>
+                        <li><code>colors.xml</code></li>
+                        <li><code>general_configs.xml</code></li>
+                        <li><code>frames_configs.xml</code></li>
+                        <li><code>kuper_configs.xml</code></li>
+                        <li><code>blueprint_configs.xml</code></li>
+                    </ul>
+                    <br><br>
+                    <h4>Additional Setup</h4>
+                    <p>After you download the <code>config-files.zip</code> file, you just have
+                       to extract the <code>values</code> folder inside, in the <code>/app/src/main/res/</code>
+                       folder of your project and <b>overwrite</b> any previous file in it.</p>
+                    <p>This tool does <b>not</b> replace <b>in any way</b> the Android Studio
+                       and project setup process. It just helps making it a little easier.</p>
+                    <p>As much as I wanted this tool to offer all possible options, there are
+                       some
+                       things that cannot be put here due to their volatility.</p>
+                    <p>So, after exporting/downloading the configuration files provided by this
+                       tool, you <b>must</b> check them, because they can contain things that are
+                       empty and that <b>must be filled manually</b> by yourself.</p>
+                    <p>Some of the things that must be filled by yourself are:</p>
+                    <ul>
+                        <li><code>credits_configs.xml</code> (the list of people that will appear in
+                                                             credits)
+                        </li>
+                        <li><code>extra_configs.xml</code> (the list of apps you can put in the home
+                                                           section of <b>Blueprint</b>)
+                        </li>
+                        <li><code>AndroidManifest.xml</code></li>
+                        <li><b>All Kotlin (code) classes and files.</b></li>
+                        <li><b>All icon pack related files.</b></li>
+                    </ul>
+                    <p>Please visit the respective dashboard Wiki site for guidance:</p>
+                    <ul>
+                        <li><a href="https://github.com/jahirfiquitiva/Frames/wiki" target="_blank">Frames</a>
+                        </li>
+                        <li><a href="https://github.com/jahirfiquitiva/Kuper/wiki"
+                               target="_blank">Kuper</a></li>
+                        <li><a href="https://github.com/jahirfiquitiva/Blueprint/wiki"
+                               target="_blank">Blueprint</a>
+                        </li>
+                    </ul>
+                    <br><br>
+                    <h4>Confirmation</h4>
+                    <form>
+                        <div class="form-group">
+                            <label class="form-checkbox">
+                                <input type="checkbox" id="terms-check" onclick="setupFAB()">
+                                <i class="form-icon"></i>I accept and understand the things
+                                                         mentioned above.
+                            </label>
+                        </div>
+                    </form>
+                    <br><br>
+                    <a class="btn btn-primary"
+                       href="https://github.com/jahirfiquitiva/DashSetup-Issues" target="_blank">
+                        Report issues/requests
+                    </a>
+                </div>
+                <!-- INFORMATION SECTION START -->
+
+                <!-- STRINGS SECTION START -->
+                <div id="section-strings" style="display: none;">
+                    <h3 class="title is-spaced">
+                        Strings
+                    </h3>
+                    <h6 class="subtitle">
+                        These are the texts that are shown all around the app
+                    </h6>
+                    <br>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label" for="designer-name">Name</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input" type="text" id="designer-name">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <p>What's your name?</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label" for="designer-email">Email</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input" type="text" id="designer-email">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <p>It will be used for icon requests <b>only</b></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label" for="app-name">App name</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input" type="text" id="app-name">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <p>What will be your awesome app's name? 😁</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label"
+                                           for="app-description">Description</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input" type="text" id="app-description">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <p>How would you describe your app?</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label" for="json-url">JSON File URL</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input" type="text" id="json-url"
+                                       placeholder="https://my.domain.com/wallpapers.json">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <p>The link to get your wallpapers</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- STRINGS SECTION END -->
+
+                <!-- COLORS SECTION START -->
+                <div id="section-colors" style="display:none;">
+                    <h3 class="title is-spaced">
+                        Colors
+                    </h3>
+                    <br>
+                    <form class="form-horizontal">
+                        <h5>Theme independent</h5>
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label"
+                                           for="notification-color">Notification</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input jscolor {closable:true,closeText:'Close',uppercase:true,hash:true}"
+                                       value="#69F0AE"
+                                       type="text" id="notification-color">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <a class="btn btn-primary btn-sm"
+                                   onclick="resetColor('notification-color','69F0AE')">
+                                    Reset
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label" for="muzei-color">Muzei</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input jscolor {closable:true,closeText:'Close',uppercase:true,hash:true}"
+                                       value="#69F0AE"
+                                       type="text" id="muzei-color">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <a class="btn btn-primary btn-sm"
+                                   onclick="resetColor('muzei-color','69F0AE')">
+                                    Reset
+                                </a>
+                            </div>
+                        </div>
+                        <br><br>
+
+                        <h5>Light Theme</h5>
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label" for="status-light-color">Primary
+                                                                                       Dark</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input jscolor {closable:true,closeText:'Close',uppercase:true,hash:true}"
+                                       value="#E0E0E0"
+                                       type="text" id="status-light-color">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <a class="btn btn-primary btn-sm"
+                                   onclick="resetColor('status-light-color','E0E0E0')">
+                                    Reset
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label"
+                                           for="primary-light-color">Primary</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input jscolor {closable:true,closeText:'Close',uppercase:true,hash:true}"
+                                       value="#F5F5F5"
+                                       type="text" id="primary-light-color">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <a class="btn btn-primary btn-sm"
+                                   onclick="resetColor('primary-light-color','F5F5F5')">
+                                    Reset
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label"
+                                           for="accent-light-color">Accent</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input jscolor {closable:true,closeText:'Close',uppercase:true,hash:true}"
+                                       value="#69F0AE"
+                                       type="text" id="accent-light-color">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <a class="btn btn-primary btn-sm"
+                                   onclick="resetColor('accent-light-color','69F0AE')">
+                                    Reset
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label"
+                                           for="bg-light-color">Background</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input jscolor {closable:true,closeText:'Close',uppercase:true,hash:true}"
+                                       value="#FAFAFA"
+                                       type="text" id="bg-light-color">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <a class="btn btn-primary btn-sm"
+                                   onclick="resetColor('bg-light-color','FAFAFA')">
+                                    Reset
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label" for="card-bg-light-color">Cards/Dialogs</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input jscolor {closable:true,closeText:'Close',uppercase:true,hash:true}"
+                                       value="#FFFFFF"
+                                       type="text" id="card-bg-light-color">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <a class="btn btn-primary btn-sm"
+                                   onclick="resetColor('card-bg-light-color','FFFFFF')">
+                                    Reset
+                                </a>
+                            </div>
+                        </div>
+                        <br><br>
+
+                        <h5>Dark Theme</h5>
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label" for="status-dark-color">Primary
+                                                                                      Dark</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input jscolor {closable:true,closeText:'Close',uppercase:true,hash:true}"
+                                       value="#000000"
+                                       type="text" id="status-dark-color">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <a class="btn btn-primary btn-sm"
+                                   onclick="resetColor('status-dark-color','000000')">
+                                    Reset
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label"
+                                           for="primary-dark-color">Primary</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input jscolor {closable:true,closeText:'Close',uppercase:true,hash:true}"
+                                       value="#212121"
+                                       type="text" id="primary-dark-color">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <a class="btn btn-primary btn-sm"
+                                   onclick="resetColor('primary-dark-color','212121')">
+                                    Reset
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label" for="accent-dark-color">Accent</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input jscolor {closable:true,closeText:'Close',uppercase:true,hash:true}"
+                                       value="#69F0AE"
+                                       type="text" id="accent-dark-color">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <a class="btn btn-primary btn-sm"
+                                   onclick="resetColor('accent-dark-color','69F0AE')">
+                                    Reset
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label" for="bg-dark-color">Background</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input jscolor {closable:true,closeText:'Close',uppercase:true,hash:true}"
+                                       value="#303030"
+                                       type="text" id="bg-dark-color">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <a class="btn btn-primary btn-sm"
+                                   onclick="resetColor('bg-dark-color','303030')">
+                                    Reset
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label"
+                                           for="card-bg-dark-color">Cards/Dialogs</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input jscolor {closable:true,closeText:'Close',uppercase:true,hash:true}"
+                                       value="#424242"
+                                       type="text" id="card-bg-dark-color">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <a class="btn btn-primary btn-sm"
+                                   onclick="resetColor('card-bg-dark-color','424242')">
+                                    Reset
+                                </a>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <!-- COLORS SECTION END -->
+
+                <!-- GENERAL SECTION START -->
+                <div id="section-general" style="display: none;">
+                    <h3 class="title is-spaced">
+                        General Configs
+                    </h3>
+                    <h6 class="subtitle">
+                        These configs apply to all of the dashboards
+                    </h6>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label"
+                                           for="card-bg-dark-color">Splash Screen Theme</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <select class="form-select" id="splash-screen-theme">
+                                    <option>Light</option>
+                                    <option>Dark</option>
+                                    <option>Amoled</option>
+                                    <option>Transparent</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label"
+                                           for="card-bg-dark-color">Default Theme</label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <select class="form-select" id="default-theme">
+                                    <option>Light</option>
+                                    <option>Dark</option>
+                                    <option>Amoled</option>
+                                    <option>Transparent</option>
+                                    <option>Automatic Light-Dark</option>
+                                    <option>Automatic Light-Amoled</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label" for="donation-items">
+                                        Donation Items IDs
+                                    </label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input" type="text" id="donation-items"
+                                       placeholder="coffee,pizza,burger">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <p>Must be setup in
+                                    <a href="https://play.google.com/apps/publish" target="_blank">
+                                        Google Play Developer Console
+                                    </a> first. Please separate with comma (,) and do <b>not</b>
+                                   leave blank spaces</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- GENERAL SECTION START -->
+
+                <!-- FRAMES SECTION START -->
+                <div id="section-frames" style="display: none;">
+                    <h3 class="title is-spaced">
+                        Frames Configs
+                    </h3>
+                    <h6 class="subtitle">
+                        These configs apply to all of the dashboards as long as you include
+                        Wallpapers in them
+                    </h6>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="form-switch">
+                                <input type="checkbox" id="old-json-check" checked>
+                                <i class="form-icon"></i><b>Use old JSON format?</b>
+                                <p>In case you were using an old version of Frames, or
+                                   if you're coming from another dashboard.</p>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-switch">
+                                <input type="checkbox" id="notifications" checked>
+                                <i class="form-icon"></i><b>Enable notifications by default?</b>
+                                <p>In case you want to enable
+                                    <a href="https://onesignal.com/" target="_blank">OneSignal</a>
+                                   notifications</p>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-switch">
+                                <input type="checkbox" id="bottom-sheet" checked>
+                                <i class="form-icon"></i><b>Show wallpaper details bottom sheet?</b>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-switch">
+                                <input type="checkbox" id="icons-in-tabs">
+                                <i class="form-icon"></i><b>Show icons in tabs?</b>
+                                <p>This one only applies to Frames</p>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-switch">
+                                <input type="checkbox" id="texts-in-tabs" checked>
+                                <i class="form-icon"></i><b>Show texts in tabs?</b>
+                                <p>This one only applies to Frames</p>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-switch">
+                                <input type="checkbox" id="colored-tiles">
+                                <i class="form-icon"></i><b>Enable colored tiles?</b>
+                            </label>
+                        </div>
+                        <div class="columns">
+                            <div class="column col-2 col-sm-6">
+                                <figure class="figure">
+                                    <img src="assets/images/normal_tiles.png"
+                                         class="img-fit-contain rounded"
+                                         alt="Normal Tiles"
+                                         style="background: #f8f9fa; height: 10rem; width: 100%;">
+                                    <figcaption class="figure-caption text-center">Normal Tiles
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="column col-2 col-sm-6">
+                                <figure class="figure">
+                                    <img src="assets/images/colored_tiles.png"
+                                         class="img-fit-contain rounded"
+                                         alt="Colored Tiles"
+                                         style="background: #f8f9fa; height: 10rem; width: 100%;">
+                                    <figcaption class="figure-caption text-center">Colored Tiles
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-switch">
+                                <input type="checkbox" id="filled-collection-preview">
+                                <i class="form-icon"></i><b>Filled collection preview</b>
+                            </label>
+                        </div>
+                        <div class="columns">
+                            <div class="column col-2 col-sm-6">
+                                <figure class="figure">
+                                    <img src="assets/images/normal_collection.png"
+                                         class="img-fit-contain rounded"
+                                         alt="Normal Tiles"
+                                         style="background: #f8f9fa; height: 10rem; width: 100%;">
+                                    <figcaption class="figure-caption text-center">Normal Collection
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="column col-2 col-sm-6">
+                                <figure class="figure">
+                                    <img src="assets/images/filled_collection.png"
+                                         class="img-fit-contain rounded"
+                                         alt="Colored Tiles"
+                                         style="background: #f8f9fa; height: 10rem; width: 100%;">
+                                    <figcaption class="figure-caption text-center">Filled collection
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- FRAMES SECTION START -->
+
+                <!-- KUPER SECTION START -->
+                <div id="section-kuper" style="display: none;">
+                    <h3 class="title is-spaced">
+                        Kuper Configs
+                    </h3>
+                    <h6 class="subtitle">
+                        These configs apply to Kuper and Blueprint only.
+                    </h6>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="form-switch">
+                                <input type="checkbox" id="kolorette">
+                                <i class="form-icon"></i>
+                                <b>Does you app require
+                                    <a href="https://play.google.com/store/apps/details?id=com.arun.themeutil.kolorette"
+                                       target="_blank">
+                                        Kolorette
+                                    </a>?</b>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-switch">
+                                <input type="checkbox" id="media-utils">
+                                <i class="form-icon"></i>
+                                <b>Does you app require
+                                    <a href="https://play.google.com/store/apps/details?id=com.batescorp.notificationmediacontrols.alpha"
+                                       target="_blank">
+                                        Media Utilities
+                                    </a>?</b>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-switch">
+                                <input type="checkbox" id="zooper-allow-save" checked>
+                                <i class="form-icon"></i>
+                                <b>Allow saving templates modifications?</b>
+                                <p>This one only applies if you have Zooper templates</p>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <!-- KUPER SECTION START -->
+
+                <!-- BLUEPRINT SECTION START -->
+                <div id="section-blueprint" style="display: none;">
+                    <h3 class="title is-spaced">
+                        Blueprint Configs
+                    </h3>
+                    <h6 class="subtitle">
+                        These configs apply to Blueprint only.
+                    </h6>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="form-switch">
+                                <input type="checkbox" id="xml-drawable">
+                                <i class="form-icon"></i>
+                                <b>Use <code>drawable.xml</code> to load icons?</b>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-switch">
+                                <input type="checkbox" id="drawer-text" checked>
+                                <i class="form-icon"></i>
+                                <b>Show app info in navigation drawer?</b>
+                                <p>Only if navigation drawer is enabled</p>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-switch">
+                                <input type="checkbox" id="colored-cards">
+                                <i class="form-icon"></i>
+                                <b>Color cards in apply section?</b>
+                                <p>Cards will be colored with the launcher icon main color</p>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label" for="max-apps">
+                                        Max apps to request
+                                    </label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input" type="number" id="max-apps"
+                                       placeholder="-1" value="-1">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <p>Leave as -1 to enable unlimited apps to request.</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b><label class="form-label" for="time-limit">Time limit</label></b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input" type="number" id="time-limit"
+                                       placeholder="0" value="0">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <p>Time set in minutes. Leave as 0 to disable it.</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label" for="arctic-host">
+                                        Arctic Manager Host URL
+                                    </label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input" type="text" id="arctic-host"
+                                       placeholder="http://arcticmanager.com/">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <p>You should really check <a href="http://arcticmanager.com/"
+                                                              target="_blank">Arctic Manager</a></p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-3">
+                                <b>
+                                    <label class="form-label" for="arctic-api-key">
+                                        Arctic Manager API Key
+                                    </label>
+                                </b>
+                            </div>
+                            <div class="col-6 col-sm-9">
+                                <input class="form-input" type="text" id="arctic-api-key">
+                            </div>
+                        </div>
+                        <div class="form-group help">
+                            <div class="col-9 col-ml-auto">
+                                <p>You must have an account to get your API key.</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- BLUEPRINT SECTION START -->
+            </div>
+        </div>
+
+        <button class="btn btn-primary circle fab" onclick="downloadEverything();"
+                style="display: none;" id="download-fab">
+            <i class="mdi mdi-24px mdi-download"></i>
+        </button>
+
+        <footer>
+            <div class="clearfix centered">
+                <p><i class="mdi mdi-code-tags mdi-18px"></i> with
+                    <i class="mdi mdi-heart mdi-18px"></i> by
+                    <a href="/"><b>Jahir Fiquitiva</b></a> © 2018</p>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script type="text/javascript" src="assets/libs/jscolor/jscolor.min.js"></script>
+        <script type="text/javascript" src="assets/js/xml.js"></script>
+        <script type="text/javascript" src="assets/js/sections.js"></script>
+        <script type="text/javascript" src="assets/js/strings.js"></script>
+        <script type="text/javascript" src="assets/js/colors.js"></script>
+        <script type="text/javascript" src="assets/js/general.js"></script>
+        <script type="text/javascript" src="assets/js/frames.js"></script>
+        <script type="text/javascript" src="assets/js/kuper.js"></script>
+        <script type="text/javascript" src="assets/js/blueprint.js"></script>
+
+        <!-- File Saving Scripts -->
+        <script type="text/javascript" src="assets/libs/FileSaver/FileSaver.min.js"></script>
+        <script type="text/javascript" src="assets/libs/jszip/jszip.min.js"></script>
+        <script type="text/javascript" src="assets/js/downloader.js"></script>
+    </body>
+</html>

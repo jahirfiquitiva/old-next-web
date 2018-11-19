@@ -8,10 +8,10 @@ function setup() {
         logoName = '6';
     }
     if (logo !== null && logo !== undefined) {
-        logo.setAttribute('src', '/assets/img/brand/logo-' + logoName + '.svg');
+        logo.setAttribute('src', '/assets/images/brand/logo-' + logoName + '.svg');
         logo.setAttribute('onerror',
                           'this.onerror=null;' +
-                          'this.src=\'/assets/img/brand/logo-' + logoName + '.png\'');
+                          'this.src=\'/assets/images/brand/logo-' + logoName + '.png\'');
     }
 
     let copy = document.getElementById('copyright-notice');

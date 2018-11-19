@@ -458,10 +458,16 @@ a.navbar-item:focus:not(.is-logo):not(.is-active) {
 
 .is-twitter {
     --hover-col: #34aaf3;
+    color: var(--white) !important;
     background-color: var(--twitter);
     --shadow-col-a: rgba(23, 129, 194, .4);
     --shadow-col-b: rgba(23, 129, 194, .28);
     --shadow-col-c: rgba(23, 129, 194, .24);
+}
+
+.is-twitter:hover,
+.is-twitter:focus {
+    color: var(--white) !important;
 }
 
 .is-plus {
@@ -506,10 +512,16 @@ a.navbar-item:focus:not(.is-logo):not(.is-active) {
 
 .is-telegram {
     --hover-col: #2ea6e1;
+    color: var(--white) !important;
     background-color: var(--telegram);
     --shadow-col-a: rgba(18, 125, 178, .4);
     --shadow-col-b: rgba(18, 125, 178, .28);
     --shadow-col-c: rgba(18, 125, 178, .24);
+}
+
+.is-telegram:hover,
+.is-telegram:focus {
+    color: var(--white) !important;
 }
 
 .circle {
@@ -1007,4 +1019,13 @@ button.button {
         transform: scale(0.8) !important;
         -webkit-transform: scale(0.8) !important;
     }
+}
+
+.bot-box {
+    --bord-col: rgba(116, 125, 140, .1);
+    --shadow-col: rgba(116, 125, 140, .25);
+    border-radius: 2px !important;
+    -webkit-box-shadow: 0 4px 12px 1px var(--shadow-col), 0 0 0 1px var(--bord-col);
+    -moz-box-shadow: 0 4px 12px 1px var(--shadow-col), 0 0 0 1px var(--bord-col);
+    box-shadow: 0 4px 12px 1px var(--shadow-col), 0 0 0 1px var(--bord-col);
 }
