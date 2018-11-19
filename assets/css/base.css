@@ -492,6 +492,18 @@ a.navbar-item:focus:not(.is-logo):not(.is-active) {
     color: var(--disabled-text);
 }
 
+.is-crowdin {
+    --hover-col: #c6d649;
+    background-color: #b8cc1c;
+    --shadow-col-a: rgba(147, 163, 22, .4);
+    --shadow-col-b: rgba(147, 163, 22, .28);
+    --shadow-col-c: rgba(147, 163, 22, .24);
+}
+
+.is-crowdin .mdi {
+    color: var(--secondary-text);
+}
+
 .is-telegram {
     --hover-col: #2ea6e1;
     background-color: var(--telegram);
@@ -571,8 +583,8 @@ a .card:focus * {
     cursor: pointer !important;
 }
 
-.card:hover,
-.card:focus {
+.card:not(.change):hover,
+.card:not(.change):focus {
     --shadow-col: rgba(116, 125, 140, .25);
     -webkit-box-shadow: 0 4px 12px 1px var(--shadow-col), 0 0 0 1px var(--bord-col);
     -moz-box-shadow: 0 4px 12px 1px var(--shadow-col), 0 0 0 1px var(--bord-col);
@@ -593,8 +605,8 @@ a .card:focus * {
     color: var(--secondary-text) !important;
 }
 
-.card:hover .title,
-.card:focus .title {
+.card:not(.change):hover .title,
+.card:not(.change):focus .title {
     --title-col: var(--accent);
     color: var(--title-col);
     text-decoration: underline wavy var(--title-col) !important;
@@ -611,7 +623,9 @@ a .card:focus * {
 }
 
 .has-same-height .card-footer {
+    border-color: #eee !important;
     margin-top: auto;
+    padding: .4rem 1rem 1rem;
 }
 
 .android.filter.button:hover,

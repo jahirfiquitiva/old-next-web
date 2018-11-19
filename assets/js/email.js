@@ -1,4 +1,5 @@
 const $formContact = document.querySelector("#contact-form");
+let state = {};
 
 let nameInput = document.contactForm.name;
 nameInput.addEventListener('keyup', function () {
