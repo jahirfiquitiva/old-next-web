@@ -32,7 +32,8 @@ function launchDonationSite(event) {
     } else if (event.keyCode !== undefined) {
         code = event.keyCode;
     }
-    if (code === 13) {
+    code = code.toString();
+    if (code === '13' || code === 'Enter' || code === 'enter') {
         updateDonationLink(true);
     }
 }

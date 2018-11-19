@@ -216,6 +216,8 @@ a, button, .button, a > *, .button > * {
 
 .button,
 .button.is-rounded {
+    min-height: 2.4rem !important;
+    min-width: 2.4rem !important;
     --hover-col: #fff;
     --shadow-col-a: rgba(0, 0, 0, .2);
     --shadow-col-b: rgba(0, 0, 0, .14);
@@ -927,18 +929,9 @@ button.button {
     margin-bottom: .75rem;
 }
 
-.field.has-addons .control:first-child .button, .field.has-addons .control:first-child .input, .field.has-addons .control:first-child .select select {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-}
-
-.select select:not([multiple]) {
-    padding-right: 2.5em;
-}
-
 .select select {
-    height: 2.25rem;
-    padding-top: .25rem;
+    min-height: 2.4rem;
+    padding-top: .2rem;
 }
 
 .select select {
@@ -950,4 +943,8 @@ button.button {
     font-size: 1em;
     max-width: 100%;
     outline: 0;
+}
+
+#donation-input {
+    min-height: 2.5rem;
 }
