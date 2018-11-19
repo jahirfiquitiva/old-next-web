@@ -44,10 +44,6 @@ function scrollToItem(itemId, toggle = true) {
         }
 
         let elementTop = getElementTop(itemId);
-        /*
-        // $('html, body').stop().animate({scrollTop: top}, 1000);
-        document.body.scrollTop = document.documentElement.scrollTop = elementTop;
-        */
         window.scroll({top: elementTop, left: 0, behavior: 'smooth'});
         if (toggle) {
             toggleLink(itemId);
@@ -71,24 +67,29 @@ function toggleLink(itemId) {
 }
 
 function toggleProjects(itemId) {
-    let projectsFilters = document.getElementsByClassName('projects-filter');
+    let projectsFilters = document.getElementsByClassName('filter');
     for (let i = 0; i < projectsFilters.length; i++) {
         projectsFilters[i].classList.remove('is-active');
     }
 
+    let filterA = document.getElementById(`${itemId}-filter`);
+    if (filterA) filterA.classList.add('is-active');
+
+    let filterB = document.getElementById(`${itemId}-filter-2`);
+    if (filterB) filterB.classList.add('is-active');
+
+    const animDuration = 200;
+
     let projectsSections = document.getElementsByClassName('projects-section');
     for (let i = 0; i < projectsSections.length; i++) {
         let ele = projectsSections[i];
-        if (ele.id !== 'projects-' + itemId && ele.style.display !== 'none') {
-            fade(projectsSections[i], 'out', 100);
+        if (ele.id !== `${itemId}-projects` && ele.style.display !== 'none') {
+            fade(projectsSections[i], 'out', animDuration);
         }
-        // projectsSections[i].style.display = "none";
     }
-    for (let j = 0; j < 2000; j++) {
-    }
-    // document.getElementById("projects-" + itemId).style.display = "flex";
-    fade(document.getElementById("projects-" + itemId), 'in', 750, "flex");
-    document.getElementById(itemId + "-filter").classList.add("is-active");
+    setTimeout(() => {
+        fade(document.getElementById(`${itemId}-projects`), 'in', animDuration * 2, "flex");
+    }, animDuration);
 }
 
 function fade(el, type, ms, display) {
@@ -117,3 +118,5 @@ function fade(el, type, ms, display) {
 
     let fading = window.setInterval(func, interval);
 }
+
+toggleProjects('android');

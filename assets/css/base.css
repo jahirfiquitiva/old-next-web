@@ -141,7 +141,8 @@ b, .bold {
 }
 
 @media only screen and (max-width: 800px) {
-    .hero-body {
+    .hero-body,
+    .footer {
         padding-right: 1.2rem !important;
         padding-left: 1.2rem !important;
     }
@@ -299,17 +300,44 @@ a, button, .button, a > *, .button > * {
     font-weight: 600;
 }
 
+a.navbar-item.is-active {
+    color: var(--accent) !important;
+    padding-top: .7rem;
+    border-bottom: solid 0.2rem var(--accent);
+}
+
 a.navbar-item:hover:not(.is-logo):not(.is-active),
 a.navbar-item:focus:not(.is-logo):not(.is-active) {
     color: var(--secondary-text) !important;
-    padding-top: .7rem !important;
-    border-bottom: solid 0.2rem var(--disabled-text) !important;
+    padding-top: .7rem;
+    border-bottom: solid 0.2rem var(--disabled-text);
 }
 
-a.navbar-item.is-active {
-    color: var(--accent) !important;
-    padding-top: .7rem !important;
-    border-bottom: solid 0.2rem var(--accent) !important;
+@media only screen and (max-width: 1087px) {
+    .navbar-menu {
+        background-color: var(--primary) !important;
+        box-shadow: none;
+        padding: .4rem 0;
+    }
+
+    a.navbar-item {
+        text-align: center;
+        padding-left: 1.2rem !important;
+        padding-right: 1.2rem !important;
+    }
+
+    a.navbar-item.is-active {
+        color: var(--accent) !important;
+        padding-top: .5rem !important;
+        border-bottom: none !important;
+    }
+
+    a.navbar-item:hover,
+    a.navbar-item:focus {
+        color: var(--secondary-text) !important;
+        padding-top: .5rem !important;
+        border-bottom: none !important;
+    }
 }
 
 .down-indicator {
@@ -577,28 +605,6 @@ a .card:focus * {
 /* ================================ */
 /* Custom colors for projects cards */
 /* ================================ */
-
-#projects .columns {
-    --anim-duration: 2s;
-    display: none !important;
-    opacity: 0 !important;
-    -webkit-transition: all linear var(--anim-duration);
-    -moz-transition: all linear var(--anim-duration);
-    -ms-transition: all linear var(--anim-duration);
-    -o-transition: all linear var(--anim-duration);
-    transition: all linear var(--anim-duration);
-}
-
-#projects .columns.is-active {
-    display: flex !important;
-    opacity: 1 !important;
-    -webkit-transition: all linear var(--anim-duration);
-    -moz-transition: all linear var(--anim-duration);
-    -ms-transition: all linear var(--anim-duration);
-    -o-transition: all linear var(--anim-duration);
-    transition: all linear var(--anim-duration);
-}
-
 #blueprint .card:hover,
 #blueprint .card:focus {
     --shadow-col: rgba(77, 138, 240, .25);
