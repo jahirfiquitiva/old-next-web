@@ -91,19 +91,20 @@
                                      onerror="this.onerror=null;this.src='/assets/img/brand/logo-def.png'">
                                 Jahir Fiquitiva
                             </a>
-                            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                            <span class="navbar-burger burger" data-target="burger-menu">
                                 <span></span>
                                 <span></span>
                                 <span></span>
                             </span>
                         </div>
-                        <div id="navbarMenuHeroA" class="navbar-menu">
+                        <div id="burger-menu" class="navbar-menu">
                             <div class="navbar-end">
                                 <a class="navbar-item" href="/">Home</a>
                                 <a class="navbar-item" href="/#projects">Projects</a>
                                 <a class="navbar-item" href="/about/">About</a>
                                 <a class="navbar-item" href="/thanks/">Thanks</a>
-                                <a class="navbar-item" onclick="scrollToItem('contact')">Contact</a>
+                                <a class="navbar-item"
+                                   onclick="toggleContactModal(true)">Contact</a>
                             </div>
                         </div>
                     </div>
@@ -156,6 +157,40 @@
                 </div>
             </div>
         </section>
+
+        <div class="modal" id="contact-modal">
+            <div class="modal-background" onclick="toggleContactModal()"></div>
+            <div class="modal-content">
+                <div class="box has-text-centered">
+                    <div class="body">
+                        <h1 class="is-primary-text shadowed"
+                            data-shadow-color="red">Get in Touch 📮</h1>
+                        <h5 class="is-secondary-text">
+                            Don't hesitate contacting me!
+                        </h5>
+                        <p class="is-secondary-text" style="padding: .4rem;">PS: I also have an
+                                                                             open <a class="link"
+                                                                                     href="https://jahir.xyz/twitterdm"
+                                                                                     target="_blank">Twitter
+                                                                                                     DM</a>
+                                                                             and
+                            <a class="link"
+                               href="https://jahir.xyz/tlgrm"
+                               target="_blank">Telegram</a>, for any kind of inquiries. 😀<br></p>
+                        <br>
+                        <a class="button is-primary is-centered"
+                           href="mailto:hi@jahir.xyz">hi@jahir.xyz</a>
+                    </div>
+                </div>
+                <p class="is-primary-text-inverted has-text-centered"
+                   onclick="toggleContactModal()">
+                    You can dismiss this by clicking or tapping the background.
+                </p>
+            </div>
+            <button class="modal-close is-large"
+                    onclick="toggleContactModal()"
+                    aria-label="close"></button>
+        </div>
 
         <footer class="footer">
             <div class="container has-text-centered">

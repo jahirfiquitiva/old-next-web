@@ -948,3 +948,12 @@ button.button {
 #donation-input {
     min-height: 2.5rem;
 }
+
+.modal .box {
+    max-width: 800px !important;
+    width: 100% !important;
+}
+
+.modal .box .body {
+    margin: 1.2rem !important;
+}

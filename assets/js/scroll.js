@@ -14,19 +14,21 @@ function getElementTop(itemId) {
     return elementTop;
 }
 
+function closeBurger() {
+    let navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    if (navbarBurgers.length > 0) {
+        navbarBurgers.forEach(function (el) {
+            let target = el.dataset.target;
+            let rTarget = document.getElementById(target);
+            el.classList.remove('is-active');
+            rTarget.classList.remove('is-active');
+        });
+    }
+}
+
 function scrollToItem(itemId, toggle = true) {
     try {
-        let navbarBurgers = Array.prototype.slice.call(
-            document.querySelectorAll('.navbar-burger'), 0);
-        if (navbarBurgers.length > 0) {
-            navbarBurgers.forEach(function (el) {
-                let target = el.dataset.target;
-                let rTarget = document.getElementById(target);
-                el.classList.remove('is-active');
-                rTarget.classList.remove('is-active');
-            });
-        }
-
+        closeBurger();
         let elementTop = getElementTop(itemId);
         window.scroll({top: elementTop, left: 0, behavior: 'smooth'});
         if (toggle) {

@@ -46,17 +46,28 @@ function changeHello() {
     }
 }
 
+function toggleContactModal(show = false) {
+    closeBurger();
+    let modal = document.getElementById('contact-modal');
+    if (modal) {
+        if (show) {
+            fade(modal, 'in', 150, 'flex');
+        } else {
+            fade(modal, 'out', 200);
+        }
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'),
-                                                      0);
-    if ($navbarBurgers.length > 0) {
-        $navbarBurgers.forEach(el => {
+    const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'),
+                                                     0);
+    if (navbarBurgers.length > 0) {
+        navbarBurgers.forEach(el => {
             el.addEventListener('click', () => {
                 const target = el.dataset.target;
-                const $target = document.getElementById(target);
+                const rTarget = document.getElementById(target);
                 el.classList.toggle('is-active');
-                $target.classList.toggle('is-active');
-
+                rTarget.classList.toggle('is-active');
             });
         });
     }
