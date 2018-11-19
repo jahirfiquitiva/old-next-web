@@ -27,7 +27,7 @@ function encode(data) {
 }
 
 const sendForm = event => {
-    event.preventDefault();
+    if (event) event.preventDefault();
     document.contactForm.action.classList.add('is-loading');
     let isValid = false;
     if (document.contactForm.honey) {
