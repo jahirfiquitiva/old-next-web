@@ -225,7 +225,7 @@
                                   onclick="toggleProjects('other')">Other</span>
                         </div>
                         <br>
-                        <div class="columns is-centered is-multiline is-mobile is-active projects-section"
+                        <div class="columns is-centered is-multiline is-mobile projects-section"
                              id="android-projects">
                             <div class="column is-12-mobile is-one-third-tablet is-one-third-desktop">
                                 <a href="https://github.com/jahirfiquitiva/Blueprint/"
@@ -336,7 +336,7 @@
                             </div>
                         </div>
                         <div class="columns is-centered is-multiline is-mobile projects-section"
-                             id="web-projects">
+                             id="web-projects" style="display: none;">
                             <div class="column is-12-mobile is-one-third-tablet is-one-third-desktop">
                                 <a href="/dashsetup/"
                                    target="_blank" id="setup">
@@ -375,7 +375,7 @@
                             </div>
                         </div>
                         <div class="columns is-centered is-multiline is-mobile projects-section"
-                             id="design-projects">
+                             id="design-projects" style="display: none;">
                             <div class="column is-12-mobile is-one-third-tablet is-one-third-desktop">
                                 <a href="https://play.google.com/store/apps/details?id=com.heinrichreimersoftware.androidissuereporter.example"
                                    target="_blank" id="issue">
@@ -446,7 +446,7 @@
                             </div>
                         </div>
                         <div class="columns is-centered is-multiline is-mobile projects-section"
-                             id="other-projects">
+                             id="other-projects" style="display: none;">
                             <div class="column is-12-mobile is-one-third-tablet is-one-third-desktop">
                                 <a href="https://jahir.xyz/SlidingPuzzle"
                                    target="_blank" id="puzzle">
@@ -560,61 +560,63 @@
                 </div>
             </div>
 
-            <footer class="footer">
-                <div class="container has-text-centered">
-                    <div class="buttons is-centered">
-                        <a class="button social-btn is-github"
-                           href="https://jahir.xyz/github" target="_blank"
-                           data-balloon="GitHub" data-balloon-pos="up">
-                            <i class="mdi mdi-18px mdi-github-circle"></i>
-                        </a>
-                        <a class="button social-btn is-twitter"
-                           href="https://jahir.xyz/twitter" target="_blank"
-                           data-balloon="Twitter" data-balloon-pos="up">
-                            <i class="mdi mdi-18px mdi-twitter"></i>
-                        </a>
-                        <a class="button social-btn is-plus"
-                           href="https://jahir.xyz/gplus" target="_blank"
-                           data-balloon="Google+" data-balloon-pos="up">
-                            <i class="mdi mdi-18px mdi-google-plus"></i>
-                        </a>
-                        <a class="button social-btn is-linkedin"
-                           href="https://jahir.xyz/lnkdn" target="_blank"
-                           data-balloon="LinkedIn" data-balloon-pos="up">
-                            <i class="mdi mdi-18px mdi-linkedin"></i>
-                        </a>
-                        <a class="button social-btn is-play"
-                           href="https://jahir.xyz/gplay" target="_blank"
-                           data-balloon="Google Play Store" data-balloon-pos="up">
-                            <i class="mdi mdi-18px mdi-google-play"></i>
-                        </a>
-                        <a class="button social-btn is-telegram"
-                           href="https://jahir.xyz/tlgrm" target="_blank"
-                           data-balloon="Telegram" data-balloon-pos="up">
-                            <i class="mdi mdi-18px mdi-telegram"></i>
-                        </a>
+            <div class="hero-foot">
+                <footer class="footer">
+                    <div class="container has-text-centered">
+                        <div class="buttons is-centered">
+                            <a class="button social-btn is-github"
+                               href="https://jahir.xyz/github" target="_blank"
+                               data-balloon="GitHub" data-balloon-pos="up">
+                                <i class="mdi mdi-18px mdi-github-circle"></i>
+                            </a>
+                            <a class="button social-btn is-twitter"
+                               href="https://jahir.xyz/twitter" target="_blank"
+                               data-balloon="Twitter" data-balloon-pos="up">
+                                <i class="mdi mdi-18px mdi-twitter"></i>
+                            </a>
+                            <a class="button social-btn is-plus"
+                               href="https://jahir.xyz/gplus" target="_blank"
+                               data-balloon="Google+" data-balloon-pos="up">
+                                <i class="mdi mdi-18px mdi-google-plus"></i>
+                            </a>
+                            <a class="button social-btn is-linkedin"
+                               href="https://jahir.xyz/lnkdn" target="_blank"
+                               data-balloon="LinkedIn" data-balloon-pos="up">
+                                <i class="mdi mdi-18px mdi-linkedin"></i>
+                            </a>
+                            <a class="button social-btn is-play"
+                               href="https://jahir.xyz/gplay" target="_blank"
+                               data-balloon="Google Play Store" data-balloon-pos="up">
+                                <i class="mdi mdi-18px mdi-google-play"></i>
+                            </a>
+                            <a class="button social-btn is-telegram"
+                               href="https://jahir.xyz/tlgrm" target="_blank"
+                               data-balloon="Telegram" data-balloon-pos="up">
+                                <i class="mdi mdi-18px mdi-telegram"></i>
+                            </a>
+                        </div>
+                        <p style="margin-bottom: .2rem !important;">Made with
+                            <i class="mdi mdi-18px mdi-heart"></i> by <a class="link" href="/">yours
+                                                                                               truly.</a>
+                        </p>
+                        <p id="copyright-notice"
+                           style="font-size: .9rem !important;margin-bottom: .2rem !important;"></p>
+                        <p style="font-size: .7rem !important;">Built using <a
+                                class="link"
+                                target="_blank"
+                                href="http://bulma.io">Bulma</a>
+                                                                and <a class="link"
+                                                                       target="_blank"
+                                                                       href="https://vincentgarreau.com/particles.js/">Particles.js</a>
+                        </p>
                     </div>
-                    <p style="margin-bottom: .2rem !important;">Made with
-                        <i class="mdi mdi-18px mdi-heart"></i> by <a class="link" href="/">yours
-                                                                                           truly.</a>
-                    </p>
-                    <p style="font-size: .9rem !important;margin-bottom: .2rem !important;">
-                        Copyright © 2018 | All Rights Reserved
-                    </p>
-                    <p style="font-size: .7rem !important;">Built using <a
-                            class="link"
-                            target="_blank"
-                            href="http://bulma.io">Bulma</a>
-                                                            and <a class="link"
-                                                                   target="_blank"
-                                                                   href="https://vincentgarreau.com/particles.js/">Particles.js</a>
-                    </p>
-                </div>
-            </footer>
+                </footer>
+            </div>
         </section>
 
         <script src="assets/libs/js/particles.js"></script>
         <script src="assets/js/scroll.js"></script>
+        <script src="assets/js/scroll-listener.js"></script>
         <script src="assets/js/main.js"></script>
     </body>
 </html>

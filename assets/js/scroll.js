@@ -1,19 +1,3 @@
-window.addEventListener('scroll', function () {
-    let yPosition = (window.pageYOffset | document.body.scrollTop) + 2;
-    let projectsTop = getElementTop('projects');
-    let contactTop = getElementTop('contact');
-    if (yPosition < projectsTop) {
-        toggleLink('home');
-    } else if (yPosition < contactTop) {
-        toggleLink('projects');
-    } else {
-        let ele = document.getElementById('contact');
-        if (ele !== null && ele !== undefined) {
-            toggleLink('contact');
-        }
-    }
-});
-
 function getElementTop(itemId) {
     let elementTop = 0;
     if (itemId !== null && itemId !== undefined) {
@@ -93,6 +77,10 @@ function toggleProjects(itemId) {
 }
 
 function fade(el, type, ms, display) {
+    if (el == null || el === undefined) {
+        return
+    }
+
     let isIn = type === 'in',
         opacity = isIn ? 0 : 1,
         interval = 50,
