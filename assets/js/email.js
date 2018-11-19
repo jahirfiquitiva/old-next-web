@@ -20,6 +20,12 @@ messageInput.addEventListener('keyup', function () {
     toggleHelp('message', false);
 });
 
+function encode(data) {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+}
+
 const sendForm = event => {
     event.preventDefault();
     document.contactForm.action.classList.add('is-loading');
@@ -49,6 +55,16 @@ const sendForm = event => {
                     toggleHelp('message', true);
                 } else {
                     isValid = true;
+                    let request = new XMLHttpRequest();
+                    request.open('POST', $formContact.getAttribute('action'), true);
+                    request.setRequestHeader('Content-Type',
+                                             'application/x-www-form-urlencoded; charset=UTF-8');
+                    request.send(encode({
+                                            "Name": name,
+                                            "Email": email,
+                                            "Subject": subject,
+                                            "Message": content
+                                        }));
                 }
             }
         } else {

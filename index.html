@@ -562,8 +562,9 @@
                               class="has-text-justified"
                               action="/sent"
                               method="POST"
-                              netlify-honeypot="honey"
-                              netlify>
+                              onsubmit="sendForm()"
+                              data-netlify="true"
+                              data-netlify-honeypot="honey">
                             <div class="field is-horizontal">
                                 <div class="field-label is-normal">
                                     <label class="label">Your name</label>
