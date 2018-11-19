@@ -364,6 +364,10 @@ a.navbar-item:focus:not(.is-logo):not(.is-active) {
     border-bottom: solid .2rem var(--disabled-text);
 }
 
+a.navbar-item.is-logo {
+    padding-left: 0 !important;
+}
+
 @media only screen and (max-width: 1087px) {
     .navbar-menu {
         background-color: var(--primary) !important;
