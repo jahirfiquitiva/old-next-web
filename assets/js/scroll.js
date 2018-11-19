@@ -67,15 +67,17 @@ function toggleProjects(itemId) {
     const animDuration = 200;
 
     let projectsSections = document.getElementsByClassName('projects-section');
-    for (let i = 0; i < projectsSections.length; i++) {
-        let ele = projectsSections[i];
-        if (ele.id !== `${itemId}-projects` && ele.style.display !== 'none') {
-            fade(projectsSections[i], 'out', animDuration);
+    if (projectsSections) {
+        for (let i = 0; i < projectsSections.length; i++) {
+            let ele = projectsSections[i];
+            if (ele.id !== `${itemId}-projects` && ele.style.display !== 'none') {
+                fade(projectsSections[i], 'out', animDuration);
+            }
         }
+        setTimeout(() => {
+            fade(document.getElementById(`${itemId}-projects`), 'in', animDuration * 2, "flex");
+        }, animDuration);
     }
-    setTimeout(() => {
-        fade(document.getElementById(`${itemId}-projects`), 'in', animDuration * 2, "flex");
-    }, animDuration);
 }
 
 function fade(el, type, ms, display) {
