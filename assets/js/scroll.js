@@ -110,5 +110,3 @@ function fade(el, type, ms, display) {
 
     let fading = window.setInterval(func, interval);
 }
-
-toggleProjects('android');
