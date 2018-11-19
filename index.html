@@ -557,7 +557,12 @@
                                target="_blank">Telegram</a>, for any kind of inquiries. 😀<br></p>
                         <a class="button is-primary is-centered" href="mailto:hi@jahir.xyz">hi@jahir.xyz</a>
 
-                        <form id="contact-form" name="contactForm" action="/sent" netlify>
+                        <form id="contact-form"
+                              name="contactForm"
+                              action="/sent"
+                              method="POST"
+                              netlify-honeypot="honey"
+                              netlify>
                             <div class="field is-horizontal">
                                 <div class="field-label is-normal">
                                     <label class="label">Your name</label>
@@ -675,7 +680,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <input id="honey" name="honey" type="text" value="">
+                            <div class="field is-horizontal is-hidden">
+                                <div class="field-label is-normal">
+                                    <label class="label">Humans don't fill</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <p class="control">
+                                            <input class="input" type="text"
+                                                   placeholder="" value=""
+                                                   id="honey" name="honey">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
