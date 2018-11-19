@@ -578,6 +578,27 @@ a .card:focus * {
 /* Custom colors for projects cards */
 /* ================================ */
 
+#projects .columns {
+    --anim-duration: 2s;
+    /* display: none !important;
+    opacity: 0 !important; */
+    -webkit-transition: all linear var(--anim-duration);
+    -moz-transition: all linear var(--anim-duration);
+    -ms-transition: all linear var(--anim-duration);
+    -o-transition: all linear var(--anim-duration);
+    transition: all linear var(--anim-duration);
+}
+
+#projects .columns.is-active {
+    display: flex !important;
+    opacity: 1 !important;
+    -webkit-transition: all linear var(--anim-duration);
+    -moz-transition: all linear var(--anim-duration);
+    -ms-transition: all linear var(--anim-duration);
+    -o-transition: all linear var(--anim-duration);
+    transition: all linear var(--anim-duration);
+}
+
 #blueprint .card:hover,
 #blueprint .card:focus {
     --shadow-col: rgba(77, 138, 240, .25);
