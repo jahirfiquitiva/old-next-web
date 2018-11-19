@@ -33,7 +33,6 @@ function initParticles() {
 let lastHello = 0;
 const hellos = ["Hello, world", "Hola, mundo", "Salut, monde", "Ciao, mondo", "Olá, mundo",
                 "Hallo, Welt"];
-let helloInterval = setInterval(changeHello, 2000);
 
 function changeHello() {
     let hello = document.getElementById('hello');
@@ -42,18 +41,6 @@ function changeHello() {
         lastHello += 1;
         if (lastHello >= hellos.length) {
             lastHello = 0;
-        }
-    }
-}
-
-function toggleContactModal(show = false) {
-    closeBurger();
-    let modal = document.getElementById('contact-modal');
-    if (modal) {
-        if (show) {
-            fade(modal, 'in', 150, 'flex');
-        } else {
-            fade(modal, 'out', 200);
         }
     }
 }
@@ -75,5 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setup();
         initParticles();
         changeHello();
+        setInterval(changeHello, 2000);
     }, 500);
 });

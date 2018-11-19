@@ -992,9 +992,35 @@ button.button {
     margin: 1.2rem !important;
 }
 
-/* ========= */
-/* ReCaptcha */
-/* ========= */
+@media only screen and (min-width: 549px) {
+    #contact-form {
+        max-width: 85% !important;
+        margin: auto !important;
+    }
+
+    .field-label.is-normal {
+        padding-top: .1rem !important;
+    }
+
+    .field:not(:last-child) {
+        margin-bottom: .6rem !important;
+    }
+
+    .container p.control:not(:last-child) {
+        margin-bottom: .6rem !important;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #contact-form {
+        max-width: 75% !important;
+        margin: auto !important;
+    }
+
+    .field-body {
+        flex-grow: 6 !important;
+    }
+}
 
 .g-recaptcha {
     margin-top: .5rem !important;

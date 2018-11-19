@@ -80,7 +80,7 @@
     <body>
         <div class="hero" id="particles-bg"></div>
 
-        <section class="hero is-fullheight-with-navbar" id="about">
+        <section class="hero is-fullheight-with-navbar">
             <div class="hero-head">
                 <nav class="navbar is-fixed-top has-shadow">
                     <div class="container">
@@ -103,8 +103,7 @@
                                 <a class="navbar-item" href="/#projects">Projects</a>
                                 <a class="navbar-item" href="/about/">About</a>
                                 <a class="navbar-item" href="/thanks/">Thanks</a>
-                                <a class="navbar-item"
-                                   onclick="toggleContactModal(true)">Contact</a>
+                                <a class="navbar-item" href="/contact/">Contact</a>
                             </div>
                         </div>
                     </div>
@@ -116,117 +115,67 @@
                     <div class="error-content">
                         <h2 class="is-primary-text bold shadowed has-text-centered">
                             Thanks for your message</h2>
-                        <br>
-                        <!--
                         <h6 class="is-primary-text">
-                            Unfortunately the site you were trying to reach does not exist or has
-                            been moved. 😥
+                            I will get back to you as soon as possible 🙌🏼
                         </h6>
-                        -->
+                        <br>
                     </div>
                     <br>
                     <a href="/" class="button is-primary">Go Back Home</a>
-                    <br><br>
-                    <a href="/" style="cursor: pointer !important;">
-                        <div class="columns is-mobile is-centered"
-                             style="margin-bottom: 0 !important; padding-bottom: 0 !important;cursor: pointer !important;">
-                            <div class="column is-half-tablet is-half-desktop"
-                                 style="margin-bottom: 0 !important; padding-bottom: 0 !important;cursor: pointer !important;">
-                                <figure class="image" style="cursor: pointer !important;">
-                                    <img style="cursor: pointer !important;"
-                                         src="assets/images/site/404.gif">
-                                </figure>
-                            </div>
-                        </div>
-                    </a>
                 </div>
             </div>
-        </section>
 
-        <div class="modal" id="contact-modal">
-            <div class="modal-background" onclick="toggleContactModal()"></div>
-            <div class="modal-content">
-                <div class="box has-text-centered">
-                    <div class="body">
-                        <h1 class="is-primary-text shadowed"
-                            data-shadow-color="red">Get in Touch 📮</h1>
-                        <h5 class="is-secondary-text">
-                            Don't hesitate contacting me!
-                        </h5>
-                        <p class="is-secondary-text" style="padding: .4rem;">PS: I also have an
-                                                                             open <a class="link"
-                                                                                     href="https://jahir.xyz/twitterdm"
-                                                                                     target="_blank">Twitter
-                                                                                                     DM</a>
-                                                                             and
-                            <a class="link"
-                               href="https://jahir.xyz/tlgrm"
-                               target="_blank">Telegram</a>, for any kind of inquiries. 😀<br></p>
-                        <br>
-                        <a class="button is-primary is-centered"
-                           href="mailto:hi@jahir.xyz">hi@jahir.xyz</a>
+            <footer class="footer">
+                <div class="container has-text-centered">
+                    <div class="buttons is-centered">
+                        <a class="button social-btn is-github"
+                           href="https://jahir.xyz/github" target="_blank"
+                           data-balloon="GitHub" data-balloon-pos="up">
+                            <i class="mdi mdi-18px mdi-github-circle"></i>
+                        </a>
+                        <a class="button social-btn is-twitter"
+                           href="https://jahir.xyz/twitter" target="_blank"
+                           data-balloon="Twitter" data-balloon-pos="up">
+                            <i class="mdi mdi-18px mdi-twitter"></i>
+                        </a>
+                        <a class="button social-btn is-plus"
+                           href="https://jahir.xyz/gplus" target="_blank"
+                           data-balloon="Google+" data-balloon-pos="up">
+                            <i class="mdi mdi-18px mdi-google-plus"></i>
+                        </a>
+                        <a class="button social-btn is-linkedin"
+                           href="https://jahir.xyz/lnkdn" target="_blank"
+                           data-balloon="LinkedIn" data-balloon-pos="up">
+                            <i class="mdi mdi-18px mdi-linkedin"></i>
+                        </a>
+                        <a class="button social-btn is-play"
+                           href="https://jahir.xyz/gplay" target="_blank"
+                           data-balloon="Google Play Store" data-balloon-pos="up">
+                            <i class="mdi mdi-18px mdi-google-play"></i>
+                        </a>
+                        <a class="button social-btn is-telegram"
+                           href="https://jahir.xyz/tlgrm" target="_blank"
+                           data-balloon="Telegram" data-balloon-pos="up">
+                            <i class="mdi mdi-18px mdi-telegram"></i>
+                        </a>
                     </div>
+                    <p style="margin-bottom: .2rem !important;">Made with
+                        <i class="mdi mdi-18px mdi-heart"></i> by <a class="link" href="/">yours
+                                                                                           truly.</a>
+                    </p>
+                    <p id="copyright-notice"
+                       style="font-size: .9rem !important;margin-bottom: .2rem !important;"></p>
+                    <p style="font-size: .7rem !important;">Built using <a
+                            class="link"
+                            target="_blank"
+                            href="http://bulma.io">Bulma</a>
+                                                            and <a class="link"
+                                                                   target="_blank"
+                                                                   href="https://vincentgarreau.com/particles.js/">Particles.js</a>
+                    </p>
                 </div>
-                <p class="is-primary-text-inverted has-text-centered"
-                   onclick="toggleContactModal()">
-                    You can dismiss this by clicking or tapping the background.
-                </p>
-            </div>
-            <button class="modal-close is-large"
-                    onclick="toggleContactModal()"
-                    aria-label="close"></button>
-        </div>
-
-        <footer class="footer">
-            <div class="container has-text-centered">
-                <div class="buttons is-centered">
-                    <a class="button social-btn is-github"
-                       href="https://jahir.xyz/github" target="_blank"
-                       data-balloon="GitHub" data-balloon-pos="up">
-                        <i class="mdi mdi-18px mdi-github-circle"></i>
-                    </a>
-                    <a class="button social-btn is-twitter"
-                       href="https://jahir.xyz/twitter" target="_blank"
-                       data-balloon="Twitter" data-balloon-pos="up">
-                        <i class="mdi mdi-18px mdi-twitter"></i>
-                    </a>
-                    <a class="button social-btn is-plus"
-                       href="https://jahir.xyz/gplus" target="_blank"
-                       data-balloon="Google+" data-balloon-pos="up">
-                        <i class="mdi mdi-18px mdi-google-plus"></i>
-                    </a>
-                    <a class="button social-btn is-linkedin"
-                       href="https://jahir.xyz/lnkdn" target="_blank"
-                       data-balloon="LinkedIn" data-balloon-pos="up">
-                        <i class="mdi mdi-18px mdi-linkedin"></i>
-                    </a>
-                    <a class="button social-btn is-play"
-                       href="https://jahir.xyz/gplay" target="_blank"
-                       data-balloon="Google Play Store" data-balloon-pos="up">
-                        <i class="mdi mdi-18px mdi-google-play"></i>
-                    </a>
-                    <a class="button social-btn is-telegram"
-                       href="https://jahir.xyz/tlgrm" target="_blank"
-                       data-balloon="Telegram" data-balloon-pos="up">
-                        <i class="mdi mdi-18px mdi-telegram"></i>
-                    </a>
-                </div>
-                <p style="margin-bottom: .2rem !important;">Made with
-                    <i class="mdi mdi-18px mdi-heart"></i> by <a class="link" href="/">yours
-                                                                                       truly.</a>
-                </p>
-                <p id="copyright-notice"
-                   style="font-size: .9rem !important;margin-bottom: .2rem !important;"></p>
-                <p style="font-size: .7rem !important;">Built using <a
-                        class="link"
-                        target="_blank"
-                        href="http://bulma.io">Bulma</a>
-                                                        and <a class="link"
-                                                               target="_blank"
-                                                               href="https://vincentgarreau.com/particles.js/">Particles.js</a>
-                </p>
-            </div>
-        </footer>
+            </footer>
+        </section>
 
         <script src="assets/libs/js/particles.js"></script>
         <script src="assets/js/scroll.js"></script>

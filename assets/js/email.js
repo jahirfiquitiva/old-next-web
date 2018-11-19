@@ -58,10 +58,8 @@ const sendForm = event => {
                     isValid = true;
                     try {
                         let request = new XMLHttpRequest();
-                        request.onreadystatechange = function (data) {
+                        request.onreadystatechange = function () {
                             if (this.readyState !== 4) return;
-                            console.log(this.responseText);
-                            console.log(this.status);
                             if (this.status >= 200 && this.status < 300) {
                                 window.location.href = $formContact.getAttribute('action');
                             } else {
@@ -72,14 +70,6 @@ const sendForm = event => {
                         request.open('POST', '/', true);
                         request.setRequestHeader('Content-Type',
                                                  'application/x-www-form-urlencoded; charset=UTF-8');
-                        let enco = encode({
-                                              "form-name": $formContact.getAttribute('name'),
-                                              "name": name.toString(),
-                                              "email": email.toString(),
-                                              "subject": subject.toString(),
-                                              "message": content.toString()
-                                          });
-                        console.log(enco);
                         request.send(encode({
                                                 "form-name": $formContact.getAttribute('name'),
                                                 "name": name.toString(),
