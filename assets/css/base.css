@@ -169,6 +169,10 @@ b, .bold {
     margin-bottom: 1em;
 }
 
+.footer {
+    background-color: var(--background) !important;
+}
+
 a {
     color: var(--accent) !important;
 }
@@ -177,6 +181,7 @@ a {
 .link:focus:not(.button) {
     color: var(--accent) !important;
     text-decoration: underline wavy var(--accent) !important;
+    text-decoration-skip: ink !important;
 }
 
 a, button, .button, a > *, .button > * {

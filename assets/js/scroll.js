@@ -1,11 +1,11 @@
 window.addEventListener('scroll', function () {
     let yPosition = (window.pageYOffset | document.body.scrollTop) + 2;
-    let portfolioTop = getElementTop('portfolio');
+    let projectsTop = getElementTop('projects');
     let contactTop = getElementTop('contact');
-    if (yPosition < portfolioTop) {
+    if (yPosition < projectsTop) {
         toggleLink('home');
     } else if (yPosition < contactTop) {
-        toggleLink('portfolio');
+        toggleLink('projects');
     } else {
         let ele = document.getElementById('contact');
         if (ele !== null && ele !== undefined) {
@@ -49,10 +49,8 @@ function scrollToItem(itemId, toggle = true) {
         document.body.scrollTop = document.documentElement.scrollTop = elementTop;
         */
         window.scroll({top: elementTop, left: 0, behavior: 'smooth'});
-        if (toggle !== null && toggle !== undefined) {
-            if (toggle) {
-                toggleLink(itemId);
-            }
+        if (toggle) {
+            toggleLink(itemId);
         }
     } catch (err) {
     }
@@ -72,24 +70,24 @@ function toggleLink(itemId) {
     }
 }
 
-function togglePortfolio(itemId) {
-    let portfolioFilters = document.getElementsByClassName('portfolio-filter');
-    for (let i = 0; i < portfolioFilters.length; i++) {
-        portfolioFilters[i].classList.remove('is-active');
+function toggleProjects(itemId) {
+    let projectsFilters = document.getElementsByClassName('projects-filter');
+    for (let i = 0; i < projectsFilters.length; i++) {
+        projectsFilters[i].classList.remove('is-active');
     }
 
-    let portfolioSections = document.getElementsByClassName('portfolio-section');
-    for (let i = 0; i < portfolioSections.length; i++) {
-        let ele = portfolioSections[i];
-        if (ele.id !== 'portfolio-' + itemId && ele.style.display !== 'none') {
-            fade(portfolioSections[i], 'out', 100);
+    let projectsSections = document.getElementsByClassName('projects-section');
+    for (let i = 0; i < projectsSections.length; i++) {
+        let ele = projectsSections[i];
+        if (ele.id !== 'projects-' + itemId && ele.style.display !== 'none') {
+            fade(projectsSections[i], 'out', 100);
         }
-        // portfolioSections[i].style.display = "none";
+        // projectsSections[i].style.display = "none";
     }
     for (let j = 0; j < 2000; j++) {
     }
-    // document.getElementById("portfolio-" + itemId).style.display = "flex";
-    fade(document.getElementById("portfolio-" + itemId), 'in', 750, "flex");
+    // document.getElementById("projects-" + itemId).style.display = "flex";
+    fade(document.getElementById("projects-" + itemId), 'in', 750, "flex");
     document.getElementById(itemId + "-filter").classList.add("is-active");
 }
 
