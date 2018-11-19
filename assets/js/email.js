@@ -56,8 +56,6 @@ const sendForm = event => {
                 } else {
                     isValid = true;
                     let request = new XMLHttpRequest();
-                    request.setRequestHeader('Content-Type',
-                                             'application/x-www-form-urlencoded; charset=UTF-8');
                     request.onreadystatechange = () => {
                         if (this.readyState !== 4) return;
                         if (this.status >= 200 && this.status < 300) {
@@ -67,6 +65,8 @@ const sendForm = event => {
                         }
                     };
                     request.open('POST', '/', true);
+                    request.setRequestHeader('Content-Type',
+                                             'application/x-www-form-urlencoded; charset=UTF-8');
                     request.send(encode({
                                             "Name": name,
                                             "Email": email,
