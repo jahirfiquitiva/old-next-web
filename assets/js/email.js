@@ -56,27 +56,40 @@ const sendForm = event => {
                     toggleHelp('message', true);
                 } else {
                     isValid = true;
-                    let request = new XMLHttpRequest();
-                    request.onreadystatechange = () => {
-                        if (this.readyState !== 4) return;
-                        if (this.status >= 200 && this.status < 300) {
-                            window.location.href = $formContact.getAttribute('action');
-                        } else {
-                            alert("An unexpected error occurred while trying to send your message");
-                        }
-                    };
-                    request.open('POST', '/', true);
-                    request.setRequestHeader('Content-Type',
-                                             'application/x-www-form-urlencoded; charset=UTF-8');
-                    let enco = encode({
-                                          "form-name": $formContact.getAttribute('name'),
-                                          "name": name.toString(),
-                                          "email": email.toString(),
-                                          "subject": subject.toString(),
-                                          "message": content.toString()
-                                      });
-                    console.log(enco);
-                    request.send(enco);
+                    try {
+                        let request = new XMLHttpRequest();
+                        request.onreadystatechange = function (data) {
+                            if (this.readyState !== 4) return;
+                            console.log(this.responseText);
+                            console.log(this.status);
+                            if (this.status >= 200 && this.status < 300) {
+                                window.location.href = $formContact.getAttribute('action');
+                            } else {
+                                alert(
+                                    "An unexpected error occurred while trying to send your message");
+                            }
+                        };
+                        request.open('POST', '/', true);
+                        request.setRequestHeader('Content-Type',
+                                                 'application/x-www-form-urlencoded; charset=UTF-8');
+                        let enco = encode({
+                                              "form-name": $formContact.getAttribute('name'),
+                                              "name": name.toString(),
+                                              "email": email.toString(),
+                                              "subject": subject.toString(),
+                                              "message": content.toString()
+                                          });
+                        console.log(enco);
+                        request.send(encode({
+                                                "form-name": $formContact.getAttribute('name'),
+                                                "name": name.toString(),
+                                                "email": email.toString(),
+                                                "subject": subject.toString(),
+                                                "message": content.toString()
+                                            }));
+                    } catch (e) {
+                        alert("An unexpected error occurred while trying to send your message");
+                    }
                 }
             }
         } else {
