@@ -68,13 +68,15 @@ const sendForm = event => {
                     request.open('POST', '/', true);
                     request.setRequestHeader('Content-Type',
                                              'application/x-www-form-urlencoded; charset=UTF-8');
-                    request.send(encode({
-                                            "name": name,
-                                            "email": email,
-                                            "subject": subject,
-                                            "message": content,
-                                            "form-name": $formContact.getAttribute('name')
-                                        }));
+                    let enco = encode({
+                                          "form-name": $formContact.getAttribute('name'),
+                                          "name": name.toString(),
+                                          "email": email.toString(),
+                                          "subject": subject.toString(),
+                                          "message": content.toString()
+                                      });
+                    console.log(enco);
+                    request.send(enco);
                 }
             }
         } else {
