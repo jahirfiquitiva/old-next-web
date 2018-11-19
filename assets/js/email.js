@@ -68,10 +68,10 @@ const sendForm = event => {
                     request.setRequestHeader('Content-Type',
                                              'application/x-www-form-urlencoded; charset=UTF-8');
                     request.send(encode({
-                                            "Name": name,
-                                            "Email": email,
-                                            "Subject": subject,
-                                            "Message": content,
+                                            "name": name,
+                                            "email": email,
+                                            "subject": subject,
+                                            "message": content,
                                             "form-name": $formContact.getAttribute('name')
                                         }));
                 }
@@ -82,7 +82,8 @@ const sendForm = event => {
     } else {
         toggleHelp('email', true);
     }
-    return stopMailLoad(isValid);
+    stopMailLoad(isValid);
+    return false;
 };
 
 $formContact.addEventListener("submit", sendForm);
