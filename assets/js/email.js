@@ -94,8 +94,6 @@ const sendForm = event => {
     return false;
 };
 
-$formContact.addEventListener("submit", sendForm);
-
 function stopMailLoad(expected) {
     try {
         document.contactForm.action.classList.remove('is-loading');
