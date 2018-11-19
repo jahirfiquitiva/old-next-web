@@ -556,6 +556,126 @@
                                href="https://jahir.xyz/tlgrm"
                                target="_blank">Telegram</a>, for any kind of inquiries. 😀<br></p>
                         <a class="button is-primary is-centered" href="mailto:hi@jahir.xyz">hi@jahir.xyz</a>
+
+                        <form id="contact-form" name="contactForm" netlify>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Your name</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <p class="control has-icons-left has-icons-right">
+                                            <input class="input" type="text" placeholder="Jon Doe"
+                                                   id="name" name="name"
+                                                   required aria-required="true">
+                                            <span class="icon is-small is-left">
+                                              <i class="mdi mdi-account"></i>
+                                            </span>
+                                        </p>
+                                        <p class="help is-danger" id="name-help">
+                                            <i class="mdi mdi-alert mdi-18px"></i> Please fill this
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Your email</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <p class="control has-icons-left has-icons-right">
+                                            <input class="input" type="email" id="email"
+                                                   name="email" placeholder="jon.doe@example.com"
+                                                   required aria-required="true">
+                                            <span class="icon is-small is-left">
+                                              <i class="mdi mdi-email"></i>
+                                            </span>
+                                        </p>
+                                        <p class="help is-danger" id="email-help">
+                                            <i class="mdi mdi-alert mdi-18px"></i> Please enter a
+                                                                                   valid email
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Subject</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <p class="control">
+                                            <input class="input" type="text"
+                                                   placeholder="e.g. Let's work together"
+                                                   id="subject" name="subject"
+                                                   required aria-required="true">
+                                        </p>
+                                        <p class="help is-danger" id="subject-help">
+                                            <i class="mdi mdi-alert mdi-18px"></i> Please fill this
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">Message</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <textarea class="textarea" type="text"
+                                                      placeholder="Hi Jahir..."
+                                                      id="message" name="message"
+                                                      required aria-required="true"></textarea>
+                                        </div>
+                                        <p class="help is-danger" id="message-help">
+                                            <i class="mdi mdi-alert mdi-18px"></i> Please fill this
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--
+                           <div class="field is-horizontal">
+                               <div class="field-label is-normal">
+                                   <div class="label"></div>
+                               </div>
+                               <div class="field-body">
+                                   <div class="field">
+                                       <div id="captcha" class="g-recaptcha"
+                                            data-sitekey="6Lc-aCkTAAAAAOoMbUV54l-MyK4wWuqOLpMnS4pe">
+                                       </div>
+                                       <p class="help is-danger extra" id="captcha-help">
+                                           <i class="mdi mdi-alert mdi-18px"></i> Please confirm
+                                                                                  you're human
+                                       </p>
+                                   </div>
+                               </div>
+                           </div>	-->
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <p class="control">
+                                            <button class="button is-primary"
+                                                    name="action" type="submit" id="submit">
+                                                Send message
+                                            </button>
+                                        </p>
+                                        <p class="help" id="sent">
+                                            Thanks for your message! 😀<br>I'll get back to
+                                            you as soon as possible. 🙌
+                                        </p>
+                                        <p class="help" id="not-sent">
+                                            Unfortunately an error occurred 😔<br>Please try
+                                            again later! 🙌
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <input id="honey" name="honey" type="text" value="">
+                        </form>
                     </div>
                 </div>
             </div>
