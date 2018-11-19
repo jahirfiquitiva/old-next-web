@@ -33,21 +33,27 @@ const sendForm = event => {
     const email = emailInput.value;
     if (email !== null && email !== undefined) {
         if (validateEmail(email)) {
-            toggleHelp('captcha', false);
-            let name = nameInput.value;
-            let subject = subjectInput.value;
-            let content = messageInput.value;
-            if (name === null || name === undefined || name.length === 0) {
-                toggleHelp('name', true);
-                return stopMailLoad(false);
-            } else if (subject === null || subject === undefined || subject.length === 0) {
-                toggleHelp('subject', true);
-                return stopMailLoad(false);
-            } else if (content === null || content === undefined || content.length === 0) {
-                toggleHelp('message', true);
+            let response = grecaptcha.getResponse();
+            if (response === null || response === undefined || response.length === 0) {
+                toggleHelp('captcha', true);
                 return stopMailLoad(false);
             } else {
-                return true;
+                toggleHelp('captcha', false);
+                let name = nameInput.value;
+                let subject = subjectInput.value;
+                let content = messageInput.value;
+                if (name === null || name === undefined || name.length === 0) {
+                    toggleHelp('name', true);
+                    return stopMailLoad(false);
+                } else if (subject === null || subject === undefined || subject.length === 0) {
+                    toggleHelp('subject', true);
+                    return stopMailLoad(false);
+                } else if (content === null || content === undefined || content.length === 0) {
+                    toggleHelp('message', true);
+                    return stopMailLoad(false);
+                } else {
+                    return true;
+                }
             }
         } else {
             toggleHelp('email', true);
