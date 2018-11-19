@@ -961,3 +961,36 @@ button.button {
 .modal .box .body {
     margin: 1.2rem !important;
 }
+
+/* ========= */
+/* ReCaptcha */
+/* ========= */
+
+.g-recaptcha {
+    margin-top: .5rem !important;
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform-origin: left top !important;
+    -webkit-transform-origin: left top !important;
+}
+
+@media only screen and (max-width: 240px) {
+    .g-recaptcha {
+        transform: scale(0.6) !important;
+        -webkit-transform: scale(0.6) !important;
+    }
+}
+
+@media only screen and (min-width: 241px) and (max-width: 320px) {
+    .g-recaptcha {
+        transform: scale(0.7) !important;
+        -webkit-transform: scale(0.7) !important;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+    .g-recaptcha {
+        transform: scale(0.8) !important;
+        -webkit-transform: scale(0.8) !important;
+    }
+}
