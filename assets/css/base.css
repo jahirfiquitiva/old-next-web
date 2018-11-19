@@ -141,7 +141,11 @@ b, .bold {
 .home-content {
     margin: auto !important;
     max-width: 70% !important;
-    text-align: justify-all !important;
+}
+
+.error-content {
+    margin: auto !important;
+    max-width: 50% !important;
 }
 
 @media only screen and (max-width: 800px) {
@@ -151,7 +155,7 @@ b, .bold {
         padding-left: 1.2rem !important;
     }
 
-    .home-content {
+    .home-content, .error-content {
         max-width: 100% !important;
     }
 }

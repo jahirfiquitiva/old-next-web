@@ -2,13 +2,232 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Error ~ Jahir Fiquitiva 🌀</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--[if IE]>
+        <meta http-equiv="cleartype" content="on"/>
+        <![endif]-->
+
+        <title>Jahir Fiquitiva 🌀</title>
+
+        <meta name="description"
+              content="Passionate and creative developer. This website contains information about me, my skills and my portfolio.">
+        <meta name="author" content="Jahir Fiquitiva">
+        <meta name="keywords"
+              content="portfolio, skills, developer, development, android, material, material design, kotlin, java, javascript, css, html, python, c, c++, design, iconography, illustration">
+
+        <meta property="og:title" content="Jahir Fiquitiva"/>
+        <meta property="og:site_name" content="Jahir Fiquitiva"/>
+
+        <!-- Schema.org markup for Google+ -->
+        <meta itemprop="name" content="Jahir Fiquitiva">
+        <meta itemprop="description"
+              content="Passionate and creative developer. This website contains information about me, my skills and my portfolio.">
+        <meta itemprop="image"
+              content="/assets/img/brand/logo-full-me.png">
+
+        <!-- Open Graph data -->
+        <meta property="og:title" content="Jahir Fiquitiva"/>
+        <meta property="og:type" content="portfolio"/>
+        <meta property="og:url" content="https://jahirfiquitiva.com/"/>
+        <meta property="og:image"
+              content="/assets/img/brand/logo-full-me.png"/>
+        <meta property="og:description"
+              content="Passionate and creative developer. This website contains information about me, my skills and my portfolio."/>
+        <meta property="og:site_name" content="Jahir Fiquitiva"/>
+        <meta property="og:locale" content="en_US"/>
+        <link rel="canonical" href="https://jahirfiquitiva.com/"/>
+
+        <!-- Twitter -->
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:creator" content="@jahirfiquitiva">
+        <meta name="twitter:site" content="@jahirfiquitiva">
+        <meta name="twitter:title" content="Jahir Fiquitiva">
+        <meta name="twitter:description"
+              content="Passionate and creative developer. This website contains information about me, my skills and my portfolio.">
+        <!-- Twitter summary card with large image must be at least 280x150px -->
+        <meta name="twitter:image:src"
+              content="https://jahirfiquitiva.com/assets/img/brand/logo-full-me.png">
+
+        <!-- Google Verification -->
+        <link href="https://plus.google.com/+JahirFiquitivaR/" rel="publisher"/>
+        <meta name="google-site-verification"
+              content="lJwL3cKpjX_Eqp6yEY4hsydJazQl85xv29ZUmEg4oEE"/>
+
+        <!-- Theme Colors -->
+        <meta name="theme-color" content="#f9fafb">
+        <meta name="msapplication-TileColor" content="#f9fafb">
+        <meta name="msapplication-navbutton-color" content="#f9fafb">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#f9fafb">
+
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="/assets/img/brand/favicon32.png">
+        <link rel="apple-touch-icon" href="/assets/img/brand/favicon57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/brand/favicon72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/brand/favicon114.png">
+        <link rel="apple-touch-icon-precomposed" href="/assets/img/brand/favicon32.png">
+        <link rel="icon" sizes="32x32" href="/assets/img/brand/favicon32.png">
+        <meta name="msapplication-TileImage" content="/assets/img/brand/favicon32.png">
 
         <link href="assets/libs/css/bulma.css" rel="stylesheet">
-        <link href="./assets/css/base.css" rel="stylesheet">
+        <link href="assets/libs/css/balloon.css" rel="stylesheet">
+        <link href="assets/libs/fonts/manrope/manrope.css" rel="stylesheet">
+        <link href="assets/libs/fonts/mdi/materialdesignicons.css" rel="stylesheet">
+
+        <link href="assets/css/base.css" rel="stylesheet">
     </head>
     <body>
-        <h5>404</h5>
-        <p>The requested site could not be found</p>
+        <div class="hero" id="particles-bg"></div>
+
+        <section class="hero is-fullheight-with-navbar" id="about">
+            <div class="hero-head">
+                <nav class="navbar is-fixed-top has-shadow">
+                    <div class="container">
+                        <div class="navbar-brand">
+                            <a class="navbar-item is-logo">
+                                <img src="/assets/img/brand/logo-def.svg" alt="JF" height="48"
+                                     width="48" id="logo"
+                                     onerror="this.onerror=null;this.src='/assets/img/brand/logo-def.png'">
+                                Jahir Fiquitiva
+                            </a>
+                            <span class="navbar-burger burger" data-target="burger-menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+                        <div id="burger-menu" class="navbar-menu">
+                            <div class="navbar-end">
+                                <a class="navbar-item" href="/">Home</a>
+                                <a class="navbar-item" href="/#projects">Projects</a>
+                                <a class="navbar-item" href="/about/">About</a>
+                                <a class="navbar-item" href="/thanks/">Thanks</a>
+                                <a class="navbar-item"
+                                   onclick="toggleContactModal(true)">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <div class="error-content">
+                        <h2 class="is-primary-text bold shadowed has-text-centered"
+                            data-shadow-color="red">Woops! - Page Not Found</h2>
+                        <br>
+                        <h6 class="is-primary-text">
+                            Unfortunately the site you were trying to reach does not exist or has
+                            been moved. 😥
+                        </h6>
+                    </div>
+                    <br>
+                    <a href="/" class="button is-primary">Go Back Home</a>
+                    <br><br>
+                    <a href="/" style="cursor: pointer !important;">
+                        <div class="columns is-mobile is-centered"
+                             style="margin-bottom: 0 !important; padding-bottom: 0 !important;cursor: pointer !important;">
+                            <div class="column is-half-tablet is-half-desktop"
+                                 style="margin-bottom: 0 !important; padding-bottom: 0 !important;cursor: pointer !important;">
+                                <figure class="image" style="cursor: pointer !important;">
+                                    <img style="cursor: pointer !important;"
+                                         src="assets/images/site/404.gif">
+                                </figure>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal" id="contact-modal">
+            <div class="modal-background" onclick="toggleContactModal()"></div>
+            <div class="modal-content">
+                <div class="box has-text-centered">
+                    <div class="body">
+                        <h1 class="is-primary-text shadowed"
+                            data-shadow-color="red">Get in Touch 📮</h1>
+                        <h5 class="is-secondary-text">
+                            Don't hesitate contacting me!
+                        </h5>
+                        <p class="is-secondary-text" style="padding: .4rem;">PS: I also have an
+                                                                             open <a class="link"
+                                                                                     href="https://jahir.xyz/twitterdm"
+                                                                                     target="_blank">Twitter
+                                                                                                     DM</a>
+                                                                             and
+                            <a class="link"
+                               href="https://jahir.xyz/tlgrm"
+                               target="_blank">Telegram</a>, for any kind of inquiries. 😀<br></p>
+                        <br>
+                        <a class="button is-primary is-centered"
+                           href="mailto:hi@jahir.xyz">hi@jahir.xyz</a>
+                    </div>
+                </div>
+                <p class="is-primary-text-inverted has-text-centered"
+                   onclick="toggleContactModal()">
+                    You can dismiss this by clicking or tapping the background.
+                </p>
+            </div>
+            <button class="modal-close is-large"
+                    onclick="toggleContactModal()"
+                    aria-label="close"></button>
+        </div>
+
+        <footer class="footer">
+            <div class="container has-text-centered">
+                <div class="buttons is-centered">
+                    <a class="button social-btn is-github"
+                       href="https://jahir.xyz/github" target="_blank"
+                       data-balloon="GitHub" data-balloon-pos="up">
+                        <i class="mdi mdi-18px mdi-github-circle"></i>
+                    </a>
+                    <a class="button social-btn is-twitter"
+                       href="https://jahir.xyz/twitter" target="_blank"
+                       data-balloon="Twitter" data-balloon-pos="up">
+                        <i class="mdi mdi-18px mdi-twitter"></i>
+                    </a>
+                    <a class="button social-btn is-plus"
+                       href="https://jahir.xyz/gplus" target="_blank"
+                       data-balloon="Google+" data-balloon-pos="up">
+                        <i class="mdi mdi-18px mdi-google-plus"></i>
+                    </a>
+                    <a class="button social-btn is-linkedin"
+                       href="https://jahir.xyz/lnkdn" target="_blank"
+                       data-balloon="LinkedIn" data-balloon-pos="up">
+                        <i class="mdi mdi-18px mdi-linkedin"></i>
+                    </a>
+                    <a class="button social-btn is-play"
+                       href="https://jahir.xyz/gplay" target="_blank"
+                       data-balloon="Google Play Store" data-balloon-pos="up">
+                        <i class="mdi mdi-18px mdi-google-play"></i>
+                    </a>
+                    <a class="button social-btn is-telegram"
+                       href="https://jahir.xyz/tlgrm" target="_blank"
+                       data-balloon="Telegram" data-balloon-pos="up">
+                        <i class="mdi mdi-18px mdi-telegram"></i>
+                    </a>
+                </div>
+                <p style="margin-bottom: .2rem !important;">Made with
+                    <i class="mdi mdi-18px mdi-heart"></i> by <a class="link" href="/">yours
+                                                                                       truly.</a>
+                </p>
+                <p id="copyright-notice"
+                   style="font-size: .9rem !important;margin-bottom: .2rem !important;"></p>
+                <p style="font-size: .7rem !important;">Built using <a
+                        class="link"
+                        target="_blank"
+                        href="http://bulma.io">Bulma</a>
+                                                        and <a class="link"
+                                                               target="_blank"
+                                                               href="https://vincentgarreau.com/particles.js/">Particles.js</a>
+                </p>
+            </div>
+        </footer>
+
+        <script src="assets/libs/js/particles.js"></script>
+        <script src="assets/js/scroll.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
