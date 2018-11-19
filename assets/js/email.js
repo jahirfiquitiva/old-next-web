@@ -23,11 +23,11 @@ messageInput.addEventListener('keyup', function () {
 const sendForm = event => {
     event.preventDefault();
     document.contactForm.action.classList.add('is-loading');
+    let isValid = false;
     if (document.contactForm.honey) {
         let input = document.contactForm.honey.value;
         if (input !== null && input !== undefined && input.length > 0) {
             toggleHelp('captcha', true);
-            return stopMailLoad(false);
         }
     }
     const email = emailInput.value;
@@ -36,7 +36,6 @@ const sendForm = event => {
             let response = grecaptcha.getResponse();
             if (response === null || response === undefined || response.length === 0) {
                 toggleHelp('captcha', true);
-                return stopMailLoad(false);
             } else {
                 toggleHelp('captcha', false);
                 let name = nameInput.value;
@@ -44,25 +43,21 @@ const sendForm = event => {
                 let content = messageInput.value;
                 if (name === null || name === undefined || name.length === 0) {
                     toggleHelp('name', true);
-                    return stopMailLoad(false);
                 } else if (subject === null || subject === undefined || subject.length === 0) {
                     toggleHelp('subject', true);
-                    return stopMailLoad(false);
                 } else if (content === null || content === undefined || content.length === 0) {
                     toggleHelp('message', true);
-                    return stopMailLoad(false);
                 } else {
-                    return true;
+                    isValid = true;
                 }
             }
         } else {
             toggleHelp('email', true);
-            return stopMailLoad(false);
         }
     } else {
         toggleHelp('email', true);
-        return stopMailLoad(false);
     }
+    return stopMailLoad(isValid);
 };
 
 $formContact.addEventListener("submit", sendForm);
