@@ -580,8 +580,8 @@ a .card:focus * {
 
 #projects .columns {
     --anim-duration: 2s;
-    /* display: none !important;
-    opacity: 0 !important; */
+    display: none !important;
+    opacity: 0 !important;
     -webkit-transition: all linear var(--anim-duration);
     -moz-transition: all linear var(--anim-duration);
     -ms-transition: all linear var(--anim-duration);
