@@ -116,6 +116,15 @@
       "dimensions": "3200x2560",
       "copyright": "Free (do whatever you want)",
       "collections": "food"
+    },
+    {
+      "name": "Webp Image",
+      "author": "unknown",
+      "url": "https://www.gstatic.com/webp/gallery/4.webp",
+      "thumbnail": "https://www.gstatic.com/webp/gallery/5.webp",
+      "dimensions": "3200x2560",
+      "copyright": "Unknown",
+      "collections": "landscapes"
     }
   ]
 }
