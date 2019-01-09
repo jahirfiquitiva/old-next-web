@@ -368,6 +368,16 @@ a.navbar-item.is-logo {
     padding-left: 0 !important;
 }
 
+.navbar-burger {
+    color: var(--accent) !important;
+}
+
+.navbar-burger span {
+    color: var(--accent) !important;
+    background-color: var(--accent) !important;
+    height: 2px !important;
+}
+
 @media only screen and (max-width: 1087px) {
     .navbar-menu {
         background-color: var(--primary) !important;
@@ -375,23 +385,28 @@ a.navbar-item.is-logo {
         padding: .4rem 0;
     }
 
-    a.navbar-item {
-        text-align: center;
-        padding-left: 1.2rem !important;
-        padding-right: 1.2rem !important;
+    a.navbar-item.is-logo {
+        padding-left: .4rem !important;
     }
 
-    a.navbar-item.is-active {
-        color: var(--accent) !important;
-        padding-top: .5rem !important;
+    a.navbar-item {
+        padding-top: .6rem !important;
+        padding-left: 1.2rem !important;
+        padding-right: 1.2rem !important;
+        min-height: 44px !important;
         border-bottom: none !important;
+    }
+
+    a.navbar-item.is-active,
+    a.navbar-item.is-active:hover,
+    a.navbar-item.is-active:focus {
+        color: var(--accent) !important;
     }
 
     a.navbar-item:hover,
     a.navbar-item:focus {
+        background-color: var(--primary-dark) !important;
         color: var(--secondary-text) !important;
-        padding-top: .5rem !important;
-        border-bottom: none !important;
     }
 }
 
