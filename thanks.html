@@ -260,71 +260,13 @@
                             data-shadow-color="blu">Become a Supporter</h1>
                         <br>
                         <div class="home-content">
-                            <p class="has-text-justified">
-                                As an indie developer, I try really hard to provide the best
-                                possible experience and products to all users, and most of them are
-                                <a class="link" href="https://jahir.xyz/github" target="_blank">open
-                                                                                                source</a>.
-                                However, that wouldn't be possible without the help and the
-                                motivation from <a class="link"
-                                                   onclick="scrollToItem('thanks', false)">supporters</a>!
+                            <p>
+                                <a class="button is-primary ripple"
+                                   data-ripple-style="dark"
+                                   href="/about/">
+                                    More about me
+                                </a>
                             </p>
-                            <p class="has-text-justified">
-                                <b>If you like and/or use any of
-                                    <a class="link" href="/#projects" target="_blank">my
-                                                                                      projects</a>,
-                                   or want to support my work, please kindly consider becoming a
-                                   supporter, so I can continue maintaining and evolving them as
-                                   well as new ones.
-                                </b>
-                            </p>
-                            <p class="has-text-justified">
-                                Whatever I receive, will <b>mainly</b> be used for university
-                                expenses. Every dollar counts and is highly appreciated!<br>
-                                <span class="is-disabled-text">
-                                    PS: If you donate U$25 or more, your name will appear in this site 🤗
-                                </span>
-                            </p>
-                            <p class="has-text-justified">Via PayPal:</p>
-                            <div class="field has-addons">
-                                <p class="control">
-                                        <span class="select">
-                                          <select id="currency-selector"
-                                                  aria-label="currency"
-                                                  title="currency"
-                                                  onchange="updateDonationLink();"
-                                                  oninput="updateDonationLink();"
-                                                  onselect="updateDonationLink();"
-                                                  onsubmit="updateDonationLink(true);"
-                                                  onkeyup="launchDonationSite(event);">
-                                            <option value="USD">$</option>
-                                            <option value="GBP">£</option>
-                                            <option value="EUR">€</option>
-                                          </select>
-                                        </span>
-                                </p>
-                                <p class="control">
-                                    <input class="input"
-                                           type="number"
-                                           value="5"
-                                           min="2"
-                                           onchange="updateDonationLink();"
-                                           oninput="updateDonationLink();"
-                                           onselect="updateDonationLink();"
-                                           onsubmit="updateDonationLink(true);"
-                                           onkeyup="launchDonationSite(event);"
-                                           placeholder="Amount"
-                                           id="donation-input">
-                                </p>
-                                <p class="control">
-                                    <a class="button is-paypal"
-                                       target="_blank"
-                                       id="donate-btn"
-                                       href="https://www.paypal.me/jahirfiquitiva/5usd">
-                                        Donate
-                                    </a>
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -385,6 +327,5 @@
         <script src="/assets/libs/js/particles.min.js"></script>
         <script src="/assets/js/scroll.min.js"></script>
         <script src="/assets/js/main.min.js"></script>
-        <script src="/assets/js/donate.min.js"></script>
     </body>
 </html>
