@@ -6,10 +6,5 @@ window.addEventListener('scroll', function () {
         toggleLink('home');
     } else if (yPosition < contactTop) {
         toggleLink('projects');
-    } else {
-        let ele = document.getElementById('contact');
-        if (ele !== null && ele !== undefined) {
-            toggleLink('contact');
-        }
     }
 });
