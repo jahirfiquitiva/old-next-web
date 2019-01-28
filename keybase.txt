@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/jahirfiquitiva
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jahirfiquitiva.com
+  * I am jahirfiquitiva (https://keybase.io/jahirfiquitiva) on keybase.
+  * I have a public key ASBcPcwEhLbr2lBk-D2-sMz6ZnN_WsR0ua0UGYe1OqLsowo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120dea2cf2a4e36a7e4c047ba60761e5398c1e913fa5c3edaae923e1767f2ef0fe00a",
+      "host": "keybase.io",
+      "kid": "01205c3dcc0484b6ebda5064f83dbeb0ccfa66737f5ac474b9ad141987b53aa2eca30a",
+      "uid": "104e2414d675538e2d529a0941fdae19",
+      "username": "jahirfiquitiva"
+    },
+    "merkle_root": {
+      "ctime": 1548634698,
+      "hash": "1d7ec8b445bf3f148497e7f734b9db36fee69809ebdd9ac75efc56b129025832c48cd0667e0030a4ea5fa2413c4203a1b9157f734fea7dc898ca1f3ecd964abf",
+      "hash_meta": "e29040299bf3cff184bdca9e4d5264392f60ff344e977c18363a0db78ccdc7f5",
+      "seqno": 4632765
+    },
+    "service": {
+      "entropy": "azyeYRnwQkwO/Io9XplgaDXE",
+      "hostname": "jahirfiquitiva.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.13.2"
+  },
+  "ctime": 1548634710,
+  "expire_in": 504576000,
+  "prev": "1263770d1f92285c5e64d03299847686ee4f8cff37744e47583bf772ff50c91c",
+  "seqno": 15,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgXD3MBIS269pQZPg9vrDM+mZzf1rEdLmtFBmHtTqi7KMKp3BheWxvYWTESpcCD8QgEmN3DR+SKFxeZNAymYR2hu5PjP83dE5HWDv3cv9QyRzEIOj10Zl2DpgYG+550KiILNFsR296VWb0R6UCEJHs3KNtAgHCo3NpZ8RAT8xOcpyGGrw+/FRamAX568eAEToHsFkvc05QQ15i5JphwT61JSI8JCGw5CODjJeYjYA2dYPxV/1t/JPsKhf4DKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJotBcT2/AMjI5AB5samauJeBK+e7bUIKCvdoHAQprX0o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jahirfiquitiva
+
+==================================================================
