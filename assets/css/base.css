@@ -918,6 +918,13 @@ a .card:focus * {
     }
 }
 
+@media screen and (min-width: 1081px), print {
+    .column.is-one-fourth-desktop {
+        flex: none;
+        width: 25%;
+    }
+}
+
 #honey {
     display: none !important;
 }
