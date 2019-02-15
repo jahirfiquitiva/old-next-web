@@ -785,6 +785,17 @@ a .card:focus * {
     --title-col: rgba(230, 148, 148, 1);
 }
 
+#fabs .card:hover,
+#fabs .card:focus {
+    --shadow-col: rgba(216, 27, 96, .25);
+    --bord-col: rgba(216, 27, 96, .1);
+}
+
+#fabs .card:hover .title,
+#fabs .card:focus .title {
+    --title-col: rgba(216, 27, 96, 1);
+}
+
 #setup .card:hover,
 #setup .card:focus {
     --shadow-col: rgba(126, 40, 252, .25);
