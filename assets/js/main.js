@@ -1,7 +1,7 @@
 const toggleSwitch = document.getElementById('theme-switch');
 const initialThemeSwitchHTML = '&nbsp;&nbsp;<span class="mdi ';
 const finalThemeSwitchHTML = '"></span>&nbsp;&nbsp;';
-let currentTheme = localStorage.getItem('theme');
+let currentTheme = localStorage.getItem('theme') || 'light';
 
 function updateThemeSwitch() {
     if (currentTheme) {
