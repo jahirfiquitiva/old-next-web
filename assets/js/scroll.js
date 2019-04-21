@@ -1,3 +1,33 @@
+const toggleSwitch = document.getElementById('theme-switch');
+const initialThemeSwitchHTML = '&nbsp;&nbsp;<span class="mdi ';
+const finalThemeSwitchHTML = '"></span>&nbsp;&nbsp;';
+let currentTheme = localStorage.getItem('theme') || 'light';
+
+function updateThemeSwitch() {
+    if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        try {
+            const iconName = currentTheme === 'dark' ? 'mdi-white-balance-sunny' : 'mdi-weather-night';
+            const otherThemeName = currentTheme === 'dark' ? 'Light' : 'Dark';
+            toggleSwitch.innerHTML = `${initialThemeSwitchHTML}${iconName}${finalThemeSwitchHTML}${otherThemeName} Theme`;
+        } catch (e) {
+        }
+    }
+}
+updateThemeSwitch();
+
+function switchTheme() {
+    if (currentTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    }
+    currentTheme = localStorage.getItem('theme');
+    updateThemeSwitch();
+}
+
 function getElementTop(itemId) {
     let elementTop = 0;
     if (itemId !== null && itemId !== undefined) {
