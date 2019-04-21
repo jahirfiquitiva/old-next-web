@@ -14,6 +14,7 @@ function updateThemeSwitch() {
         }
     }
 }
+updateThemeSwitch();
 
 function switchTheme() {
     if (currentTheme === 'light') {
@@ -26,8 +27,6 @@ function switchTheme() {
     currentTheme = localStorage.getItem('theme');
     updateThemeSwitch();
 }
-
-updateThemeSwitch();
 
 function setup() {
     let date = new Date();
@@ -77,6 +76,7 @@ function changeHello() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    updateThemeSwitch();
     const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'),
                                                      0);
     if (navbarBurgers.length > 0) {
