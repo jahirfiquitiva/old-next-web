@@ -26,8 +26,7 @@
       "name": "ShotA",
       "author": "Someone",
       "url": "https://raw.githubusercontent.com/jahirfiquitiva/MinDesigns-Wallpapers/master/Wallpapers/Free/walla.jpg",
-      "collections": "featured,landscapes,people",
-      "downloadable": false
+      "collections": "featured,landscapes,people"
     },
     {
       "name": "ShotB",
@@ -52,7 +51,8 @@
       "thumbnail": "https://github.com/jahirfiquitiva/Website-Resources/raw/master/wallpapers/thumbnails/unsplash_a.png",
       "dimensions": "3200x2560",
       "copyright": "Free (do whatever you want)",
-      "collections": "featured,landscapes,people,city"
+      "collections": "featured,landscapes,people,city",
+      "featured": true
     },
     {
       "name": "Wallsplash 2",
