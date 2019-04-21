@@ -1,29 +1,10 @@
-:root {
-    --primary: #f9fafb;
-    --primary-dark: #f4f5f8;
-    --white: #FFF;
-    --background: var(--white);
-    --accent: #4285F4;
-    --primary-text: rgba(0, 0, 0, .9);
-    --secondary-text: rgba(0, 0, 0, .7);
-    --disabled-text: rgba(0, 0, 0, .6);
-    --primary-text-inverted: #FFF;
-    --secondary-text-inverted: rgba(255, 255, 255, .7);
-    --disabled-text-inverted: rgba(255, 255, 255, .5);
-    --title-font: "Manrope", sans-serif;
-    --default-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    --github: #333;
-    --twitter: #1da1f2;
-    --plus: #f44336;
-    --linkedin: #0077b5;
-    --play: #7bed9f;
-    --telegram: #179cde;
-}
+@import url('./dark.css');
 
-*, html, body, main {
+html, body, main {
     font-family: var(--default-font);
     scroll-behavior: smooth;
     line-height: 1.6 !important;
+    background-color: var(--bg-color);
     color: var(--primary-text);
 }
 
@@ -193,7 +174,7 @@ b, .bold {
 }
 
 a {
-    color: #356ac3 !important;
+    color: var(--accent) !important;
 }
 
 .link:hover:not(.button),
@@ -337,6 +318,7 @@ a, button, .button, a > *, .button > *, a *, .button * {
 
 .navbar, .navbar > * {
     user-select: none;
+    background-color: var(--primary) !important;
 }
 
 .navbar-item {
@@ -348,6 +330,11 @@ a, button, .button, a > *, .button > *, a *, .button * {
     font-family: var(--title-font);
     color: var(--accent) !important;
     font-weight: 600;
+    background-color: var(--primary) !important;
+}
+
+a.navbar-item {
+    background-color: var(--primary) !important;
 }
 
 a.navbar-item.is-active {
@@ -361,6 +348,13 @@ a.navbar-item:focus:not(.is-logo):not(.is-active) {
     color: var(--secondary-text) !important;
     padding-top: .7rem;
     border-bottom: solid .2rem var(--disabled-text);
+}
+
+a.navbar-item:hover,
+a.navbar-item:focus,
+a.navbar-item:hover > *,
+a.navbar-item:focus > * {
+    background-color: var(--primary-light) !important;
 }
 
 a.navbar-item.is-logo {
@@ -377,9 +371,15 @@ a.navbar-item.is-logo {
     height: 2px !important;
 }
 
+
+.navbar .container,
+.navbar-menu,
+.is-logo img {
+    background-color: var(--primary) !important;
+}
+
 @media only screen and (max-width: 1087px) {
     .navbar-menu {
-        background-color: var(--primary) !important;
         box-shadow: none;
         padding: .4rem 0;
     }
@@ -417,11 +417,13 @@ a.navbar-item.is-logo {
 
 .shadowed-sm {
     --shadow-col: #26de81;
+    color: var(--shadowed-text-color) !important;
     text-shadow: -2px 2px 0 var(--shadow-col);
 }
 
 .shadowed {
     --shadow-col: #26de81;
+    color: var(--shadowed-text-color) !important;
     text-shadow: -3px 3px 0 var(--shadow-col);
 }
 
@@ -574,6 +576,7 @@ a.navbar-item.is-logo {
 }
 
 .card {
+    background-color: var(--card-bg-color) !important;
     border-radius: 6px !important;
     --bord-col: rgba(116, 125, 140, .1);
     -webkit-box-shadow: 0 2px 3px var(--bord-col), 0 0 0 1px var(--bord-col);
@@ -658,30 +661,36 @@ a .card:focus * {
     padding: .4rem 1rem 1rem;
 }
 
+.filter.button:hover,
+.filter.button:focus,
+.filter.button.is-active {
+    color: #000 !important;
+}
+
 .android.filter.button:hover,
+.android.filter.button:focus,
 .android.filter.button.is-active {
     --shadow-col-a: rgba(122, 194, 89, .4);
     --shadow-col-b: rgba(122, 194, 89, .28);
     --shadow-col-c: rgba(122, 194, 89, .24);
     background-color: #7ac259 !important;
-    color: var(--primary-text) !important;
 }
 
-.android.filter.button.is-active:hover {
+.android.filter.button.is-active:hover,
+.android.filter.button.is-active:focus {
     --shadow-col-a: rgba(110, 175, 80, .4);
     --shadow-col-b: rgba(110, 175, 80, .28);
     --shadow-col-c: rgba(110, 175, 80, .24);
     background-color: #87c86a !important;
-    color: var(--primary-text) !important;
 }
 
 .web.filter.button:hover,
+.web.filter.button:focus,
 .web.filter.button.is-active {
     --shadow-col-a: rgba(66, 133, 244, .4);
     --shadow-col-b: rgba(66, 133, 244, .28);
     --shadow-col-c: rgba(66, 133, 244, .24);
     background-color: rgba(66, 133, 244, 1) !important;
-    color: var(--white) !important;
 }
 
 .design.filter.button:hover,
@@ -690,10 +699,10 @@ a .card:focus * {
     --shadow-col-b: rgba(165, 94, 234, .28);
     --shadow-col-c: rgba(165, 94, 234, .24);
     background-color: #a55eea !important;
-    color: var(--white) !important;
 }
 
-.design.filter.button.is-active:hover {
+.design.filter.button.is-active:hover,
+.design.filter.button.is-active:focus {
     --shadow-col-a: rgba(149, 85, 211, .4);
     --shadow-col-b: rgba(149, 85, 211, .28);
     --shadow-col-c: rgba(149, 85, 211, .24);
@@ -706,10 +715,10 @@ a .card:focus * {
     --shadow-col-b: rgba(134, 155, 166, .28);
     --shadow-col-c: rgba(134, 155, 166, .24);
     background-color: #869BA6 !important;
-    color: var(--white) !important;
 }
 
-.other.filter.button.is-active:hover {
+.other.filter.button.is-active:hover,
+.other.filter.button.is-active:focus {
     --shadow-col-a: rgba(121, 140, 149, .4);
     --shadow-col-b: rgba(121, 140, 149, .28);
     --shadow-col-c: rgba(121, 140, 149, .24);
