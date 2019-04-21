@@ -321,6 +321,12 @@ a, button, .button, a > *, .button > *, a *, .button * {
     background-color: var(--primary) !important;
 }
 
+#theme-switch:hover,
+#theme-switch:focus,
+#theme-switch:active {
+    color: var(--accent) !important;
+}
+
 .navbar-item {
     cursor: pointer !important;
     color: var(--secondary-text) !important;

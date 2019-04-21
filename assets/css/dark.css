@@ -110,6 +110,10 @@
     color: var(--primary-text) !important;
 }
 
+[data-theme="dark"] img {
+    color: var(--secondary-text) !important;
+}
+
 input::placeholder {
     color: var(--disabled-text) !important;
 }
