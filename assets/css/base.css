@@ -1,4 +1,4 @@
-@import url('./dark.css');
+@import url('./dark.min.css');
 
 html, body, main {
     font-family: var(--default-font);
@@ -275,6 +275,7 @@ a, button, .button, a > *, .button > *, a *, .button * {
 }
 
 .button.sup-name {
+    background-color: var(--card-bg-color) !important;
     min-height: 2.8rem !important;
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
