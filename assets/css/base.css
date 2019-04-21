@@ -469,7 +469,7 @@ a.navbar-item.is-logo {
 }
 
 .is-paypal {
-    color: var(--white) !important;
+    color: #fff !important;
     background-color: #003087 !important;
     --hover-col: #33599f;
     --shadow-col-a: rgba(0, 48, 135, .4);
