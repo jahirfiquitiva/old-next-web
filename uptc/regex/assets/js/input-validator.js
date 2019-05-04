@@ -50,3 +50,8 @@ function cleanCountError() {
     inputHelp.classList.add('is-hidden');
   }
 }
+
+function cleanErrors() {
+  cleanValueError();
+  cleanCountError();
+}
