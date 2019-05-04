@@ -12,7 +12,7 @@ function setError(msg, inpId, helpId) {
   if (countInput) countInput.classList.add('is-danger');
   if (countHelp) {
     countHelp.classList.add('is-danger');
-    countHelp.innerText = msg;
+    countHelp.innerHTML = msg;
     countHelp.classList.remove('is-hidden');
   }
 }
@@ -42,11 +42,30 @@ function generateVerificationCode(fromValue) {
 }
 
 function generateCodeHTML(wholeCode) {
-  const first = `<span class="code-portion code-first">${wholeCode.substring(0, 2)}</span>`;
-  const second = `<span class="code-portion code-second">${wholeCode.substring(2, 5)}</span>`;
-  const third = `<span class="code-portion code-third">${wholeCode.substring(5, 15)}</span>`;
-  const fourth = `<span class="code-portion code-fourth">${wholeCode.substring(15)}</span>`;
-  return `${first}${second}${third}${fourth}`;
+  const extraTag = shouldColorOutput() ? '' : ' code-no-color';
+  const out = [
+    {
+      tag: 'code-first',
+      value: wholeCode.substring(0, 2),
+    },
+    {
+      tag: 'code-second',
+      value: wholeCode.substring(2, 5),
+    },
+    {
+      tag: 'code-third',
+      value: wholeCode.substring(5, 15),
+    },
+    {
+      tag: 'code-fourth',
+      value: wholeCode.substring(15),
+    },
+  ];
+  let outputHTML = '';
+  for (let i = 0; i < out.length; i += 1) {
+    outputHTML += `<span class="code-portion ${out[i].tag}${extraTag}">${out[i].value}</span>`;
+  }
+  return outputHTML;
 }
 
 function internalGenerateCodes(fromValue, count) {
@@ -83,8 +102,8 @@ function generateCodes() {
     if (!validNumber) {
       if (valueNumber.length !== 15) {
         const missing = 15 - valueNumber.length;
-        const extraMessage = missing < 0 ? ` Sobran ${Math.abs(missing)} caracter(es).`
-          : ` Faltan ${Math.abs(missing)} caracter(es).`;
+        const extraMessage = missing < 0 ? ` Sobran ${Math.abs(missing)} dígito(s).`
+          : ` Faltan ${Math.abs(missing)} dígito(s).`;
         setValueError(`El valor debe tener exáctamente 15 dígitos.${extraMessage}`);
       } else {
         setValueError('Los primeros 2 dígitos deben estar en el rango 91-99');
@@ -107,7 +126,9 @@ function generateCodes() {
           if (expected <= maxRecordsCount) {
             internalGenerateCodes(parseInt(valueNumber, 10), actualCount);
           } else {
-            setCountError(`No es posible generar ${count} registro(s). Ingrese un valor menor.`);
+            const firstErrorMsg = `No es posible generar ${count} código(s).`;
+            const secondErrorMsg = 'Por favor, ingrese un valor menor.';
+            setCountError(`${firstErrorMsg}<br>${secondErrorMsg}`);
           }
         }
       } else {

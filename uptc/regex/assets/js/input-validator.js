@@ -54,4 +54,8 @@ function cleanCountError() {
 function cleanErrors() {
   cleanValueError();
   cleanCountError();
+  const input = document.getElementById('value');
+  if (input) input.value = '';
+  const countInput = document.getElementById('count');
+  if (countInput) countInput.value = '';
 }

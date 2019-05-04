@@ -1,4 +1,5 @@
 .card {
+    margin-top: .6rem;
     border-radius: .4rem;
 }
 
@@ -18,6 +19,12 @@ ul {
 .code-portion {
     padding: .3rem;
     color: #000;
+    line-height: 2;
+}
+
+.code-no-color {
+    background-color: rgba(0, 0, 0, 0) !important;
+    padding: 0 !important;
 }
 
 .code-first {
@@ -34,4 +41,17 @@ ul {
 
 .code-fourth {
     background-color: #e1ebff;
+}
+
+.checkbox input {
+    margin-right: .4rem;
+    padding-top: .2rem;
+}
+
+.field:not(:last-child) {
+    margin-bottom: .8rem;
+}
+
+.label:not(:last-child) {
+    margin-bottom: .7rem;
 }
