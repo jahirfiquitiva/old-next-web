@@ -106,7 +106,7 @@ function generateCodes() {
           : ` Faltan ${Math.abs(missing)} dígito(s).`;
         setValueError(`El valor debe tener exáctamente 15 dígitos.${extraMessage}`);
       } else {
-        setValueError('Los primeros 2 dígitos deben estar en el rango 91-99');
+        setValueError('Los primeros 2 dígitos deben estar dentro del rango 91-99.');
       }
       return;
     }
