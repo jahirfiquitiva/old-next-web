@@ -1,0 +1,37 @@
+.card {
+    border-radius: .4rem;
+}
+
+.card-content h6 {
+    margin-bottom: .4rem;
+}
+
+ul {
+    list-style-type: disc;
+    padding-inline-start: 1.2rem;
+}
+
+.help {
+    margin-top: .5rem;
+}
+
+.code-portion {
+    padding: .3rem;
+    color: #000;
+}
+
+.code-first {
+    background-color: #ffe0e4;
+}
+
+.code-second {
+    background-color: #fbf2c7;
+}
+
+.code-third {
+    background-color: #bff6d0;
+}
+
+.code-fourth {
+    background-color: #e1ebff;
+}

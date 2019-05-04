@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Taller RegExp | Electiva II | Jahir Fiquitiva | 201521721</title>
+        <meta name="title" content="Taller RegExp | Electiva II | Jahir Fiquitiva | 201521721">
+        <meta name="description"
+              content="Taller de Expresiones Regulares, realizado por Jahir Fabian Fiquitiva Ricaurte (código: 201521721)">
+
+        <meta property="og:type" content="website">
+        <meta property="og:title"
+              content="Taller RegExp | Electiva II | Jahir Fiquitiva | 201521721">
+        <meta property="og:description"
+              content="Taller de Expresiones Regulares, realizado por Jahir Fabian Fiquitiva Ricaurte (código: 201521721)">
+
+        <link href="assets/lib/css/bulma.min.css" type="text/css" rel="stylesheet">
+        <link href="assets/lib/css/materialdesignicons.min.css" type="text/css" rel="stylesheet">
+        <link href="assets/css/custom.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <section class="hero is-fullheight">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="is-size-1 has-text-centered has-text-weight-bold has-text-black">
+                        Taller RegExp</h1>
+                    <br><br>
+                    <div class="columns">
+                        <div class="column is-5">
+                            <div class="card">
+                                <div class="card-content">
+                                    <h6><b>Pautas:</b></h6>
+                                    <ul>
+                                        <li>El valor inicial ingresado debe tener 15 dígitos.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <form class="form">
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label" for="value">Valor inicial</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control is-expanded has-icons-left">
+                                                <input class="input"
+                                                       type="number"
+                                                       placeholder="Valor inicial"
+                                                       id="value"
+                                                       name="value"
+                                                       min="0"
+                                                       max="999999999999999"
+                                                       oninput="cleanValueError();"
+                                                       onkeydown="return checkInput(event);">
+                                                <span class="icon is-small is-right mdi mdi-barcode"></span>
+                                            </div>
+                                            <p class="help is-hidden" id="value-help"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label" for="count">No. de Valores</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control is-expanded has-icons-left">
+                                                <input class="input"
+                                                       type="number"
+                                                       placeholder="No. de Valores"
+                                                       id="count"
+                                                       name="count"
+                                                       min="0"
+                                                       oninput="cleanCountError();"
+                                                       onkeydown="return checkInput(event);">
+                                                <span class="icon is-small is-right mdi mdi-counter"></span>
+                                            </div>
+                                            <p class="help is-hidden" id="count-help"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field is-grouped is-pulled-right">
+                                    <div class="control">
+                                        <button class="button" type="reset">Cancelar</button>
+                                    </div>
+                                    <div class="control">
+                                        <button class="button is-link"
+                                                type="button"
+                                                onclick="generateCodes();">
+                                            Enviar
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="is-hidden" id="codes-table">
+                        <p class="is-size-4 has-text-black"><b>Códigos Generados:</b></p>
+                        <br>
+                        <p class="is-size-5 has-text-black" style="margin-bottom:.2rem">
+                            Referencia:
+                        </p>
+                        <span class="code-portion code-first">Código IA</span>
+                        <span class="code-portion code-second">Tipo Documental</span>
+                        <span class="code-portion code-third">Número Serial de Documento</span>
+                        <span class="code-portion code-fourth">Dígito de Control</span>
+                        <br><br>
+                        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Código</th>
+                                </tr>
+                            </thead>
+                            <tbody id="codes-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="assets/js/input-validator.js"></script>
+        <script src="assets/js/submission.js"></script>
+    </body>
+</html>
