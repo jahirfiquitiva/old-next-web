@@ -53,7 +53,7 @@
     text-shadow: none !important;
 }
 
-[data-theme="dark"] .social-btn:not(.is-github):not(.is-play) .mdi {
+[data-theme="dark"] .social-btn:not(.is-github):not(.is-play):not(.is-bmac):not(.is-kofi):not(.is-donorbox):not(.is-patreon):not(.is-liberapay) .mdi {
     color: var(--primary-text) !important;
 }
 
