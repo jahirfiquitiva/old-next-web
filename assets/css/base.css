@@ -465,6 +465,10 @@ a.navbar-item.is-logo {
     padding-right: calc(.625em - 1px) !important;
 }
 
+.social-btn:not(:last-child):not(.is-fullwidth) {
+    margin-right: .25rem !important;
+}
+
 .social-btn .mdi {
     color: var(--primary-text-inverted);
 }
@@ -495,6 +499,59 @@ a.navbar-item.is-logo {
 .is-twitter:hover,
 .is-twitter:focus {
     color: var(--white) !important;
+}
+
+.is-bmac {
+    --hover-col: #ff9a65;
+    color: rgba(0, 0, 0, .87) !important;
+    background-color: #FF813F;
+    --shadow-col-a: rgba(255, 129, 63, .4);
+    --shadow-col-b: rgba(255, 129, 63, .28);
+    --shadow-col-c: rgba(255, 129, 63, .24);
+}
+
+.is-kofi {
+    --hover-col: #75bae2;
+    color: rgba(0, 0, 0, .87) !important;
+    background-color: #52a9db;
+    --shadow-col-a: rgba(82, 169, 219, .4);
+    --shadow-col-b: rgba(82, 169, 219, .28);
+    --shadow-col-c: rgba(82, 169, 219, .24);
+}
+
+.is-donorbox {
+    --hover-col: #689df6;
+    color: rgba(0, 0, 0, .87) !important;
+    background-color: #4285f4;
+    --shadow-col-a: rgba(66, 133, 244, .4);
+    --shadow-col-b: rgba(66, 133, 244, .28);
+    --shadow-col-c: rgba(66, 133, 244, .24);
+}
+
+.is-patreon {
+    --hover-col: #ed7c6b;
+    color: rgba(0, 0, 0, .87) !important;
+    background-color: #E85B46;
+    --shadow-col-a: rgba(232, 91, 70, .4);
+    --shadow-col-b: rgba(232, 91, 70, .28);
+    --shadow-col-c: rgba(232, 91, 70, .24);
+}
+
+.is-liberapay {
+    --hover-col: #f8d443;
+    color: rgba(0, 0, 0, .87) !important;
+    background-color: #F6C914;
+    --shadow-col-a: rgba(246, 201, 20, .4);
+    --shadow-col-b: rgba(246, 201, 20, .28);
+    --shadow-col-c: rgba(246, 201, 20, .24);
+}
+
+.is-bmac .mdi,
+.is-kofi .mdi,
+.is-donorbox .mdi,
+.is-patreon .mdi,
+.is-liberapay .mdi {
+    color: rgba(0, 0, 0, .87) !important;
 }
 
 .is-plus {
