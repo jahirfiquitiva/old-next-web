@@ -1157,3 +1157,67 @@ button.button {
     -moz-box-shadow: 0 4px 12px 1px var(--shadow-col), 0 0 0 1px var(--bord-col);
     box-shadow: 0 4px 12px 1px var(--shadow-col), 0 0 0 1px var(--bord-col);
 }
+
+
+#thanks h6 {
+    margin-top: 1rem;
+}
+
+#supporters-list {
+    margin-left: .8rem;
+}
+
+a.supporter {
+    display: block;
+    vertical-align: middle;
+}
+
+a.supporter:not(:last-child) {
+    margin-bottom: 1.2rem !important;
+}
+
+a.supporter:hover,
+a.supporter:focus,
+a.supporter:hover p,
+a.supporter:focus p,
+a.supporter:hover b,
+a.supporter:focus b {
+    color: var(--accent) !important;
+    text-decoration: underline wavy !important;
+}
+
+
+a.supporter p {
+    line-height: 44px !important;
+    font-size: 1.2rem !important;
+}
+
+a.supporter p:hover,
+a.supporter p:focus,
+a.supporter p:hover b,
+a.supporter p:focus b {
+    color: var(--accent) !important;
+    text-decoration: underline wavy !important;
+}
+
+a .supporter-img {
+    border-radius: 50%;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(0, 0, 0, .1);
+    display: inline-block;
+    float: left;
+    margin-top: 2px;
+    margin-right: 16px;
+    height: 40px;
+    width: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+a .supporter-img.mdi {
+    color: #fff;
+    padding-left: 8px;
+}
