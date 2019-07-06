@@ -15,6 +15,11 @@
     "photo": "https://goo.gl/9ccZcA"
   },
   {
+    "name": "ExtraVital",
+    "photo": "blob:https://web.telegram.org/88db4b79-4010-4db4-875b-4c8e43eed17c",
+    "link": "https://play.google.com/store/apps/dev?id=5234901489834236726"
+  },
+  {
     "name": "Tom Ver",
     "photo": "https://lh3.googleusercontent.com/XoiTuipQQ_Nv_Fi076F2HLuR5I34MV28bazjuv-Eg968PN_ZXfGImV7cmBVCY6tlurXGptKXyiNBVg=w1107-h523-rw-no",
     "link": ""
@@ -52,51 +57,6 @@
   {
     "name": "David Pfaff",
     "photo": "https://lh3.googleusercontent.com/rW9Tab49OhRbf8nDKW2MnC8kACQ1b3ry_9vhdATdjvOUROQ2JmoS8dqmLZ0t4hjRIdWQbLaTbaISNJY=w1107-h523-rw-no",
-    "link": ""
-  },
-  {
-    "name": "",
-    "photo": "",
-    "link": ""
-  },
-  {
-    "name": "",
-    "photo": "",
-    "link": ""
-  },
-  {
-    "name": "",
-    "photo": "",
-    "link": ""
-  },
-  {
-    "name": "",
-    "photo": "",
-    "link": ""
-  },
-  {
-    "name": "",
-    "photo": "",
-    "link": ""
-  },
-  {
-    "name": "",
-    "photo": "",
-    "link": ""
-  },
-  {
-    "name": "",
-    "photo": "",
-    "link": ""
-  },
-  {
-    "name": "",
-    "photo": "",
-    "link": ""
-  },
-  {
-    "name": "",
-    "photo": "",
     "link": ""
   }
 ]
