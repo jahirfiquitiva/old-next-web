@@ -1,0 +1,31 @@
+doctype html
+html.has-navbar-fixed-top(lang='en')
+  head
+    include meta-tags
+    link(rel='stylesheet' href='./assets/libs/bulma.min.css')
+    link(rel='stylesheet' href='./assets/css/content.css')
+  body
+    #particles-bg.hero
+    section.hero.is-fullheight-with-navbar
+      .hero-head
+        nav.navbar.is-fixed-top.has-shadow
+          progress.progress(value='30' max='100')
+          .container
+            .navbar-brand.use-manrope
+              a.navbar-item
+                img(src='./assets/images/brand/logo-def.svg' alt='JF' height='48' width='48')
+                b Jahir Fiquitiva
+              span.navbar-burger.burger(data-target='nav-menu')
+                span
+                span
+                span
+            #nav-menu.navbar-menu
+              .navbar-end
+                a.navbar-item.is-active
+                  | Home
+      .hero-body
+        .container.has-text-centered
+          block main-content
+    block content
+  script(src='./assets/libs/js/particles.min.js')
+  script(src='./assets/js/main.js')

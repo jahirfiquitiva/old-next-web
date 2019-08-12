@@ -1,0 +1,123 @@
+@import "./../fonts/mdi/materialdesignicons.css";
+@import "./../fonts/manrope/manrope.css";
+@import "./../fonts/inter/inter.css";
+
+:root {
+    --transparent: rgba(0, 0, 0, 0);
+    --white: #fff;
+    --black: #000;
+
+    --primary: #f6f9fe;
+    --primary-dark: #dbe5fb;
+    --background: var(--primary);
+
+    --blue-100: #d7e1f7;
+    --blue-200: #afc2ef;
+    --blue-300: #88a4e6;
+    --blue-400: #6085de;
+    --blue-500: #3867d6;
+    --blue-600: #2d52ab;
+    --blue-700: #223e80;
+    --blue-800: #162956;
+    --blue-900: #0b152b;
+
+    --green-100: #d2f2e1;
+    --green-200: #a6e5c4;
+    --green-300: #79d9a6;
+    --green-400: #4dcc89;
+    --green-500: #20bf6b;
+    --green-600: #1a9956;
+    --green-700: #137340;
+    --green-800: #0d4c2b;
+    --green-900: #062615;
+
+    --red-100: #fbd8de;
+    --red-200: #f7b1bd;
+    --red-300: #f3899c;
+    --red-400: #ef627b;
+    --red-500: #eb3b5a;
+    --red-600: #bc2f48;
+    --red-700: #8d2336;
+    --red-800: #5e1824;
+    --red-900: #2f0c12;
+
+    --amber-100: #fdf1d6;
+    --amber-200: #fce2ad;
+    --amber-300: #fad483;
+    --amber-400: #f9c55a;
+    --amber-500: #f7b731;
+    --amber-600: #c69227;
+    --amber-700: #946e1d;
+    --amber-800: #634914;
+    --amber-900: #31250a;
+
+    --text-shadow-amber: #fed330;
+    --text-shadow-blue: #97d0f8;
+    --text-shadow-green: #26de81;
+    --text-shadow-red: #fd7d84;
+    --text-shadow-purple: #c598f1;
+
+    --system-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    --inter: "Inter", var(--system-font);
+    --manrope: "Manrope", var(--inter);
+}
+
+html, body {
+    background-color: var(--background);
+}
+
+html, body, .use-inter {
+    font-family: var(--inter);
+    color: #000;
+    font-weight: 500;
+}
+
+.use-manrope,
+h1, h2, h3, h4 {
+    font-family: var(--manrope);
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+h6, p {
+    font-size: 1.1rem;
+}
+
+#particles-bg {
+    position: fixed !important;
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
+    z-index: 0 !important;
+}
+
+hr {
+    margin: 0;
+    background-color: rgba(11, 21, 43, 0.12);
+}
