@@ -175,3 +175,68 @@ p a:focus {
 #tech .has-svg.mongodb:focus {
     background-image: url("./../images/tech/mongodb.svg");
 }
+
+a.social-link {
+    --social-color: var(--blue-500);
+    --social-color-inverted: var(--white);
+    font-size: 1.2rem;
+    vertical-align: middle;
+    color: var(--social-color);
+    background: var(--social-color);
+    background: -moz-linear-gradient(left, var(--social-color) 0%, var(--social-color) 100%);
+    /*noinspection CssInvalidFunction*/
+    background: -webkit-gradient(left top, right top, color-stop(0%, var(--social-color)), color-stop(100%, var(--social-color)));
+    background: -webkit-linear-gradient(left, var(--social-color) 0%, var(--social-color) 100%);
+    background: -o-linear-gradient(left, var(--social-color) 0%, var(--social-color) 100%);
+    background: -ms-linear-gradient(left, var(--social-color) 0%, var(--social-color) 100%);
+    background: linear-gradient(to right, var(--social-color) 0%, var(--social-color) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% .15rem;
+    background-position: 0 100%;
+    -webkit-transition: all .15s ease-in;
+    -moz-transition: all .15s ease-in;
+    -ms-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    transition: all .15s ease-in;
+    padding: .2rem;
+}
+
+
+a.social-link:hover,
+a.social-link:focus {
+    --social-color: var(--blue-600);
+    color: var(--social-color-inverted);
+    background-size: 100% 100%;
+}
+
+a.social-link.is-github {
+    --social-color: #212121;
+}
+
+a.social-link.is-twitter {
+    --social-color: #1da1f2;
+}
+
+a.social-link.is-linkedin {
+    --social-color: #0077b5;
+}
+
+a.social-link.is-gplay {
+    --social-color: #56a66f;
+    --social-color-inverted: rgba(0, 0, 0, 0.87);
+}
+
+a.social-link.is-gplay:hover,
+a.social-link.is-gplay:focus {
+    --social-color: #7bed9f;
+}
+
+a.social-link.is-telegram {
+    --social-color: #179cde;
+}
+
+.column.center-vertically {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

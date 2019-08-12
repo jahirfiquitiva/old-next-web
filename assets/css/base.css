@@ -121,3 +121,12 @@ hr {
     margin: 0;
     background-color: rgba(11, 21, 43, 0.12);
 }
+
+.button.is-primary {
+    background-color: var(--blue-500);
+}
+
+.button.is-primary:hover,
+.button.is-primary:focus {
+    background-color: var(--blue-600);
+}
