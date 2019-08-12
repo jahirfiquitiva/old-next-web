@@ -10,7 +10,7 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    transition: all ease .5s;
+    transition: all .25s ease-in;
 }
 
 .avatar:hover,
@@ -82,8 +82,12 @@ p a:focus {
     }
 }
 
+#tech p {
+    font-size: .95rem;
+}
+
 #tech .mdi {
-    color: rgb(122, 122, 122);
+    color: var(--blue-300); /* rgb(122, 122, 122); */
     transition: all ease .25s;
 }
 
