@@ -1,22 +1,23 @@
 extends base
 
+block custom-css
+  link(rel='stylesheet' href='./assets/css/contact.css')
+
 block navbar-items
   - let activeItemIndex = 3;
 
 block main-content
   .content.has-text-centered
-    h1.is-primary-text.shadowed(data-shadow-color='red') Get in Touch &#x1F4EE;
+    h1.is-primary-text.text-shadow.is-red Get in Touch &#x1F4EE;
     h5.is-secondary-text
       | Don&apos;t hesitate contacting me!
     p.is-secondary-text(style='padding: .4rem;')
-      | PS: I also have an
-      | open
+      | PS: I also have an open&nbsp;
       a.link(href='https://jahir.xyz/twitterdm' target='_blank')
-        | Twitter
-        | DM
-      |                                                                              and
+        | Twitter DM
+      | &nbsp;and&nbsp;
       a.link(href='https://jahir.xyz/tlgrm' target='_blank') Telegram
-      | , for any kind of inquiries. &#x1F600;
+      | &nbsp;, for any kind of inquiries. &#x1F600;
       br
       br
     form#contact-form.has-text-justified.is-centered(name='contactForm' action='/sent' method='POST' onsubmit='sendForm(event)')
@@ -44,8 +45,7 @@ block main-content
                 i.mdi.mdi-email
             p#email-help.help.is-danger
               i.mdi.mdi-alert.mdi-18px
-              |  Please enter a
-              |                                                                                    valid email
+              |  Please enter a valid email
       .field.is-horizontal
         .field-label.is-normal
           label.label Subject
@@ -88,9 +88,7 @@ block main-content
                     textarea#g-recaptcha-response.g-recaptcha-response(name='g-recaptcha-response' style='width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;')
             p#captcha-help.help.is-danger.extra
               i.mdi.mdi-alert.mdi-18px
-              |  Please
-              |                                                                                    confirm
-              |                                                                                    you&apos;re human
+              |  Please confirm you&apos;re human
       .field.is-horizontal
         .field-label.is-normal
         .field-body
@@ -101,13 +99,11 @@ block main-content
             p#sent.help
               | Thanks for your message! &#x1F600;
               br
-              | I&apos;ll get back to
-              |                                             you as soon as possible. &#x1F64C;
+              | I&apos;ll get back to you as soon as possible. &#x1F64C;
             p#not-sent.help
               | Unfortunately an error occurred &#x1F614;
               br
-              | Please try
-              |                                             again later! &#x1F64C;
+              | Please try again later! &#x1F64C;
       .field.is-horizontal.is-hidden
         .field-label.is-normal
           label.label Humans don&apos;t fill
@@ -116,3 +112,5 @@ block main-content
             p.control
               input#honey.input(type='text' placeholder='' value='' name='honey')
 
+block scripts
+  script(src='./assets/js/email.js')

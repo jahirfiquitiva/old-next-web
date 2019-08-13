@@ -115,32 +115,39 @@ h5, h6, p, .is-secondary-text {
     color: var(--tertiary-text);
 }
 
-h1 {
+h1,
+.content h1 {
     font-size: 2.8rem;
     font-weight: 700;
 }
 
-h2 {
+h2,
+.content h2 {
     font-size: 2.4rem;
     font-weight: 700;
 }
 
-h3 {
+h3,
+.content h3 {
     font-size: 2rem;
     font-weight: 700;
 }
 
-h4 {
+h4,
+.content h4 {
     font-size: 1.6rem;
     font-weight: 600;
 }
 
-h5 {
+h5,
+.content h5 {
     font-size: 1.3rem;
     font-weight: 600;
 }
 
-h6, p {
+h6, p,
+.content h6,
+.content p {
     font-size: 1.1rem;
 }
 
@@ -265,4 +272,34 @@ section.colored,
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.text-shadow {
+    --text-shadow-color: var(--transparent);
+    --text-shadow-size: 3px;
+    text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 var(--text-shadow-color);
+}
+
+.text-shadow.is-amber {
+    --text-shadow-color: var(--text-shadow-amber);
+}
+
+.text-shadow.is-blue {
+    --text-shadow-color: var(--text-shadow-blue);
+}
+
+.text-shadow.is-red {
+    --text-shadow-color: var(--text-shadow-red);
+}
+
+.text-shadow.is-green {
+    --text-shadow-color: var(--text-shadow-green);
+}
+
+.text-shadow.is-purple {
+    --text-shadow-color: var(--text-shadow-purple);
+}
+
+.text-shadow.is-small {
+    --text-shadow-size: 2px;
 }

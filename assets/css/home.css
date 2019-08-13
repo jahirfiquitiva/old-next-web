@@ -16,36 +16,6 @@
     background-image: url("./../../assets/images/me/me.jpg");
 }
 
-.text-shadow {
-    --text-shadow-color: var(--transparent);
-    --text-shadow-size: 3px;
-    text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 var(--text-shadow-color);
-}
-
-.text-shadow.is-amber {
-    --text-shadow-color: var(--text-shadow-amber);
-}
-
-.text-shadow.is-blue {
-    --text-shadow-color: var(--text-shadow-blue);
-}
-
-.text-shadow.is-red {
-    --text-shadow-color: var(--text-shadow-red);
-}
-
-.text-shadow.is-green {
-    --text-shadow-color: var(--text-shadow-green);
-}
-
-.text-shadow.is-purple {
-    --text-shadow-color: var(--text-shadow-purple);
-}
-
-.text-shadow.is-small {
-    --text-shadow-size: 2px;
-}
-
 #tech p {
     font-size: .95rem;
 }
