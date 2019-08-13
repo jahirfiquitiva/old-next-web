@@ -2,7 +2,7 @@
 
 .navbar-brand .navbar-item {
     padding-left: 0;
-    color: var(--blue-500);
+    color: var(--accent);
 }
 
 .navbar-brand .navbar-item img {
@@ -10,7 +10,7 @@
 }
 
 .navbar-brand a.navbar-item {
-    color: var(--blue-500);
+    color: var(--accent);
 }
 
 .navbar.has-shadow {
@@ -25,13 +25,13 @@ a.navbar-item {
 }
 
 a.navbar-item.is-active {
-    color: var(--blue-500);
+    color: var(--accent);
     font-weight: 500;
 }
 
 .navbar-item.is-active {
-    /* border-top: 2px solid var(--blue-500); */
-    border-bottom: 3px solid var(--blue-500);
+    /* border-top: 2px solid var(--accent); */
+    border-bottom: 3px solid var(--accent);
 }
 
 .navbar {
@@ -49,7 +49,7 @@ a.navbar-item.is-active {
     border-radius: 0;
     height: 20px;
     background-color: var(--primary);
-    color: var(--blue-500);
+    color: var(--accent);
     display: none;
 }
 
@@ -58,5 +58,5 @@ progress[value]::-webkit-progress-bar {
 }
 
 progress[value]::-webkit-progress-value {
-    background-color: var(--blue-500);
+    background-color: var(--accent);
 }
