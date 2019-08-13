@@ -3,7 +3,7 @@
   {title:'Projects', link:'/#projects'},
   {title:'Donate', link:'/donate'},
   {title:'Contact', link:'/contact'}];
-  
+
 block navbar-items
   - let activeItemIndex = 0;
 
@@ -12,7 +12,7 @@ block navbar-items
     progress.progress(value='30' max='100')
     .container
       .navbar-brand.use-manrope
-        a.navbar-item
+        a.navbar-item(href='/')
           img(src='./assets/images/brand/logo-def.svg' alt='JF' height='48' width='48')
           b Jahir Fiquitiva
         span.navbar-burger.burger(data-target='nav-menu')
