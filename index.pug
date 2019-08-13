@@ -1,4 +1,4 @@
-extends base
+extends index-base
 
 block custom-css
   link(rel='stylesheet' href='./assets/css/home.css')
@@ -85,3 +85,11 @@ block main-content
         .column
           span.mdi.mdi-material-design.mdi-48px
           p Material Design
+
+block main-content-footer
+  .hero-foot
+    .down-indicator.has-text-centered
+      h4 👇
+
+block content
+  include projects

@@ -1,0 +1,118 @@
+extends base
+
+block navbar-items
+  - let activeItemIndex = 3;
+
+block main-content
+  .content.has-text-centered
+    h1.is-primary-text.shadowed(data-shadow-color='red') Get in Touch &#x1F4EE;
+    h5.is-secondary-text
+      | Don&apos;t hesitate contacting me!
+    p.is-secondary-text(style='padding: .4rem;')
+      | PS: I also have an
+      | open
+      a.link(href='https://jahir.xyz/twitterdm' target='_blank')
+        | Twitter
+        | DM
+      |                                                                              and
+      a.link(href='https://jahir.xyz/tlgrm' target='_blank') Telegram
+      | , for any kind of inquiries. &#x1F600;
+      br
+      br
+    form#contact-form.has-text-justified.is-centered(name='contactForm' action='/sent' method='POST' onsubmit='sendForm(event)')
+      input(type='hidden' name='form-name' value='contactForm')
+      .field.is-horizontal
+        .field-label.is-normal
+          label.label Your name
+        .field-body
+          .field
+            p.control.has-icons-left.has-icons-right
+              input#name.input(type='text' placeholder='Jon Doe' name='name' required='' aria-required='true')
+              span.icon.is-small.is-left
+                i.mdi.mdi-account
+            p#name-help.help.is-danger
+              i.mdi.mdi-alert.mdi-18px
+              |  Please fill this
+      .field.is-horizontal
+        .field-label.is-normal
+          label.label Your email
+        .field-body
+          .field
+            p.control.has-icons-left.has-icons-right
+              input#email.input(type='email' name='email' placeholder='jon.doe@example.com' required='' aria-required='true')
+              span.icon.is-small.is-left
+                i.mdi.mdi-email
+            p#email-help.help.is-danger
+              i.mdi.mdi-alert.mdi-18px
+              |  Please enter a
+              |                                                                                    valid email
+      .field.is-horizontal
+        .field-label.is-normal
+          label.label Subject
+        .field-body
+          .field
+            p.control
+              input#subject.input(type='text' placeholder="e.g. Let's work together" name='subject' required='' aria-required='true')
+            p#subject-help.help.is-danger
+              i.mdi.mdi-alert.mdi-18px
+              |  Please fill this
+      .field.is-horizontal
+        .field-label.is-normal
+          label.label Message
+        .field-body
+          .field
+            .control
+              textarea#message.textarea(type='text' placeholder='Hi Jahir...' name='message' required='' aria-required='true')
+            p#message-help.help.is-danger
+              i.mdi.mdi-alert.mdi-18px
+              |  Please fill this
+      .field.is-horizontal
+        .field-label.is-normal
+          .label
+        .field-body
+          .field
+            #captcha
+              script(type='text/javascript' async='' src='https://www.gstatic.com/recaptcha/api2/v1563777128698/recaptcha__es_419.js')
+              script(src='https://www.google.com/recaptcha/api.js')
+              .g-recaptcha(data-sitekey='6LdAvUIUAAAAAHjrjmjtNTcXyKm0WKwefLp-dQv9')
+                div(style='width: 304px; height: 78px;')
+                  div
+                    iframe(src='https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdAvUIUAAAAAHjrjmjtNTcXyKm0WKwefLp-dQv9&co=aHR0cHM6Ly9qYWhpcmZpcXVpdGl2YS5jb206NDQz&hl=es-419&v=v1563777128698&size=normal&cb=x9y0vlwrez4h' width='304' height='78' role='presentation' name='a-3jc50avflu09' frameborder='0' scrolling='no' sandbox='allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox')
+                  textarea#g-recaptcha-response.g-recaptcha-response(name='g-recaptcha-response' style='width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;')
+              noscript
+                div
+                  div(style='width: 302px; height: 422px; position: relative;')
+                    div(style='width: 302px; height: 422px; position: absolute;')
+                      iframe(src='https://www.google.com/recaptcha/api/fallback?k=6LdAvUIUAAAAAHjrjmjtNTcXyKm0WKwefLp-dQv9' frameborder='0' scrolling='no' style='width: 302px; height:422px; border-style: none;')
+                  div(style='width: 300px; height: 60px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;')
+                    textarea#g-recaptcha-response.g-recaptcha-response(name='g-recaptcha-response' style='width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;')
+            p#captcha-help.help.is-danger.extra
+              i.mdi.mdi-alert.mdi-18px
+              |  Please
+              |                                                                                    confirm
+              |                                                                                    you&apos;re human
+      .field.is-horizontal
+        .field-label.is-normal
+        .field-body
+          .field
+            p.control
+              button#submit.button.is-primary(name='action' type='submit')
+                | Send message
+            p#sent.help
+              | Thanks for your message! &#x1F600;
+              br
+              | I&apos;ll get back to
+              |                                             you as soon as possible. &#x1F64C;
+            p#not-sent.help
+              | Unfortunately an error occurred &#x1F614;
+              br
+              | Please try
+              |                                             again later! &#x1F64C;
+      .field.is-horizontal.is-hidden
+        .field-label.is-normal
+          label.label Humans don&apos;t fill
+        .field-body
+          .field
+            p.control
+              input#honey.input(type='text' placeholder='' value='' name='honey')
+

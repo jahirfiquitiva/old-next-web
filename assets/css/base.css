@@ -61,8 +61,8 @@
     --manrope: "Manrope", var(--inter);
 
     --primary: #f6f9fe;
-    --primary-dark: #dbe5fb;
-    --background: var(--primary);
+    --primary-dark: #ebf0fb;
+    --background: var(--white);
 
     --accent-light: var(--blue-300);
     --accent: var(--blue-500);
@@ -157,6 +157,7 @@ h6, p {
 
 hr {
     margin: 0;
+    height: 1px;
     background-color: var(--dividers);
 }
 
@@ -193,9 +194,15 @@ details p {
     margin-top: 1rem;
 }
 
-.footer {
+section.colored,
+.footer,
+.hero-foot {
+    background-color: #f6f9fe;
+}
+
+.footer,
+.hero-foot {
     padding: 4.2rem 1.6rem;
-    background-color: var(--background);
 }
 
 .button {

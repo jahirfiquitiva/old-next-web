@@ -27,7 +27,7 @@
 .is-dark,
 .is-dark * {
     --primary: #091122;
-    --primary-dark: #070d1a;
+    --primary-dark: #050911;
     --background: var(--primary);
 
     --accent-light: var(--blue-300);
@@ -54,4 +54,9 @@
     --accent-shadow-a: rgba(136, 164, 230, .4);
     --accent-shadow-b: rgba(136, 164, 230, .28);
     --accent-shadow-c: rgba(136, 164, 230, .24);
+}
+
+.is-dark section.colored,
+.is-dark .footer {
+    background-color: var(--background);
 }

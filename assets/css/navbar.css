@@ -1,18 +1,5 @@
 @import "./base.css";
 
-.navbar-brand .navbar-item {
-    padding-left: 0;
-    color: var(--accent);
-}
-
-.navbar-brand .navbar-item img {
-    max-height: 1.75rem;
-}
-
-.navbar-brand a.navbar-item {
-    color: var(--accent);
-}
-
 .navbar.has-shadow {
     background-color: var(--primary) !important;
     -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, .08), 0 3px 4px 0 rgba(0, 0, 0, .06), 0 1px 5px 0 rgba(0, 0, 0, .2);
@@ -22,16 +9,6 @@
 
 a.navbar-item {
     color: #000;
-}
-
-a.navbar-item.is-active {
-    color: var(--accent);
-    font-weight: 500;
-}
-
-.navbar-item.is-active {
-    /* border-top: 2px solid var(--accent); */
-    border-bottom: 3px solid var(--accent);
 }
 
 .navbar {
@@ -59,4 +36,57 @@ progress[value]::-webkit-progress-bar {
 
 progress[value]::-webkit-progress-value {
     background-color: var(--accent);
+}
+
+:not(.navbar-brand) .navbar-link,
+:not(.navbar-brand) a.navbar-item {
+    background-color: var(--primary);
+    color: var(--secondary-text);
+}
+
+:not(.navbar-brand) .navbar-link.is-active,
+:not(.navbar-brand) .navbar-link:focus,
+:not(.navbar-brand) .navbar-link:focus-within,
+:not(.navbar-brand) .navbar-link:hover,
+:not(.navbar-brand) a.navbar-item.is-active,
+:not(.navbar-brand) a.navbar-item:focus,
+:not(.navbar-brand) a.navbar-item:focus-within,
+:not(.navbar-brand) a.navbar-item:hover {
+    padding-top: .7rem;
+    background-color: var(--primary-dark);
+    color: var(--secondary-text);
+    border-bottom: 3px solid var(--tertiary-text);
+}
+
+:not(.navbar-brand) .navbar-link.is-active,
+:not(.navbar-brand) a.navbar-item.is-active {
+    color: var(--accent);
+    border-bottom: 3px solid var(--accent);
+}
+
+.navbar-brand .navbar-item {
+    padding-left: 0;
+    color: var(--accent);
+}
+
+.navbar-brand .navbar-item img {
+    max-height: 1.75rem;
+}
+
+.navbar-brand a.navbar-item {
+    color: var(--accent);
+}
+
+.navbar-brand .navbar-link.is-active,
+.navbar-brand .navbar-link:focus,
+.navbar-brand .navbar-link:focus-within,
+.navbar-brand .navbar-link:hover,
+.navbar-brand a.navbar-item.is-active,
+.navbar-brand a.navbar-item:focus,
+.navbar-brand a.navbar-item:focus-within,
+.navbar-brand a.navbar-item:hover {
+    padding-top: .5rem;
+    color: var(--accent-dark);
+    background-color: var(--primary-dark);
+    border-bottom: none;
 }

@@ -1,5 +1,3 @@
-@import "./navbar.css";
-
 .avatar {
     margin: auto;
     width: 168px;
@@ -227,7 +225,12 @@
     }
 }
 
+#home {
+    background-color: var(--primary);
+}
+
 #home .hero-foot {
     padding-top: 1.2rem;
     padding-bottom: .8rem;
+    background-color: var(--primary);
 }

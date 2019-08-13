@@ -1,11 +1,12 @@
 extends main
 
 block real-content
-  section.hero.is-fullheight-with-navbar
+  section#home.hero.is-fullheight-with-navbar
     include navbar
     .hero-body
       .container.has-text-centered
         block main-content
-    hr
-    .hero-foot
-      include actual-footer
+    block main-content-footer
+  block content
+  hr
+  include footer
