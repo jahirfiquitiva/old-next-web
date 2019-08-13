@@ -1,0 +1,67 @@
+
+.social-links a:not(:first-child) {
+    margin-left: .6rem;
+}
+
+a.social-link {
+    --social-color: var(--accent);
+    --social-color-inverted: var(--white);
+    min-width: 36px;
+    max-height: 36px;
+    padding: 0;
+    font-size: 1.2rem;
+    vertical-align: middle;
+    background-color: var(--social-color);
+    color: var(--social-color-inverted);
+    -webkit-transition: all .15s ease-in;
+    -moz-transition: all .15s ease-in;
+    -ms-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    transition: all .15s ease-in;
+}
+
+a.social-link:hover,
+a.social-link:focus,
+a.social-link:active,
+a.social-link.is-active {
+    background-color: var(--social-color);
+    color: var(--social-color-inverted);
+}
+
+a.social-link.is-github {
+    --social-color: #333;
+}
+
+a.social-link.is-twitter {
+    --social-color: #1da1f2;
+    --shadow-a: rgba(29, 161, 242, .4);
+    --shadow-b: rgba(29, 161, 242, .28);
+    --shadow-c: rgba(29, 161, 242, .24);
+}
+
+a.social-link.is-linkedin {
+    --social-color: #0077b5;
+    --shadow-a: rgba(0, 119, 181, .4);
+    --shadow-b: rgba(0, 119, 181, .28);
+    --shadow-c: rgba(0, 119, 181, .24);
+}
+
+a.social-link.is-gplay {
+    --social-color: #3ce18e;
+    --social-color-inverted: rgba(9, 17, 34, .65);
+    --shadow-a: rgba(60, 225, 142, .4);
+    --shadow-b: rgba(60, 225, 142, .28);
+    --shadow-c: rgba(60, 225, 142, .24);
+}
+
+a.social-link.is-gplay:hover,
+a.social-link.is-gplay:focus {
+    --social-color-inverted: rgba(9, 17, 34, .8);
+}
+
+a.social-link.is-telegram {
+    --social-color: #179cde;
+    --shadow-a: rgba(23, 156, 222, .4);
+    --shadow-b: rgba(23, 156, 222, .28);
+    --shadow-c: rgba(23, 156, 222, .24);
+}

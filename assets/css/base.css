@@ -3,6 +3,7 @@
 @import "./../fonts/inter/inter.css";
 @import "./bounce.css";
 @import "./dark.css";
+@import "./social-links.css";
 
 :root {
     --transparent: rgba(0, 0, 0, 0);
@@ -192,7 +193,13 @@ details p {
     margin-top: 1rem;
 }
 
+.footer {
+    padding: 4.2rem 1.6rem;
+    background-color: var(--background);
+}
+
 .button {
+    border-color: var(--transparent);
     -webkit-box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
     -moz-box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
     box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
@@ -202,6 +209,12 @@ details p {
 .button:focus,
 .button:active,
 .button.is-active {
+    -webkit-transform: translateY(-.1rem);
+    -moz-transform: translateY(-.1rem);
+    -ms-transform: translateY(-.1rem);
+    -o-transform: translateY(-.1rem);
+    transform: translateY(-.1rem);
+    border-color: var(--transparent);
     -webkit-box-shadow: 0 2px 4px -1px var(--shadow-a), 0 4px 5px 0 var(--shadow-b), 0 1px 10px 0 var(--shadow-c) !important;
     -moz-box-shadow: 0 2px 4px -1px var(--shadow-a), 0 4px 5px 0 var(--shadow-b), 0 1px 10px 0 var(--shadow-c) !important;
     box-shadow: 0 2px 4px -1px var(--shadow-a), 0 4px 5px 0 var(--shadow-b), 0 1px 10px 0 var(--shadow-c) !important;
@@ -235,4 +248,14 @@ details p {
     -moz-animation: bounce 2s infinite;
     -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite;
+}
+
+.mdi.mdi-30px:before {
+    font-size: 30px;
+}
+
+.column.center-vertically {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

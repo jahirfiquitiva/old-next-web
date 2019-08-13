@@ -227,56 +227,6 @@
     }
 }
 
-.social-links a:not(:first-child) {
-    margin-left: .6rem;
-}
-
-a.social-link {
-    --social-color: var(--accent);
-    --social-color-inverted: var(--white);
-    font-size: 1.2rem;
-    vertical-align: middle;
-    color: var(--social-color);
-    -webkit-transition: all .15s ease-in;
-    -moz-transition: all .15s ease-in;
-    -ms-transition: all .15s ease-in;
-    -o-transition: all .15s ease-in;
-    transition: all .15s ease-in;
-    padding: .1rem;
-}
-
-a.social-link.is-github {
-    --social-color: #212121;
-}
-
-a.social-link.is-twitter {
-    --social-color: #1da1f2;
-}
-
-a.social-link.is-linkedin {
-    --social-color: #0077b5;
-}
-
-a.social-link.is-gplay {
-    --social-color: #56a66f;
-    --social-color-inverted: rgba(0, 0, 0, 0.87);
-}
-
-a.social-link.is-gplay:hover,
-a.social-link.is-gplay:focus {
-    --social-color: #7bed9f;
-}
-
-a.social-link.is-telegram {
-    --social-color: #179cde;
-}
-
-.column.center-vertically {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 #home .hero-foot {
     padding-top: 1.2rem;
     padding-bottom: .8rem;
