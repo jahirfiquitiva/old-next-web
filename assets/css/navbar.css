@@ -145,4 +145,15 @@ a.navbar-item.is-active {
         padding-bottom: .75rem;
         border-bottom: none;
     }
+
+    .navbar-brand .navbar-link.is-active,
+    .navbar-brand .navbar-link:focus,
+    .navbar-brand .navbar-link:focus-within,
+    .navbar-brand .navbar-link:hover,
+    .navbar-brand a.navbar-item.is-active,
+    .navbar-brand a.navbar-item:focus,
+    .navbar-brand a.navbar-item:focus-within,
+    .navbar-brand a.navbar-item:hover {
+        padding-top: .75rem;
+    }
 }
