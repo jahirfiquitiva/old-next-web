@@ -24,7 +24,7 @@ block main-content
       input(type='hidden' name='form-name' value='contactForm')
       .field.is-horizontal
         .field-label.is-normal
-          label.label Your name
+          labe.label(for='name') Your name
         .field-body
           .field
             p.control.has-icons-left.has-icons-right
@@ -36,7 +36,7 @@ block main-content
               |  Please fill this
       .field.is-horizontal
         .field-label.is-normal
-          label.label Your email
+          label.label(for='email') Your email
         .field-body
           .field
             p.control.has-icons-left.has-icons-right
@@ -48,7 +48,7 @@ block main-content
               |  Please enter a valid email
       .field.is-horizontal
         .field-label.is-normal
-          label.label Subject
+          label.label(for='subject') Subject
         .field-body
           .field
             p.control
@@ -58,7 +58,7 @@ block main-content
               |  Please fill this
       .field.is-horizontal
         .field-label.is-normal
-          label.label Message
+          label.label(for='message') Message
         .field-body
           .field
             .control
@@ -106,7 +106,7 @@ block main-content
               | Please try again later! &#x1F64C;
       .field.is-horizontal.is-hidden
         .field-label.is-normal
-          label.label Humans don&apos;t fill
+          label.label(for='honey') Humans don&apos;t fill
         .field-body
           .field
             p.control
