@@ -1,0 +1,25 @@
+extends base
+
+block navbar-items
+  - let activeItemIndex = 10;
+
+block custom-css
+  link(rel='stylesheet' href='./assets/css/changes.css')
+
+block main-content
+  .content.has-text-centered
+    h1.is-primary-text.text-shadow.is-orange Changes &#x2728;
+    h5.is-secondary-text
+      | The latest changes for the&nbsp;
+      a.link(href='https://jahir.xyz/github') GitHub
+      | &nbsp;repositories I own or contribute to
+    a.button.is-paypal(target='_blank' href='/donate')
+      i.mdi.mdi-gift(style='color:var(--white);margin-right: .8rem !important;')
+      | Support
+    br
+    a#loading-btn.button.is-loading.is-large Loading...
+  .content
+    #changes-content.columns.is-centered.is-multiline.is-mobile
+
+block scripts
+  script(src='./assets/js/changes.js')

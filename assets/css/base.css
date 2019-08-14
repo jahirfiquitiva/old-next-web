@@ -246,6 +246,11 @@ section.colored,
     -webkit-box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
     -moz-box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
     box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
+    -webkit-transition: all ease-in-out .2s !important;
+    -moz-transition: all ease-in-out .2s !important;
+    -ms-transition: all ease-in-out .2s !important;
+    -o-transition: all ease-in-out .2s !important;
+    transition: all ease-in-out .2s !important;
 }
 
 .button:hover,
