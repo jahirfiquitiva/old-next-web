@@ -27,7 +27,7 @@
 .is-dark,
 .is-dark * {
     --primary: #080f1e;
-    --primary-dark: #040811;
+    --primary-dark: #020409;
     --background: var(--primary);
     --card-bg-color: #0d1934;
 

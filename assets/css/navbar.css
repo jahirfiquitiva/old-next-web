@@ -51,12 +51,20 @@ a.navbar-item:hover {
     padding-top: .7rem;
     background-color: var(--primary-dark);
     color: var(--secondary-text);
-    border-bottom: 3px solid var(--tertiary-text);
+    border-bottom: 3px solid var(--secondary-text);
+}
+
+.navbar-item.is-active,
+.navbar-item:focus,
+.navbar-item:focus-within,
+.navbar-item:hover {
+    background-color: var(--primary-dark);
+    color: var(--accent);
 }
 
 .navbar-link.is-active,
 a.navbar-item.is-active {
-    color: var(--accent-dark);
+    color: var(--accent);
     border-bottom: 3px solid var(--accent);
 }
 
@@ -82,7 +90,7 @@ a.navbar-item.is-active {
 .navbar-brand a.navbar-item:focus-within,
 .navbar-brand a.navbar-item:hover {
     padding-top: .5rem;
-    color: var(--accent-dark);
+    color: var(--accent);
     background-color: var(--primary-dark);
     border-bottom: none;
 }
@@ -183,6 +191,9 @@ a.navbar-item.is-active {
     background-size: cover;
     background-repeat: no-repeat;
     transition: all .25s ease-in;
+    -webkit-box-shadow: 3px 3px 0 0 var(--text-shadow-blue);
+    -moz-box-shadow: 3px 3px 0 0 var(--text-shadow-blue);
+    box-shadow: 3px 3px 0 0 var(--text-shadow-blue);
 }
 
 .avatar:hover,
