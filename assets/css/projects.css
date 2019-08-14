@@ -28,16 +28,21 @@
     --bord-hover-col: var(--bord-col);
     --shadow-hover-col: var(--shadow-col);
     --link-col: var(--accent);
-    background-color: var(--card-bg-color) !important;
+    background-color: var(--card-bg-color);
     border-radius: 6px !important;
     -webkit-box-shadow: 0 2px 3px var(--bord-col), 0 0 0 1px var(--bord-col);
     -moz-box-shadow: 0 2px 3px var(--bord-col), 0 0 0 1px var(--bord-col);
     box-shadow: 0 2px 3px var(--bord-col), 0 0 0 1px var(--bord-col);
-    -webkit-transition: all ease-in-out .3s !important;
-    -moz-transition: all ease-in-out .3s !important;
-    -ms-transition: all ease-in-out .3s !important;
-    -o-transition: all ease-in-out .3s !important;
-    transition: all ease-in-out .3s !important;
+    -webkit-transition: all ease-in-out .3s;
+    -moz-transition: all ease-in-out .3s;
+    -ms-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+}
+
+.is-dark .card {
+    --bord-col: rgba(175, 194, 239, .1);
+    --shadow-col: rgba(175, 194, 239, .25);
 }
 
 .icon {
@@ -98,6 +103,11 @@ a .card:focus * {
 
 #projects .card .title:not(:last-child) {
     margin-bottom: .6rem;
+}
+
+#projects .card:hover .title,
+#projects .card:focus .title {
+    color: var(--link-col);
 }
 
 .card .card-content .subtitle {

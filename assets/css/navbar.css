@@ -7,10 +7,6 @@
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, .08), 0 3px 4px 0 rgba(0, 0, 0, .06), 0 1px 5px 0 rgba(0, 0, 0, .2);
 }
 
-a.navbar-item {
-    color: #000;
-}
-
 .navbar {
     flex-direction: column;
 }
@@ -156,6 +152,18 @@ a.navbar-item.is-active {
     .navbar-brand a.navbar-item:hover {
         padding-top: .75rem;
     }
+}
+
+.navbar-item {
+    cursor: pointer;
+    color: var(--secondary-text);
+}
+
+.navbar-item:hover,
+.navbar-item:focus,
+.navbar-item:active,
+.navbar-item.is-active {
+    color: var(--accent);
 }
 
 .avatar {

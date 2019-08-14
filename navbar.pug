@@ -27,3 +27,6 @@ block navbar-items
               "": !activeItemIndex === index
             } href=item.link)
               = item.title
+          #theme-switch.navbar-item(onclick='switchTheme();')
+            span.mdi.mdi-weather-night
+            | &nbsp;&nbsp;Dark Theme

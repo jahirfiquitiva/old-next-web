@@ -80,6 +80,7 @@ function filterProjects() {
       cardContent.appendChild(figure);
       footer.appendChild(title);
 
+      /*
       const projectTag = project.tag || '';
       if (projectTag && projectTag.length > 0) {
         const tag = document.createElement('span');
@@ -89,6 +90,7 @@ function filterProjects() {
         tag.innerText = projectTag;
         footer.appendChild(tag);
       }
+      */
 
       card.appendChild(cardContent);
       card.appendChild(footer);

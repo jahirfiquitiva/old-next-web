@@ -96,6 +96,11 @@ html, body, main {
     scroll-behavior: smooth;
     line-height: 1.6 !important;
     font-weight: 500;
+    -webkit-transition: all ease-in-out .3s;
+    -moz-transition: all ease-in-out .3s;
+    -ms-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
 }
 
 html, body, main, .use-inter {
