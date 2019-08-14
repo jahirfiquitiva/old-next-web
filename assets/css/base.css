@@ -90,17 +90,21 @@
     --accent-shadow-c: rgba(56, 103, 214, .24);
 }
 
+*, body, html, main {
+    --transition-duration: .25s;
+    -webkit-transition: all ease-in-out var(--transition-duration);
+    -moz-transition: all ease-in-out var(--transition-duration);
+    -ms-transition: all ease-in-out var(--transition-duration);
+    -o-transition: all ease-in-out var(--transition-duration);
+    transition: all ease-in-out var(--transition-duration);
+}
+
 html, body, main {
     background-color: var(--background);
     color: var(--secondary-text);
     scroll-behavior: smooth;
     line-height: 1.6 !important;
     font-weight: 500;
-    -webkit-transition: all ease-in-out .3s;
-    -moz-transition: all ease-in-out .3s;
-    -ms-transition: all ease-in-out .3s;
-    -o-transition: all ease-in-out .3s;
-    transition: all ease-in-out .3s;
 }
 
 html, body, main, .use-inter {
