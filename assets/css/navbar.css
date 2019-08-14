@@ -60,7 +60,7 @@ a.navbar-item:hover {
 
 .navbar-link.is-active,
 a.navbar-item.is-active {
-    color: var(--accent);
+    color: var(--accent-dark);
     border-bottom: 3px solid var(--accent);
 }
 

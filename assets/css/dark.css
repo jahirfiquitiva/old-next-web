@@ -50,6 +50,7 @@
     --text-shadow-green: var(--transparent);
     --text-shadow-red: var(--transparent);
     --text-shadow-purple: var(--transparent);
+    --text-shadow-orange: var(--transparent);
 
     --accent-shadow-a: rgba(136, 164, 230, .4);
     --accent-shadow-b: rgba(136, 164, 230, .28);
@@ -57,6 +58,7 @@
 }
 
 .is-dark section.colored,
-.is-dark .footer {
+.is-dark .footer,
+.is-dark .hero-foot {
     background-color: var(--background);
 }
