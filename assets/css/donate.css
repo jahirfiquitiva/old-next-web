@@ -1,6 +1,13 @@
 .content {
     margin: auto;
-    max-width: 75%;
+    max-width: 100%;
+}
+
+@media (min-width: 992px) {
+    .content {
+        margin: auto;
+        max-width: 75%;
+    }
 }
 
 a.social-link.is-bmac,
