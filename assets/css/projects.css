@@ -8,6 +8,20 @@
     margin-top: auto;
 }
 
+.select select {
+    line-height: 1.5 !important;
+    vertical-align: middle;
+}
+
+.select select:not([multiple]) {
+    padding-right: 2em;
+}
+
+.select:not(.is-multiple):not(.is-loading)::after {
+    border-color: var(--accent);
+    right: .8em;
+}
+
 .card {
     --bord-col: rgba(116, 125, 140, .1);
     --shadow-col: rgba(116, 125, 140, .25);
@@ -74,7 +88,7 @@ a .card:focus * {
 #projects .card .card-footer {
     border: none;
     display: block;
-    padding: 0 .4rem 1.2rem;
+    padding: 0 .6rem 1.2rem;
 }
 
 #projects .card .title {
@@ -169,8 +183,9 @@ a .card:focus * {
         width: 96px;
     }
 
-    #projects .card .title {
-        font-size: 1.3rem;
+    #projects .columns {
+        max-width: 90%;
+        margin: auto;
     }
 
     #projects .column.is-6-mobile {
@@ -182,6 +197,10 @@ a .card:focus * {
     .image.is-128x128 {
         height: 112px;
         width: 112px;
+    }
+
+    #projects .card .title {
+        font-size: 1.3rem;
     }
 
     #projects .column.is-6-mobile {

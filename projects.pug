@@ -7,10 +7,12 @@ section#projects.hero.is-medium
     .container.has-text-centered
       h1.text-shadow.is-purple Projects 👨‍💻
       br
+      .select.is-link
+        select#projects-select(onchange='filterProjects();')
       br
       br
       .columns.is-multiline.is-centered.is-mobile#projects-cols
-        
+
 
 append scripts
   script(src='./assets/js/projects.js')
