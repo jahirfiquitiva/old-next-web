@@ -16,15 +16,22 @@ function titleCase(str) {
 }
 
 function filterProjects() {
-  const projectsSelect = document.getElementById('projects-select');
-  if (!projectsSelect) return;
+  const filters = document.getElementsByName('filter');
+  if (!filters || filters.length <= 0) return;
+  let selectedFilter = '';
+  for (const filter of filters) {
+    if (filter.checked) {
+      selectedFilter = filter.value;
+      break;
+    }
+  }
 
   const projectsColumns = document.getElementById('projects-cols');
   if (projectsColumns) {
     projectsColumns.innerHTML = '';
 
     const filteredProjects = (projects || []).filter(it => {
-      return it.tag === projectsSelect.value || it.tag === 'other';
+      return it.tag === selectedFilter || it.tag === 'other';
     });
 
     for (const project of filteredProjects) {
@@ -33,7 +40,6 @@ function filterProjects() {
 
       const column = document.createElement('div');
       column.classList.add('column');
-      // column.classList.add('is-6');
       column.classList.add('is-6-mobile');
       column.classList.add('is-2-tablet');
       column.classList.add('is-2-desktop');
@@ -102,7 +108,7 @@ function filterProjects() {
 }
 
 function setupProjectsUI() {
-  const projectsSelect = document.getElementById('projects-select');
+  const projectsSelect = document.getElementById('projects-filters');
   if (!projectsSelect) return;
 
   const uniqueTags = [...new Set((projects || []).map(it => {
@@ -111,13 +117,28 @@ function setupProjectsUI() {
     .filter(it => typeof it !== 'undefined' && it !== null && it.length > 0);
 
   projectsSelect.innerHTML = '';
-  for (const tag of uniqueTags) {
-    const option = document.createElement('option');
-    option.value = tag.toLowerCase();
-    option.innerText = titleCase(tag);
-    projectsSelect.appendChild(option);
-  }
-  projectsSelect.selectedIndex = 0;
+  const list = document.createElement('ul');
+  uniqueTags.forEach((tag, index) => {
+    const filter = document.createElement('li');
+
+    const input = document.createElement('input');
+    input.id = `filter-${tag.toLowerCase()}`;
+    input.type = 'radio';
+    input.value = tag.toLowerCase();
+    input.name = 'filter';
+    input.checked = index <= 0;
+    filter.appendChild(input);
+
+    const label = document.createElement('label');
+    label.setAttribute('for', `filter-${tag.toLowerCase()}`);
+    label.innerText = titleCase(tag);
+    filter.appendChild(label);
+
+    filter.onchange = () => filterProjects();
+
+    list.appendChild(filter);
+  });
+  projectsSelect.appendChild(list);
 
   filterProjects();
 }
