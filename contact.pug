@@ -30,9 +30,9 @@ block main-content
             p.control.has-icons-left.has-icons-right
               input#name.input(type='text' placeholder='Jon Doe' name='name' required='' aria-required='true')
               span.icon.is-small.is-left
-                i.mdi.mdi-account
+                span.mdi.mdi-account
             p#name-help.help.is-danger
-              i.mdi.mdi-alert.mdi-18px
+              span.mdi.mdi-alert.mdi-18px
               |  Please fill this
       .field.is-horizontal
         .field-label.is-normal
@@ -42,9 +42,9 @@ block main-content
             p.control.has-icons-left.has-icons-right
               input#email.input(type='email' name='email' placeholder='jon.doe@example.com' required='' aria-required='true')
               span.icon.is-small.is-left
-                i.mdi.mdi-email
+                span.mdi.mdi-email
             p#email-help.help.is-danger
-              i.mdi.mdi-alert.mdi-18px
+              span.mdi.mdi-alert.mdi-18px
               |  Please enter a valid email
       .field.is-horizontal
         .field-label.is-normal
@@ -54,7 +54,7 @@ block main-content
             p.control
               input#subject.input(type='text' placeholder="e.g. Let's work together" name='subject' required='' aria-required='true')
             p#subject-help.help.is-danger
-              i.mdi.mdi-alert.mdi-18px
+              span.mdi.mdi-alert.mdi-18px
               |  Please fill this
       .field.is-horizontal
         .field-label.is-normal
@@ -64,7 +64,7 @@ block main-content
             .control
               textarea#message.textarea(type='text' placeholder='Hi Jahir...' name='message' required='' aria-required='true')
             p#message-help.help.is-danger
-              i.mdi.mdi-alert.mdi-18px
+              span.mdi.mdi-alert.mdi-18px
               |  Please fill this
       .field.is-horizontal
         .field-label.is-normal
@@ -87,7 +87,7 @@ block main-content
                   div(style='width: 300px; height: 60px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;')
                     textarea#g-recaptcha-response.g-recaptcha-response(name='g-recaptcha-response' style='width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;')
             p#captcha-help.help.is-danger.extra
-              i.mdi.mdi-alert.mdi-18px
+              span.mdi.mdi-alert.mdi-18px
               |  Please confirm you&apos;re human
       .field.is-horizontal
         .field-label.is-normal
