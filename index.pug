@@ -2,6 +2,7 @@ extends index-base
 
 block custom-css
   link(rel='stylesheet' href='./assets/css/home.css')
+  link(rel='stylesheet' href='./assets/css/projects.css')
 
 block main-content
   .columns.is-multiline.is-centered
@@ -91,3 +92,6 @@ block main-content-footer
 
 block content
   include projects
+
+append scripts
+  script(src='./assets/js/projects.js')

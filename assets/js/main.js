@@ -22,12 +22,6 @@ const setupLogo = () => {
   if (copy !== null && copy !== undefined) {
     copy.innerHTML = 'Copyright © ' + date.getFullYear() + ' | All Rights Reserved';
   }
-  /*
-  let years = document.getElementById('age-text');
-  if (years !== null && years !== undefined) {
-      years.innerHTML = (date.getFullYear() - 1997).toString();
-  }
-  */
 };
 
 const changeHello = () => {
@@ -46,7 +40,7 @@ function initParticles() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // updateThemeSwitch();
+  updateThemeSwitch();
   const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'),
     0);
   if (navbarBurgers.length > 0) {
