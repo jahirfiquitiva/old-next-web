@@ -153,6 +153,10 @@ h5, h6, p, em, strong,
     color: var(--secondary-text);
 }
 
+strong {
+    color: var(--secondary-text);
+}
+
 .is-tertiary-text {
     color: var(--tertiary-text);
 }
