@@ -212,6 +212,7 @@ a .card:focus * {
 }
 
 .filters input[type=radio] + label {
+    color: var(--secondary-text);
     border-radius: 999999px;
     padding: .5rem 1rem;
     background-color: var(--primary-text-inverted);
@@ -219,6 +220,7 @@ a .card:focus * {
 }
 
 .filters input[type=radio]:checked + label {
+    color: rgba(9, 17, 34, 1);
     background-color: var(--filter-bg-color);
     border: 1px solid var(--dividers);
     -webkit-box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
