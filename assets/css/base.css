@@ -228,7 +228,6 @@ p a:focus {
 }
 
 a, button, .button, a > *, .button > *, a *, .button * {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
     cursor: pointer !important;
 }
 
