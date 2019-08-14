@@ -1,0 +1,190 @@
+.has-same-height {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.has-same-height .card-footer {
+    margin-top: auto;
+}
+
+.card {
+    --bord-col: rgba(116, 125, 140, .1);
+    --shadow-col: rgba(116, 125, 140, .25);
+    --bord-hover-col: var(--bord-col);
+    --shadow-hover-col: var(--shadow-col);
+    --link-col: var(--accent);
+    background-color: var(--card-bg-color) !important;
+    border-radius: 6px !important;
+    -webkit-box-shadow: 0 2px 3px var(--bord-col), 0 0 0 1px var(--bord-col);
+    -moz-box-shadow: 0 2px 3px var(--bord-col), 0 0 0 1px var(--bord-col);
+    box-shadow: 0 2px 3px var(--bord-col), 0 0 0 1px var(--bord-col);
+    -webkit-transition: all ease-in-out .3s !important;
+    -moz-transition: all ease-in-out .3s !important;
+    -ms-transition: all ease-in-out .3s !important;
+    -o-transition: all ease-in-out .3s !important;
+    transition: all ease-in-out .3s !important;
+}
+
+.icon {
+    margin: auto !important;
+    margin-bottom: 1.2rem !important;
+    opacity: .8;
+    -webkit-transition: all ease-in-out .3s;
+    -moz-transition: all ease-in-out .3s;
+    -ms-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+}
+
+.icon:hover,
+.icon:focus,
+.card:not(.change):hover .icon,
+.card:not(.change):focus .icon {
+    opacity: 1;
+}
+
+a .box:hover,
+a .box:focus,
+a .box:hover *,
+a .box:focus *,
+a .card:hover,
+a .card:focus,
+a .card:hover *,
+a .card:focus * {
+    cursor: pointer !important;
+}
+
+.card:not(.change):hover,
+.card:not(.change):focus {
+    -webkit-box-shadow: 0 4px 12px 1px var(--shadow-hover-col), 0 0 0 1px var(--bord-hover-col);
+    -moz-box-shadow: 0 4px 12px 1px var(--shadow-hover-col), 0 0 0 1px var(--bord-hover-col);
+    box-shadow: 0 4px 12px 1px var(--shadow-hover-col), 0 0 0 1px var(--bord-hover-col);
+    -webkit-transform: translate(0, -.12rem);
+    -moz-transform: translate(0, -.12rem);
+    -ms-transform: translate(0, -.12rem);
+    -o-transform: translate(0, -.12rem);
+    transform: translate(0, -.12rem);
+}
+
+#projects .card .card-content {
+    padding-bottom: 0;
+}
+
+#projects .card .card-footer {
+    border: none;
+    display: block;
+    padding: 0 .4rem 1.2rem;
+}
+
+#projects .card .title {
+    color: var(--primary-text);
+    font-size: 1rem;
+}
+
+#projects .card .title:not(:last-child) {
+    margin-bottom: .6rem;
+}
+
+.card .card-content .subtitle {
+    color: var(--secondary-text) !important;
+}
+
+.card:not(.change):hover .title,
+.card:not(.change):focus .title {
+    color: var(--link-col);
+    text-decoration: underline wavy var(--link-col);
+    text-decoration-skip: ink;
+}
+
+.tag,
+.tag:not(body) {
+    font-size: .9rem;
+    text-decoration: none !important;
+    color: rgba(9, 17, 34, .9);
+}
+
+.tag.android {
+    background-color: #89c065;
+}
+
+.tag.web {
+    background-color: var(--blue-400);
+}
+
+.tag.design {
+    background-color: #a55eea;
+}
+
+.tag.python {
+    background-color: #fed330;
+}
+
+.tag.other {
+    background-color: #92a3b5;
+}
+
+.image.is-128x128 {
+    height: 48px;
+    width: 48px;
+}
+
+#projects .column.is-6-mobile {
+    width: 50%;
+}
+
+@media (min-width: 480px) {
+    .image.is-128x128 {
+        height: 48px;
+        width: 48px;
+    }
+
+    #projects .card .title {
+        font-size: 1.1rem;
+    }
+
+    #projects .column.is-6-mobile {
+        width: 33.33333%;
+    }
+}
+
+@media (min-width: 768px) {
+    .image.is-128x128 {
+        height: 72px;
+        width: 72px;
+    }
+
+    #projects .card .title {
+        font-size: 1.2rem;
+    }
+
+    #projects .column.is-6-mobile {
+        width: 25%;
+    }
+}
+
+@media (min-width: 992px) {
+    .image.is-128x128 {
+        height: 96px;
+        width: 96px;
+    }
+
+    #projects .card .title {
+        font-size: 1.3rem;
+    }
+
+    #projects .column.is-6-mobile {
+        width: 20%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .image.is-128x128 {
+        height: 112px;
+        width: 112px;
+    }
+
+    #projects .column.is-6-mobile {
+        width: 16.666666%;
+    }
+}

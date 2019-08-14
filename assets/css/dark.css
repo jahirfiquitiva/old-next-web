@@ -29,6 +29,7 @@
     --primary: #091122;
     --primary-dark: #050911;
     --background: var(--primary);
+    --card-bg-color: #162956;
 
     --accent-light: var(--blue-300);
     --accent: var(--blue-300);
