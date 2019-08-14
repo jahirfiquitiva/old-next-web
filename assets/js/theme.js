@@ -1,5 +1,5 @@
 const toggleSwitch = document.getElementById('theme-switch');
-const initialThemeSwitchHTML = '&nbsp;&nbsp;<span class="mdi ';
+const initialThemeSwitchHTML = '<span class="mdi ';
 const finalThemeSwitchHTML = '"></span>&nbsp;&nbsp;';
 const currentThemeId = 'jahir-fiquitiva-theme';
 let currentTheme = 'light';

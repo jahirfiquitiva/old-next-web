@@ -91,8 +91,10 @@
 }
 
 body,
-body * {
-    --transition-duration: .5s;
+section,
+.card, .button, .tag,
+.filters, .filters * {
+    --transition-duration: .25s;
     -webkit-transition: background-color ease-in-out var(--transition-duration);
     -moz-transition: background-color ease-in-out var(--transition-duration);
     -ms-transition: background-color ease-in-out var(--transition-duration);
@@ -252,6 +254,8 @@ section.colored,
 }
 
 .button {
+    font-size: 1.05rem;
+    font-weight: 500;
     border-color: var(--transparent);
     -webkit-box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
     -moz-box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;

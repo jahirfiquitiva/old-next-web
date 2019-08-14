@@ -1,3 +1,41 @@
+.field .label {
+    color: var(--secondary-text);
+}
+
+.field .input,
+.field .textarea {
+    background-color: var(--card-bg-color);
+    color: var(--primary-text);
+}
+
+.field .input::placeholder {
+    color: var(--tertiary-text);
+}
+
+.field .input:-ms-input-placeholder {
+    color: var(--tertiary-text);
+}
+
+.field .input::-ms-input-placeholder {
+    color: var(--tertiary-text);
+}
+
+.field .textarea::placeholder {
+    color: var(--tertiary-text);
+}
+
+.field .textarea:-ms-input-placeholder {
+    color: var(--tertiary-text);
+}
+
+.field .textarea::-ms-input-placeholder {
+    color: var(--tertiary-text);
+}
+
+.field .control .button {
+    height: 2.5em;
+}
+
 .help {
     font-size: 0 !important;
     margin-top: 0 !important;
