@@ -74,6 +74,7 @@ function filterProjects() {
       img.src = project.icon;
       img.alt = project.title;
       figure.appendChild(img);
+      cardContent.appendChild(figure);
 
       const footer = document.createElement('div');
       footer.classList.add('card-footer');
@@ -82,9 +83,12 @@ function filterProjects() {
       title.classList.add('title');
       title.classList.add('use-manrope');
       title.innerText = project.title;
+      cardContent.appendChild(title);
 
-      cardContent.appendChild(figure);
-      footer.appendChild(title);
+      const subtitle = document.createElement('p');
+      subtitle.classList.add('is-small');
+      subtitle.innerText = project.description;
+      cardContent.appendChild(subtitle);
 
       /*
       const projectTag = project.tag || '';
@@ -99,7 +103,7 @@ function filterProjects() {
       */
 
       card.appendChild(cardContent);
-      card.appendChild(footer);
+      // card.appendChild(footer);
       link.appendChild(card);
       column.appendChild(link);
       projectsColumns.appendChild(column);

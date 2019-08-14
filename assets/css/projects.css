@@ -8,6 +8,11 @@
     margin-top: auto;
 }
 
+#projects .card p.is-small {
+    font-size: .9rem;
+    text-align: start !important;
+}
+
 .select select {
     line-height: 1.5 !important;
     vertical-align: middle;
@@ -87,7 +92,7 @@ a .card:focus * {
 }
 
 #projects .card .card-content {
-    padding: 1.2rem 1.2rem 0;
+    padding: 1.2rem 1.2rem;
 }
 
 #projects .card .card-footer {
@@ -129,8 +134,8 @@ a .card:focus * {
 }
 
 .image.is-128x128 {
-    height: 48px;
-    width: 48px;
+    height: 56px;
+    width: 56px;
 }
 
 #projects .column.is-6-mobile {
@@ -139,8 +144,8 @@ a .card:focus * {
 
 @media (min-width: 480px) {
     .image.is-128x128 {
-        height: 48px;
-        width: 48px;
+        height: 56px;
+        width: 56px;
     }
 
     #projects .card .title {
@@ -200,7 +205,13 @@ a .card:focus * {
 
 .filters li {
     display: inline-block;
-    margin-right: 15px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: .8rem;
+}
+
+.filters li:last-of-type {
+    margin-right: .6rem;
 }
 
 .filters input[type=radio] {

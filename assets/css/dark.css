@@ -26,10 +26,10 @@
 
 .is-dark,
 .is-dark * {
-    --primary: #091122;
-    --primary-dark: #050911;
+    --primary: #080f1e;
+    --primary-dark: #040811;
     --background: var(--primary);
-    --card-bg-color: #162956;
+    --card-bg-color: #0d1934;
 
     --accent-light: var(--blue-300);
     --accent: var(--blue-300);
