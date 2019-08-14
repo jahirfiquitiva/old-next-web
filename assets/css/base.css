@@ -143,10 +143,13 @@ h1, h2, h3, h4,
     color: var(--primary-text);
 }
 
+h5, h6, p, em, strong,
 .content h5,
 .content h6,
 .content p,
-h5, h6, p, .is-secondary-text {
+.content em,
+.content strong,
+.is-secondary-text {
     color: var(--secondary-text);
 }
 
