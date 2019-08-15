@@ -1,5 +1,9 @@
-.social-links a:not(:first-child) {
+.social-links li:not(:first-child) {
     margin-left: .6rem;
+}
+
+.social-links li {
+    display: inline-block;
 }
 
 a.social-link {

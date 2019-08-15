@@ -14,7 +14,8 @@ block main-content
       br
       p.has-text-justified
         | I'm a passionate and creative full-stack developer from&nbsp;
-        a(href='https://www.google.com/maps/place/Colombia/@4,-72z/') Colombia 🇨🇴
+        a(href='https://www.google.com/maps/place/Colombia/@4,-72z/') Colombia 
+          span(aria-hidden="true") 🇨🇴
         | who aims to build quality products by taking into account good development
         | practices and focusing on UI and UX, while also trying to provide accessible experiences.
       br
@@ -44,51 +45,52 @@ block main-content
     .column.is-12-mobile.is-2
     .column.center-vertically.is-12-mobile.is-5
       h2.text-shadow.is-red
-        strong Skills 🚀
+        strong Skills 
+          span(aria-hidden="true") 🚀
       br
       br
-      #tech.columns
-        .column
-          span.mdi.mdi-android.mdi-48px
+      ul#tech.columns
+        li.column
+          span.mdi.mdi-android.mdi-48px(aria-hidden="true")
           p Android
-        .column
-          .has-svg.kotlin
+        li.column
+          .has-svg.kotlin(aria-hidden="true")
           p Kotlin
-        .column
-          span.mdi.mdi-language-java.mdi-48px
+        li.column
+          span.mdi.mdi-language-java.mdi-48px(aria-hidden="true")
           p Java
-        .column
-          .has-svg.python
+        li.column
+          .has-svg.python(aria-hidden="true")
           p Python
-        .column
-          .has-svg.javascript
+        li.column
+          .has-svg.javascript(aria-hidden="true")
           p JavaScript
-        .column
-          span.mdi.mdi-language-html5.mdi-48px
+        li.column
+          span.mdi.mdi-language-html5.mdi-48px(aria-hidden="true")
           p HTML 5
-        .column
-          span.mdi.mdi-language-css3.mdi-48px
+        li.column
+          span.mdi.mdi-language-css3.mdi-48px(aria-hidden="true")
           p CSS 3
-        .column
-          span.mdi.mdi-nodejs.mdi-48px
+        li.column
+          span.mdi.mdi-nodejs.mdi-48px(aria-hidden="true")
           p NodeJS
-        .column
-          span.mdi.mdi-react.mdi-48px
+        li.column
+          span.mdi.mdi-react.mdi-48px(aria-hidden="true")
           p React
-        .column
-          .has-svg.mongodb
+        li.column
+          .has-svg.mongodb(aria-hidden="true")
           p MongoDB
-        .column
-          span.mdi.mdi-git.mdi-48px
+        li.column
+          span.mdi.mdi-git.mdi-48px(aria-hidden="true")
           p Git
-        .column
-          span.mdi.mdi-material-design.mdi-48px
+        li.column
+          span.mdi.mdi-material-design.mdi-48px(aria-hidden="true")
           p Material Design
 
 block main-content-footer
   .hero-foot
     .down-indicator.has-text-centered
-      h4 👇
+      h4(aria-hidden="true") 👇
 
 block content
   include projects

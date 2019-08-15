@@ -7,5 +7,5 @@ help:
 	@echo "        Deletes old html files and recreates them"
 
 build:
-	rm *.html
+	rm -f *.html
 	pug -P -o . .
