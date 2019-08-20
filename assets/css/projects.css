@@ -1,0 +1,275 @@
+.has-same-height {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.has-same-height .card-footer {
+    margin-top: auto;
+}
+
+#projects .card p.is-small {
+    font-size: .9rem;
+    text-align: start !important;
+}
+
+.select select {
+    line-height: 1.5 !important;
+    vertical-align: middle;
+}
+
+.select select:not([multiple]) {
+    padding-right: 2em;
+}
+
+.select:not(.is-multiple):not(.is-loading)::after {
+    border-color: var(--accent);
+    right: .8em;
+}
+
+.card {
+    --bord-col: rgba(116, 125, 140, .1);
+    --shadow-col: rgba(116, 125, 140, .25);
+    --bord-hover-col: var(--bord-col);
+    --shadow-hover-col: var(--shadow-col);
+    --link-col: var(--accent);
+    background-color: var(--card-bg-color);
+    border-radius: 6px !important;
+    -webkit-box-shadow: 0 2px 3px var(--bord-col), 0 0 0 1px var(--bord-col);
+    -moz-box-shadow: 0 2px 3px var(--bord-col), 0 0 0 1px var(--bord-col);
+    box-shadow: 0 2px 3px var(--bord-col), 0 0 0 1px var(--bord-col);
+    -webkit-transition: all ease-in-out .3s;
+    -moz-transition: all ease-in-out .3s;
+    -ms-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+}
+
+.is-dark .card {
+    --bord-col: rgba(175, 194, 239, .1);
+    --shadow-col: rgba(175, 194, 239, .25);
+}
+
+.icon {
+    margin: auto !important;
+    margin-bottom: 1rem !important;
+    opacity: .8;
+    -webkit-transition: all ease-in-out .3s;
+    -moz-transition: all ease-in-out .3s;
+    -ms-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+}
+
+.icon:hover,
+.icon:focus,
+.card:not(.change):hover .icon,
+.card:not(.change):focus .icon {
+    opacity: 1;
+}
+
+a .box:hover,
+a .box:focus,
+a .box:hover *,
+a .box:focus *,
+a .card:hover,
+a .card:focus,
+a .card:hover *,
+a .card:focus * {
+    cursor: pointer !important;
+}
+
+.card:not(.change):hover,
+.card:not(.change):focus {
+    -webkit-box-shadow: 0 4px 12px 1px var(--shadow-hover-col), 0 0 0 1px var(--bord-hover-col);
+    -moz-box-shadow: 0 4px 12px 1px var(--shadow-hover-col), 0 0 0 1px var(--bord-hover-col);
+    box-shadow: 0 4px 12px 1px var(--shadow-hover-col), 0 0 0 1px var(--bord-hover-col);
+    -webkit-transform: translate(0, -.12rem);
+    -moz-transform: translate(0, -.12rem);
+    -ms-transform: translate(0, -.12rem);
+    -o-transform: translate(0, -.12rem);
+    transform: translate(0, -.12rem);
+}
+
+#projects .card .card-content {
+    padding: 1.2rem 1.2rem;
+}
+
+#projects .card .card-footer {
+    border: none;
+    display: block;
+    padding: 0 .6rem 1.2rem;
+}
+
+#projects .card .title {
+    color: var(--primary-text);
+    font-size: 1rem;
+}
+
+#projects .card .title:not(:last-child) {
+    margin-bottom: .6rem;
+}
+
+#projects .card:hover .title,
+#projects .card:focus .title {
+    color: var(--link-col);
+}
+
+.card .card-content .subtitle {
+    color: var(--secondary-text) !important;
+}
+
+.card:not(.change):hover .title,
+.card:not(.change):focus .title {
+    color: var(--link-col);
+    text-decoration: underline wavy var(--link-col);
+    text-decoration-skip: ink;
+}
+
+.tag,
+.tag:not(body) {
+    font-size: .9rem;
+    text-decoration: none !important;
+    color: rgba(9, 17, 34, .9);
+}
+
+.image.is-128x128 {
+    height: 56px;
+    width: 56px;
+}
+
+#projects .column.is-6-mobile {
+    width: 50%;
+}
+
+@media (min-width: 480px) {
+    .image.is-128x128 {
+        height: 56px;
+        width: 56px;
+    }
+
+    #projects .card .title {
+        font-size: 1.1rem;
+    }
+
+    #projects .column.is-6-mobile {
+        width: 33.33333%;
+    }
+}
+
+@media (min-width: 768px) {
+    .image.is-128x128 {
+        height: 72px;
+        width: 72px;
+    }
+
+    #projects .card .title {
+        font-size: 1.2rem;
+    }
+
+    #projects .column.is-6-mobile {
+        width: 25%;
+    }
+}
+
+@media (min-width: 992px) {
+    .image.is-128x128 {
+        height: 96px;
+        width: 96px;
+    }
+
+    #projects .columns {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    #projects .column.is-6-mobile {
+        width: 20%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .image.is-128x128 {
+        height: 112px;
+        width: 112px;
+    }
+
+    #projects .card .title {
+        font-size: 1.3rem;
+    }
+}
+
+.filters ul {
+    list-style: none;
+}
+
+.filters li {
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: .8rem;
+}
+
+.filters li:last-of-type {
+    margin-right: .6rem;
+}
+
+.filters input[type=radio] {
+    visibility: hidden;
+}
+
+.filters label {
+    cursor: pointer;
+}
+
+.filters input[type=radio] + label {
+    color: var(--secondary-text);
+    border-radius: 999999px;
+    padding: .5rem 1rem;
+    background-color: var(--primary-text-inverted);
+    border: 1px solid #dbdbdb;
+}
+
+.filters input[type=radio]:checked + label {
+    color: rgba(9, 17, 34, 1);
+    background-color: var(--filter-bg-color);
+    border: 1px solid var(--dividers);
+    -webkit-box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
+    -moz-box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
+    box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
+}
+
+#filter-android:checked + label {
+    --shadow-a: rgba(137, 192, 101, .4);
+    --shadow-b: rgba(137, 192, 101, .28);
+    --shadow-c: rgba(137, 192, 101, .24);
+    --filter-bg-color: #89c065;
+}
+
+#filter-web:checked + label {
+    --shadow-a: rgba(136, 164, 230, .4);
+    --shadow-b: rgba(136, 164, 230, .28);
+    --shadow-c: rgba(136, 164, 230, .24);
+    --filter-bg-color: var(--blue-300);
+}
+
+#filter-design:checked + label {
+    --shadow-a: rgba(165, 94, 234, .4);
+    --shadow-b: rgba(165, 94, 234, .28);
+    --shadow-c: rgba(165, 94, 234, .24);
+    --filter-bg-color: #a55eea;
+}
+
+#filter-python:checked + label {
+    --shadow-a: rgba(254, 211, 48, .4);
+    --shadow-b: rgba(254, 211, 48, .28);
+    --shadow-c: rgba(254, 211, 48, .24);
+    --filter-bg-color: #fed330;
+}
+
+#filter-other:checked + label {
+    --shadow-a: rgba(146, 163, 181, .4);
+    --shadow-b: rgba(146, 163, 181, .28);
+    --shadow-c: rgba(146, 163, 181, .24);
+    --filter-bg-color: #92a3b5;
+}

@@ -1,0 +1,99 @@
+extends index-base
+
+block custom-css
+  link(rel='stylesheet' href='./assets/css/home.css')
+  link(rel='stylesheet' href='./assets/css/projects.css')
+
+block main-content
+  .columns.is-multiline.is-centered
+    .column.center-vertically.is-12-mobile.is-5
+      .avatar
+      br
+      h3#hello.has-text-centered.text-shadow.is-amber Hello, world! 👋
+      h3.has-text-centered.text-shadow.is-blue I am Jahir Fiquitiva
+      br
+      p.has-text-justified
+        | I'm a passionate and creative full-stack developer from&nbsp;
+        a(href='https://www.google.com/maps/place/Colombia/@4,-72z/') Colombia 
+          span(aria-hidden="true") 🇨🇴
+        | who aims to build quality products by taking into account good development
+        | practices and focusing on UI and UX, while also trying to provide accessible experiences.
+      br
+      details
+        summary.button.is-primary#more-info More about me
+        p.has-text-justified
+          | I'm currently a Computer Science student at&nbsp;
+          a(href='http://www.uptc.edu.co/') Pedagogical and Technological University of Colombia.
+        p.has-text-justified
+          | I consider myself a curious and inquisitive person, so on my spare time I like to work
+          | on&nbsp;
+          a(href='#projects') side projects
+          | &nbsp;and try to constantly learn something new to improve my skillset.
+        p.has-text-justified I have open&nbsp;
+          a(href='https://jahir.xyz/twitterdm') Twitter DMs
+          | ,&nbsp;
+          a(href='https://jahir.xyz/tlgrm') Telegram
+          | &nbsp;and&nbsp;
+          a(href='/contact') email
+          | &nbsp;for any kind of inquiries. 🤗 And last, but not least, &nbsp;
+          a(href='/donate#thanks') huge thanks to my supporters.
+      br
+      p
+        strong Find me on:
+      br
+      include social-btns
+    .column.is-12-mobile.is-2
+    .column.center-vertically.is-12-mobile.is-5
+      h2.text-shadow.is-red
+        strong Skills 
+          span(aria-hidden="true") 🚀
+      br
+      br
+      ul#tech.columns
+        li.column
+          span.mdi.mdi-android.mdi-48px(aria-hidden="true")
+          p Android
+        li.column
+          .has-svg.kotlin(aria-hidden="true")
+          p Kotlin
+        li.column
+          span.mdi.mdi-language-java.mdi-48px(aria-hidden="true")
+          p Java
+        li.column
+          .has-svg.python(aria-hidden="true")
+          p Python
+        li.column
+          .has-svg.javascript(aria-hidden="true")
+          p JavaScript
+        li.column
+          span.mdi.mdi-language-html5.mdi-48px(aria-hidden="true")
+          p HTML 5
+        li.column
+          span.mdi.mdi-language-css3.mdi-48px(aria-hidden="true")
+          p CSS 3
+        li.column
+          span.mdi.mdi-nodejs.mdi-48px(aria-hidden="true")
+          p NodeJS
+        li.column
+          span.mdi.mdi-react.mdi-48px(aria-hidden="true")
+          p React
+        li.column
+          .has-svg.mongodb(aria-hidden="true")
+          p MongoDB
+        li.column
+          span.mdi.mdi-git.mdi-48px(aria-hidden="true")
+          p Git
+        li.column
+          span.mdi.mdi-material-design.mdi-48px(aria-hidden="true")
+          p Material Design
+
+block main-content-footer
+  .hero-foot
+    .down-indicator.has-text-centered
+      h4(aria-hidden="true") 👇
+
+block content
+  include projects
+
+append scripts
+  script(src='./assets/js/projects.js')

@@ -1,0 +1,199 @@
+#tech p {
+    font-size: .95rem;
+}
+
+#tech .column:hover,
+#tech .column:focus {
+    color: var(--primary-text);
+}
+
+#tech .column,
+#tech .mdi {
+    transition: all ease .25s;
+}
+
+#tech .mdi {
+    color: var(--accent-light);
+    vertical-align: middle;
+    padding: 0;
+}
+
+#tech .mdi:before {
+    padding: 0;
+    min-height: 72px;
+    height: 72px;
+    max-height: 72px;
+    vertical-align: middle;
+}
+
+#tech .column:hover .mdi.mdi-android,
+#tech .column:focus .mdi.mdi-android,
+#tech .mdi.mdi-android:hover,
+#tech .mdi.mdi-android:focus {
+    color: #89c065;
+}
+
+#tech .column:hover .mdi.mdi-language-java,
+#tech .column:focus .mdi.mdi-language-java,
+#tech .mdi.mdi-language-java:hover,
+#tech .mdi.mdi-language-java:focus {
+    color: #cd5942;
+}
+
+#tech .column:hover .mdi.mdi-language-python,
+#tech .column:focus .mdi.mdi-language-python,
+#tech .mdi.mdi-language-python:hover,
+#tech .mdi.mdi-language-python:focus {
+    color: #4584b6;
+}
+
+#tech .column:hover .mdi.mdi-language-html5,
+#tech .column:focus .mdi.mdi-language-html5,
+#tech .mdi.mdi-language-html5:hover,
+#tech .mdi.mdi-language-html5:focus {
+    color: #e34f26;
+}
+
+#tech .column:hover .mdi.mdi-language-css3,
+#tech .column:focus .mdi.mdi-language-css3,
+#tech .mdi.mdi-language-css3:hover,
+#tech .mdi.mdi-language-css3:focus {
+    color: #3572b5;
+}
+
+#tech .column:hover .mdi.mdi-nodejs,
+#tech .column:focus .mdi.mdi-nodejs,
+#tech .mdi.mdi-nodejs:hover,
+#tech .mdi.mdi-nodejs:focus {
+    color: #44883e;
+}
+
+#tech .column:hover .mdi.mdi-material-design,
+#tech .column:focus .mdi.mdi-material-design,
+#tech .mdi.mdi-material-design:hover,
+#tech .mdi.mdi-material-design:focus {
+    color: var(--primary-text);
+}
+
+#tech .column:hover .mdi.mdi-git,
+#tech .column:focus .mdi.mdi-git,
+#tech .mdi.mdi-git:hover,
+#tech .mdi.mdi-git:focus {
+    color: #fc6d26;
+}
+
+#tech .column:hover .mdi.mdi-react,
+#tech .column:focus .mdi.mdi-react,
+#tech .mdi.mdi-react:hover,
+#tech .mdi.mdi-react:focus {
+    color: #61dafb;
+}
+
+#tech .has-svg {
+    width: 40px;
+    height: 72px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    transition: all ease .25s;
+}
+
+#tech .has-svg.kotlin {
+    background-image: url("./../images/tech/kotlin-normal.svg");
+}
+
+#tech .column:hover .has-svg.kotlin,
+#tech .column:focus .has-svg.kotlin,
+#tech .has-svg.kotlin:hover,
+#tech .has-svg.kotlin:focus {
+    background-image: url("./../images/tech/kotlin.svg");
+}
+
+#tech .has-svg.python {
+    background-image: url("./../images/tech/python-normal.svg");
+}
+
+#tech .column:hover .has-svg.python,
+#tech .column:focus .has-svg.python,
+#tech .has-svg.python:hover,
+#tech .has-svg.python:focus {
+    background-image: url("./../images/tech/python.svg");
+}
+
+#tech .has-svg.mongodb {
+    background-image: url("./../images/tech/mongodb-normal.svg");
+}
+
+#tech .column:hover .has-svg.mongodb,
+#tech .column:focus .has-svg.mongodb,
+#tech .has-svg.mongodb:hover,
+#tech .has-svg.mongodb:focus {
+    background-image: url("./../images/tech/mongodb.svg");
+}
+
+#tech .has-svg.javascript {
+    background-image: url("./../images/tech/javascript-normal.svg");
+}
+
+#tech .column:hover .has-svg.javascript,
+#tech .column:focus .has-svg.javascript,
+#tech .has-svg.javascript:hover,
+#tech .has-svg.javascript:focus {
+    background-image: url("./../images/tech/javascript.svg");
+}
+
+#tech.columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#tech .column {
+    width: 33.333333%;
+    min-width: 33.333333%;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    line-height: 1.5;
+}
+
+@media (min-width: 480px) {
+    #tech .column {
+        width: 33.333333%;
+        min-width: 33.333333%;
+    }
+}
+
+@media (min-width: 768px) {
+    #tech .column {
+        width: 25%;
+        min-width: 25%;
+    }
+}
+
+@media (min-width: 992px) {
+    #tech .column {
+        width: 25%;
+        min-width: 25%;
+    }
+}
+
+@media (min-width: 1200px) {
+    #tech .column {
+        width: 25%;
+        min-width: 25%;
+    }
+}
+
+#home {
+    background-color: var(--primary);
+}
+
+#home .hero-foot {
+    padding-top: 1.2rem;
+    padding-bottom: .8rem;
+    background-color: var(--primary);
+}

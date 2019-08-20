@@ -1,0 +1,104 @@
+extends base
+
+block navbar-items
+  - let activeItemIndex = 3;
+
+block custom-css
+  link(rel='stylesheet' href='./assets/css/contact.css')
+
+block main-content
+  .content.has-text-centered
+    h1.is-primary-text.text-shadow.is-red Get in Touch &#x1F4EE;
+    h5.is-secondary-text
+      | Don&apos;t hesitate contacting me!
+    p.is-secondary-text(style='padding: .4rem;')
+      | PS: I also have an open&nbsp;
+      a.link(href='https://jahir.xyz/twitterdm' target='_blank')
+        | Twitter DM
+      | &nbsp;and&nbsp;
+      a.link(href='https://jahir.xyz/tlgrm' target='_blank') Telegram
+      | , for any kind of inquiries. &#x1F600;
+      br
+      br
+    form#contact-form.has-text-justified.is-centered(name='contactForm' action='/sent' method='POST' onsubmit='sendForm(event)')
+      input(type='hidden' name='form-name' value='contactForm')
+      .field.is-horizontal
+        .field-label.is-normal
+          label.label(for='name') Your name
+        .field-body
+          .field
+            p.control.has-icons-left.has-icons-right
+              input#name.input(type='text' placeholder='Jon Doe' name='name' required='' aria-required='true')
+              span.icon.is-small.is-left
+                span.mdi.mdi-account
+            p#name-help.help.is-danger
+              span.mdi.mdi-alert.mdi-18px
+              |  Please fill this
+      .field.is-horizontal
+        .field-label.is-normal
+          label.label(for='email') Your email
+        .field-body
+          .field
+            p.control.has-icons-left.has-icons-right
+              input#email.input(type='email' name='email' placeholder='jon.doe@example.com' required='' aria-required='true')
+              span.icon.is-small.is-left
+                span.mdi.mdi-email
+            p#email-help.help.is-danger
+              span.mdi.mdi-alert.mdi-18px
+              |  Please enter a valid email
+      .field.is-horizontal
+        .field-label.is-normal
+          label.label(for='subject') Subject
+        .field-body
+          .field
+            p.control
+              input#subject.input(type='text' placeholder="e.g. Let's work together" name='subject' required='' aria-required='true')
+            p#subject-help.help.is-danger
+              span.mdi.mdi-alert.mdi-18px
+              |  Please fill this
+      .field.is-horizontal
+        .field-label.is-normal
+          label.label(for='message') Message
+        .field-body
+          .field
+            .control
+              textarea#message.textarea(type='text' placeholder='Hi Jahir...' name='message' required='' aria-required='true')
+            p#message-help.help.is-danger
+              span.mdi.mdi-alert.mdi-18px
+              |  Please fill this
+      .field.is-horizontal
+        .field-label.is-normal
+          .label
+        .field-body
+          .field
+            #captcha
+              script(src='https://www.google.com/recaptcha/api.js' async=true defer=true)
+              .g-recaptcha(data-sitekey='6LdAvUIUAAAAAHjrjmjtNTcXyKm0WKwefLp-dQv9')
+            p#captcha-help.help.is-danger.extra
+              span.mdi.mdi-alert.mdi-18px
+              |  Please confirm you&apos;re human
+      .field.is-horizontal
+        .field-label.is-normal
+        .field-body
+          .field
+            p.control
+              button#submit.button.is-primary(name='action' type='submit')
+                | Send message
+            p#sent.help
+              | Thanks for your message! &#x1F600;
+              br
+              | I&apos;ll get back to you as soon as possible. &#x1F64C;
+            p#not-sent.help
+              | Unfortunately an error occurred &#x1F614;
+              br
+              | Please try again later! &#x1F64C;
+      .field.is-horizontal.is-hidden
+        .field-label.is-normal
+          label.label(for='honey') Humans don&apos;t fill
+        .field-body
+          .field
+            p.control
+              input#honey.input(type='text' placeholder='' value='' name='honey')
+
+block scripts
+  script(src='./assets/js/email.js')

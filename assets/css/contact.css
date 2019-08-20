@@ -1,0 +1,113 @@
+.field .label {
+    color: var(--secondary-text);
+}
+
+.field .input,
+.field .textarea {
+    background-color: var(--card-bg-color);
+    color: var(--primary-text);
+}
+
+.field .input::placeholder {
+    color: var(--tertiary-text);
+}
+
+.field .input:-ms-input-placeholder {
+    color: var(--tertiary-text);
+}
+
+.field .input::-ms-input-placeholder {
+    color: var(--tertiary-text);
+}
+
+.field .textarea::placeholder {
+    color: var(--tertiary-text);
+}
+
+.field .textarea:-ms-input-placeholder {
+    color: var(--tertiary-text);
+}
+
+.field .textarea::-ms-input-placeholder {
+    color: var(--tertiary-text);
+}
+
+.field .control .button {
+    height: 2.5em;
+}
+
+.help {
+    font-size: 0 !important;
+    margin-top: 0 !important;
+    display: none !important;
+    color: var(--primary-text) !important;
+}
+
+.help.is-danger,
+.help.is-danger > * {
+    color: #eb3b5a !important;
+}
+
+.help.is-active {
+    display: block !important;
+    font-size: 1.1rem !important;
+}
+
+@media only screen and (min-width: 549px) {
+    #contact-form {
+        max-width: 85% !important;
+        margin: auto !important;
+    }
+
+    .field-label.is-normal {
+        padding-top: .1rem !important;
+    }
+
+    .field:not(:last-child) {
+        margin-bottom: .6rem !important;
+    }
+
+    .container p.control:not(:last-child) {
+        margin-bottom: .6rem !important;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #contact-form {
+        max-width: 75% !important;
+        margin: auto !important;
+    }
+
+    .field-body {
+        flex-grow: 6 !important;
+    }
+}
+
+.g-recaptcha {
+    margin-top: .5rem !important;
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform-origin: left top !important;
+    -webkit-transform-origin: left top !important;
+}
+
+@media only screen and (max-width: 240px) {
+    .g-recaptcha {
+        transform: scale(0.6) !important;
+        -webkit-transform: scale(0.6) !important;
+    }
+}
+
+@media only screen and (min-width: 241px) and (max-width: 320px) {
+    .g-recaptcha {
+        transform: scale(0.7) !important;
+        -webkit-transform: scale(0.7) !important;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+    .g-recaptcha {
+        transform: scale(0.8) !important;
+        -webkit-transform: scale(0.8) !important;
+    }
+}

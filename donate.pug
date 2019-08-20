@@ -1,0 +1,58 @@
+extends base
+
+block navbar-items
+  - let activeItemIndex = 2;
+
+block custom-css
+  link(rel='stylesheet' href='./assets/css/donate.css')
+
+block main-content
+  .content
+    h1.is-primary-text.text-shadow.is-blue.has-text-centered Become a Supporter &#x1F499;
+    br
+    div
+      p.has-text-justified
+        | As an indie developer, I try really hard to provide the best
+        | possible experience and products to all users, and most of them are&nbsp;
+        a.link(href='https://jahir.xyz/github' target='_blank') open source
+        | . However, that wouldn&apos;t be possible without the help and the motivation from&nbsp;
+        a.link(href='#thanks') supporters
+        | !
+      p.has-text-justified
+        strong
+          | If you like and/or use any of&nbsp;
+          a.link(href='/#projects' target='_blank') my projects
+          | , or want to support my work, please kindly consider becoming a supporter, so I can
+          | continue maintaining and evolving them as well as new ones.
+      p.has-text-justified
+        | Whatever I receive, will be highly appreciated!
+      br
+      p.has-text-justified
+        strong Available options:
+      .social-links
+        a.button.social-link.is-paypal(href='https://paypal.me/jahirfiquitiva' target='_blank' data-balloon='PayPal' data-balloon-pos='down')
+          span.mdi.mdi-18px.mdi-paypal
+        a.button.social-link.is-bmac(href='https://www.buymeacoffee.com/jahirfiquitiva' target='_blank' data-balloon='Buy me a Coffee' data-balloon-pos='down')
+          span.mdi.mdi-18px.mdi-star-four-points
+        a.button.social-link.is-kofi(href='https://ko-fi.com/jahirfiquitiva' target='_blank' data-balloon='Ko-fi' data-balloon-pos='down')
+          span.mdi.mdi-18px.mdi-coffee
+        a.button.social-link.is-donorbox(href='https://donorbox.org/jahirfiquitiva' target='_blank' data-balloon='DonorBox' data-balloon-pos='down')
+          span.mdi.mdi-18px.mdi-heart-box-outline
+        a.button.social-link.is-liberapay(href='https://liberapay.com/jahirfiquitiva' target='_blank' data-balloon='Liberapay' data-balloon-pos='down')
+          span.mdi.mdi-18px.mdi-credit-card
+        a.button.social-link.is-patreon(href='https://patreon.com/jahirfiquitiva' target='_blank' data-balloon='Patreon' data-balloon-pos='down')
+          span.mdi.mdi-18px.mdi-patreon
+    br
+    br
+    br
+    br
+    #thanks
+      h2.is-primary-text.text-shadow.is-orange.has-text-centered Thanks! &#x1F64C;
+      h6.is-secondary-text.has-text-centered
+        | I&apos;m really grateful to all the awesome people that support my work.
+      br
+      .has-text-centered
+        .buttons.has-text-centered.is-centered#supporters-list
+
+append scripts
+  script(src='./assets/js/donate.js')

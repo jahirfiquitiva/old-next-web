@@ -1,0 +1,25 @@
+extends base
+
+block navbar-items
+  - let activeItemIndex = 10;
+
+block custom-css
+  link(rel='stylesheet' href='./assets/css/404.css')
+
+block main-content
+  .error-content.has-text-centered
+    h2.is-primary-text.text-shadow.is-red
+      strong Woops! - Page Not Found
+    br
+    h6.is-primary-text
+      | Unfortunately the site you were trying to reach does not exist or has
+      | been moved. &#x1F625;
+    br
+    a.button.is-primary(href='/') Go Back Home
+  br
+  br
+  a(href='/' style='cursor: pointer !important;')
+    .columns.is-mobile.is-centered(style='margin-bottom: 0 !important; padding-bottom: 0 !important;cursor: pointer !important;')
+      .column.is-half-tablet.is-half-desktop(style='margin-bottom: 0 !important; padding-bottom: 0 !important;cursor: pointer !important;')
+        figure.image(style='cursor: pointer !important;')
+          img(style='cursor: pointer !important;' src='./assets/images/site/404.gif')

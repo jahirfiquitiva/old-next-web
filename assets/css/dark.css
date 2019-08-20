@@ -1,155 +1,65 @@
-:root {
-    --bg-color: #fff;
-    --primary: #f9fafb;
-    --primary-dark: #f4f5f8;
-    --primary-light: #e0e1e2;
-    --white: #fff;
-    --background: var(--white);
-    --card-bg-color: var(--white);
-    --accent: #356ac3;
-    --primary-text: rgba(0, 0, 0, .9);
-    --secondary-text: rgba(0, 0, 0, .7);
-    --disabled-text: rgba(0, 0, 0, .6);
-    --shadowed-text-color: var(--primary-text);
-    --primary-text-inverted: #FFF;
-    --secondary-text-inverted: rgba(255, 255, 255, .7);
-    --disabled-text-inverted: rgba(255, 255, 255, .5);
-    --title-font: "Manrope", sans-serif;
-    --default-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    --github: #333;
-    --twitter: #1da1f2;
-    --plus: #f44336;
-    --linkedin: #0077b5;
-    --play: #7bed9f;
-    --telegram: #179cde;
+/*
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary: #091122;
+        --primary-dark: #070d1a;
+        --background: var(--primary);
+
+        --accent-light: var(--blue-100);
+        --accent: var(--blue-300);
+        --accent-dark: var(--blue-400);
+        --accent-darker: var(--blue-600);
+
+        --primary-text: var(--white);
+        --secondary-text: rgba(255, 255, 255, .85);
+        --tertiary-text: rgba(255, 255, 255, .7);
+        --dividers: rgba(255, 255, 255, .12);
+
+        --text-shadow-amber: var(--transparent);
+        --text-shadow-blue: var(--transparent);
+        --text-shadow-green: var(--transparent);
+        --text-shadow-red: var(--transparent);
+        --text-shadow-purple: var(--transparent);
+    }
+}
+*/
+
+.is-dark,
+.is-dark * {
+    --primary: #080f1e;
+    --primary-dark: #020409;
+    --background: var(--primary);
+    --card-bg-color: #0d1934;
+
+    --accent-light: var(--blue-300);
+    --accent: var(--blue-300);
+    --accent-dark: var(--blue-400);
+    --accent-darker: var(--blue-500);
+
+    --primary-text: var(--white);
+    --secondary-text: rgba(255, 255, 255, .85);
+    --tertiary-text: rgba(255, 255, 255, .7);
+    --dividers: rgba(255, 255, 255, .12);
+
+    --primary-text-inverted: rgba(9, 17, 34, 1);
+    --secondary-text-inverted: rgba(9, 17, 34, .9);
+    --tertiary-text-inverted: rgba(9, 17, 34, .75);
+    --dividers-inverted: rgba(9, 17, 34, .12);
+
+    --text-shadow-amber: var(--transparent);
+    --text-shadow-blue: var(--transparent);
+    --text-shadow-green: var(--transparent);
+    --text-shadow-red: var(--transparent);
+    --text-shadow-purple: var(--transparent);
+    --text-shadow-orange: var(--transparent);
+
+    --accent-shadow-a: rgba(136, 164, 230, .4);
+    --accent-shadow-b: rgba(136, 164, 230, .28);
+    --accent-shadow-c: rgba(136, 164, 230, .24);
 }
 
-[data-theme="dark"] {
-    --bg-color: #313131;
-    --primary: #212121;
-    --primary-dark: #000;
-    --primary-light: #292929;
-    --white: #313131;
-    --background: var(--white);
-    --card-bg-color: #424242;
-    --accent: #7baaf7;
-    --primary-text: #FFF;
-    --secondary-text: rgba(255, 255, 255, .7);
-    --disabled-text: rgba(255, 255, 255, .5);
-    --shadowed-text-color: #fff;
-    --primary-text-inverted: rgba(0, 0, 0, .9);
-    --secondary-text-inverted: rgba(0, 0, 0, .7);
-    --disabled-text-inverted: rgba(0, 0, 0, .6);
-    --github: #eee;
-}
-
-[data-theme="dark"] .shadowed-sm {
-    color: var(--shadowed-text-color) !important;
-    text-shadow: none !important;
-}
-
-[data-theme="dark"] .shadowed {
-    color: var(--shadowed-text-color) !important;
-    text-shadow: none !important;
-}
-
-[data-theme="dark"] .social-btn:not(.is-github):not(.is-play):not(.is-bmac):not(.is-kofi):not(.is-donorbox):not(.is-patreon):not(.is-liberapay) .mdi {
-    color: var(--primary-text) !important;
-}
-
-[data-theme="dark"] .social-btn.is-github .mdi {
-    color: var(--primary-text-inverted) !important;
-}
-
-[data-theme="dark"] .social-btn.is-play .mdi {
-    color: var(--disabled-text-inverted) !important;
-}
-
-[data-theme="dark"] [data-balloon]:after {
-    background-color: var(--primary-text) !important;
-    color: var(--primary-text-inverted) !important;
-}
-
-[data-theme="dark"] [data-balloon]:before {
-    background: no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba(255, 255, 255, 1)%22%20transform%3D%22rotate(0)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");
-}
-
-[data-theme="dark"] [data-balloon][data-balloon-pos='down']:before {
-    background: no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba(255, 255, 255, 1)%22%20transform%3D%22rotate(180 18 6)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");
-}
-
-[data-theme="dark"] [data-balloon][data-balloon-pos='down-left']:before {
-    background: no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba(255, 255, 255, 1)%22%20transform%3D%22rotate(180 18 6)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");
-}
-
-[data-theme="dark"] [data-balloon][data-balloon-pos='down-right']:before {
-    background: no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2236px%22%20height%3D%2212px%22%3E%3Cpath%20fill%3D%22rgba(255, 255, 255, 1)%22%20transform%3D%22rotate(180 18 6)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");
-}
-
-[data-theme="dark"] [data-balloon][data-balloon-pos='left']:before {
-    background: no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2212px%22%20height%3D%2236px%22%3E%3Cpath%20fill%3D%22rgba(255, 255, 255, 1)%22%20transform%3D%22rotate(-90 18 18)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");
-}
-
-[data-theme="dark"] [data-balloon][data-balloon-pos='right']:before {
-    background: no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2212px%22%20height%3D%2236px%22%3E%3Cpath%20fill%3D%22rgba(255, 255, 255, 1)%22%20transform%3D%22rotate(90 6 6)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");
-}
-
-[data-theme="dark"] .button.w-border:not(.is-active),
-[data-theme="dark"] .button.is-rounded:not(.is-active) {
-    border: 1px solid #fafafa !important;
-    background-color: var(--card-bg-color);
-    color: #fff;
-}
-
-[data-theme="dark"] .label {
-    color: var(--primary-text) !important;
-}
-
-[data-theme="dark"] .input, .textarea {
-    background-color: var(--card-bg-color) !important;
-    color: var(--primary-text) !important;
-}
-
-[data-theme="dark"] img {
-    color: var(--secondary-text) !important;
-}
-
-input::placeholder {
-    color: var(--disabled-text) !important;
-}
-
-input::-webkit-input-placeholder {
-    color: var(--disabled-text) !important;
-}
-
-input::-moz-placeholder {
-    color: var(--disabled-text) !important;
-}
-
-input:-ms-input-placeholder {
-    color: var(--disabled-text) !important;
-}
-
-input:-moz-placeholder {
-    color: var(--disabled-text) !important;
-}
-
-textarea::placeholder {
-    color: var(--disabled-text) !important;
-}
-
-textarea::-webkit-input-placeholder {
-    color: var(--disabled-text) !important;
-}
-
-textarea::-moz-placeholder {
-    color: var(--disabled-text) !important;
-}
-
-textarea:-ms-input-placeholder {
-    color: var(--disabled-text) !important;
-}
-
-textarea:-moz-placeholder {
-    color: var(--disabled-text) !important;
+.is-dark section.colored,
+.is-dark .footer,
+.is-dark .hero-foot {
+    background-color: var(--background);
 }

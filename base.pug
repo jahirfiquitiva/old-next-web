@@ -1,0 +1,11 @@
+extends main
+
+block real-content
+  section.hero.is-fullheight-with-navbar
+    include navbar
+    .hero-body
+      .container
+        block main-content
+    hr(aria-hidden="true")
+    .hero-foot
+      include actual-footer
