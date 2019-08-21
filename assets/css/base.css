@@ -374,5 +374,12 @@ section.colored,
     /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
-    /* added line */
+}
+
+.social-links li {
+    display: inline-block;
+}
+
+.social-links li:not(:first-child) {
+    margin-left: .6rem;
 }

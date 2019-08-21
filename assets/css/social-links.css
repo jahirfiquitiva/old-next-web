@@ -1,12 +1,3 @@
-.social-links li {
-    display: inline-block;
-}
-
-.social-links li:not(:first-child) {
-    margin-left: .6rem;
-}
-
-
 a.social-link {
     --social-color: var(--accent);
     --social-color-inverted: var(--white);
