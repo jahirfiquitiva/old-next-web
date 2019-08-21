@@ -376,6 +376,12 @@ section.colored,
     white-space: nowrap;
 }
 
+.content ul.social-links {
+    list-style: none;
+    margin-left: 0;
+    margin-top: .8rem;
+}
+
 .social-links li {
     display: inline-block;
 }
