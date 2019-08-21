@@ -41,8 +41,8 @@ function filterProjects() {
       const column = document.createElement('div');
       column.classList.add('column');
       column.classList.add('is-6-mobile');
-      column.classList.add('is-2-tablet');
-      column.classList.add('is-2-desktop');
+      column.classList.add('is-3-tablet');
+      column.classList.add('is-3-desktop');
       column.classList.add('is-2-fullhd');
 
       const link = document.createElement('a');

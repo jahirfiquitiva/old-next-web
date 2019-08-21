@@ -182,10 +182,6 @@ a .card:focus * {
         max-width: 90%;
         margin: auto;
     }
-
-    #projects .column.is-6-mobile {
-        width: 20%;
-    }
 }
 
 @media (min-width: 1200px) {
@@ -196,6 +192,10 @@ a .card:focus * {
 
     #projects .card .title {
         font-size: 1.3rem;
+    }
+
+    #projects .column.is-6-mobile {
+        width: 20%;
     }
 }
 
