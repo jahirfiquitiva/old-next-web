@@ -1,10 +1,11 @@
+.social-links li {
+    display: inline-block;
+}
+
 .social-links li:not(:first-child) {
     margin-left: .6rem;
 }
 
-.social-links li {
-    display: inline-block;
-}
 
 a.social-link {
     --social-color: var(--accent);
