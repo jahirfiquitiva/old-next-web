@@ -165,37 +165,49 @@ p strong {
 }
 
 h1,
-.content h1 {
-    font-size: 3rem;
-    font-weight: 700;
+.content h1,
+.is-size-1 {
+    font-size: 3rem !important;
+    font-weight: 700 !important;
 }
 
 h2,
-.content h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
+.content h2,
+.is-size-2 {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
 }
 
 h3,
-.content h3 {
-    font-size: 2rem;
-    font-weight: 700;
+.content h3,
+.is-size-3 {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
 }
 
 h4,
-.content h4 {
-    font-size: 1.6rem;
-    font-weight: 600;
+.content h4,
+.is-size-4 {
+    font-size: 1.6rem !important;
+    font-weight: 600 !important;
 }
 
 h5,
-.content h5 {
-    font-size: 1.3rem;
-    font-weight: 600;
+.content h5,
+.is-size-5 {
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
 }
 
-h6, p,
+h6,
 .content h6,
+.is-size-6,
+.is-size-7 {
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+}
+
+p,
 .content p {
     font-size: 1.1rem;
     font-weight: 500;

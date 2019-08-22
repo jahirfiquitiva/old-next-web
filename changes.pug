@@ -9,13 +9,14 @@ block custom-css
 block main-content
   .content.has-text-centered
     h1.is-primary-text.text-shadow.is-orange Changes &#x2728;
-    h5.is-secondary-text
+    p.is-secondary-text.is-size-5
       | The latest changes for the&nbsp;
       a.link(href='https://jahir.xyz/github') GitHub
       | &nbsp;repositories I own or contribute to
     a.button.is-paypal(target='_blank' href='/donate')
       i.mdi.mdi-gift(style='color:var(--white);margin-right: .8rem !important;')
       | Support
+    br
     br
     a#loading-btn.button.is-loading.is-large Loading...
   .content

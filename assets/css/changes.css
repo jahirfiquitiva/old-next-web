@@ -89,3 +89,13 @@ a.button.is-paypal {
     --shadow-b: rgba(0, 48, 135, .28);
     --shadow-c: rgba(0, 48, 135, .24);
 }
+
+.card.change .card-footer {
+    padding-top: .2rem;
+    padding-bottom: .8rem;
+}
+
+.tag:not(body).is-primary {
+    background-color: var(--accent);
+    color: var(--secondary-text-inverted);
+}

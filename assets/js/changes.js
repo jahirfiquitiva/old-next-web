@@ -18,7 +18,6 @@ function getLatestReleaseInfo(user, repo, updateWiki, translate, key) {
             column.classList.add('is-one-third-desktop');
 
             // Create box
-
             let box = document.createElement('div');
             box.classList.add('card');
             box.classList.add('change');
