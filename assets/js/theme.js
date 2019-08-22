@@ -30,8 +30,10 @@ function updateThemeSwitch() {
   if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
     if (currentTheme === 'dark') {
+      document.querySelector('meta[name=\'theme-color\']').setAttribute('content', '#020409');
       document.body.classList.add('is-dark');
     } else {
+      document.querySelector('meta[name=\'theme-color\']').setAttribute('content', '#ebf0fb');
       document.body.classList.remove('is-dark');
     }
     try {
