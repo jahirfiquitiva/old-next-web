@@ -27,29 +27,6 @@
     right: .8em;
 }
 
-.card {
-    --bord-col: rgba(116, 125, 140, .1);
-    --shadow-col: rgba(116, 125, 140, .25);
-    --bord-hover-col: var(--bord-col);
-    --shadow-hover-col: var(--shadow-col);
-    --link-col: var(--accent);
-    background-color: var(--card-bg-color);
-    border-radius: 6px !important;
-    -webkit-box-shadow: 0 2px 3px var(--bord-col), 0 0 0 1px var(--bord-col);
-    -moz-box-shadow: 0 2px 3px var(--bord-col), 0 0 0 1px var(--bord-col);
-    box-shadow: 0 2px 3px var(--bord-col), 0 0 0 1px var(--bord-col);
-    -webkit-transition: all ease-in-out .3s;
-    -moz-transition: all ease-in-out .3s;
-    -ms-transition: all ease-in-out .3s;
-    -o-transition: all ease-in-out .3s;
-    transition: all ease-in-out .3s;
-}
-
-.is-dark .card {
-    --bord-col: rgba(175, 194, 239, .1);
-    --shadow-col: rgba(175, 194, 239, .25);
-}
-
 .icon {
     margin: auto !important;
     margin-bottom: 1rem !important;
@@ -77,18 +54,6 @@ a .card:focus,
 a .card:hover *,
 a .card:focus * {
     cursor: pointer !important;
-}
-
-.card:not(.change):hover,
-.card:not(.change):focus {
-    -webkit-box-shadow: 0 4px 12px 1px var(--shadow-hover-col), 0 0 0 1px var(--bord-hover-col);
-    -moz-box-shadow: 0 4px 12px 1px var(--shadow-hover-col), 0 0 0 1px var(--bord-hover-col);
-    box-shadow: 0 4px 12px 1px var(--shadow-hover-col), 0 0 0 1px var(--bord-hover-col);
-    -webkit-transform: translate(0, -.12rem);
-    -moz-transform: translate(0, -.12rem);
-    -ms-transform: translate(0, -.12rem);
-    -o-transform: translate(0, -.12rem);
-    transform: translate(0, -.12rem);
 }
 
 #projects .card .card-content {
