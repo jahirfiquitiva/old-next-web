@@ -149,7 +149,7 @@ function setupProjectsUI() {
 
 function loadProjects() {
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', './assets/data/projects.json', true);
+  xhr.open('GET', '/assets/data/projects.json', true);
   xhr.onreadystatechange = () => {
     if (xhr.readyState === 4 && xhr.status === 200) {
       try {

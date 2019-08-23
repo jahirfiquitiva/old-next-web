@@ -4,7 +4,7 @@ function getRandomColor() {
 
 function loadSupporters() {
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', './assets/data/supporters.json', true);
+  xhr.open('GET', '/assets/data/supporters.json', true);
   xhr.onreadystatechange = () => {
     if (xhr.readyState === 4 && xhr.status === 200) {
       try {

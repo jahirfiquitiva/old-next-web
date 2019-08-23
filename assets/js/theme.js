@@ -17,10 +17,10 @@ const setupLogo = () => {
   // TODO: Add more month-styled logos
   if (month === 6) logoName = '6';
   if (logo) {
-    logo.setAttribute('src', './assets/images/brand/logo-' + logoName + '.svg');
+    logo.setAttribute('src', '/assets/images/brand/logo-' + logoName + '.svg');
     logo.setAttribute('onerror',
       'this.onerror=null;' +
-      'this.src=\'./assets/images/brand/logo-' + logoName + '.png\'');
+      'this.src=\'/assets/images/brand/logo-' + logoName + '.png\'');
   }
   let copy = document.getElementById('copyright-notice');
   if (copy) copy.innerHTML = `Copyright © ${date.getFullYear()} | All Rights Reserved`;
