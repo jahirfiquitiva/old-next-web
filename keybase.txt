@@ -4,7 +4,7 @@ https://keybase.io/jahirfiquitiva
 
 I hereby claim:
 
-  * I am an admin of https://jahirfiquitiva.com
+  * I am an admin of https://jahir.dev
   * I am jahirfiquitiva (https://keybase.io/jahirfiquitiva) on keybase.
   * I have a public key ASBcPcwEhLbr2lBk-D2-sMz6ZnN_WsR0ua0UGYe1OqLsowo
 
@@ -27,7 +27,7 @@ To do so, I am signing this object:
     },
     "service": {
       "entropy": "azyeYRnwQkwO/Io9XplgaDXE",
-      "hostname": "jahirfiquitiva.com",
+      "hostname": "jahir.dev",
       "protocol": "https:"
     },
     "type": "web_service_binding",

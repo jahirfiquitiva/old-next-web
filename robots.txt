@@ -5,4 +5,4 @@ Disallow: /blog/
 Disallow: /frames/
 Disallow: /gallery/
 Disallow: /share/
-Sitemap: https://jahirfiquitiva.com/sitemap.xml
+Sitemap: https://jahir.dev/sitemap.xml

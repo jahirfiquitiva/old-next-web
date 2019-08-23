@@ -5,27 +5,27 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>https://jahirfiquitiva.com/</loc>
+        <loc>https://jahir.dev/</loc>
         <lastmod>2019-08-22T21:03:43+00:00</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://jahirfiquitiva.com/donate</loc>
+        <loc>https://jahir.dev/donate</loc>
         <lastmod>2019-08-22T21:03:43+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://jahirfiquitiva.com/contact</loc>
+        <loc>https://jahir.dev/contact</loc>
         <lastmod>2019-08-22T21:03:43+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://jahirfiquitiva.com/dashsetup</loc>
+        <loc>https://jahir.dev/dashsetup</loc>
         <lastmod>2019-08-22T21:03:43+00:00</lastmod>
         <priority>0.50</priority>
     </url>
     <url>
-        <loc>https://jahirfiquitiva.com/changes</loc>
+        <loc>https://jahir.dev/changes</loc>
         <lastmod>2019-08-22T21:03:43+00:00</lastmod>
         <priority>0.50</priority>
     </url>
