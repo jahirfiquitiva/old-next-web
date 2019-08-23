@@ -213,6 +213,10 @@ p,
     font-weight: 500;
 }
 
+.hero {
+    z-index: 1;
+}
+
 #particles-bg {
     position: fixed !important;
     height: 100vh;
