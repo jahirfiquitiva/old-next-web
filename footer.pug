@@ -1,3 +1,12 @@
 footer.footer
-  .container
-    include actual-footer
+  .container.has-text-centered
+    include social-btns
+    br
+    p(style='margin-bottom: .8rem') Made with&nbsp;
+      span.mdi.mdi-heart(aria-hidden="true")
+      span.visually-hidden love
+      | &nbsp;by&nbsp;
+      a(href='/') yours truly
+    p#copyright-notice(style='font-size: .9rem') Copyright © #{new Date().getFullYear()}
+      span(aria-hidden="true") &nbsp;|&nbsp;
+      | All Rights Reserved
