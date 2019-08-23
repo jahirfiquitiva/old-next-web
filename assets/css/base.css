@@ -276,6 +276,7 @@ section.colored,
 .footer,
 .hero-foot {
     padding: 4.2rem 1.6rem;
+    z-index: inherit;
 }
 
 .button {
