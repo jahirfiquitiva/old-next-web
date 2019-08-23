@@ -268,13 +268,11 @@ details p {
 }
 
 section.colored,
-.footer,
-.hero-foot {
+.footer {
     background-color: #f6f9fe;
 }
 
-.footer,
-.hero-foot {
+.footer {
     padding: 4.2rem 1.6rem;
 }
 

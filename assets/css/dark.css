@@ -59,7 +59,6 @@
 }
 
 .is-dark section.colored,
-.is-dark .footer,
-.is-dark .hero-foot {
+.is-dark .footer {
     background-color: var(--background);
 }
