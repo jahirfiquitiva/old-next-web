@@ -254,13 +254,80 @@ details[open] summary ~ * {
     animation: sweep .5s ease-in-out;
 }
 
+summary::-webkit-details-marker {
+    color: #fff;
+    padding-right: .2rem;
+}
+
 @keyframes sweep {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
 
 details summary.button {
-    height: 1.6em;
+    min-height: 1.6em;
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+}
+
+
+/*noinspection CssInvalidPseudoSelector*/
+_::-webkit-full-page-media, _:future, :root details summary.button {
+    display: block;
+    text-align: center;
+    min-height: 2rem;
+    height: 2rem;
+    width: 144px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: .4rem;
+    padding-bottom: 0;
+}
+
+@media only screen and (min-width: 375px) {
+    /*noinspection CssInvalidPseudoSelector*/
+    _::-webkit-full-page-media, _:future, :root details summary.button {
+        display: block;
+        text-align: center;
+        min-height: 1.6rem;
+        width: 144px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: .2rem;
+        padding-bottom: .2rem;
+    }
+}
+
+@media screen and (min-color-index: 0) and(-webkit-min-device-pixel-ratio: 0) {
+    @media {
+        details summary.button {
+            display: block;
+            text-align: center;
+            min-height: 2rem;
+            height: 2rem;
+            width: 144px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: .4rem;
+            padding-bottom: 0;
+        }
+    }
+}
+
+@media not all and (min-resolution: .001dpcm) {
+    @media {
+        details summary.button {
+            display: block;
+            text-align: center;
+            min-height: 2rem;
+            height: 2rem;
+            width: 144px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: .4rem;
+            padding-bottom: 0;
+        }
+    }
 }
 
 details p {
