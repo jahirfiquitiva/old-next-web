@@ -186,7 +186,6 @@ a.navbar-item.is-active {
     height: 168px;
     border-radius: 50%;
     background-color: var(--primary-dark);
-    background-image: url("./../../assets/images/me/avatar.svg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -194,9 +193,4 @@ a.navbar-item.is-active {
     -webkit-box-shadow: 3px 3px 0 0 var(--text-shadow-blue);
     -moz-box-shadow: 3px 3px 0 0 var(--text-shadow-blue);
     box-shadow: 3px 3px 0 0 var(--text-shadow-blue);
-}
-
-.avatar:hover,
-.avatar:focus {
-    background-image: url("./../../assets/images/me/me.jpg");
 }
