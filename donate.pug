@@ -29,29 +29,20 @@ block main-content
         | Whatever I receive, will be highly appreciated!
       br
       p.has-text-justified
-        strong Monthly donations:
-      ul.social-links(aria-label="Monthly donation options links")
+        strong Donation Options:
+      ul.social-links(aria-label="Donation options links")
         li
-          a.button.social-link.is-github(href='https://github.com/users/jahirfiquitiva/sponsorship' aria-label='GitHub Sponsors')
+          a.button.social-link.donation-button.is-github(href='https://github.com/users/jahirfiquitiva/sponsorship' aria-label='GitHub Sponsors')
             span.mdi.mdi-18px.mdi-github-circle(aria-hidden='true')
-      p.has-text-justified
-        strong One-time donations:
-      ul.social-links(aria-label="One-time donation options links")
+            | GitHub Sponsors
         li
-          a.button.social-link.is-paypal(href='https://paypal.me/jahirfiquitiva' target='_blank' aria-label='PayPal')
+          a.button.social-link.donation-button.is-paypal(href='https://paypal.me/jahirfiquitiva' target='_blank' aria-label='PayPal')
             span.mdi.mdi-18px.mdi-paypal(aria-hidden="true")
+            | PayPal
         li
-          a.button.social-link.is-bmac(href='https://www.buymeacoffee.com/jahirfiquitiva' target='_blank' aria-label='Buy me a Coffee')
-            span.mdi.mdi-18px.mdi-star-four-points(aria-hidden="true")
-        li
-          a.button.social-link.is-kofi(href='https://ko-fi.com/jahirfiquitiva' target='_blank' aria-label='Ko-fi')
+          a.button.social-link.donation-button.is-bmac(href='https://www.buymeacoffee.com/jahirfiquitiva' target='_blank' aria-label='Buy me a Coffee')
             span.mdi.mdi-18px.mdi-coffee(aria-hidden="true")
-        li
-          a.button.social-link.is-donorbox(href='https://donorbox.org/jahirfiquitiva' target='_blank' aria-label='DonorBox')
-            span.mdi.mdi-18px.mdi-heart-box-outline(aria-hidden="true")
-        li
-          a.button.social-link.is-liberapay(href='https://liberapay.com/jahirfiquitiva' target='_blank' aria-label='Liberapay')
-            span.mdi.mdi-18px.mdi-credit-card(aria-hidden="true")
+            | Buy Me A Coffee
     br
     br
     br
