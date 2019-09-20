@@ -77,7 +77,7 @@ a.social-link.is-patreon {
 a.social-link.donation-button {
     padding: 1.2rem .8rem !important;
     max-height: 44px;
-    margin-right: .6rem;
+    margin-right: 1rem;
     font-size: 1.05rem;
 }
 
@@ -85,8 +85,8 @@ a.social-link.donation-button .mdi {
     margin-right: .8rem;
 }
 
-.buttons .button {
-    margin-bottom: .8rem;
+.donation-buttons .button {
+    margin-bottom: 1rem;
 }
 
 .buttons .button:not(:last-child):not(.is-fullwidth) {
@@ -96,6 +96,11 @@ a.social-link.donation-button .mdi {
 .buttons.is-centered:not(.has-addons) .button:not(.is-fullwidth) {
     margin-left: .4rem;
     margin-right: .4rem;
+}
+
+.donation-buttons li,
+.donation-buttons li + li {
+    margin-top: .25rem;
 }
 
 a.button.is-supporter {

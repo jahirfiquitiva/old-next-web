@@ -467,7 +467,7 @@ section.colored,
     display: inline-block;
 }
 
-.social-links li:not(:first-child) {
+.social-links:not(.donation-buttons) li:not(:first-child) {
     margin-left: .6rem;
 }
 
