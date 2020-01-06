@@ -1,6 +1,7 @@
 @import "./../fonts/mdi/materialdesignicons.css";
 @import "./../fonts/manrope/manrope.css";
 @import "./../fonts/inter/inter.css";
+@import "./../fonts/firacode/fira_code.css";
 @import "./bounce.css";
 @import "./dark.css";
 @import "./social-links.css";
@@ -208,7 +209,8 @@ h6,
 }
 
 p,
-.content p {
+.content p,
+.content ul li {
     font-size: 1.1rem;
     font-weight: 500;
 }
@@ -234,13 +236,17 @@ hr {
     background-color: var(--dividers);
 }
 
-p a {
+p a,
+.content ul li a {
     color: var(--accent);
 }
 
 p a:active,
 p a:hover,
-p a:focus {
+p a:focus,
+.content ul li a:active,
+.content ul li a:hover,
+.content ul li a:focus {
     color: var(--accent);
     text-decoration: underline wavy var(--accent) !important;
     text-decoration-skip: ink !important;
@@ -504,4 +510,12 @@ section.colored,
     -ms-transform: translate(0, -.12rem);
     -o-transform: translate(0, -.12rem);
     transform: translate(0, -.12rem);
+}
+
+code {
+    background-color: rgba(0, 0, 0, .05);
+    color: var(--accent);
+    font-family: 'Fira Code', monospace;
+    padding: .3em;
+    border-radius: 2px;
 }
