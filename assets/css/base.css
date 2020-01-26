@@ -236,17 +236,17 @@ hr {
     background-color: var(--dividers);
 }
 
-p a,
-.content ul li a {
+p a:not(.donation-button),
+.content ul li a:not(.donation-button) {
     color: var(--accent);
 }
 
-p a:active,
-p a:hover,
-p a:focus,
-.content ul li a:active,
-.content ul li a:hover,
-.content ul li a:focus {
+p a:not(.donation-button):active,
+p a:not(.donation-button):hover,
+p a:not(.donation-button):focus,
+.content ul li a:not(.donation-button):active,
+.content ul li a:not(.donation-button):hover,
+.content ul li a:not(.donation-button):focus {
     color: var(--accent);
     text-decoration: underline wavy var(--accent) !important;
     text-decoration-skip: ink !important;
