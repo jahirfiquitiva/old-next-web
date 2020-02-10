@@ -261,7 +261,7 @@ details[open] summary ~ * {
 }
 
 summary::-webkit-details-marker {
-    color: #fff;
+    color: var(--primary-text-inverted);
     padding-right: .2rem;
 }
 
@@ -275,7 +275,6 @@ details summary.button {
     padding-top: .1rem;
     padding-bottom: .1rem;
 }
-
 
 /*noinspection CssInvalidPseudoSelector*/
 _::-webkit-full-page-media, _:future, :root details summary.button {
