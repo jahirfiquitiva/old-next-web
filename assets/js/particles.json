@@ -45,7 +45,7 @@
                 "sync": false
             }
         },
-        "line_linked": {
+        "lineLinked": {
             "enable": true,
             "distance": 150,
             "color": "#3867d6",
@@ -62,8 +62,10 @@
             "bounce": true,
             "attract": {
                 "enable": true,
-                "rotateX": 600,
-                "rotateY": 1200
+                "rotate": {
+                    "x": 600,
+                    "y": 1200
+                }
             }
         }
     },
@@ -99,10 +101,10 @@
                 "duration": 0.4
             },
             "push": {
-                "particles_nb": 3
+                "quantity": 3
             },
             "remove": {
-                "particles_nb": 2
+                "quantity": 2
             }
         }
     },
