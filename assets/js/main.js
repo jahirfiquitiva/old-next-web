@@ -14,7 +14,7 @@ const changeHello = () => {
 };
 
 function initParticles() {
-  particlesJS.load('particles-bg', 'assets/js/particles.json');
+  tsParticles.loadJSON('particles-bg', 'assets/js/particles.json');
 }
 
 document.addEventListener('DOMContentLoaded', () => {

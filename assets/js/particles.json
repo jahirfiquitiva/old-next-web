@@ -68,13 +68,13 @@
         }
     },
     "interactivity": {
-        "detect_on": "window",
+        "detectsOn": "window",
         "events": {
-            "onhover": {
+            "onHover": {
                 "enable": false,
                 "mode": "grab"
             },
-            "onclick": {
+            "onClick": {
                 "enable": false,
                 "mode": "push"
             },
@@ -83,7 +83,7 @@
         "modes": {
             "grab": {
                 "distance": 200,
-                "line_linked": {
+                "lineLinked": {
                     "opacity": 0.4
                 }
             },
@@ -106,5 +106,5 @@
             }
         }
     },
-    "retina_detect": true
+    "detectsRetina": true
 }

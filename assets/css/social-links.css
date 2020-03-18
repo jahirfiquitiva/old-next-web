@@ -15,10 +15,6 @@ a.social-link {
     transition: all .15s ease-in;
 }
 
-a.social-link .mdi {
-    padding-top: .2rem;
-}
-
 a.social-link:hover,
 a.social-link:focus,
 a.social-link:active,
