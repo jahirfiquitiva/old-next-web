@@ -16,8 +16,14 @@
 	}, {
 		"name": "Taratiano",
 		"photo": "https://unavatar.now.sh/python",
-		"description": "My name is taratino",
+		"description": "My name is taratiano",
 		"instagram": "https://instagram.com",
 		"linkedin": "https://linkedin.com"
+	},{
+		"name": "Someone",
+		"photo": "https://unavatar.now.sh/gseth83",
+		"description": "My name is Gaurav",
+		"website": "https://mywallapp.com",
+		"github": "https://github.com",
 	}
 ]
