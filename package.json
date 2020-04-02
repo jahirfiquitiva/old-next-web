@@ -2,6 +2,9 @@
   "name": "website",
   "author": "Jahir Fiquitiva",
   "dependencies": {
+    "@mdi/font": "^5.0.45",
+    "@webdeb/next-styles": "^1.0.8",
+    "bulma": "^0.8.1",
     "front-matter": "^3.1.0",
     "gray-matter": "^4.0.2",
     "next": "^9.3.4",
@@ -9,14 +12,18 @@
     "raw-loader": "^4.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-markdown": "^4.3.1"
+    "react-helmet": "^5.2.1",
+    "react-markdown": "^4.3.1",
+    "sass": "^1.26.3"
   },
   "scripts": {
+    "clean": "rm -rf .next && rm -rf out",
     "dev": "next",
     "build": "next build",
     "preexport": "npm run build",
     "export": "next export",
     "deploy": "npm run export",
+    "prestart": "npm run clean",
     "start": "npm run dev"
   },
   "devDependencies": {

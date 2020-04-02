@@ -1,10 +1,14 @@
 import React from 'react';
-import Link from 'next/link';
+import Home from '../components/home/home';
+import FirstSection from '../components/base/first-section/first-section';
+import Button from '../components/home/button/button';
 
 const Index = () => (
   <>
-    <h1>Hello world, my name is Jahir!</h1>
-    <Link href={'/blog'}><a>Read my blog posts</a></Link>
+    <FirstSection colored={true} activeSection={0}>
+      <Home/>
+      <Button/>
+    </FirstSection>
   </>
 );
 

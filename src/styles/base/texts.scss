@@ -1,0 +1,80 @@
+@charset "utf-8";
+@import "base";
+
+h1 {
+  font-size: $size-1;
+  font-family: $family-manrope;
+  font-weight: $weight-bold;
+}
+
+h2 {
+  font-size: $size-2;
+  font-family: $family-manrope;
+  font-weight: $weight-semibold;
+}
+
+h3 {
+  font-size: $size-3;
+  font-family: $family-manrope;
+  font-weight: $weight-medium;
+}
+
+h4 {
+  font-size: $size-4;
+  font-weight: $weight-medium;
+}
+
+h5 {
+  font-size: $size-5;
+  font-weight: $weight-normal;
+}
+
+h6 {
+  font-size: $size-6;
+  font-weight: $weight-normal;
+}
+
+p, pre, code {
+  font-size: $size-6;
+  font-weight: $weight-normal;
+}
+
+.is-manrope {
+  font-family: $family-manrope;
+}
+
+.has-text-shadow {
+  text-shadow: 3px 3px 0 $primary-light;
+}
+
+.has-text-shadow.is-orange {
+  text-shadow: 3px 3px 0 $orange-light;
+}
+
+.has-text-shadow.is-yellow {
+  text-shadow: 3px 3px 0 $yellow-light;
+}
+
+.has-text-shadow.is-green {
+  text-shadow: 3px 3px 0 $green-light;
+}
+
+.has-text-shadow.is-turquoise {
+  text-shadow: 3px 3px 0 $turquoise-light;
+}
+
+.has-text-shadow.is-cyan {
+  text-shadow: 3px 3px 0 $cyan-light;
+}
+
+.has-text-shadow.is-blue {
+  text-shadow: 3px 3px 0 $blue-light;
+}
+
+.has-text-shadow.is-purple {
+  text-shadow: 3px 3px 0 $purple-light;
+}
+
+.has-text-shadow.is-red {
+  text-shadow: 3px 3px 0 $red-light;
+}

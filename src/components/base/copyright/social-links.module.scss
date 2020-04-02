@@ -1,0 +1,54 @@
+ul.social-links {
+  list-style: none;
+
+  li {
+    display: inline-block;
+  }
+
+  &:not(.donation-buttons) li:not(:first-child) {
+    margin-left: .6rem;
+  }
+}
+
+a.social-link {
+  min-width: 36px;
+  max-height: 36px;
+  padding: 0;
+  font-size: 1.2rem;
+  vertical-align: middle;
+  color: #fff;
+
+  &:hover, &:focus, &.is-active {
+    color: #fff;
+  }
+
+  &.is-twitter {
+    background: #1da1f2;
+    border-color: #1da1f2;
+  }
+
+  &.is-github {
+    background: #212121;
+    border-color: #212121;
+  }
+
+  &.is-linkedin {
+    background: #0077b5;
+    border-color: #0077b5;
+  }
+
+  &.is-google-play {
+    background: #3ce18e;
+    border-color: #3ce18e;
+    color: rgba(0, 0, 0, 0.6);
+
+    &:hover, &:focus, &.is-active {
+      color: rgba(0, 0, 0, 0.85);
+    }
+  }
+
+  &.is-telegram {
+    background: #179cde;
+    border-color: #179cde;
+  }
+}

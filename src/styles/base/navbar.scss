@@ -1,0 +1,50 @@
+@charset "utf-8";
+@import "texts";
+
+.navbar.has-shadow {
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, .08), 0 3px 4px 0 rgba(0, 0, 0, .06), 0 1px 5px 0 rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, .08), 0 3px 4px 0 rgba(0, 0, 0, .06), 0 1px 5px 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, .08), 0 3px 4px 0 rgba(0, 0, 0, .06), 0 1px 5px 0 rgba(0, 0, 0, .2);
+}
+
+.navbar-link.is-active,
+.navbar-link:focus,
+.navbar-link:focus-within,
+.navbar-link:hover,
+a.navbar-item.is-active,
+a.navbar-item:focus,
+a.navbar-item:focus-within,
+a.navbar-item:hover {
+  padding-top: .7rem;
+  border-bottom: 3px solid $text;
+}
+
+.navbar-link.is-active, a.navbar-item.is-active {
+  border-bottom: 3px solid $primary;
+}
+
+.navbar-brand .navbar-link,
+.navbar-brand .navbar-item {
+  padding-left: 0;
+}
+
+.navbar-brand .navbar-link.is-active,
+.navbar-brand .navbar-link:focus,
+.navbar-brand .navbar-link:focus-within,
+.navbar-brand .navbar-link:hover,
+.navbar-brand a.navbar-item.is-active,
+.navbar-brand a.navbar-item:focus,
+.navbar-brand a.navbar-item:focus-within,
+.navbar-brand a.navbar-item:hover {
+  padding-top: .5rem;
+  border-bottom: none;
+  background: $navbar-item-hover-background-color;
+}
+
+button.navbar-button, .button.navbar-button {
+  letter-spacing: normal;
+}
+
+.hero .navbar {
+  background: $navbar-background-color;
+}
