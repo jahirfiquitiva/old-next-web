@@ -1,5 +1,5 @@
 module.exports = {
-  webpack: function (config) {
+  webpack(config) {
     config.module.rules.push({
       test: /\.md$/,
       use: 'raw-loader',
