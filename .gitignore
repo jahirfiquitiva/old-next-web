@@ -192,4 +192,3 @@ $RECYCLE.BIN/
 *.lnk
 package-lock.json
 .cache/
-public/
