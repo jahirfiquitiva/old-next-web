@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Head from 'next/head';
 import getBlogPosts from '../../utils/get-posts';
 import Post from '../../components/post';
@@ -18,11 +19,15 @@ const IndexPage = ({ posts }) => (
     <h1>List of posts</h1>
 
     <section>
-      {posts.map((post) => (
+      {(posts || []).map((post) => (
         <Post {...post} key={post.id}/>
       ))}
     </section>
   </main>
 );
+
+IndexPage.propTypes = {
+  posts: PropTypes.array,
+};
 
 export default IndexPage;

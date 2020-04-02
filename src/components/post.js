@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-const Post = ({ id, title, date, description }) => (
+const Post = ({
+  id, title, date, description,
+}) => (
   <Link href={'/blog/[id]'} as={`/blog/${id}`}>
     <article style={{
       border: '2px solid #000',

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import getBlogPosts from '../../utils/get-posts';
@@ -25,19 +26,24 @@ export async function getStaticProps({ params }) {
 }
 
 const Post = ({ post }) => {
-  if (!post) return (<></>);
+  if (!post || !post.title) return (<></>);
 
   return (
     <>
       <h1>{post.title}</h1>
+      <p>{post.date}</p>
 
-      <ReactMarkdown source={post.body}/>
+      <ReactMarkdown source={post.body || ''}/>
 
       <Link href={'/'}>
         <a>Go back to home</a>
       </Link>
     </>
   );
+};
+
+Post.propTypes = {
+  post: PropTypes.object.isRequired,
 };
 
 export default Post;
