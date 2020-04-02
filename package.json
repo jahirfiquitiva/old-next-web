@@ -1,33 +1,24 @@
 {
-  "name": "website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "with-static-export",
+  "dependencies": {
+    "front-matter": "^3.1.0",
+    "gray-matter": "^4.0.2",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "latest",
+    "prop-types": "^15.7.2",
+    "raw-loader": "^4.0.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-markdown": "^4.3.1",
+    "serve": "11.2.0"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jahirfiquitiva/web.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jahirfiquitiva/web/issues"
-  },
-  "homepage": "https://github.com/jahirfiquitiva/web#readme",
-  "dependencies": {
-    "gray-matter": "^4.0.2",
-    "next": "^9.3.4",
-    "node-glob": "^1.2.0",
-    "raw-loader": "^4.0.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "front-matter": "^3.1.0",
-    "react-markdown": "^4.3.1"
+    "preexport": "npm run build",
+    "export": "next export",
+    "prestart": "npm run export",
+    "start": "serve out"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
