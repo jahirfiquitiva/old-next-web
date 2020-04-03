@@ -50,10 +50,10 @@ const Toolbar = ({ activeItemIndex = -1 }) => {
                 Jahir Fiquitiva
               </a>
               <span className={'navbar-burger burger'} data-target={'nav-menu'}>
-            <span/>
-            <span/>
-            <span/>
-          </span>
+                <span/>
+                <span/>
+                <span/>
+              </span>
             </div>
             <div className={'navbar-menu'} id={'nav-menu'}>
               <div className={'navbar-end'}>

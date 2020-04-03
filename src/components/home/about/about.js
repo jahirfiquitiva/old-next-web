@@ -3,6 +3,7 @@ import MDIconText from '../../base/mdi/mdicon-text';
 import TextLink from '../../base/link/text-link';
 import SocialLinks from '../../base/copyright/social-links';
 import Button from '../button/button';
+import styles from './about.module.scss';
 
 const hellos = ['Hello, world', 'Hola, mundo', 'Ciao, mondo', 'Hallo, Welt', 'Salut, monde',
   'Olá, mundo'];
@@ -48,7 +49,7 @@ const About = () => {
 
   return (
     <div className={'has-text-centered'}>
-      <img className={'avatar'} src={'/images/me/me.jpg'} alt={'Jahir Fiquitiva'}/>
+      <img className={styles.avatar} src={'/images/me/me.jpg'} alt={'Jahir Fiquitiva'}/>
       <br/><br/>
       <h3 className={'has-text-shadow has-text-weight-semibold is-yellow'}>{hellos[hello]}! 👋</h3>
       <h3 className={'has-text-shadow has-text-weight-semibold is-cyan'}>I am Jahir Fiquitiva</h3>
