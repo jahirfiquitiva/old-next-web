@@ -111,5 +111,14 @@
 		"dimensions": "3200x2560",
 		"copyright": "Unknown",
 		"collections": "landscapes"
+	},
+	{
+		"name": "Testing new",
+		"author": "someone",
+		"url": "https://via.placeholder.com/500",
+		"thumbnail": "https://via.placeholder.com/150",
+		"dimensions": "3200x2560",
+		"copyright": "Free (do whatever you want)",
+		"collections": "food"
 	}
 ]
