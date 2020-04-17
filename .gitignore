@@ -193,3 +193,8 @@ $RECYCLE.BIN/
 package-lock.json
 .cache/
 public/
+
+*.html
+gh-releases/*.html
+!apps/*/*.html
+!share/*.html
