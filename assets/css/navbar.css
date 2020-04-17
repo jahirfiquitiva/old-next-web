@@ -195,6 +195,10 @@ a.navbar-item.is-active {
     box-shadow: 3px 3px 0 0 var(--text-shadow-blue);
 }
 
+#theme-switch.navbar-link {
+    cursor: default;
+}
+
 #theme-switch.navbar-link.is-active,
 #theme-switch.navbar-link:focus,
 #theme-switch.navbar-link:focus-within,
@@ -204,6 +208,7 @@ a.navbar-item.is-active {
 #theme-switch.navbar-item:focus-within,
 #theme-switch.navbar-item:hover {
     background: var(--primary);
+    cursor: default;
 }
 
 #theme-switch button.button {
@@ -214,6 +219,7 @@ a.navbar-item.is-active {
     border-radius: 2px;
     font-size: .9rem;
     padding-top: 0;
+    cursor: pointer;
 }
 
 #theme-switch button.button:hover,
@@ -227,4 +233,5 @@ a.navbar-item.is-active {
     transform: translateY(0) !important;
     border-color: var(--accent);
     color: var(--accent);
+    cursor: pointer;
 }
