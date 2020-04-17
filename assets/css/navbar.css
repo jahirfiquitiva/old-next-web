@@ -214,11 +214,11 @@ a.navbar-item.is-active {
 #theme-switch button.button {
     box-shadow: none !important;
     background: rgba(0, 0, 0, 0);
-    border-color: var(--primary-dark);
+    border-color: rgba(0, 0, 0, .24);
     border-width: 1px;
-    border-radius: 2px;
-    font-size: .9rem;
-    padding-top: 0;
+    border-radius: 3px;
+    font-size: .85rem;
+    padding-top: .25rem;
     cursor: pointer;
 }
 
