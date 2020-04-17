@@ -11,5 +11,6 @@ build:
 	pug -P -o . .
 
 deploy:
+	npm i -g pug
 	make build
 	rm -f *.pug
