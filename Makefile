@@ -9,3 +9,7 @@ help:
 build:
 	rm -f *.html
 	pug -P -o . .
+
+deploy:
+	make build
+	rm -f *.pug
