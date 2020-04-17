@@ -206,19 +206,20 @@ a.navbar-item.is-active {
     background: var(--primary);
 }
 
-#theme-switch .button {
+#theme-switch button.button {
     box-shadow: none !important;
     background: rgba(0, 0, 0, 0);
     border-color: var(--primary-dark);
+    border-width: 1px;
     border-radius: 2px;
     font-size: .9rem;
     padding-top: 0;
 }
 
-#theme-switch .button:hover,
-#theme-switch .button:focus,
-#theme-switch .button:active,
-#theme-switch .button.is-active {
+#theme-switch button.button:hover,
+#theme-switch button.button:focus,
+#theme-switch button.button:active,
+#theme-switch button.button.is-active {
     -webkit-transform: translateY(0) !important;
     -moz-transform: translateY(0) !important;
     -ms-transform: translateY(0) !important;
