@@ -194,3 +194,36 @@ a.navbar-item.is-active {
     -moz-box-shadow: 3px 3px 0 0 var(--text-shadow-blue);
     box-shadow: 3px 3px 0 0 var(--text-shadow-blue);
 }
+
+#theme-switch.navbar-link.is-active,
+#theme-switch.navbar-link:focus,
+#theme-switch.navbar-link:focus-within,
+#theme-switch.navbar-link:hover,
+#theme-switch.navbar-item.is-active,
+#theme-switch.navbar-item:focus,
+#theme-switch.navbar-item:focus-within,
+#theme-switch.navbar-item:hover {
+    background: var(--primary);
+}
+
+#theme-switch .button {
+    box-shadow: none !important;
+    background: rgba(0, 0, 0, 0);
+    border-color: var(--primary-dark);
+    border-radius: 2px;
+    font-size: .9rem;
+    padding-top: 0;
+}
+
+#theme-switch .button:hover,
+#theme-switch .button:focus,
+#theme-switch .button:active,
+#theme-switch .button.is-active {
+    -webkit-transform: translateY(0) !important;
+    -moz-transform: translateY(0) !important;
+    -ms-transform: translateY(0) !important;
+    -o-transform: translateY(0) !important;
+    transform: translateY(0) !important;
+    border-color: var(--accent);
+    color: var(--accent);
+}
