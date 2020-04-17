@@ -1,8 +1,8 @@
 extends index-base
 
 block custom-css
-  link(rel='stylesheet' href='/assets/css/home.css')
-  link(rel='stylesheet' href='/assets/css/projects.css')
+  link(rel='stylesheet' href='./assets/css/home.css')
+  link(rel='stylesheet' href='./assets/css/projects.css')
 
 block main-content
   .columns.is-multiline.is-centered
@@ -16,8 +16,6 @@ block main-content
         | I'm a passionate and creative full-stack developer from&nbsp;
         a(href='https://www.google.com/maps/place/Colombia/@4,-72z/') Colombia
           span(aria-hidden="true") 🇨🇴
-        | who aims to build quality products by taking into account good development
-        | practices and focusing on UI and UX, while also trying to provide accessible experiences.
       br
       details
         summary.button.is-primary#more-info More about me
@@ -44,50 +42,32 @@ block main-content
         strong Find me on:
       br
       include social-btns
-    .column.is-12-mobile.is-2
+    .column.is-12-mobile.is-1
+    -
+      const skillsItems = [{ title: 'Android', class: 'android' },
+        { title: 'Kotlin', class: 'language-kotlin' },
+        { title: 'Java', class: 'language-java' },
+        { title: 'Python', class: 'language-python' },
+        { title: 'JavaScript', class: 'language-javascript' },
+        { title: 'HTML5', class: 'language-html5' },
+        { title: 'CSS3', class: 'language-css3' }];
+    // { title: 'NodeJS', class: 'nodejs' },
+    // { title: 'React', class: 'react' },
+    // { title: 'MySQL', class: 'database' },
+    // { title: 'MongoDB', class: 'leaf' },
+    // { title: 'Git', class: 'git' },
+    // { title: 'Material Design', class: 'material-design' }];
     .column.center-vertically.is-12-mobile.is-5
       h2.text-shadow.is-red
         strong Skills&nbsp;
           span(aria-hidden="true") 🚀
       br
       br
-      ul#tech.columns
-        li.column
-          span.mdi.mdi-android.mdi-48px(aria-hidden="true")
-          p Android
-        li.column
-          .has-svg.kotlin(aria-hidden="true")
-          p Kotlin
-        li.column
-          span.mdi.mdi-language-java.mdi-48px(aria-hidden="true")
-          p Java
-        li.column
-          .has-svg.python(aria-hidden="true")
-          p Python
-        li.column
-          .has-svg.javascript(aria-hidden="true")
-          p JavaScript
-        li.column
-          span.mdi.mdi-language-html5.mdi-48px(aria-hidden="true")
-          p HTML 5
-        li.column
-          span.mdi.mdi-language-css3.mdi-48px(aria-hidden="true")
-          p CSS 3
-        li.column
-          span.mdi.mdi-nodejs.mdi-48px(aria-hidden="true")
-          p NodeJS
-        li.column
-          span.mdi.mdi-react.mdi-48px(aria-hidden="true")
-          p React
-        li.column
-          .has-svg.mongodb(aria-hidden="true")
-          p MongoDB
-        li.column
-          span.mdi.mdi-git.mdi-48px(aria-hidden="true")
-          p Git
-        li.column
-          span.mdi.mdi-material-design.mdi-48px(aria-hidden="true")
-          p Material Design
+      ul#tech.tags.are-large
+        each item in skillsItems
+          li.tag.is-rounded(class="is-" + item.class)
+            span.mdi(class="mdi-" + item.class aria-hidden="true")
+            p #{item.title}
 
 block main-content-footer
   .hero-foot

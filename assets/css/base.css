@@ -204,14 +204,14 @@ h6,
 .content h6,
 .is-size-6,
 .is-size-7 {
-    font-size: 1.1rem !important;
+    font-size: 1rem !important;
     font-weight: 500 !important;
 }
 
 p,
 .content p,
 .content ul li {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
 }
 

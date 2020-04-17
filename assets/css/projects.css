@@ -205,10 +205,10 @@ a .card:focus * {
 }
 
 #filter-android:checked + label {
-    --shadow-a: rgba(137, 192, 101, .4);
-    --shadow-b: rgba(137, 192, 101, .28);
-    --shadow-c: rgba(137, 192, 101, .24);
-    --filter-bg-color: #89c065;
+    --shadow-a: rgba(61, 220, 132, .4);
+    --shadow-b: rgba(61, 220, 132, .28);
+    --shadow-c: rgba(61, 220, 132, .24);
+    --filter-bg-color: #3ddc84;
 }
 
 #filter-web:checked + label {
