@@ -30,6 +30,14 @@
     cursor: pointer;
 }
 
+#tech.tags .tag:not(:last-child) {
+    margin-right: 1rem;
+}
+
+#tech.tags .tag .mdi {
+    margin-right: .5rem;
+}
+
 #tech.tags .tag * {
     color: var(--text-color) !important;
 }
@@ -44,14 +52,6 @@
     -webkit-box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
     -moz-box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
     box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
-}
-
-#tech.tags .tag:not(:last-child) {
-    margin-right: 1.2rem;
-}
-
-#tech.tags .tag .mdi {
-    margin-right: .5rem;
 }
 
 #tech.tags .tag.is-android {
