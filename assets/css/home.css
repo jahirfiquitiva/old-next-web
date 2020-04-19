@@ -15,13 +15,13 @@
 #tech.tags .tag {
     --bg-color: rgba(0, 0, 0, .12);
     --border-color: rgba(0, 0, 0, .24);
-    --text-color: rgba(0, 0, 0, .8);
+    --text-color: var(--accent-dark);
     --shadow-a: rgba(0, 0, 0, .4);
     --shadow-b: rgba(0, 0, 0, .28);
     --shadow-c: rgba(0, 0, 0, .24);
     background: rgba(0, 0, 0, 0) !important;
     color: var(--accent-dark) !important;
-    border: 1px solid var(--border-color) !important;
+    border: 1px solid var(--accent-dark) !important;
     margin-bottom: 1.2rem;
     padding-left: .8rem;
     padding-right: .9rem;
@@ -29,10 +29,15 @@
     cursor: pointer;
 }
 
+#tech.tags .tag * {
+    color: var(--text-color) !important;
+}
+
 #tech.tags .tag:hover,
 #tech.tags .tag:focus,
 #tech.tags .tag:active,
 #tech.tags .tag.is-active {
+    color: var(--text-color) !important;
     background: var(--bg-color) !important;
     border: 1px solid var(--border-color) !important;
     -webkit-box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
