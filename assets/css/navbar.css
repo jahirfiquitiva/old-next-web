@@ -213,13 +213,13 @@ a.navbar-item.is-active {
 
 #theme-switch.navbar-item button.button {
     box-shadow: none !important;
-    background: rgba(0, 0, 0, 0) !important;;
-    border-color: rgba(0, 0, 0, .24) !important;;
-    border-width: 1px !important;;
-    border-radius: 3px !important;;
-    font-size: .85rem !important;;
-    padding-top: .25rem !important;;
-    cursor: pointer !important;;
+    background: rgba(0, 0, 0, 0) !important;
+    border-color: rgba(0, 0, 0, .24) !important;
+    border-width: 1px !important;
+    border-radius: 3px !important;
+    font-size: .85rem !important;
+    padding-top: .25rem !important;
+    cursor: pointer !important;
 }
 
 #theme-switch.navbar-item button.button:hover,
@@ -231,7 +231,7 @@ a.navbar-item.is-active {
     -ms-transform: translateY(0) !important;
     -o-transform: translateY(0) !important;
     transform: translateY(0) !important;
-    border-color: var(--accent) !important;;
-    color: var(--accent) !important;;
-    cursor: pointer !important;;
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+    cursor: pointer !important;
 }

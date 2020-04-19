@@ -272,7 +272,7 @@ summary::-webkit-details-marker {
 }
 
 details summary.button {
-    min-height: 1.6em;
+    min-height: 1.4rem;
     padding-top: .1rem;
     padding-bottom: .1rem;
 }
@@ -281,8 +281,8 @@ details summary.button {
 _::-webkit-full-page-media, _:future, :root details summary.button {
     display: block;
     text-align: center;
-    min-height: 2rem;
-    height: 2rem;
+    min-height: 1.4rem;
+    height: 1.4rem;
     width: 144px;
     margin-left: auto;
     margin-right: auto;
@@ -295,7 +295,7 @@ _::-webkit-full-page-media, _:future, :root details summary.button {
     _::-webkit-full-page-media, _:future, :root details summary.button {
         display: block;
         text-align: center;
-        min-height: 1.6rem;
+        min-height: 1.2rem;
         width: 144px;
         margin-left: auto;
         margin-right: auto;
@@ -309,8 +309,8 @@ _::-webkit-full-page-media, _:future, :root details summary.button {
         details summary.button {
             display: block;
             text-align: center;
-            min-height: 2rem;
-            height: 2rem;
+            min-height: 1.4rem;
+            height: 1.4rem;
             width: 144px;
             margin-left: auto;
             margin-right: auto;
@@ -325,8 +325,8 @@ _::-webkit-full-page-media, _:future, :root details summary.button {
         details summary.button {
             display: block;
             text-align: center;
-            min-height: 2rem;
-            height: 2rem;
+            min-height: 1.4rem;
+            height: 1.4rem;
             width: 144px;
             margin-left: auto;
             margin-right: auto;
@@ -337,7 +337,7 @@ _::-webkit-full-page-media, _:future, :root details summary.button {
 }
 
 details p {
-    margin-top: 1rem;
+    margin-top: .6rem;
 }
 
 section.colored,
