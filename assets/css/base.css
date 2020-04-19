@@ -262,7 +262,8 @@ details[open] summary ~ * {
 
 summary::-webkit-details-marker {
     color: var(--primary-text-inverted);
-    padding-right: .2rem;
+    padding-right: 0; /* .2rem */
+    display: none;
 }
 
 @keyframes sweep {
