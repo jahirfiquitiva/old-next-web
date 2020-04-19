@@ -62,3 +62,8 @@
 .is-dark .footer {
     background-color: var(--background);
 }
+
+
+.is-dark #tech.tags .tag {
+    --text-color: var(--accent-light);
+}

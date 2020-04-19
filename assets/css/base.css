@@ -276,7 +276,7 @@ summary::-webkit-details-marker {
 details summary.button {
     min-height: var(--summary-btn-height);
     height: var(--summary-btn-height);
-    padding: .1rem .8rem;
+    padding: .2rem .6rem;
 }
 
 details summary.button .mdi {
