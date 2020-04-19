@@ -291,7 +291,6 @@ details[open] summary.button .mdi::before {
     content: "\F0374";
 }
 
-
 /*noinspection CssInvalidPseudoSelector*/
 _::-webkit-full-page-media, _:future, :root details summary.button {
     display: block;
