@@ -193,6 +193,11 @@ a .card:focus * {
     padding: .6rem 1rem;
     background-color: var(--primary-text-inverted);
     border: 1px solid #dbdbdb;
+    font-size: 1rem;
+}
+
+.filters input[type=radio] + label .mdi {
+    font-size: 1.25rem;
 }
 
 .filters input[type=radio]:checked + label {
