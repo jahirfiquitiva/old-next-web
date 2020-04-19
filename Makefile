@@ -14,3 +14,4 @@ deploy:
 	npm i -g pug-cli
 	make build
 	rm -f *.pug
+	cat index.html
