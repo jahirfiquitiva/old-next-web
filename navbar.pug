@@ -28,7 +28,8 @@ block navbar-items
               "": !activeItemIndex === index
             } href=item.link)
               = item.title
-          span#theme-switch.navbar-item
+          #theme-switch.navbar-item
             button.button.is-small(onclick='switchTheme();')
               span.mdi.mdi-weather-night
               | &nbsp;&nbsp;Dark Theme
+
