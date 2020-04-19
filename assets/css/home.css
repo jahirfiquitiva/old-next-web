@@ -46,7 +46,7 @@
 #tech.tags .tag:focus,
 #tech.tags .tag:active,
 #tech.tags .tag.is-active {
-    color: var(--text-color) !important;
+    color: var(--hover-text-color) !important;
     background: var(--bg-color) !important;
     border: 1px solid var(--border-color) !important;
     -webkit-box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
@@ -57,7 +57,7 @@
 #tech.tags .tag.is-android {
     --bg-color: #3ddc84;
     --border-color: #31b06a;
-    --text-color: #1c2833;
+    --hover-text-color: #1c2833;
     --shadow-a: rgba(61, 220, 132, .4);
     --shadow-b: rgba(61, 220, 132, .28);
     --shadow-c: rgba(61, 220, 132, .24);
@@ -66,7 +66,7 @@
 #tech.tags .tag.is-language-kotlin {
     --bg-color: #6677e0;
     --border-color: #47539d;
-    --text-color: #000036;
+    --hover-text-color: #000036;
     --shadow-a: rgba(102, 119, 224, .4);
     --shadow-b: rgba(102, 119, 224, .28);
     --shadow-c: rgba(102, 119, 224, .24);
@@ -75,7 +75,7 @@
 #tech.tags .tag.is-language-java {
     --bg-color: #ea2e2f;
     --border-color: #a42021;
-    --text-color: #2b0000;
+    --hover-text-color: #2b0000;
     --shadow-a: rgba(234, 46, 47, .4);
     --shadow-b: rgba(234, 46, 47, .28);
     --shadow-c: rgba(234, 46, 47, .24);
@@ -84,7 +84,7 @@
 #tech.tags .tag.is-language-python {
     --bg-color: #3a74a5;
     --border-color: #295173;
-    --text-color: #e4f1fe;
+    --hover-text-color: #e4f1fe;
     --shadow-a: rgba(58, 116, 165, .4);
     --shadow-b: rgba(58, 116, 165, .28);
     --shadow-c: rgba(58, 116, 165, .24);
@@ -93,7 +93,7 @@
 #tech.tags .tag.is-language-javascript {
     --bg-color: #f7df1e;
     --border-color: #c6b218;
-    --text-color: #1d1905;
+    --hover-text-color: #1d1905;
     --shadow-a: rgba(247, 223, 30, .4);
     --shadow-b: rgba(247, 223, 30, .28);
     --shadow-c: rgba(247, 223, 30, .24);
@@ -102,7 +102,7 @@
 #tech.tags .tag.is-language-html5 {
     --bg-color: #e34f26;
     --border-color: #b63f1e;
-    --text-color: #2b0000;
+    --hover-text-color: #2b0000;
     --shadow-a: rgba(227, 79, 38, .4);
     --shadow-b: rgba(227, 79, 38, .28);
     --shadow-c: rgba(227, 79, 38, .24);
@@ -111,7 +111,7 @@
 #tech.tags .tag.is-language-css3 {
     --bg-color: #3572b5;
     --border-color: #2a5b91;
-    --text-color: #e4f1fe;
+    --hover-text-color: #e4f1fe;
     --shadow-a: rgba(53, 114, 181, .4);
     --shadow-b: rgba(53, 114, 181, .28);
     --shadow-c: rgba(53, 114, 181, .24);
@@ -120,7 +120,7 @@
 #tech.tags .tag.is-nodejs {
     --bg-color: #61af43;
     --border-color: #41742c;
-    --text-color: #082213;
+    --hover-text-color: #082213;
     --shadow-a: rgba(97, 175, 67, .4);
     --shadow-b: rgba(97, 175, 67, .28);
     --shadow-c: rgba(97, 175, 67, .24);
@@ -129,7 +129,7 @@
 #tech.tags .tag.is-react {
     --bg-color: #00c2e6;
     --border-color: #008299;
-    --text-color: #05182a;
+    --hover-text-color: #05182a;
     --shadow-a: rgba(0, 194, 230, .4);
     --shadow-b: rgba(0, 194, 230, .28);
     --shadow-c: rgba(0, 194, 230, .24);
@@ -138,7 +138,7 @@
 #tech.tags .tag.is-leaf {
     --bg-color: #69a14a;
     --border-color: #46782b;
-    --text-color: #082213;
+    --hover-text-color: #082213;
     --shadow-a: rgba(105, 161, 74, .4);
     --shadow-b: rgba(105, 161, 74, .28);
     --shadow-c: rgba(105, 161, 74, .24);
@@ -147,7 +147,7 @@
 #tech.tags .tag.is-git {
     --bg-color: #fc6d26;
     --border-color: #b04c1b;
-    --text-color: #2a150d;
+    --hover-text-color: #2a150d;
     --shadow-a: rgba(252, 109, 38, .4);
     --shadow-b: rgba(252, 109, 38, .28);
     --shadow-c: rgba(252, 109, 38, .24);
@@ -156,7 +156,7 @@
 #tech.tags .tag.is-material-design {
     --bg-color: #101010;
     --border-color: #000;
-    --text-color: #fff;
+    --hover-text-color: #fff;
     --shadow-a: rgba(16, 16, 16, .4);
     --shadow-b: rgba(16, 16, 16, .28);
     --shadow-c: rgba(16, 16, 16, .24);
