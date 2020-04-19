@@ -190,7 +190,7 @@ a .card:focus * {
 .filters input[type=radio] + label {
     color: var(--secondary-text);
     border-radius: 999999px;
-    padding: .75rem 1rem;
+    padding: .6rem 1rem;
     background-color: var(--primary-text-inverted);
     border: 1px solid #dbdbdb;
 }
