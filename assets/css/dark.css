@@ -65,5 +65,6 @@
 
 
 .is-dark #tech.tags .tag {
+    --normal-text-color: var(--accent-light);
     --text-color: var(--accent-light);
 }

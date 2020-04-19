@@ -15,13 +15,14 @@
 #tech.tags .tag {
     --bg-color: rgba(0, 0, 0, .12);
     --border-color: rgba(0, 0, 0, .24);
+    --normal-text-color: var(--accent-dark);
     --text-color: var(--accent-dark);
     --shadow-a: rgba(0, 0, 0, .4);
     --shadow-b: rgba(0, 0, 0, .28);
     --shadow-c: rgba(0, 0, 0, .24);
     background: rgba(0, 0, 0, 0) !important;
-    color: var(--text-color) !important;
-    border: 1px solid var(--text-color) !important;
+    color: var(--normal-text-color) !important;
+    border: 1px solid var(--normal-text-color) !important;
     margin-bottom: 1.6rem;
     padding-left: 1rem;
     padding-right: .9rem;
