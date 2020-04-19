@@ -15,14 +15,12 @@
 #tech.tags .tag {
     --bg-color: rgba(0, 0, 0, .12);
     --border-color: rgba(0, 0, 0, .24);
-    --hover-bg-color: var(--border-color);
-    --hover-border-color: var(--border-color);
     --text-color: rgba(0, 0, 0, .8);
     --shadow-a: rgba(0, 0, 0, .4);
     --shadow-b: rgba(0, 0, 0, .28);
     --shadow-c: rgba(0, 0, 0, .24);
-    background: var(--bg-color) !important;
-    color: var(--text-color) !important;
+    background: rgba(0, 0, 0, 0) !important;
+    color: var(--accent-dark) !important;
     border: 1px solid var(--border-color) !important;
     margin-bottom: 1.2rem;
     padding-left: .8rem;
@@ -35,8 +33,8 @@
 #tech.tags .tag:focus,
 #tech.tags .tag:active,
 #tech.tags .tag.is-active {
-    background: var(--hover-bg-color) !important;
-    border: 1px solid var(--hover-border-color) !important;
+    background: var(--bg-color) !important;
+    border: 1px solid var(--border-color) !important;
     -webkit-box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
     -moz-box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
     box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
@@ -51,108 +49,96 @@
 }
 
 #tech.tags .tag.is-android {
-    --border-color: #3ddc84;
-    --bg-color: #b1f1ce;
-    --hover-border-color: #31b06a;
+    --bg-color: #3ddc84;
+    --border-color: #31b06a;
     --shadow-a: rgba(61, 220, 132, .4);
     --shadow-b: rgba(61, 220, 132, .28);
     --shadow-c: rgba(61, 220, 132, .24);
 }
 
 #tech.tags .tag.is-language-kotlin {
-    --border-color: #e5724f;
-    --bg-color: #f5c7b9;
-    --hover-border-color: #b75b3f;
+    --bg-color: #e5724f;
+    --border-color: #b75b3f;
     --shadow-a: rgba(229, 114, 79, .4);
     --shadow-b: rgba(229, 114, 79, .28);
     --shadow-c: rgba(229, 114, 79, .24);
 }
 
 #tech.tags .tag.is-language-java {
-    --border-color: #cd5942;
-    --bg-color: #ebbdb3;
-    --hover-border-color: #a44735;
+    --bg-color: #cd5942;
+    --border-color: #a44735;
     --shadow-a: rgba(205, 89, 66, .4);
     --shadow-b: rgba(205, 89, 66, .28);
     --shadow-c: rgba(205, 89, 66, .24);
 }
 
 #tech.tags .tag.is-language-python {
-    --border-color: #4584b6;
-    --bg-color: #b5cee2;
-    --hover-border-color: #376a92;
+    --bg-color: #4584b6;
+    --border-color: #376a92;
     --shadow-a: rgba(69, 132, 182, .4);
     --shadow-b: rgba(69, 132, 182, .28);
     --shadow-c: rgba(69, 132, 182, .24);
 }
 
 #tech.tags .tag.is-language-javascript {
-    --border-color: #f7df1e;
-    --bg-color: #fcf2a5;
-    --hover-border-color: #c6b218;
+    --bg-color: #f7df1e;
+    --border-color: #c6b218;
     --shadow-a: rgba(247, 223, 30, .4);
     --shadow-b: rgba(247, 223, 30, .28);
     --shadow-c: rgba(247, 223, 30, .24);
 }
 
 #tech.tags .tag.is-language-html5 {
-    --border-color: #e34f26;
-    --bg-color: #f4b9a8;
-    --hover-border-color: #b63f1e;
+    --bg-color: #e34f26;
+    --border-color: #b63f1e;
     --shadow-a: rgba(227, 79, 38, .4);
     --shadow-b: rgba(227, 79, 38, .28);
     --shadow-c: rgba(227, 79, 38, .24);
 }
 
 #tech.tags .tag.is-language-css3 {
-    --border-color: #3572b5;
-    --bg-color: #aec7e1;
-    --hover-border-color: #2a5b91;
+    --bg-color: #3572b5;
+    --border-color: #2a5b91;
     --shadow-a: rgba(53, 114, 181, .4);
     --shadow-b: rgba(53, 114, 181, .28);
     --shadow-c: rgba(53, 114, 181, .24);
 }
 
 #tech.tags .tag.is-nodejs {
-    --border-color: #e5724f;
-    --bg-color: #f5c7b9;
-    --hover-border-color: #b75b3f;
+    --bg-color: #e5724f;
+    --border-color: #b75b3f;
     --shadow-a: rgba(229, 114, 79, .4);
     --shadow-b: rgba(229, 114, 79, .28);
     --shadow-c: rgba(229, 114, 79, .24);
 }
 
 #tech.tags .tag.is-react {
-    --border-color: #e5724f;
-    --bg-color: #f5c7b9;
-    --hover-border-color: #b75b3f;
+    --bg-color: #e5724f;
+    --border-color: #b75b3f;
     --shadow-a: rgba(229, 114, 79, .4);
     --shadow-b: rgba(229, 114, 79, .28);
     --shadow-c: rgba(229, 114, 79, .24);
 }
 
 #tech.tags .tag.is-database {
-    --border-color: #e5724f;
-    --bg-color: #f5c7b9;
-    --hover-border-color: #b75b3f;
+    --bg-color: #e5724f;
+    --border-color: #b75b3f;
     --shadow-a: rgba(229, 114, 79, .4);
     --shadow-b: rgba(229, 114, 79, .28);
     --shadow-c: rgba(229, 114, 79, .24);
 }
 
 #tech.tags .tag.is-leaf {
-    --border-color: #e5724f;
-    --bg-color: #f5c7b9;
-    --hover-border-color: #b75b3f;
+    --bg-color: #e5724f;
+    --border-color: #b75b3f;
     --shadow-a: rgba(229, 114, 79, .4);
     --shadow-b: rgba(229, 114, 79, .28);
     --shadow-c: rgba(229, 114, 79, .24);
 }
 
 #tech.tags .tag.is-git {
-    --border-color: #e5724f;
-    --bg-color: #f5c7b9;
-    --hover-border-color: #b75b3f;
+    --bg-color: #e5724f;
+    --border-color: #b75b3f;
     --shadow-a: rgba(229, 114, 79, .4);
     --shadow-b: rgba(229, 114, 79, .28);
     --shadow-c: rgba(229, 114, 79, .24);

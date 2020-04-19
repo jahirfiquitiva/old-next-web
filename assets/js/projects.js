@@ -135,7 +135,8 @@ function setupProjectsUI() {
 
     const label = document.createElement('label');
     label.setAttribute('for', `filter-${tag.toLowerCase()}`);
-    label.innerHTML = `<span class="mdi mdi-${tag}"></span>&nbsp;&nbsp;${titleCase(tag)}`;
+    label.innerHTML =
+      `<span class="mdi mdi-${tag} mdi-language-${tag}"></span>&nbsp;&nbsp;${titleCase(tag)}`;
     filter.appendChild(label);
 
     filter.onchange = () => filterProjects();
