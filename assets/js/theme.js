@@ -1,5 +1,5 @@
 const toggleSwitch = document.getElementById('theme-switch');
-const initialThemeSwitchHTML = '<button class="button is-small"><span class="mdi ';
+const initialThemeSwitchHTML = '<button class="button is-small" onclick="switchTheme();"><span class="mdi ';
 const finalButtonTextHTML = '"></span>&nbsp;&nbsp;';
 const finalThemeSwitchHTML = '</button>';
 const currentThemeId = 'jahir-fiquitiva-theme';
