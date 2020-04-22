@@ -121,10 +121,11 @@ html, body, main, .use-inter {
     *, body, html, main {
         line-height: 1.8 !important;
         white-space: normal !important;
-        overflow-wrap: break-word !important;
-        word-wrap: break-word !important;
-        -ms-word-break: break-all !important;
-        word-break: break-word !important;
+        text-overflow: word !important;
+        overflow-wrap: word !important;
+        word-wrap: word !important;
+        -ms-word-break: word !important;
+        word-break: word !important;
         -ms-hyphens: auto !important;
         -moz-hyphens: auto !important;
         -webkit-hyphens: auto !important;
