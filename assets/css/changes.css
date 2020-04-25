@@ -57,8 +57,8 @@ a.button {
 }
 
 .button.is-loading {
-    color: rgba(0, 0, 0, .9) !important;
-    padding-left: 2.4rem !important;
+    color: var(--primary-text) !important;
+    padding-left: 3.6rem !important;
     border: none transparent !important;
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
@@ -73,7 +73,7 @@ a.button {
 }
 
 .button.is-loading::after {
-    left: 0 !important;
+    left: 1rem !important;
     top: calc(50% - (1em / 2) - .1em) !important;
 }
 
