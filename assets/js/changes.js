@@ -109,7 +109,7 @@ function getLatestReleaseInfo(user, repo, updateWiki, translate, key) {
 
       let repoBtnIcon = document.createElement('i');
       repoBtnIcon.classList.add('mdi');
-      repoBtnIcon.classList.add('mdi-24px');
+      repoBtnIcon.classList.add('mdi-18px');
       repoBtnIcon.classList.add('mdi-github');
 
       repoBtn.innerHTML = repoBtnIcon.outerHTML; // + ' View on GitHub';
@@ -129,7 +129,7 @@ function getLatestReleaseInfo(user, repo, updateWiki, translate, key) {
 
         let wikiBtnIcon = document.createElement('i');
         wikiBtnIcon.classList.add('mdi');
-        wikiBtnIcon.classList.add('mdi-24px');
+        wikiBtnIcon.classList.add('mdi-18px');
         wikiBtnIcon.classList.add('mdi-help-circle');
 
         wikiBtn.innerHTML = wikiBtnIcon.outerHTML; //  + ' How to Update';
@@ -150,7 +150,7 @@ function getLatestReleaseInfo(user, repo, updateWiki, translate, key) {
 
         let translateBtnIcon = document.createElement('i');
         translateBtnIcon.classList.add('mdi');
-        translateBtnIcon.classList.add('mdi-24px');
+        translateBtnIcon.classList.add('mdi-18px');
         translateBtnIcon.classList.add('mdi-translate');
 
         translateBtn.innerHTML = translateBtnIcon.outerHTML; // + ' Translate';
@@ -184,7 +184,7 @@ function getLatestReleaseInfo(user, repo, updateWiki, translate, key) {
 
         let downloadBtnIcon = document.createElement('i');
         downloadBtnIcon.classList.add('mdi');
-        downloadBtnIcon.classList.add('mdi-24px');
+        downloadBtnIcon.classList.add('mdi-18px');
         downloadBtnIcon.classList.add('mdi-download');
 
         downloadBtn.innerHTML = downloadBtnIcon.outerHTML; // + ' Download (' +
