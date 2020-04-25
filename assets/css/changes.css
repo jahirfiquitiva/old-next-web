@@ -99,3 +99,7 @@ a.button.is-paypal {
     background-color: var(--accent);
     color: var(--secondary-text-inverted);
 }
+
+.card.change .card-footer .buttons .button {
+    min-height: 2.4rem;
+}
