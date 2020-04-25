@@ -63,6 +63,7 @@ a.button {
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
     box-shadow: none !important;
+    text-decoration: none !important;
 }
 
 .button.is-loading:hover,
