@@ -48,7 +48,7 @@
     "tag": "android"
   },
   {
-    "title": "DashSetup",
+    "title": "Dashbud",
     "description": "Quickly setup any of my Android dashboards.",
     "icon": "./assets/images/projects/web/setup.png",
     "link": "/dashsetup/",
