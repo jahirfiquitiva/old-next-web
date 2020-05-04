@@ -102,9 +102,12 @@ a.button.is-paypal {
     height: 100%;
 }
 
+.card.change .release-body {
+    margin-top: .8rem;
+}
 
 .card.change .card-footer {
-    margin: auto;
+    margin-top: auto;
     border-top-color: var(--dividers);
     padding-top: .2rem;
     padding-bottom: .8rem;
