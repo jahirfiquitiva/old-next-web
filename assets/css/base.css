@@ -302,7 +302,7 @@ _::-webkit-full-page-media, _:future, :root details summary.button {
     text-align: center;
     min-height: var(--summary-btn-height);
     height: var(--summary-btn-height);
-    width: 144px;
+    min-width: 148px;
     margin-left: auto;
     margin-right: auto;
     padding-top: .4rem;
@@ -316,7 +316,7 @@ _::-webkit-full-page-media, _:future, :root details summary.button {
         text-align: center;
         min-height: var(--summary-btn-height);
         height: var(--summary-btn-height);
-        width: 144px;
+        min-width: 148px;
         margin-left: auto;
         margin-right: auto;
         padding-top: .2rem;
@@ -331,7 +331,7 @@ _::-webkit-full-page-media, _:future, :root details summary.button {
             text-align: center;
             min-height: var(--summary-btn-height);
             height: var(--summary-btn-height);
-            width: 144px;
+            min-width: 148px;
             margin-left: auto;
             margin-right: auto;
             padding-top: .4rem;
@@ -347,7 +347,7 @@ _::-webkit-full-page-media, _:future, :root details summary.button {
             text-align: center;
             min-height: var(--summary-btn-height);
             height: var(--summary-btn-height);
-            width: 144px;
+            min-width: 148px;
             margin-left: auto;
             margin-right: auto;
             padding-top: .4rem;
