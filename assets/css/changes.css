@@ -129,4 +129,6 @@ a.button.is-crowdin {
     --shadow-a: rgba(67, 160, 71, .4);
     --shadow-b: rgba(67, 160, 71, .28);
     --shadow-c: rgba(67, 160, 71, .24);
+    background-color: var(--social-color);
+    color: var(--social-color-inverted);
 }
