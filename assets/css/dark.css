@@ -59,7 +59,7 @@
 
     --bmac-bg: #8fa5ff;
     --bmac-bg-hover: #6f8cff;
-    --bmac-text: #000;
+    --bmac-text: rgba(0, 0, 0, .9);
 }
 
 .is-dark section.colored,

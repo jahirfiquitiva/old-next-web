@@ -23,6 +23,8 @@ a.social-link.is-patreon:active {
 }
 
 a.social-link.is-bmac {
+    color: var(--bmac-text);
+    --social-color-inverted: var(--bmac-text);
     --social-color: var(--bmac-bg);
     --shadow-a: rgba(95, 127, 255, .4);
     --shadow-b: rgba(95, 127, 255, .28);
@@ -32,6 +34,8 @@ a.social-link.is-bmac {
 a.social-link.is-bmac:hover,
 a.social-link.is-bmac:focus,
 a.social-link.is-bmac:active {
+    color: var(--bmac-text);
+    --social-color-inverted: var(--bmac-text);
     --social-color: var(--bmac-bg-hover);
 }
 
