@@ -115,5 +115,18 @@ a.button.is-paypal {
 
 .card.change .card-footer .buttons .button {
     min-height: 2.4rem;
-    border-radius: 6px;
+    border-radius: 5px;
+}
+
+.card.change .card-footer .buttons.is-centered:not(.has-addons) .button:not(.is-fullwidth) {
+    margin-right: .4rem;
+    margin-left: .4rem;
+}
+
+a.button.is-crowdin {
+    --social-color: #43a047;
+    --social-color-inverted: rgba(0, 0, 0, .9);
+    --shadow-a: rgba(67, 160, 71, .4);
+    --shadow-b: rgba(67, 160, 71, .28);
+    --shadow-c: rgba(67, 160, 71, .24);
 }
