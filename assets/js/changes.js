@@ -107,7 +107,7 @@ function getLatestReleaseInfo(user, repo, updateWiki, translate, key) {
       repoBtn.href = repoUrl;
       repoBtn.target = '_blank';
 
-      let repoBtnIcon = document.createElement('i');
+      let repoBtnIcon = document.createElement('span');
       repoBtnIcon.classList.add('mdi');
       repoBtnIcon.classList.add('mdi-18px');
       repoBtnIcon.classList.add('mdi-github');
@@ -127,7 +127,7 @@ function getLatestReleaseInfo(user, repo, updateWiki, translate, key) {
         wikiBtn.href = 'https://github.com/' + user + '/' + repo + '/wiki/How-to-update';
         wikiBtn.target = '_blank';
 
-        let wikiBtnIcon = document.createElement('i');
+        let wikiBtnIcon = document.createElement('span');
         wikiBtnIcon.classList.add('mdi');
         wikiBtnIcon.classList.add('mdi-18px');
         wikiBtnIcon.classList.add('mdi-help-circle');
@@ -148,7 +148,7 @@ function getLatestReleaseInfo(user, repo, updateWiki, translate, key) {
         translateBtn.href = 'https://crowdin.com/project/' + repoNameId + '/invite';
         translateBtn.target = '_blank';
 
-        let translateBtnIcon = document.createElement('i');
+        let translateBtnIcon = document.createElement('span');
         translateBtnIcon.classList.add('mdi');
         translateBtnIcon.classList.add('mdi-18px');
         translateBtnIcon.classList.add('mdi-translate');
@@ -182,7 +182,7 @@ function getLatestReleaseInfo(user, repo, updateWiki, translate, key) {
         downloadBtn.href = downloadUrl;
         downloadBtn.target = '_blank';
 
-        let downloadBtnIcon = document.createElement('i');
+        let downloadBtnIcon = document.createElement('span');
         downloadBtnIcon.classList.add('mdi');
         downloadBtnIcon.classList.add('mdi-18px');
         downloadBtnIcon.classList.add('mdi-download');
