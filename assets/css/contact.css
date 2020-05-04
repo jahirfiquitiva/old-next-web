@@ -111,3 +111,12 @@
         -webkit-transform: scale(0.8) !important;
     }
 }
+
+#submit.button {
+    padding: 0 .8rem 1rem;
+    height: 2.7rem;
+}
+
+#submit.button .mdi {
+    margin-right: .8rem;
+}
