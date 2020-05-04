@@ -91,17 +91,26 @@ a.button.is-paypal {
     --shadow-c: rgba(0, 48, 135, .24);
 }
 
-.card.change .card-footer {
-    border-top-color: var(--dividers);
-    padding-top: .2rem;
-    padding-bottom: .8rem;
-}
-
 .tag:not(body).is-primary {
     background-color: var(--accent);
     color: var(--secondary-text-inverted);
 }
 
+.card.change {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.card.change .card-footer {
+    margin: auto;
+    border-top-color: var(--dividers);
+    padding-top: .2rem;
+    padding-bottom: .8rem;
+}
+
 .card.change .card-footer .buttons .button {
     min-height: 2.4rem;
+    border-radius: 6px;
 }
