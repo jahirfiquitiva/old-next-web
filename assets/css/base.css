@@ -90,6 +90,7 @@
     --accent-shadow-b: rgba(56, 103, 214, .28);
     --accent-shadow-c: rgba(56, 103, 214, .24);
 
+    --summary-btn-width: 150px;
     --summary-btn-height: 2rem;
 
     --bmac-bg: #5f7fff;
@@ -302,7 +303,7 @@ _::-webkit-full-page-media, _:future, :root details summary.button {
     text-align: center;
     min-height: var(--summary-btn-height);
     height: var(--summary-btn-height);
-    min-width: 148px;
+    min-width: var(--summary-btn-width);
     margin-left: auto;
     margin-right: auto;
     padding-top: .4rem;
@@ -316,7 +317,7 @@ _::-webkit-full-page-media, _:future, :root details summary.button {
         text-align: center;
         min-height: var(--summary-btn-height);
         height: var(--summary-btn-height);
-        min-width: 148px;
+        min-width: var(--summary-btn-width);
         margin-left: auto;
         margin-right: auto;
         padding-top: .2rem;
@@ -331,7 +332,7 @@ _::-webkit-full-page-media, _:future, :root details summary.button {
             text-align: center;
             min-height: var(--summary-btn-height);
             height: var(--summary-btn-height);
-            min-width: 148px;
+            min-width: var(--summary-btn-width);
             margin-left: auto;
             margin-right: auto;
             padding-top: .4rem;
@@ -347,7 +348,7 @@ _::-webkit-full-page-media, _:future, :root details summary.button {
             text-align: center;
             min-height: var(--summary-btn-height);
             height: var(--summary-btn-height);
-            min-width: 148px;
+            min-width: var(--summary-btn-width);
             margin-left: auto;
             margin-right: auto;
             padding-top: .4rem;
