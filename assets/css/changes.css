@@ -124,7 +124,7 @@ a.button.is-paypal {
 }
 
 a.button.is-crowdin {
-    --social-color: #43a047;
+    --social-color: #47b86a;
     --social-color-inverted: rgba(0, 0, 0, .9);
     --shadow-a: rgba(67, 160, 71, .4);
     --shadow-b: rgba(67, 160, 71, .28);
