@@ -56,6 +56,10 @@
     --accent-shadow-a: rgba(136, 164, 230, .4);
     --accent-shadow-b: rgba(136, 164, 230, .28);
     --accent-shadow-c: rgba(136, 164, 230, .24);
+
+    --bmac-bg: #8fa5ff;
+    --bmac-bg-hover: #6f8cff;
+    --bmac-text: #000;
 }
 
 .is-dark section.colored,

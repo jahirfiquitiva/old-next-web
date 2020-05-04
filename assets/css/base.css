@@ -91,6 +91,10 @@
     --accent-shadow-c: rgba(56, 103, 214, .24);
 
     --summary-btn-height: 2rem;
+
+    --bmac-bg: #5f7fff;
+    --bmac-bg-hover: #4c66cc;
+    --bmac-text: #fff;
 }
 
 body,
@@ -366,8 +370,9 @@ section.colored,
 }
 
 .button {
+    font-family: var(--manrope);
     font-size: 1.05rem;
-    font-weight: 500;
+    font-weight: 600;
     border-color: var(--transparent);
     -webkit-box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;
     -moz-box-shadow: 0 3px 1px -2px var(--shadow-a), 0 2px 2px 0 var(--shadow-b), 0 1px 5px 0 var(--shadow-c) !important;

@@ -23,10 +23,16 @@ a.social-link.is-patreon:active {
 }
 
 a.social-link.is-bmac {
-    --social-color: #ff813f;
-    --shadow-a: rgba(255, 129, 63, .4);
-    --shadow-b: rgba(255, 129, 63, .28);
-    --shadow-c: rgba(255, 129, 63, .24);
+    --social-color: var(--bmac-bg);
+    --shadow-a: rgba(95, 127, 255, .4);
+    --shadow-b: rgba(95, 127, 255, .28);
+    --shadow-c: rgba(95, 127, 255, .24);
+}
+
+a.social-link.is-bmac:hover,
+a.social-link.is-bmac:focus,
+a.social-link.is-bmac:active {
+    --social-color: var(--bmac-bg-hover);
 }
 
 a.social-link.is-paypal {
