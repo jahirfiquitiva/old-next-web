@@ -16,7 +16,7 @@ const setupLogo = () => {
   let logo = document.getElementById('logo');
   let logoName = currentTheme === 'light' ? 'def' : 'def-dark';
   // TODO: Add more month-styled logos
-  if (month === 6) logoName = '6';
+  // if (month === 6) logoName = '6';
   if (logo) {
     logo.setAttribute('src', '/assets/images/brand/logo-' + logoName + '.svg');
     logo.setAttribute('onerror',
