@@ -1,12 +1,12 @@
 extends index-base
 
 block custom-css
-  link(rel='stylesheet' href='./assets/css/blm.css')
+  link(rel='stylesheet' href='/assets/css/blm.css')
 
 block real-content
   section#home.hero.is-fullheight
     .hero-body
-      .container.has-text-centered
+      .container
         .columns.is-multiline.is-centered
           .column.center-vertically.is-12-mobile.is-6.has-text-justified
             h2 I stand in solidarity with the Black community, today and every day.
@@ -121,3 +121,6 @@ block real-content
               | . Far more information can be found&nbsp;
               a(href='https://blacklivesmatters.carrd.co/') elsewhere
               | .
+            p
+              | Previous version of this site&nbsp;
+              a(href='/index-def') is still available

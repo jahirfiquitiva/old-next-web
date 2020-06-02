@@ -1,14 +1,30 @@
+@media only screen and (min-width: 375px) {
+    *, body, html, main {
+        white-space: wrap !important;
+        word-break: unset !important;
+        word-wrap: unset !important;
+        overflow-wrap: unset !important;
+        -webkit-hyphens: unset !important;
+        -moz-hyphens: unset !important;
+        -ms-hyphens: unset !important;
+        hyphens: unset !important;
+    }
+}
+
 body {
     background: #000 !important;
     --primary-text: var(--white);
     --secondary-text: rgba(255, 255, 255, .85);
     --tertiary-text: rgba(255, 255, 255, .7);
     --dividers: rgba(255, 255, 255, .12);
-    text-overflow: normal !important;
-    overflow-wrap: normal !important;
-    word-wrap: normal !important;
-    -ms-word-break: normal !important;
-    word-break: normal !important;
+    white-space: wrap !important;
+    word-break: unset !important;
+    word-wrap: unset !important;
+    overflow-wrap: unset !important;
+    -webkit-hyphens: unset !important;
+    -moz-hyphens: unset !important;
+    -ms-hyphens: unset !important;
+    hyphens: unset !important;
 }
 
 body.has-navbar-fixed-top, html.has-navbar-fixed-top {
