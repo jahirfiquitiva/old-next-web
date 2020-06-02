@@ -1,0 +1,44 @@
+body {
+    background: #000 !important;
+    --primary-text: var(--white);
+    --secondary-text: rgba(255, 255, 255, .85);
+    --tertiary-text: rgba(255, 255, 255, .7);
+    --dividers: rgba(255, 255, 255, .12);
+    text-overflow: normal !important;
+    overflow-wrap: normal !important;
+    word-wrap: normal !important;
+    -ms-word-break: normal !important;
+    word-break: normal !important;
+}
+
+body.has-navbar-fixed-top, html.has-navbar-fixed-top {
+    padding-top: 0 !important;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 1.6rem;
+    margin-top: .4rem;
+}
+
+p a:not(.donation-button),
+.content ul li a:not(.donation-button),
+a {
+    color: var(--blue-200) !important;
+}
+
+p a:not(.donation-button):active,
+p a:not(.donation-button):hover,
+p a:not(.donation-button):focus,
+p a:not(.donation-button).is-active,
+.content ul li a:not(.donation-button):active,
+.content ul li a:not(.donation-button):hover,
+.content ul li a:not(.donation-button):focus,
+.content ul li a:not(.donation-button).is-active,
+a:hover,
+a:focus,
+a:active,
+a.is-active {
+    color: var(--blue-100) !important;
+    text-decoration: underline !important;
+}
