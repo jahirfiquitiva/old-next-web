@@ -11,20 +11,15 @@
     }
 }
 
-body {
+*, body, html, main {
     background: #000 !important;
+}
+
+body {
     --primary-text: var(--white);
     --secondary-text: rgba(255, 255, 255, .85);
     --tertiary-text: rgba(255, 255, 255, .7);
     --dividers: rgba(255, 255, 255, .12);
-    white-space: wrap !important;
-    word-break: unset !important;
-    word-wrap: unset !important;
-    overflow-wrap: unset !important;
-    -webkit-hyphens: unset !important;
-    -moz-hyphens: unset !important;
-    -ms-hyphens: unset !important;
-    hyphens: unset !important;
 }
 
 body.has-navbar-fixed-top, html.has-navbar-fixed-top {
