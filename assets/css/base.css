@@ -305,6 +305,7 @@ _::-webkit-full-page-media, _:future, :root details summary.button {
     min-height: var(--summary-btn-height);
     height: var(--summary-btn-height);
     min-width: var(--summary-btn-width);
+    width: var(--summary-btn-width);
     margin-left: auto;
     margin-right: auto;
     padding-top: .4rem;
@@ -319,10 +320,11 @@ _::-webkit-full-page-media, _:future, :root details summary.button {
         min-height: var(--summary-btn-height);
         height: var(--summary-btn-height);
         min-width: var(--summary-btn-width);
+        width: var(--summary-btn-width);
         margin-left: auto;
         margin-right: auto;
-        padding-top: .2rem;
-        padding-bottom: .2rem;
+        padding-top: .6rem;
+        padding-bottom: 0;
     }
 }
 
@@ -334,6 +336,7 @@ _::-webkit-full-page-media, _:future, :root details summary.button {
             min-height: var(--summary-btn-height);
             height: var(--summary-btn-height);
             min-width: var(--summary-btn-width);
+            width: var(--summary-btn-width);
             margin-left: auto;
             margin-right: auto;
             padding-top: .4rem;
@@ -350,6 +353,7 @@ _::-webkit-full-page-media, _:future, :root details summary.button {
             min-height: var(--summary-btn-height);
             height: var(--summary-btn-height);
             min-width: var(--summary-btn-width);
+            width: var(--summary-btn-width);
             margin-left: auto;
             margin-right: auto;
             padding-top: .4rem;
