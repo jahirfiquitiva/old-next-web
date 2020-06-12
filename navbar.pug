@@ -1,9 +1,9 @@
 -
-  const navbarItems = [{ title: 'Home', link: '/' },
-    { title: 'Projects', link: '/#projects' },
-    { title: 'Donate', link: '/donate' },
-    { title: 'Contact', link: '/contact' },
-    { title: 'Uses', link: '/uses' }];
+  const navbarItems = [{ title: 'Home 🏡', link: '/' },
+    { title: 'Projects 👨‍💻', link: '/#projects' },
+    { title: 'Donate 💙', link: '/donate' },
+    { title: 'Contact 📮', link: '/contact' },
+    { title: 'Uses ⚡️', link: '/uses' }];
 
 block navbar-items
   - let activeItemIndex = 0;
@@ -30,6 +30,6 @@ block navbar-items
               = item.title
           #theme-switch.navbar-item
             button.button.is-small(onclick='switchTheme();')
+              | Dark Theme&nbsp;&nbsp;
               span.mdi.mdi-weather-night
-              | &nbsp;&nbsp;Dark Theme
 

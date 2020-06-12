@@ -1,23 +1,22 @@
 .blm {
-    width: 100%;
     background-color: #000;
     color: #fff;
     font-family: var(--manrope);
     z-index: 1;
     min-height: 2rem;
-    padding: 1.4rem 1.2rem 1.6rem;
+    padding: .8rem 1.2rem 1.6rem;
     text-align: center;
 }
 
 .blm * {
     background-color: #000;
+    color: #fff;
 }
 
 .blm a.big-link {
-    display: block;
     font-weight: 700;
     font-size: 1.2rem;
-    margin-bottom: .4rem;
+    line-height: 3;
 }
 
 .blm a {

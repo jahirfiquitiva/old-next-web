@@ -1,6 +1,6 @@
 const toggleSwitch = document.getElementById('theme-switch');
-const initialThemeSwitchHTML = '<button class="button is-small" onclick="switchTheme();"><span class="mdi ';
-const finalButtonTextHTML = '"></span>&nbsp;&nbsp;';
+const initialThemeSwitchHTML = '<button class="button is-small" onclick="switchTheme();">&nbsp;&nbsp;<span class="mdi ';
+const finalButtonTextHTML = '"></span>';
 const finalThemeSwitchHTML = '</button>';
 const currentThemeId = 'jahir-fiquitiva-theme';
 let currentTheme = 'light';
@@ -41,7 +41,7 @@ function updateThemeSwitch() {
       const iconName = currentTheme === 'dark' ? 'mdi-white-balance-sunny' : 'mdi-weather-night';
       const otherThemeName = currentTheme === 'dark' ? 'Light' : 'Dark';
       toggleSwitch.innerHTML =
-        `${initialThemeSwitchHTML}${iconName}${finalButtonTextHTML}${otherThemeName} Theme${finalThemeSwitchHTML}`;
+        `${initialThemeSwitchHTML}${otherThemeName} Theme${iconName}${finalButtonTextHTML}${finalThemeSwitchHTML}`;
     } catch (e) {
     }
     try {

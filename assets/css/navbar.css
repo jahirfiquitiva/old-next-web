@@ -40,6 +40,11 @@ progress[value]::-webkit-progress-value {
     color: var(--secondary-text);
 }
 
+.navbar-item, .navbar-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
 .navbar-link.is-active,
 .navbar-link:focus,
 .navbar-link:focus-within,
