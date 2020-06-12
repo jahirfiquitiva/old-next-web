@@ -117,6 +117,14 @@ html, body, main {
     scroll-behavior: smooth;
     line-height: 1.6 !important;
     font-weight: 500;
+    white-space: wrap !important;
+    word-break: unset !important;
+    word-wrap: unset !important;
+    overflow-wrap: unset !important;
+    -webkit-hyphens: unset !important;
+    -moz-hyphens: unset !important;
+    -ms-hyphens: unset !important;
+    hyphens: unset !important;
 }
 
 html, body, main, .use-inter {
@@ -126,16 +134,6 @@ html, body, main, .use-inter {
 @media only screen and (min-width: 375px) {
     body, html, main {
         line-height: 1.8 !important;
-        white-space: normal !important;
-        text-overflow: word !important;
-        overflow-wrap: word !important;
-        word-wrap: word !important;
-        -ms-word-break: word !important;
-        word-break: word !important;
-        -ms-hyphens: auto !important;
-        -moz-hyphens: auto !important;
-        -webkit-hyphens: auto !important;
-        hyphens: auto !important;
     }
 }
 
