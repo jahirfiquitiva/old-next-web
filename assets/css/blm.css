@@ -1,55 +1,33 @@
-@media only screen and (min-width: 375px) {
-    *, body, html, main {
-        white-space: wrap !important;
-        word-break: unset !important;
-        word-wrap: unset !important;
-        overflow-wrap: unset !important;
-        -webkit-hyphens: unset !important;
-        -moz-hyphens: unset !important;
-        -ms-hyphens: unset !important;
-        hyphens: unset !important;
-    }
+.blm {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    font-family: var(--manrope);
+    z-index: 1;
+    min-height: 2rem;
+    padding: 1.4rem 1.2rem 1.6rem;
+    text-align: center;
 }
 
-*, body, html, main {
-    background: #000 !important;
+.blm * {
+    background-color: #000;
 }
 
-body {
-    --primary-text: var(--white);
-    --secondary-text: rgba(255, 255, 255, .85);
-    --tertiary-text: rgba(255, 255, 255, .7);
-    --dividers: rgba(255, 255, 255, .12);
+.blm a.big-link {
+    display: block;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: .4rem;
 }
 
-body.has-navbar-fixed-top, html.has-navbar-fixed-top {
-    padding-top: 0 !important;
-}
-
-ul {
-    list-style: disc;
-    margin-left: 1.6rem;
-    margin-top: .4rem;
-}
-
-p a:not(.donation-button),
-.content ul li a:not(.donation-button),
-a {
+.blm a {
     color: var(--blue-200) !important;
 }
 
-p a:not(.donation-button):active,
-p a:not(.donation-button):hover,
-p a:not(.donation-button):focus,
-p a:not(.donation-button).is-active,
-.content ul li a:not(.donation-button):active,
-.content ul li a:not(.donation-button):hover,
-.content ul li a:not(.donation-button):focus,
-.content ul li a:not(.donation-button).is-active,
-a:hover,
-a:focus,
-a:active,
-a.is-active {
+.blm a:hover,
+.blm a:focus,
+.blm a:active,
+.blm a.is-active {
     color: var(--blue-100) !important;
     text-decoration: underline !important;
 }

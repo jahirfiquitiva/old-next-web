@@ -5,7 +5,7 @@ const hellos = ['Hello, world', 'Hola, mundo', 'Salut, monde', 'Ciao, mondo', 'O
 const changeHello = () => {
   let hello = document.getElementById('hello');
   if (hello) {
-    hello.innerHTML = `${hellos[lastHello]}! 👋`;
+    hello.innerHTML = `${hellos[lastHello]}!&nbsp;<span class="wave">👋</span>`;
     lastHello += 1;
     if (lastHello >= hellos.length) {
       lastHello = 0;

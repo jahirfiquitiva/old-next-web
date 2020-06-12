@@ -1,123 +1,85 @@
 extends index-base
 
 block custom-css
-  link(rel='stylesheet' href='/assets/css/blm.css')
+  link(rel='stylesheet' href='/assets/css/home.css')
+  link(rel='stylesheet' href='/assets/css/projects.css')
 
-block real-content
-  section#home.hero.is-fullheight
-    .hero-body
-      .container
-        .columns.is-multiline.is-centered
-          .column.center-vertically.is-12-mobile.is-6.has-text-justified
-            h2 I stand in solidarity with the Black community, today and every day.
-            br
-            p
-              b George Floyd, Natosha McDade, Yassin Mohamed, Finan H. Berhe, Sean Reed, Steven Demarco Taylor, Breonna Taylor, Ariane McCree, Terrance Franklin, Miles Hall, Darius Tarver, William Green, Samuel David Mallard, Kwame Jones, De’von Bailey, Christopher Whitfield, Anthony Hill, De’Von Bailey, Eric Logan, Jamarion Robinson, Gregory Hill Jr, JaQuavion Slaton, Ryan Twyman, Brandon Webber, Jimmy Atchison, Willie McCoy, Emantic Fitzgerald Bradford J, D’ettrick Griffin, Jemel Roberson, DeAndre Ballard, Botham Shem Jean, Robert Lawrence White, Anthony Lamar Smith, Ramarley Graham, Manuel Loggins Jr, Trayvon Martin, Wendell Allen, Kendrec McDade, Larry Jackson Jr, Jonathan Ferrell, Jordan Baker, Victor White III, Dontre Hamilton, Eric Garner, John Crawford III, Michael Brown, Ezell Ford, Dante Parker, Kajieme Powell, Laquan McDonald, Akai Gurley, Tamir Rice, Rumain Brisbon, Jerame Reid, Charly Keunang, Tony Robinson, Walter Scott, Freddie Gray, Brendon Glenn, Samuel DuBose, Christian Taylor, Jamar Clark, Mario Woods, Quintonio LeGrier, Gregory Gunn, Akiel Denkins, Alton Sterling, Philando Castile, Terrence Sterling, Terence Crutcher, Keith Lamont Scott, Alfred Olango, Jordan Edwards, Stephon Clark, Danny Ray Thomas, DeJuan Guillory, Patrick Harmon, Jonathan Hart, Maurice Granton, Julius Johnson, Jamee Johnson, Michael Dean,&nbsp;
-                span(style="color: #ff0;") and many, many, many others.
-            br
-            p This site is currently offline as a small token of respect and sign of solidarity with all the Black members of our community.
-            br
-            p We don't deserve their forgiveness. We don't deserve their respect. We can't do enough to repay them for the damage that our systemic racism has done.
-            br
-            p Noone is exempt from this. The white supremacy, nationalism, fascism, bigotry, racism, and injustice that is so deeply rooted in our society must come to an end.
-            br
-            p As the maintainer of this site, I ask that - rather than engaging with the material you would otherwise find here - you participate in some or all of the following activites instead.
-            br
-            h4 Support nonprofit orgs and collectives that aim to combat racism and injustice.
-            ul
-              li
-                a(href='https://blacklivesmatter.com/') Black Lives Matter
-              li
-                a(href='https://www.joincampaignzero.org/') Campaign Zero
-              li
-                a(href='https://www.naacpldf.org/') The NAACP Legal Defense and Educational Fund
-              li
-                a(href='https://www.wetheprotesters.org') We The Protesters
-              li
-                a(href='https://www.blackvisionsmn.org/') Black Visions Collective
-              li
-                a(href='https://www.reclaimtheblock.org/home') Reclaim the Block
-              li
-                a(href='https://eji.org/') The Equal Justice Initiative
-              li
-                a(href='https://www.nlg-npap.org/') National Police Accountability Project
-            br
-            h4 Donate to Black victims of police violence.
-            ul
-              li
-                a(href='https://www.gofundme.com/f/georgefloyd') George Floyd Memorial Fund
-              li
-                a(href='https://www.gofundme.com/f/i-run-with-maud') I Run With Maud
-              li
-                a(href='https://www.gofundme.com/f/justice-for-regis') Justice for Regis
-              li
-                a(href='https://www.gofundme.com/f/eumzn-justice-for-jamee') Justice for Jamee
-              li
-                a(href='https://www.gofundme.com/f/destiny-harrison-funeral') Destiny Harrison's & her daughter Dream's Legacy
-              li
-                a(href='https://www.gofundme.com/f/eric-rosalia') Eric Rosalia Fund
-              li
-                a(href='https://www.gofundme.com/f/rip-belly-mujinga') R.I.P Belly Mujinga
-              li
-                a(href='https://www.gofundme.com/f/justice-for-dion-johnson') Justice for Dion Johnson
-              li
-                a(href='https://www.gofundme.com/f/rest-in-peace-aaron-quotajquot-sutton') Rest in Peace Aaron James "AJ" Sutton
-              li
-                a(href='https://www.gofundme.com/f/in-memory-of-tony-mcdade') In Memory of Tony McDade
-              li
-                a(href='https://www.gofundme.com/f/peace-and-healing-for-darnella') Peace and Healing for Darnella
-              li
-                a(href='https://secure.qgiv.com/for/desdresch/mobile') Destiny Dream's Scholarship Fund
-              li
-                a(href='https://www.gofundme.com/f/for-james-scurlocks-family') For James Scurlock's Family
-              li
-                a(href='https://www.gofundme.com/f/csgskf-love-and-support-for-leslie') Love and Support for Leslie
-              li
-                a(href='https://www.gofundme.com/f/trevor-belle') Trevor Belle Fund
-            br
-            h4 Find and support your local bail fund.
-            ul
-              li
-                a(href='https://bailfunds.github.io/') Bail Fund List
-              li
-                a(href='https://www.communityjusticeexchange.org/national-bail-fund-network') National Bail Fund Network
-              li
-                a(href='https://bailproject.org/') The Bail Project
-            br
-            h4 Help small businesses rebuild.
-            ul
-              li
-                a(href='https://docs.google.com/document/d/1jy_Y714oFhb7APUOk4Y4gEPzWpyxswzHa_sylQLVmJ8/mobilebasic') List of Small Businesses (google doc)
-              li
-                a(href='https://www.gofundme.com/f/bay-area-black-owned-business-relief-fund') Bay Area Black Business Fund
-              li
-                a(href='https://www.gofundme.com/f/cambodia-town-relief-fund') Cambodia Town Relief Fund
-              li
-                a(href='https://www.gofundme.com/f/somali-owned-businesses-affected-by-rioters') Somali-owned Businesses
-            br
-            h4 Educate yourself (and acquaintances) on the history of racism and oppression.
-            ul
-              li
-                a(href='https://tatianamac.com/posts/white-guyde/') "White Guyde To The Galaxy" - Tatiana Mac
-              li
-                a(href='https://tatianamac.com/posts/save-the-tears/') "Save the Tears: White Woman's Guide" - Tatiana Mac
-              li
-                a(href='https://lettersforblacklives.com/about-the-letter-ed27ea67eb2e') Letters for Black Lives
-              li
-                a(href='http://antiracismforbeginners.com/') Anti-Racism for Beginners
-            br
-            h4 Donate time, labor, or support to community organizing & activism projects.
-            ul
-              li
-                a(href='https://www.change.org/p/governor-brian-kemp-justice-for-ahmaud-arbery') Georgia Hate Crime Bill - change.org
-              li
-                a(href='https://github.com/emceeaich/milan-ltr') The Milan Letter Project
-            br
-            p
-              | This site is based on&nbsp;
-              a(href='https://twitter.com/fennifith') James Fenn
-              | 's&nbsp;
-              a(href='https://code.horrific.dev/james/offline') project
-              | . Far more information can be found&nbsp;
-              a(href='https://blacklivesmatters.carrd.co/') elsewhere
-              | .
+block main-content
+  .columns.is-multiline.is-centered
+    .column.center-vertically.is-12-mobile.is-5
+      img.avatar(src='/assets/images/me/me.jpg' alt='Jahir Fiquitiva')
+      br
+      h3#hello.has-text-centered.text-shadow.is-amber
+        | Hello, world!&nbsp;
+        span.wave 👋
+      h3.has-text-centered.text-shadow.is-blue I am Jahir Fiquitiva
+      br
+      p.has-text-justified
+        | I'm a passionate and creative full-stack developer from&nbsp;
+        a(href='https://www.google.com/maps/place/Colombia/@4,-72z/') Colombia&nbsp;
+          span(aria-hidden="true") 🇨🇴
+      br
+      details
+        summary.button.is-primary#more-info
+          span.mdi
+          | More about me
+        br
+        p.has-text-justified
+          | I'm currently a Computer Science student at&nbsp;
+          a(href='http://www.uptc.edu.co/') Pedagogical and Technological University of Colombia.
+        p.has-text-justified
+          | I consider myself a curious and inquisitive person, so on my spare time I like to work
+          | on&nbsp;
+          a(href='#projects') side projects
+          | &nbsp;and try to constantly learn something new to improve my skillset.
+        p.has-text-justified I have open&nbsp;
+          a(href='https://jahir.xyz/twitterdm') Twitter DMs
+          | ,&nbsp;
+          a(href='https://jahir.xyz/tlgrm') Telegram
+          | &nbsp;and&nbsp;
+          a(href='/contact') email
+          | &nbsp;for any kind of inquiries. 🤗
+        p.has-text-justified If you are interested in knowing which tools I use, you can&nbsp;
+          a(href='/uses') check out my uses page
+          | .
+      br
+      p
+        strong Find me on:
+      br
+      include social-btns
+    .column.is-12-mobile.is-1
+    -
+      const skillsItems = [{ title: 'Android', class: 'android' },
+        { title: 'Kotlin', class: 'language-kotlin' },
+        { title: 'Java', class: 'language-java' },
+        { title: 'Python', class: 'language-python' },
+        { title: 'JavaScript', class: 'language-javascript' },
+        { title: 'HTML5', class: 'language-html5' },
+        { title: 'CSS3', class: 'language-css3' },
+        { title: 'NodeJS', class: 'nodejs' },
+        { title: 'React', class: 'react' },
+        { title: 'MongoDB', class: 'leaf' },
+        { title: 'Git', class: 'git' },
+        { title: 'Material Design', class: 'material-design' }];
+    .column.center-vertically.is-12-mobile.is-5
+      h2.text-shadow.is-red
+        strong Skills&nbsp;
+          span(aria-hidden="true") 🚀
+      br
+      br
+      ul#tech.tags.are-large
+        each item in skillsItems
+          li.tag.is-rounded(class="is-" + item.class)
+            span.mdi(class="mdi-" + item.class aria-hidden="true")
+            p #{item.title}
+
+block main-content-footer
+  .hero-foot
+    .down-indicator.has-text-centered
+      h4(aria-hidden="true") 👇
+
+block content
+  include projects
+
+append scripts
+  script(src='/assets/js/projects.js' type='text/javascript')
