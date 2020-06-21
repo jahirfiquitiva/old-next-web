@@ -1,7 +1,7 @@
-import Layout from '@components/Layout'
-import PostList from '@components/PostList'
+import Layout from '@components/Layout';
+import PostList from '@components/PostList';
 
-import getPosts from '@utils/getPosts'
+import getPosts from '@utils/getPosts';
 
 const Index = ({ posts, title, description, ...props }) => {
   return (
@@ -14,7 +14,7 @@ const Index = ({ posts, title, description, ...props }) => {
           <a href="https://url.netlify.com/r1j6ybSYU">Netlify</a>.
         </p>
         <main>
-          <PostList posts={posts} />
+          <PostList posts={posts}/>
         </main>
         <p>
           You can look at the repository for this project{' '}
@@ -32,17 +32,17 @@ const Index = ({ posts, title, description, ...props }) => {
         }
       `}</style>
     </>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
 
 export async function getStaticProps() {
-  const configData = await import(`../siteconfig.json`)
+  const configData = await import(`../siteconfig.json`);
 
   const posts = ((context) => {
-    return getPosts(context)
-  })(require.context('../posts', true, /\.md$/))
+    return getPosts(context);
+  })(require.context('../posts', true, /\.md$/));
 
   return {
     props: {
@@ -50,5 +50,5 @@ export async function getStaticProps() {
       title: configData.default.title,
       description: configData.default.description,
     },
-  }
+  };
 }

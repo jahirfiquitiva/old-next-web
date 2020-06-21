@@ -1,13 +1,13 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import Header from './Header'
+import Header from './Header';
 
 export default function Layout({ children, pageTitle, description, ...props }) {
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta charSet="utf-8"/>
         <meta name="Description" content={description}></meta>
         <title>{pageTitle}</title>
       </Head>
@@ -61,12 +61,12 @@ export default function Layout({ children, pageTitle, description, ...props }) {
         }
       `}</style>
       <section className="layout">
-        <Header />
+        <Header/>
         <div className="content">{children}</div>
       </section>
       <footer>
-        Built with <img src="/netliheart.svg" alt="Netlify Heart" /> for you
+        Built with <img src="/netliheart.svg" alt="Netlify Heart"/> for you
       </footer>
     </>
-  )
+  );
 }
