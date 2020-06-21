@@ -9,6 +9,9 @@
     "export": "next export"
   },
   "dependencies": {
+    "@mdi/js": "^5.3.45",
+    "@mdi/react": "^1.4.0",
+    "@svgr/webpack": "^5.4.0",
     "gray-matter": "^4.0.2",
     "next": "^9.4.4",
     "raw-loader": "^4.0.1",

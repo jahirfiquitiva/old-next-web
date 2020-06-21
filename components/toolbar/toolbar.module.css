@@ -1,0 +1,120 @@
+nav.toolbar {
+    background: #222;
+    padding: 5px 20px;
+}
+
+.toolbar ul {
+    list-style-type: none;
+}
+
+.toolbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.toolbar a:hover {
+    text-decoration: underline;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+.menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+}
+
+.logo a,
+.toggle a {
+    font-size: 20px;
+}
+
+/* Mobile menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    order: 1;
+}
+
+.item.button {
+    order: 2;
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+
+.item.active {
+    display: block;
+}
+
+.toggle button,
+.toggle button:hover,
+.toggle button:focus,
+.toggle button:active {
+    background: none;
+}
+
+/* Tablet menu */
+@media all and (min-width: 600px) {
+    .menu {
+        justify-content: center;
+    }
+
+    .logo {
+        flex: 1;
+    }
+
+    .toggle {
+        flex: 1;
+        text-align: right;
+    }
+
+    .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+
+    .toggle {
+        order: 2;
+    }
+}
+
+/* Desktop menu */
+@media all and (min-width: 900px) {
+    .item {
+        display: block;
+        width: auto;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .logo {
+        order: 0;
+    }
+
+    .item {
+        order: 1;
+    }
+
+    .menu li {
+        padding: 15px 10px;
+    }
+
+    .menu li.button {
+        padding-right: 0;
+    }
+}
