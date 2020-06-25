@@ -87,8 +87,8 @@ a .card:focus * {
 .card:not(.change):hover .title,
 .card:not(.change):focus .title {
     color: var(--link-col);
-    text-decoration: underline var(--link-col);
-    text-decoration-skip: ink;
+    text-decoration: underline solid var(--link-col) !important;
+    text-decoration-skip: edges !important;
 }
 
 .tag,

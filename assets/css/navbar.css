@@ -57,6 +57,7 @@ a.navbar-item:hover {
     background-color: var(--primary-dark);
     color: var(--secondary-text);
     border-bottom: 3px solid var(--secondary-text);
+    text-decoration: none !important;
 }
 
 .navbar-item.is-active,

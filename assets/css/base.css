@@ -255,8 +255,8 @@ p a:not(.donation-button):focus,
 .content ul li a:not(.donation-button):hover,
 .content ul li a:not(.donation-button):focus {
     color: var(--accent);
-    text-decoration: underline var(--accent) !important;
-    text-decoration-skip: ink !important;
+    text-decoration: underline solid var(--accent) !important;
+    text-decoration-skip: edges !important;
 }
 
 a, button, .button, a > *, .button > *, a *, .button * {
@@ -274,8 +274,12 @@ summary::-webkit-details-marker {
 }
 
 @keyframes sweep {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 details summary.button {

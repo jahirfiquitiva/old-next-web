@@ -28,5 +28,6 @@
 .blm a:active,
 .blm a.is-active {
     color: var(--blue-100) !important;
-    text-decoration: underline !important;
+    text-decoration: underline solid var(--blue-100) !important;
+    text-decoration-skip: edges !important;
 }
