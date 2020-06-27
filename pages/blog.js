@@ -3,10 +3,10 @@ import PostList from '@components/PostList';
 
 import getPosts from '@utils/getPosts';
 
-const Index = ({ posts, title, description, ...props }) => {
+const Blog = ({ posts, title, description, ...props }) => {
   return (
     <>
-      <Layout pageTitle={title} description={description} page={0}>
+      <Layout pageTitle={title} description={description} page={1}>
         <h1 className="title">Welcome to this demo blog!</h1>
 
         <p className="description">
@@ -555,7 +555,7 @@ const Index = ({ posts, title, description, ...props }) => {
   );
 };
 
-export default Index;
+export default Blog;
 
 export async function getStaticProps() {
   const configData = await import(`../siteconfig.json`);

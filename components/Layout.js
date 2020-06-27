@@ -8,6 +8,7 @@ const Layout = ({
   children,
   pageTitle = 'Jahir Fiquitiva 💎',
   description = defaultSiteDescription,
+  page = -1,
   ...props
 }) => {
   return (
@@ -22,7 +23,7 @@ const Layout = ({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@600;700&family=Fira+Code:wght@500&display=swap"
           rel="stylesheet"/>
       </Head>
-      <Toolbar/>
+      <Toolbar selected={page}/>
       <section className={'layout'}>
         <Header/>
         <div className={'content'}>{children}</div>
