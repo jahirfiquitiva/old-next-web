@@ -1,0 +1,108 @@
+.projects {
+    padding: 1rem 1.2rem 2rem;
+}
+
+.projects .selector {
+    display: flex;
+    flex-direction: row;
+}
+
+.projects .selector select {
+    height: 24px;
+    margin-left: 2rem;
+}
+
+.projects .title {
+    text-shadow: 2px 2px 0 #d1adf4;
+}
+
+.projects .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2rem 0 0;
+}
+
+.projects .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--divider);
+    padding: .4rem 0;
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+    margin: .4rem;
+}
+
+.projects .card img {
+    opacity: 0.8;
+    max-width: 72px;
+    margin: auto;
+    padding: .4rem .4rem .4rem .8rem;
+    transition: all .25s ease-in-out;
+}
+
+.projects .card .info {
+    padding: .4rem .8rem .4rem .4rem;
+}
+
+.projects .card,
+.projects .card:active,
+.projects .card:visited {
+    color: var(--text-primary);
+}
+
+.projects .card .info p,
+.projects .card:active .info p,
+.projects .card:visited .info p {
+    font-size: .9rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.projects .card:focus,
+.projects .card:hover {
+    --shadow-color: var(--divider);
+    --border-color: var(--accent);
+    --hl-color: var(--accent);
+    color: var(--text-primary);
+    text-decoration: none;
+    border-color: var(--border-color);
+    -webkit-box-shadow: 0 4px 8px var(--shadow-color);
+    -moz-box-shadow: 0 4px 8px var(--shadow-color);
+    -o-box-shadow: 0 4px 8px var(--shadow-color);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.projects .card:focus img,
+.projects .card:hover img {
+    opacity: 1;
+}
+
+.projects .card:focus .info h5,
+.projects .card:hover .info h5 {
+    color: var(--hl-color);
+    text-decoration: underline solid var(--hl-color);
+}
+
+.projects .card:focus .info p,
+.projects .card:hover .info p {
+    color: var(--text-primary);
+}
+
+@media (min-width: 660px) {
+    .projects .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 960px) {
+    .projects {
+        padding: 1rem 0 2rem;
+    }
+
+    .projects .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

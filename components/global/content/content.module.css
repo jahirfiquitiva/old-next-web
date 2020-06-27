@@ -13,6 +13,6 @@ main.main .content {
     -webkit-box-pack: center;
     justify-content: center;
     width: 100%;
-    max-width: 880px;
+    max-width: 900px;
     min-height: 50vh;
 }
