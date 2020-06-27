@@ -6,18 +6,26 @@ const Social = ({ centered }) => {
 
   return (
     <div className={`${styles.social} ${centered ? styles.centered : ''}`}>
-      <button className={styles.twitter}>
+      <a className={`button ${styles.button} ${styles.twitter}`}
+         href={'https://twitter.com/jahirfiquitiva'}
+         rel={'noopener noreferrer'} target={'_blank'}>
         <Icon path={mdiTwitter} size={.8}/>
-      </button>
-      <button className={styles.github}>
+      </a>
+      <a className={`button ${styles.button} ${styles.github}`}
+         href={'https://github.com/jahirfiquitiva'}
+         rel={'noopener noreferrer'} target={'_blank'}>
         <Icon path={mdiGithub} size={.8}/>
-      </button>
-      <button className={styles.linkedin}>
+      </a>
+      <a className={`button ${styles.button} ${styles.linkedin}`}
+         href={'https://linkedin.com/in/jahirfiquitiva'}
+         rel={'noopener noreferrer'} target={'_blank'}>
         <Icon path={mdiLinkedin} size={.8}/>
-      </button>
-      <button className={styles.instagram}>
+      </a>
+      <a className={`button ${styles.button} ${styles.instagram}`}
+         href={'https://instagram.com/jahirfiquitiva'}
+         rel={'noopener noreferrer'} target={'_blank'}>
         <Icon path={mdiInstagram} size={.8}/>
-      </button>
+      </a>
     </div>
   );
 };

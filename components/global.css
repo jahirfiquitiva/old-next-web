@@ -93,7 +93,8 @@ a:focus {
     text-decoration-skip: edges;
 }
 
-button {
+button,
+.button {
     background-color: var(--accent);
     color: var(--on-accent);
     border: none;
@@ -108,9 +109,19 @@ button {
 }
 
 button:hover,
-button:focus {
+button:focus,
+.button:hover,
+.button:focus {
     background-color: var(--accent-dark);
     transform: translateY(-.1rem);
+}
+
+a.button,
+a.button:hover,
+a.button:focus,
+a.button:active,
+a.button:visited {
+    text-decoration: none;
 }
 
 @media (min-width: 375px) {

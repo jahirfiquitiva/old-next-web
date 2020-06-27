@@ -9,60 +9,66 @@
     justify-content: center;
 }
 
-.social button {
+.social .button {
     min-height: 24px;
     margin: .4rem;
-    padding: .3rem .5rem;
+    padding: .3rem .5rem 0;
+    color: #fff;
 }
 
-.social button:first-of-type {
+.social .button:hover,
+.social .button:focus {
+    color: #fff;
+}
+
+.social .button:first-of-type {
     margin-left: 0;
 }
 
-.social button:last-of-type {
+.social .button:last-of-type {
     margin-right: 0;
 }
 
-.social button svg {
+.social .button svg {
     margin-top: .2rem;
 }
 
-.social button.twitter,
-.social button.twitter:active {
+.social .button.twitter,
+.social .button.twitter:active {
     background-color: #1da1f2;
 }
 
-.social button.twitter:hover,
-.social button.twitter:focus {
+.social .button.twitter:hover,
+.social .button.twitter:focus {
     background-color: #1a91da;
 }
 
-.social button.github,
-.social button.github:active {
+.social .button.github,
+.social .button.github:active {
     background-color: #333;
 }
 
-.social button.github:hover,
-.social button.github:focus {
+.social .button.github:hover,
+.social .button.github:focus {
     background-color: #2e2e2e;
 }
 
-.social button.linkedin,
-.social button.linkedin:active {
+.social .button.linkedin,
+.social .button.linkedin:active {
     background-color: #0077b5;
 }
 
-.social button.linkedin:hover,
-.social button.linkedin:focus {
+.social .button.linkedin:hover,
+.social .button.linkedin:focus {
     background-color: #006ba3;
 }
 
-.social button.instagram,
-.social button.instagram:active {
+.social .button.instagram,
+.social .button.instagram:active {
     background-color: #833ab4;
 }
 
-.social button.instagram:hover,
-.social button.instagram:focus {
+.social .button.instagram:hover,
+.social .button.instagram:focus {
     background-color: #7634a2;
 }
