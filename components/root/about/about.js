@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import ExtLink from '@components/global/ext-link/ext-link';
 import styles from './about.module.css';
+import Social from '@components/global/social/social';
 
 const hellos = ['Hello, world', 'Hola, mundo', 'Ciao, mondo', 'Hallo, Welt', 'Salut, monde',
   'Olá, mundo'];
@@ -19,7 +20,7 @@ const About = () => {
     <>
       <div className={styles.about}>
         <div className={styles.info}>
-          <h3>{hellos[hello]}! <span className={styles.wave}>👋</span></h3>
+          <h3><span className={styles.wave}>👋</span>&nbsp;&nbsp;{hellos[hello]}!</h3>
           <h3>I am Jahir Fiquitiva</h3>
           <br/>
           <p> I'm a passionate and creative full-stack developer from <ExtLink
@@ -50,6 +51,10 @@ const About = () => {
           If you are interested in knowing which tools I use, you can&nbsp;
           <ExtLink to={'/uses'} label={'check out my uses page'} newTab={false}/>.
         </p>
+      </div>
+      <div className={styles.find}>
+        <p><b>You can find me on:</b></p>
+        <Social/>
       </div>
     </>
   );

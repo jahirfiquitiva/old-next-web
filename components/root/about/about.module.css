@@ -52,6 +52,10 @@
     margin: 0.85em 0;
 }
 
+.find {
+    padding: 0 2rem;
+}
+
 @media (min-width: 960px) {
     .about {
         grid-template-columns: 1fr 1fr;
@@ -70,7 +74,8 @@
         grid-row: 1;
     }
 
-    .details {
+    .details,
+    .find {
         padding: 0;
     }
 }
