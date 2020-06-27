@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import ExtLink from '@components/ext-link/ext-link';
+import ExtLink from '@components/global/ext-link/ext-link';
 import styles from './about.module.css';
 
 const hellos = ['Hello, world', 'Hola, mundo', 'Ciao, mondo', 'Hallo, Welt', 'Salut, monde',

@@ -1,7 +1,7 @@
 import Layout from '@components/Layout';
 import PostList from '@components/PostList';
 import getPosts from '@utils/getPosts';
-import About from '@components/about/about';
+import About from '@components/root/about/about';
 
 const Index = ({ posts, title, description, ...props }) => {
   return (

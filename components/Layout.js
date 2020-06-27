@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Toolbar from './toolbar/toolbar';
-import Content from '@components/content/content';
+import Toolbar from './global/toolbar/toolbar';
+import Content from '@components/global/content/content';
 
 const defaultSiteDescription = 'Jahir Fiquitiva\'s website';
 
