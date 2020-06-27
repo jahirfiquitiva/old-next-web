@@ -1,7 +1,7 @@
 nav.nav {
     z-index: 4;
     width: 100%;
-    background-color: rgba(232, 238, 251, 0.7);
+    background-color: rgba(235, 240, 251, 0.7);
     backdrop-filter: blur(8px);
     min-height: var(--toolbar-height);
     position: fixed;
@@ -116,7 +116,7 @@ nav.nav {
 .toolbar div span.theme-toggle:hover,
 .toolbar div span.theme-toggle:focus {
     color: var(--accent-dark) !important;
-    background-color: rgba(45, 82, 171, .085);
+    background-color: rgba(45, 82, 171, .08);
     border-radius: 4px;
 }
 

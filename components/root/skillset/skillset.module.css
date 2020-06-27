@@ -2,6 +2,10 @@
     padding: 1.6rem 2rem 0;
 }
 
+.skills .title {
+    text-shadow: 2px 2px 0 #fd979d;
+}
+
 .skillset {
     padding: 1rem 0;
     display: flex;

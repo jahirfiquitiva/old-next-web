@@ -8,7 +8,7 @@ import styles from './skillset.module.css';
 const SkillSet = () => {
   return (
     <div className={styles.skills}>
-      <h4>🚀&nbsp;&nbsp;Skills</h4>
+      <h4 className={styles.title}>🚀&nbsp;&nbsp;Skills</h4>
       <div className={styles.skillset}>
         <span className={`${styles.skill} ${styles.android}`}>
          <Icon path={mdiAndroid} size={.75}/>Android
