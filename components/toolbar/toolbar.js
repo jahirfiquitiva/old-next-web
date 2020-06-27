@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import styles from './toolbar.module.css';
 import Icon from '@mdi/react';
 import { mdiClose, mdiMenu } from '@mdi/js';
+import styles from './toolbar.module.css';
 
 const Toolbar = ({ selected }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,19 +19,19 @@ const Toolbar = ({ selected }) => {
         </div>
         <div className={`${styles.menu} ${menuOpen ? styles.active : ''}`}>
         <span className={`${styles.item} ${selected === 0 ? styles.active : ''}`}>
-          <a href={'/'}>Home 🏡</a>
+          <a href={'/'}>🏡 &nbsp;&nbsp;Home</a>
         </span>
           <span className={`${styles.item} ${selected === 1 ? styles.active : ''}`}>
-          <a href={'/blog'}>Blog 📝</a>
+          <a href={'/blog'}>📝 &nbsp;&nbsp;Blog</a>
         </span>
           <span className={`${styles.item} ${selected === 2 ? styles.active : ''}`}>
-          <a href={'/uses'}>Uses ⚡️</a>
+          <a href={'/uses'}>⚡️ &nbsp;&nbsp;Uses</a>
         </span>
           <span className={`${styles.item} ${selected === 3 ? styles.active : ''}`}>
-          <a href={'/donate'}>Donate 💙</a>
+          <a href={'/donate'}>💙 &nbsp;&nbsp;Donate</a>
         </span>
           <span className={`${styles.item} ${selected === 4 ? styles.active : ''}`}>
-          <a href={'/contact'}>Contact 📮</a>
+          <a href={'/contact'}>📮 &nbsp;&nbsp;Contact</a>
         </span>
         </div>
       </div>

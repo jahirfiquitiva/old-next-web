@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Header from './Header';
 import Toolbar from './toolbar/toolbar';
+import Content from '@components/content/content';
 
 const defaultSiteDescription = 'Jahir Fiquitiva\'s website';
 
@@ -20,14 +20,17 @@ const Layout = ({
         <title>{pageTitle}</title>
 
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@600;700&family=Fira+Code:wght@500&display=swap"
-          rel="stylesheet"/>
+          href={'https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600;700&family=Fira+Code:wght@500&display=swap'}
+          rel={'stylesheet'}/>
+        <link
+          href={'https://meyerweb.com/eric/tools/css/reset/reset.css'}
+          rel={'stylesheet'}/>
+        <link
+          href={'https://necolas.github.io/normalize.css/latest/normalize.css'}
+          rel={'stylesheet'}/>
       </Head>
       <Toolbar selected={page}/>
-      <section className={'layout'}>
-        <Header/>
-        <div className={'content'}>{children}</div>
-      </section>
+      <Content>{children}</Content>
       <footer>
         Built with <img src={'/netliheart.svg'} alt={'Netlify Heart'}/> for you
       </footer>
