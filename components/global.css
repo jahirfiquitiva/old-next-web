@@ -104,11 +104,13 @@ button {
     font-weight: 500;
     letter-spacing: 0.05715em;
     cursor: pointer;
+    transition: all .2s ease-in-out !important;
 }
 
 button:hover,
 button:focus {
     background-color: var(--accent-dark);
+    transform: translateY(-.1rem);
 }
 
 @media (min-width: 375px) {

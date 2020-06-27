@@ -1,0 +1,118 @@
+.skills {
+    padding: 1.6rem 2rem 0;
+}
+
+.skillset {
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skillset .skill {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem .8rem .4rem;
+    font-size: .9rem;
+    border-radius: 999999px;
+    border: 1px solid var(--divider);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all .2s ease-in-out !important;
+    margin: .4rem .6rem .4rem 0;
+}
+
+.skillset .skill:hover,
+.skillset .skill:focus {
+    color: var(--text-primary);
+}
+
+.skillset .skill svg {
+    margin-right: .4rem;
+    fill: var(--text-secondary);
+}
+
+.skillset .skill:hover svg,
+.skillset .skill:focus svg {
+    fill: var(--text-primary)
+}
+
+.skillset .skill.android:hover,
+.skillset .skill.android:focus {
+    background-color: #b1f1ce;
+    border-color: #3ddc84;
+}
+
+.skillset .skill.kotlin:hover,
+.skillset .skill.kotlin:focus {
+    background-color: #c2c9f3;
+    border-color: #6677e0;
+}
+
+.skillset .skill.java:hover,
+.skillset .skill.java:focus {
+    background-color: #f7abac;
+    border-color: #ea2e2f;
+}
+
+.skillset .skill.python:hover,
+.skillset .skill.python:focus {
+    background-color: #b0c7db;
+    border-color: #3a74a5;
+}
+
+.skillset .skill.javascript:hover,
+.skillset .skill.javascript:focus {
+    background-color: #fcf2a5;
+    border-color: #f7df1e;
+}
+
+.skillset .skill.html:hover,
+.skillset .skill.html:focus {
+    background-color: #f4b9a8;
+    border-color: #e34f26;
+}
+
+.skillset .skill.css:hover,
+.skillset .skill.css:focus {
+    background-color: #aec7e1;
+    border-color: #3572b5;
+}
+
+.skillset .skill.node:hover,
+.skillset .skill.node:focus {
+    background-color: #c0dfb4;
+    border-color: #61af43;
+}
+
+.skillset .skill.react:hover,
+.skillset .skill.react:focus {
+    background-color: #99e7f5;
+    border-color: #00c2e6;
+}
+
+.skillset .skill.mongo:hover,
+.skillset .skill.mongo:focus {
+    background-color: #c3d9b7;
+    border-color: #69a14a;
+}
+
+.skillset .skill.git:hover,
+.skillset .skill.git:focus {
+    background-color: #fec5a8;
+    border-color: #fc6d26;
+}
+
+.skillset .skill.md:hover,
+.skillset .skill.md:focus {
+    background-color: #e7e7e7;
+    border-color: #888888;
+}
+
+@media (min-width: 960px) {
+    .skills {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
