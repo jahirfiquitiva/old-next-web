@@ -1,16 +1,19 @@
 nav.nav {
     width: 100%;
-    background-color: #eee;
+    background-color: rgba(246, 249, 254, .7);
+    backdrop-filter: blur(8px);
     min-height: var(--toolbar-height);
     position: fixed;
     top: 0;
+    -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, .08), 0 3px 4px 0 rgba(0, 0, 0, .06), 0 1px 5px 0 rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, .08), 0 3px 4px 0 rgba(0, 0, 0, .06), 0 1px 5px 0 rgba(0, 0, 0, .2);
+    -o-box-shadow: 0 0 4px 0 rgba(0, 0, 0, .08), 0 3px 4px 0 rgba(0, 0, 0, .06), 0 1px 5px 0 rgba(0, 0, 0, .2);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, .08), 0 3px 4px 0 rgba(0, 0, 0, .06), 0 1px 5px 0 rgba(0, 0, 0, .2);
 }
 
 .toolbar {
     display: grid;
     grid-template-columns: 1fr;
-    font-family: var(--manrope-font);
-    font-weight: 600;
 }
 
 .toolbar button.menuToggle,
@@ -19,6 +22,7 @@ nav.nav {
 .toolbar button.menuToggle:active {
     min-height: var(--toolbar-height);
     min-width: var(--toolbar-height);
+    background-color: rgba(0, 0, 0, 0);
     border: none;
     height: 100%;
     padding: 0 .6rem 0 .4rem;
@@ -46,6 +50,8 @@ nav.nav {
 .toolbar .logo {
     justify-content: space-between;
     padding: .4rem .4rem;
+    font-family: var(--manrope-font);
+    font-weight: 600;
 }
 
 .toolbar .logo a {
@@ -54,6 +60,8 @@ nav.nav {
 
 .toolbar .menu {
     display: none;
+    font-family: var(--inter-font);
+    font-weight: 400;
 }
 
 .toolbar .menu.active {
@@ -78,6 +86,11 @@ nav.nav {
     padding: .4rem 1rem .6rem .8rem;
 }
 
+.toolbar .menu .item a,
+.toolbar .menu .item a:visited {
+    color: var(--text-secondary);
+}
+
 .toolbar div span a,
 .toolbar div span a:hover,
 .toolbar div span a:focus,
@@ -91,7 +104,8 @@ nav.nav {
 .toolbar .menu .item.active a,
 .toolbar div span.theme-toggle:hover,
 .toolbar div span.theme-toggle:focus {
-    background-color: rgba(0, 142, 208, 0.12);
+    color: var(--accent-dark);
+    background-color: rgba(45, 82, 171, .085);
     border-radius: 4px;
 }
 

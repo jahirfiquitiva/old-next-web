@@ -1,9 +1,22 @@
 :root {
-    --toolbar-height: 2.4rem;
-    --system-font: '';
+    --system-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
     --inter-font: 'Inter', var(--system-font);
     --manrope-font: 'Manrope', var(--inter-font);
-    --accent-color: #0094bf;
+    --code-font: 'Fira Code', Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
+    --background: #fafafa;
+    --primary: #f6f9fe;
+    --accent: #3867d6;
+    --accent-light: #88a4e6;
+    --accent-dark: #2d52ab;
+    --text-primary: rgba(9, 17, 34, .9);
+    --text-secondary: rgba(9, 17, 34, .75);
+    --base-font-size: 1rem;
+    --toolbar-height: 2.4rem;
+}
+
+html, body {
+    background-color: var(--background);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -13,6 +26,58 @@ body {
     font-weight: 400;
 }
 
+pre, code, kbd, samp {
+    font-family: var(--code-font);
+}
+
 .use-manrope {
     font-family: var(--manrope-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--manrope-font);
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h4, h5, h6 {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: calc(var(--base-font-size) * 2);
+}
+
+h2 {
+    font-size: calc(var(--base-font-size) * 1.8);
+}
+
+h3 {
+    font-size: calc(var(--base-font-size) * 1.5);
+}
+
+h4 {
+    font-size: calc(var(--base-font-size) * 1.25);
+}
+
+h5 {
+    font-size: calc(var(--base-font-size) * 1.1);
+}
+
+h6, p, body {
+    font-size: var(--base-font-size);
+}
+
+a,
+a:visited {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--accent-dark);
+    text-decoration: underline solid var(--accent-dark);
 }
