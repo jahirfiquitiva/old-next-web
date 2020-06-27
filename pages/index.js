@@ -1,5 +1,4 @@
 import Layout from '@components/Layout';
-import PostList from '@components/PostList';
 import getPosts from '@utils/getPosts';
 import About from '@components/root/about/about';
 import Projects from '@components/root/projects/projects';

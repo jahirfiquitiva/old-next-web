@@ -113,6 +113,10 @@ button:focus,
 .button:hover,
 .button:focus {
     background-color: var(--accent-dark);
+    -webkit-transform: translateY(-.1rem);
+    -moz-transform: translateY(-.1rem);
+    -ms-transform: translateY(-.1rem);
+    -o-transform: translateY(-.1rem);
     transform: translateY(-.1rem);
 }
 

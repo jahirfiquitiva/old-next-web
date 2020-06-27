@@ -1,7 +1,8 @@
+import styles from './post-list.module.css';
 import Link from 'next/link';
 
-export default function PostList({ posts }) {
-  if (posts === 'undefined') return null;
+const PostList = ({ posts }) => {
+  if ((posts || []).length <= 0) return (<></>);
 
   return (
     <div>
@@ -9,6 +10,7 @@ export default function PostList({ posts }) {
       <ul>
         {posts &&
         posts.map((post) => {
+          console.table(post);
           return (
             <li key={post.slug}>
               {post.frontmatter.date}: {` `}
@@ -21,4 +23,6 @@ export default function PostList({ posts }) {
       </ul>
     </div>
   );
-}
+};
+
+export default PostList;
