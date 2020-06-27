@@ -3,7 +3,7 @@
     --inter-font: 'Inter', var(--system-font);
     --manrope-font: 'Manrope', var(--inter-font);
     --code-font: 'Fira Code', Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
-    --background: #fafafa;
+    --background: #fff;
     --primary: #f6f9fe;
     --accent: #3867d6;
     --accent-light: #88a4e6;
@@ -23,7 +23,8 @@ html, body {
 
 body {
     margin: 0;
-    padding: calc(var(--toolbar-height) + 1.6rem) 0 0;
+    padding: 0;
+    min-height: 100vh;
     font-family: var(--inter-font);
     font-weight: 400;
     line-height: 1.5;

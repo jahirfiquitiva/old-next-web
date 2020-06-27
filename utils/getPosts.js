@@ -14,7 +14,10 @@ const getPosts = (context) => {
       slug,
     };
   });
-  return data;
+
+  return data.sort((a, b) =>
+    (b.frontmatter.date || '').localeCompare((a.frontmatter.date || ''))
+  );
 };
 
 export default getPosts;

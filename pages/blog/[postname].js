@@ -10,11 +10,10 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
 
   return (
     <>
-      <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
+      <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`} page={1}>
         <div className="back">
-          ←{' '}
-          <Link href="/">
-            <a>Back to post list</a>
+          <Link href="/blog">
+            <a>←{' '}Back to post list</a>
           </Link>
         </div>
         <article>
@@ -76,7 +75,7 @@ export async function getStaticPaths() {
     return getSlugs(context);
   })(require.context('../../posts', true, /\.md$/));
 
-  const paths = blogSlugs.map((slug) => `/post/${slug}`);
+  const paths = blogSlugs.map((slug) => `/blog/${slug}`);
 
   return {
     paths, // An array of path names, and any params

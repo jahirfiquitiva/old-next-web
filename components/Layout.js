@@ -30,9 +30,10 @@ const Layout = ({
           href={'https://necolas.github.io/normalize.css/latest/normalize.css'}
           rel={'stylesheet'}/>
       </Head>
-      <Toolbar selected={page}/>
+      <header>
+        <Toolbar selected={page}/>
+      </header>
       <Content>{children}</Content>
-      <Footer/>
     </>
   );
 };

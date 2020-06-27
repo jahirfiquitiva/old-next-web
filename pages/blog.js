@@ -17,6 +17,7 @@ export default Blog;
 export async function getStaticProps() {
   const configData = await import(`../siteconfig.json`);
 
+  // noinspection JSUnresolvedVariable
   const posts = ((context) => {
     return getPosts(context);
   })(require.context('../posts', true, /\.md$/));
