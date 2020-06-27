@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Toolbar from './global/toolbar/toolbar';
 import Content from '@components/global/content/content';
+import Footer from '@components/global/footer/footer';
 
 const defaultSiteDescription = 'Jahir Fiquitiva\'s website';
 
@@ -31,9 +32,7 @@ const Layout = ({
       </Head>
       <Toolbar selected={page}/>
       <Content>{children}</Content>
-      <footer>
-        Built with <img src={'/netliheart.svg'} alt={'Netlify Heart'}/> for you
-      </footer>
+      <Footer/>
     </>
   );
 };

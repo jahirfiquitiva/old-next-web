@@ -2,10 +2,10 @@ import Icon from '@mdi/react';
 import { mdiTwitter, mdiGithub, mdiLinkedin, mdiInstagram } from '@mdi/js';
 import styles from './social.module.css';
 
-const Social = () => {
+const Social = ({ centered }) => {
 
   return (
-    <div className={styles.social}>
+    <div className={`${styles.social} ${centered ? styles.centered : ''}`}>
       <button className={styles.twitter}>
         <Icon path={mdiTwitter} size={.8}/>
       </button>

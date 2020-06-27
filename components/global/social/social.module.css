@@ -1,12 +1,12 @@
 .social {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    justify-content: flex-start;
     margin: .4rem 0;
 }
 
 .social.centered {
-    align-items: center;
+    justify-content: center;
 }
 
 .social button {
