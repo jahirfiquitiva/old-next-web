@@ -1,120 +1,143 @@
-nav.toolbar {
-    background: #222;
-    padding: 5px 20px;
-}
-
-.toolbar ul {
-    list-style-type: none;
-}
-
-.toolbar a {
-    color: white;
-    text-decoration: none;
-}
-
-.toolbar a:hover {
-    text-decoration: underline;
-}
-
-.logo a:hover {
-    text-decoration: none;
-}
-
-.menu li {
-    font-size: 16px;
-    padding: 15px 5px;
-    white-space: nowrap;
-}
-
-.logo a,
-.toggle a {
-    font-size: 20px;
-}
-
-/* Mobile menu */
-.menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.toggle {
-    order: 1;
-}
-
-.item.button {
-    order: 2;
-}
-
-.item {
+nav.nav {
     width: 100%;
-    text-align: center;
-    order: 3;
+    background-color: #eee;
+    min-height: var(--toolbar-height);
+    position: fixed;
+    top: 0;
+}
+
+.toolbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-family: var(--manrope-font);
+    font-weight: 600;
+}
+
+.toolbar button.menuToggle,
+.toolbar button.menuToggle:hover,
+.toolbar button.menuToggle:focus,
+.toolbar button.menuToggle:active {
+    min-height: var(--toolbar-height);
+    min-width: var(--toolbar-height);
+    border: none;
+    height: 100%;
+    padding: 0 .6rem 0 .4rem;
+}
+
+.toolbar button.menuToggle svg {
+    margin-top: .2rem;
+    margin-left: .1rem;
+}
+
+.toolbar div {
+    min-height: var(--toolbar-height);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+}
+
+.toolbar .logo {
+    justify-content: space-between;
+    padding: .4rem .4rem;
+}
+
+.toolbar .logo a {
+    padding-bottom: .4rem;
+}
+
+.toolbar .menu {
     display: none;
 }
 
-.item.active {
-    display: block;
+.toolbar .menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: .2rem .4rem;
 }
 
-.toggle button,
-.toggle button:hover,
-.toggle button:focus,
-.toggle button:active {
-    background: none;
+.toolbar span.item {
+    display: flex;
+    min-height: var(--toolbar-height);
+    height: 100%;
+    width: 100%;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
 }
 
-/* Tablet menu */
-@media all and (min-width: 600px) {
-    .menu {
+.toolbar div span a,
+.toolbar div span.theme-toggle {
+    width: 100%;
+    padding: .4rem 1rem .6rem .8rem;
+}
+
+.toolbar div span a,
+.toolbar div span a:hover,
+.toolbar div span a:focus,
+.toolbar div span a:active,
+.toolbar div span a:visited {
+    text-decoration: none;
+}
+
+.toolbar .menu .item:hover a,
+.toolbar .menu .item:focus a,
+.toolbar .menu .item.active a,
+.toolbar div span.theme-toggle:hover,
+.toolbar div span.theme-toggle:focus {
+    background-color: rgba(0, 142, 208, 0.12);
+    border-radius: 4px;
+}
+
+@media (min-width: 960px) {
+    nav.nav {
+        display: flex;
+        flex-direction: row;
         justify-content: center;
+        align-items: center;
     }
 
-    .logo {
-        flex: 1;
+    .toolbar {
+        grid-template-columns: 1fr auto;
+        padding-top: .4rem;
+        padding-bottom: .4rem;
+        width: 100%;
+        max-width: 960px;
     }
 
-    .toggle {
-        flex: 1;
-        text-align: right;
+    .toolbar .logo {
+        padding: .2rem;
     }
 
-    .item.button {
-        width: auto;
-        order: 1;
-        display: block;
-    }
-
-    .toggle {
-        order: 2;
-    }
-}
-
-/* Desktop menu */
-@media all and (min-width: 900px) {
-    .item {
-        display: block;
-        width: auto;
-    }
-
-    .toggle {
+    .toolbar button.menuToggle {
         display: none;
+        height: 0;
+        width: 0;
+        min-height: 0;
+        min-width: 0;
     }
 
-    .logo {
-        order: 0;
+    .toolbar .menu,
+    .toolbar .menu.active {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0 .4rem;
     }
 
-    .item {
-        order: 1;
+    .toolbar .menu .item {
+        width: auto;
+        white-space: nowrap;
     }
 
-    .menu li {
-        padding: 15px 10px;
-    }
-
-    .menu li.button {
-        padding-right: 0;
+    .toolbar span.item {
+        padding: 0 .2rem;
     }
 }

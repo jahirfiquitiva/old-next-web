@@ -1,5 +1,18 @@
+:root {
+    --toolbar-height: 2.4rem;
+    --system-font: '';
+    --inter-font: 'Inter', var(--system-font);
+    --manrope-font: 'Manrope', var(--inter-font);
+    --accent-color: #0094bf;
+}
+
 body {
-    max-width: 100%;
     margin: 0;
-    padding: 0;
+    padding: calc(var(--toolbar-height) + 1.6rem) 0 0;
+    font-family: var(--inter-font);
+    font-weight: 400;
+}
+
+.use-manrope {
+    font-family: var(--manrope-font);
 }

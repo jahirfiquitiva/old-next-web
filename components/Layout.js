@@ -18,8 +18,9 @@ const Layout = ({
         <meta name={'Description'} content={description}></meta>
         <title>{pageTitle}</title>
 
-        <link rel={'stylesheet'}
-              href={'https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css'}/>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Manrope:wght@600;700&display=swap"
+          rel="stylesheet"/>
       </Head>
       <Toolbar/>
       <section className={'layout'}>

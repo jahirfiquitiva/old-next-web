@@ -7,34 +7,35 @@ const Toolbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className={styles.toolbar}>
-      <ul className={styles.menu}>
-        <li className={styles.logo}><a href={'#'}>Invisible App</a></li>
-        <li className={`${styles.item} ${menuOpen ? styles.active : ''}`}>
-          <a href={'#'}>Home 🏡</a>
-        </li>
-        <li className={`${styles.item} ${menuOpen ? styles.active : ''}`}>
-          <a href={'#'}>Projects 👨‍💻</a>
-        </li>
-        <li className={`${styles.item} ${menuOpen ? styles.active : ''}`}>
-          <a href={'#'}>Donate 💙</a>
-        </li>
-        <li className={`${styles.item} ${menuOpen ? styles.active : ''}`}>
-          <a href={'#'}>Uses ⚡️</a>
-        </li>
-        <li className={`${styles.item} ${menuOpen ? styles.active : ''}`}>
-          <a href={'#'}>Contact 📮</a>
-        </li>
-        <li className={`${styles.item} ${menuOpen ? styles.active : ''}`}>
-          <a href={'#'}>Blog 📝</a>
-        </li>
-        <li className={`${styles.toggle}`}>
-          <button onClick={() => setMenuOpen(!menuOpen)}>
+    <nav className={styles.nav}>
+      <div className={styles.toolbar}>
+        <div className={styles.logo}>
+        <span className={styles.item}>
+          <a href={'#'}>Jahir Fiquitiva</a>
+        </span>
+          <button onClick={() => setMenuOpen(!menuOpen)} className={styles.menuToggle}>
             <Icon path={menuOpen ? mdiClose : mdiMenu}
                   size={1} color={'red'}/>
           </button>
-        </li>
-      </ul>
+        </div>
+        <div className={`${styles.menu} ${menuOpen ? styles.active : ''}`}>
+        <span className={`${styles.item} ${styles.active}`}>
+          <a href={'#'}>Home 🏡</a>
+        </span>
+          <span className={styles.item}>
+          <a href={'#'}>Blog 📝</a>
+        </span>
+          <span className={styles.item}>
+          <a href={'#'}>Uses ⚡️</a>
+        </span>
+          <span className={styles.item}>
+          <a href={'#'}>Donate 💙</a>
+        </span>
+          <span className={styles.item}>
+          <a href={'#'}>Contact 📮</a>
+        </span>
+        </div>
+      </div>
     </nav>
   );
 };
