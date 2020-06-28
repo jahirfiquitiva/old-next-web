@@ -1,8 +1,9 @@
 .post {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
     padding: 2rem 1.2rem;
+    width: 100%;
+    max-width: 90vw;
 }
 
 .post img.hero {
@@ -32,22 +33,15 @@
     margin-left: 1.2rem;
 }
 
-.post article {
+.post article,
+.post article .content {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 900px;
-}
-
-.post .content img {
-    display: block;
-    margin: auto;
-    height: auto;
-    max-width: 100%;
 }
 
 @media (min-width: 960px) {
     .post {
         padding: 2rem 0;
+        max-width: 900px;
     }
 }

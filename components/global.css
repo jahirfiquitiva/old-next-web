@@ -38,6 +38,8 @@ hr {
 }
 
 pre, code, kbd, samp {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: auto;
     font-family: var(--code-font);
 }
 
@@ -129,15 +131,23 @@ a.button:visited {
     text-decoration: none;
 }
 
-pre, code {
-    width: 100%;
-    max-width: 900px;
-    overflow: auto;
+pre {
+    -webkit-overflow-scrolling: touch;
     background-color: var(--primary);
-    padding: .8rem;
     color: var(--accent);
-    border-radius: 4px;
     font-size: .9rem;
+    overflow-x: auto;
+    padding: .8rem;
+    white-space: pre;
+    word-wrap: normal;
+    max-width: 90vw;
+}
+
+pre code {
+    background-color: transparent;
+    color: currentColor;
+    font-size: .9rem;
+    padding: 0;
 }
 
 code {

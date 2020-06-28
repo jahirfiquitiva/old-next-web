@@ -5,8 +5,6 @@ date: '2019-05-27'
 hero: ../static/milkovi-seattle-unsplash.jpg
 ---
 
-<img src="https://github.com/jahirfiquitiva/Blueprint/raw/master/art/app_logo.png" width="192" align="right" hspace="20" />
-
 Blueprint
 ======
 
