@@ -1,0 +1,28 @@
+.error {
+    height: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.error h2 {
+    text-shadow: 2px 2px 0 #fd7d84;
+}
+
+.error p {
+    margin-top: .8rem;
+    margin-bottom: 2rem;
+}
+
+.error .gif,
+.error img {
+    margin: auto 0 0;
+    padding: 0;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+}

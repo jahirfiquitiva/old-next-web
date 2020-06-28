@@ -1,0 +1,28 @@
+.construction {
+    height: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.construction h2 {
+    text-shadow: 2px 2px 0 #fed330;
+}
+
+.construction p {
+    margin-top: .8rem;
+    margin-bottom: 2rem;
+}
+
+.construction .gif,
+.construction img {
+    margin: 4rem auto;
+    padding: 0;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+}
