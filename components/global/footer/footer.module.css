@@ -24,3 +24,9 @@ footer.footer .container p {
 footer.footer .container p:first-of-type {
     margin-top: 1.2em;
 }
+
+footer.footer .container .logito {
+    display: block;
+    margin-top: 1.6rem;
+    margin-bottom: 1rem;
+}

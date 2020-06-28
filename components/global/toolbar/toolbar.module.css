@@ -66,6 +66,19 @@ nav.nav {
     padding-bottom: .4rem;
 }
 
+.toolbar .logo .logito {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.toolbar .logo .logito img {
+    width: 24px;
+    height: 24px;
+    margin-right: .6rem;
+}
+
 .toolbar .menu {
     display: none;
     font-family: var(--inter-font);
@@ -81,6 +94,9 @@ nav.nav {
 
 .toolbar span.item {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     min-height: var(--toolbar-height);
     height: 100%;
     padding-top: .2rem;
@@ -91,15 +107,14 @@ nav.nav {
     width: 100%;
 }
 
+.toolbar .menu span.item .emoji {
+    margin-right: 1.1rem;
+}
+
 .toolbar div span a,
 .toolbar div span.theme-toggle {
     width: 100%;
     padding: .4rem 1rem .6rem .8rem;
-}
-
-.toolbar .item a {
-    line-height: 1.5;
-    padding-top: .55rem;
 }
 
 .toolbar .menu .item a,
@@ -169,5 +184,9 @@ nav.nav {
 
     .toolbar span.item {
         padding: 0 .2rem;
+    }
+
+    .toolbar .menu span.item .emoji {
+        margin-right: .8rem;
     }
 }

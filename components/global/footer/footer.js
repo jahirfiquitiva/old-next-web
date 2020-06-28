@@ -12,6 +12,9 @@ const Footer = () => {
         <p>Made with <Icon path={mdiHeart} size={.6}/> by <ExtLink to={'/'} label={'yours truly'}
                                                                    newTab={false}/></p>
         <p>Copyright © {new Date().getFullYear()} | All Rights Reserved</p>
+        <a href={'/'} className={styles.logito}>
+          <img src={'/static/images/brand/logo-def.svg'} alt={'JF'} height={24} width={24}/>
+        </a>
       </div>
     </footer>
   );
