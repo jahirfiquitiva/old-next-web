@@ -25,3 +25,4 @@ deploy:
 	rm -f footer.html
 	rm -f social-btns.html
 	rm -f blm.html
+	ls -la | grep html
