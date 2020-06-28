@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "clean": "rm -rf .next && rm -rf out",
+    "dev": "next dev",
+    "prebuild": "npm run clean",
+    "build": "next build",
+    "preexport": "npm run build",
+    "export": "next export",
+    "deploy": "npm run export"
   },
   "dependencies": {
     "@mdi/js": "^5.3.45",
