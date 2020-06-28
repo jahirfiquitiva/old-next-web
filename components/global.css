@@ -141,6 +141,7 @@ pre {
     white-space: pre;
     word-wrap: normal;
     max-width: 90vw;
+    border-radius: 6px;
 }
 
 pre code {
@@ -152,6 +153,8 @@ pre code {
 
 code {
     padding: .2rem .4rem;
+    background-color: var(--primary);
+    border-radius: 6px;
 }
 
 @media (min-width: 375px) {
