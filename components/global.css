@@ -129,6 +129,21 @@ a.button:visited {
     text-decoration: none;
 }
 
+pre, code {
+    width: 100%;
+    max-width: 900px;
+    overflow: auto;
+    background-color: var(--primary);
+    padding: .8rem;
+    color: var(--accent);
+    border-radius: 4px;
+    font-size: .9rem;
+}
+
+code {
+    padding: .2rem .4rem;
+}
+
 @media (min-width: 375px) {
     body {
         line-height: 1.8;

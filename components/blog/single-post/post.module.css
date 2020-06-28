@@ -5,6 +5,10 @@
     padding: 2rem 1.2rem;
 }
 
+.post img.hero {
+    margin-bottom: 1rem;
+}
+
 .post img {
     display: block;
     margin: auto;
@@ -17,7 +21,8 @@
     margin-bottom: .8rem;
 }
 
-.post p {
+.post p,
+.post ol {
     margin-top: .6rem;
     margin-bottom: .6rem;
 }
@@ -27,10 +32,11 @@
     margin-left: 1.2rem;
 }
 
-.post .content {
+.post article {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    width: 100%;
+    max-width: 900px;
 }
 
 .post .content img {

@@ -24,15 +24,9 @@ const Post = ({ frontmatter, mdBody }) => {
           {frontmatter.title}
         </h1>
         {frontmatter.hero && (
-          <img
-            src={frontmatter.hero}
-            className="hero"
-            alt={frontmatter.title}
-          />
+          <img className={styles.hero} src={frontmatter.hero} alt={frontmatter.title}/>
         )}
-        <div className={styles.content}>
-          <ReactMarkdown source={mdBody} escapeHtml={false}/>
-        </div>
+        <ReactMarkdown source={mdBody} escapeHtml={false} className={styles.content}/>
       </article>
     </div>
   );
