@@ -18,13 +18,8 @@ export default Index;
 export async function getStaticProps() {
   const configData = await import(`../siteconfig.json`);
 
-  const posts = ((context) => {
-    return getPosts(context);
-  })(require.context('../posts', true, /\.md$/));
-
   return {
     props: {
-      posts,
       title: configData.default.title,
       description: configData.default.description,
     },

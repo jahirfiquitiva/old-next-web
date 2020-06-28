@@ -63,7 +63,7 @@ const PostList = ({ posts }) => {
         {(posts || []).map((post) => {
           const heroUrl = getHeroUrl(post);
           const { data } = heroUrl ? usePalette(heroUrl) : { data: null };
-          const color = getColorFromData(data) || post.color;
+          const color = getColorFromData(data) || post.frontmatter.color || post.color;
           return (
             <a href={`/blog/${post.slug}`} className={styles.card} key={post.slug}
                style={getColorStyle(color)}>

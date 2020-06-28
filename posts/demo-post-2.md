@@ -2,6 +2,7 @@
 title: 'The city of coffee-drinkers'
 author: 'Netlifriends'
 date: '2020-04-28'
+color: '#fc5c65'
 ---
 
 ## What even is Seattle?

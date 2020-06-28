@@ -1,9 +1,7 @@
-import Link from 'next/link';
 import matter from 'gray-matter';
-import ReactMarkdown from 'react-markdown';
-
-import Layout from '@components/Layout';
 import getSlugs from '@utils/getSlugs';
+import Layout from '@components/Layout';
+import Post from '@components/blog/single-post/post';
 
 export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
   if (!frontmatter) return <></>;
@@ -11,45 +9,8 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
   return (
     <>
       <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`} page={1}>
-        <div className="back">
-          <Link href="/blog">
-            <a>←{' '}Back to post list</a>
-          </Link>
-        </div>
-        <article>
-          <h1>{frontmatter.title}</h1>
-          {frontmatter.hero_image && (
-            <img
-              src={frontmatter.hero_image}
-              className="hero"
-              alt={frontmatter.title}
-            />
-          )}
-          <div>
-            <ReactMarkdown source={markdownBody}/>
-          </div>
-        </article>
+        <Post frontmatter={frontmatter} mdBody={markdownBody}/>
       </Layout>
-      <style jsx>{`
-        article {
-          width: 100%;
-          max-width: 1200px;
-        }
-        h1 {
-          font-size: 3rem;
-        }
-        h3 {
-          font-size: 2rem;
-        }
-        .hero {
-          width: 100%;
-        }
-        .back {
-          width: 100%;
-          max-width: 1200px;
-          color: #00a395;
-        }
-      `}</style>
     </>
   );
 }
