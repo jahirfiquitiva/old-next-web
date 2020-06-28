@@ -23,11 +23,11 @@ html, body {
 
 body {
     margin: 0;
-    padding: 0;
     min-height: 100vh;
     font-family: var(--inter-font);
     font-weight: 400;
     line-height: 1.5;
+    padding: calc(var(--toolbar-height) + 1.6rem) 0 0;
 }
 
 hr {
@@ -154,6 +154,7 @@ pre code {
 code {
     padding: .2rem .4rem;
     background-color: var(--primary);
+    color: var(--accent);
     border-radius: 6px;
     font-size: .9rem;
 }

@@ -6,7 +6,6 @@ main.main {
     -webkit-box-pack: center;
     justify-content: center;
     min-height: calc(100vh - var(--toolbar-height) - 1.6rem);
-    padding: calc(var(--toolbar-height) + 1.6rem) 0 0;
 }
 
 main.main .content {

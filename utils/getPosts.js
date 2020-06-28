@@ -14,15 +14,18 @@ const getPosts = (context) => {
     let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3);
     const value = values[index];
     const document = matter(value.default);
-    return {
+    const post = {
       frontmatter: document.data,
       markdownBody: document.content,
       slug,
       color: getRandomItemFrom(defaultColors),
     };
+    const isInProgress = post.frontmatter['in-progress'] === true;
+    if (isInProgress) return null;
+    return post;
   });
 
-  return data.sort((a, b) =>
+  return (data || []).filter((it) => it).sort((a, b) =>
     (b.frontmatter.date || '').localeCompare((a.frontmatter.date || ''))
   );
 };
