@@ -11,6 +11,16 @@
     margin-bottom: .8rem;
 }
 
+.supporters ul {
+    list-style-type: disc;
+    margin-left: 1.4rem;
+}
+
+.supporters ul li {
+    margin-top: .1rem;
+    margin-bottom: .1rem;
+}
+
 .supporters .list {
     display: flex;
     flex-direction: row;
