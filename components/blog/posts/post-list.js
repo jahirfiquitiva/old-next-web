@@ -51,7 +51,9 @@ const PostList = ({ posts }) => {
   const getHeroUrl = (post) => {
     if (post && post.frontmatter) {
       const { hero } = post.frontmatter;
-      return hero && hero.length > 0 ? hero : null;
+      return hero && hero.length > 0
+        ? hero.startsWith('..') ? null : `/static/images/posts/${hero}`
+        : null;
     }
     return null;
   };
@@ -68,7 +70,7 @@ const PostList = ({ posts }) => {
             <a href={`/blog/${post.slug}`} className={styles.card} key={post.slug}
                style={getColorStyle(color)}>
               <div className={styles.details}>
-                {renderPostHero(post.frontmatter.hero || '', color)}
+                {renderPostHero(heroUrl, color)}
                 <div className={styles.info}>
                   <h5>{post.frontmatter.title}</h5>
                   <p>{post.frontmatter.date}</p>
