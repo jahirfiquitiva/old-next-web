@@ -8,7 +8,7 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
 
   return (
     <>
-      <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`} page={1}>
+      <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`} page={frontmatter.page || 1}>
         <Post frontmatter={frontmatter} mdBody={markdownBody}/>
       </Layout>
     </>

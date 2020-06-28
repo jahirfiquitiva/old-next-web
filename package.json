@@ -14,6 +14,7 @@
     "@svgr/webpack": "^5.4.0",
     "gray-matter": "^4.0.2",
     "next": "^9.4.4",
+    "nextjs-redirect": "^4.0.2",
     "raw-loader": "^4.0.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",

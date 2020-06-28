@@ -67,11 +67,13 @@ const PostList = ({ posts }) => {
           return (
             <a href={`/blog/${post.slug}`} className={styles.card} key={post.slug}
                style={getColorStyle(color)}>
-              {renderPostHero(post.frontmatter.hero || '', color)}
-              <div className={styles.info}>
-                <h5>{post.frontmatter.title}</h5>
-                <p>{post.frontmatter.date}</p>
-                <p>{post.frontmatter.description || ''}</p>
+              <div className={styles.details}>
+                {renderPostHero(post.frontmatter.hero || '', color)}
+                <div className={styles.info}>
+                  <h5>{post.frontmatter.title}</h5>
+                  <p>{post.frontmatter.date}</p>
+                  <p>{post.frontmatter.description || ''}</p>
+                </div>
               </div>
             </a>
           );
