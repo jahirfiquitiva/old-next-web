@@ -1,0 +1,58 @@
+.intro {
+
+}
+
+.intro .title {
+    text-shadow: 2px 2px 0 #97d0f8;
+}
+
+.intro p {
+    margin-top: .8rem;
+    margin-bottom: .8rem;
+}
+
+.intro .buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.intro .buttons a.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 26px;
+    margin-right: .8rem;
+}
+
+.intro .buttons a.button svg {
+    margin-right: .4rem;
+}
+
+.intro .buttons a.button.github {
+    background-color: #333;
+}
+
+.intro .buttons a:hover.button.github,
+.intro .buttons a:focus.button.github {
+    background-color: #292929;
+}
+
+.intro .buttons a.button.paypal {
+    background-color: #1a4593;
+}
+
+.intro .buttons a:hover.button.paypal,
+.intro .buttons a:focus.button.paypal {
+    background-color: #002b7a;
+}
+
+.intro .buttons a.button.bmac {
+    background-color: #5f7fff;
+}
+
+.intro .buttons a:hover.button.bmac,
+.intro .buttons a:focus.button.bmac {
+    background-color: #4c66cc;
+}
