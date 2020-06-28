@@ -1,0 +1,39 @@
+.supporters {
+    padding: 2rem 1.2rem;
+}
+
+.supporters .title {
+    text-shadow: 2px 2px 0 #fd9644;
+}
+
+.supporters p {
+    margin-top: .8rem;
+    margin-bottom: .8rem;
+}
+
+.supporters .list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: .8rem;
+    margin-bottom: 1.6rem;
+}
+
+.supporters .list a.supporter {
+    display: block;
+    height: 48px;
+    width: 48px;
+    margin: .4rem;
+    border-radius: 50%;
+    background-color: var(--primary);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid var(--divider);
+}
+
+@media (min-width: 960px) {
+    .supporters {
+        padding: 2rem 0;
+    }
+}
