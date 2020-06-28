@@ -29,7 +29,7 @@ const About = () => {
         </div>
         <div className={styles.photocontainer}>
           <img
-            src={'https://jahir.dev/assets/images/me/me.jpg'} alt={'Jahir\'s Photo'}
+            src={'/static/images/me/me.jpg'} alt={'Jahir\'s Photo'}
             className={styles.photo} height={168} width={168}/>
         </div>
       </div>
