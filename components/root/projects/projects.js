@@ -16,7 +16,9 @@ const Projects = () => {
                  '--border-color': hexToRGB(it.color, .2),
                  '--hl-color': it.color
                }}>
-              <img src={it.icon} alt={it.title}/>
+              <div className={styles.icon}>
+                <img src={it.icon} alt={it.title}/>
+              </div>
               <div className={styles.info}>
                 <h5>{it.title}</h5>
                 <p>{it.description}</p>

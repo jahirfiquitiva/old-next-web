@@ -35,11 +35,20 @@
     margin: .4rem;
 }
 
+.projects .card .icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 80px;
+    padding: .4rem .6rem .4rem .8rem;
+}
+
 .projects .card img {
     opacity: 0.8;
     max-width: 72px;
     margin: auto;
-    padding: .4rem .4rem .4rem .8rem;
     transition: all .25s ease-in-out;
 }
 
