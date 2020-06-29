@@ -17,6 +17,10 @@
     border-radius: 50%;
     margin: auto;
     max-width: 168px;
+    -webkit-box-shadow: 3px 3px 0 0 #97d0f8;
+    -moz-box-shadow: 3px 3px 0 0 #97d0f8;
+    -o-box-shadow: 3px 3px 0 0 #97d0f8;
+    box-shadow: 3px 3px 0 0 #97d0f8;
 }
 
 .about .info {

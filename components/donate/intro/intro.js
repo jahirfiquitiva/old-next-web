@@ -24,8 +24,7 @@ const Intro = () => {
       <p>
         Whatever I receive, will be highly appreciated. Thanks in advance! 🤗
       </p>
-      <br/>
-      <p><b>Donation options:</b></p>
+      <p className={styles.btitle}><b>Donation options:</b></p>
       <div className={styles.buttons}>
         <a className={`button ${styles.button} ${styles.github}`}>
           <Icon path={mdiGithub} size={.9} color={'#fff'}/>GitHub Sponsors
