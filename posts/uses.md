@@ -2,7 +2,7 @@
 title: Which tools do I use?
 description: Get to know the software and hardware I use
 date: '2020-06-27'
-color: '#29f3ae'
+color: '#26de81'
 page: 2
 ---
 
@@ -53,5 +53,5 @@ I use the default macOS terminal with a slightly modified `~/.bash_profile` for 
 * [Anker 7 in 1 USB C Hub](https://www.amazon.com/gp/product/B07HMLTCPL)
 * [Logitech K380 Keyboard](https://www.logitech.com/product/multi-device-keyboard-k380)
 * [Logitech MX Master 2S](https://www.logitech.com/product/mx-master-2s-flow)
-* [iPhone 11 (PRODUCT)RED](https://www.apple.com/iphone-11/)
+* [iPhone 11 (PRODUCT)<sup>RED</sup>](https://www.apple.com/iphone-11/)
 * [AirPods Pro](https://www.apple.com/airpods-pro/)

@@ -21,10 +21,10 @@ const Error = ({ isFourHundredFour = false }) => {
       <h2 className={styles.title}>{isFourHundredFour ? fhfError : errorError}</h2>
       <p>{isFourHundredFour ? fhfMessage : errorMessage}</p>
       {renderContactMessage()}
-      <a className={'button'} href={'/'}>Go Back Home</a>
+      <a className={`button ${styles.button}`} href={'/'}>Go Back Home</a>
       <img
-        src={'/static/images/error/404.gif'}
-        alt={'John Travolta GIF'}/>
+        src={isFourHundredFour ? '/static/images/gifs/404.gif' : '/static/images/gifs/monkey.gif'}
+        alt={isFourHundredFour ? 'John Travolta GIF' : 'Monkey throwing laptop aggressively'}/>
     </div>
   );
 };

@@ -7,7 +7,7 @@ const UnderConstruction = () => {
       <p>Please bear with me as I work really hard to bring this site (back) to life 😬</p>
       <a className={'button'} href={'/'}>Go Back Home</a>
       <img
-        src={'/static/images/error/construction.gif'}
+        src={'/static/images/gifs/construction.gif'}
         alt={'Man falling while working on a construction'}/>
     </div>
   );
