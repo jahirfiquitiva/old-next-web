@@ -1,26 +1,16 @@
 nav.nav {
     z-index: 4;
     width: 100%;
-    background-color: rgba(235, 240, 251, 0.65);
+    background-color: var(--toolbar-color);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     min-height: var(--toolbar-height);
     position: fixed;
     top: 0;
-    -webkit-box-shadow: 0 0 4px 0 rgba(9, 17, 34, .08), 0 3px 4px 0 rgba(9, 17, 34, .06), 0 1px 5px 0 rgba(9, 17, 34, .2);
-    -moz-box-shadow: 0 0 4px 0 rgba(9, 17, 34, .08), 0 3px 4px 0 rgba(9, 17, 34, .06), 0 1px 5px 0 rgba(9, 17, 34, .2);
-    -o-box-shadow: 0 0 4px 0 rgba(9, 17, 34, .08), 0 3px 4px 0 rgba(9, 17, 34, .06), 0 1px 5px 0 rgba(9, 17, 34, .2);
-    box-shadow: 0 0 4px 0 rgba(9, 17, 34, .08), 0 3px 4px 0 rgba(9, 17, 34, .06), 0 1px 5px 0 rgba(9, 17, 34, .2);
-}
-
-@media (prefers-color-scheme: dark) {
-    nav.nav {
-        background-color: rgba(8, 15, 30, 0.65);
-        -webkit-box-shadow: 0 0 4px 0 rgba(56, 103, 214, .08), 0 3px 4px 0 rgba(56, 103, 214, .06), 0 1px 5px 0 rgba(56, 103, 214, .2);
-        -moz-box-shadow: 0 0 4px 0 rgba(56, 103, 214, .08), 0 3px 4px 0 rgba(56, 103, 214, .06), 0 1px 5px 0 rgba(56, 103, 214, .2);
-        -o-box-shadow: 0 0 4px 0 rgba(56, 103, 214, .08), 0 3px 4px 0 rgba(56, 103, 214, .06), 0 1px 5px 0 rgba(56, 103, 214, .2);
-        box-shadow: 0 0 4px 0 rgba(56, 103, 214, .08), 0 3px 4px 0 rgba(56, 103, 214, .06), 0 1px 5px 0 rgba(56, 103, 214, .2);
-    }
+    -webkit-box-shadow: 0 0 4px 0 var(--toolbar-shadow-a), 0 3px 4px 0 var(--toolbar-shadow-b), 0 1px 5px 0 var(--toolbar-shadow-c);
+    -moz-box-shadow: 0 0 4px 0 var(--toolbar-shadow-a), 0 3px 4px 0 var(--toolbar-shadow-b), 0 1px 5px 0 var(--toolbar-shadow-c);
+    -o-box-shadow: 0 0 4px 0 var(--toolbar-shadow-a), 0 3px 4px 0 var(--toolbar-shadow-b), 0 1px 5px 0 var(--toolbar-shadow-c);
+    box-shadow: 0 0 4px 0 var(--toolbar-shadow-a), 0 3px 4px 0 var(--toolbar-shadow-b), 0 1px 5px 0 var(--toolbar-shadow-c);
 }
 
 .toolbar {
@@ -146,18 +136,8 @@ nav.nav {
 .toolbar div span.theme-toggle:hover,
 .toolbar div span.theme-toggle:focus {
     color: var(--accent-dark) !important;
-    background-color: rgba(45, 82, 171, .08);
+    background-color: var(--toolbar-highlight);
     border-radius: 4px;
-}
-
-@media (prefers-color-scheme: dark) {
-    .toolbar span.item:hover a,
-    .toolbar span.item:focus a,
-    .toolbar span.item.active a,
-    .toolbar div span.theme-toggle:hover,
-    .toolbar div span.theme-toggle:focus {
-        background-color: rgba(215, 225, 247, .08);
-    }
 }
 
 @media (min-width: 960px) {

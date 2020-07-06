@@ -51,7 +51,7 @@
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
-    background-color: var(--primary);
+    background-color: var(--accent-light);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

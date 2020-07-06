@@ -12,11 +12,18 @@
     --accent-light: #88a4e6;
     --accent-dark: #2d52ab;
     --on-accent: #fff;
-    --text-primary: rgba(9, 17, 34, .9);
-    --text-secondary: rgba(9, 17, 34, .75);
+    --text-primary: rgba(9, 17, 34, .95);
+    --text-secondary: rgba(9, 17, 34, .8);
+    --text-tertiary: rgba(9, 17, 34, .5);
     --divider: rgba(9, 17, 34, .12);
+    --toolbar-color: rgba(235, 240, 251, 0.65);
+    --toolbar-shadow-a: rgba(9, 17, 34, .08);
+    --toolbar-shadow-b: rgba(9, 17, 34, .06);
+    --toolbar-shadow-c: rgba(9, 17, 34, .2);
+    --toolbar-highlight: rgba(45, 82, 171, .08);
 }
 
+/*
 @media (prefers-color-scheme: dark) {
     :root {
         --text-shadow-size: 0;
@@ -27,10 +34,17 @@
         --accent-dark: #afc2ef;
         --on-accent: rgba(9, 17, 34, .9);
         --text-primary: #fff;
-        --text-secondary: rgba(255, 255, 255, .85);
-        --divider: rgba(255, 255, 255, .12);
+        --text-secondary: rgba(235, 240, 251, .85);
+        --text-tertiary: rgba(235, 240, 251, .5);
+        --divider: rgba(235, 240, 251, .12);
+        --toolbar-color: rgba(8, 15, 30, 0.65);
+        --toolbar-shadow-a: rgba(56, 103, 214, .08);
+        --toolbar-shadow-b: rgba(56, 103, 214, .06);
+        --toolbar-shadow-c: rgba(56, 103, 214, .2);
+        --toolbar-highlight: rgba(215, 225, 247, .08);
     }
 }
+*/
 
 html, body {
     background-color: var(--background);
@@ -65,6 +79,7 @@ pre, code, kbd, samp {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--manrope-font);
+    color: var(--text-primary);
 }
 
 h1, h2, h3 {
@@ -176,6 +191,19 @@ code {
     color: var(--accent);
     border-radius: 6px;
     font-size: .9rem;
+}
+
+::placeholder {
+    color: var(--text-tertiary);
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: var(--text-tertiary);
+}
+
+::-ms-input-placeholder {
+    color: var(--text-tertiary);
 }
 
 @media (min-width: 375px) {
