@@ -22,7 +22,7 @@ const Post = ({ frontmatter, mdBody }) => {
       </div>
       <article>
         <h1 style={{
-          textShadow: `3px 3px 0 ${color}`,
+          textShadow: `var(--text-shadow-size) var(--text-shadow-size) 0 ${color}`,
         }}>
           {frontmatter.title}
         </h1>

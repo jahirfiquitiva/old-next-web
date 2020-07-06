@@ -44,7 +44,7 @@ const ContactForm = () => {
                     value={message} onChange={(e) => setMessage(e.target.value.toString())}/>
         </div>
         <button type={'submit'}>
-          <Icon path={mdiEmailSendOutline} size={1} color={'#fff'}/>Send
+          <Icon path={mdiEmailSendOutline} size={1}/>Send
         </button>
       </form>
     </div>

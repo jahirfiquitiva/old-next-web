@@ -4,7 +4,7 @@ import getRandomItemFrom from '@utils/getRandomItem';
 const defaultColors = [
   '#fc5c65', '#fd9644', '#f7b731',
   '#26de81', '#2bcbba', '#45aaf2',
-  '#4b7bec', '#a55eea', '#778ca3'
+  '#4b7bec', '#a55eea', '#778ca3',
 ];
 
 const getPosts = (context) => {

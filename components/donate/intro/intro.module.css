@@ -28,6 +28,7 @@
     align-items: center;
     min-height: 26px;
     max-height: 28px;
+    color: #fff;
 }
 
 .intro .buttons a.button:not(:last-of-type) {

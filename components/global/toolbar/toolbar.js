@@ -2,10 +2,12 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Icon from '@mdi/react';
 import { mdiClose, mdiMenu } from '@mdi/js';
+import detectDarkMode from '@utils/detectDarkMode';
 import styles from './toolbar.module.css';
 
 const Toolbar = ({ selected }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const isDark = detectDarkMode();
 
   return (
     <nav className={styles.nav}>
@@ -14,7 +16,9 @@ const Toolbar = ({ selected }) => {
           <span className={styles.item}>
             <Link href={'/'}>
               <a className={styles.logito}>
-                <img src={'/static/images/brand/logo-def.svg'} alt={'JF'} height={24} width={24}/>
+                <img
+                  src={`/static/images/brand/logo-def${isDark ? '-dark' : ''}.svg`}
+                  alt={'JF'} height={24} width={24}/>
                 Jahir Fiquitiva
               </a>
             </Link>
