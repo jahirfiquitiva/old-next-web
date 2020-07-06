@@ -2,7 +2,7 @@
   {
     "title": "Blueprint",
     "description": "Dashboard for creating icon packs.",
-    "icon": "/static/images/projects/android/blueprint.png",
+    "icon": "/assets/images/projects/android/blueprint.png",
     "link": "https://github.com/jahirfiquitiva/Blueprint/",
     "color": "#4d8af0",
     "tag": "android"
@@ -10,7 +10,7 @@
   {
     "title": "Frames",
     "description": "Dashboard for creating wallpapers apps.",
-    "icon": "/static/images/projects/android/frames.png",
+    "icon": "/assets/images/projects/android/frames.png",
     "link": "https://github.com/jahirfiquitiva/Frames/",
     "color": "#35b4ef",
     "tag": "android"
@@ -18,7 +18,7 @@
   {
     "title": "Kuper",
     "description": "Dashboard for Zooper and Kustom widget packs.",
-    "icon": "/static/images/projects/android/kuper.png",
+    "icon": "/assets/images/projects/android/kuper.png",
     "link": "https://github.com/jahirfiquitiva/Kuper/",
     "color": "#6673C0",
     "tag": "android"
@@ -26,7 +26,7 @@
   {
     "title": "Pals",
     "description": "Creates color palettes from any color or image.",
-    "icon": "/static/images/projects/android/pals.png",
+    "icon": "/assets/images/projects/android/pals.png",
     "link": "https://jahir.xyz/PalsApp",
     "color": "#4285F4",
     "tag": "android"
@@ -34,7 +34,7 @@
   {
     "title": "Tap",
     "description": "Creates Google Keep notes and Todoist tasks quickly",
-    "icon": "/static/images/projects/android/tap.png",
+    "icon": "/assets/images/projects/android/tap.png",
     "link": "https://jahir.xyz/TapApp",
     "color": "#E69494",
     "tag": "android"
@@ -42,7 +42,7 @@
   {
     "title": "ChipView",
     "description": "Custom view to provide Material Design specs' Chip component.",
-    "icon": "/static/images/projects/android/chipview.png",
+    "icon": "/assets/images/projects/android/chipview.png",
     "link": "https://github.com/jahirfiquitiva/ChipView/",
     "color": "#3E95FB",
     "tag": "android"
@@ -50,7 +50,7 @@
   {
     "title": "Dashbud",
     "description": "Quickly setup any of my Android dashboards.",
-    "icon": "/static/images/projects/web/setup.png",
+    "icon": "/assets/images/projects/web/setup.png",
     "link": "/dashsetup/",
     "color": "#7E28FC",
     "tag": "web"
@@ -58,7 +58,7 @@
   {
     "title": "Changes",
     "description": "Shows the latest change logs of the repositories I own or contribute to.",
-    "icon": "/static/images/projects/web/changes.png",
+    "icon": "/assets/images/projects/web/changes.png",
     "link": "/changes/",
     "color": "#0FAEB9",
     "tag": "web"
@@ -66,7 +66,7 @@
   {
     "title": "Sliding Puzzle",
     "description": "Pseudo-AI+ML that solves the 8-Puzzle aka Sliding Puzzle.",
-    "icon": "/static/images/projects/other/puzzle.png",
+    "icon": "/assets/images/projects/other/puzzle.png",
     "link": "https://jahir.xyz/SlidingPuzzle",
     "color": "#929292",
     "tag": "python"
@@ -74,7 +74,7 @@
   {
     "title": "Stan",
     "description": "Slack bot to help with text-only SCRUM stand-ups.",
-    "icon": "/static/images/projects/other/stan.png",
+    "icon": "/assets/images/projects/other/stan.png",
     "link": "https://github.com/jahirfiquitiva/stanbot/",
     "color": "#FC8303",
     "tag": "python"
@@ -82,7 +82,7 @@
   {
     "title": "More",
     "description": "Find other open-source projects on GitHub.",
-    "icon": "/static/images/projects/other/more.png",
+    "icon": "/assets/images/projects/other/more.png",
     "link": "https://jahir.xyz/github",
     "color": "#92a3b5",
     "tag": "other"

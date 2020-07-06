@@ -29,7 +29,7 @@ const Post = ({ frontmatter, mdBody }) => {
         {frontmatter.hero && (
           <img
             className={styles.hero}
-            src={`/static/images/posts/${frontmatter.hero}`} alt={frontmatter.title}/>
+            src={`/assets/images/posts/${frontmatter.hero}`} alt={frontmatter.title}/>
         )}
         <ReactMarkdown source={mdBody} escapeHtml={false} className={styles.content}/>
       </article>

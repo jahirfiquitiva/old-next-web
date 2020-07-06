@@ -10,7 +10,7 @@ const Sent = () => {
         <a className={`button ${styles.button}`}>Go Back Home</a>
       </Link>
       <img
-        src={'/static/images/gifs/mail.gif'}
+        src={'/assets/images/gifs/mail.gif'}
         alt={'Dog checking mail'}/>
     </div>
   );

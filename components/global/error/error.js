@@ -26,7 +26,7 @@ const Error = ({ isFourHundredFour = false }) => {
         <a className={`button ${styles.button}`}>Go Back Home</a>
       </Link>
       <img
-        src={isFourHundredFour ? '/static/images/gifs/404.gif' : '/static/images/gifs/monkey.gif'}
+        src={isFourHundredFour ? '/assets/images/gifs/404.gif' : '/assets/images/gifs/monkey.gif'}
         alt={isFourHundredFour ? 'John Travolta GIF' : 'Monkey throwing laptop aggressively'}/>
     </div>
   );

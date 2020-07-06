@@ -53,7 +53,7 @@ const PostList = ({ posts }) => {
     if (post && post.frontmatter) {
       const { hero } = post.frontmatter;
       return hero && hero.length > 0
-        ? hero.startsWith('..') ? null : `/static/images/posts/${hero}`
+        ? hero.startsWith('..') ? null : `/assets/images/posts/${hero}`
         : null;
     }
     return null;

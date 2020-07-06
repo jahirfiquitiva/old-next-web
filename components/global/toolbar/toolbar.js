@@ -17,7 +17,7 @@ const Toolbar = ({ selected }) => {
             <Link href={'/'}>
               <a className={styles.logito}>
                 <img
-                  src={`/static/images/brand/logo-def${isDark ? '-dark' : ''}.svg`}
+                  src={`/assets/images/brand/logo-def${isDark ? '-dark' : ''}.svg`}
                   alt={'JF'} height={24} width={24}/>
                 Jahir Fiquitiva
               </a>
