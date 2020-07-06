@@ -10,7 +10,7 @@
 }
 
 .construction h2 {
-    text-shadow: 2px 2px 0 #fed330;
+    text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #fed330;
 }
 
 .construction p {

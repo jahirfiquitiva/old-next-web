@@ -3,6 +3,9 @@
     --inter-font: 'Inter', var(--system-font);
     --manrope-font: 'Manrope', var(--inter-font);
     --code-font: 'Fira Code', Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
+    --base-font-size: 1rem;
+    --toolbar-height: 2.4rem;
+    --text-shadow-size: 2px;
     --background: #fff;
     --primary: #f6f9fe;
     --accent: #3867d6;
@@ -12,8 +15,21 @@
     --text-primary: rgba(9, 17, 34, .9);
     --text-secondary: rgba(9, 17, 34, .75);
     --divider: rgba(9, 17, 34, .12);
-    --base-font-size: 1rem;
-    --toolbar-height: 2.4rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-shadow-size: 0;
+        --background: #080f1e;
+        --primary: #080f1e;
+        --accent: #88a4e6;
+        --accent-light: #3867d6;
+        --accent-dark: #d7e1f7;
+        --on-accent: rgba(9, 17, 34, .9);
+        --text-primary: #fff;
+        --text-secondary: rgba(255, 255, 255, .85);
+        --divider: rgba(255, 255, 255, .12);
+    }
 }
 
 html, body {
@@ -27,6 +43,7 @@ body {
     font-family: var(--inter-font);
     font-weight: 400;
     line-height: 1.5;
+    color: var(--text-secondary);
 }
 
 hr {

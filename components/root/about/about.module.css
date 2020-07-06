@@ -13,14 +13,15 @@
 }
 
 .about .photocontainer img.photo {
+    --img-shadow-size: calc(var(--text-shadow-size) + 1px);
     display: block;
     border-radius: 50%;
     margin: auto;
     max-width: 168px;
-    -webkit-box-shadow: 3px 3px 0 0 #97d0f8;
-    -moz-box-shadow: 3px 3px 0 0 #97d0f8;
-    -o-box-shadow: 3px 3px 0 0 #97d0f8;
-    box-shadow: 3px 3px 0 0 #97d0f8;
+    -webkit-box-shadow: var(--img-shadow-size) var(--img-shadow-size) 0 0 #97d0f8;
+    -moz-box-shadow: var(--img-shadow-size) var(--img-shadow-size) 0 0 #97d0f8;
+    -o-box-shadow: var(--img-shadow-size) var(--img-shadow-size) 0 0 #97d0f8;
+    box-shadow: var(--img-shadow-size) var(--img-shadow-size) 0 0 #97d0f8;
 }
 
 .about .info {
@@ -61,11 +62,13 @@
 }
 
 .about .hello {
-    text-shadow: 2px 2px 0 #fed330;
+    color: var(--text-primary);
+    text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #fed330;
 }
 
 .about .name {
-    text-shadow: 2px 2px 0 #97d0f8;
+    color: var(--text-primary);
+    text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #97d0f8;
 }
 
 @media (min-width: 960px) {

@@ -13,7 +13,7 @@
 }
 
 .projects .title {
-    text-shadow: 2px 2px 0 #d1adf4;
+    text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #d1adf4;
 }
 
 .projects .grid {
