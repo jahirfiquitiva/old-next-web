@@ -1,33 +1,26 @@
 import Head from 'next/head';
 import Toolbar from './global/toolbar/toolbar';
 import Content from '@components/global/content/content';
+import MetaTags from '@components/MetaTags';
 
-const defaultSiteDescription = 'Jahir Fiquitiva\'s website';
+const defaultSiteDescription = 'Passionate and creative developer from Colombia '
+  + '\uD83C\uDDE8\uD83C\uDDF4.\n'
+  + 'This website contains information about me, my skills and my projects.';
 
 const Layout = ({
   children,
-  pageTitle = 'Jahir Fiquitiva 💎',
+  title = 'Jahir Fiquitiva 💎',
   description = defaultSiteDescription,
+  keywords = [],
+  image,
   page = -1,
   ...props
 }) => {
   return (
     <>
       <Head>
-        <meta name={'viewport'} content={'width=device-width, initial-scale=1'}/>
-        <meta charSet={'utf-8'}/>
-        <meta name={'Description'} content={description}></meta>
-        <title>{pageTitle}</title>
-
-        <link
-          href={'https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600;700&family=Fira+Code:wght@500&display=swap'}
-          rel={'stylesheet'}/>
-        <link
-          href={'https://meyerweb.com/eric/tools/css/reset/reset.css'}
-          rel={'stylesheet'}/>
-        <link
-          href={'https://necolas.github.io/normalize.css/latest/normalize.css'}
-          rel={'stylesheet'}/>
+        <title>{title}</title>
+        <MetaTags title={title} description={description} keywords={keywords} image={image}/>
       </Head>
       <header>
         <Toolbar selected={page}/>

@@ -2,9 +2,9 @@ import Layout from '@components/Layout';
 import About from '@components/root/about/about';
 import Projects from '@components/root/projects/projects';
 
-const Index = ({ posts, title, description, ...props }) => {
+const Index = ({ title, description, keywords, ...props }) => {
   return (
-    <Layout pageTitle={title} description={description} page={0}>
+    <Layout title={title} description={description} keywords={keywords} page={0}>
       <About/>
       <hr id={'projects'}/>
       <Projects/>
@@ -20,6 +20,7 @@ export const getStaticProps = async () => {
     props: {
       title: configData.default.title,
       description: configData.default.description,
+      keywords: configData.default.keywords,
     },
   };
 };

@@ -3,17 +3,22 @@ import getSlugs from '@utils/getSlugs';
 import Layout from '@components/Layout';
 import Post from '@components/blog/single-post/post';
 
-export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
+const BlogPost = ({ frontmatter, markdownBody, title, description, keywords, image }) => {
   if (!frontmatter) return <></>;
-
   return (
     <>
-      <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`} page={frontmatter.page || 1}>
+      <Layout
+        title={`${frontmatter.title} | Blog ~ ${title}`}
+        description={frontmatter.description || description}
+        keywords={keywords} image={image}
+        page={frontmatter.page || 1}>
         <Post frontmatter={frontmatter} mdBody={markdownBody}/>
       </Layout>
     </>
   );
-}
+};
+
+export default BlogPost;
 
 export const getStaticProps = async ({ ...ctx }) => {
   const { postname } = ctx.params;
@@ -22,10 +27,17 @@ export const getStaticProps = async ({ ...ctx }) => {
   const config = await import('../../siteconfig.json');
   const data = matter(content.default);
 
+  const { hero } = data.data;
+  const actualHero = hero ? hero.startsWith('http') ? hero : `/assets/images/posts/${hero}` : '';
+  const frontmatter = { ...data.data, hero: actualHero };
+
   return {
     props: {
-      siteTitle: config.title,
-      frontmatter: data.data,
+      title: config.default.title,
+      description: config.default.description,
+      keywords: config.default.keywords,
+      image: actualHero.startsWith('/') ? `https://jahir.dev${actualHero}` : actualHero,
+      frontmatter,
       markdownBody: data.content,
     },
   };

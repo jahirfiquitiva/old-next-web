@@ -11,13 +11,16 @@ const getPosts = (context) => {
   const keys = context.keys();
   const values = keys.map(context);
   const data = keys.map((key, index) => {
-    let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3);
+    const slug = key.replace(/^.*[\\/]/, '').slice(0, -3);
     const value = values[index];
     const document = matter(value.default);
+    const { hero } = document.data;
+    const actualHero = hero ? hero.startsWith('http') ? hero : `/assets/images/posts/${hero}` : '';
+    const frontmatter = { ...document.data, hero: actualHero };
     const post = {
-      frontmatter: document.data,
-      markdownBody: document.content,
       slug,
+      frontmatter,
+      markdownBody: document.content,
       color: getRandomItemFrom(defaultColors),
     };
     const isInProgress = post.frontmatter['in-progress'] === true;

@@ -2,10 +2,10 @@ import Layout from '@components/Layout';
 import PostList from '@components/blog/posts/post-list';
 import getPosts from '@utils/getPosts';
 
-const Blog = ({ posts, title, description, ...props }) => {
+const Blog = ({ posts, title, description, keywords, ...props }) => {
   return (
     <>
-      <Layout pageTitle={title} description={description} page={1}>
+      <Layout title={title} description={description} keywords={keywords} page={1}>
         <PostList posts={posts}/>
       </Layout>
     </>
@@ -25,8 +25,9 @@ export const getStaticProps = async () => {
   return {
     props: {
       posts,
-      title: configData.default.title,
+      title: `Blog ~ ${configData.default.title}`,
       description: configData.default.description,
+      keywords: configData.default.keywords,
     },
   };
 };
