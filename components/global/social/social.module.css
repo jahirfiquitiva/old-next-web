@@ -17,7 +17,9 @@
 }
 
 .social .button:hover,
-.social .button:focus {
+.social .button:focus,
+.social .button:active,
+.social .button:visited {
     color: #fff;
 }
 

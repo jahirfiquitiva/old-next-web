@@ -29,7 +29,7 @@
 
 .skillset .skill:hover,
 .skillset .skill:focus {
-    color: var(--text-primary);
+    color: rgba(9, 17, 34, .9);
 }
 
 .skillset .skill svg {
