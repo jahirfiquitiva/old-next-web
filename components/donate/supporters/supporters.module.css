@@ -12,34 +12,53 @@
 }
 
 .supporters ul {
-    list-style-type: disc;
-    margin-left: 1.4rem;
+    list-style-type: none;
+    margin-top: .8rem;
+    margin-bottom: 1.6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .supporters ul li {
-    margin-top: .1rem;
-    margin-bottom: .1rem;
+    margin: .4rem .2rem;
 }
 
-.supporters .list {
+.supporters ul li a.supporter {
+    --bg-color: var(--divider);
+    --border-color: var(--divider);
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: .8rem;
-    margin-bottom: 1.6rem;
+    align-items: center;
+    border-radius: 99999px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid var(--border-color);
+    padding: .3rem .4rem;
+    color: var(--text-secondary);
 }
 
-.supporters .list a.supporter {
-    display: block;
-    height: 48px;
-    width: 48px;
-    margin: .4rem;
+.supporters ul li a.supporter:hover,
+.supporters ul li a.supporter:focus,
+.supporters ul li a.supporter:active {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.supporters ul li a.supporter .photo {
+    --size: 30px;
+    width: var(--size);
+    height: var(--size);
     border-radius: 50%;
     background-color: var(--primary);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: 1px solid var(--divider);
+}
+
+.supporters ul li a.supporter .name {
+    margin: 0 .2rem 0 .6rem;
 }
 
 @media (min-width: 960px) {

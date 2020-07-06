@@ -1,32 +1,45 @@
+import { usePalette } from 'react-palette';
 import data from './supporters.json';
 import styles from './supporters.module.css';
-import ExtLink from '@components/global/ext-link/ext-link';
+import hexToRGB from '@utils/hexToRgb';
 
 const Supporters = () => {
+  const getColorStyle = (color) => {
+    if (!color) return {};
+    return {
+      '--bg-color': hexToRGB(color, 0.15),
+      '--border-color': hexToRGB(color, 0.4),
+    };
+  };
+
+  const getColorFromData = (data) => {
+    if (!data) return null;
+    const { vibrant: color = null } = data;
+    return color;
+  };
+
   const renderSupportersPhotos = () => {
-    return (<ul>
-      {(data || []).map((it, i) => {
-        return (
-          <li key={i}>
-            <ExtLink to={it.link} label={it.name}/>
-          </li>
-        );
-      })}
-    </ul>);
-    /*
     return (
-      <div className={styles.list}>
+      <ul>
         {(data || []).map((it, i) => {
+          const { data } = it.photo ? usePalette(it.photo) : { data: null };
+          const color = getColorFromData(data) || null;
           return (
-            <a key={i} href={it.link} target={'_blank'}
-               rel={'noopener noreferrer'}
-               className={styles.supporter}
-               style={{ backgroundImage: `url(${it.photo || ''})` }}/>
+            <li key={i}>
+              <a href={it.link} target={'_blank'}
+                 rel={'noopener noreferrer'}
+                 className={styles.supporter}
+                 style={getColorStyle(color)}>
+                <div
+                  className={styles.photo}
+                  style={{ backgroundImage: `url(${it.photo || ''})` }}/>
+                <p className={styles.name}>{it.name}</p>
+              </a>
+            </li>
           );
         })}
-      </div>
+      </ul>
     );
-     */
   };
 
   return (

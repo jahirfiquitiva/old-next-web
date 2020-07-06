@@ -37,9 +37,9 @@ const PostList = ({ posts }) => {
   const getColorStyle = (color) => {
     if (!color) return {};
     return {
-      '--shadow-color': hexToRGB(color, .15),
-      '--border-color': hexToRGB(color, .2),
-      '--hl-color': color
+      '--shadow-color': hexToRGB(color, 0.15),
+      '--border-color': hexToRGB(color, 0.2),
+      '--hl-color': color,
     };
   };
 
