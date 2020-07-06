@@ -1,9 +1,8 @@
 import { usePalette } from 'react-palette';
-import data from './supporters.json';
 import styles from './supporters.module.css';
 import hexToRGB from '@utils/hexToRgb';
 
-const Supporters = () => {
+const Supporters = ({ supporters = [] }) => {
   const getColorStyle = (color) => {
     if (!color) return {};
     return {
@@ -18,10 +17,13 @@ const Supporters = () => {
     return color;
   };
 
-  const renderSupportersPhotos = () => {
+  const renderSupporters = () => {
+    if (supporters.length <= 0) {
+      return (<p>There&apos;s no people supporting me yet 😔</p>);
+    }
     return (
       <ul>
-        {(data || []).map((it, i) => {
+        {(supporters || []).map((it, i) => {
           const { data } = it.photo ? usePalette(it.photo) : { data: null };
           const color = getColorFromData(data) || null;
           return (
@@ -46,7 +48,7 @@ const Supporters = () => {
     <div className={styles.supporters}>
       <h3 className={styles.title}>🙌&nbsp;&nbsp;Thanks!</h3>
       <p>I&apos;m really grateful to all the awesome people that support my work.</p>
-      {renderSupportersPhotos()}
+      {renderSupporters()}
     </div>
   );
 };

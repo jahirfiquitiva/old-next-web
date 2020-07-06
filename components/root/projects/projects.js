@@ -1,13 +1,17 @@
 import hexToRGB from '@utils/hexToRgb';
-import data from './projects.json';
 import styles from './projects.module.css';
 
-const Projects = () => {
-  return (
-    <div className={styles.projects}>
-      <h3 className={styles.title}>👨‍💻&nbsp;&nbsp;Projects</h3>
+const Projects = ({ projects = [] }) => {
+  const renderProjects = () => {
+    if (projects.length <= 0) {
+      return (<>
+        <br/>
+        <p>No projects available 🙃</p>
+      </>);
+    }
+    return (
       <div className={styles.grid}>
-        {(data || []).map((it, i) => {
+        {(projects || []).map((it, i) => {
           return (
             <a className={styles.card} href={it.link} key={it.title}
                target={'_blank'} rel={'noopener noreferrer'}
@@ -27,6 +31,13 @@ const Projects = () => {
           );
         })}
       </div>
+    );
+  };
+
+  return (
+    <div className={styles.projects}>
+      <h3 className={styles.title}>👨‍💻&nbsp;&nbsp;Projects</h3>
+      {renderProjects()}
     </div>
   );
 };
