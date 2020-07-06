@@ -15,11 +15,11 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
   );
 }
 
-export async function getStaticProps({ ...ctx }) {
+export const getStaticProps = async ({ ...ctx }) => {
   const { postname } = ctx.params;
 
   const content = await import(`../../posts/${postname}.md`);
-  const config = await import(`../../siteconfig.json`);
+  const config = await import('../../siteconfig.json');
   const data = matter(content.default);
 
   return {
@@ -29,9 +29,9 @@ export async function getStaticProps({ ...ctx }) {
       markdownBody: data.content,
     },
   };
-}
+};
 
-export async function getStaticPaths() {
+export const getStaticPaths = async () => {
   const blogSlugs = ((context) => {
     return getSlugs(context);
   })(require.context('../../posts', true, /\.md$/));
@@ -42,4 +42,4 @@ export async function getStaticPaths() {
     paths, // An array of path names, and any params
     fallback: false, // so that 404s properly appear if something's not matching
   };
-}
+};

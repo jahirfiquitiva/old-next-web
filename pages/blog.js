@@ -14,8 +14,8 @@ const Blog = ({ posts, title, description, ...props }) => {
 
 export default Blog;
 
-export async function getStaticProps() {
-  const configData = await import(`../siteconfig.json`);
+export const getStaticProps = async () => {
+  const configData = await import('../siteconfig.json');
 
   // noinspection JSUnresolvedVariable
   const posts = ((context) => {
@@ -29,4 +29,4 @@ export async function getStaticProps() {
       description: configData.default.description,
     },
   };
-}
+};

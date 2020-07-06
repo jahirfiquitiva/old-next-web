@@ -14,13 +14,12 @@ const Index = ({ posts, title, description, ...props }) => {
 
 export default Index;
 
-export async function getStaticProps() {
-  const configData = await import(`../siteconfig.json`);
-
+export const getStaticProps = async () => {
+  const configData = await import('../siteconfig.json');
   return {
     props: {
       title: configData.default.title,
       description: configData.default.description,
     },
   };
-}
+};

@@ -10,8 +10,9 @@ const Intro = () => {
       <p>
         I try really hard to build great apps and provide the best possible experience and products
         to all users, and most of them are <ExtLink to={'https://github.com/jahirfiquitiva'}
-                                                    label={'open source'}/>. However, that wouldn't
-        be possible without the help and the motivation from <a href={'#supporters'}>supporters</a>!
+                                                    label={'open source'}/>. However, that
+        wouldn&apos;t be possible without the help and the motivation from <a
+        href={'#supporters'}>supporters</a>!
       </p>
       <p>
         <b>

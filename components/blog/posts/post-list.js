@@ -69,8 +69,7 @@ const PostList = ({ posts }) => {
           const color = getColorFromData(data) || post.frontmatter.color || post.color;
           return (
             <Link href={`/blog/${post.slug}`}>
-              <a className={styles.card} key={post.slug}
-                 style={getColorStyle(color)}>
+              <a className={styles.card} key={post.slug} style={getColorStyle(color)}>
                 <div className={styles.details}>
                   {renderPostHero(heroUrl, color)}
                   <div className={styles.info}>
