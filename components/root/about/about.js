@@ -21,10 +21,13 @@ const About = () => {
     <>
       <div className={styles.about}>
         <div className={styles.info}>
-          <h3 className={styles.hello}><span className={styles.wave}>👋</span>&nbsp;&nbsp;{hellos[hello]}!</h3>
+          <h3 className={styles.hello}>
+            <span className={styles.wave}>👋</span>
+            &nbsp;&nbsp;{hellos[hello]}!
+          </h3>
           <h3 className={styles.name}>I am Jahir Fiquitiva</h3>
           <br/>
-          <p> I'm a passionate and creative full-stack developer from <ExtLink
+          <p>I&apos;m a passionate and creative full-stack developer from <ExtLink
             to={'https://www.google.com/maps/place/Colombia/@4,-72z/'} label={'Colombia 🇨🇴'}/></p>
         </div>
         <div className={styles.photocontainer}>

@@ -32,7 +32,7 @@ const Supporters = () => {
   return (
     <div className={styles.supporters}>
       <h3 className={styles.title}>🙌&nbsp;&nbsp;Thanks!</h3>
-      <p>I'm really grateful to all the awesome people that support my work.</p>
+      <p>I&apos;m really grateful to all the awesome people that support my work.</p>
       {renderSupportersPhotos()}
     </div>
   );

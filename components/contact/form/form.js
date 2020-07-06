@@ -13,7 +13,7 @@ const ContactForm = () => {
   return (
     <div className={styles.contact}>
       <h3 className={styles.title}>📮&nbsp;&nbsp;Contact</h3>
-      <p><b>Don't hesitate contacting me!</b></p>
+      <p><b>Don&apos;t hesitate contacting me!</b></p>
       <p>
         PS: I also have open <ExtLink to={'https://jahir.xyz/twitterdm'}
                                       label={'Twitter DMs'}/>&nbsp;and&nbsp;
