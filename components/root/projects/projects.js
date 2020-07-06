@@ -12,9 +12,9 @@ const Projects = () => {
             <a className={styles.card} href={it.link} key={it.title}
                target={'_blank'} rel={'noopener noreferrer'}
                style={{
-                 '--shadow-color': hexToRGB(it.color, .15),
-                 '--border-color': hexToRGB(it.color, .2),
-                 '--hl-color': it.color
+                 '--shadow-color': hexToRGB(it.color, 0.15),
+                 '--border-color': hexToRGB(it.color, 0.2),
+                 '--hl-color': it.color,
                }}>
               <div className={styles.icon}>
                 <img src={it.icon} alt={it.title}/>

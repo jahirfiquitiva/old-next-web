@@ -3,7 +3,6 @@ import styles from './supporters.module.css';
 import ExtLink from '@components/global/ext-link/ext-link';
 
 const Supporters = () => {
-
   const renderSupportersPhotos = () => {
     return (<ul>
       {(data || []).map((it, i) => {

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { usePalette } from 'react-palette';
 import Icon from '@mdi/react';
 import { mdiPencil } from '@mdi/js';
@@ -67,17 +68,19 @@ const PostList = ({ posts }) => {
           const { data } = heroUrl ? usePalette(heroUrl) : { data: null };
           const color = getColorFromData(data) || post.frontmatter.color || post.color;
           return (
-            <a href={`/blog/${post.slug}`} className={styles.card} key={post.slug}
-               style={getColorStyle(color)}>
-              <div className={styles.details}>
-                {renderPostHero(heroUrl, color)}
-                <div className={styles.info}>
-                  <h5>{post.frontmatter.title}</h5>
-                  <p>{post.frontmatter.date}</p>
-                  <p>{post.frontmatter.description || ''}</p>
+            <Link href={`/blog/${post.slug}`}>
+              <a className={styles.card} key={post.slug}
+                 style={getColorStyle(color)}>
+                <div className={styles.details}>
+                  {renderPostHero(heroUrl, color)}
+                  <div className={styles.info}>
+                    <h5>{post.frontmatter.title}</h5>
+                    <p>{post.frontmatter.date}</p>
+                    <p>{post.frontmatter.description || ''}</p>
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </Link>
           );
         })}
       </div>

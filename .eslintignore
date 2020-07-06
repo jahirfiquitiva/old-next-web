@@ -27,3 +27,6 @@ serviceWorker.js
 deploy
 public
 build
+posts
+node_modules
+.next

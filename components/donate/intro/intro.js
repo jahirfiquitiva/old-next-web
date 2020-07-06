@@ -27,13 +27,13 @@ const Intro = () => {
       <p className={styles.btitle}><b>Donation options:</b></p>
       <div className={styles.buttons}>
         <a className={`button ${styles.button} ${styles.github}`}>
-          <Icon path={mdiGithub} size={.9} color={'#fff'}/>GitHub Sponsors
+          <Icon path={mdiGithub} size={0.9} color={'#fff'}/>GitHub Sponsors
         </a>
         <a className={`button ${styles.button} ${styles.bmac}`}>
-          <Icon path={mdiPizza} size={.9} color={'#fff'}/>Buy Me a Pizza
+          <Icon path={mdiPizza} size={0.9} color={'#fff'}/>Buy Me a Pizza
         </a>
         <a className={`button ${styles.button} ${styles.paypal}`}>
-          <Icon path={mdiCreditCardOutline} size={.9} color={'#fff'}/>PayPal
+          <Icon path={mdiCreditCardOutline} size={0.9} color={'#fff'}/>PayPal
         </a>
       </div>
     </div>

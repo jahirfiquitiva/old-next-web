@@ -1,6 +1,6 @@
 {
-  "name": "next-netlify-blog-starter",
-  "version": "0.1.0",
+  "name": "jahir-website",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "next start",
@@ -10,7 +10,8 @@
     "build": "next build",
     "preexport": "npm run build",
     "export": "next export",
-    "deploy": "npm run export"
+    "deploy": "npm run export",
+    "lint": "./node_modules/eslint/bin/eslint.js ./components ./pages -c .eslintrc.json --ignore-path .eslintignore"
   },
   "dependencies": {
     "@mdi/js": "^5.3.45",
