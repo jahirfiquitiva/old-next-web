@@ -1,11 +1,15 @@
+import { useContext } from 'react';
 import Link from 'next/link';
 import { usePalette } from 'react-palette';
 import Icon from '@mdi/react';
 import { mdiPencil } from '@mdi/js';
 import hexToRGB from '@utils/hexToRgb';
+import ThemeContext from '@components/theme/ThemeContext';
 import styles from './post-list.module.css';
+import getColorFromData from '@utils/getColorFromData';
 
 const PostList = ({ posts }) => {
+  const { isDark } = useContext(ThemeContext);
   if ((posts || []).length <= 0) {
     return (
       <div>
@@ -43,12 +47,6 @@ const PostList = ({ posts }) => {
     };
   };
 
-  const getColorFromData = (data) => {
-    if (!data) return null;
-    const { vibrant: color = null } = data;
-    return color;
-  };
-
   const getHeroUrl = (post) => {
     if (post && post.frontmatter) {
       const { hero } = post.frontmatter;
@@ -66,7 +64,7 @@ const PostList = ({ posts }) => {
         {(posts || []).map((post) => {
           const heroUrl = getHeroUrl(post);
           const { data } = heroUrl ? usePalette(heroUrl) : { data: null };
-          const color = getColorFromData(data) || post.frontmatter.color || post.color;
+          const color = getColorFromData(data, isDark) || post.frontmatter.color || post.color;
           return (
             <Link href={`/blog/${post.slug}`} key={post.slug}>
               <a className={styles.card} style={getColorStyle(color)}>

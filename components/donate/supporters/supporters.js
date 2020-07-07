@@ -1,20 +1,19 @@
+import { useContext } from 'react';
 import { usePalette } from 'react-palette';
-import styles from './supporters.module.css';
 import hexToRGB from '@utils/hexToRgb';
+import getColorFromData from '@utils/getColorFromData';
+import ThemeContext from '@components/theme/ThemeContext';
+import styles from './supporters.module.css';
 
 const Supporters = ({ supporters = [] }) => {
+  const { isDark } = useContext(ThemeContext);
+
   const getColorStyle = (color) => {
     if (!color) return {};
     return {
       '--bg-color': hexToRGB(color, 0.15),
       '--border-color': hexToRGB(color, 0.4),
     };
-  };
-
-  const getColorFromData = (data) => {
-    if (!data) return null;
-    const { vibrant: color = null } = data;
-    return color;
   };
 
   const renderSupporters = () => {
@@ -25,7 +24,7 @@ const Supporters = ({ supporters = [] }) => {
       <ul>
         {(supporters || []).map((it, i) => {
           const { data } = it.photo ? usePalette(it.photo) : { data: null };
-          const color = getColorFromData(data) || null;
+          const color = getColorFromData(data, isDark) || null;
           return (
             <li key={i}>
               <a href={it.link} target={'_blank'}

@@ -1,7 +1,13 @@
+import { useContext } from 'react';
+import { usePalette } from 'react-palette';
+import ThemeContext from '@components/theme/ThemeContext';
 import hexToRGB from '@utils/hexToRgb';
+import getColorFromData from '@utils/getColorFromData';
 import styles from './projects.module.css';
 
 const Projects = ({ projects = [] }) => {
+  const { isDark } = useContext(ThemeContext);
+
   const renderProjects = () => {
     if (projects.length <= 0) {
       return (<>
@@ -12,13 +18,15 @@ const Projects = ({ projects = [] }) => {
     return (
       <div className={styles.grid}>
         {(projects || []).map((it, i) => {
+          const { data } = it.icon ? usePalette(it.icon) : { data: null };
+          const color = isDark ? getColorFromData(data, isDark) || it.color : it.color;
           return (
             <a className={styles.card} href={it.link} key={it.title}
                target={'_blank'} rel={'noopener noreferrer'}
                style={{
-                 '--shadow-color': hexToRGB(it.color, 0.15),
-                 '--border-color': hexToRGB(it.color, 0.2),
-                 '--hl-color': it.color,
+                 '--shadow-color': hexToRGB(color, 0.15),
+                 '--border-color': hexToRGB(color, 0.2),
+                 '--hl-color': color,
                }}>
               <div className={styles.icon}>
                 <img src={it.icon} alt={it.title}/>
