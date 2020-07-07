@@ -194,6 +194,10 @@ code {
     font-size: .9rem;
 }
 
+input, select, textarea {
+    color: var(--text-primary);
+}
+
 ::placeholder {
     color: var(--text-tertiary);
     opacity: 1;
