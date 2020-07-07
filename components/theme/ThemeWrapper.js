@@ -8,7 +8,7 @@ const ThemeWrapper = ({ children }) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    return setMounted(true);
   }, []);
 
   const renderContent = () => {
