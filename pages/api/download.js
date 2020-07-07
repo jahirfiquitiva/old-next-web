@@ -1,6 +1,11 @@
+const { GITHUB_API_TOKEN: githubApiToken = '' } = process.env;
+const authHeaders = githubApiToken && githubApiToken.length > 0
+  ? { headers: { Authorization: githubApiToken } }
+  : {};
+
 const fetchRepoData = async (name) => {
   const dataRequest = await fetch(
-    `https://api.github.com/repos/jahirfiquitiva/${name}/releases/latest`);
+    `https://api.github.com/repos/jahirfiquitiva/${name}/releases/latest`, authHeaders);
   const data = await dataRequest.json();
   const { assets = [] } = data;
   const extraRepoData = {

@@ -6,9 +6,15 @@ const repos = [
   { user: 'javiersantos', name: 'PiracyChecker', updateWiki: false, translate: false },
 ];
 
+const { GITHUB_API_TOKEN: githubApiToken = '' } = process.env;
+const authHeaders = githubApiToken && githubApiToken.length > 0
+  ? { headers: { Authorization: githubApiToken } }
+  : {};
+
 const fetchRepoData = async (repo) => {
   const { user, name, updateWiki, translate } = repo;
-  const dataRequest = await fetch(`https://api.github.com/repos/${user}/${name}/releases/latest`);
+  const dataRequest = await fetch(`https://api.github.com/repos/${user}/${name}/releases/latest`,
+    authHeaders);
   const data = await dataRequest.json();
   const { published_at: dateStamp, tag_name: version, body: changelog, assets = [] } = data;
   const extraRepoData = {

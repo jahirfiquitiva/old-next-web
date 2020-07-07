@@ -1,10 +1,14 @@
 const userApiUrl = 'https://api.github.com/users/jahirfiquitiva';
+const { GITHUB_API_TOKEN: githubApiToken = '' } = process.env;
+const authHeaders = githubApiToken && githubApiToken.length > 0
+  ? { headers: { Authorization: githubApiToken } }
+  : {};
 
 // Code copied from 'https://github.com/leerob/leerob.io/blob/master/pages/api/github.js'
 export default async (_, res) => {
   try {
-    const userRequest = await fetch(userApiUrl);
-    const userReposRequest = await fetch(`${userApiUrl}/repos`);
+    const userRequest = await fetch(userApiUrl, authHeaders);
+    const userReposRequest = await fetch(`${userApiUrl}/repos`, authHeaders);
 
     const user = await userRequest.json();
     const repositories = await userReposRequest.json();
