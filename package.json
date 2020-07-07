@@ -8,6 +8,7 @@
     "dev": "next dev",
     "prebuild": "npm run clean",
     "build": "next build",
+    "postbuild": "next-on-netlify",
     "preexport": "npm run build",
     "export": "next export",
     "deploy": "npm run export",
