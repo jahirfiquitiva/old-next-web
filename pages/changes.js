@@ -1,10 +1,11 @@
 import Layout from '@components/Layout';
-import UnderConstruction from '@components/global/construction/construction';
+import ChangesContent from '@components/changes/changes';
 
 const Changes = ({ title, description, keywords, ...props }) => {
   return (
     <Layout title={title} description={description} keywords={keywords}>
-      <UnderConstruction/>
+      {/* <UnderConstruction/> */}
+      <ChangesContent/>
     </Layout>
   );
 };

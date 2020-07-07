@@ -1,0 +1,142 @@
+.changes {
+    padding: 1rem 1.2rem 2rem;
+}
+
+.changes .title {
+    text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #feb67c;
+}
+
+.changes .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+}
+
+.changes .grid .card {
+    display: flex;
+    flex-direction: column;
+    padding: .8rem .8rem .6rem;
+    border-radius: 6px;
+    border: 1px solid var(--divider);
+    margin: .4rem 0;
+    word-wrap: break-word;
+}
+
+.changes .grid .card .details {
+    height: 100%;
+}
+
+.changes .grid .card .details .app {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.changes .grid .card .details .app .version {
+    background-color: var(--accent);
+    color: var(--on-accent);
+    border-radius: 9999px;
+    padding: .2rem .6rem;
+    font-size: .8rem;
+}
+
+.changes .grid .card .details .content {
+    margin: .6rem 0;
+}
+
+.changes .grid .card .details .content em {
+    font-style: italic;
+}
+
+.changes .grid .card .details .content p,
+.changes .grid .card .details .content ol {
+    margin-top: .6rem;
+    margin-bottom: .6rem;
+}
+
+.changes .grid .card .details .content ul {
+    list-style-type: disc;
+    margin-left: 1.4rem;
+}
+
+.changes .grid .card .details .content ul li {
+    margin-top: .1rem;
+    margin-bottom: .1rem;
+}
+
+.changes .grid .card .buttons {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.changes .grid .card .buttons .button {
+    min-height: 24px;
+    margin: .4rem;
+    padding: .3rem .5rem 0;
+    color: #fff;
+}
+
+.changes .grid .card .buttons .button:hover,
+.changes .grid .card .buttons .button:focus,
+.changes .grid .card .buttons .button:active,
+.changes .grid .card .buttons .button:visited {
+    color: #fff;
+}
+
+.changes .grid .card .buttons .button:first-of-type {
+    margin-left: 0;
+}
+
+.changes .grid .card .buttons .button:last-of-type {
+    margin-right: 0;
+}
+
+.changes .grid .card .buttons .button svg {
+    margin-top: .2rem;
+}
+
+.changes .grid .card .buttons .button.github,
+.changes .grid .card .buttons .button.github:active {
+    background-color: #333;
+}
+
+.changes .grid .card .buttons .button.github:hover,
+.changes .grid .card .buttons .button.github:focus {
+    background-color: #2e2e2e;
+}
+
+.changes .grid .card .buttons .button.translate,
+.changes .grid .card .buttons .button.translate:active {
+    background-color: #69b36c;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.changes .grid .card .buttons .button.translate:hover,
+.changes .grid .card .buttons .button.translate:focus {
+    background-color: #43a047;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width: 660px) {
+    .changes .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .changes .grid .card {
+        margin: .4rem;
+    }
+}
+
+@media (min-width: 960px) {
+    .changes {
+        padding: 1rem 0 3rem;
+    }
+
+    .changes .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

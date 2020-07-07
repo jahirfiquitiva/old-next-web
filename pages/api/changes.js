@@ -24,7 +24,7 @@ const fetchRepoData = async (repo) => {
   if (translate) {
     extraRepoData.translate = `https://crowdin.com/project/${name}/invite`;
   }
-  return { ...repo, ...extraRepoData };
+  return { ...repo, ...extraRepoData, changelog: changelog || '*No data available right now*' };
 };
 
 export default (_, res) => {
