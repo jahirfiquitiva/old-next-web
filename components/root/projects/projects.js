@@ -4,6 +4,7 @@ import ThemeContext from '@components/theme/ThemeContext';
 import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
 import styles from './projects.module.css';
+import Stats from '@components/root/projects/stats';
 
 const Projects = ({ projects = [] }) => {
   const { isDark } = useContext(ThemeContext);
@@ -44,7 +45,10 @@ const Projects = ({ projects = [] }) => {
 
   return (
     <div className={styles.projects}>
-      <h3 className={styles.title}>👨‍💻&nbsp;&nbsp;Projects</h3>
+      <div className={styles.titlecontainer}>
+        <h3 className={styles.title}>👨‍💻&nbsp;&nbsp;Projects</h3>
+        <Stats className={styles.stats}/>
+      </div>
       {renderProjects()}
     </div>
   );

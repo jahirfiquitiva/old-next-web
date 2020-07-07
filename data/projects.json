@@ -2,7 +2,7 @@
   "projects": [
     {
       "title": "Blueprint",
-      "description": "Dashboard for creating icon packs.",
+      "description": "Dashboard for creating Android icon packs.",
       "icon": "/assets/images/projects/android/blueprint.png",
       "link": "https://github.com/jahirfiquitiva/Blueprint/",
       "color": "#4d8af0",
@@ -10,7 +10,7 @@
     },
     {
       "title": "Frames",
-      "description": "Dashboard for creating wallpapers apps.",
+      "description": "Dashboard for creating Android wallpapers apps.",
       "icon": "/assets/images/projects/android/frames.png",
       "link": "https://github.com/jahirfiquitiva/Frames/",
       "color": "#35b4ef",
@@ -18,7 +18,7 @@
     },
     {
       "title": "Kuper",
-      "description": "Dashboard for Zooper and Kustom widget packs.",
+      "description": "Dashboard for Zooper and Kustom Android widget packs.",
       "icon": "/assets/images/projects/android/kuper.png",
       "link": "https://github.com/jahirfiquitiva/Kuper/",
       "color": "#6673C0",
