@@ -25,13 +25,19 @@ const fetchRepoData = async (repo) => {
     extraRepoData.translate = `https://crowdin.com/project/${name}/invite`;
   }
   const defaultDownloadLink = `https://github.com/${user}/${name}/releases/latest/`;
+  let downloadLink = defaultDownloadLink;
   if (assets) {
     const [apk] = assets;
     if (apk) {
-      extraRepoData.download = apk.browser_download_url || defaultDownloadLink;
+      downloadLink = apk.browser_download_url || defaultDownloadLink;
     }
   }
-  return { ...repo, ...extraRepoData, changelog: changelog || '*No data available right now*' };
+  return {
+    ...repo,
+    ...extraRepoData,
+    changelog: changelog || '*No data available right now*',
+    download: downloadLink,
+  };
 };
 
 export default (_, res) => {
