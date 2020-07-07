@@ -1,13 +1,13 @@
 import Link from 'next/link';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import Icon from '@mdi/react';
 import { mdiClose, mdiMenu } from '@mdi/js';
-import detectDarkMode from '@utils/detectDarkMode';
+import ThemeContext from '@components/theme/ThemeContext';
 import styles from './toolbar.module.css';
 
 const Toolbar = ({ selected }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const isDark = detectDarkMode();
+  const { isDark, toggleTheme } = useContext(ThemeContext);
 
   return (
     <nav className={styles.nav}>
@@ -23,9 +23,15 @@ const Toolbar = ({ selected }) => {
               </a>
             </Link>
           </span>
-          <button onClick={() => setMenuOpen(!menuOpen)} className={styles.menuToggle}>
-            <Icon path={menuOpen ? mdiClose : mdiMenu} size={1} color={'#3867d6'}/>
-          </button>
+          <div>
+            <span className={`${styles.item} ${styles.themer} ${styles.mobile}`}
+                  onClick={() => toggleTheme()}>
+              <span className={styles.emoji}>{isDark ? '🌞' : '🌚'}</span>
+            </span>
+            <button onClick={() => setMenuOpen(!menuOpen)} className={styles.menuToggle}>
+              <Icon path={menuOpen ? mdiClose : mdiMenu} size={1} color={'#3867d6'}/>
+            </button>
+          </div>
         </div>
         <div className={`${styles.menu} ${menuOpen ? styles.active : ''}`}>
           <span className={`${styles.item} ${selected === 0 ? styles.active : ''}`}>
@@ -52,6 +58,10 @@ const Toolbar = ({ selected }) => {
             <Link href={'/contact'}>
               <a><span className={styles.emoji}>📮</span><span>Contact</span></a>
             </Link>
+          </span>
+          <span className={`${styles.item} ${styles.themer} ${styles.desktop}`}
+                onClick={() => toggleTheme()}>
+            <span className={styles.emoji}>{isDark ? '🌞' : '🌚'}</span>
           </span>
         </div>
       </div>

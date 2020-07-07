@@ -1,13 +1,14 @@
+import { useContext } from 'react';
 import Link from 'next/link';
 import Icon from '@mdi/react';
 import { mdiHeart } from '@mdi/js';
-import detectDarkMode from '@utils/detectDarkMode';
+import ThemeContext from '@components/theme/ThemeContext';
 import Social from '@components/global/social/social';
 import ExtLink from '@components/global/ext-link/ext-link';
 import styles from './footer.module.css';
 
 const Footer = () => {
-  const isDark = detectDarkMode();
+  const { isDark } = useContext(ThemeContext);
 
   return (
     <footer className={styles.footer}>

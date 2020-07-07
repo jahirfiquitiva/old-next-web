@@ -111,10 +111,25 @@ nav.nav {
     margin-right: 1.1rem;
 }
 
-.toolbar div span a,
-.toolbar div span.theme-toggle {
+.toolbar div span a {
     width: 100%;
-    padding: .4rem 1rem .6rem .8rem;
+    padding: .5rem 1rem .6rem .8rem;
+}
+
+.toolbar div span.themer {
+    min-width: 32px;
+    padding: .2rem .4rem;
+    margin: 0 .4rem 0 .2rem;
+    cursor: pointer;
+}
+
+.toolbar div span.themer.desktop {
+    display: none;
+}
+
+.toolbar span.item.themer .emoji {
+    margin-right: .25rem;
+    margin-bottom: .1rem;
 }
 
 .toolbar .menu .item a,
@@ -133,8 +148,8 @@ nav.nav {
 .toolbar span.item:hover a,
 .toolbar span.item:focus a,
 .toolbar span.item.active a,
-.toolbar div span.theme-toggle:hover,
-.toolbar div span.theme-toggle:focus {
+.toolbar div span.themer:hover,
+.toolbar div span.themer:focus {
     color: var(--accent-dark) !important;
     background-color: var(--toolbar-highlight);
     border-radius: 4px;
@@ -188,5 +203,17 @@ nav.nav {
 
     .toolbar .menu span.item .emoji {
         margin-right: .8rem;
+    }
+
+    .toolbar .menu span.item.themer .emoji {
+        margin-right: .2rem;
+    }
+
+    .toolbar div span.themer.mobile {
+        display: none;
+    }
+
+    .toolbar div span.themer.desktop {
+        display: flex;
     }
 }
