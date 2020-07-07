@@ -27,7 +27,7 @@ nav.nav {
     background-color: rgba(0, 0, 0, 0);
     border: none;
     height: 100%;
-    padding: 0 .6rem 0 .4rem;
+    padding: .4rem .6rem .4rem .4rem;
     -webkit-transform: none;
     -moz-transform: none;
     -ms-transform: none;
@@ -128,7 +128,7 @@ nav.nav {
 }
 
 .toolbar span.item.themer .emoji {
-    margin-right: .25rem;
+    margin-right: .2rem;
     margin-bottom: .1rem;
 }
 
