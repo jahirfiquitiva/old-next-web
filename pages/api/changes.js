@@ -10,7 +10,7 @@ const fetchRepoData = async (repo) => {
   const { user, name, updateWiki, translate } = repo;
   const dataRequest = await fetch(`https://api.github.com/repos/${user}/${name}/releases/latest`);
   const data = await dataRequest.json();
-  const { published_at: dateStamp, tag_name: version, body: changelog } = data;
+  const { published_at: dateStamp, tag_name: version, body: changelog, assets = [] } = data;
   const extraRepoData = {
     url: `https://github.com/${user}/${name}`,
     dateStamp,
@@ -23,6 +23,13 @@ const fetchRepoData = async (repo) => {
   }
   if (translate) {
     extraRepoData.translate = `https://crowdin.com/project/${name}/invite`;
+  }
+  const defaultDownloadLink = `https://github.com/${user}/${name}/releases/latest/`;
+  if (assets) {
+    const [apk] = assets;
+    if (apk) {
+      extraRepoData.download = apk.browser_download_url || defaultDownloadLink;
+    }
   }
   return { ...repo, ...extraRepoData, changelog: changelog || '*No data available right now*' };
 };

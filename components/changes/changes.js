@@ -1,10 +1,10 @@
 import React from 'react';
 import useSWR from 'swr';
-import fetcher from '../../lib/fetcher';
-import styles from './changes.module.css';
 import ReactMarkdown from 'react-markdown';
 import Icon from '@mdi/react';
-import { mdiGithub, mdiHelpCircle, mdiTranslate } from '@mdi/js';
+import { mdiDownloadOutline, mdiGithub, mdiHelpCircleOutline, mdiTranslate } from '@mdi/js';
+import fetcher from '../../lib/fetcher';
+import styles from './changes.module.css';
 
 const ChangesContent = () => {
   const { data } = useSWR('/api/changes', fetcher);
@@ -55,7 +55,7 @@ const ChangesContent = () => {
               ? (<a className={`button ${styles.button} ${styles.github}`}
                     href={it.wiki}
                     rel={'noopener noreferrer'} target={'_blank'}>
-                <Icon path={mdiHelpCircle} size={0.8}/>
+                <Icon path={mdiHelpCircleOutline} size={0.8}/>
               </a>)
               : (<></>)}
             {it.translate
@@ -66,10 +66,10 @@ const ChangesContent = () => {
               </a>)
               : (<></>)}
             {it.download
-              ? (<a className={`button ${styles.button} ${styles.github}`}
-                    href={it.url}
+              ? (<a className={`button ${styles.button}`}
+                    href={it.download}
                     rel={'noopener noreferrer'} target={'_blank'}>
-                <Icon path={mdiGithub} size={0.8}/>
+                <Icon path={mdiDownloadOutline} size={0.8}/>
               </a>)
               : (<></>)}
           </div>
