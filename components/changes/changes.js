@@ -38,7 +38,7 @@ const ChangesContent = () => {
           <div className={styles.details}>
             <div className={styles.app}>
               <h5>{it.name}</h5>
-              {renderVersion()}
+              {renderVersion(it.version)}
             </div>
             {renderReleaseDate(it.dateStamp, it.date)}
             <ReactMarkdown
