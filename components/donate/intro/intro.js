@@ -1,5 +1,5 @@
 import Icon from '@mdi/react';
-import { mdiGithub, mdiPizza, mdiCreditCardOutline } from '@mdi/js';
+import { mdiCreditCardOutline, mdiGithub, mdiPizza } from '@mdi/js';
 import ExtLink from '@components/global/ext-link/ext-link';
 import styles from './intro.module.css';
 
@@ -27,13 +27,22 @@ const Intro = () => {
       </p>
       <p className={styles.btitle}><b>Donation options:</b></p>
       <div className={styles.buttons}>
-        <a className={`button ${styles.button} ${styles.github}`}>
+        <a
+          href={'https://github.com/users/jahirfiquitiva/sponsorship'}
+          className={`button ${styles.button} ${styles.github}`}
+          target={'_blank'} rel={'noopener noreferrer'}>
           <Icon path={mdiGithub} size={0.9} color={'#fff'}/>GitHub Sponsors
         </a>
-        <a className={`button ${styles.button} ${styles.bmac}`}>
+        <a
+          href={'https://buymeacoff.ee/jahirfiquitiva'}
+          className={`button ${styles.button} ${styles.bmac}`}
+          target={'_blank'} rel={'noopener noreferrer'}>
           <Icon path={mdiPizza} size={0.9} color={'#fff'}/>Buy Me a Pizza
         </a>
-        <a className={`button ${styles.button} ${styles.paypal}`}>
+        <a
+          href={'https://jahir.xyz/DonatePayPal'}
+          className={`button ${styles.button} ${styles.paypal}`}
+          target={'_blank'} rel={'noopener noreferrer'}>
           <Icon path={mdiCreditCardOutline} size={0.9} color={'#fff'}/>PayPal
         </a>
       </div>
