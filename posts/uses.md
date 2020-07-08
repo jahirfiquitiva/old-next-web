@@ -9,7 +9,7 @@ hero: 'https://images.unsplash.com/photo-1508830524289-0adcbe822b40?ixlib=rb-1.2
 
 ### 🌐  Website
 
-This website is built using [Next.js](https://nextjs.org/) and is deployed on [Netlify](https://app.netlify.com/)
+This website is built using [Next.js](https://nextjs.org/) and is deployed on [Vercel](https://vercel.com/)
 
 
 ### 📑  Terminal + Editors
