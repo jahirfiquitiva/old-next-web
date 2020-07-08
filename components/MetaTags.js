@@ -47,13 +47,6 @@ const MetaTags = ({ title, description, keywords, image }) => {
       <link rel={'apple-touch-icon-precomposed'} href={'/assets/images/brand/favicon32.png'}/>
       <link rel={'icon'} sizes={'32x32'} href={'/assets/images/brand/favicon32.png'}/>
       <meta name={'msapplication-TileImage'} content={'/assets/images/brand/favicon32.png'}/>
-
-      <link
-        rel={'stylesheet'} media={'print'} onLoad={'this.media=\'all\''}
-        href={'https://gist.githubusercontent.com/jahirfiquitiva/e93780843a8bced5e0c4db5905aabbc7/raw/29dfa27f86519a921725f5aa587e31ddd6f4920f/reset-normalize.min.css'}/>
-      <link
-        rel={'stylesheet'} media={'print'} onLoad={'this.media=\'all\''}
-        href={'https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600;700&display=swap'}/>
     </>
   );
 };

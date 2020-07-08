@@ -1,5 +1,6 @@
 import { StaticKitProvider } from '@statickit/react';
 import ThemeWrapper from '@components/theme/ThemeWrapper';
+import '@components/resetalize.min.css';
 import '@components/global.css';
 
 export default function MyApp({ Component, pageProps }) {
