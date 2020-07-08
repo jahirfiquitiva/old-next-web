@@ -77,14 +77,14 @@
     min-height: 24px;
     margin: .4rem;
     padding: .3rem .5rem 0;
-    color: #fff;
+    color: var(--on-accent);
 }
 
 .changes .grid .card .buttons .button:hover,
 .changes .grid .card .buttons .button:focus,
 .changes .grid .card .buttons .button:active,
 .changes .grid .card .buttons .button:visited {
-    color: #fff;
+    color: var(--on-accent);
 }
 
 .changes .grid .card .buttons .button:first-of-type {
@@ -102,11 +102,13 @@
 .changes .grid .card .buttons .button.github,
 .changes .grid .card .buttons .button.github:active {
     background-color: #333;
+    color: #fff;
 }
 
 .changes .grid .card .buttons .button.github:hover,
 .changes .grid .card .buttons .button.github:focus {
     background-color: #2e2e2e;
+    color: #fff;
 }
 
 .changes .grid .card .buttons .button.translate,
