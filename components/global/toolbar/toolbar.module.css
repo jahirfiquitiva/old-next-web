@@ -37,6 +37,12 @@ nav.nav {
     transform: none;
 }
 
+.toolbar button.menuToggle:hover,
+.toolbar button.menuToggle:focus,
+.toolbar button.menuToggle:active {
+    background-color: var(--toolbar-highlight);
+}
+
 .toolbar button.menuToggle svg {
     margin-top: .2rem;
     margin-left: .2rem;
@@ -65,7 +71,7 @@ nav.nav {
 }
 
 .toolbar .logo a {
-    padding-bottom: .4rem;
+    padding-bottom: .5rem;
 }
 
 .toolbar .logo .logito {
@@ -104,7 +110,7 @@ nav.nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: .2rem .4rem;
+    padding: 0 .4rem .2rem;
 }
 
 .toolbar span.item {
@@ -118,6 +124,12 @@ nav.nav {
 
 .toolbar .menu span.item {
     width: 100%;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+}
+
+.toolbar .menu span.item:first-of-type {
+    padding-top: 0;
 }
 
 .toolbar .menu span.item .emoji {
@@ -132,7 +144,7 @@ nav.nav {
 .toolbar div span.themer {
     min-width: 32px;
     padding: .2rem .4rem;
-    margin: 0 .4rem 0 .2rem;
+    margin: 0 .5rem 0 .4rem;
     cursor: pointer;
 }
 
@@ -198,7 +210,7 @@ nav.nav {
     }
 
     .toolbar .logo {
-        padding: 0 .2rem;
+        padding: 0 .4rem;
     }
 
     .toolbar button.menuToggle {
@@ -223,6 +235,11 @@ nav.nav {
         white-space: nowrap;
     }
 
+    .toolbar .menu span.item {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     .toolbar span.item {
         padding: 0 .2rem;
     }
@@ -233,6 +250,10 @@ nav.nav {
 
     .toolbar .menu span.item.themer .emoji {
         margin-right: .2rem;
+    }
+
+    .toolbar div span.themer {
+        margin: 0 .2rem 0 .2rem;
     }
 
     .toolbar div span.themer.mobile {
