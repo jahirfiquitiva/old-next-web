@@ -7,6 +7,7 @@ import hexToRGB from '@utils/hexToRgb';
 import ThemeContext from '@components/theme/ThemeContext';
 import styles from './post-list.module.css';
 import getColorFromData from '@utils/getColorFromData';
+import ExtLink from '@components/global/ext-link/ext-link';
 
 const PostList = ({ posts }) => {
   const { isDark } = useContext(ThemeContext);
@@ -20,7 +21,11 @@ const PostList = ({ posts }) => {
 
   const getDate = (preDate) => {
     const dateData = preDate.split('-');
-    return { year: dateData[0], month: dateData[1], day: dateData[2] };
+    return {
+      year: dateData[0],
+      month: dateData[1],
+      day: dateData[2]
+    };
   };
 
   const renderPostHero = (url, color) => {
@@ -81,6 +86,13 @@ const PostList = ({ posts }) => {
           );
         })}
       </div>
+      <p>I&apos;m honestly not the kind of person who blogs much, but I would like to do it more
+        frequently.</p>
+      <p>If you have ideas or topics you would like me to blog about, I&apos;d really appreciate if
+        you <Link href={'/contact'}><a>share them with me</a></Link>.</p>
+      <p>You can also find other posts by me on&nbsp;
+        <ExtLink label={'dev.to'} to={'https://dev.to/jahirfiquitiva'}/>&nbsp;and&nbsp;
+        <ExtLink label={'medium'} to={'https://medium.com/@jahirfiquitiva'}/></p>
     </div>
   );
 };
