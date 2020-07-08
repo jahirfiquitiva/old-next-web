@@ -1,4 +1,4 @@
-const defaultImage = 'https://jahir.dev/assets/images/brand/logo-full-me.png';
+const defaultImage = 'https://jahir.dev/assets/images/brand/banner.png';
 const MetaTags = ({ title, description, keywords, image }) => {
   const actualImage = image ? image.length > 0 ? image : defaultImage : defaultImage;
   return (
