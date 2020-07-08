@@ -15,19 +15,20 @@ const MetaTags = ({ title, description, keywords, image }) => {
 
       <meta property={'og:title'} content={title}/>
       <meta property={'og:type'} content={'portfolio'}/>
-      <meta property={'og:url'} content={'https://jahir.dev/'}/>
+      <meta property={'og:url'} content={'https://jahir.dev'}/>
       <meta property={'og:image'} content={actualImage}/>
       <meta property={'og:description'} content={description}/>
       <meta property={'og:site_name'} content={title}/>
       <meta property={'og:locale'} content={'en_US'}/>
-      <link rel={'canonical'} href={'https://jahir.dev/'}/>
+      <link rel={'canonical'} href={'https://jahir.dev'}/>
 
       <meta name={'twitter:card'} content={'summary'}/>
       <meta name={'twitter:creator'} content={'@jahirfiquitiva'}/>
       <meta name={'twitter:site'} content={'@jahirfiquitiva'}/>
       <meta name={'twitter:title'} content={title}/>
       <meta name={'twitter:description'} content={description}/>
-      <meta name={'twitter:image:src'} content={'https://jahir.dev/assets/images/brand/logo-full-me.png'}/>
+      <meta name={'twitter:image:src'}
+            content={'https://jahir.dev/assets/images/brand/logo-full-me.png'}/>
 
       <link href={'https://plus.google.com/+JahirFiquitivaR/'} rel={'publisher'}/>
       <meta name={'google-site-verification'}
