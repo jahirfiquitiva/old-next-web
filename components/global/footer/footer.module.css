@@ -6,7 +6,7 @@ footer.footer {
     align-items: center;
     border-top: 1px solid var(--divider);
     margin: 0;
-    padding: 3rem 0;
+    padding: 2rem 0;
     background-color: var(--primary);
 }
 
@@ -45,4 +45,10 @@ footer.footer .container .logito:focus .logosvg,
     fill: var(--accent-dark);
     color: var(--accent-dark);
     --fill-color: var(--accent-dark);
+}
+
+@media (min-width: 960px) {
+    footer.footer {
+        padding: 3rem 0;
+    }
 }

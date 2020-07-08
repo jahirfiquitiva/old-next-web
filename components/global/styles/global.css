@@ -190,6 +190,11 @@ code {
     font-size: .9rem;
 }
 
+b, strong {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
 input, select, textarea {
     color: var(--text-primary);
 }

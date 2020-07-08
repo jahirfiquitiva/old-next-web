@@ -16,6 +16,7 @@ nav.nav {
 .toolbar {
     display: grid;
     grid-template-columns: 1fr;
+    transition: all .25s ease-in-out;
 }
 
 .toolbar button.menuToggle,
@@ -93,7 +94,6 @@ nav.nav {
     --fill-color: var(--accent-dark);
 }
 
-
 .toolbar .menu {
     display: none;
     font-family: var(--inter-font);
@@ -114,8 +114,6 @@ nav.nav {
     align-items: center;
     min-height: var(--toolbar-height);
     height: 100%;
-    padding-top: .2rem;
-    padding-bottom: .2rem;
 }
 
 .toolbar .menu span.item {
@@ -136,6 +134,8 @@ nav.nav {
     padding: .2rem .4rem;
     margin: 0 .4rem 0 .2rem;
     cursor: pointer;
+    background-color: var(--toolbar-highlight);
+    border-radius: 4px;
 }
 
 .toolbar div span.themer.desktop {
@@ -145,6 +145,18 @@ nav.nav {
 .toolbar span.item.themer .emoji {
     margin-right: .2rem;
     margin-bottom: .1rem;
+}
+
+@media not all and (min-resolution: .001dpcm) {
+    @media {
+        .toolbar .menu span.item .emoji {
+            margin-right: .7rem;
+        }
+
+        .toolbar span.item.themer .emoji {
+            margin-right: 0;
+        }
+    }
 }
 
 .toolbar .menu .item a,
