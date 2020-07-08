@@ -27,7 +27,7 @@ const MetaTags = ({ title, description, keywords, image }) => {
       <meta name={'twitter:site'} content={'@jahirfiquitiva'}/>
       <meta name={'twitter:title'} content={title}/>
       <meta name={'twitter:description'} content={description}/>
-      <meta name={'twitter:image:src'} content={actualImage}/>
+      <meta name={'twitter:image:src'} content={'https://jahir.dev/assets/images/brand/logo-full-me.png'}/>
 
       <link href={'https://plus.google.com/+JahirFiquitivaR/'} rel={'publisher'}/>
       <meta name={'google-site-verification'}
