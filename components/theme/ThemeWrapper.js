@@ -18,7 +18,7 @@ const ThemeWrapper = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ isDark: !!value, toggleTheme: toggle }}>
-      {children}
+      {renderContent()}
     </ThemeContext.Provider>
   );
 };
