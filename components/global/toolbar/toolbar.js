@@ -3,6 +3,7 @@ import { useContext, useState } from 'react';
 import Icon from '@mdi/react';
 import { mdiClose, mdiMenu } from '@mdi/js';
 import ThemeContext from '@components/theme/ThemeContext';
+import Logo from '@components/global/logo/logo';
 import styles from './toolbar.module.css';
 
 const Toolbar = ({ selected }) => {
@@ -16,9 +17,12 @@ const Toolbar = ({ selected }) => {
           <span className={styles.item}>
             <Link href={'/'}>
               <a className={styles.logito}>
+                {/*
                 <img
                   src={`/assets/images/brand/logo-def${isDark ? '-dark' : ''}.svg`}
                   alt={'JF'} height={24} width={24}/>
+                */}
+                <Logo className={styles.logosvg}/>
                 Jahir Fiquitiva
               </a>
             </Link>

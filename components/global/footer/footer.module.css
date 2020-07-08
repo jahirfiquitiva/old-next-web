@@ -11,7 +11,6 @@ footer.footer {
 }
 
 footer.footer .container {
-    width: 100%;
     max-width: 880px;
     text-align: center;
 }
@@ -26,7 +25,24 @@ footer.footer .container p:first-of-type {
 }
 
 footer.footer .container .logito {
-    display: block;
-    margin-top: 1.2rem;
-    margin-bottom: 1rem;
+    display: inline-flex;
+    padding: .4rem;
+}
+
+footer.footer .container .logito img,
+.logosvg {
+    width: 24px;
+    height: 24px;
+    fill: var(--accent);
+    color: var(--accent);
+    --fill-color: var(--accent);
+}
+
+footer.footer .container .logito:hover .logosvg,
+footer.footer .container .logito:focus .logosvg,
+.logosvg:hover,
+.logosvg:focus {
+    fill: var(--accent-dark);
+    color: var(--accent-dark);
+    --fill-color: var(--accent-dark);
 }

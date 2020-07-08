@@ -1,7 +1,7 @@
 import { useContext } from 'react';
+import { usePalette } from 'react-palette';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
-import { usePalette } from 'react-palette';
 import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
 import ThemeContext from '@components/theme/ThemeContext';
