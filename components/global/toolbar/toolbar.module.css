@@ -22,6 +22,7 @@ nav.nav {
 .toolbar button.menuToggle:hover,
 .toolbar button.menuToggle:focus,
 .toolbar button.menuToggle:active {
+    color: var(--accent);
     min-height: var(--toolbar-height);
     min-width: var(--toolbar-height);
     background-color: rgba(0, 0, 0, 0);

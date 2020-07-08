@@ -29,7 +29,7 @@ const Toolbar = ({ selected }) => {
               <span className={styles.emoji}>{isDark ? '🌞' : '🌚'}</span>
             </span>
             <button onClick={() => setMenuOpen(!menuOpen)} className={styles.menuToggle}>
-              <Icon path={menuOpen ? mdiClose : mdiMenu} size={1} color={'#3867d6'}/>
+              <Icon path={menuOpen ? mdiClose : mdiMenu} size={1}/>
             </button>
           </div>
         </div>
