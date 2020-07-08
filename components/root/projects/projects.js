@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import { usePalette } from 'react-palette';
-import ThemeContext from '@components/theme/ThemeContext';
 import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
-import styles from './projects.module.css';
+import ThemeContext from '@components/theme/ThemeContext';
 import Stats from '@components/root/projects/stats';
+import styles from './projects.module.css';
 
 const Projects = ({ projects = [] }) => {
   const { isDark } = useContext(ThemeContext);

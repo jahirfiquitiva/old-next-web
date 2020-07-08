@@ -4,7 +4,6 @@ import { mdiAccountGroup, mdiStar } from '@mdi/js';
 import fetcher from '../../../lib/fetcher';
 
 const iconSize = 0.85;
-
 const Stats = ({ className }) => {
   const { data } = useSWR('/api/github', fetcher);
 

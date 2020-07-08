@@ -1,5 +1,5 @@
-import styles from './content.module.css';
 import Footer from '@components/global/footer/footer';
+import styles from './content.module.css';
 
 const Content = ({ children }) => {
   return (

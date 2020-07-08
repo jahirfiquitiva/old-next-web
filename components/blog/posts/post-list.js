@@ -1,13 +1,13 @@
 import { useContext } from 'react';
-import Link from 'next/link';
 import { usePalette } from 'react-palette';
+import Link from 'next/link';
 import Icon from '@mdi/react';
 import { mdiPencil } from '@mdi/js';
 import hexToRGB from '@utils/hexToRgb';
-import ThemeContext from '@components/theme/ThemeContext';
-import styles from './post-list.module.css';
 import getColorFromData from '@utils/getColorFromData';
+import ThemeContext from '@components/theme/ThemeContext';
 import ExtLink from '@components/global/ext-link/ext-link';
+import styles from './post-list.module.css';
 
 const PostList = ({ posts }) => {
   const { isDark } = useContext(ThemeContext);

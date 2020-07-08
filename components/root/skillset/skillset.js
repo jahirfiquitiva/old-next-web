@@ -1,50 +1,51 @@
 import Icon from '@mdi/react';
 import {
-  mdiAndroid, mdiLanguageKotlin, mdiLanguageJava, mdiLanguagePython, mdiLanguageJavascript,
-  mdiLanguageHtml5, mdiLanguageCss3, mdiNodejs, mdiReact, mdiLeaf, mdiGit, mdiMaterialDesign
+  mdiAndroid, mdiGit, mdiLanguageCss3, mdiLanguageHtml5, mdiLanguageJava, mdiLanguageJavascript,
+  mdiLanguageKotlin, mdiLanguagePython, mdiLeaf, mdiMaterialDesign, mdiNodejs, mdiReact
 } from '@mdi/js';
 import styles from './skillset.module.css';
 
+const iconSize = 0.75;
 const SkillSet = () => {
   return (
     <div className={styles.skills}>
       <h4 className={styles.title}>🚀&nbsp;&nbsp;Skills</h4>
       <div className={styles.skillset}>
         <span className={`${styles.skill} ${styles.android}`}>
-          <Icon path={mdiAndroid} size={0.75}/>Android
+          <Icon path={mdiAndroid} size={iconSize}/>Android
         </span>
         <span className={`${styles.skill} ${styles.kotlin}`}>
-          <Icon path={mdiLanguageKotlin} size={0.75}/>Kotlin
+          <Icon path={mdiLanguageKotlin} size={iconSize}/>Kotlin
         </span>
         <span className={`${styles.skill} ${styles.java}`}>
-          <Icon path={mdiLanguageJava} size={0.75}/>Java
+          <Icon path={mdiLanguageJava} size={iconSize}/>Java
         </span>
         <span className={`${styles.skill} ${styles.python}`}>
-          <Icon path={mdiLanguagePython} size={0.75}/>Python
+          <Icon path={mdiLanguagePython} size={iconSize}/>Python
         </span>
         <span className={`${styles.skill} ${styles.javascript}`}>
-          <Icon path={mdiLanguageJavascript} size={0.75}/>JavaScript
+          <Icon path={mdiLanguageJavascript} size={iconSize}/>JavaScript
         </span>
         <span className={`${styles.skill} ${styles.html}`}>
-          <Icon path={mdiLanguageHtml5} size={0.75}/>HTLM5
+          <Icon path={mdiLanguageHtml5} size={iconSize}/>HTLM5
         </span>
         <span className={`${styles.skill} ${styles.css}`}>
-          <Icon path={mdiLanguageCss3} size={0.75}/>CSS3
+          <Icon path={mdiLanguageCss3} size={iconSize}/>CSS3
         </span>
         <span className={`${styles.skill} ${styles.node}`}>
-          <Icon path={mdiNodejs} size={0.75}/>Node JS
+          <Icon path={mdiNodejs} size={iconSize}/>Node JS
         </span>
         <span className={`${styles.skill} ${styles.react}`}>
-          <Icon path={mdiReact} size={0.75}/>React
+          <Icon path={mdiReact} size={iconSize}/>React
         </span>
         <span className={`${styles.skill} ${styles.mongo}`}>
-          <Icon path={mdiLeaf} size={0.75}/>Mongo DB
+          <Icon path={mdiLeaf} size={iconSize}/>Mongo DB
         </span>
         <span className={`${styles.skill} ${styles.git}`}>
-          <Icon path={mdiGit} size={0.75}/>Git
+          <Icon path={mdiGit} size={iconSize}/>Git
         </span>
         <span className={`${styles.skill} ${styles.md}`}>
-          <Icon path={mdiMaterialDesign} size={0.75}/>Material Design
+          <Icon path={mdiMaterialDesign} size={iconSize}/>Material Design
         </span>
       </div>
     </div>

@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import ExtLink from '@components/global/ext-link/ext-link';
-import styles from './about.module.css';
 import Social from '@components/global/social/social';
 import SkillSet from '@components/root/skillset/skillset';
+import styles from './about.module.css';
 
 const hellos = ['Hello, world', 'Hola, mundo', 'Ciao, mondo', 'Hallo, Welt', 'Salut, monde',
   'Olá, mundo'];
