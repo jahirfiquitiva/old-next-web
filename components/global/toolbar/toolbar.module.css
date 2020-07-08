@@ -134,8 +134,6 @@ nav.nav {
     padding: .2rem .4rem;
     margin: 0 .4rem 0 .2rem;
     cursor: pointer;
-    background-color: var(--toolbar-highlight);
-    border-radius: 4px;
 }
 
 .toolbar div span.themer.desktop {
@@ -176,7 +174,8 @@ nav.nav {
 .toolbar span.item:focus a,
 .toolbar span.item.active a,
 .toolbar div span.themer:hover,
-.toolbar div span.themer:focus {
+.toolbar div span.themer:focus,
+.toolbar div span.themer.active {
     color: var(--accent-dark) !important;
     background-color: var(--toolbar-highlight);
     border-radius: 4px;
