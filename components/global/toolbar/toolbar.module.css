@@ -74,11 +74,25 @@ nav.nav {
     align-items: center;
 }
 
-.toolbar .logo .logito img {
+.toolbar .logo .logito img,
+.logosvg {
     width: 24px;
     height: 24px;
     margin-right: .6rem;
+    fill: var(--accent);
+    color: var(--accent);
+    --fill-color: var(--accent);
 }
+
+.toolbar .logo .logito:hover .logosvg,
+.toolbar .logo .logito:focus .logosvg,
+.logosvg:hover,
+.logosvg:focus {
+    fill: var(--accent-dark);
+    color: var(--accent-dark);
+    --fill-color: var(--accent-dark);
+}
+
 
 .toolbar .menu {
     display: none;
