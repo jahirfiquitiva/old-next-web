@@ -48,6 +48,10 @@ const Supporters = ({ supporters = [] }) => {
       <h3 className={styles.title}>🙌&nbsp;&nbsp;Thanks!</h3>
       <p>I&apos;m really grateful to all the awesome people that support my work.</p>
       {renderSupporters()}
+      <div className={styles.thanksgif}>
+        <img src={'/assets/images/gifs/thanks.gif'}
+             alt={'Adventure Time characters hugging each other and saying thanks'}/>
+      </div>
     </div>
   );
 };
