@@ -6,7 +6,7 @@ const Donate = ({ title, description, keywords, supporters, ...props }) => {
   return (
     <Layout title={title} description={description} keywords={keywords} page={3}>
       <Intro/>
-      <hr id={'supporters'}/>
+      <hr id={'thanks'}/>
       <Supporters supporters={supporters}/>
     </Layout>
   );
@@ -16,13 +16,13 @@ export default Donate;
 
 export const getStaticProps = async () => {
   const configData = await import('../siteconfig.json');
-  const { supporters = [] } = await import('../data/supporters.json');
+  const supportersData = await import('../data/supporters.json');
   return {
     props: {
       title: `Donate ~ ${configData.default.title}`,
       description: configData.default.description,
       keywords: configData.default.keywords,
-      supporters,
+      supporters: supportersData.default || {},
     },
   };
 };

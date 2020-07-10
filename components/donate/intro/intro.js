@@ -12,7 +12,7 @@ const Intro = () => {
         to all users, and most of them are <ExtLink to={'https://github.com/jahirfiquitiva'}
                                                     label={'open source'}/>. However, that
         wouldn&apos;t be possible without the help and the motivation from <a
-        href={'#supporters'}>supporters</a>!
+        href={'#thanks'}>supporters</a>!
       </p>
       <p>
         <b>

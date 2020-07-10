@@ -13,7 +13,7 @@
 
 .supporters ul {
     list-style-type: none;
-    margin-top: .8rem;
+    margin-top: .4rem;
     margin-bottom: 1.6rem;
     display: flex;
     flex-direction: row;
@@ -22,7 +22,7 @@
 }
 
 .supporters ul li {
-    margin: .4rem .2rem;
+    margin: .3rem .2rem;
 }
 
 .supporters ul li a.supporter,
@@ -63,8 +63,21 @@
 
 .supporters .thanksgif img {
     display: block;
-    margin: 1rem auto 0;
+    margin: 2.4rem auto 0;
     max-width: 300px;
+}
+
+.supporters h5.sponsortitle {
+    margin-top: 2rem;
+}
+
+.supporters h5.sponsortitle:first-of-type {
+    margin-top: 1.2rem;
+}
+
+.supporters p.sponsordesc {
+    margin-top: .2rem;
+    font-size: .85rem;
 }
 
 @media (min-width: 960px) {

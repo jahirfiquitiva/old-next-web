@@ -1,5 +1,48 @@
 {
-  "supporters": [
+  "categories": [
+    {
+      "id": "589",
+      "name": "💎 Diamond",
+      "key": "diamond"
+    },
+    {
+      "id": "588",
+      "name": "⚡️ Lightning",
+      "key": "lightning"
+    },
+    {
+      "id": "587",
+      "name": "🤖 Robot",
+      "key": "robot"
+    },
+    {
+      "id": "586",
+      "name": "🚀 Rocket",
+      "key": "rocket"
+    },
+    {
+      "name": "🦄 Unicorn",
+      "key": "unicorn",
+      "description": "Special one-time supporters"
+    }
+  ],
+  "diamond": [],
+  "lightning": [],
+  "robot": [
+    {
+      "name": "Crazy Marvin",
+      "photo": "https://unavatar.now.sh/github/CrazyMarvin",
+      "link": "https://github.com/CrazyMarvin"
+    }
+  ],
+  "rocket": [
+    {
+      "name": "Patryk Goworowski",
+      "link": "https://twitter.com/PGoworowski",
+      "photo": "https://unavatar.now.sh/PGoworowski?fallback=https://pbs.twimg.com/profile_images/1056879416259870720/rY0hkXmx_400x400.jpg"
+    }
+  ],
+  "unicorn": [
     {
       "name": "Sherry Sabatine",
       "photo": "https://unavatar.now.sh/sherry._.sabatine?fallback=https://s3-img.pixpa.com/com/large/37571/newdo-2-pw69wd.jpg",
@@ -9,11 +52,6 @@
       "name": "Travis Hall",
       "photo": "https://unavatar.now.sh/RippedThemer?fallback=https://pbs.twimg.com/profile_images/970085792155602945/JpqMJFih_400x400.jpg",
       "link": "https://twitter.com/RippedThemer"
-    },
-    {
-      "name": "Patryk Goworowski",
-      "link": "https://twitter.com/PGoworowski",
-      "photo": "https://unavatar.now.sh/PGoworowski?fallback=https://pbs.twimg.com/profile_images/1056879416259870720/rY0hkXmx_400x400.jpg"
     },
     {
       "name": "ExtraVital",
@@ -39,11 +77,6 @@
       "name": "Eduardo Pratti",
       "photo": "https://unavatar.now.sh/edpratti?fallback=https://pbs.twimg.com/profile_images/560688750247051264/seXz0Y25_400x400.jpeg",
       "link": "https://pratti.design/"
-    },
-    {
-      "name": "Crazy Marvin",
-      "photo": "https://unavatar.now.sh/github/CrazyMarvin",
-      "link": "https://github.com/CrazyMarvin"
     }
   ]
 }

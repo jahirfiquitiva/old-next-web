@@ -16,13 +16,13 @@ export default Index;
 
 export const getStaticProps = async () => {
   const configData = await import('../siteconfig.json');
-  const { projects = [] } = await import('../data/projects.json');
+  const projectsData = await import('../data/projects.json');
   return {
     props: {
       title: configData.default.title,
       description: configData.default.description,
       keywords: configData.default.keywords,
-      projects,
+      projects: projectsData.default || [],
     },
   };
 };
