@@ -74,7 +74,7 @@ const Supporters = ({ supporters }) => {
       <p>I&apos;m really grateful to all the awesome people that support my work.</p>
       {/*
       <p>You can sponsor me via <ExtLink label={'GitHub Sponsors'}
-                                         to={'https://github.com/users/jahirfiquitiva/sponsorship'}/>,
+                                         to={'https://github.com/sponsors/jahirfiquitiva'}/>,
         and have your name and photo listed in this page.</p>
       */}
       {(supporters ? supporters.categories || [] : []).map((it, i) => {

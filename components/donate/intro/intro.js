@@ -28,7 +28,7 @@ const Intro = () => {
       <p className={styles.btitle}><b>Donation options:</b></p>
       <div className={styles.buttons}>
         <a
-          href={'https://github.com/users/jahirfiquitiva/sponsorship'}
+          href={'https://github.com/sponsors/jahirfiquitiva'}
           className={`button ${styles.button} ${styles.github}`}
           target={'_blank'} rel={'noopener noreferrer'}>
           <Icon path={mdiGithub} size={0.9} color={'#fff'}/>GitHub Sponsors
