@@ -25,7 +25,8 @@
     margin: .4rem .2rem;
 }
 
-.supporters ul li a.supporter {
+.supporters ul li a.supporter,
+.supporters ul li a.supporter:active {
     --bg-color: var(--divider);
     --border-color: var(--divider);
     display: flex;
@@ -39,8 +40,7 @@
 }
 
 .supporters ul li a.supporter:hover,
-.supporters ul li a.supporter:focus,
-.supporters ul li a.supporter:active {
+.supporters ul li a.supporter:focus {
     background-color: var(--bg-color);
     color: var(--text-primary);
     text-decoration: none;

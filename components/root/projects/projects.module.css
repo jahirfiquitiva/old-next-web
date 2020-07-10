@@ -21,7 +21,8 @@
     text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #d1adf4;
 }
 
-.projects .titlecontainer .stats {
+.projects .titlecontainer .stats,
+.projects .titlecontainer .stats:active {
     display: inline-flex;
     flex-direction: row;
     align-items: center;
@@ -48,8 +49,7 @@
 }
 
 .projects .titlecontainer .stats:hover,
-.projects .titlecontainer .stats:focus,
-.projects .titlecontainer .stats:active {
+.projects .titlecontainer .stats:focus {
     color: var(--text-primary);
     text-decoration: none;
 }
