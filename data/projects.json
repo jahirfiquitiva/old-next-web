@@ -65,7 +65,7 @@
   },
   {
     "title": "FABsMenu",
-    "description": "A simple library to use a menu of FloatingActionButtons from Design Support Library that follow Material Design Guidelines",
+    "description": "A menu of Material Design FloatingActionButtons",
     "icon": "/assets/images/projects/android/fabsmenu.png",
     "link": "https://github.com/jahirfiquitiva/FABsMenu/",
     "color": "#e92566",
