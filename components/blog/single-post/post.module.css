@@ -7,7 +7,11 @@
 }
 
 .post img.hero {
-    margin-bottom: 1rem;
+    margin-bottom: 2.4rem;
+    object-fit: cover;
+    max-height: 440px;
+    width: 100%;
+    height: auto;
 }
 
 .post img {

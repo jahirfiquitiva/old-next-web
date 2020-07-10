@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { usePalette } from 'react-palette';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
@@ -8,7 +8,12 @@ import ThemeContext from '@components/theme/ThemeContext';
 import styles from './post.module.css';
 
 const Post = ({ frontmatter, mdBody }) => {
+  const [mounted, setMounted] = useState(false);
   const { isDark } = useContext(ThemeContext);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const { data: colorData } = frontmatter.hero
     ? usePalette(frontmatter.hero || '')
@@ -29,7 +34,7 @@ const Post = ({ frontmatter, mdBody }) => {
         }}>
           {frontmatter.title}
         </h1>
-        {frontmatter.hero && (
+        {mounted && frontmatter.hero && (
           <img
             className={styles.hero}
             src={frontmatter.hero || ''} alt={frontmatter.title}/>

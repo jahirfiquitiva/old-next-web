@@ -37,6 +37,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    object-fit: cover;
+    max-height: 168px;
     width: 100%;
     height: 168px;
     border-top-left-radius: 8px;
