@@ -10,5 +10,8 @@ This isn't a real blog post, but a thanks post. I have created it to thank my cu
 
 These are all amazing apps built using any of my dashboards ([Frames](https://github.com/jahirfiquitiva/Frames), [Kuper](https://github.com/jahirfiquitiva/Kuper) or [Blueprint](https://github.com/jahirfiquitiva/Blueprint)), and this post will also be included in the README of those projects and updated frequently.
 
+#### 🔮 Randle
+* [Whicons Icon Pack](https://play.google.com/store/apps/details?id=com.whicons.iconpack)
+
 #### 🔮 Charlee Designs
 * [AmoledPapers](https://play.google.com/store/apps/details?id=pl.mhcharlee.amoledpapers)
