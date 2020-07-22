@@ -32,7 +32,9 @@ const Toolbar = ({ selected }) => {
                   onClick={() => toggleTheme()}>
               <span className={styles.emoji}>{isDark ? '🌞' : '🌚'}</span>
             </span>
-            <button onClick={() => setMenuOpen(!menuOpen)} className={styles.menuToggle}>
+            <button
+              name={'Toggle Toolbar Menu'}
+              onClick={() => setMenuOpen(!menuOpen)} className={styles.menuToggle}>
               <Icon path={menuOpen ? mdiClose : mdiMenu} size={1}/>
             </button>
           </div>
