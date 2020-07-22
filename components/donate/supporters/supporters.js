@@ -13,7 +13,7 @@ const Supporters = ({ supporters }) => {
     if (!color) return {};
     return {
       '--bg-color': hexToRGB(color, 0.15),
-      '--border-color': hexToRGB(color, 0.4),
+      '--border-color': hexToRGB(color, 0.5),
     };
   };
 
@@ -52,7 +52,6 @@ const Supporters = ({ supporters }) => {
     if (!name || name.length <= 0 || !key || key.length <= 0) return (<></>);
     const namePortions = name.split(' ');
     const emoji = namePortions.shift();
-    // sponsors/jahirfiquitiva/sponsorships?tier_id=586
     return (<>
       <h5 className={styles.sponsortitle}>
         <a
