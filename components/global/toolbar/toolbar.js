@@ -35,7 +35,7 @@ const Toolbar = ({ selected }) => {
               <span className={styles.emoji}>{isDark ? '🌞' : '🌚'}</span>
             </span>
             <button
-              name={'Toggle Toolbar Menu'}
+              name={'Toggle Toolbar Menu'} aria-label={'Toggle Toolbar Menu'}
               onClick={() => setMenuOpen(!menuOpen)} className={styles.menuToggle}>
               <Icon path={menuOpen ? mdiClose : mdiMenu} size={1}/>
             </button>

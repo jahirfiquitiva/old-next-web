@@ -53,7 +53,9 @@ const ContactForm = () => {
           <textarea name={'message'} id={'message'} placeholder={'Hi Jahir…'} required
                     value={message} onChange={(e) => setMessage(e.target.value.toString())}/>
         </div>
-        <button type={'submit'} disabled={state.submitting} name={'Send Email'}>
+        <button
+          name={'Send Email'} aria-label={'Send Email'}
+          type={'submit'} disabled={state.submitting}>
           <Icon path={mdiEmailSendOutline} size={1}/>Send
         </button>
       </form>
