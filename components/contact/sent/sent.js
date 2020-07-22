@@ -6,7 +6,8 @@ const Sent = () => (
     <h2 className={styles.title}>Thanks for your message!</h2>
     <p>I will get back to you as soon as possible 🙌</p>
     <Link href={'/'}>
-      <a className={`button ${styles.button}`}>Go Back Home</a>
+      <a title={'home link'} aria-label={'home link'}
+         className={`button ${styles.button}`}>Go Back Home</a>
     </Link>
     <img
       src={'/assets/images/gifs/mail.gif'}

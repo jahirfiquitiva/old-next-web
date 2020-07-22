@@ -25,7 +25,9 @@ const Release = ({ repo }) => {
           <br/>
           <p>Direct download is not available right now 😕</p>
           <p>
-            I will redirect you to <a href={data.download}>GitHub Releases</a>…
+            I will redirect you to&nbsp;
+            <a title={'GitHub releases link'}
+               aria-label={'GitHub releases link'} href={data.download}>GitHub Releases</a> …
           </p>
         </>);
       }

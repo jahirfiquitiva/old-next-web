@@ -22,13 +22,15 @@ const Projects = ({ projects = [] }) => {
           const { data } = it.icon ? usePalette(it.icon) : { data: null };
           const color = isDark ? getColorFromData(data, isDark) || it.color : it.color;
           return (
-            <a className={styles.card} href={it.link} key={it.title}
-               target={'_blank'} rel={'noopener noreferrer'}
-               style={{
-                 '--shadow-color': hexToRGB(color, 0.15),
-                 '--border-color': hexToRGB(color, 0.2),
-                 '--hl-color': color,
-               }}>
+            <a
+              title={`${it.tile} link`} aria-label={`${it.tile} link`}
+              className={styles.card} href={it.link} key={it.title}
+              target={'_blank'} rel={'noopener noreferrer'}
+              style={{
+                '--shadow-color': hexToRGB(color, 0.15),
+                '--border-color': hexToRGB(color, 0.2),
+                '--hl-color': color,
+              }}>
               <div className={styles.icon}>
                 <img src={it.icon} alt={it.title} height={72} width={72}/>
               </div>

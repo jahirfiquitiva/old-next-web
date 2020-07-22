@@ -28,10 +28,12 @@ const Supporters = ({ supporters }) => {
           const color = getColorFromData(data, isDark) || null;
           return (
             <li key={i}>
-              <a href={it.link} target={'_blank'}
-                 rel={'noopener noreferrer'}
-                 className={styles.supporter}
-                 style={getColorStyle(color)}>
+              <a
+                title={`${it.name} link`} aria-label={`${it.name} link`}
+                href={it.link} target={'_blank'}
+                rel={'noopener noreferrer'}
+                className={styles.supporter}
+                style={getColorStyle(color)}>
                 <div
                   className={styles.photo}
                   style={{ backgroundImage: `url(${it.photo || ''})` }}/>

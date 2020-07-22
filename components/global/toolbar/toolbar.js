@@ -16,7 +16,9 @@ const Toolbar = ({ selected }) => {
         <div className={styles.logo}>
           <span className={styles.item}>
             <Link href={'/'}>
-              <a className={styles.logito}>
+              <a
+                title={'home link'} aria-label={'home link'}
+                className={styles.logito}>
                 {/*
                 <img
                   src={`/assets/images/brand/logo-def${isDark ? '-dark' : ''}.svg`}
@@ -42,7 +44,9 @@ const Toolbar = ({ selected }) => {
         <div className={`${styles.menu} ${menuOpen ? styles.active : ''}`}>
           <span className={`${styles.item} ${selected === 0 ? styles.active : ''}`}>
             <Link href={'/'}>
-              <a><span className={styles.emoji}>🏡</span><span>Home</span></a>
+              <a title={'home link'} aria-label={'home link'}>
+                <span className={styles.emoji}>🏡</span><span>Home</span>
+              </a>
             </Link>
           </span>
           <span className={`${styles.item} ${selected === 1 ? styles.active : ''}`}>

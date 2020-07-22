@@ -23,7 +23,8 @@ const Error = ({ isFourHundredFour = false }) => {
       <p>{isFourHundredFour ? fhfMessage : errorMessage}</p>
       {renderContactMessage()}
       <Link href={'/'}>
-        <a className={`button ${styles.button}`}>Go Back Home</a>
+        <a title={'home link'} aria-label={'home link'}
+           className={`button ${styles.button}`}>Go Back Home</a>
       </Link>
       <img
         src={isFourHundredFour ? '/assets/images/gifs/404.gif' : '/assets/images/gifs/monkey.gif'}

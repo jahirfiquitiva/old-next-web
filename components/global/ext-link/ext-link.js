@@ -1,6 +1,8 @@
-const ExtLink = ({ to, label, newTab = true }) => {
+const ExtLink = ({ to, label, title, newTab = true }) => {
   return (
-    <a href={to} target={newTab ? '_blank' : '_self'} rel={'noopener noreferrer'}>{label}</a>
+    <a
+      title={title || `${label} link`} aria-label={title || `${label} link`}
+      href={to} target={newTab ? '_blank' : '_self'} rel={'noopener noreferrer'}>{label}</a>
   );
 };
 

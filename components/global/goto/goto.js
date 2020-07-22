@@ -12,7 +12,7 @@ const GoTo = ({ url, title }) => {
       <div className={styles.redirection}>
         <h3>☄️</h3>
         <p>
-          Redirecting you to <a name={title || url} aria-label={title || url}
+          Redirecting you to <a title={title || url} aria-label={title || url}
                                 href={url} target={'_self'}>{url}</a> …
         </p>
       </div>

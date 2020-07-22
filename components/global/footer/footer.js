@@ -14,7 +14,9 @@ const Footer = () => (
       </p>
       <p>Copyright © {new Date().getFullYear()} | All Rights Reserved</p>
       <Link href={'/'}>
-        <a className={styles.logito}>
+        <a
+          title={'home link'} aria-label={'home link'}
+          className={styles.logito}>
           {/*
             <img src={`/assets/images/brand/logo-def${isDark ? '-dark' : ''}.svg`}
                  alt={'JF'} height={24} width={24}/>
