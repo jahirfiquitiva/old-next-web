@@ -49,7 +49,7 @@ const Toolbar = ({ selected }) => {
             </Link>
           </span>
           <span className={`${styles.item} ${selected === 2 ? styles.active : ''}`}>
-            <Link href={'/uses'}>
+            <Link href={'/blog/uses'}>
               <a><span className={styles.emoji}>⚡️</span><span>Uses</span></a>
             </Link>
           </span>

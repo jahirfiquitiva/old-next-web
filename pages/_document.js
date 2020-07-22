@@ -4,7 +4,7 @@ class ThemedDocument extends Document {
   render() {
     // noinspection HtmlRequiredTitleElement
     return (
-      <Html>
+      <Html lang={'en'}>
         <Head/>
         <body>
           <script src={'/noflash.js'}/>

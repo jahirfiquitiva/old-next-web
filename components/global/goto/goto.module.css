@@ -1,0 +1,18 @@
+.redirection {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.redirection h3 {
+    text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #fd9644;
+}
+
+.redirection p {
+    font-size: 1.25rem;
+}
