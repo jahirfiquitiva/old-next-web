@@ -46,29 +46,33 @@ const ChangesContent = () => {
               className={styles.content}/>
           </div>
           <div className={styles.buttons}>
-            <a className={`button ${styles.button} ${styles.github}`}
-               href={it.url}
-               rel={'noopener noreferrer'} target={'_blank'}>
+            <a
+              title={'GitHub repository link'} aria-label={'GitHub repository link'}
+              className={`button ${styles.button} ${styles.github}`}
+              href={it.url} rel={'noopener noreferrer'} target={'_blank'}>
               <Icon path={mdiGithub} size={0.8}/>
             </a>
             {it.wiki
-              ? (<a className={`button ${styles.button} ${styles.github}`}
-                    href={it.wiki}
-                    rel={'noopener noreferrer'} target={'_blank'}>
+              ? (<a
+                title={'GitHub Wiki link'} aria-label={'GitHub Wiki link'}
+                className={`button ${styles.button} ${styles.github}`}
+                href={it.wiki} rel={'noopener noreferrer'} target={'_blank'}>
                 <Icon path={mdiHelpCircleOutline} size={0.8}/>
               </a>)
               : (<></>)}
             {it.translate
-              ? (<a className={`button ${styles.button} ${styles.translate}`}
-                    href={it.translate}
-                    rel={'noopener noreferrer'} target={'_blank'}>
+              ? (<a
+                title={'Translation site link'} aria-label={'Translation site link'}
+                className={`button ${styles.button} ${styles.translate}`}
+                href={it.translate} rel={'noopener noreferrer'} target={'_blank'}>
                 <Icon path={mdiTranslate} size={0.8}/>
               </a>)
               : (<></>)}
             {it.download
-              ? (<a className={`button ${styles.button}`}
-                    href={it.download}
-                    rel={'noopener noreferrer'} target={'_blank'}>
+              ? (<a
+                title={'Download sample link'} aria-label={'Download sample link'}
+                className={`button ${styles.button}`}
+                href={it.download} rel={'noopener noreferrer'} target={'_blank'}>
                 <Icon path={mdiDownloadOutline} size={0.8}/>
               </a>)
               : (<></>)}
