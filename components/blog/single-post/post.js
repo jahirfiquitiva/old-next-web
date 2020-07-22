@@ -31,6 +31,7 @@ const Post = ({ frontmatter, mdBody }) => {
         </h1>
         {frontmatter.hero && (
           <img
+            loading={'lazy'}
             className={styles.hero}
             src={frontmatter.hero || ''} alt={frontmatter.title}/>
         )}

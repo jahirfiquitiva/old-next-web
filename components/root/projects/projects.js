@@ -32,7 +32,7 @@ const Projects = ({ projects = [] }) => {
                 '--hl-color': color,
               }}>
               <div className={styles.icon}>
-                <img src={it.icon} alt={it.title} height={72} width={72}/>
+                <img src={it.icon} alt={it.title} height={72} width={72} loading={'lazy'}/>
               </div>
               <div className={styles.info}>
                 <h5>{it.title}</h5>

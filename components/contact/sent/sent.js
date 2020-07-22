@@ -10,6 +10,7 @@ const Sent = () => (
          className={`button ${styles.button}`}>Go Back Home</a>
     </Link>
     <img
+      loading={'lazy'}
       src={'/assets/images/gifs/mail.gif'}
       alt={'Dog checking mail'}/>
   </div>

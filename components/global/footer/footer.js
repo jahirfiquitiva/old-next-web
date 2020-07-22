@@ -19,7 +19,7 @@ const Footer = () => (
           className={styles.logito}>
           {/*
             <img src={`/assets/images/brand/logo-def${isDark ? '-dark' : ''}.svg`}
-                 alt={'JF'} height={24} width={24}/>
+                 alt={'JF'} height={24} width={24} loading={'lazy'}/>
             */}
           <Logo className={styles.logosvg}/>
         </a>

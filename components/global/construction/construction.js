@@ -11,6 +11,7 @@ const UnderConstruction = () => {
            className={`button ${styles.button}`}>Go Back Home</a>
       </Link>
       <img
+        loading={'lazy'}
         src={'/assets/images/gifs/construction.gif'}
         alt={'Man falling while working on a construction'}/>
     </div>

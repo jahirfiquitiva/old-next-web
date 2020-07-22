@@ -86,8 +86,10 @@ const Supporters = ({ supporters }) => {
         </React.Fragment>);
       })}
       <div className={styles.thanksgif}>
-        <img src={'/assets/images/gifs/thanks.gif'}
-             alt={'Adventure Time characters hugging each other and saying thanks'}/>
+        <img
+          loading={'lazy'}
+          src={'/assets/images/gifs/thanks.gif'}
+          alt={'Adventure Time characters hugging each other and saying thanks'}/>
       </div>
     </div>
   );
