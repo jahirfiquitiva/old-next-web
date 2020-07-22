@@ -1,3 +1,16 @@
-import redirect from 'nextjs-redirect';
+import GoTo from '@components/global/goto/goto';
 
-export default redirect('/donate#supporters');
+const Thanks = ({ url, title, ...props }) => {
+  return (<GoTo title={title} url={url}/>);
+};
+
+export default Thanks;
+
+export const getStaticProps = async () => {
+  return {
+    props: {
+      title: 'donation site',
+      url: '/donate#thanks',
+    },
+  };
+};

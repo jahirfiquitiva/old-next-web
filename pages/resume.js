@@ -1,3 +1,16 @@
-import redirect from 'nextjs-redirect';
+import GoTo from '@components/global/goto/goto';
 
-export default redirect('/share/Jahir-Fiquitiva-Resume.pdf');
+const Resume = ({ url, title, ...props }) => {
+  return (<GoTo title={title} url={url}/>);
+};
+
+export default Resume;
+
+export const getStaticProps = async () => {
+  return {
+    props: {
+      title: 'Jahir Fiquitiva\'s Resume',
+      url: '/share/Jahir-Fiquitiva-Resume.pdf',
+    },
+  };
+};

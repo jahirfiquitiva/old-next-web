@@ -10,7 +10,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       title: 'Uses blog post',
-      url: '#',
+      url: '/blog/uses',
     },
   };
 };
