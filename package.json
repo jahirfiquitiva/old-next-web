@@ -14,12 +14,12 @@
     "local": "serve out"
   },
   "dependencies": {
-    "@mdi/js": "^5.3.45",
+    "@mdi/js": "^5.4.45",
     "@mdi/react": "^1.4.0",
     "@statickit/react": "^2.1.1",
     "@svgr/webpack": "^5.4.0",
     "gray-matter": "^4.0.2",
-    "next": "^9.4.4",
+    "next": "^9.5.0",
     "nextjs-redirect": "^5.0.0",
     "raw-loader": "^4.0.1",
     "react": "16.13.1",
@@ -39,7 +39,7 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react": "^7.20.4",
     "eslint-plugin-react-hooks": "^4.0.8",
     "eslint-plugin-standard": "^4.0.1"
   }
