@@ -20,7 +20,7 @@ I use the default macOS terminal with a slightly modified `~/.bash_profile` for 
 * [Material Theme UI](https://plugins.jetbrains.com/plugin/8006-material-theme-ui/) plugin
 * [Fira Code](https://github.com/tonsky/FiraCode) font
 
-### 📌  Browser Extensions (Microsoft Edge)
+### 📌  Browser Extensions (Google Chrome)
 
 * [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp)
 * [Ink for Google](https://chrome.google.com/webstore/detail/ink-for-google/hmanckoiohnlgdommlcckcflkmllobgj)
@@ -31,7 +31,7 @@ I use the default macOS terminal with a slightly modified `~/.bash_profile` for 
 * [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)
 * [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
 * [User CSS](https://chrome.google.com/webstore/detail/user-css/okpjlejfhacmgjkmknjhadmkdbcldfcb)
-* [Tabliss](https://chrome.google.com/webstore/detail/tabliss-a-beautiful-new-t/hipekcciheckooncpjeljhnekcoolahp)
+<!-- * [Tabliss](https://chrome.google.com/webstore/detail/tabliss-a-beautiful-new-t/hipekcciheckooncpjeljhnekcoolahp) -->
 
 ### 💡  Desktop Apps
 
