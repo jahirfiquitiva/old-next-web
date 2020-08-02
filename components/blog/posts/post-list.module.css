@@ -10,20 +10,20 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: masonry;
-    grid-auto-flow: dense;
-    grid-gap: 1.2rem;
+    grid-auto-flow: row dense;
+    grid-gap: 1rem;
     padding: 1rem 0;
 }
 
 .blog .posts .card {
+    height: auto;
+    height: fit-content;
+    min-height: 96px;
     display: inline-flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     text-align: start;
-    min-height: 96px;
-    height: auto;
-    height: fit-content;
     border-radius: 8px;
     border: 1px solid var(--divider);
     cursor: pointer;

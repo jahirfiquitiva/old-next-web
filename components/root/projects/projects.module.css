@@ -57,6 +57,9 @@
 .projects .grid {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: masonry;
+    grid-auto-flow: row dense;
+    grid-gap: .8rem;
     padding: 1.6rem 0 2.4rem;
 }
 
@@ -69,7 +72,6 @@
     padding: .4rem 0;
     cursor: pointer;
     transition: all .25s ease-in-out;
-    margin: .4rem 0;
 }
 
 .projects .card .icon {
@@ -159,10 +161,6 @@
 @media (min-width: 640px) {
     .projects .grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .projects .card {
-        margin: .4rem;
     }
 }
 
