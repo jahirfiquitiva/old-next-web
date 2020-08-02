@@ -9,29 +9,33 @@
 .blog .posts {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: masonry;
+    grid-auto-flow: dense;
+    grid-gap: 1.2rem;
     padding: 1rem 0;
 }
 
-.blog .card {
-    display: flex;
+.blog .posts .card {
+    display: inline-flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     text-align: start;
     min-height: 96px;
+    height: auto;
+    height: fit-content;
     border-radius: 8px;
     border: 1px solid var(--divider);
     cursor: pointer;
     transition: all .25s ease-in-out;
-    margin: .4rem;
 }
 
-.blog .card .details {
-    height: 100%;
+.blog .posts .card .details {
+    align-self: flex-start;
     width: 100%;
 }
 
-.blog .card .hero {
+.blog .posts .card .hero {
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -48,30 +52,34 @@
     background-position: center;
 }
 
-.blog .card .info {
+.blog .posts .card .details .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-self: flex-start;
     padding: 1rem;
-    flex: 1;
 }
 
-.blog .card,
-.blog .card:active,
-.blog .card:visited {
+.blog .posts .card .details .info p {
+    margin-top: .25rem;
+}
+
+.blog .posts .card,
+.blog .posts .card:active,
+.blog .posts .card:visited {
     color: var(--text-primary);
 }
 
-.blog .card p,
-.blog .card:active p,
-.blog .card:visited p {
+.blog .posts .card p,
+.blog .posts .card:active p,
+.blog .posts .card:visited p {
     font-size: .9rem;
     color: var(--text-secondary);
     text-decoration: none;
 }
 
-.blog .card:focus,
-.blog .card:hover {
+.blog .posts .card:focus,
+.blog .posts .card:hover {
     --shadow-color: rgba(56, 103, 214, .12);
     --border-color: rgba(56, 103, 214, .2);
     --hl-color: var(--accent);
@@ -89,8 +97,8 @@
     transform: translateY(-.1rem);
 }
 
-.blog .card:focus h5,
-.blog .card:hover h5 {
+.blog .posts .card:focus h5,
+.blog .posts .card:hover h5 {
     color: var(--hl-color);
     text-decoration: underline;
     -webkit-text-decoration-style: solid;
@@ -98,8 +106,8 @@
     text-decoration: underline solid var(--hl-color);
 }
 
-.blog .card:focus p,
-.blog .card:hover p {
+.blog .posts .card:focus p,
+.blog .posts .card:hover p {
     color: var(--text-primary);
 }
 

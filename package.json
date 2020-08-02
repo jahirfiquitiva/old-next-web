@@ -6,6 +6,7 @@
     "start": "next start",
     "clean": "rm -rf .next && rm -rf out",
     "dev": "next dev",
+    "watch": "npm run dev",
     "prebuild": "npm run clean",
     "build": "next build",
     "deploy": "npm run build",

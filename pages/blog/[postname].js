@@ -2,20 +2,20 @@ import matter from 'gray-matter';
 import getSlugs from '@utils/getSlugs';
 import Layout from '@components/Layout';
 import Post from '@components/blog/single-post/post';
+import GoTo from '@components/global/goto/goto';
 
-const BlogPost = ({ frontmatter, markdownBody, title, description, keywords, image }) => {
+const BlogPost = ({ frontmatter, markdownBody, title, description, keywords, image, link }) => {
   if (!frontmatter) return <></>;
-  return (
-    <>
-      <Layout
-        title={`${frontmatter.title} | Blog ~ ${title}`}
-        description={frontmatter.description || description}
-        keywords={keywords} image={image}
-        page={frontmatter.page || 1}>
-        <Post frontmatter={frontmatter} mdBody={markdownBody}/>
-      </Layout>
-    </>
-  );
+  if (link && link.length > 0) {
+    return (<GoTo title={title} url={link}/>);
+  }
+  return (<Layout
+    title={`${frontmatter.title} | Blog ~ ${title}`}
+    description={frontmatter.description || description}
+    keywords={keywords} image={image}
+    page={frontmatter.page || 1}>
+    <Post frontmatter={frontmatter} mdBody={markdownBody}/>
+  </Layout>);
 };
 
 export default BlogPost;
@@ -37,6 +37,7 @@ export const getStaticProps = async ({ ...ctx }) => {
       description: config.default.description,
       keywords: config.default.keywords,
       image: actualHero.startsWith('/') ? `https://jahir.dev${actualHero}` : actualHero,
+      link: frontmatter.link || '',
       frontmatter,
       markdownBody: data.content,
     },
