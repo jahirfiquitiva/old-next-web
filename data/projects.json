@@ -88,6 +88,14 @@
     "tag": "web"
   },
   {
+    "title": "Previous Websites",
+    "description": "Check the source code of previous versions of this website",
+    "icon": "/assets/images/projects/web/prev-websites.png",
+    "link": "https://github.com/jahirfiquitiva/prev-websites/",
+    "color": "#88a4e6",
+    "tag": "web"
+  },
+  {
     "title": "Sliding Puzzle",
     "description": "Pseudo-AI+ML that solves the 8-Puzzle aka Sliding Puzzle.",
     "icon": "/assets/images/projects/other/puzzle.png",
