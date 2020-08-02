@@ -62,6 +62,28 @@ const PostList = ({ posts }) => {
     return null;
   };
 
+  const renderPostLinkContent = (post, heroUrl, color) => {
+    return (<div className={styles.details}>
+      {renderPostHero(heroUrl, color)}
+      <div className={styles.info}>
+        <h5>{post.frontmatter.title}</h5>
+        <p>{post.frontmatter.date}</p>
+        <p>{post.frontmatter.description || ''}</p>
+      </div>
+    </div>);
+  };
+
+  const renderPostLink = (post, heroUrl, color, rightLink) => {
+    const extras = rightLink && rightLink.length > 0
+      ? { key: post.slug, rel: 'noopener noreferrer', href: rightLink, target: '_blank' }
+      : {};
+    return (<a
+      title={post.frontmatter.title} aria-label={post.frontmatter.title}
+      className={styles.card} style={getColorStyle(color)} {...extras}>
+      {renderPostLinkContent(post, heroUrl, color)}
+    </a>);
+  };
+
   return (
     <div className={styles.blog}>
       <h3 className={styles.title}>📝 &nbsp;&nbsp;Blog</h3>
@@ -70,22 +92,14 @@ const PostList = ({ posts }) => {
           const heroUrl = getHeroUrl(post);
           const { data } = heroUrl ? usePalette(heroUrl) : { data: null };
           const color = getColorFromData(data, isDark) || post.frontmatter.color || post.color;
-          return (
-            <Link href={`/blog/${post.slug}`} key={post.slug}>
-              <a
-                title={post.frontmatter.title} aria-label={post.frontmatter.title}
-                className={styles.card} style={getColorStyle(color)}>
-                <div className={styles.details}>
-                  {renderPostHero(heroUrl, color)}
-                  <div className={styles.info}>
-                    <h5>{post.frontmatter.title}</h5>
-                    <p>{post.frontmatter.date}</p>
-                    <p>{post.frontmatter.description || ''}</p>
-                  </div>
-                </div>
-              </a>
-            </Link>
-          );
+          const rightLink = post.frontmatter.link && post.frontmatter.link.length > 0
+            ? post.frontmatter.link : `/blog/${post.slug}`;
+          if (rightLink.startsWith('/')) {
+            return (<Link href={rightLink} key={post.slug}>
+              {renderPostLink(post, heroUrl, color)}
+            </Link>);
+          }
+          return renderPostLink(post, heroUrl, color, rightLink);
         })}
       </div>
       <p>I&apos;m honestly not the kind of person who blogs much, but I would like to do it more
