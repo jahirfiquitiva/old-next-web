@@ -7,6 +7,8 @@ page: 2
 hero: 'https://images.unsplash.com/photo-1508830524289-0adcbe822b40?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=fabian-grohs-dC6Pb2JdAqs-unsplash.jpg&w=640'
 ---
 
+This site is inspired and featured on [uses.tech](https://uses.tech)
+
 ### 🌐  Website
 
 This website is built using [Next.js](https://nextjs.org/) and is deployed on [Vercel](https://vercel.com/)
