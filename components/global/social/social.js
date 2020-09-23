@@ -1,5 +1,5 @@
 import Icon from '@mdi/react';
-import { mdiGithub, mdiInstagram, mdiLinkedin, mdiTwitter } from '@mdi/js';
+import { mdiGithub, mdiInstagram, mdiLinkedin, mdiTwitter, mdiTwitch } from '@mdi/js';
 import styles from './social.module.css';
 
 const iconSize = 0.8;
@@ -33,6 +33,13 @@ const Social = ({ centered }) => {
         href={'https://instagram.com/jahirfiquitiva'}
         rel={'noopener noreferrer'} target={'_blank'}>
         <Icon path={mdiInstagram} size={iconSize}/>
+      </a>
+      <a
+        title={'Twitch link'} aria-label={'Twitch link'}
+        className={`button ${styles.button} ${styles.twitch}`}
+        href={'https://twitch.tv/jahirdotdev'}
+        rel={'noopener noreferrer'} target={'_blank'}>
+        <Icon path={mdiTwitch} size={iconSize}/>
       </a>
     </div>
   );

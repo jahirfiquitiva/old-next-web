@@ -74,3 +74,14 @@
 .social .button.instagram:focus {
     background-color: #7634a2;
 }
+
+.social .button.twitch,
+.social .button.twitch:active {
+    background-color: #9146FF;
+}
+
+.social .button.twitch:hover,
+.social .button.twitch:focus {
+    background-color: #7438cc;
+}
+
