@@ -2,13 +2,9 @@ import matter from 'gray-matter';
 import getSlugs from '@utils/getSlugs';
 import Layout from '@components/Layout';
 import Post from '@components/blog/single-post/post';
-import GoTo from '@components/global/goto/goto';
 
-const BlogPost = ({ frontmatter, markdownBody, title, description, keywords, image, link }) => {
+const BlogPost = ({ frontmatter, markdownBody, title, description, keywords, image }) => {
   if (!frontmatter) return <></>;
-  if (link && link.length > 0) {
-    return (<GoTo title={title} url={link}/>);
-  }
   return (<Layout
     title={`${frontmatter.title} | Blog ~ ${title}`}
     description={frontmatter.description || description}
@@ -29,7 +25,10 @@ export const getStaticProps = async ({ ...ctx }) => {
 
   const { hero } = data.data;
   const actualHero = hero ? hero.startsWith('http') ? hero : `/assets/images/posts/${hero}` : '';
-  const frontmatter = { ...data.data, hero: actualHero };
+  const frontmatter = {
+    ...data.data,
+    hero: actualHero,
+  };
 
   return {
     props: {
@@ -53,6 +52,6 @@ export const getStaticPaths = async () => {
 
   return {
     paths, // An array of path names, and any params
-    fallback: 'blocking', // so that 404s properly appear if something's not matching
+    fallback: false, // so that 404s properly appear if something's not matching
   };
 };
