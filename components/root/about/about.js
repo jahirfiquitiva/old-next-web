@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import ExtLink from '@components/global/ext-link/ext-link';
 import Social from '@components/global/social/social';
 import SkillSet from '@components/root/skillset/skillset';
@@ -31,7 +32,7 @@ const About = () => {
             to={'https://www.google.com/maps/place/Colombia/@4,-72z/'} label={'Colombia 🇨🇴'}/></p>
         </div>
         <div className={styles.photocontainer}>
-          <img
+          <Image
             loading={'lazy'}
             src={'/assets/images/me/me.jpg'} alt={'Jahir\'s Photo'}
             className={styles.photo} height={168} width={168}/>

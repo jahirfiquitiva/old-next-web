@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useContext } from 'react';
 import { usePalette } from 'react-palette';
 import hexToRGB from '@utils/hexToRgb';
@@ -32,7 +33,10 @@ const Projects = ({ projects = [] }) => {
                 '--hl-color': color,
               }}>
               <div className={styles.icon}>
-                <img src={it.icon} alt={it.title} height={72} width={72} loading={'lazy'}/>
+                <Image
+                  src={it.icon} alt={it.title}
+                  height={72} width={72}
+                  loading={'lazy'}/>
               </div>
               <div className={styles.info}>
                 <h5>{it.title}</h5>

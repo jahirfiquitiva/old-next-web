@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from './sent.module.css';
 
@@ -9,7 +10,8 @@ const Sent = () => (
       <a title={'home link'} aria-label={'home link'}
          className={`button ${styles.button}`}>Go Back Home</a>
     </Link>
-    <img
+    <Image
+      unsized
       loading={'lazy'}
       src={'/assets/images/gifs/mail.gif'}
       alt={'Dog checking mail'}/>

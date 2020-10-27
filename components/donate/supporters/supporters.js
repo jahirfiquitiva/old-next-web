@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-no-undef */
-import { useContext } from 'react';
+import Image from 'next/image';
+import { useContext, Fragment } from 'react';
 import { usePalette } from 'react-palette';
 import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
@@ -80,12 +81,13 @@ const Supporters = ({ supporters }) => {
       */}
       {(supporters ? supporters.categories || [] : []).map((it, i) => {
         // noinspection JSUnresolvedVariable
-        return (<React.Fragment key={i}>
+        return (<Fragment key={i}>
           {renderSupportersCategory(it)}
-        </React.Fragment>);
+        </Fragment>);
       })}
       <div className={styles.thanksgif}>
-        <img
+        <Image
+          unsized
           loading={'lazy'}
           src={'/assets/images/gifs/thanks.gif'}
           alt={'Adventure Time characters hugging each other and saying thanks'}/>

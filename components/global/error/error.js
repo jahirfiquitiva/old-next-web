@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from './error.module.css';
 
@@ -26,7 +27,8 @@ const Error = ({ isFourHundredFour = false }) => {
         <a title={'home link'} aria-label={'home link'}
            className={`button ${styles.button}`}>Go Back Home</a>
       </Link>
-      <img
+      <Image
+        unsized
         loading={'lazy'}
         src={isFourHundredFour ? '/assets/images/gifs/404.gif' : '/assets/images/gifs/monkey.gif'}
         alt={isFourHundredFour ? 'John Travolta GIF' : 'Monkey throwing laptop aggressively'}/>
