@@ -1,8 +1,11 @@
+import Head from 'next/head';
+
 const defaultImage = 'https://jahir.dev/assets/images/brand/banner.png';
+
 const MetaTags = ({ title, description, keywords, image }) => {
   const actualImage = image ? image.length > 0 ? image : defaultImage : defaultImage;
   return (
-    <>
+    <Head>
       <meta name={'description'} content={description}/>
       <meta name={'author'} content={'Jahir Fiquitiva'}/>
       <meta name={'keywords'} content={(keywords || []).join(', ')}/>
@@ -47,7 +50,7 @@ const MetaTags = ({ title, description, keywords, image }) => {
       <link rel={'apple-touch-icon-precomposed'} href={'/assets/images/brand/favicon32.png'}/>
       <link rel={'icon'} sizes={'32x32'} href={'/assets/images/brand/favicon32.png'}/>
       <meta name={'msapplication-TileImage'} content={'/assets/images/brand/favicon32.png'}/>
-    </>
+    </Head>
   );
 };
 
