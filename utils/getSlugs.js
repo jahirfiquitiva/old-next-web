@@ -10,7 +10,8 @@ const getSlugs = (context) => {
     const document = matter(value.default);
     const frontmatter = { ...document.data };
     const isInProgress = frontmatter['in-progress'] === true;
-    if (isInProgress) return null;
+    const { link } = frontmatter;
+    if ((link && link.length > 0) || isInProgress) return null;
     return slug;
   });
 
