@@ -1,175 +1,175 @@
 .projects {
-    padding: 1rem 1.2rem 2rem;
+  padding: 1rem 1.2rem 2rem;
 }
 
 .projects .selector {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .projects .selector select {
-    height: 24px;
-    margin-left: 2rem;
+  height: 24px;
+  margin-left: 2rem;
 }
 
 .projects .titlecontainer {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .projects .title {
-    text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #d1adf4;
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #d1adf4;
 }
 
 .projects .titlecontainer .stats,
 .projects .titlecontainer .stats:active {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    border: 1px solid var(--divider);
-    border-radius: 6px;
-    padding: .4rem;
-    margin-top: 1rem;
-    color: var(--text-secondary);
-    text-decoration: none;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid var(--divider);
+  border-radius: 6px;
+  padding: .4rem;
+  margin-top: 1rem;
+  color: var(--text-secondary);
+  text-decoration: none;
 }
 
 .projects .titlecontainer .stats svg {
-    margin-right: .4rem;
-    margin-left: .6rem;
-    padding-left: .6rem;
-    border-left: 1px solid var(--divider);
+  margin-right: .4rem;
+  margin-left: .6rem;
+  padding-left: .6rem;
+  border-left: 1px solid var(--divider);
 }
 
 .projects .titlecontainer .stats svg:first-of-type {
-    margin-right: .2rem;
-    margin-left: 0;
-    padding-left: 0;
-    border-left: none;
+  margin-right: .2rem;
+  margin-left: 0;
+  padding-left: 0;
+  border-left: none;
 }
 
 .projects .titlecontainer .stats:hover,
 .projects .titlecontainer .stats:focus {
-    color: var(--text-primary);
-    text-decoration: none;
+  color: var(--text-primary);
+  text-decoration: none;
 }
 
 .projects .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: masonry;
-    grid-auto-flow: row dense;
-    grid-gap: .8rem;
-    padding: 1.6rem 0 2.4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: masonry;
+  grid-auto-flow: row dense;
+  grid-gap: .8rem;
+  padding: 1.6rem 0 2.4rem;
 }
 
 .projects .card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 8px;
-    border: 1px solid var(--divider);
-    padding: .4rem 0;
-    cursor: pointer;
-    transition: all .25s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--divider);
+  padding: .4rem 0;
+  cursor: pointer;
+  transition: all .25s ease-in-out;
 }
 
 .projects .card .icon {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    max-width: 80px;
-    padding: .4rem .6rem .4rem .8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 80px;
+  padding: .4rem .6rem .4rem .8rem;
 }
 
 .projects .card img {
-    opacity: 0.8;
-    max-width: 72px;
-    margin: auto;
-    transition: all .25s ease-in-out;
+  opacity: 0.8;
+  max-width: 72px;
+  margin: auto;
+  transition: all .25s ease-in-out;
 }
 
 .projects .card .info {
-    padding: .4rem .8rem .4rem .4rem;
+  padding: .4rem .8rem .4rem .4rem;
 }
 
 .projects .card,
 .projects .card:active,
 .projects .card:visited {
-    color: var(--text-primary);
+  color: var(--text-primary);
 }
 
 .projects .card .info p,
 .projects .card:active .info p,
 .projects .card:visited .info p {
-    font-size: .9rem;
-    color: var(--text-secondary);
-    text-decoration: none;
+  font-size: .9rem;
+  color: var(--text-secondary);
+  text-decoration: none;
 }
 
 .projects .card:focus,
 .projects .card:hover {
-    --shadow-color: var(--divider);
-    --border-color: var(--accent);
-    --hl-color: var(--accent);
-    color: var(--text-primary);
-    text-decoration: none;
-    border-color: var(--border-color);
-    -webkit-box-shadow: 0 4px 8px var(--shadow-color);
-    -moz-box-shadow: 0 4px 8px var(--shadow-color);
-    -o-box-shadow: 0 4px 8px var(--shadow-color);
-    box-shadow: 0 4px 8px var(--shadow-color);
-    -webkit-transform: translateY(-.1rem);
-    -moz-transform: translateY(-.1rem);
-    -ms-transform: translateY(-.1rem);
-    -o-transform: translateY(-.1rem);
-    transform: translateY(-.1rem);
+  --shadow-color: var(--divider);
+  --border-color: var(--accent);
+  --hl-color: var(--accent);
+  color: var(--text-primary);
+  text-decoration: none;
+  border-color: var(--border-color);
+  -webkit-box-shadow: 0 4px 8px var(--shadow-color);
+  -moz-box-shadow: 0 4px 8px var(--shadow-color);
+  -o-box-shadow: 0 4px 8px var(--shadow-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  -webkit-transform: translateY(-.1rem);
+  -moz-transform: translateY(-.1rem);
+  -ms-transform: translateY(-.1rem);
+  -o-transform: translateY(-.1rem);
+  transform: translateY(-.1rem);
 }
 
 .projects .card:focus img,
 .projects .card:hover img {
-    opacity: 1;
+  opacity: 1;
 }
 
 .projects .card:focus .info h5,
 .projects .card:hover .info h5 {
-    color: var(--hl-color);
-    text-decoration: underline;
-    -webkit-text-decoration-style: solid;
-    -webkit-text-decoration-color: var(--hl-color);
-    text-decoration: underline solid var(--hl-color);
+  color: var(--hl-color);
+  text-decoration: underline;
+  -webkit-text-decoration-style: solid;
+  -webkit-text-decoration-color: var(--hl-color);
+  text-decoration: underline solid var(--hl-color);
 }
 
 .projects .card:focus .info p,
 .projects .card:hover .info p {
-    color: var(--text-primary);
+  color: var(--text-primary);
 }
 
 @media (min-width: 400px) {
-    .projects .titlecontainer {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .projects .titlecontainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .projects .titlecontainer .stats {
-        margin-top: 0;
-    }
+  .projects .titlecontainer .stats {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 640px) {
-    .projects .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .projects .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 960px) {
-    .projects {
-        padding: 1rem 0 3rem;
-    }
+  .projects {
+    padding: 1rem 0 3rem;
+  }
 
-    .projects .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .projects .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

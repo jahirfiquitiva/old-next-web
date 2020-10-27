@@ -1,177 +1,177 @@
 nav.nav {
-    z-index: 4;
-    width: 100%;
-    background-color: var(--toolbar-color);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    min-height: var(--toolbar-height);
-    position: fixed;
-    top: 0;
-    -webkit-box-shadow: 0 0 4px 0 var(--toolbar-shadow-a), 0 3px 4px 0 var(--toolbar-shadow-b), 0 1px 5px 0 var(--toolbar-shadow-c);
-    -moz-box-shadow: 0 0 4px 0 var(--toolbar-shadow-a), 0 3px 4px 0 var(--toolbar-shadow-b), 0 1px 5px 0 var(--toolbar-shadow-c);
-    -o-box-shadow: 0 0 4px 0 var(--toolbar-shadow-a), 0 3px 4px 0 var(--toolbar-shadow-b), 0 1px 5px 0 var(--toolbar-shadow-c);
-    box-shadow: 0 0 4px 0 var(--toolbar-shadow-a), 0 3px 4px 0 var(--toolbar-shadow-b), 0 1px 5px 0 var(--toolbar-shadow-c);
+  z-index: 4;
+  width: 100%;
+  background-color: var(--toolbar-color);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  min-height: var(--toolbar-height);
+  position: fixed;
+  top: 0;
+  -webkit-box-shadow: 0 0 4px 0 var(--toolbar-shadow-a), 0 3px 4px 0 var(--toolbar-shadow-b), 0 1px 5px 0 var(--toolbar-shadow-c);
+  -moz-box-shadow: 0 0 4px 0 var(--toolbar-shadow-a), 0 3px 4px 0 var(--toolbar-shadow-b), 0 1px 5px 0 var(--toolbar-shadow-c);
+  -o-box-shadow: 0 0 4px 0 var(--toolbar-shadow-a), 0 3px 4px 0 var(--toolbar-shadow-b), 0 1px 5px 0 var(--toolbar-shadow-c);
+  box-shadow: 0 0 4px 0 var(--toolbar-shadow-a), 0 3px 4px 0 var(--toolbar-shadow-b), 0 1px 5px 0 var(--toolbar-shadow-c);
 }
 
 .toolbar {
-    display: grid;
-    grid-template-columns: 1fr;
-    transition: all .25s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr;
+  transition: all .25s ease-in-out;
 }
 
 .toolbar button.menuToggle,
 .toolbar button.menuToggle:hover,
 .toolbar button.menuToggle:focus,
 .toolbar button.menuToggle:active {
-    color: var(--accent);
-    min-height: var(--toolbar-height);
-    min-width: var(--toolbar-height);
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    height: 100%;
-    padding: .4rem .6rem .4rem .4rem;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
-    transform: none;
+  color: var(--accent);
+  min-height: var(--toolbar-height);
+  min-width: var(--toolbar-height);
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  height: 100%;
+  padding: .4rem .6rem .4rem .4rem;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
 
 .toolbar button.menuToggle:hover,
 .toolbar button.menuToggle:focus,
 .toolbar button.menuToggle:active {
-    background-color: var(--toolbar-highlight);
+  background-color: var(--toolbar-highlight);
 }
 
 .toolbar button.menuToggle svg {
-    margin-top: .2rem;
-    margin-left: .2rem;
+  margin-top: .2rem;
+  margin-left: .2rem;
 }
 
 .toolbar div {
-    min-height: var(--toolbar-height);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 0;
-    padding-inline-end: 0;
+  min-height: var(--toolbar-height);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
 }
 
 .toolbar .logo {
-    justify-content: space-between;
-    padding: .4rem .4rem;
-    font-family: var(--manrope-font);
-    font-weight: 600;
-    font-size: 1.05rem;
+  justify-content: space-between;
+  padding: .4rem .4rem;
+  font-family: var(--manrope-font);
+  font-weight: 600;
+  font-size: 1.05rem;
 }
 
 .toolbar .logo a {
-    padding-bottom: .5rem;
+  padding-bottom: .5rem;
 }
 
 .toolbar .logo .logito {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .toolbar .logo .logito img,
 .logosvg {
-    width: 24px;
-    height: 24px;
-    margin-right: .6rem;
-    fill: var(--accent);
-    color: var(--accent);
-    --fill-color: var(--accent);
+  width: 24px;
+  height: 24px;
+  margin-right: .6rem;
+  fill: var(--accent);
+  color: var(--accent);
+  --fill-color: var(--accent);
 }
 
 .toolbar .logo .logito:hover .logosvg,
 .toolbar .logo .logito:focus .logosvg,
 .logosvg:hover,
 .logosvg:focus {
-    fill: var(--accent-dark);
-    color: var(--accent-dark);
-    --fill-color: var(--accent-dark);
+  fill: var(--accent-dark);
+  color: var(--accent-dark);
+  --fill-color: var(--accent-dark);
 }
 
 .toolbar .menu {
-    display: none;
-    font-family: var(--inter-font);
-    font-weight: 400;
+  display: none;
+  font-family: var(--inter-font);
+  font-weight: 400;
 }
 
 .toolbar .menu.active {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 .4rem .2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 .4rem .2rem;
 }
 
 .toolbar span.item {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    min-height: var(--toolbar-height);
-    height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: var(--toolbar-height);
+  height: 100%;
 }
 
 .toolbar .menu span.item {
-    width: 100%;
-    padding-top: .2rem;
-    padding-bottom: .2rem;
+  width: 100%;
+  padding-top: .2rem;
+  padding-bottom: .2rem;
 }
 
 .toolbar .menu span.item:first-of-type {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 .toolbar .menu span.item .emoji {
-    margin-right: 1.1rem;
+  margin-right: 1.1rem;
 }
 
 .toolbar div span a {
-    width: 100%;
-    padding: .5rem 1rem .6rem .8rem;
+  width: 100%;
+  padding: .5rem 1rem .6rem .8rem;
 }
 
 .toolbar div span.themer {
-    min-width: 32px;
-    padding: .2rem .4rem;
-    margin: 0 .5rem 0 .4rem;
-    cursor: pointer;
+  min-width: 32px;
+  padding: .2rem .4rem;
+  margin: 0 .5rem 0 .4rem;
+  cursor: pointer;
 }
 
 .toolbar div span.themer.desktop {
-    display: none;
+  display: none;
 }
 
 .toolbar span.item.themer .emoji {
-    margin-right: .2rem;
-    margin-bottom: .1rem;
+  margin-right: .2rem;
+  margin-bottom: .1rem;
 }
 
 @media not all and (min-resolution: .001dpcm) {
-    @media {
-        .toolbar .menu span.item .emoji {
-            margin-right: .7rem;
-        }
-
-        .toolbar span.item.themer .emoji {
-            margin-right: 0;
-        }
+  @media {
+    .toolbar .menu span.item .emoji {
+      margin-right: .7rem;
     }
+
+    .toolbar span.item.themer .emoji {
+      margin-right: 0;
+    }
+  }
 }
 
 .toolbar .menu .item a,
 .toolbar .menu .item a:visited {
-    color: var(--text-secondary);
+  color: var(--text-secondary);
 }
 
 .toolbar div span a,
@@ -179,7 +179,7 @@ nav.nav {
 .toolbar div span a:focus,
 .toolbar div span a:active,
 .toolbar div span a:visited {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .toolbar span.item:hover a,
@@ -188,79 +188,79 @@ nav.nav {
 .toolbar div span.themer:hover,
 .toolbar div span.themer:focus,
 .toolbar div span.themer.active {
-    color: var(--accent-dark) !important;
-    background-color: var(--toolbar-highlight);
-    border-radius: 4px;
+  color: var(--accent-dark) !important;
+  background-color: var(--toolbar-highlight);
+  border-radius: 4px;
 }
 
 @media (min-width: 960px) {
-    nav.nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
+  nav.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .toolbar {
-        grid-template-columns: 1fr auto;
-        padding-top: .4rem;
-        padding-bottom: .4rem;
-        width: 100%;
-        max-width: 960px;
-    }
+  .toolbar {
+    grid-template-columns: 1fr auto;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    width: 100%;
+    max-width: 960px;
+  }
 
-    .toolbar .logo {
-        padding: 0 .4rem;
-    }
+  .toolbar .logo {
+    padding: 0 .4rem;
+  }
 
-    .toolbar button.menuToggle {
-        display: none;
-        height: 0;
-        width: 0;
-        min-height: 0;
-        min-width: 0;
-    }
+  .toolbar button.menuToggle {
+    display: none;
+    height: 0;
+    width: 0;
+    min-height: 0;
+    min-width: 0;
+  }
 
-    .toolbar .menu,
-    .toolbar .menu.active {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 0 .4rem;
-    }
+  .toolbar .menu,
+  .toolbar .menu.active {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 .4rem;
+  }
 
-    .toolbar .menu .item {
-        width: auto;
-        white-space: nowrap;
-    }
+  .toolbar .menu .item {
+    width: auto;
+    white-space: nowrap;
+  }
 
-    .toolbar .menu span.item {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
+  .toolbar .menu span.item {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
-    .toolbar span.item {
-        padding: 0 .2rem;
-    }
+  .toolbar span.item {
+    padding: 0 .2rem;
+  }
 
-    .toolbar .menu span.item .emoji {
-        margin-right: .8rem;
-    }
+  .toolbar .menu span.item .emoji {
+    margin-right: .8rem;
+  }
 
-    .toolbar .menu span.item.themer .emoji {
-        margin-right: .115rem;
-    }
+  .toolbar .menu span.item.themer .emoji {
+    margin-right: .115rem;
+  }
 
-    .toolbar div span.themer {
-        margin: 0 .2rem 0 .2rem;
-    }
+  .toolbar div span.themer {
+    margin: 0 .2rem 0 .2rem;
+  }
 
-    .toolbar div span.themer.mobile {
-        display: none;
-    }
+  .toolbar div span.themer.mobile {
+    display: none;
+  }
 
-    .toolbar div span.themer.desktop {
-        display: flex;
-    }
+  .toolbar div span.themer.desktop {
+    display: flex;
+  }
 }

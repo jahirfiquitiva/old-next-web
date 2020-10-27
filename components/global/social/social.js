@@ -1,5 +1,5 @@
 import Icon from '@mdi/react';
-import { mdiGithub, mdiInstagram, mdiLinkedin, mdiTwitter, mdiTwitch } from '@mdi/js';
+import { mdiGithub, mdiInstagram, mdiLinkedin, mdiTwitch, mdiTwitter } from '@mdi/js';
 import styles from './social.module.css';
 
 const iconSize = 0.8;

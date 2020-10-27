@@ -1,87 +1,87 @@
 .social {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin: .4rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: .4rem 0;
 }
 
 .social.centered {
-    justify-content: center;
+  justify-content: center;
 }
 
 .social .button,
 .social .button:active {
-    min-height: 24px;
-    margin: .4rem;
-    padding: .3rem .5rem 0;
-    color: #fff;
+  min-height: 24px;
+  margin: .4rem;
+  padding: .3rem .5rem 0;
+  color: #fff;
 }
 
 .social .button:hover,
 .social .button:focus,
 .social .button:visited {
-    color: #fff;
+  color: #fff;
 }
 
 .social .button:first-of-type {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .social .button:last-of-type {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .social .button svg {
-    margin-top: .2rem;
+  margin-top: .2rem;
 }
 
 .social .button.twitter,
 .social .button.twitter:active {
-    background-color: #1da1f2;
+  background-color: #1da1f2;
 }
 
 .social .button.twitter:hover,
 .social .button.twitter:focus {
-    background-color: #1a91da;
+  background-color: #1a91da;
 }
 
 .social .button.github,
 .social .button.github:active {
-    background-color: #333;
+  background-color: #333;
 }
 
 .social .button.github:hover,
 .social .button.github:focus {
-    background-color: #2e2e2e;
+  background-color: #2e2e2e;
 }
 
 .social .button.linkedin,
 .social .button.linkedin:active {
-    background-color: #0077b5;
+  background-color: #0077b5;
 }
 
 .social .button.linkedin:hover,
 .social .button.linkedin:focus {
-    background-color: #006ba3;
+  background-color: #006ba3;
 }
 
 .social .button.instagram,
 .social .button.instagram:active {
-    background-color: #833ab4;
+  background-color: #833ab4;
 }
 
 .social .button.instagram:hover,
 .social .button.instagram:focus {
-    background-color: #7634a2;
+  background-color: #7634a2;
 }
 
 .social .button.twitch,
 .social .button.twitch:active {
-    background-color: #9146FF;
+  background-color: #9146FF;
 }
 
 .social .button.twitch:hover,
 .social .button.twitch:focus {
-    background-color: #7438cc;
+  background-color: #7438cc;
 }
 

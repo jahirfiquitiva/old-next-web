@@ -75,7 +75,12 @@ const PostList = ({ posts }) => {
 
   const renderPostLink = (post, heroUrl, color, rightLink) => {
     const extras = rightLink && rightLink.length > 0
-      ? { key: post.slug, rel: 'noopener noreferrer', href: rightLink, target: '_blank' }
+      ? {
+        key: post.slug,
+        rel: 'noopener noreferrer',
+        href: rightLink,
+        target: '_blank'
+      }
       : {};
     return (<a
       title={post.frontmatter.title} aria-label={post.frontmatter.title}

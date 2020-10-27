@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import Link from 'next/link';
+import BetterImage from '@components/global/better-image/better-image';
 import styles from './error.module.css';
 
 const fhfError = 'Woops! ~ Page Not Found';
@@ -27,7 +27,7 @@ const Error = ({ isFourHundredFour = false }) => {
         <a title={'home link'} aria-label={'home link'}
            className={`button ${styles.button}`}>Go Back Home</a>
       </Link>
-      <Image
+      <BetterImage
         unsized
         loading={'lazy'}
         src={isFourHundredFour ? '/assets/images/gifs/404.gif' : '/assets/images/gifs/monkey.gif'}

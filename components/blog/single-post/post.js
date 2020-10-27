@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { useContext } from 'react';
 import { usePalette } from 'react-palette';
 import Link from 'next/link';
@@ -6,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
 import ThemeContext from '@components/theme/ThemeContext';
+import BetterImage from '@components/global/better-image/better-image';
 import styles from './post.module.css';
 
 const Post = ({ frontmatter, mdBody }) => {
@@ -31,7 +31,7 @@ const Post = ({ frontmatter, mdBody }) => {
           {frontmatter.title}
         </h1>
         {frontmatter.hero && (
-          <Image
+          <BetterImage
             unsized
             loading={'lazy'}
             className={styles.hero}

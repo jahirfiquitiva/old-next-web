@@ -1,9 +1,9 @@
-import Image from 'next/image';
 import { useContext } from 'react';
 import { usePalette } from 'react-palette';
 import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
 import ThemeContext from '@components/theme/ThemeContext';
+import BetterImage from '@components/global/better-image/better-image';
 import Stats from '@components/root/projects/stats';
 import styles from './projects.module.css';
 
@@ -33,7 +33,7 @@ const Projects = ({ projects = [] }) => {
                 '--hl-color': color,
               }}>
               <div className={styles.icon}>
-                <Image
+                <BetterImage
                   src={it.icon} alt={it.title}
                   height={72} width={72}
                   loading={'lazy'}/>

@@ -1,74 +1,74 @@
 .intro {
-    padding: 2rem 1.2rem 1rem;
+  padding: 2rem 1.2rem 1rem;
 }
 
 .intro .title {
-    text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #97d0f8;
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #97d0f8;
 }
 
 .intro p {
-    margin-top: .8rem;
-    margin-bottom: .8rem;
+  margin-top: .8rem;
+  margin-bottom: .8rem;
 }
 
 .intro .btitle {
-    margin-top: 1.6rem;
+  margin-top: 1.6rem;
 }
 
 .intro .buttons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .intro .buttons a.button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    min-height: 26px;
-    max-height: 28px;
-    color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 26px;
+  max-height: 28px;
+  color: #fff;
 }
 
 .intro .buttons a.button:not(:last-of-type) {
-    margin-right: .8rem;
-    margin-bottom: .8rem;
+  margin-right: .8rem;
+  margin-bottom: .8rem;
 }
 
 .intro .buttons a.button svg {
-    margin-right: .4rem;
+  margin-right: .4rem;
 }
 
 .intro .buttons a.button.github {
-    background-color: #333;
+  background-color: #333;
 }
 
 .intro .buttons a:hover.button.github,
 .intro .buttons a:focus.button.github {
-    background-color: #292929;
+  background-color: #292929;
 }
 
 .intro .buttons a.button.paypal {
-    background-color: #1a4593;
+  background-color: #1a4593;
 }
 
 .intro .buttons a:hover.button.paypal,
 .intro .buttons a:focus.button.paypal {
-    background-color: #002b7a;
+  background-color: #002b7a;
 }
 
 .intro .buttons a.button.bmac {
-    background-color: #5f7fff;
+  background-color: #5f7fff;
 }
 
 .intro .buttons a:hover.button.bmac,
 .intro .buttons a:focus.button.bmac {
-    background-color: #4c66cc;
+  background-color: #4c66cc;
 }
 
 @media (min-width: 960px) {
-    .intro {
-        padding: 3rem 0 0;
-    }
+  .intro {
+    padding: 3rem 0 0;
+  }
 }

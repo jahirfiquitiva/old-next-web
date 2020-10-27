@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-no-undef */
-import Image from 'next/image';
-import { useContext, Fragment } from 'react';
+import { Fragment, useContext } from 'react';
 import { usePalette } from 'react-palette';
 import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
 import ThemeContext from '@components/theme/ThemeContext';
+import BetterImage from '@components/global/better-image/better-image';
 import styles from './supporters.module.css';
 
 const Supporters = ({ supporters }) => {
@@ -86,7 +86,7 @@ const Supporters = ({ supporters }) => {
         </Fragment>);
       })}
       <div className={styles.thanksgif}>
-        <Image
+        <BetterImage
           unsized
           loading={'lazy'}
           src={'/assets/images/gifs/thanks.gif'}
