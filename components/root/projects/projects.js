@@ -24,7 +24,7 @@ const Projects = ({ projects = [] }) => {
           const color = isDark ? getColorFromData(data, isDark) || it.color : it.color;
           return (
             <a
-              title={`${it.tile} link`} aria-label={`${it.tile} link`}
+              title={`${it.title} link`} aria-label={`${it.title} link`}
               className={styles.card} href={it.link} key={it.title}
               target={'_blank'} rel={'noopener noreferrer'}
               style={{
