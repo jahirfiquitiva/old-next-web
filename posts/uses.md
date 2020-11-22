@@ -50,7 +50,7 @@ I use the default macOS terminal with a slightly modified `~/.bash_profile` for 
 ### 💻  Hardware
 
 * [2020 13" MacBook Pro](https://support.apple.com/kb/SP819) 2.0 GHz Quad-Core Intel Core i5 10th Gen, 512GB SSD and 16GB RAM
-* [LG 27UK850-W 27" 4K Monitor](https://amzn.to/33anjOW)
+* [LG 27UK850-W 27" 4K Monitor](https://amzn.to/33anjOW) that's on a [Stand Riser](https://amzn.to/35UXMLw)
 * [HyperDrive Duo 7 in 2 USB C Hub](https://amzn.to/3kTYahM)
 * [Anker 7 in 1 USB C Hub](https://amzn.to/3nSY1wZ)
 * [Apple Magic Keyboard](https://amzn.to/371l3dV)
