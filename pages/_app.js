@@ -1,14 +1,14 @@
-import { StaticKitProvider } from '@statickit/react';
+import { FormspreeProvider } from '@formspree/react';
 import ThemeWrapper from '@components/theme/ThemeWrapper';
 import '@components/global/styles/resetalize.min.css';
 import '@components/global/styles/global.css';
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <StaticKitProvider site={'6cd1f416f54e'}>
+    <FormspreeProvider project={'1552841918776344307'}>
       <ThemeWrapper>
         <Component {...pageProps} />
       </ThemeWrapper>
-    </StaticKitProvider>
+    </FormspreeProvider>
   );
 }
