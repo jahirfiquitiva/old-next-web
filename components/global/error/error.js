@@ -27,9 +27,9 @@ const Error = ({ isFourHundredFour = false }) => {
         <a title={'home link'} aria-label={'home link'}
            className={`button ${styles.button}`}>Go Back Home</a>
       </Link>
-      <Image
-        unsized
+      <img
         loading={'lazy'}
+        decoding={'async'}
         src={isFourHundredFour ? '/assets/images/gifs/404.gif' : '/assets/images/gifs/monkey.gif'}
         alt={isFourHundredFour ? 'John Travolta GIF' : 'Monkey throwing laptop aggressively'}/>
     </div>
