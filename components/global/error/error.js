@@ -20,13 +20,15 @@ const Error = ({ isFourHundredFour = false }) => {
 
   return (
     <div className={styles.error}>
-      <h2 className={styles.title}>{isFourHundredFour ? fhfError : errorError}</h2>
-      <p>{isFourHundredFour ? fhfMessage : errorMessage}</p>
-      {renderContactMessage()}
-      <Link href={'/'}>
-        <a title={'home link'} aria-label={'home link'}
-           className={`button ${styles.button}`}>Go Back Home</a>
-      </Link>
+      <div className={styles.errorContent}>
+        <h2 className={styles.title}>{isFourHundredFour ? fhfError : errorError}</h2>
+        <p>{isFourHundredFour ? fhfMessage : errorMessage}</p>
+        {renderContactMessage()}
+        <Link href={'/'}>
+          <a title={'home link'} aria-label={'home link'}
+             className={`button ${styles.button}`}>Go Back Home</a>
+        </Link>
+      </div>
       <UnsizedImage
         src={isFourHundredFour ? '/assets/images/gifs/404.gif' : '/assets/images/gifs/monkey.gif'}
         alt={isFourHundredFour ? 'John Travolta GIF' : 'Monkey throwing laptop aggressively'}/>

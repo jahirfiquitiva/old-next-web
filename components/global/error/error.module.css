@@ -12,20 +12,31 @@
     padding-right: 1.2rem;
 }
 
-.error h2 {
+.error .errorContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.error .errorContent h2 {
     text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #fd7d84;
 }
 
-.error p {
+.error .errorContent p {
     margin-top: .8rem;
 }
 
-.error a.button {
+.error .errorContent a.button {
     margin: 1.6rem 0;
 }
 
 .error .gif,
-.error img {
+.error .errorContent .gif,
+.error img,
+.error .errorContent img {
     margin: auto auto 0;
     padding: 0;
     height: auto;
