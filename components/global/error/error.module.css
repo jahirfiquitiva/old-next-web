@@ -21,27 +21,30 @@
     text-align: center;
 }
 
-.error .errorContent h2 {
+.error h2 {
     text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #fd7d84;
 }
 
-.error .errorContent p {
+.error p {
     margin-top: .8rem;
 }
 
-.error .errorContent a.button {
+.error a.button {
     margin: 1.6rem 0;
 }
 
 .error .gif,
-.error .errorContent .gif,
-.error img,
-.error .errorContent img {
-    margin: auto auto 0;
+.error img {
+    margin-top: 1.6rem;
     padding: 0;
     height: auto;
     width: 100%;
     max-width: 400px;
+}
+
+.error.fhf .gif,
+.error.fhf img {
+    margin: auto auto 0;
 }
 
 @media (min-width: 960px) {

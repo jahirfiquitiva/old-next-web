@@ -18,17 +18,23 @@ const Error = ({ isFourHundredFour = false }) => {
     );
   };
 
+  const renderSiteContent = () => {
+    return (<>
+      <h2 className={styles.title}>{isFourHundredFour ? fhfError : errorError}</h2>
+      <p>{isFourHundredFour ? fhfMessage : errorMessage}</p>
+      {renderContactMessage()}
+      <Link href={'/'}>
+        <a title={'home link'} aria-label={'home link'}
+           className={`button ${styles.button}`}>Go Back Home</a>
+      </Link>
+    </>);
+  };
+
   return (
-    <div className={styles.error}>
-      <div className={styles.errorContent}>
-        <h2 className={styles.title}>{isFourHundredFour ? fhfError : errorError}</h2>
-        <p>{isFourHundredFour ? fhfMessage : errorMessage}</p>
-        {renderContactMessage()}
-        <Link href={'/'}>
-          <a title={'home link'} aria-label={'home link'}
-             className={`button ${styles.button}`}>Go Back Home</a>
-        </Link>
-      </div>
+    <div className={`${styles.error} ${isFourHundredFour ? styles.fhf : ''}`}>
+      {isFourHundredFour
+        ? (<div className={styles.errorContent}>{renderSiteContent()}</div>)
+        : renderSiteContent()}
       <UnsizedImage
         src={isFourHundredFour ? '/assets/images/gifs/404.gif' : '/assets/images/gifs/monkey.gif'}
         alt={isFourHundredFour ? 'John Travolta GIF' : 'Monkey throwing laptop aggressively'}/>
