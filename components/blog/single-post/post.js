@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { useContext } from 'react';
 import { usePalette } from 'react-palette';
 import Link from 'next/link';
@@ -30,9 +29,11 @@ const Post = ({ frontmatter, mdBody }) => {
         }}>
           {frontmatter.title}
         </h1>
+        {/* TODO: Use Image component when feasible */}
         {frontmatter.hero && (
-          <Image
-            unsized
+          <img
+            layout={'fill'}
+            objectFit={'contain'}
             loading={'lazy'}
             className={styles.hero}
             src={frontmatter.hero || ''} alt={frontmatter.title}/>
