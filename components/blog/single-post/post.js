@@ -4,6 +4,7 @@ import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
+import UnsizedImage from '@components/global/image/UnsizedImage';
 import ThemeContext from '@components/theme/ThemeContext';
 import styles from './post.module.css';
 
@@ -29,11 +30,8 @@ const Post = ({ frontmatter, mdBody }) => {
         }}>
           {frontmatter.title}
         </h1>
-        {/* TODO: Use Image component when feasible */}
         {frontmatter.hero && (
-          <img
-            loading={'lazy'}
-            decoding={'async'}
+          <UnsizedImage
             className={styles.hero}
             src={frontmatter.hero || ''} alt={frontmatter.title}/>
         )}
