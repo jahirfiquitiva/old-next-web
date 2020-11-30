@@ -1,46 +1,50 @@
 import Icon from '@mdi/react';
-import { mdiGithub, mdiInstagram, mdiLinkedin, mdiTwitter, mdiTwitch } from '@mdi/js';
+import { mdiGithub, mdiInstagram, mdiLinkedin, mdiTwitch, mdiTwitter } from '@mdi/js';
 import styles from './social.module.css';
+
+const socialLinks = [{
+  siteName: 'Twitter',
+  iconPath: mdiTwitter,
+  className: styles.twitter,
+  link: 'https://twitter.com/jahirfiquitiva',
+}, {
+  siteName: 'GitHub',
+  iconPath: mdiGithub,
+  className: styles.github,
+  link: 'https://github.com/jahirfiquitiva',
+}, {
+  siteName: 'LinkedIn',
+  iconPath: mdiLinkedin,
+  className: styles.linkedin,
+  link: 'https://linkedin.com/in/jahirfiquitiva',
+}, {
+  siteName: 'Instagram',
+  iconPath: mdiInstagram,
+  className: styles.instagram,
+  link: 'https://instagram.com/jahirfiquitiva',
+}, {
+  siteName: 'Twitch',
+  iconPath: mdiTwitch,
+  className: styles.twitch,
+  link: 'https://twitch.com/jahirdotdev',
+  disabled: true,
+}];
 
 const iconSize = 0.8;
 const Social = ({ centered }) => {
   return (
     <div className={`${styles.social} ${centered ? styles.centered : ''}`}>
-      <a
-        title={'Twitter link'} aria-label={'Twitter link'}
-        className={`button ${styles.button} ${styles.twitter}`}
-        href={'https://twitter.com/jahirfiquitiva'}
-        rel={'noopener noreferrer'} target={'_blank'}>
-        <Icon path={mdiTwitter} size={iconSize}/>
-      </a>
-      <a
-        title={'GitHub link'} aria-label={'GitHub link'}
-        className={`button ${styles.button} ${styles.github}`}
-        href={'https://github.com/jahirfiquitiva'}
-        rel={'noopener noreferrer'} target={'_blank'}>
-        <Icon path={mdiGithub} size={iconSize}/>
-      </a>
-      <a
-        title={'LinkedIn link'} aria-label={'LinkedIn link'}
-        className={`button ${styles.button} ${styles.linkedin}`}
-        href={'https://linkedin.com/in/jahirfiquitiva'}
-        rel={'noopener noreferrer'} target={'_blank'}>
-        <Icon path={mdiLinkedin} size={iconSize}/>
-      </a>
-      <a
-        title={'Instagram link'} aria-label={'Instagram link'}
-        className={`button ${styles.button} ${styles.instagram}`}
-        href={'https://instagram.com/jahirfiquitiva'}
-        rel={'noopener noreferrer'} target={'_blank'}>
-        <Icon path={mdiInstagram} size={iconSize}/>
-      </a>
-      <a
-        title={'Twitch link'} aria-label={'Twitch link'}
-        className={`button ${styles.button} ${styles.twitch}`}
-        href={'https://twitch.tv/jahirdotdev'}
-        rel={'noopener noreferrer'} target={'_blank'}>
-        <Icon path={mdiTwitch} size={iconSize}/>
-      </a>
+      {(socialLinks || [])
+        .filter((it) => it.disabled === 'undefined' || !it.disabled)
+        .map((it, index) => {
+          return (<a
+            title={`${it.siteName} link`} aria-label={`${it.siteName} link`}
+            className={`button ${styles.button} ${it.className}`}
+            href={it.link} key={index}
+            rel={'noopener noreferrer'} target={'_blank'}>
+            <Icon path={it.iconPath} size={iconSize}/>
+          </a>);
+        })}
     </div>
   );
 };
