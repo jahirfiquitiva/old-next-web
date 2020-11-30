@@ -2,8 +2,8 @@ nav.nav {
     z-index: 4;
     width: 100%;
     background-color: var(--toolbar-color);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: saturate(150%) blur(8px);
+    backdrop-filter: saturate(150%) blur(8px);
     min-height: var(--toolbar-height);
     position: fixed;
     top: 0;

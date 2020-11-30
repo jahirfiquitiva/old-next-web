@@ -11,7 +11,11 @@ const Toolbar = ({ selected }) => {
   const { isDark, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <nav className={styles.nav}>
+    <nav
+      className={styles.nav}
+      style={{
+        WebkitBackdropFilter: 'saturate(150%) blur(8px)',
+      }}>
       <div className={styles.toolbar}>
         <div className={styles.logo}>
           <span className={styles.item}>
