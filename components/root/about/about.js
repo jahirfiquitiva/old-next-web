@@ -35,7 +35,8 @@ const About = () => {
           <Image
             loading={'lazy'}
             src={'/assets/images/me/me.jpg'} alt={'Jahir\'s Photo'}
-            className={styles.photo} height={168} width={168}/>
+            className={styles.photo}
+            height={168} width={168} />
         </div>
       </div>
       <div className={styles.details}>
