@@ -32,9 +32,8 @@ const Post = ({ frontmatter, mdBody }) => {
         {/* TODO: Use Image component when feasible */}
         {frontmatter.hero && (
           <img
-            layout={'fill'}
-            objectFit={'contain'}
             loading={'lazy'}
+            decoding={'async'}
             className={styles.hero}
             src={frontmatter.hero || ''} alt={frontmatter.title}/>
         )}
