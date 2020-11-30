@@ -16,6 +16,8 @@ These are all amazing apps built using any of my dashboards ([Frames](https://gi
 #### 🔮 Charlee Designs
 * [AmoledPapers](https://play.google.com/store/apps/details?id=pl.mhcharlee.amoledpapers)
 
+<!--
 #### 🔮 YoG
 * [Joy Walls](https://play.google.com/store/apps/details?id=app.yog.joywalls)
 * [Prism](https://play.google.com/store/apps/details?id=prism.kustom.pack)
+-->
