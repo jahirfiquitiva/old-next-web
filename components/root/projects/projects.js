@@ -36,6 +36,7 @@ const Projects = ({ projects = [] }) => {
                 <Image
                   src={it.icon} alt={it.title}
                   height={72} width={72}
+                  layout={'fixed'}
                   loading={'lazy'}/>
               </div>
               <div className={styles.info}>

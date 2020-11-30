@@ -61,10 +61,12 @@
     margin: 0 .2rem 0 .6rem;
 }
 
-.supporters .thanksgif img {
-    display: block;
-    margin: 2.4rem auto 0;
+.supporters .thanksgif {
+    position: relative;
+    height: 170px;
+    width: auto;
     max-width: 300px;
+    margin: 2.8rem auto 0;
 }
 
 .supporters h5.sponsortitle {

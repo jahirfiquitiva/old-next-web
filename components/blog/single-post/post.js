@@ -1,10 +1,10 @@
-import Image from 'next/image';
 import { useContext } from 'react';
 import { usePalette } from 'react-palette';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
+import UnsizedImage from '@components/global/image/UnsizedImage';
 import ThemeContext from '@components/theme/ThemeContext';
 import styles from './post.module.css';
 
@@ -31,9 +31,7 @@ const Post = ({ frontmatter, mdBody }) => {
           {frontmatter.title}
         </h1>
         {frontmatter.hero && (
-          <Image
-            unsized
-            loading={'lazy'}
+          <UnsizedImage
             className={styles.hero}
             src={frontmatter.hero || ''} alt={frontmatter.title}/>
         )}

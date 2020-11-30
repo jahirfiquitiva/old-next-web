@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import Link from 'next/link';
+import UnsizedImage from '@components/global/image/UnsizedImage';
 import styles from './construction.module.css';
 
 const UnderConstruction = () => {
@@ -11,9 +11,7 @@ const UnderConstruction = () => {
         <a title={'home link'} aria-label={'home link'}
            className={`button ${styles.button}`}>Go Back Home</a>
       </Link>
-      <Image
-        unsized
-        loading={'lazy'}
+      <UnsizedImage
         src={'/assets/images/gifs/construction.gif'}
         alt={'Man falling while working on a construction'}/>
     </div>

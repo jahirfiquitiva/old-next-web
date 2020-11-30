@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import Link from 'next/link';
+import UnsizedImage from '@components/global/image/UnsizedImage';
 import styles from './error.module.css';
 
 const fhfError = 'Woops! ~ Page Not Found';
@@ -18,8 +18,8 @@ const Error = ({ isFourHundredFour = false }) => {
     );
   };
 
-  return (
-    <div className={styles.error}>
+  const renderSiteContent = () => {
+    return (<>
       <h2 className={styles.title}>{isFourHundredFour ? fhfError : errorError}</h2>
       <p>{isFourHundredFour ? fhfMessage : errorMessage}</p>
       {renderContactMessage()}
@@ -27,9 +27,15 @@ const Error = ({ isFourHundredFour = false }) => {
         <a title={'home link'} aria-label={'home link'}
            className={`button ${styles.button}`}>Go Back Home</a>
       </Link>
-      <Image
-        unsized
-        loading={'lazy'}
+    </>);
+  };
+
+  return (
+    <div className={`${styles.error} ${isFourHundredFour ? styles.fhf : ''}`}>
+      {isFourHundredFour
+        ? (<div className={styles.errorContent}>{renderSiteContent()}</div>)
+        : renderSiteContent()}
+      <UnsizedImage
         src={isFourHundredFour ? '/assets/images/gifs/404.gif' : '/assets/images/gifs/monkey.gif'}
         alt={isFourHundredFour ? 'John Travolta GIF' : 'Monkey throwing laptop aggressively'}/>
     </div>

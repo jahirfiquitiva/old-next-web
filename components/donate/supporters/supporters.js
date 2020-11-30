@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-undef */
 import Image from 'next/image';
-import { useContext, Fragment } from 'react';
+import { Fragment, useContext } from 'react';
 import { usePalette } from 'react-palette';
 import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
@@ -87,7 +87,8 @@ const Supporters = ({ supporters }) => {
       })}
       <div className={styles.thanksgif}>
         <Image
-          unsized
+          layout={'fill'}
+          objectFit={'contain'}
           loading={'lazy'}
           src={'/assets/images/gifs/thanks.gif'}
           alt={'Adventure Time characters hugging each other and saying thanks'}/>
