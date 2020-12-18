@@ -4,6 +4,7 @@ import ExtLink from '@components/global/ext-link/ext-link';
 import Social from '@components/global/social/social';
 import SkillSet from '@components/root/skillset/skillset';
 import styles from './about.module.css';
+import Link from 'next/link';
 
 const hellos = ['Hello, world', 'Hola, mundo', 'Ciao, mondo', 'Hallo, Welt', 'Salut, monde',
   'Olá, mundo'];
@@ -28,7 +29,7 @@ const About = () => {
           </h3>
           <h3 className={styles.name}>I am Jahir Fiquitiva</h3>
           <br/>
-          <p>I&apos;m a passionate and creative full-stack developer from <ExtLink
+          <p>I&apos;m a passionate and creative full-stack software engineer from <ExtLink
             to={'https://www.google.com/maps/place/Colombia/@4,-72z/'} label={'Colombia 🇨🇴'}/></p>
         </div>
         <div className={styles.photocontainer}>
@@ -36,19 +37,26 @@ const About = () => {
             loading={'lazy'}
             src={'/assets/images/me/me.jpg'} alt={'Jahir\'s Photo'}
             className={styles.photo}
-            height={168} width={168} />
+            height={168} width={168}/>
         </div>
       </div>
       <div className={styles.details}>
         <p>
-          I&apos;m currently a Computer Science student at&nbsp;
-          <ExtLink to={'http://www.uptc.edu.co'}
-                   label={'Pedagogical and Technological University of Colombia'}/>.
-        </p>
-        <p>
           I consider myself a curious and inquisitive person, so on my spare time I like to work
           on <ExtLink to={'#projects'} label={'side projects'} newTab={false}/> and try to
-          constantly learn something new to improve my skillset.</p>
+          constantly learn something new to improve my skillset.
+        </p>
+        <p>
+          <Link href={'/thanks'}>
+            <a title={'link to thanks page'} aria-label={'link to thanks page'}>
+              Here&apos;s a huge thanks
+            </a>
+          </Link> for all the awesome people supporting me and <Link href={'/blog/post-of-fame'}>
+            <a title={'link to thanks page'} aria-label={'link to thanks page'}>
+              here&apos;s some featured apps from them
+            </a>
+          </Link>, for you to check them out!
+        </p>
         <p>
           I have open <ExtLink to={'https://jahir.xyz/twitterdm'} label={'Twitter DMs'}/>,&nbsp;
           <ExtLink to={'https://jahir.xyz/tlgrm'} label={'Telegram'}/> and&nbsp;
