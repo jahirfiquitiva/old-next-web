@@ -1,10 +1,17 @@
+import { PageProps } from '@components/types';
 import Layout from '@components/Layout';
 import About from '@components/root/about/about';
-import Projects from '@components/root/projects/projects';
+import Projects, { Project } from '@components/root/projects/projects';
 
-const Index = ({ title, description, keywords, projects, ...props }) => {
+interface IndexProps extends PageProps {
+  projects: Project[],
+}
+
+const Index = ({ title, description, keywords, projects }: IndexProps) => {
   return (
-    <Layout title={title} description={description} keywords={keywords} page={0}>
+    <Layout
+      title={title} description={description} keywords={keywords}
+      page={0}>
       <About/>
       <hr id={'projects'}/>
       <Projects projects={projects}/>
