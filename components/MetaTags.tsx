@@ -1,9 +1,25 @@
+import { useContext, useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
+import { PageProps } from '@components/types';
+import ThemeContext from '@components/theme/ThemeContext';
 
 const defaultImage = 'https://jahir.dev/assets/images/brand/banner.png';
 
-const MetaTags = ({ title, description, keywords, image }) => {
-  const actualImage = image ? image.length > 0 ? image : defaultImage : defaultImage;
+const MetaTags = ({ title, description, keywords, image }: PageProps) => {
+  const { isDark = false } = useContext(ThemeContext);
+  const [siteColor, setSiteColor] = useState('#ebf0fb');
+  const [actualImage, setActualImage] = useState('');
+
+  useEffect(() => {
+    setActualImage(image
+                   ? image.length > 0 ? image : defaultImage
+                   : defaultImage);
+  }, [image]);
+
+  useMemo(() => {
+    setSiteColor(isDark ? '#080f1e' : '#ebf0fb');
+  }, [isDark]);
+
   return (
     <Head>
       <meta name={'description'} content={description}/>
@@ -33,14 +49,15 @@ const MetaTags = ({ title, description, keywords, image }) => {
       <meta name={'twitter:image:src'}
             content={'https://jahir.dev/assets/images/brand/logo-full-me.png'}/>
 
-      <link href={'https://plus.google.com/+JahirFiquitivaR/'} rel={'publisher'}/>
+      <link href={'https://plus.google.com/+JahirFiquitivaR/'}
+            rel={'publisher'}/>
       <meta name={'google-site-verification'}
             content={'lJwL3cKpjX_Eqp6yEY4hsydJazQl85xv29ZUmEg4oEE'}/>
 
-      <meta name={'theme-color'} content={'#ebf0fb'}/>
-      <meta name={'msapplication-TileColor'} content={'#ebf0fb'}/>
-      <meta name={'msapplication-navbutton-color'} content={'#ebf0fb'}/>
-      <meta name={'apple-mobile-web-app-status-bar-style'} content={'#ebf0fb'}/>
+      <meta name={'theme-color'} content={siteColor}/>
+      <meta name={'msapplication-TileColor'} content={siteColor}/>
+      <meta name={'msapplication-navbutton-color'} content={siteColor}/>
+      <meta name={'apple-mobile-web-app-status-bar-style'} content={siteColor}/>
 
       <link
         rel={'shortcut icon'}
