@@ -1,7 +1,9 @@
+import { PageProps } from '@components/types';
 import Layout from '@components/Layout';
 import Error from '@components/global/error/error';
+import { GetStaticProps } from 'next';
 
-const FourHundredFour = ({ title, description, keywords, ...props }) => {
+const FourHundredFour = ({ title, description, keywords }: PageProps) => {
   return (
     <Layout title={title} description={description} keywords={keywords}>
       <Error isFourHundredFour/>
@@ -11,7 +13,7 @@ const FourHundredFour = ({ title, description, keywords, ...props }) => {
 
 export default FourHundredFour;
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const configData = await import('../siteconfig.json');
   return {
     props: {

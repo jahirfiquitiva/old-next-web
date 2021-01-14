@@ -1,14 +1,9 @@
 import { GetStaticProps } from 'next';
+import { PageProps } from '@components/types';
 import Layout from '@components/Layout';
 import Error from '@components/global/error/error';
 
-interface ErrorPageProps {
-  title: string,
-  description: string,
-  keywords: string[]
-}
-
-const ErrorPage = ({ title, description, keywords }: ErrorPageProps) => {
+const ErrorPage = ({ title, description, keywords }: PageProps) => {
   return (
     <Layout title={title} description={description} keywords={keywords}>
       <Error/>
