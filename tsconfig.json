@@ -18,7 +18,16 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "noImplicitAny": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": [
+        "components/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ]
+    }
   },
   "exclude": [
     ".next",
