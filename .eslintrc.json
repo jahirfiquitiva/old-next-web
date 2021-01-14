@@ -10,8 +10,9 @@
       1,
       {
         "extensions": [
-          ".tsx",
-          ".jsx"
+          ".js",
+          ".jsx",
+          ".tsx"
         ]
       }
     ]
