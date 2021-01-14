@@ -2,10 +2,10 @@ import { GetStaticProps } from 'next';
 import { PageProps } from '@components/types';
 import Layout from '@components/Layout';
 import About from '@components/root/about/about';
-import Projects, { Project } from '@components/root/projects/projects';
+import Projects, { ProjectProps } from '@components/root/projects/projects';
 
 interface IndexProps extends PageProps {
-  projects: Project[],
+  projects: ProjectProps[],
 }
 
 const Index = ({ title, description, keywords, projects }: IndexProps) => {

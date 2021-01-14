@@ -7,7 +7,7 @@ import ThemeContext from '@components/theme/ThemeContext';
 import Stats from '@components/root/projects/stats';
 import styles from './projects.module.css';
 
-export interface Project {
+export interface ProjectProps {
   title: string,
   description: string,
   icon: string,
@@ -17,7 +17,7 @@ export interface Project {
 }
 
 interface ProjectsProps {
-  projects?: Project[]
+  projects?: ProjectProps[]
 }
 
 // @ts-ignore
