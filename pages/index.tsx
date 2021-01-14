@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 import { PageProps } from '@components/types';
 import Layout from '@components/Layout';
 import About from '@components/root/about/about';
@@ -21,7 +22,7 @@ const Index = ({ title, description, keywords, projects }: IndexProps) => {
 
 export default Index;
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const configData = await import('../siteconfig.json');
   const projectsData = await import('../data/projects.json');
   return {
