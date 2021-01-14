@@ -19,7 +19,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: .3rem .8rem .4rem;
+    padding: .4rem .8rem;
     font-size: .9rem;
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid var(--border-color);
