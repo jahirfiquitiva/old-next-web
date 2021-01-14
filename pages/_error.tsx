@@ -1,9 +1,16 @@
+import { GetStaticProps } from 'next';
 import Layout from '@components/Layout';
 import Error from '@components/global/error/error';
 
-const ErrorPage = ({ title, description, keywords, ...props }) => {
+interface ErrorPageProps {
+  title: string,
+  description: string,
+  keywords: string[]
+}
+
+const ErrorPage = ({ title, description, keywords }: ErrorPageProps) => {
   return (
-    <Layout pageTitle={title} description={description} keywords={keywords}>
+    <Layout title={title} description={description} keywords={keywords}>
       <Error/>
     </Layout>
   );
@@ -11,7 +18,7 @@ const ErrorPage = ({ title, description, keywords, ...props }) => {
 
 export default ErrorPage;
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const configData = await import('../siteconfig.json');
   return {
     props: {

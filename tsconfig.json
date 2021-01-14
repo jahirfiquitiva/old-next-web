@@ -19,6 +19,7 @@
     "jsx": "preserve",
     "noImplicitAny": true,
     "strictNullChecks": true,
+    "removeComments": true,
     "baseUrl": "./",
     "paths": {
       "@components/*": [
