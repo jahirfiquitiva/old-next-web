@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 import { PageProps } from '@components/types';
 import Layout from '@components/Layout';
 import PostsList, { PostProps } from '@components/blog/posts/post-list';
@@ -20,7 +21,7 @@ const Blog = ({ posts, title, description, keywords }: BlogProps) => {
 
 export default Blog;
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const configData = await import('../siteconfig.json');
 
   // noinspection JSUnresolvedVariable

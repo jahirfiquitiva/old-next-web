@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 import { PageProps } from '@components/types';
 import Layout from '@components/Layout';
 import Intro from '@components/donate/intro/intro';
@@ -20,7 +21,7 @@ const Donate = ({ title, description, keywords, supporters }: DonateProps) => {
 
 export default Donate;
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const configData = await import('../siteconfig.json');
   const supportersData = await import('../data/supporters.json');
   return {

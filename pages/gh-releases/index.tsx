@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 import { PageProps } from '@components/types';
 import Layout from '@components/Layout';
 import ReleaseRoot from '@components/releases/root';
@@ -12,7 +13,7 @@ const Releases = ({ title, description, keywords }: PageProps) => {
 
 export default Releases;
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const configData = await import('../../siteconfig.json');
   return {
     props: {

@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 import { PageProps } from '@components/types';
 import Layout from '@components/Layout';
 import ContactForm from '@components/contact/form/form';
@@ -13,7 +14,7 @@ const Contact = ({ title, description, keywords }: PageProps) => {
 
 export default Contact;
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const configData = await import('../siteconfig.json');
   return {
     props: {

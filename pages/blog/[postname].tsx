@@ -1,10 +1,10 @@
+import { GetStaticPaths, GetStaticProps } from 'next';
 import matter from 'gray-matter';
 import getSlugs from '@utils/getSlugs';
 import Layout from '@components/Layout';
 import Post from '@components/blog/single-post/post';
 import { PageProps } from '@components/types';
 import { FrontmatterProps } from '@components/blog/posts/post-list';
-import { GetStaticPaths } from 'next';
 
 interface BlogPostProps extends PageProps {
   frontmatter: FrontmatterProps,
@@ -26,7 +26,8 @@ const BlogPost = ({
 
 export default BlogPost;
 
-export const getStaticProps = async ({ ...ctx }) => {
+export const getStaticProps: GetStaticProps = async ({ ...ctx }) => {
+  // @ts-ignore
   const { postname } = ctx.params;
 
   const content = await import(`../../posts/${postname}.md`);
