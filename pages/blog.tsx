@@ -1,12 +1,18 @@
+import { PageProps } from '@components/types';
 import Layout from '@components/Layout';
-import PostList from '@components/blog/posts/post-list';
+import PostsList, { PostProps } from '@components/blog/posts/post-list';
 import getPosts from '@utils/getPosts';
 
-const Blog = ({ posts, title, description, keywords, ...props }) => {
+interface BlogProps extends PageProps {
+  posts: PostProps[]
+}
+
+const Blog = ({ posts, title, description, keywords }: BlogProps) => {
   return (
     <>
-      <Layout title={title} description={description} keywords={keywords} page={1}>
-        <PostList posts={posts}/>
+      <Layout title={title} description={description} keywords={keywords}
+              page={1}>
+        <PostsList posts={posts}/>
       </Layout>
     </>
   );
@@ -20,6 +26,7 @@ export const getStaticProps = async () => {
   // noinspection JSUnresolvedVariable
   const posts = ((context) => {
     return getPosts(context);
+    // @ts-ignore
   })(require.context('../posts', true, /\.md$/));
 
   return {

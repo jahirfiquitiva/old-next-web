@@ -1,9 +1,11 @@
+import { PageProps } from '@components/types';
 import Layout from '@components/Layout';
 import ContactForm from '@components/contact/form/form';
 
-const Contact = ({ title, description, keywords, ...props }) => {
+const Contact = ({ title, description, keywords }: PageProps) => {
   return (
-    <Layout title={title} description={description} keywords={keywords} page={4}>
+    <Layout title={title} description={description} keywords={keywords}
+            page={4}>
       <ContactForm/>
     </Layout>
   );

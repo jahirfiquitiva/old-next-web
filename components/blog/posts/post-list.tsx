@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { CSSProperties, useContext } from 'react';
 import { usePalette } from 'react-palette';
 import Link from 'next/link';
 import Icon from '@mdi/react';
@@ -8,8 +8,26 @@ import getColorFromData from '@utils/getColorFromData';
 import ThemeContext from '@components/theme/ThemeContext';
 import ExtLink from '@components/global/ext-link/ext-link';
 import styles from './post-list.module.css';
+import buildCustomStyles from '@utils/buildCustomStyles';
 
-const PostList = ({ posts }) => {
+export interface PostProps {
+  slug: string,
+  color?: string,
+  frontmatter: {
+    title: string,
+    date: string,
+    hero?: string,
+    description?: string,
+    color?: string,
+    link?: string,
+  }
+}
+
+export interface PostsListProps {
+  posts?: PostProps[]
+}
+
+const PostsList = ({ posts }: PostsListProps) => {
   const { isDark } = useContext(ThemeContext);
   if ((posts || []).length <= 0) {
     return (
@@ -19,16 +37,7 @@ const PostList = ({ posts }) => {
     );
   }
 
-  const getDate = (preDate) => {
-    const dateData = preDate.split('-');
-    return {
-      year: dateData[0],
-      month: dateData[1],
-      day: dateData[2]
-    };
-  };
-
-  const renderPostHero = (url, color) => {
+  const renderPostHero = (url?: string, color?: string) => {
     return (
       <div
         className={styles.hero}
@@ -37,32 +46,33 @@ const PostList = ({ posts }) => {
           backgroundColor: color || '#000'
         }}>
         {(!url || url.length <= 0)
-          ? (<Icon path={mdiPencil} size={2} color={'rgba(0,0,0,0.5)'}/>)
-          : (<></>)}
+         ? (<Icon path={mdiPencil} size={2} color={'rgba(0,0,0,0.5)'}/>)
+         : (<></>)}
       </div>
     );
   };
 
-  const getColorStyle = (color) => {
+  const getColorStyle = (color?: string): CSSProperties => {
     if (!color) return {};
-    return {
+    return buildCustomStyles({
       '--shadow-color': hexToRGB(color, 0.15),
       '--border-color': hexToRGB(color, 0.2),
       '--hl-color': color,
-    };
+    });
   };
 
-  const getHeroUrl = (post) => {
+  const getHeroUrl = (post: PostProps) => {
     if (post && post.frontmatter) {
       const { hero } = post.frontmatter;
       return hero && hero.length > 0
-        ? hero.startsWith('..') ? null : hero
-        : null;
+             ? hero.startsWith('..') ? null : hero
+             : null;
     }
     return null;
   };
 
-  const renderPostLinkContent = (post, heroUrl, color) => {
+  const renderPostLinkContent = (post: PostProps, heroUrl?: string,
+    color?: string) => {
     return (<div className={styles.details}>
       {renderPostHero(heroUrl, color)}
       <div className={styles.info}>
@@ -73,10 +83,14 @@ const PostList = ({ posts }) => {
     </div>);
   };
 
-  const renderPostLink = (post, heroUrl, color, rightLink) => {
+  const renderPostLink = (post: PostProps, heroUrl: string, color: string,
+    rightLink?: string) => {
     const extras = rightLink && rightLink.length > 0
-      ? { key: post.slug, rel: 'noopener noreferrer', href: rightLink, target: '_blank' }
-      : {};
+                   ? {
+        key: post.slug, rel: 'noopener noreferrer', href: rightLink,
+        target: '_blank'
+      }
+                   : {};
     return (<a
       title={post.frontmatter.title} aria-label={post.frontmatter.title}
       className={styles.card} style={getColorStyle(color)} {...extras}>
@@ -91,26 +105,32 @@ const PostList = ({ posts }) => {
         {(posts || []).map((post) => {
           const heroUrl = getHeroUrl(post);
           const { data } = heroUrl ? usePalette(heroUrl) : { data: null };
-          const color = getColorFromData(data, isDark) || post.frontmatter.color || post.color;
-          const rightLink = post.frontmatter.link && post.frontmatter.link.length > 0
-            ? post.frontmatter.link : `/blog/${post.slug}`;
+          const color = getColorFromData(data, isDark) ||
+            post.frontmatter.color || post.color;
+          const rightLink = post.frontmatter.link &&
+                            post.frontmatter.link.length > 0
+                            ? post.frontmatter.link : `/blog/${post.slug}`;
           if (rightLink.startsWith('/')) {
             return (<Link href={rightLink} key={post.slug}>
-              {renderPostLink(post, heroUrl, color)}
+              {renderPostLink(post, heroUrl || '', color)}
             </Link>);
           }
-          return renderPostLink(post, heroUrl, color, rightLink);
+          return renderPostLink(post, heroUrl || '', color, rightLink);
         })}
       </div>
-      <p>I&apos;m honestly not the kind of person who blogs much, but I would like to do it more
+      <p>I&apos;m honestly not the kind of person who blogs much, but I would
+        like to do it more
         frequently.</p>
-      <p>If you have ideas or topics you would like me to blog about, I&apos;d really appreciate if
+      <p>If you have ideas or topics you would like me to blog about, I&apos;d
+        really appreciate if
         you <Link href={'/contact'}><a>share them with me</a></Link>.</p>
       <p>You can also find other posts by me on&nbsp;
-        <ExtLink label={'dev.to'} to={'https://dev.to/jahirfiquitiva'}/>&nbsp;and&nbsp;
-        <ExtLink label={'medium'} to={'https://medium.com/@jahirfiquitiva'}/></p>
+        <ExtLink label={'dev.to'}
+                 to={'https://dev.to/jahirfiquitiva'}/>&nbsp;and&nbsp;
+        <ExtLink label={'medium'} to={'https://medium.com/@jahirfiquitiva'}/>
+      </p>
     </div>
   );
 };
 
-export default PostList;
+export default PostsList;

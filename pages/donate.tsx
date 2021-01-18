@@ -1,10 +1,16 @@
+import { PageProps } from '@components/types';
 import Layout from '@components/Layout';
 import Intro from '@components/donate/intro/intro';
 import Supporters from '@components/donate/supporters/supporters';
 
-const Donate = ({ title, description, keywords, supporters, ...props }) => {
+interface DonateProps extends PageProps {
+  supporters?: any[]
+}
+
+const Donate = ({ title, description, keywords, supporters }: DonateProps) => {
   return (
-    <Layout title={title} description={description} keywords={keywords} page={3}>
+    <Layout title={title} description={description} keywords={keywords}
+            page={3}>
       <Intro/>
       <hr id={'thanks'}/>
       <Supporters supporters={supporters}/>

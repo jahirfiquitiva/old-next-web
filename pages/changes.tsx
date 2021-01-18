@@ -1,7 +1,8 @@
+import { PageProps } from '@components/types';
 import Layout from '@components/Layout';
 import ChangesContent from '@components/changes/changes';
 
-const Changes = ({ title, description, keywords, ...props }) => {
+const Changes = ({ title, description, keywords }: PageProps) => {
   return (
     <Layout title={title} description={description} keywords={keywords}>
       {/* <UnderConstruction/> */}

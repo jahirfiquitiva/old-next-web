@@ -1,7 +1,9 @@
+import { GetStaticProps } from 'next';
+import { PageProps } from '@components/types';
 import Layout from '@components/Layout';
 import Sent from '@components/contact/sent/sent';
 
-const SentSite = ({ title, description, keywords, ...props }) => {
+const SentSite = ({ title, description, keywords }: PageProps) => {
   return (
     <Layout title={title} description={description} keywords={keywords}>
       <Sent/>
@@ -11,7 +13,7 @@ const SentSite = ({ title, description, keywords, ...props }) => {
 
 export default SentSite;
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const configData = await import('../siteconfig.json');
   return {
     props: {
