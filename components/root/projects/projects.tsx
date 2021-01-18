@@ -21,7 +21,7 @@ interface ProjectsProps {
 }
 
 // @ts-ignore
-const buildCustomLinkStylesForColor = (color: string): CSSProperties => {
+const buildCustomLinkStylesForColor = (color?: string | null): CSSProperties => {
   // noinspection UnnecessaryLocalVariableJS
   const styles = {
     '--shadow-color': hexToRGB(color, 0.15),
@@ -78,6 +78,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
     <div className={styles.projects}>
       <div className={styles.titlecontainer}>
         <h3 className={styles.title}>👨‍💻&nbsp;&nbsp;Projects</h3>
+        {/* @ts-ignore */}
         <Stats className={styles.stats}/>
       </div>
       {renderProjects()}
