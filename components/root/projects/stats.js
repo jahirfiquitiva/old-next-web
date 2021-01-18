@@ -1,7 +1,7 @@
 import useSWR from 'swr';
 import Icon from '@mdi/react';
 import { mdiAccountGroup, mdiStar } from '@mdi/js';
-import fetcher from '../../../lib/fetcher';
+import fetcher from '@lib/fetcher';
 
 const iconSize = 0.85;
 const Stats = ({ className }) => {

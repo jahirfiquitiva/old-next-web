@@ -1,5 +1,5 @@
 import useSWR from 'swr';
-import fetcher from '../../lib/fetcher';
+import fetcher from '@lib/fetcher';
 import styles from './release.module.css';
 
 export interface ReleaseProps {
