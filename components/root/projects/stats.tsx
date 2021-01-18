@@ -1,10 +1,11 @@
 import useSWR from 'swr';
 import Icon from '@mdi/react';
 import { mdiAccountGroup, mdiStar } from '@mdi/js';
+import { Component } from '@components/types';
 import fetcher from '@lib/fetcher';
 
 const iconSize = 0.85;
-const Stats = ({ className }: { className?: string }) => {
+const Stats = ({ className }: Component) => {
   const { data } = useSWR('/api/github', fetcher);
 
   if (!data || !data.success) return (<></>);

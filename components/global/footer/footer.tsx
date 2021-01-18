@@ -10,7 +10,9 @@ const Footer = () => (
     <div className={styles.container}>
       <Social centered/>
       <p>
-        Made with <Icon path={mdiHeart} size={0.6}/> by <Link href={'/'}><a>yours truly</a></Link>
+        {/* eslint-disable-next-line */}
+        Made with <Icon path={mdiHeart} size={0.6}/> by <Link href={'/'}><a>yours
+        truly</a></Link>
       </p>
       <p>Copyright © {new Date().getFullYear()} | All Rights Reserved</p>
       <Link href={'/'}>
@@ -21,6 +23,7 @@ const Footer = () => (
             <img src={`/assets/images/brand/logo-def${isDark ? '-dark' : ''}.svg`}
                  alt={'JF'} height={24} width={24} loading={'lazy'}/>
             */}
+          {/* @ts-ignore */}
           <Logo className={styles.logosvg}/>
         </a>
       </Link>

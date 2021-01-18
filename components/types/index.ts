@@ -2,8 +2,12 @@ import { ReactElement } from 'react';
 
 export const nofunc = (_: any) => {};
 
+export interface Component extends ReactElement {
+  className?: string,
+}
+
 export interface ComponentWithChildren {
-  children?: ReactElement | ReactElement[],
+  children?: Component | Component[],
 }
 
 export interface PageProps extends ComponentWithChildren {

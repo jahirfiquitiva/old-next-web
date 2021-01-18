@@ -3,7 +3,7 @@ import { nofunc } from '@components/types';
 
 interface ThemeContextProps {
   isDark: boolean,
-  toggleTheme: (newTheme: boolean) => void,
+  toggleTheme: (newTheme?: boolean) => void,
 }
 
 const defaultImplementation: ThemeContextProps = {

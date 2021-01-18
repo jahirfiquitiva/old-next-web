@@ -6,7 +6,11 @@ import ThemeContext from '@components/theme/ThemeContext';
 import Logo from '@components/global/logo/logo';
 import styles from './toolbar.module.css';
 
-const Toolbar = ({ selected }) => {
+interface ToolbarProps {
+  selected?: number
+}
+
+const Toolbar = ({ selected }: ToolbarProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { isDark, toggleTheme } = useContext(ThemeContext);
 
@@ -24,6 +28,7 @@ const Toolbar = ({ selected }) => {
                   src={`/assets/images/brand/logo-def${isDark ? '-dark' : ''}.svg`}
                   alt={'JF'} height={24} width={24} loading={'lazy'}/>
                 */}
+                {/* @ts-ignore */}
                 <Logo className={styles.logosvg}/>
                 Jahir Fiquitiva
               </a>
@@ -36,37 +41,44 @@ const Toolbar = ({ selected }) => {
             </span>
             <button
               name={'Toggle Toolbar Menu'} aria-label={'Toggle Toolbar Menu'}
-              onClick={() => setMenuOpen(!menuOpen)} className={styles.menuToggle}>
+              onClick={() => setMenuOpen(!menuOpen)}
+              className={styles.menuToggle}>
               <Icon path={menuOpen ? mdiClose : mdiMenu} size={1}/>
             </button>
           </div>
         </div>
         <div className={`${styles.menu} ${menuOpen ? styles.active : ''}`}>
-          <span className={`${styles.item} ${selected === 0 ? styles.active : ''}`}>
+          <span
+            className={`${styles.item} ${selected === 0 ? styles.active : ''}`}>
             <Link href={'/'}>
               <a title={'home link'} aria-label={'home link'}>
                 <span className={styles.emoji}>🏡</span><span>Home</span>
               </a>
             </Link>
           </span>
-          <span className={`${styles.item} ${selected === 1 ? styles.active : ''}`}>
+          <span
+            className={`${styles.item} ${selected === 1 ? styles.active : ''}`}>
             <Link href={'/blog'}>
               <a><span className={styles.emoji}>📝</span><span>Blog</span></a>
             </Link>
           </span>
-          <span className={`${styles.item} ${selected === 2 ? styles.active : ''}`}>
+          <span
+            className={`${styles.item} ${selected === 2 ? styles.active : ''}`}>
             <Link href={'/blog/uses'}>
               <a><span className={styles.emoji}>⚡️</span><span>Uses</span></a>
             </Link>
           </span>
-          <span className={`${styles.item} ${selected === 3 ? styles.active : ''}`}>
+          <span
+            className={`${styles.item} ${selected === 3 ? styles.active : ''}`}>
             <Link href={'/donate'}>
               <a><span className={styles.emoji}>💙</span><span>Donate</span></a>
             </Link>
           </span>
-          <span className={`${styles.item} ${selected === 4 ? styles.active : ''}`}>
+          <span
+            className={`${styles.item} ${selected === 4 ? styles.active : ''}`}>
             <Link href={'/contact'}>
-              <a><span className={styles.emoji}>📮</span><span>Contact</span></a>
+              <a><span
+                className={styles.emoji}>📮</span><span>Contact</span></a>
             </Link>
           </span>
           <span className={`${styles.item} ${styles.themer} ${styles.desktop}`}
