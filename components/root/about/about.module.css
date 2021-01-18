@@ -75,11 +75,12 @@
 
 @media (min-width: 960px) {
     .about {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto 1fr;
         grid-auto-flow: unset;
         grid-gap: 6rem;
         margin-top: 0;
         padding-top: 4rem;
+        margin-bottom: .8rem;
     }
 
     .about .info {

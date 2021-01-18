@@ -55,7 +55,7 @@ const About = () => {
             <a title={'link to thanks page'} aria-label={'link to thanks page'}>
               Here&apos;s a huge thanks
             </a>
-          </Link> for all the awesome people supporting me and <Link
+          </Link> to all the awesome people supporting me and <Link
           href={'/blog/post-of-fame'}>
             <a title={'link to thanks page'} aria-label={'link to thanks page'}>
               here&apos;s some featured apps from them
