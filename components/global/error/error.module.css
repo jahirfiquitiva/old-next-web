@@ -1,55 +1,55 @@
 .error {
-    height: 100%;
-    flex-grow: 1;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 3rem;
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
+  height: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 3rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
 }
 
 .error .errorContent {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .error h2 {
-    text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #fd7d84;
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #fd7d84;
 }
 
 .error p {
-    margin-top: .8rem;
+  margin-top: .8rem;
 }
 
 .error a.button {
-    margin: 1.6rem 0;
+  margin: 1.6rem 0;
 }
 
 .error .gif,
 .error img {
-    margin-top: 1.6rem;
-    padding: 0;
-    height: auto;
-    width: 100%;
-    max-width: 400px;
+  margin-top: 1.6rem;
+  padding: 0;
+  height: auto;
+  width: 100%;
+  max-width: 400px;
 }
 
 .error.fhf .gif,
 .error.fhf img {
-    margin: auto auto 0;
+  margin: auto auto 0;
 }
 
 @media (min-width: 960px) {
-    .error {
-        padding-left: 0;
-        padding-right: 0;
-    }
+  .error {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

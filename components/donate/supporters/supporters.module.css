@@ -1,89 +1,89 @@
 .supporters {
-    padding: 1rem 1.2rem 3rem;
+  padding: 1rem 1.2rem 3rem;
 }
 
 .supporters .title {
-    text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #fd9644;
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #fd9644;
 }
 
 .supporters p {
-    margin-top: .8rem;
-    margin-bottom: .8rem;
+  margin-top: .8rem;
+  margin-bottom: .8rem;
 }
 
 .supporters ul {
-    list-style-type: none;
-    margin-top: .4rem;
-    margin-bottom: 1.6rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
+  list-style-type: none;
+  margin-top: .4rem;
+  margin-bottom: 1.6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .supporters ul li {
-    margin: .3rem;
+  margin: .3rem;
 }
 
 .supporters ul li a.supporter,
 .supporters ul li a.supporter:active {
-    --bg-color: var(--divider);
-    --border-color: var(--divider);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 99999px;
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px solid var(--border-color);
-    padding: .3rem .4rem;
-    color: var(--text-secondary);
+  --bg-color: var(--divider);
+  --border-color: var(--divider);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 99999px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid var(--border-color);
+  padding: .3rem .4rem;
+  color: var(--text-secondary);
 }
 
 .supporters ul li a.supporter:hover,
 .supporters ul li a.supporter:focus {
-    background-color: var(--bg-color);
-    color: var(--text-primary);
-    text-decoration: none;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  text-decoration: none;
 }
 
 .supporters ul li a.supporter .photo {
-    --size: 30px;
-    width: var(--size);
-    height: var(--size);
-    border-radius: 50%;
-    background-color: var(--accent-light);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  --size: 30px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background-color: var(--accent-light);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .supporters ul li a.supporter .name {
-    margin: 0 .2rem 0 .6rem;
+  margin: 0 .2rem 0 .6rem;
 }
 
 .supporters .thanksgif {
-    position: relative;
-    height: 170px;
-    width: auto;
-    max-width: 300px;
-    margin: 2.8rem auto 0;
+  position: relative;
+  height: 170px;
+  width: auto;
+  max-width: 300px;
+  margin: 2.8rem auto 0;
 }
 
 .supporters h5.sponsortitle {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .supporters h5.sponsortitle:first-of-type {
-    margin-top: 1.2rem;
+  margin-top: 1.2rem;
 }
 
 .supporters p.sponsordesc {
-    margin-top: .2rem;
-    font-size: .85rem;
+  margin-top: .2rem;
+  font-size: .85rem;
 }
 
 @media (min-width: 960px) {
-    .supporters {
-        padding: 1rem 0 3rem;
-    }
+  .supporters {
+    padding: 1rem 0 3rem;
+  }
 }

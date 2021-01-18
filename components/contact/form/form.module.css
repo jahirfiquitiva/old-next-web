@@ -1,82 +1,82 @@
 .contact {
-    padding: 2rem 1.2rem 3rem;
+  padding: 2rem 1.2rem 3rem;
 }
 
 .contact .title {
-    text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #fd7d84;
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #fd7d84;
 }
 
 .contact p {
-    margin-top: .8rem;
-    margin-bottom: .8rem;
+  margin-top: .8rem;
+  margin-bottom: .8rem;
 }
 
 .contact form {
-    display: grid;
-    grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .contact form .row {
-    display: grid;
-    grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .contact form .field {
-    display: flex;
-    flex-direction: column;
-    margin: .4rem .8rem 0;
+  display: flex;
+  flex-direction: column;
+  margin: .4rem .8rem 0;
 }
 
 .contact form label {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .contact form input,
 .contact form textarea {
-    background: rgba(0, 0, 0, 0);
-    border: 1px solid var(--divider);
-    border-radius: 6px;
-    min-height: 32px;
-    margin-top: .4rem;
-    padding: .4rem .6rem;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid var(--divider);
+  border-radius: 6px;
+  min-height: 32px;
+  margin-top: .4rem;
+  padding: .4rem .6rem;
 }
 
 .contact form input:focus,
 .contact form textarea:focus {
-    outline-color: var(--accent);
-    outline-width: 1px;
-    border: 1px solid var(--accent);
+  outline-color: var(--accent);
+  outline-width: 1px;
+  border: 1px solid var(--accent);
 }
 
 .contact form textarea {
-    resize: vertical;
-    min-height: 96px;
-    max-height: 192px;
+  resize: vertical;
+  min-height: 96px;
+  max-height: 192px;
 }
 
 .contact form button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.6rem;
-    min-height: 40px;
-    width: auto;
-    max-width: 96px;
-    margin-left: .8rem;
-    margin-right: .8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.6rem;
+  min-height: 40px;
+  width: auto;
+  max-width: 96px;
+  margin-left: .8rem;
+  margin-right: .8rem;
 }
 
 .contact form button svg {
-    margin-right: .4rem;
+  margin-right: .4rem;
 }
 
 @media (min-width: 960px) {
-    .contact {
-        padding: 3rem 0 4rem;
-    }
+  .contact {
+    padding: 3rem 0 4rem;
+  }
 
-    .contact form .row {
-        grid-template-columns: 1fr 1fr;
-    }
+  .contact form .row {
+    grid-template-columns: 1fr 1fr;
+  }
 }
