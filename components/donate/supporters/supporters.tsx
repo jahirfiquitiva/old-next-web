@@ -23,7 +23,7 @@ export interface SupportersCategoryProps {
 const Supporters = ({ supporters }: any) => {
   const { isDark } = useContext(ThemeContext);
 
-  const getColorStyle = (color?: string): CSSProperties => {
+  const getColorStyle = (color?: string | null): CSSProperties => {
     if (!color) return {};
     // noinspection UnnecessaryLocalVariableJS
     const styles = {
