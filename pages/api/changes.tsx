@@ -1,34 +1,54 @@
-const repos = [
+import { NextApiRequest, NextApiResponse } from 'next';
+import { BaseRepoData, ExtendedRepoData } from '@components/types';
+
+const repos: BaseRepoData[] = [
   { user: 'jahirfiquitiva', name: 'Frames', updateWiki: true, translate: true },
   { user: 'jahirfiquitiva', name: 'Kuper', updateWiki: true, translate: true },
-  { user: 'jahirfiquitiva', name: 'Blueprint', updateWiki: true, translate: true },
+  {
+    user: 'jahirfiquitiva',
+    name: 'Blueprint',
+    updateWiki: true,
+    translate: true,
+  },
   // { user: 'jahirfiquitiva', name: 'ChipView', updateWiki: false, translate: false },
-  { user: 'javiersantos', name: 'PiracyChecker', updateWiki: false, translate: false },
+  {
+    user: 'javiersantos',
+    name: 'PiracyChecker',
+    updateWiki: false,
+    translate: false,
+  },
 ];
 
 const { GITHUB_API_TOKEN: githubApiToken = '' } = process.env;
 const authHeaders = githubApiToken && githubApiToken.length > 0
-  ? { headers: { Authorization: githubApiToken } }
-  : {};
+                    ? { headers: { Authorization: githubApiToken } }
+                    : {};
 
-const fetchRepoData = async (repo) => {
+const fetchRepoData = async (repo: BaseRepoData) => {
   const { user, name, updateWiki, translate } = repo;
-  const dataRequest = await fetch(`https://api.github.com/repos/${user}/${name}/releases/latest`,
+  const dataRequest = await fetch(
+    `https://api.github.com/repos/${user}/${name}/releases/latest`,
     authHeaders);
   const data = await dataRequest.json();
-  const { published_at: dateStamp, tag_name: version, body: changelog, assets = [] } = data;
-  const extraRepoData = {
+  const {
+    published_at: dateStamp, tag_name: version, body: changelog, assets = [],
+  } = data;
+  const extraRepoData: ExtendedRepoData = {
     url: `https://github.com/${user}/${name}`,
     dateStamp,
   };
   if (dateStamp) extraRepoData.date = new Date(dateStamp).toLocaleDateString();
   if (version) extraRepoData.version = version;
-  if (changelog && changelog.length > 0) extraRepoData.changelog = changelog.toString();
+  if (changelog && changelog.length > 0) {
+    extraRepoData.changelog
+      = changelog.toString();
+  }
   if (updateWiki) {
-    extraRepoData.wiki = `https://github.com/${user}/${name}/wiki/How-to-update`;
+    extraRepoData.wiki
+      = `https://github.com/${user}/${name}/wiki/How-to-update`;
   }
   if (translate) {
-    extraRepoData.translate = `https://crowdin.com/project/${name}/invite`;
+    extraRepoData.translateLink = `https://crowdin.com/project/${name}/invite`;
   }
   const defaultDownloadLink = `https://github.com/${user}/${name}/releases/latest/`;
   let downloadLink = defaultDownloadLink;
@@ -46,7 +66,7 @@ const fetchRepoData = async (repo) => {
   };
 };
 
-export default (_, res) => {
+export default (_: NextApiRequest, res: NextApiResponse) => {
   return Promise.all(repos.map(fetchRepoData))
     .then((results) => {
       return res.status(200)

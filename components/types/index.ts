@@ -13,3 +13,25 @@ export interface PageProps extends ComponentWithChildren {
   image?: string,
   page?: number,
 }
+
+export interface BaseRepoData {
+  user?: string,
+  name?: string,
+  updateWiki?: boolean,
+  translate?: boolean
+}
+
+export interface ExtendedRepoData extends BaseRepoData {
+  url?: string,
+  dateStamp?: any,
+  date?: string,
+  version?: string,
+  changelog?: string,
+  wiki?: string,
+  translateLink?: string,
+}
+
+export interface FullRepoData extends ExtendedRepoData {
+  changelog?: string,
+  download?: string,
+}
