@@ -8,18 +8,20 @@ const Intro = () => {
     <div className={styles.intro}>
       <h3 className={styles.title}>💙&nbsp;&nbsp;Donate</h3>
       <p>
-        I try really hard to build great apps and provide the best possible experience and products
-        to all users, and most of them are <ExtLink to={'https://github.com/jahirfiquitiva'}
-                                                    label={'open source'}/>. However, that
+        I try really hard to build great apps and provide the best possible
+        experience and products to all users, and most of them are <ExtLink
+        to={'https://github.com/jahirfiquitiva'}
+        label={'open source'}/>. However, that
         wouldn&apos;t be possible without the help and the motivation from <a
         href={'#thanks'}>supporters</a>!
       </p>
       <p>
         <b>
-          If you like and/or use any of <ExtLink to={'/#projects'} newTab={false}
-                                                 label={'my projects'}/>, or want to support my
-          work, please kindly consider donating, so I can continue maintaining and improving them as
-          well as creating new ones.
+          If you like and/or use any of <ExtLink to={'/#projects'}
+                                                 newTab={false}
+                                                 label={'my projects'}/>, or
+          want to support my work, please kindly consider donating, so I can
+          continue maintaining and improving them as well as creating new ones.
         </b>
       </p>
       <p>

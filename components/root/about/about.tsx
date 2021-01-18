@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import ExtLink from '@components/global/ext-link/ext-link';
 import Social from '@components/global/social/social';
 import SkillSet from '@components/root/skillset/skillset';
 import styles from './about.module.css';
-import Link from 'next/link';
 
-const hellos = ['Hello, world', 'Hola, mundo', 'Ciao, mondo', 'Hallo, Welt', 'Salut, monde',
-  'Olá, mundo'];
+const hellos = ['Hello, world', 'Hola, mundo', 'Ciao, mondo', 'Hallo, Welt',
+  'Salut, monde', 'Olá, mundo'];
 
 const About = () => {
   const [hello, setHello] = useState(0);
@@ -29,8 +29,10 @@ const About = () => {
           </h3>
           <h3 className={styles.name}>I am Jahir Fiquitiva</h3>
           <br/>
-          <p>I&apos;m a passionate and creative full-stack software engineer from <ExtLink
-            to={'https://www.google.com/maps/place/Colombia/@4,-72z/'} label={'Colombia 🇨🇴'}/></p>
+          <p>I&apos;m a passionate and creative full-stack software engineer
+            from <ExtLink
+              to={'https://www.google.com/maps/place/Colombia/@4,-72z/'}
+              label={'Colombia 🇨🇴'}/></p>
         </div>
         <div className={styles.photocontainer}>
           <Image
@@ -42,8 +44,10 @@ const About = () => {
       </div>
       <div className={styles.details}>
         <p>
-          I consider myself a curious and inquisitive person, so on my spare time I like to work
-          on <ExtLink to={'#projects'} label={'side projects'} newTab={false}/> and try to
+          I consider myself a curious and inquisitive person, so on my spare
+          time I like to work
+          on <ExtLink to={'#projects'} label={'side projects'}
+                      newTab={false}/> and try to
           constantly learn something new to improve my skillset.
         </p>
         <p>
@@ -51,20 +55,24 @@ const About = () => {
             <a title={'link to thanks page'} aria-label={'link to thanks page'}>
               Here&apos;s a huge thanks
             </a>
-          </Link> for all the awesome people supporting me and <Link href={'/blog/post-of-fame'}>
+          </Link> for all the awesome people supporting me and <Link
+          href={'/blog/post-of-fame'}>
             <a title={'link to thanks page'} aria-label={'link to thanks page'}>
               here&apos;s some featured apps from them
             </a>
           </Link>, for you to check them out!
         </p>
         <p>
-          I have open <ExtLink to={'https://jahir.xyz/twitterdm'} label={'Twitter DMs'}/>,&nbsp;
+          I have open <ExtLink to={'https://jahir.xyz/twitterdm'}
+                               label={'Twitter DMs'}/>,&nbsp;
           <ExtLink to={'https://jahir.xyz/tlgrm'} label={'Telegram'}/> and&nbsp;
-          <ExtLink to={'/contact'} label={'email'} newTab={false}/> for any kind of inquiries. 🤗
+          <ExtLink to={'/contact'} label={'email'} newTab={false}/> for any kind
+          of inquiries. 🤗
         </p>
         <p>
           If you are interested in knowing which tools I use, you can&nbsp;
-          <ExtLink to={'/uses'} label={'check out my uses page'} newTab={false}/>.
+          <ExtLink to={'/uses'} label={'check out my uses page'}
+                   newTab={false}/>.
         </p>
       </div>
       <div className={styles.find}>

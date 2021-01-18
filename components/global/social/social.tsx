@@ -1,5 +1,7 @@
 import Icon from '@mdi/react';
-import { mdiGithub, mdiInstagram, mdiLinkedin, mdiTwitch, mdiTwitter } from '@mdi/js';
+import {
+  mdiGithub, mdiInstagram, mdiLinkedin, mdiTwitch, mdiTwitter
+} from '@mdi/js';
 import styles from './social.module.css';
 
 const socialLinks = [{
@@ -31,10 +33,11 @@ const socialLinks = [{
 }];
 
 const iconSize = 0.8;
-const Social = ({ centered }) => {
+const Social = ({ centered }: { centered?: boolean }) => {
   return (
     <div className={`${styles.social} ${centered ? styles.centered : ''}`}>
       {(socialLinks || [])
+        // @ts-ignore
         .filter((it) => it.disabled === 'undefined' || !it.disabled)
         .map((it, index) => {
           return (<a
