@@ -7,13 +7,19 @@ import getColorFromData from '@utils/getColorFromData';
 import UnsizedImage from '@components/global/image/UnsizedImage';
 import ThemeContext from '@components/theme/ThemeContext';
 import styles from './post.module.css';
+import { FrontmatterProps } from '@components/blog/posts/post-list';
 
-const Post = ({ frontmatter, mdBody }) => {
+interface PostProps {
+  frontmatter: FrontmatterProps,
+  mdBody: string
+}
+
+const Post = ({ frontmatter, mdBody }: PostProps) => {
   const { isDark } = useContext(ThemeContext);
 
   const { data: colorData } = frontmatter.hero
-    ? usePalette(frontmatter.hero || '')
-    : { data: null };
+                              ? usePalette(frontmatter.hero || '')
+                              : { data: null };
 
   const color = hexToRGB(getColorFromData(colorData, isDark) || '#fff', 0.4);
 
@@ -35,7 +41,8 @@ const Post = ({ frontmatter, mdBody }) => {
             className={styles.hero}
             src={frontmatter.hero || ''} alt={frontmatter.title}/>
         )}
-        <ReactMarkdown source={mdBody} escapeHtml={false} className={styles.content}/>
+        <ReactMarkdown source={mdBody} escapeHtml={false}
+                       className={styles.content}/>
       </article>
     </div>
   );

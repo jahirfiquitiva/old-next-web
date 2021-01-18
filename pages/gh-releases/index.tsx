@@ -1,9 +1,10 @@
+import { PageProps } from '@components/types';
 import Layout from '@components/Layout';
 import ReleaseRoot from '@components/releases/root';
 
-const Releases = ({ title, description, keywords, ...props }) => {
+const Releases = ({ title, description, keywords }: PageProps) => {
   return (
-    <Layout pageTitle={title} description={description} keywords={keywords}>
+    <Layout title={title} description={description} keywords={keywords}>
       <ReleaseRoot/>
     </Layout>
   );

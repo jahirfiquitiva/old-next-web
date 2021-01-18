@@ -2,7 +2,11 @@ import useSWR from 'swr';
 import fetcher from '../../lib/fetcher';
 import styles from './release.module.css';
 
-const Release = ({ repo }) => {
+export interface ReleaseProps {
+  repo: string,
+}
+
+const Release = ({ repo }: ReleaseProps) => {
   const { data } = useSWR(`/api/download?repo=${repo}`, fetcher);
 
   if (data && data.download) {
@@ -27,7 +31,8 @@ const Release = ({ repo }) => {
           <p>
             I will redirect you to&nbsp;
             <a title={'GitHub releases link'}
-               aria-label={'GitHub releases link'} href={data.download}>GitHub Releases</a> …
+               aria-label={'GitHub releases link'} href={data.download}>GitHub
+              Releases</a> …
           </p>
         </>);
       }

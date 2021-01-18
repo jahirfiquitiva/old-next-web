@@ -7,9 +7,9 @@ export interface ComponentWithChildren {
 }
 
 export interface PageProps extends ComponentWithChildren {
-  title: string,
-  description: string,
-  keywords: string[],
+  title?: string,
+  description?: string,
+  keywords?: string[],
   image?: string,
   page?: number,
 }

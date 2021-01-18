@@ -10,17 +10,20 @@ import ExtLink from '@components/global/ext-link/ext-link';
 import styles from './post-list.module.css';
 import buildCustomStyles from '@utils/buildCustomStyles';
 
+export interface FrontmatterProps {
+  title: string,
+  date: string,
+  hero?: string,
+  description?: string,
+  color?: string,
+  link?: string,
+  page?: number,
+}
+
 export interface PostProps {
   slug: string,
   color?: string,
-  frontmatter: {
-    title: string,
-    date: string,
-    hero?: string,
-    description?: string,
-    color?: string,
-    link?: string,
-  }
+  frontmatter: FrontmatterProps
 }
 
 export interface PostsListProps {

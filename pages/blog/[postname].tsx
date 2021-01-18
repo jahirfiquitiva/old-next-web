@@ -2,8 +2,18 @@ import matter from 'gray-matter';
 import getSlugs from '@utils/getSlugs';
 import Layout from '@components/Layout';
 import Post from '@components/blog/single-post/post';
+import { PageProps } from '@components/types';
+import { FrontmatterProps } from '@components/blog/posts/post-list';
+import { GetStaticPaths } from 'next';
 
-const BlogPost = ({ frontmatter, markdownBody, title, description, keywords, image }) => {
+interface BlogPostProps extends PageProps {
+  frontmatter: FrontmatterProps,
+  markdownBody: string,
+}
+
+const BlogPost = ({
+  frontmatter, markdownBody, title, description, keywords, image,
+}: BlogPostProps) => {
   if (!frontmatter) return <></>;
   return (<Layout
     title={`${frontmatter.title} | Blog ~ ${title}`}
@@ -24,7 +34,11 @@ export const getStaticProps = async ({ ...ctx }) => {
   const data = matter(content.default);
 
   const { hero } = data.data;
-  const actualHero = hero ? hero.startsWith('http') ? hero : `/assets/images/posts/${hero}` : '';
+  const actualHero = hero
+                     ? hero.startsWith('http')
+                       ? hero
+                       : `/assets/images/posts/${hero}`
+                     : '';
   const frontmatter = {
     ...data.data,
     hero: actualHero,
@@ -35,7 +49,10 @@ export const getStaticProps = async ({ ...ctx }) => {
       title: config.default.title,
       description: config.default.description,
       keywords: config.default.keywords,
-      image: actualHero.startsWith('/') ? `https://jahir.dev${actualHero}` : actualHero,
+      image: actualHero.startsWith('/')
+             ? `https://jahir.dev${actualHero}`
+             : actualHero,
+      // @ts-ignore
       link: frontmatter.link || '',
       frontmatter,
       markdownBody: data.content,
@@ -43,12 +60,13 @@ export const getStaticProps = async ({ ...ctx }) => {
   };
 };
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const blogSlugs = ((context) => {
     return getSlugs(context);
+    // @ts-ignore
   })(require.context('../../posts', true, /\.md$/));
 
-  const paths = blogSlugs.map((slug) => `/blog/${slug}`);
+  const paths = blogSlugs.map((slug: string) => `/blog/${slug}`);
 
   return {
     paths, // An array of path names, and any params
