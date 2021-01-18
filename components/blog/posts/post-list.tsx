@@ -23,7 +23,8 @@ export interface FrontmatterProps {
 export interface PostProps {
   slug: string,
   color?: string,
-  frontmatter: FrontmatterProps
+  frontmatter: FrontmatterProps,
+  markdownBody?: string
 }
 
 export interface PostsListProps {
@@ -86,7 +87,7 @@ const PostsList = ({ posts }: PostsListProps) => {
     </div>);
   };
 
-  const renderPostLink = (post: PostProps, heroUrl: string, color: string,
+  const renderPostLink = (post: PostProps, heroUrl: string, color?: string,
     rightLink?: string) => {
     const extras = rightLink && rightLink.length > 0
                    ? {
