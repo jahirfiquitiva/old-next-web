@@ -1,11 +1,15 @@
+import { NextApiRequest, NextApiResponse } from 'next';
+
 const { GITHUB_API_TOKEN: githubApiToken = '' } = process.env;
 const authHeaders = githubApiToken && githubApiToken.length > 0
-  ? { headers: { Authorization: githubApiToken } }
-  : {};
+                    ? { headers: { Authorization: githubApiToken } }
+                    : {};
 
-const fetchRepoData = async (name) => {
+const fetchRepoData = async (name?: string) => {
+  if (!name || !name.length) return null;
   const dataRequest = await fetch(
-    `https://api.github.com/repos/jahirfiquitiva/${name}/releases/latest`, authHeaders);
+    `https://api.github.com/repos/jahirfiquitiva/${name}/releases/latest`,
+    authHeaders);
   const data = await dataRequest.json();
   const { assets = [] } = data;
   const extraRepoData = {
@@ -24,8 +28,9 @@ const fetchRepoData = async (name) => {
   return { ...extraRepoData, download: downloadLink };
 };
 
-export default (req, res) => {
+export default (req: NextApiRequest, res: NextApiResponse) => {
   const { repo } = req.query;
+  // @ts-ignore
   return fetchRepoData(repo)
     .then((result) => {
       return res.status(200).json({ ...result });
