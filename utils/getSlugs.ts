@@ -1,9 +1,9 @@
 import matter from 'gray-matter';
 
-const getSlugs = (context) => {
+const getSlugs = (context: any) => {
   const keys = context.keys();
   const values = keys.map(context);
-  const data = keys.map((key, index) => {
+  const data = keys.map((key: any, index: number) => {
     const slug = key.replace(/^.*[\\/]/, '')
       .slice(0, -3);
     const value = values[index];
@@ -15,7 +15,7 @@ const getSlugs = (context) => {
     return slug;
   });
 
-  return (data || []).filter((it) => it);
+  return (data || []).filter((it: any) => it);
 };
 
 export default getSlugs;
