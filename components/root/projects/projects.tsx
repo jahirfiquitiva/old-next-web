@@ -3,13 +3,16 @@ import { CSSProperties, useContext } from 'react';
 import { usePalette } from 'react-palette';
 import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
+import getReadableColor from '@utils/getReadableColor';
+import getAnalogousColors from '@utils/getAnalogousColors';
 import buildCustomStyles from '@utils/buildCustomStyles';
+import UnsizedImage from '@components/global/image/UnsizedImage';
 import ThemeContext from '@components/theme/ThemeContext';
 import Stats from '@components/root/projects/stats';
 import styles from './projects.module.css';
-import UnsizedImage from '@components/global/image/UnsizedImage';
-import getAnalogousColors from '@utils/getAnalogousColors';
-import getReadableColor from '@utils/getReadableColor';
+
+import { SkillProps, skills } from '@components/root/skillset/skillset';
+import Icon from '@mdi/react';
 
 export interface ProjectProps {
   title: string,
@@ -19,20 +22,17 @@ export interface ProjectProps {
   link?: string,
   color?: string,
   tag?: string,
+  stack?: string[]
 }
 
 interface ProjectsProps {
   projects?: ProjectProps[]
 }
 
-const enableNewProjectPreview = process.env.NEW_PROJECT_PREVIEW_ENABLED ||
-  false;
-
 // @ts-ignore
 const buildCustomLinkStylesForColor = (color?: string | null,
   isDark?: boolean): CSSProperties => {
-  const [aColor, cColor] = enableNewProjectPreview ? getAnalogousColors(color)
-                                                   : [color, color];
+  const [aColor, cColor] = getAnalogousColors(color);
   const safeColor = getReadableColor(color, isDark);
   return buildCustomStyles({
     '--shadow-color': hexToRGB(safeColor, 0.2),
@@ -44,8 +44,35 @@ const buildCustomLinkStylesForColor = (color?: string | null,
   });
 };
 
+const getSkill = (skillName: string): SkillProps | null => {
+  try {
+    return skills.filter((it: SkillProps) =>
+      it.name.toLowerCase() === skillName.toLowerCase())[0];
+  } catch (e: any) {
+    return null;
+  }
+};
+
+const iconSize: number = 0.75;
 const Projects = ({ projects = [] }: ProjectsProps) => {
   const { isDark } = useContext(ThemeContext);
+
+  const renderProjectStack = (stack?: string[]) => {
+    if (!stack || !stack.length) return null;
+    return (<ul className={styles.stack}>
+      {stack.map((skillName: string, i: number) => {
+        const skill = getSkill(skillName);
+        if (!skill) return null;
+        return (<li>
+          <span key={i} className={styles.skill}>
+            <Icon path={skill.iconPath} color={skill.color}
+                  size={skillName === 'android' ? iconSize * 1.25 : iconSize}
+            />
+          </span>
+        </li>);
+      })}
+    </ul>);
+  };
 
   const renderNewProject = (it: ProjectProps) => {
     const { data } = it.icon ? usePalette(it.icon) : { data: null };
@@ -60,9 +87,9 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
         target={'_blank'} rel={'noopener noreferrer'}
         style={linkStyles}>
         <div>
-          {enableNewProjectPreview && <div className={styles.preview}>
+          <div className={styles.preview}>
             {it.preview && <UnsizedImage src={it.preview} alt={it.title}/>}
-          </div>}
+          </div>
           <div className={styles.content}>
             <div className={styles.iconTitle}>
               <Image
@@ -73,6 +100,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
               <h4>{it.title}</h4>
             </div>
             <p>{it.description}</p>
+            {renderProjectStack(it.stack)}
           </div>
         </div>
       </a>

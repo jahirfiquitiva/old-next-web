@@ -6,7 +6,11 @@
     "preview": "/assets/images/projects/android/blueprint-preview.png",
     "link": "https://github.com/jahirfiquitiva/Blueprint/",
     "color": "#4d8af0",
-    "tag": "android"
+    "tag": "android",
+    "stack": [
+      "android",
+      "kotlin"
+    ]
   },
   {
     "title": "Frames",

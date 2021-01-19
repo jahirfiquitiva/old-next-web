@@ -9,13 +9,13 @@ import hexToRGB from '@utils/hexToRgb';
 import buildCustomStyles from '@utils/buildCustomStyles';
 import styles from './skillset.module.css';
 
-interface SkillProps {
+export interface SkillProps {
   name: string,
   iconPath: string,
   color: string,
 }
 
-const skills: SkillProps[] = [
+export const skills: SkillProps[] = [
   { name: 'Android', iconPath: mdiAndroid, color: '#3ddc84' },
   { name: 'Kotlin', iconPath: mdiLanguageKotlin, color: '#6677e0' },
   { name: 'Java', iconPath: mdiLanguageJava, color: '#ea2e2f' },
