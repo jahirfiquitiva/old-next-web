@@ -22,6 +22,7 @@
   --toolbar-shadow-b: rgba(9, 17, 34, .06);
   --toolbar-shadow-c: rgba(9, 17, 34, .2);
   --toolbar-highlight: rgba(45, 82, 171, .08);
+  --error-color: #eb3b5a;
 }
 
 .dark-mode {
@@ -41,6 +42,7 @@
   --toolbar-shadow-b: rgba(56, 103, 214, .06);
   --toolbar-shadow-c: rgba(56, 103, 214, .2);
   --toolbar-highlight: rgba(215, 225, 247, .08);
+  --error-color: #fc5c65;
 }
 
 html, body {
