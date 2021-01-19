@@ -5,14 +5,17 @@ import Layout from '@components/Layout';
 import ContactForm from '@components/contact/form/form';
 
 interface ContactProps extends PageProps {
-  form: Object
+  form: Object,
+  reCaptchaKey: string
 }
 
-const Contact = ({ title, description, keywords, form }: ContactProps) => {
+const Contact = ({
+  title, description, keywords, form, reCaptchaKey
+}: ContactProps) => {
   return (
     <Layout title={title} description={description} keywords={keywords}
             page={4}>
-      <ContactForm form={form}/>
+      <ContactForm form={form} reCaptchaKey={reCaptchaKey}/>
     </Layout>
   );
 };
@@ -29,6 +32,7 @@ export const getStaticProps: GetStaticProps = async () => {
       description: configData.default.description,
       keywords: configData.default.keywords,
       form,
+      reCaptchaKey: process.env.RECAPTCHA_KEY || '0',
     },
   };
 };

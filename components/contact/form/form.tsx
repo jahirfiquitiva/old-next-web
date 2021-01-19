@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Icon from '@mdi/react';
 import { mdiEmailSendOutline } from '@mdi/js';
 import { formium } from '@lib/formium';
@@ -13,6 +13,10 @@ interface FormData {
 }
 
 const ContactForm = (props: any) => {
+  const formSlug = props?.form?.slug || 'contact-form';
+  const reCaptchaAction = formSlug.replace(/[^a-zA-Z]/g, '_');
+  const [token, setToken] = useState('');
+
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [errors, setErrors] = useState<FormData>({});
 
@@ -20,6 +24,7 @@ const ContactForm = (props: any) => {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const [honeypot, setHoneypot] = useState('');
 
   const getFormErrors = (): FormData => {
     const errors: { name?: string, email?: string, subject?: string, message?: string } = {};
@@ -36,19 +41,56 @@ const ContactForm = (props: any) => {
 
   const finishSubmission = (success: boolean) => {
     setErrors({});
-    setSubmitting(false);
     window.location.href = success ? '/sent' : '/error';
   };
 
+  const handleLoaded = (_: any) => {
+    // @ts-ignore
+    window.grecaptcha.ready((_: any) => {
+      try {
+        // @ts-ignore
+        window.grecaptcha
+          .execute(props.reCaptchaKey, { action: reCaptchaAction })
+          .then(setToken);
+      } catch (e: any) {}
+    });
+  };
+
+  useEffect(() => {
+    // Add reCaptcha
+    const script = document.createElement('script');
+    script.src =
+      'https://www.google.com/recaptcha/api.js?render=' + props.reCaptchaKey;
+    script.addEventListener('load', handleLoaded);
+    document.body.appendChild(script);
+  }, []);
+
   const customFormSubmit = async (e: any) => {
-    e.preventDefault();
+    e?.preventDefault();
+
+    // Validate reCaptcha and honeypot
+    if (!token || honeypot.length) {
+      finishSubmission(false);
+      return;
+    }
+    const validCaptchaResponse = await fetch(
+      `/api/captcha?action=${reCaptchaAction}&token=${token}`);
+    const validCaptcha = await validCaptchaResponse.json();
+    if (!validCaptcha || !validCaptcha.valid) {
+      finishSubmission(false);
+      return;
+    }
+
+    // Validate form fields
     const errors = getFormErrors();
     setErrors(errors);
     if (Object.keys(errors).length) {
       return;
     }
+
+    // Start form submission to formium
     setSubmitting(true);
-    await formium.submitForm(props.form.slug, { name, email, subject, message })
+    await formium.submitForm(formSlug, { name, email, subject, message })
       .then((data?: any) => {
         finishSubmission(data && data.ok);
       })
@@ -111,6 +153,14 @@ const ContactForm = (props: any) => {
           {errors.message?.length &&
           <p className={styles.error}>{errors.message || ''}</p>}
         </div>
+        <input type={'text'} name={'honeypot'} hidden
+               value={honeypot}
+               onChange={(e) => setHoneypot(e.target.value.toString())}/>
+        <div
+          className="g-recaptcha"
+          data-action={reCaptchaAction}
+          data-sitekey={props.reCaptchaKey}
+          data-size="invisible"/>
         <button
           name={'Send Email'} aria-label={'Send Email'}
           type={'submit'} disabled={submitting}>
