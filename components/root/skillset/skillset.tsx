@@ -1,8 +1,9 @@
 import Icon from '@mdi/react';
 import {
   mdiAndroid, mdiGit, mdiLanguageCss3, mdiLanguageHtml5, mdiLanguageJava,
-  mdiLanguageJavascript, mdiLanguageKotlin, mdiLanguagePython, mdiLeaf,
-  mdiMaterialDesign, mdiNodejs, mdiReact, mdiTriangle
+  mdiLanguageJavascript, mdiLanguageKotlin, mdiLanguagePython,
+  mdiLanguageTypescript, mdiLeaf, mdiMaterialDesign, mdiNodejs, mdiReact,
+  mdiTriangle
 } from '@mdi/js';
 import hexToRGB from '@utils/hexToRgb';
 import buildCustomStyles from '@utils/buildCustomStyles';
@@ -20,6 +21,7 @@ const skills: SkillProps[] = [
   { name: 'Java', iconPath: mdiLanguageJava, color: '#ea2e2f' },
   { name: 'Python', iconPath: mdiLanguagePython, color: '#3a74a5' },
   { name: 'JavaScript', iconPath: mdiLanguageJavascript, color: '#f7df1e' },
+  { name: 'TypeScript', iconPath: mdiLanguageTypescript, color: '#3178c6' },
   { name: 'HTLM5', iconPath: mdiLanguageHtml5, color: '#e34f26' },
   { name: 'CSS3', iconPath: mdiLanguageCss3, color: '#3572b5' },
   { name: 'Node JS', iconPath: mdiNodejs, color: '#61af43' },
@@ -35,8 +37,8 @@ const SkillSet = () => {
   const getColorStyle = (color: string) => {
     if (!color) return {};
     return buildCustomStyles({
-      '--bg-color': hexToRGB(color, 0.15),
-      '--border-color': hexToRGB(color, 0.5),
+      '--bg-color': hexToRGB(color, 0.2),
+      '--border-color': hexToRGB(color, 0.6),
     });
   };
 
