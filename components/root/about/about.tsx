@@ -24,7 +24,7 @@ const About = () => {
       <div className={styles.about}>
         <div className={styles.info}>
           <h3 className={styles.hello}>
-            <span className={styles.wave}>👋</span>
+            <span className={'wave'}>👋</span>
             &nbsp;&nbsp;{hellos[hello]}!
           </h3>
           <h3 className={styles.name}>I am Jahir Fiquitiva</h3>
