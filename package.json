@@ -20,6 +20,7 @@
     "@mdi/js": "^5.8.55",
     "@mdi/react": "^1.4.0",
     "@svgr/webpack": "^5.5.0",
+    "frostcolor": "^2.0.3",
     "gray-matter": "^4.0.2",
     "next": "^10.0.5",
     "raw-loader": "^4.0.2",

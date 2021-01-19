@@ -8,6 +8,8 @@ import ThemeContext from '@components/theme/ThemeContext';
 import Stats from '@components/root/projects/stats';
 import styles from './projects.module.css';
 import UnsizedImage from '@components/global/image/UnsizedImage';
+import getAnalogousColors from '@utils/getAnalogousColors';
+import getReadableColor from '@utils/getReadableColor';
 
 export interface ProjectProps {
   title: string,
@@ -24,11 +26,17 @@ interface ProjectsProps {
 }
 
 // @ts-ignore
-const buildCustomLinkStylesForColor = (color?: string | null): CSSProperties => {
+const buildCustomLinkStylesForColor = (color?: string | null,
+  isDark?: boolean): CSSProperties => {
+  const [aColor, cColor] = getAnalogousColors(color);
+  const safeColor = getReadableColor(color, isDark);
   return buildCustomStyles({
-    '--shadow-color': hexToRGB(color, 0.15),
-    '--border-color': hexToRGB(color, 0.2),
-    '--hl-color': color,
+    '--shadow-color': hexToRGB(safeColor, 0.2),
+    '--border-color': hexToRGB(safeColor, 0.3),
+    '--hl-color': safeColor,
+    '--a-bg-grad-color': aColor,
+    '--b-bg-grad-color': color,
+    '--c-bg-grad-color': cColor,
   });
 };
 
@@ -40,7 +48,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
     const color = isDark
                   ? getColorFromData(data, isDark) || it.color
                   : it.color;
-    const linkStyles = buildCustomLinkStylesForColor(color);
+    const linkStyles = buildCustomLinkStylesForColor(color, isDark);
     return (
       <a
         title={`${it.title} link`} aria-label={`${it.title} link`}
@@ -49,8 +57,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
         style={linkStyles}>
         <div>
           <div className={styles.preview}>
-            <UnsizedImage
-              src={it.preview} alt={it.title}/>
+            {it.preview && <UnsizedImage src={it.preview} alt={it.title}/>}
           </div>
           <div className={styles.content}>
             <div className={styles.iconTitle}>
@@ -77,33 +84,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
     }
     return (
       <div className={styles.grid}>
-        {renderNewProject(projects[0])}
-        {(projects || []).map((it: ProjectProps) => {
-          const { data } = it.icon ? usePalette(it.icon) : { data: null };
-          const color = isDark
-                        ? getColorFromData(data, isDark) || it.color
-                        : it.color;
-          const linkStyles = buildCustomLinkStylesForColor(color);
-          return (
-            <a
-              title={`${it.title} link`} aria-label={`${it.title} link`}
-              className={styles.card} href={it.link} key={it.title}
-              target={'_blank'} rel={'noopener noreferrer'}
-              style={linkStyles}>
-              <div className={styles.icon}>
-                <Image
-                  src={it.icon} alt={it.title}
-                  height={72} width={72}
-                  layout={'fixed'}
-                  loading={'lazy'}/>
-              </div>
-              <div className={styles.info}>
-                <h5>{it.title}</h5>
-                <p>{it.description}</p>
-              </div>
-            </a>
-          );
-        })}
+        {(projects || []).map(renderNewProject)}
       </div>
     );
   };
