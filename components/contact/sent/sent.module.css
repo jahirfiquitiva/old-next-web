@@ -1,41 +1,41 @@
 .sent {
-    height: 100%;
-    flex-grow: 1;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 2rem;
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
+  height: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 2rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
 }
 
 .sent h2 {
-    text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #26de81;
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #26de81;
 }
 
 .sent p {
-    margin-top: .8rem;
+  margin-top: .8rem;
 }
 
 .sent a.button {
-    margin: 1.6rem 0;
+  margin: 1.6rem 0;
 }
 
 .sent .gif,
 .sent img {
-    margin: 2rem auto 0;
-    padding: 0;
-    height: auto;
-    width: 100%;
-    max-width: 400px;
+  margin: 2rem auto 0;
+  padding: 0;
+  height: auto;
+  width: 100%;
+  max-width: 400px;
 }
 
 @media (min-width: 960px) {
-    .sent {
-        padding-left: 0;
-        padding-right: 0;
-    }
+  .sent {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

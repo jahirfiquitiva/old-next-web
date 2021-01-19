@@ -1,29 +1,29 @@
 .construction {
-    height: 100%;
-    flex-grow: 1;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 2rem;
+  height: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 2rem;
 }
 
 .construction h2 {
-    text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #fed330;
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #fed330;
 }
 
 .construction p {
-    margin-top: .8rem;
-    margin-bottom: 2rem;
+  margin-top: .8rem;
+  margin-bottom: 2rem;
 }
 
 .construction .gif,
 .construction img {
-    margin: 4rem auto;
-    padding: 0;
-    height: 100%;
-    width: auto;
-    max-width: 100%;
+  margin: 4rem auto;
+  padding: 0;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
 }
