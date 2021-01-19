@@ -151,7 +151,9 @@
 .projects .grid .item .content .iconTitle {
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin-bottom: .4rem;
+  margin-left: -.2rem;
 }
 
 .projects .grid .item .content .iconTitle img {
@@ -217,89 +219,8 @@
   .projects {
     padding: 1rem 0 3rem;
   }
-}
 
-/* TODO: Delete everything below this comment */
-
-.projects .card {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border-radius: 8px;
-  border: 1px solid var(--divider);
-  padding: .4rem 0;
-  cursor: pointer;
-  transition: all .25s ease-in-out;
-}
-
-.projects .card .icon {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  max-width: 80px;
-  padding: .4rem .6rem .4rem .8rem;
-}
-
-.projects .card img {
-  opacity: 0.8;
-  max-width: 72px;
-  margin: auto;
-  transition: all .25s ease-in-out;
-}
-
-.projects .card .info {
-  padding: .4rem .8rem .4rem .4rem;
-}
-
-.projects .card,
-.projects .card:active,
-.projects .card:visited {
-  color: var(--text-primary);
-}
-
-.projects .card .info p,
-.projects .card:active .info p,
-.projects .card:visited .info p {
-  font-size: .9rem;
-  color: var(--text-secondary);
-  text-decoration: none;
-}
-
-.projects .card:focus,
-.projects .card:hover {
-  --shadow-color: var(--divider);
-  --border-color: var(--accent);
-  --hl-color: var(--accent);
-  color: var(--text-primary);
-  text-decoration: none;
-  border-color: var(--border-color);
-  -webkit-box-shadow: 0 4px 8px var(--shadow-color);
-  -moz-box-shadow: 0 4px 8px var(--shadow-color);
-  -o-box-shadow: 0 4px 8px var(--shadow-color);
-  box-shadow: 0 4px 8px var(--shadow-color);
-  -webkit-transform: translateY(-.1rem);
-  -moz-transform: translateY(-.1rem);
-  -ms-transform: translateY(-.1rem);
-  -o-transform: translateY(-.1rem);
-  transform: translateY(-.1rem);
-}
-
-.projects .card:focus img,
-.projects .card:hover img {
-  opacity: 1;
-}
-
-.projects .card:focus .info h5,
-.projects .card:hover .info h5 {
-  color: var(--hl-color);
-  text-decoration: underline;
-  -webkit-text-decoration-style: solid;
-  -webkit-text-decoration-color: var(--hl-color);
-  text-decoration: underline solid var(--hl-color);
-}
-
-.projects .card:focus .info p,
-.projects .card:hover .info p {
-  color: var(--text-primary);
+  .projects .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

@@ -34,7 +34,7 @@
   },
   {
     "title": "Tap",
-    "description": "Creates Google Keep notes and Todoist tasks quickly",
+    "description": "A Floating Action Button for quickly creating Google Keep notes and Todoist tasks",
     "icon": "/assets/images/projects/android/tap.png",
     "link": "https://jahir.xyz/TapApp",
     "color": "#E69494",
@@ -46,22 +46,6 @@
     "icon": "/assets/images/projects/android/chipview.png",
     "link": "https://github.com/jahirfiquitiva/ChipView/",
     "color": "#3E95FB",
-    "tag": "android"
-  },
-  {
-    "title": "Tap for Keep",
-    "description": "A Floating Action Button for quickly creating notes in Google Keep.",
-    "icon": "/assets/images/projects/android/tap-keep.png",
-    "link": "https://play.google.com/store/apps/details?id=jahirfiquitiva.apps.queep",
-    "color": "#fde741",
-    "tag": "android"
-  },
-  {
-    "title": "Tap for Todoist",
-    "description": "A Floating Action Button for quickly creating notes in Todoist.",
-    "icon": "/assets/images/projects/android/tap-todoist.png",
-    "link": "https://play.google.com/store/apps/details?id=jahirfiquitiva.apps.tap",
-    "color": "#eb5956",
     "tag": "android"
   },
   {

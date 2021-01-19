@@ -25,10 +25,14 @@ interface ProjectsProps {
   projects?: ProjectProps[]
 }
 
+const enableNewProjectPreview = process.env.NEW_PROJECT_PREVIEW_ENABLED ||
+  false;
+
 // @ts-ignore
 const buildCustomLinkStylesForColor = (color?: string | null,
   isDark?: boolean): CSSProperties => {
-  const [aColor, cColor] = getAnalogousColors(color);
+  const [aColor, cColor] = enableNewProjectPreview ? getAnalogousColors(color)
+                                                   : [color, color];
   const safeColor = getReadableColor(color, isDark);
   return buildCustomStyles({
     '--shadow-color': hexToRGB(safeColor, 0.2),
@@ -56,9 +60,9 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
         target={'_blank'} rel={'noopener noreferrer'}
         style={linkStyles}>
         <div>
-          <div className={styles.preview}>
+          {enableNewProjectPreview && <div className={styles.preview}>
             {it.preview && <UnsizedImage src={it.preview} alt={it.title}/>}
-          </div>
+          </div>}
           <div className={styles.content}>
             <div className={styles.iconTitle}>
               <Image
