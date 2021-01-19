@@ -6,6 +6,7 @@ import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
 import ThemeContext from '@components/theme/ThemeContext';
 import styles from './supporters.module.css';
+import buildCustomStyles from '@utils/buildCustomStyles';
 
 export interface SupporterProps {
   name: string,
@@ -25,13 +26,10 @@ const Supporters = ({ supporters }: any) => {
 
   const getColorStyle = (color?: string | null): CSSProperties => {
     if (!color) return {};
-    // noinspection UnnecessaryLocalVariableJS
-    const styles = {
+    return buildCustomStyles({
       '--bg-color': hexToRGB(color, 0.15),
       '--border-color': hexToRGB(color, 0.5),
-    };
-    // @ts-ignore
-    return styles;
+    });
   };
 
   const renderSupporters = (actualSupporters?: SupporterProps[]) => {

@@ -35,8 +35,8 @@ const ContactForm = (props: any) => {
   };
 
   const finishSubmission = (success: boolean) => {
-    setSubmitting(false);
     setErrors({});
+    setSubmitting(false);
     window.location.href = success ? '/sent' : '/error';
   };
 

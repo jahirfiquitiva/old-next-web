@@ -3,6 +3,7 @@ import { CSSProperties, useContext } from 'react';
 import { usePalette } from 'react-palette';
 import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
+import buildCustomStyles from '@utils/buildCustomStyles';
 import ThemeContext from '@components/theme/ThemeContext';
 import Stats from '@components/root/projects/stats';
 import styles from './projects.module.css';
@@ -22,14 +23,11 @@ interface ProjectsProps {
 
 // @ts-ignore
 const buildCustomLinkStylesForColor = (color?: string | null): CSSProperties => {
-  // noinspection UnnecessaryLocalVariableJS
-  const styles = {
+  return buildCustomStyles({
     '--shadow-color': hexToRGB(color, 0.15),
     '--border-color': hexToRGB(color, 0.2),
     '--hl-color': color,
-  };
-  // @ts-ignore
-  return styles;
+  });
 };
 
 const Projects = ({ projects = [] }: ProjectsProps) => {
