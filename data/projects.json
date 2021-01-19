@@ -3,8 +3,11 @@
     "title": "Blueprint",
     "description": "Dashboard for creating Android icon packs.",
     "icon": "/assets/images/projects/android/blueprint.png",
+    "preview": "/assets/images/projects/android/blueprint-preview.png",
     "link": "https://github.com/jahirfiquitiva/Blueprint/",
     "color": "#4d8af0",
+    "colorA": "#624DF0",
+    "colorB": "#4DDAF0",
     "tag": "android"
   },
   {
