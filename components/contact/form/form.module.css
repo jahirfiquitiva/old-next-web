@@ -59,6 +59,14 @@
   border: 1px solid var(--accent);
 }
 
+.contact form button:disabled,
+.contact form input:disabled,
+.contact form textarea:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
 .contact form textarea {
   resize: vertical;
   min-height: 96px;

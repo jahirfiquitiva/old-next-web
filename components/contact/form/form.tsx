@@ -116,6 +116,7 @@ const ContactForm = (props: any) => {
           type={'submit'} disabled={submitting}>
           <Icon path={mdiEmailSendOutline} size={1}/>Send
         </button>
+        {submitting && <p>Sending message...</p>}
       </form>
     </div>
   );
