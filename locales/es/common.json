@@ -6,5 +6,10 @@
   "contact": "Contacto",
   "toggle-menu": "Abrir o cerrar menu",
   "toggle-theme": "Activar o desactivar tema oscuro",
-  "social-link": "Enlace a {{site}}"
+  "social-link": "Enlace a {{site}}",
+  "made-with": "Hecho con",
+  "by": "por",
+  "yours-truly": "mí mismo",
+  "copyright": "Derechos de autor",
+  "all-rights-reserved": "Todos los derechos reservados"
 }
