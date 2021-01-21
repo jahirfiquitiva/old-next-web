@@ -63,7 +63,9 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
       {stack.map((skillName: string, i: number) => {
         const skill = getSkill(skillName);
         if (!skill) return null;
-        return (<li>
+        return (<li
+          className={skillName.toLowerCase().includes('kotlin') ? styles.nomr
+                                                                : ''}>
           <span key={i} className={styles.skill}>
             <Icon path={skill.iconPath} color={skill.color}
                   size={skillName === 'android' ? iconSize * 1.25 : iconSize}
@@ -88,7 +90,8 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
         style={linkStyles}>
         <div>
           <div className={styles.preview}>
-            {it.preview && <UnsizedImage src={it.preview} alt={it.title}/>}
+            {it.preview?.length &&
+            <UnsizedImage src={it.preview} alt={it.title}/>}
           </div>
           <div className={styles.content}>
             <div className={styles.iconTitle}>

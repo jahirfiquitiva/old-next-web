@@ -9,88 +9,150 @@
     "tag": "android",
     "stack": [
       "android",
-      "kotlin"
+      "kotlin",
+      "material design"
     ]
   },
   {
     "title": "Frames",
     "description": "Dashboard for creating Android wallpapers apps.",
     "icon": "/assets/images/projects/android/frames.png",
+    "preview": "/assets/images/projects/android/frames-preview.png",
     "link": "https://github.com/jahirfiquitiva/Frames/",
     "color": "#35b4ef",
-    "tag": "android"
+    "tag": "android",
+    "stack": [
+      "android",
+      "kotlin",
+      "material design"
+    ]
   },
   {
     "title": "Kuper",
-    "description": "Dashboard for Zooper and Kustom Android widget packs.",
+    "description": "Dashboard for Zooper & Kustom Android widget packs.",
     "icon": "/assets/images/projects/android/kuper.png",
+    "preview": "/assets/images/projects/android/kuper-preview.png",
     "link": "https://github.com/jahirfiquitiva/Kuper/",
     "color": "#6673C0",
-    "tag": "android"
+    "tag": "android",
+    "stack": [
+      "android",
+      "kotlin",
+      "material design"
+    ]
   },
   {
     "title": "Pals",
     "description": "Creates color palettes from any color or image.",
     "icon": "/assets/images/projects/android/pals.png",
+    "preview": "/assets/images/projects/android/pals-preview.png",
     "link": "https://jahir.xyz/PalsApp",
     "color": "#4285F4",
-    "tag": "android"
+    "tag": "android",
+    "stack": [
+      "android",
+      "kotlin",
+      "material design"
+    ]
   },
   {
     "title": "Tap",
     "description": "A Floating Action Button for quickly creating Google Keep notes and Todoist tasks",
     "icon": "/assets/images/projects/android/tap.png",
+    "preview": "/assets/images/projects/android/tap-preview.png",
     "link": "https://jahir.xyz/TapApp",
     "color": "#E69494",
-    "tag": "android"
+    "tag": "android",
+    "stack": [
+      "android",
+      "kotlin",
+      "material design"
+    ]
   },
   {
     "title": "ChipView",
     "description": "Custom view to provide Material Design specs' Chip component.",
     "icon": "/assets/images/projects/android/chipview.png",
+    "preview": "/assets/images/projects/android/chipview-preview.png",
     "link": "https://github.com/jahirfiquitiva/ChipView/",
     "color": "#3E95FB",
-    "tag": "android"
+    "tag": "android",
+    "stack": [
+      "android",
+      "kotlin",
+      "material design"
+    ]
   },
   {
     "title": "FABsMenu",
     "description": "A menu of Material Design FloatingActionButtons",
     "icon": "/assets/images/projects/android/fabsmenu.png",
+    "preview": "/assets/images/projects/android/fabsmenu-preview.png",
     "link": "https://github.com/jahirfiquitiva/FABsMenu/",
     "color": "#e92566",
-    "tag": "android"
+    "tag": "android",
+    "stack": [
+      "android",
+      "java",
+      "material design"
+    ]
   },
   {
     "title": "Dashbud",
     "description": "Quickly setup any of my Android dashboards.",
     "icon": "/assets/images/projects/web/setup.png",
     "link": "/dashsetup/",
+    "preview": "/assets/images/projects/web/dashbud-preview.png",
     "color": "#7E28FC",
-    "tag": "web"
+    "tag": "web",
+    "stack": [
+      "HTLM5",
+      "css3",
+      "javascript",
+      "react"
+    ]
   },
   {
     "title": "Changes",
     "description": "Shows the latest change logs of the repositories I own or contribute to.",
     "icon": "/assets/images/projects/web/changes.png",
+    "preview": "/assets/images/projects/web/changes-preview.png",
     "link": "/changes/",
     "color": "#0FAEB9",
-    "tag": "web"
+    "tag": "web",
+    "stack": [
+      "HTLM5",
+      "css3",
+      "typescript",
+      "react",
+      "nextjs"
+    ]
   },
   {
     "title": "Prev Websites",
     "description": "Check the source code of previous versions of this website",
     "icon": "/assets/images/projects/web/prev-websites.png",
     "link": "https://github.com/jahirfiquitiva/prev-websites/",
+    "preview": "/assets/images/projects/web/websites-preview.png",
     "color": "#88a4e6",
-    "tag": "web"
+    "tag": "web",
+    "stack": [
+      "HTLM5",
+      "css3",
+      "javascript"
+    ]
   },
   {
     "title": "Sliding Puzzle",
-    "description": "Pseudo-AI+ML that solves the 8-Puzzle aka Sliding Puzzle.",
+    "description": "Pseudo-AI+ML solves the 8-Puzzle aka Sliding Puzzle.",
     "icon": "/assets/images/projects/other/puzzle.png",
     "link": "https://jahir.xyz/SlidingPuzzle",
+    "preview": "/assets/images/projects/other/sliding-puzzle-preview.png",
     "color": "#929292",
-    "tag": "python"
+    "tag": "python",
+    "stack": [
+      "python"
+    ]
   },
   {
     "title": "Stan",
@@ -98,7 +160,10 @@
     "icon": "/assets/images/projects/other/stan.png",
     "link": "https://github.com/jahirfiquitiva/stanbot/",
     "color": "#FC8303",
-    "tag": "python"
+    "tag": "python",
+    "stack": [
+      "python"
+    ]
   },
   {
     "title": "More",

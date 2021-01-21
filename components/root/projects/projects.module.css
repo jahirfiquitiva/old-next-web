@@ -109,10 +109,11 @@
   opacity: .7;
   /* TODO: Delete this */
   min-height: 256px;
+  --gradient-angle: 135deg;
   background: var(--b-bg-grad-color);
-  background: -moz-linear-gradient(90deg, var(--a-bg-grad-color) 0%, var(--b-bg-grad-color) 50%, var(--c-bg-grad-color) 100%);
-  background: -webkit-linear-gradient(90deg, var(--a-bg-grad-color) 0%, var(--b-bg-grad-color) 50%, var(--c-bg-grad-color) 100%);
-  background: linear-gradient(90deg, var(--a-bg-grad-color) 0%, var(--b-bg-grad-color) 50%, var(--c-bg-grad-color) 100%);
+  background: -moz-linear-gradient(var(--gradient-angle), var(--a-bg-grad-color) 0%, var(--b-bg-grad-color) 40%, var(--c-bg-grad-color) 100%);
+  background: -webkit-linear-gradient(var(--gradient-angle), var(--a-bg-grad-color) 0%, var(--b-bg-grad-color) 40%, var(--c-bg-grad-color) 100%);
+  background: linear-gradient(var(--gradient-angle), var(--a-bg-grad-color) 0%, var(--b-bg-grad-color) 40%, var(--c-bg-grad-color) 100%);
 }
 
 .projects .grid .item:focus .preview,
@@ -185,6 +186,10 @@
   text-decoration: underline solid var(--hl-color);
 }
 
+.projects .grid .item .content p {
+  font-size: .95rem;
+}
+
 .projects .grid .item .content p,
 .projects .grid .item:active .content p,
 .projects .grid .item:visited .content p {
@@ -209,8 +214,11 @@
   width: 24px;
 }
 
-.projects .grid .item .content .stack li:not(:last-of-type) {
-  margin-right: .3rem;
+.projects .grid .item .content .stack li.nomr {
+}
+
+.projects .grid .item .content .stack li:not(:last-of-type):not(.nomr) {
+  margin-right: .25rem;
 }
 
 .projects .grid .item:focus .content .stack,
