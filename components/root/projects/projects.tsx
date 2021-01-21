@@ -63,10 +63,10 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
       {stack.map((skillName: string, i: number) => {
         const skill = getSkill(skillName);
         if (!skill) return null;
-        return (<li
+        return (<li key={i}
           className={skillName.toLowerCase().includes('kotlin') ? styles.nomr
                                                                 : ''}>
-          <span key={i} className={styles.skill}>
+          <span className={styles.skill}>
             <Icon path={skill.iconPath} color={skill.color}
                   size={skillName === 'android' ? iconSize * 1.25 : iconSize}
             />

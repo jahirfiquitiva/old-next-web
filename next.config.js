@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
+const nextTranslate = require('next-translate');
 
 const readFileContent = (dirname, filename) => new Promise((resolve, reject) => {
   if (!filename || !filename.endsWith('md')) return null;
@@ -65,7 +66,8 @@ const buildExternalBlogPostsRedirects = async () => {
   });
 };
 
-module.exports = {
+// noinspection JSValidateTypes
+module.exports = nextTranslate({
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -97,4 +99,4 @@ module.exports = {
       buildRedirect('/uses', '/blog/uses'),
     ];
   },
-};
+});
