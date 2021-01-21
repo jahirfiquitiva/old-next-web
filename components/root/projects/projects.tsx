@@ -13,6 +13,7 @@ import styles from './projects.module.css';
 
 import { SkillProps, skills } from '@components/root/skillset/skillset';
 import Icon from '@mdi/react';
+import useTranslation from 'next-translate/useTranslation';
 
 export interface ProjectProps {
   title: string,
@@ -55,6 +56,7 @@ const getSkill = (skillName: string): SkillProps | null => {
 
 const iconSize: number = 0.75;
 const Projects = ({ projects = [] }: ProjectsProps) => {
+  const{t} = useTranslation()
   const { isDark } = useContext(ThemeContext);
 
   const renderProjectStack = (stack?: string[]) => {
@@ -102,7 +104,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                 loading={'lazy'}/>
               <h4>{it.title}</h4>
             </div>
-            <p>{it.description}</p>
+            <p>{t(`projects:${it.description}`)}</p>
             {renderProjectStack(it.stack)}
           </div>
         </div>
@@ -114,7 +116,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
     if (projects.length <= 0) {
       return (<>
         <br/>
-        <p>No projects available 🙃</p>
+        <p>{t('projects:no-projects')}{' '}🙃</p>
       </>);
     }
     return (
@@ -127,7 +129,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
   return (
     <div className={styles.projects}>
       <div className={styles.titlecontainer}>
-        <h2 className={styles.title}>👨‍💻&nbsp;&nbsp;Projects</h2>
+        <h2 className={styles.title}>👨‍💻&nbsp;&nbsp;{t('projects:projects')}</h2>
         {/* @ts-ignore */}
         <Stats className={styles.stats}/>
       </div>
