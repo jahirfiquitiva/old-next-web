@@ -1,6 +1,6 @@
 import Icon from '@mdi/react';
 import {
-  mdiGithub, mdiInstagram, mdiLinkedin, mdiTwitch, mdiTwitter
+  mdiGithub, mdiInstagram, mdiLinkedin, mdiTwitch, mdiTwitter, mdiTelegram, mdiEmailOutline
 } from '@mdi/js';
 import styles from './social.module.css';
 
@@ -25,11 +25,20 @@ const socialLinks = [{
   className: styles.instagram,
   link: 'https://instagram.com/jahirfiquitiva',
 }, {
+  siteName: 'Telegram',
+  iconPath: mdiTelegram,
+  className: styles.telegram,
+  link: 'https://t.me/jahirfiquitiva',
+}, {
+  siteName: 'Contact',
+  iconPath: mdiEmailOutline,
+  className: styles.email,
+  link: '/contact',
+}, {
   siteName: 'Twitch',
   iconPath: mdiTwitch,
   className: styles.twitch,
   link: 'https://twitch.com/jahirdotdev',
-  disabled: true,
 }];
 
 const iconSize = 0.8;
