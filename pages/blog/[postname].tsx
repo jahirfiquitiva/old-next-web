@@ -71,6 +71,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths, // An array of path names, and any params
-    fallback: false, // so that 404s properly appear if something's not matching
+    fallback: true, // so that 404s properly appear if something's not matching
   };
 };

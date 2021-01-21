@@ -9,7 +9,7 @@ export interface ExtLinkProps {
 
 const ExtLink = ({ to, label, title, newTab = true }: ExtLinkProps) => {
   const { t } = useTranslation();
-  const defaultTitle = t('common:site-link', { site: label });
+  const defaultTitle = t('common:social-link', { site: label });
   return (
     <a
       title={title || defaultTitle} aria-label={title || defaultTitle}

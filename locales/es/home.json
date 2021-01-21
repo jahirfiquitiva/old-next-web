@@ -12,6 +12,19 @@
       "b": "a todas las personas que me apoyan y",
       "c": "aquí encuentras algunas de sus apps",
       "d": ", para que te animes a probarlas!"
+    },
+    "third": {
+      "a": "Tengo disponibles",
+      "b": "mensajes de Twitter",
+      "c": "y",
+      "d": "correo electrónico",
+      "e": "para cualquier tipo de consulta"
+    },
+    "fourth": {
+      "a": "Si te gustaría conocer qué herramientas uso (software y hardware), puedes",
+      "b": "mirar el sitio \"{{uses}}\""
     }
-  }
+  },
+  "find-me-on": "Me puedes encontrar en",
+  "skills": "Habilidades"
 }

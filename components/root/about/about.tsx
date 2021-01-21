@@ -70,20 +70,25 @@ const About = () => {
           {t('home:details.second.d')}
         </p>
         <p>
-          I have open <ExtLink to={'https://jahir.xyz/twitterdm'}
-                               label={'Twitter DMs'}/>,&nbsp;
-          <ExtLink to={'https://jahir.xyz/tlgrm'} label={'Telegram'}/> and&nbsp;
-          <ExtLink to={'/contact'} label={'email'} newTab={false}/> for any kind
-          of inquiries. 🤗
+          {t('home:details.third.a')}{' '}
+          <ExtLink to={'https://jahir.xyz/twitterdm'}
+                   label={t('home:details.third.b')}/>,&nbsp;
+          <ExtLink to={'https://jahir.xyz/tlgrm'} label={'Telegram'}/>
+          {' '}{t('home:details.third.c')}{' '}
+          <ExtLink to={'/contact'} label={t('home:details.third.d')}
+                   newTab={false}/>
+          {' '}{t('home:details.third.e')}. 🤗
         </p>
         <p>
-          If you are interested in knowing which tools I use, you can&nbsp;
-          <ExtLink to={'/uses'} label={'check out my uses page'}
-                   newTab={false}/>.
+          {t('home:details.fourth.a')}{' '}
+          <ExtLink
+            to={'/uses'}
+            label={t('home:details.fourth.b', { uses: t('common:uses') })}
+            newTab={false}/>.
         </p>
       </div>
       <div className={styles.find}>
-        <p><b>You can find me on:</b></p>
+        <p><b>{t('home:find-me-on')}:</b></p>
         <Social/>
       </div>
       <SkillSet/>

@@ -12,6 +12,19 @@
       "b": "to all the awesome people supporting me and",
       "c": "here's some featured apps from them",
       "d": ", for you to check them out!"
+    },
+    "third": {
+      "a": "I have open",
+      "b": "Twitter DMs",
+      "c": "and",
+      "d": "email",
+      "e": "for any kind of inquiries"
+    },
+    "fourth": {
+      "a": "If you are interested in knowing which tools I use (software + hardware), you can",
+      "b": "check out my {{uses}} page"
     }
-  }
+  },
+  "find-me-on": "You can find me on",
+  "skills": "Skills"
 }
