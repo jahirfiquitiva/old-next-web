@@ -1,3 +1,10 @@
 {
+  "home": "Home",
+  "blog": "Blog",
+  "uses": "Uses",
+  "donate": "Donate",
+  "contact": "Contact",
+  "toggle-menu": "Toggle menu",
+  "toggle-theme": "Toggle dark theme",
   "social-link": "{{site}} link"
 }

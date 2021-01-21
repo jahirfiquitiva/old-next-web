@@ -5,11 +5,13 @@ import ExtLink from '@components/global/ext-link/ext-link';
 import Social from '@components/global/social/social';
 import SkillSet from '@components/root/skillset/skillset';
 import styles from './about.module.css';
+import useTranslation from 'next-translate/useTranslation';
 
 const hellos = ['Hello, world', 'Hola, mundo', 'Ciao, mondo', 'Hallo, Welt',
   'Salut, monde', 'Olá, mundo'];
 
 const About = () => {
+  const { t } = useTranslation();
   const [hello, setHello] = useState(0);
 
   useEffect(() => {
@@ -27,10 +29,9 @@ const About = () => {
             <span className={'wave'}>👋</span>
             &nbsp;&nbsp;{hellos[hello]}!
           </h3>
-          <h3 className={styles.name}>I am Jahir Fiquitiva</h3>
+          <h3 className={styles.name}>{t('home:i-am')}</h3>
           <br/>
-          <p>I&apos;m a passionate and creative full-stack software engineer
-            from <ExtLink
+          <p>{t('home:description-a')} <ExtLink
               to={'https://www.google.com/maps/place/Colombia/@4,-72z/'}
               label={'Colombia 🇨🇴'}/></p>
         </div>
@@ -57,10 +58,10 @@ const About = () => {
             </a>
           </Link> to all the awesome people supporting me and <Link
           href={'/blog/post-of-fame'}>
-            <a title={'link to thanks page'} aria-label={'link to thanks page'}>
-              here&apos;s some featured apps from them
-            </a>
-          </Link>, for you to check them out!
+          <a title={'link to thanks page'} aria-label={'link to thanks page'}>
+            here&apos;s some featured apps from them
+          </a>
+        </Link>, for you to check them out!
         </p>
         <p>
           I have open <ExtLink to={'https://jahir.xyz/twitterdm'}

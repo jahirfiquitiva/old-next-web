@@ -1,3 +1,10 @@
 {
+  "home": "Principal",
+  "blog": "Blog",
+  "uses": "¿Qué uso?",
+  "donate": "Donar",
+  "contact": "Contacto",
+  "toggle-menu": "Abrir o cerrar menu",
+  "toggle-theme": "Activar o desactivar tema oscuro",
   "social-link": "Enlace a {{site}}"
 }
