@@ -108,6 +108,7 @@
   flex: 1;
   opacity: .7;
   --gradient-angle: 135deg;
+  height: 168px;
   background: var(--b-bg-grad-color);
   background: -moz-linear-gradient(var(--gradient-angle), var(--a-bg-grad-color) 0%, var(--b-bg-grad-color) 40%, var(--c-bg-grad-color) 100%);
   background: -webkit-linear-gradient(var(--gradient-angle), var(--a-bg-grad-color) 0%, var(--b-bg-grad-color) 40%, var(--c-bg-grad-color) 100%);
@@ -124,7 +125,7 @@
 }
 
 .projects .grid .item .preview img {
-  height: 168px;
+  height: 100%;
   width: auto;
   max-width: 100%;
   object-fit: cover;
@@ -246,7 +247,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .projects .grid .item .preview img {
+  .projects .grid .item .preview {
     height: 256px;
   }
 }
