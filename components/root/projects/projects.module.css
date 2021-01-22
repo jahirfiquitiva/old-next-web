@@ -107,8 +107,6 @@
   max-width: 100%;
   flex: 1;
   opacity: .7;
-  /* TODO: Delete this */
-  min-height: 256px;
   --gradient-angle: 135deg;
   background: var(--b-bg-grad-color);
   background: -moz-linear-gradient(var(--gradient-angle), var(--a-bg-grad-color) 0%, var(--b-bg-grad-color) 40%, var(--c-bg-grad-color) 100%);
@@ -128,7 +126,7 @@
 .projects .grid .item .preview img {
   max-width: 100%;
   object-fit: cover;
-  max-height: 256px;
+  max-height: 168px;
 }
 
 .projects .grid .item:focus .preview img,
@@ -245,6 +243,10 @@
 @media (min-width: 640px) {
   .projects .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects .grid .item .preview img {
+    max-height: 256px;
   }
 }
 
