@@ -1,0 +1,17 @@
+{
+  "projects": "Proyectos",
+  "no-projects": "No hay proyectos disponibles",
+  "blueprint": "Librería para crear paquetes de iconos para Android.",
+  "frames": "Librería para crear aplicaciones de fondos de pantalla para Android.",
+  "kuper": "Librería para crear paquetes de widgets de Zooper y Kustom para Android.",
+  "pals": "Crea paletas de colores a partir de cualquier color o imagen.",
+  "tap": "Un botón flotante para crear notas de Google Keep o tareas de Todoist rápidamente.",
+  "chipview": "Librería para crear el componente Chip que se ajusta a las especificaciones de Material Design.",
+  "fabsmenu": "Un menú construido a partir de FloatingActionButtons",
+  "dashbud": "Configura rápidamente cualquier de mis librerías: Blueprint, Frames o Kuper.",
+  "changes": "Muestra el último registro de cambios para mis repositorios públicos y los que contribuyo.",
+  "prevweb": "Mira el código fuente de versiones anteriores de este sitio.",
+  "sliding": "Pseudo-IA+ML que resuelve el rompecabezas de números deslizantes.",
+  "stan": "Bot de Slack que ayuda con stand-ups textuales de SCRUM.",
+  "other": "Encuentra otros proyectos de código abierto en GitHub."
+}

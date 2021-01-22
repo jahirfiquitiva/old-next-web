@@ -11,7 +11,7 @@ This site is inspired and featured on [uses.tech](https://uses.tech)
 
 ### 🌐  Website
 
-This website is built using [Next.js](https://nextjs.org/) and is deployed on [Vercel](https://vercel.com/)
+This website is built using TypeScript, custom CSS (no frameworks/libraries) and [Next.js](https://nextjs.org/) and is deployed on [Vercel](https://vercel.com/)
 
 
 ### 📑  Terminal + Editors

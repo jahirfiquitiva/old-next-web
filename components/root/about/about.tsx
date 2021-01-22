@@ -5,11 +5,13 @@ import ExtLink from '@components/global/ext-link/ext-link';
 import Social from '@components/global/social/social';
 import SkillSet from '@components/root/skillset/skillset';
 import styles from './about.module.css';
+import useTranslation from 'next-translate/useTranslation';
 
 const hellos = ['Hello, world', 'Hola, mundo', 'Ciao, mondo', 'Hallo, Welt',
   'Salut, monde', 'Olá, mundo'];
 
 const About = () => {
+  const { t } = useTranslation();
   const [hello, setHello] = useState(0);
 
   useEffect(() => {
@@ -24,15 +26,17 @@ const About = () => {
       <div className={styles.about}>
         <div className={styles.info}>
           <h3 className={styles.hello}>
-            <span className={styles.wave}>👋</span>
+            <span className={'wave'}>👋</span>
             &nbsp;&nbsp;{hellos[hello]}!
           </h3>
-          <h3 className={styles.name}>I am Jahir Fiquitiva</h3>
+          <h3 className={styles.name}>{t('home:i-am')}</h3>
           <br/>
-          <p>I&apos;m a passionate and creative full-stack software engineer
-            from <ExtLink
+          <p>
+            {t('home:description')}{' '}
+            <ExtLink
               to={'https://www.google.com/maps/place/Colombia/@4,-72z/'}
-              label={'Colombia 🇨🇴'}/></p>
+              label={'Colombia 🇨🇴'}/>
+          </p>
         </div>
         <div className={styles.photocontainer}>
           <Image
@@ -44,39 +48,47 @@ const About = () => {
       </div>
       <div className={styles.details}>
         <p>
-          I consider myself a curious and inquisitive person, so on my spare
-          time I like to work
-          on <ExtLink to={'#projects'} label={'side projects'}
-                      newTab={false}/> and try to
-          constantly learn something new to improve my skillset.
+          {t('home:details.first.a')}{' '}
+          <ExtLink to={'#projects'}
+                   label={t('home:details.first.b')}
+                   newTab={false}/>
+          {' '}{t('home:details.first.c')}
         </p>
         <p>
           <Link href={'/thanks'}>
             <a title={'link to thanks page'} aria-label={'link to thanks page'}>
-              Here&apos;s a huge thanks
+              {t('home:details.second.a')}
             </a>
-          </Link> to all the awesome people supporting me and <Link
-          href={'/blog/post-of-fame'}>
+          </Link>
+          {' '}{t('home:details.second.b')}{' '}
+          <Link
+            href={'/blog/post-of-fame'}>
             <a title={'link to thanks page'} aria-label={'link to thanks page'}>
-              here&apos;s some featured apps from them
+              {t('home:details.second.c')}
             </a>
-          </Link>, for you to check them out!
+          </Link>
+          {t('home:details.second.d')}
         </p>
         <p>
-          I have open <ExtLink to={'https://jahir.xyz/twitterdm'}
-                               label={'Twitter DMs'}/>,&nbsp;
-          <ExtLink to={'https://jahir.xyz/tlgrm'} label={'Telegram'}/> and&nbsp;
-          <ExtLink to={'/contact'} label={'email'} newTab={false}/> for any kind
-          of inquiries. 🤗
+          {t('home:details.third.a')}{' '}
+          <ExtLink to={'https://jahir.xyz/twitterdm'}
+                   label={t('home:details.third.b')}/>,&nbsp;
+          <ExtLink to={'https://jahir.xyz/tlgrm'} label={'Telegram'}/>
+          {' '}{t('home:details.third.c')}{' '}
+          <ExtLink to={'/contact'} label={t('home:details.third.d')}
+                   newTab={false}/>
+          {' '}{t('home:details.third.e')}. 🤗
         </p>
         <p>
-          If you are interested in knowing which tools I use, you can&nbsp;
-          <ExtLink to={'/uses'} label={'check out my uses page'}
-                   newTab={false}/>.
+          {t('home:details.fourth.a')}{' '}
+          <ExtLink
+            to={'/uses'}
+            label={t('home:details.fourth.b', { uses: t('common:uses') })}
+            newTab={false}/>.
         </p>
       </div>
       <div className={styles.find}>
-        <p><b>You can find me on:</b></p>
+        <p><b>{t('home:find-me-on')}:</b></p>
         <Social/>
       </div>
       <SkillSet/>

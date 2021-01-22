@@ -1,0 +1,15 @@
+{
+  "home": "Home",
+  "blog": "Blog",
+  "uses": "Uses",
+  "donate": "Donate",
+  "contact": "Contact",
+  "toggle-menu": "Toggle menu",
+  "toggle-theme": "Toggle dark theme",
+  "social-link": "{{site}} link",
+  "made-with": "Made with",
+  "by": "by",
+  "yours-truly": "yours-truly",
+  "copyright": "Copyright",
+  "all-rights-reserved": "All Rights Reserved"
+}

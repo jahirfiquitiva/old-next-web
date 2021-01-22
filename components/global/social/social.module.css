@@ -85,3 +85,22 @@
   background-color: #7438cc;
 }
 
+.social .button.telegram,
+.social .button.telegram:active {
+  background-color: #1a94d1;
+}
+
+.social .button.telegram:hover,
+.social .button.telegram:focus {
+  background-color: #007ab8;
+}
+
+.social .button.email,
+.social .button.email:active {
+  background-color: #fc5c65;
+}
+
+.social .button.email:hover,
+.social .button.email:focus {
+  background-color: #ca4a51;
+}

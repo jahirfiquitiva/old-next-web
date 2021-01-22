@@ -1,0 +1,30 @@
+{
+  "i-am": "Soy Jahir Fiquitiva",
+  "description": "Soy un ingeniero de software full-stack apasionado y creativo y vivo en",
+  "details": {
+    "first": {
+      "a": "Me considero una persona curiosa así que en mi tiempo libre, me gusta trabajar en",
+      "b": "proyectos personales",
+      "c": "e intentar aprender algo nuevo constantemente para mejorar mis habilidades."
+    },
+    "second": {
+      "a": "Este es un agradecimiento especial",
+      "b": "a todas las personas que me apoyan y",
+      "c": "aquí encuentras algunas de sus apps",
+      "d": ", para que te animes a probarlas!"
+    },
+    "third": {
+      "a": "Tengo disponibles",
+      "b": "mensajes de Twitter",
+      "c": "y",
+      "d": "correo electrónico",
+      "e": "para cualquier tipo de consulta"
+    },
+    "fourth": {
+      "a": "Si te gustaría conocer qué herramientas uso (software y hardware), puedes",
+      "b": "mirar el sitio \"{{uses}}\""
+    }
+  },
+  "find-me-on": "Me puedes encontrar en",
+  "skills": "Habilidades"
+}

@@ -153,6 +153,9 @@ const ContactForm = (props: any) => {
           {errors.message?.length &&
           <p className={styles.error}>{errors.message || ''}</p>}
         </div>
+        <p className={styles.help}>
+          This site is protected by reCAPTCHA and the Google <ExtLink to={'https://policies.google.com/privacy'} label={'Privacy Policy'}/> and <ExtLink to={'https://policies.google.com/terms'} label={'Terms of Service'}/> apply.
+        </p>
         <input type={'text'} name={'honeypot'} hidden
                value={honeypot}
                onChange={(e) => setHoneypot(e.target.value.toString())}/>

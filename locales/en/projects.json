@@ -1,0 +1,17 @@
+{
+  "projects": "Projects",
+  "no-projects": "No projects available",
+  "blueprint": "Dashboard for creating Android icon packs.",
+  "frames": "Dashboard for creating Android wallpapers apps.",
+  "kuper": "Dashboard for Zooper & Kustom Android widget packs.",
+  "pals": "Creates color palettes from any color or image.",
+  "tap": "A Floating Action Button for quickly creating Google Keep notes and Todoist tasks",
+  "chipview": "Custom view to provide Material Design specs' Chip component.",
+  "fabsmenu": "A menu of Material Design FloatingActionButtons",
+  "dashbud": "Quickly setup any of my Android dashboards.",
+  "changes": "Shows the latest change logs of the repositories I own or contribute to.",
+  "prevweb": "Check the source code of previous versions of this website",
+  "sliding": "Pseudo-AI+ML solves the 8-Puzzle aka Sliding Puzzle.",
+  "stan": "Slack bot to help with text-only SCRUM stand-ups.",
+  "other": "Find other open-source projects on GitHub."
+}

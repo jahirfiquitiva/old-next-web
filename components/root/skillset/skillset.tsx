@@ -8,14 +8,15 @@ import {
 import hexToRGB from '@utils/hexToRgb';
 import buildCustomStyles from '@utils/buildCustomStyles';
 import styles from './skillset.module.css';
+import useTranslation from 'next-translate/useTranslation';
 
-interface SkillProps {
+export interface SkillProps {
   name: string,
   iconPath: string,
   color: string,
 }
 
-const skills: SkillProps[] = [
+export const skills: SkillProps[] = [
   { name: 'Android', iconPath: mdiAndroid, color: '#3ddc84' },
   { name: 'Kotlin', iconPath: mdiLanguageKotlin, color: '#6677e0' },
   { name: 'Java', iconPath: mdiLanguageJava, color: '#ea2e2f' },
@@ -34,6 +35,8 @@ const skills: SkillProps[] = [
 
 const iconSize = 0.75;
 const SkillSet = () => {
+  const { t } = useTranslation();
+
   const getColorStyle = (color: string) => {
     if (!color) return {};
     return buildCustomStyles({
@@ -44,7 +47,7 @@ const SkillSet = () => {
 
   return (
     <div className={styles.skills}>
-      <h4 className={styles.title}>🚀&nbsp;&nbsp;Skills</h4>
+      <h4 className={styles.title}>🚀&nbsp;&nbsp;{t('home:skills')}</h4>
       <div className={styles.skillset}>
         {skills.map((it: SkillProps, i: number) => (
           <span key={i} className={styles.skill}
