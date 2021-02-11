@@ -19,7 +19,10 @@ const buildExternalBlogPostsRedirects = async () => {
 
 // noinspection JSValidateTypes
 module.exports = nextTranslate({
-  webpack(config, { isServer }) {
+  webpack(config, {
+    isServer,
+    dev,
+  }) {
     if (isServer) {
       require('./scripts/generate-sitemap');
     }
@@ -35,6 +38,16 @@ module.exports = nextTranslate({
       test: /\.md$/,
       use: 'raw-loader',
     });
+
+    // Replace React with Preact only in client production build
+    if (!dev && !isServer) {
+      Object.assign(config.resolve.alias, {
+        react: 'preact/compat',
+        'react-dom/test-utils': 'preact/test-utils',
+        'react-dom': 'preact/compat',
+      });
+    }
+
     return config;
   },
   images: {
