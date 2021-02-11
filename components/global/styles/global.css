@@ -64,6 +64,7 @@ hr {
   height: 1px;
   background-color: var(--divider);
   border: none;
+  scroll-margin-top: var(--toolbar-height);
 }
 
 pre, code, kbd, samp {
