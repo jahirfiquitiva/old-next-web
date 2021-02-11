@@ -13,6 +13,12 @@ nav.nav {
   box-shadow: 0 0 4px 0 var(--toolbar-shadow-a), 0 3px 4px 0 var(--toolbar-shadow-b), 0 1px 5px 0 var(--toolbar-shadow-c);
 }
 
+@supports not (backdrop-filter: none) {
+  nav.nav {
+    background-color: var(--toolbar-color-opaque);
+  }
+}
+
 .toolbar {
   display: grid;
   grid-template-columns: 1fr;

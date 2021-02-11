@@ -18,6 +18,7 @@
   --text-tertiary: rgba(9, 17, 34, .5);
   --divider: rgba(9, 17, 34, .12);
   --toolbar-color: rgba(235, 240, 251, 0.65);
+  --toolbar-color-opaque: rgb(235, 240, 251);
   --toolbar-shadow-a: rgba(9, 17, 34, .08);
   --toolbar-shadow-b: rgba(9, 17, 34, .06);
   --toolbar-shadow-c: rgba(9, 17, 34, .2);
