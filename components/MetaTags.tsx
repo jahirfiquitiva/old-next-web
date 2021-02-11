@@ -1,5 +1,5 @@
 import { useContext, useEffect, useMemo, useState } from 'react';
-import Head from 'next/head';
+import NextHead from 'next/head';
 import { PageProps } from '@components/types';
 import ThemeContext from '@components/theme/ThemeContext';
 
@@ -21,7 +21,13 @@ const MetaTags = ({ title, description, keywords, image }: PageProps) => {
   }, [isDark]);
 
   return (
-    <Head>
+    <NextHead>
+      <meta charSet={'UTF-8'}/>
+      <meta name={'viewport'} content={'width=device-width, initial-scale=1.0'}/>
+      <meta httpEquiv={'x-ua-compatible'} content={'ie=edge'}/>
+
+      <title>{title}</title>
+
       <meta name={'description'} content={description}/>
       <meta name={'author'} content={'Jahir Fiquitiva'}/>
       <meta name={'keywords'} content={(keywords || []).join(', ')}/>
@@ -82,7 +88,7 @@ const MetaTags = ({ title, description, keywords, image }: PageProps) => {
       <meta
         name={'msapplication-TileImage'}
         content={'/assets/images/brand/favicon32.png'}/>
-    </Head>
+    </NextHead>
   );
 };
 

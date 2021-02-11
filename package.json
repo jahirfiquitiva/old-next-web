@@ -23,6 +23,7 @@
     "frostcolor": "^2.0.3",
     "gray-matter": "^4.0.2",
     "next": "^10.0.6",
+    "next-google-fonts": "^1.2.1",
     "next-translate": "^1.0.2",
     "raw-loader": "^4.0.2",
     "react": "17.0.1",

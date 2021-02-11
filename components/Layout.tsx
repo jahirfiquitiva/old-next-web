@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import GoogleFonts from 'next-google-fonts';
 import { PageProps } from '@components/types';
 import Toolbar from '@components/global/toolbar/toolbar';
 import Content from '@components/global/content/content';
@@ -18,17 +18,13 @@ const Layout = ({
 }: PageProps) => {
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        {/* @ts-ignore */}
-        <link rel={'stylesheet'} media={'print'} onLoad={'this.media=\'all\''}
-              href={'https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600;700&display=swap'}/>
-      </Head>
       <MetaTags
         title={title}
         description={description}
         keywords={keywords}
         image={image}/>
+      <GoogleFonts
+        href={'https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600;700&display=swap'}/>
       <header>
         <Toolbar selected={page}/>
       </header>
