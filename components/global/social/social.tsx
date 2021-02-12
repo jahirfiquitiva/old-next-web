@@ -32,15 +32,15 @@ const socialLinks = [{
   className: styles.telegram,
   link: 'https://t.me/jahirfiquitiva',
 }, {
-  siteName: 'Contact',
-  iconPath: mdiEmailOutline,
-  className: styles.email,
-  link: '/contact',
-}, {
   siteName: 'Twitch',
   iconPath: mdiTwitch,
   className: styles.twitch,
   link: 'https://twitch.com/jahirdotdev',
+}, {
+  siteName: 'Contact',
+  iconPath: mdiEmailOutline,
+  className: styles.email,
+  link: '/contact',
 }];
 
 const iconSize = 0.8;

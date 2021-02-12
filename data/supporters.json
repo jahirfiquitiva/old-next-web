@@ -28,13 +28,7 @@
   ],
   "diamond": [],
   "lightning": [],
-  "robot": [
-    {
-      "name": "Crazy Marvin",
-      "photo": "https://unavatar.now.sh/github/CrazyMarvin",
-      "link": "https://github.com/CrazyMarvin"
-    }
-  ],
+  "robot": [],
   "rocket": [
     {
       "name": "Patryk Goworowski",
