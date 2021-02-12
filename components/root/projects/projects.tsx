@@ -92,14 +92,18 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
         style={linkStyles}>
         <div>
           <div className={styles.preview}>
-            {it.preview?.length &&
-            <UnsizedImage src={it.preview} alt={it.title}/>}
+            {it.preview?.length
+            && <Image
+              src={it.preview} alt={it.title}
+              width={341} height={256}
+              layout={'fixed'}
+              loading={'lazy'}/>}
           </div>
           <div className={styles.content}>
             <div className={styles.iconTitle}>
               <Image
                 src={it.icon} alt={it.title}
-                height={48} width={48}
+                width={48} height={48}
                 layout={'fixed'}
                 loading={'lazy'}/>
               <h4>{it.title}</h4>
