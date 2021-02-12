@@ -25,6 +25,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const configData = await import('../siteconfig.json');
   const supportersData = await import('../data/supporters.json');
 
+  /*
   const res = await fetch(
     'https://developers.buymeacoffee.com/api/v1/subscriptions?status=all', {
       body: `access_token=${process.env.BMAC_API_KEY || ''}`,
@@ -41,6 +42,7 @@ export const getStaticProps: GetStaticProps = async () => {
     console.error(`${res.status} -- ${res.statusText}`);
   }
   console.error('***************************************************');
+  */
 
   return {
     props: {
