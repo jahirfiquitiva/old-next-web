@@ -109,10 +109,18 @@
   opacity: .7;
   --gradient-angle: 135deg;
   height: 168px;
+  max-height: 168px;
   background: var(--b-bg-grad-color);
   background: -moz-linear-gradient(var(--gradient-angle), var(--a-bg-grad-color) 0%, var(--b-bg-grad-color) 40%, var(--c-bg-grad-color) 100%);
   background: -webkit-linear-gradient(var(--gradient-angle), var(--a-bg-grad-color) 0%, var(--b-bg-grad-color) 40%, var(--c-bg-grad-color) 100%);
   background: linear-gradient(var(--gradient-angle), var(--a-bg-grad-color) 0%, var(--b-bg-grad-color) 40%, var(--c-bg-grad-color) 100%);
+}
+
+.projects .grid .item .preview *,
+.projects .grid .item .preview * img {
+  height: 168px !important;
+  max-height: 168px !important;
+  object-fit: contain !important;
 }
 
 .projects .grid .item:focus .preview,
@@ -249,6 +257,13 @@
 
   .projects .grid .item .preview {
     height: 256px;
+    max-height: 256px;
+  }
+
+  .projects .grid .item .preview *,
+  .projects .grid .item .preview * img {
+    height: 256px !important;
+    max-height: 256px !important;
   }
 }
 
