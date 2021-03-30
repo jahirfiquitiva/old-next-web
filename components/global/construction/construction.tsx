@@ -14,7 +14,9 @@ const UnderConstruction = () => {
       </Link>
       <UnsizedImage
         src={'/assets/images/gifs/construction.gif'}
-        alt={'Man falling while working on a construction'}/>
+        alt={'Man falling while working on a construction'}
+        h={'240px'}
+        allowNextComponent/>
     </div>
   );
 };

@@ -39,7 +39,8 @@ const Post = ({ frontmatter, mdBody }: PostProps) => {
         {frontmatter.hero && (
           <UnsizedImage
             className={styles.hero}
-            src={frontmatter.hero || ''} alt={frontmatter.title}/>
+            src={frontmatter.hero || ''}
+            alt={frontmatter.title}/>
         )}
         <ReactMarkdown source={mdBody} escapeHtml={false}
                        className={styles.content}/>

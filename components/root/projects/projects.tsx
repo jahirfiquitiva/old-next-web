@@ -6,7 +6,6 @@ import getColorFromData from '@utils/getColorFromData';
 import getReadableColor from '@utils/getReadableColor';
 import getAnalogousColors from '@utils/getAnalogousColors';
 import buildCustomStyles from '@utils/buildCustomStyles';
-import UnsizedImage from '@components/global/image/UnsizedImage';
 import ThemeContext from '@components/theme/ThemeContext';
 import Stats from '@components/root/projects/stats';
 import styles from './projects.module.css';
@@ -56,7 +55,7 @@ const getSkill = (skillName: string): SkillProps | null => {
 
 const iconSize: number = 0.75;
 const Projects = ({ projects = [] }: ProjectsProps) => {
-  const{t} = useTranslation()
+  const { t } = useTranslation();
   const { isDark } = useContext(ThemeContext);
 
   const renderProjectStack = (stack?: string[]) => {
@@ -66,8 +65,9 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
         const skill = getSkill(skillName);
         if (!skill) return null;
         return (<li key={i}
-          className={skillName.toLowerCase().includes('kotlin') ? styles.nomr
-                                                                : ''}>
+                    className={skillName.toLowerCase().includes('kotlin')
+                               ? styles.nomr
+                               : ''}>
           <span className={styles.skill}>
             <Icon path={skill.iconPath} color={skill.color}
                   size={skillName === 'android' ? iconSize * 1.25 : iconSize}
@@ -133,7 +133,8 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
   return (
     <div className={styles.projects}>
       <div className={styles.titlecontainer}>
-        <h2 className={styles.title}>👨‍💻&nbsp;&nbsp;{t('projects:projects')}</h2>
+        <h2 className={styles.title}>👨‍💻&nbsp;&nbsp;{t(
+          'projects:projects')}</h2>
         {/* @ts-ignore */}
         <Stats className={styles.stats}/>
       </div>

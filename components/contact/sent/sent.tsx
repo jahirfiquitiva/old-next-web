@@ -12,7 +12,9 @@ const Sent = () => (
     </Link>
     <UnsizedImage
       src={'/assets/images/gifs/mail.gif'}
-      alt={'Dog checking mail'}/>
+      alt={'Dog checking mail'}
+      h={'360px'}
+      allowNextComponent/>
   </div>
 );
 

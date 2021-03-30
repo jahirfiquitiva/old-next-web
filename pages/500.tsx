@@ -6,7 +6,7 @@ import Error from '@components/global/error/error';
 const FourHundredFour = ({ title, description, keywords }: PageProps) => {
   return (
     <Layout title={title} description={description} keywords={keywords}>
-      <Error isFourHundredFour/>
+      <Error/>
     </Layout>
   );
 };
@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const configData = await import('../siteconfig.json');
   return {
     props: {
-      title: `Page not found! ~ ${configData.default.title}`,
+      title: `Error! ~ ${configData.default.title}`,
       description: configData.default.description,
       keywords: configData.default.keywords,
     },

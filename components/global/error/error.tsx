@@ -38,6 +38,7 @@ const Error = ({ isFourHundredFour = false }) => {
        ? (<div className={styles.errorContent}>{renderSiteContent()}</div>)
        : renderSiteContent()}
       <UnsizedImage
+        h={isFourHundredFour ? '476px' : '180px'}
         src={isFourHundredFour
              ? '/assets/images/gifs/404.gif'
              : '/assets/images/gifs/monkey.gif'}

@@ -1,4 +1,4 @@
-import GoogleFonts from 'next-google-fonts';
+import { GoogleFonts } from 'next-google-fonts';
 import { PageProps } from '@components/types';
 import Toolbar from '@components/global/toolbar/toolbar';
 import Content from '@components/global/content/content';
