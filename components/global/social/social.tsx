@@ -1,32 +1,33 @@
+import { mdiGithub, mdiInstagram, mdiLinkedin, mdiTwitter } from '@mdi/js';
 import Icon from '@mdi/react';
-import {
-  mdiEmailOutline, mdiGithub, mdiInstagram, mdiLinkedin, mdiTelegram, mdiTwitch,
-  mdiTwitter
-} from '@mdi/js';
-import styles from './social.module.css';
 import useTranslation from 'next-translate/useTranslation';
+import styles from './social.module.css';
 
-const socialLinks = [{
-  siteName: 'Twitter',
-  iconPath: mdiTwitter,
-  className: styles.twitter,
-  link: 'https://twitter.com/jahirfiquitiva',
-}, {
-  siteName: 'GitHub',
-  iconPath: mdiGithub,
-  className: styles.github,
-  link: 'https://github.com/jahirfiquitiva',
-}, {
-  siteName: 'LinkedIn',
-  iconPath: mdiLinkedin,
-  className: styles.linkedin,
-  link: 'https://linkedin.com/in/jahirfiquitiva',
-}, {
-  siteName: 'Instagram',
-  iconPath: mdiInstagram,
-  className: styles.instagram,
-  link: 'https://instagram.com/jahirfiquitiva',
-}, {
+const socialLinks = [
+  {
+    siteName: 'GitHub',
+    iconPath: mdiGithub,
+    className: styles.github,
+    link: 'https://github.com/jahirfiquitiva',
+  },
+  {
+    siteName: 'LinkedIn',
+    iconPath: mdiLinkedin,
+    className: styles.linkedin,
+    link: 'https://linkedin.com/in/jahirfiquitiva',
+  },
+  {
+    siteName: 'Twitter',
+    iconPath: mdiTwitter,
+    className: styles.twitter,
+    link: 'https://twitter.com/jahirfiquitiva',
+  },
+  {
+    siteName: 'Instagram',
+    iconPath: mdiInstagram,
+    className: styles.instagram,
+    link: 'https://instagram.com/jahirfiquitiva',
+  }, /* {
   siteName: 'Telegram',
   iconPath: mdiTelegram,
   className: styles.telegram,
@@ -41,7 +42,8 @@ const socialLinks = [{
   iconPath: mdiEmailOutline,
   className: styles.email,
   link: '/contact',
-}];
+} */
+];
 
 const iconSize = 0.8;
 const Social = ({ centered }: { centered?: boolean }) => {
@@ -53,13 +55,19 @@ const Social = ({ centered }: { centered?: boolean }) => {
         .filter((it) => it.disabled === 'undefined' || !it.disabled)
         .map((it, index) => {
           const title = t('common:social-link', { site: it.siteName });
-          return (<a
-            title={title} aria-label={title}
-            className={`button ${styles.button} ${it.className}`}
-            href={it.link} key={index}
-            rel={'noopener noreferrer'} target={'_blank'}>
-            <Icon path={it.iconPath} size={iconSize}/>
-          </a>);
+          return (
+            <a
+              title={title}
+              aria-label={title}
+              className={`button ${styles.button} ${it.className}`}
+              href={it.link}
+              key={index}
+              rel={'noopener noreferrer'}
+              target={'_blank'}
+            >
+              <Icon path={it.iconPath} size={iconSize} />
+            </a>
+          );
         })}
     </div>
   );
