@@ -35,7 +35,12 @@ const About = () => {
             <span className={'wave'}>👋</span>
             &nbsp;&nbsp;{hellos[hello]}!
           </h3>
-          <h3 className={styles.name}>{t('home:i-am')}</h3>
+          <h3 className={styles.name}>
+            {t('home:i-am')}{' '}
+            <span id={'name'} className={'text-gradient'}>
+              Jahir Fiquitiva
+            </span>
+          </h3>
           <br />
           <p>
             {t('home:description')}{' '}

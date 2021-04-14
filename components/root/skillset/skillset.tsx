@@ -1,8 +1,18 @@
 import Icon from '@mdi/react';
 import {
-  mdiAndroid, mdiGit, mdiLanguageCss3, mdiLanguageHtml5, mdiLanguageJava,
-  mdiLanguageJavascript, mdiLanguageKotlin, mdiLanguagePython,
-  mdiLanguageTypescript, mdiLeaf, mdiMaterialDesign, mdiNodejs, mdiReact,
+  mdiAndroid,
+  mdiGit,
+  mdiLanguageCss3,
+  mdiLanguageHtml5,
+  mdiLanguageJava,
+  mdiLanguageJavascript,
+  mdiLanguageKotlin,
+  mdiLanguagePython,
+  mdiLanguageTypescript,
+  mdiLeaf,
+  mdiMaterialDesign,
+  mdiNodejs,
+  mdiReact,
   mdiTriangle
 } from '@mdi/js';
 import hexToRGB from '@utils/hexToRgb';
@@ -11,9 +21,9 @@ import styles from './skillset.module.css';
 import useTranslation from 'next-translate/useTranslation';
 
 export interface SkillProps {
-  name: string,
-  iconPath: string,
-  color: string,
+  name: string;
+  iconPath: string;
+  color: string;
 }
 
 export const skills: SkillProps[] = [
@@ -47,12 +57,21 @@ const SkillSet = () => {
 
   return (
     <div className={styles.skills}>
-      <h4 className={styles.title}>🚀&nbsp;&nbsp;{t('home:skills')}</h4>
+      <h4 className={styles.title}>
+        🚀&nbsp;&nbsp;
+        <span className={['text-gradient', 'grad-b'].join(' ')}>
+          {t('home:skills')}
+        </span>
+      </h4>
       <div className={styles.skillset}>
         {skills.map((it: SkillProps, i: number) => (
-          <span key={i} className={styles.skill}
-                style={getColorStyle(it.color)}>
-            <Icon path={it.iconPath} size={iconSize}/>{it.name}
+          <span
+            key={i}
+            className={styles.skill}
+            style={getColorStyle(it.color)}
+          >
+            <Icon path={it.iconPath} size={iconSize} />
+            {it.name}
           </span>
         ))}
       </div>

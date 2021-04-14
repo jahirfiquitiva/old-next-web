@@ -3,7 +3,8 @@
 }
 
 .skills .title {
-  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #fd979d;
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0
+    var(--dark-gradients-c);
 }
 
 .skillset {
@@ -19,15 +20,15 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: .4rem .8rem;
-  font-size: .9rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid var(--border-color);
   border-radius: 999999px;
   color: var(--text-secondary);
   cursor: pointer;
-  transition: all .2s ease-in-out !important;
-  margin: .4rem .6rem .4rem 0;
+  transition: all 0.2s ease-in-out !important;
+  margin: 0.4rem 0.6rem 0.4rem 0;
 }
 
 .skillset .skill:hover,
@@ -38,7 +39,7 @@
 }
 
 .skillset .skill svg {
-  margin-right: .4rem;
+  margin-right: 0.4rem;
   fill: var(--text-secondary);
 }
 
