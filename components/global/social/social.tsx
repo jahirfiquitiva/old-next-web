@@ -45,7 +45,7 @@ const socialLinks = [
 } */
 ];
 
-const iconSize = 0.8;
+const iconSize = 0.9;
 const Social = ({ centered }: { centered?: boolean }) => {
   const { t } = useTranslation();
   return (
