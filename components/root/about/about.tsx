@@ -63,9 +63,7 @@ const About = () => {
             to={'https://mattersupply.co/'}
             label={'Matter Supply Co.'}
             newTab
-          >
-            Matter Supply Co.
-          </ExtLink>
+          />
         </p>
         <p>
           {t('home:details.first.a')}{' '}
