@@ -1,0 +1,106 @@
+.suggestions {
+  margin: .6rem 0 1.6rem;
+  border: 1px dashed var(--accent-light);
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem;
+  transition: all .3s ease-in-out;
+}
+
+.suggestions * {
+  transition: all .3s ease-in-out;
+}
+
+.suggestions .content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: .8rem;
+  margin-top: .6rem;
+}
+
+.suggestions .content .texts {
+  grid-row: 1;
+}
+
+.suggestions h6 {
+  margin-bottom: .4rem;
+}
+
+.suggestions form {
+  display: flex;
+  flex-direction: column;
+  grid-row: 2;
+}
+
+.suggestions form textarea {
+  margin-top: 0;
+  min-height: 48px;
+}
+
+.suggestions form button {
+  align-self: flex-end;
+}
+
+.suggestions .result {
+  height: 0;
+  grid-row: 3;
+  background-color: var(--primary);
+  opacity: 0;
+  border-radius: 4px;
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.suggestions .result.visible {
+  height: auto;
+  padding: .6rem .8rem;
+  min-height: 32px;
+  opacity: 1;
+  pointer-events: auto;
+  user-select: auto;
+}
+
+.suggestions .result p {
+  color: var(--text-primary);
+  opacity: 0;
+}
+
+.suggestions .result.visible p {
+  opacity: 1;
+}
+
+.suggestions .result.ok {
+  background-color: var(--dark-gradients-c);
+}
+
+.suggestions .result.error {
+  background-color: var(--dark-gradients-f);
+}
+
+@media (min-width: 768px) {
+  .suggestions .content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-column-gap: 1.2rem;
+    grid-row-gap: 1rem;
+  }
+
+  .suggestions form {
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .suggestions form textarea {
+    min-height: 56px;
+  }
+
+  .suggestions .result {
+    grid-column: 1;
+    grid-row: 2;
+    padding: .6rem .8rem;
+  }
+}

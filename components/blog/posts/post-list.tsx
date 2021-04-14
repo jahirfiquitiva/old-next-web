@@ -5,10 +5,10 @@ import { mdiMagnify, mdiPencil } from '@mdi/js';
 import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
 import ThemeContext from '@components/theme/ThemeContext';
-import ExtLink from '@components/global/ext-link/ext-link';
 import styles from './post-list.module.css';
 import buildCustomStyles from '@utils/buildCustomStyles';
 import { usePalette } from 'react-palette';
+import { Suggestions } from '@components/blog/suggestions/suggestions';
 
 export interface FrontmatterProps {
   title: string,
@@ -29,6 +29,7 @@ export interface PostProps {
 
 export interface PostsListProps {
   posts?: PostProps[]
+  form?: Object
 }
 
 const PostItem = (props: PostProps) => {
@@ -102,7 +103,7 @@ const PostItem = (props: PostProps) => {
   return renderPostLink(heroUrl || '', rightLink);
 };
 
-const PostsList = ({ posts }: PostsListProps) => {
+const PostsList = ({ posts, form }: PostsListProps) => {
   const [filter, setFilter] = useState('');
 
   const filteredPosts = (posts || [])
@@ -119,8 +120,8 @@ const PostsList = ({ posts }: PostsListProps) => {
       );
     }
     return (<div className={styles.posts}>
-      {filteredPosts.map((post) => {
-        return <PostItem {...post} />;
+      {filteredPosts.map((post, index) => {
+        return <PostItem key={index} {...post} />;
       })}
     </div>);
   };
@@ -138,17 +139,7 @@ const PostsList = ({ posts }: PostsListProps) => {
         <Icon path={mdiMagnify} size={1}/>
       </div>
       {renderPostsList()}
-      <p>I&apos;m honestly not the kind of person who blogs much, but I would
-        like to do it more
-        frequently.</p>
-      <p>If you have ideas or topics you would like me to blog about, I&apos;d
-        really appreciate if
-        you <Link href={'/contact'}><a>share them with me</a></Link>.</p>
-      <p>You can also find other posts by me on&nbsp;
-        <ExtLink label={'dev.to'}
-                 to={'https://dev.to/jahirfiquitiva'}/>&nbsp;and&nbsp;
-        <ExtLink label={'medium'} to={'https://medium.com/@jahirfiquitiva'}/>
-      </p>
+      <Suggestions form={form}/>
     </div>
   );
 };

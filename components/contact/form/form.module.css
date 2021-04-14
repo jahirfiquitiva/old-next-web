@@ -41,59 +41,8 @@
   color: var(--error-color);
 }
 
-.contact form label {
-  margin-top: 1rem;
-}
-
-.contact form input,
-.contact form textarea {
-  background: rgba(0, 0, 0, 0);
-  border: 1px solid var(--divider);
-  border-radius: 6px;
-  min-height: 32px;
-  margin-top: .4rem;
-  padding: .4rem .6rem;
-}
-
-.contact form textarea {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.contact form input:focus,
-.contact form textarea:focus {
-  outline-color: var(--accent);
-  outline-width: 1px;
-  border: 1px solid var(--accent);
-}
-
-.contact form button:disabled,
-.contact form input:disabled,
-.contact form textarea:disabled {
-  opacity: 0.5;
-  pointer-events: none;
-  cursor: not-allowed;
-}
-
-.contact form textarea {
-  resize: vertical;
-  min-height: 96px;
-  max-height: 192px;
-}
-
 .contact form button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 1.2rem 0 0;
-  min-height: 40px;
-  width: auto;
   max-width: 96px;
-}
-
-.contact form button svg {
-  margin-right: .4rem;
 }
 
 @media (min-width: 960px) {
@@ -107,9 +56,5 @@
 
   .contact form .row .field:not(:last-child) {
     margin-right: 1.2rem;
-  }
-
-  .contact form textarea {
-    min-height: 144px;
   }
 }
