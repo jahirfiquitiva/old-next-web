@@ -7,8 +7,14 @@ import SkillSet from '@components/root/skillset/skillset';
 import styles from './about.module.css';
 import useTranslation from 'next-translate/useTranslation';
 
-const hellos = ['Hello, world', 'Hola, mundo', 'Ciao, mondo', 'Hallo, Welt',
-  'Salut, monde', 'Olá, mundo'];
+const hellos = [
+  'Hello, world',
+  'Hola, mundo',
+  'Ciao, mondo',
+  'Hallo, Welt',
+  'Salut, monde',
+  'Olá, mundo',
+];
 
 const About = () => {
   const { t } = useTranslation();
@@ -30,68 +36,63 @@ const About = () => {
             &nbsp;&nbsp;{hellos[hello]}!
           </h3>
           <h3 className={styles.name}>{t('home:i-am')}</h3>
-          <br/>
+          <br />
           <p>
             {t('home:description')}{' '}
             <ExtLink
               to={'https://www.google.com/maps/place/Colombia/@4,-72z/'}
-              label={'Colombia 🇨🇴'}/>
+              label={'Colombia 🇨🇴'}
+            />
           </p>
         </div>
         <div className={styles.photocontainer}>
           <Image
             loading={'lazy'}
-            src={'/assets/images/me/me.jpg'} alt={'Jahir\'s Photo'}
+            src={'/assets/images/me/me.jpg'}
+            alt={'Jahir\'s Photo'}
             className={styles.photo}
-            height={168} width={168}/>
+            height={168}
+            width={168}
+          />
         </div>
       </div>
       <div className={styles.details}>
         <p>
+          {t('home:details.fifth.a')}{' '}
+          <ExtLink
+            to={'https://mattersupply.co/'}
+            label={'Matter Supply Co.'}
+            newTab
+          >
+            Matter Supply Co.
+          </ExtLink>
+        </p>
+        <p>
           {t('home:details.first.a')}{' '}
-          <ExtLink to={'#projects'}
-                   label={t('home:details.first.b')}
-                   newTab={false}/>
-          {' '}{t('home:details.first.c')}
-        </p>
-        <p>
-          <Link href={'/thanks'}>
-            <a title={'link to thanks page'} aria-label={'link to thanks page'}>
-              {t('home:details.second.a')}
-            </a>
-          </Link>
-          {' '}{t('home:details.second.b')}{' '}
-          <Link
-            href={'/blog/post-of-fame'}>
-            <a title={'link to thanks page'} aria-label={'link to thanks page'}>
-              {t('home:details.second.c')}
-            </a>
-          </Link>
-          {t('home:details.second.d')}
-        </p>
-        <p>
-          {t('home:details.third.a')}{' '}
-          <ExtLink to={'https://jahir.xyz/twitterdm'}
-                   label={t('home:details.third.b')}/>,&nbsp;
-          <ExtLink to={'https://jahir.xyz/tlgrm'} label={'Telegram'}/>
-          {' '}{t('home:details.third.c')}{' '}
-          <ExtLink to={'/contact'} label={t('home:details.third.d')}
-                   newTab={false}/>
-          {' '}{t('home:details.third.e')}. 🤗
+          <ExtLink
+            to={'#projects'}
+            label={t('home:details.first.b')}
+            newTab={false}
+          />{' '}
+          {t('home:details.first.c')}
         </p>
         <p>
           {t('home:details.fourth.a')}{' '}
           <ExtLink
             to={'/uses'}
             label={t('home:details.fourth.b', { uses: t('common:uses') })}
-            newTab={false}/>.
+            newTab={false}
+          />
+          .
         </p>
       </div>
       <div className={styles.find}>
-        <p><b>{t('home:find-me-on')}:</b></p>
-        <Social/>
+        <p>
+          <b>{t('home:find-me-on')}:</b>
+        </p>
+        <Social />
       </div>
-      <SkillSet/>
+      <SkillSet />
     </>
   );
 };

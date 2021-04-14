@@ -1,6 +1,6 @@
 {
   "i-am": "Soy Jahir Fiquitiva",
-  "description": "Soy un ingeniero de software full-stack apasionado y creativo y vivo en",
+  "description": "Ingeniero de software full-stack apasionado y creativo y vivo en",
   "details": {
     "first": {
       "a": "Me considero una persona curiosa así que en mi tiempo libre, me gusta trabajar en",
@@ -23,6 +23,9 @@
     "fourth": {
       "a": "Si te gustaría conocer qué herramientas uso (software y hardware), puedes",
       "b": "mirar el sitio \"{{uses}}\""
+    },
+    "fifth": {
+      "a": "Actualmente trabajo como tecnologista de software en"
     }
   },
   "find-me-on": "Me puedes encontrar en",
