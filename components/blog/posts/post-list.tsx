@@ -9,6 +9,7 @@ import styles from './post-list.module.css';
 import buildCustomStyles from '@utils/buildCustomStyles';
 import { usePalette } from 'react-palette';
 import { Suggestions } from '@components/blog/suggestions/suggestions';
+import { formatDate } from '@utils/formatDate';
 
 export interface FrontmatterProps {
   title: string,
@@ -76,8 +77,8 @@ const PostItem = (props: PostProps) => {
       {renderPostHero(heroUrl, color)}
       <div className={styles.info}>
         <h6>{frontmatter.title}</h6>
-        <p>{frontmatter.date}</p>
         {frontmatter.description && <p>{frontmatter.description || ''}</p>}
+        <p className={styles.date}>{formatDate(new Date(frontmatter.date))}</p>
       </div>
     </div>);
   };

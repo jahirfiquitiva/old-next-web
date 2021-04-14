@@ -8,6 +8,7 @@ import UnsizedImage from '@components/global/image/UnsizedImage';
 import ThemeContext from '@components/theme/ThemeContext';
 import styles from './post.module.css';
 import { FrontmatterProps } from '@components/blog/posts/post-list';
+import { formatDate } from '@utils/formatDate';
 
 interface PostProps {
   frontmatter: FrontmatterProps,
@@ -36,6 +37,7 @@ const Post = ({ frontmatter, mdBody }: PostProps) => {
         }}>
           {frontmatter.title}
         </h1>
+        <p className={styles.date}>{formatDate(new Date(frontmatter.date))}</p>
         {frontmatter.hero && (
           <UnsizedImage
             className={styles.hero}

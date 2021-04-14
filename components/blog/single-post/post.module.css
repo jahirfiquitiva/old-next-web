@@ -12,6 +12,7 @@
   max-height: 440px;
   width: 100%;
   height: auto;
+  border-radius: 6px;
 }
 
 .post img {
@@ -19,6 +20,7 @@
   margin: auto;
   height: auto;
   max-width: 100%;
+  border-radius: 6px;
 }
 
 .post h1,
@@ -27,6 +29,16 @@
 .post h4 {
   margin-top: 1.6rem;
   margin-bottom: .4rem;
+}
+
+.post h1 {
+  margin-bottom: 0;
+}
+
+.post .date {
+  color: var(--text-tertiary);
+  margin-top: 0;
+  margin-bottom: 2.4rem;
 }
 
 .post p,

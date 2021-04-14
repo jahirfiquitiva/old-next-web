@@ -66,8 +66,16 @@
   padding: 1rem;
 }
 
+.blog .posts .card .details .info h6 {
+  font-size: 1.1rem;
+}
+
 .blog .posts .card .details .info p {
   margin-top: .25rem;
+}
+
+.blog .posts .card .details .info .date {
+  color: var(--text-tertiary);
 }
 
 .blog .posts .card,
