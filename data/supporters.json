@@ -21,6 +21,11 @@
       "key": "rocket"
     },
     {
+      "id": "585",
+      "name": "🔮 Crystal Ball",
+      "key": "crystal"
+    },
+    {
       "name": "🦄 Unicorn",
       "key": "unicorn",
       "description": "Special one-time supporters"
@@ -29,6 +34,23 @@
   "diamond": [],
   "lightning": [],
   "robot": [],
+  "crystal": [
+    {
+      "name": "one4studio",
+      "link": "https://one4studio.com/",
+      "photo": "https://unavatar.now.sh/github/one4studio"
+    },
+    {
+      "name": "RandleP",
+      "link": "https://play.google.com/store/apps/dev?id=6241880976999342555",
+      "photo": "https://unavatar.now.sh/github/RandleP"
+    },
+    {
+      "name": "CrazyMarvin",
+      "link": "https://github.com/CrazyMarvin",
+      "photo": "https://unavatar.now.sh/github/CrazyMarvin"
+    }
+  ],
   "rocket": [
     {
       "name": "Patryk Goworowski",
