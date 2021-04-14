@@ -45,6 +45,10 @@
 
   --name-gradients-a: var(--gradients-a);
   --name-gradients-b: var(--gradients-b);
+
+  --projects-card-color: rgba(235, 240, 251, 0.25);
+  --projects-card-color-hover: rgba(235, 240, 251, 0.85);
+  --projects-card-text-shadow: rgba(235, 240, 251, 0.7);
 }
 
 .dark-mode {
@@ -73,6 +77,10 @@
   --gradients-e: var(--dark-gradients-e);
   --gradients-f: var(--dark-gradients-f);
   --gradients-g: var(--dark-gradients-g);
+
+  --projects-card-color: rgba(8, 15, 30, 0.25);
+  --projects-card-color-hover: rgba(8, 15, 30, 0.75);
+  --projects-card-text-shadow: rgba(9, 17, 34, 0.4);
 }
 
 html,

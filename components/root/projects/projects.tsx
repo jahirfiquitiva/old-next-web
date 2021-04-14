@@ -37,12 +37,12 @@ const buildCustomLinkStylesForColor = (
   const [aColor, cColor] = getAnalogousColors(color);
   const safeColor = getReadableColor(color, isDark);
   return buildCustomStyles({
-    '--shadow-color': hexToRGB(safeColor, 0.2),
-    '--border-color': hexToRGB(safeColor, 0.3),
+    '--shadow-color': hexToRGB(safeColor, 0.3),
+    '--border-color': hexToRGB(safeColor, 0.4),
     '--hl-color': safeColor,
-    '--a-bg-grad-color': aColor,
+    '--a-bg-grad-color': cColor,
     '--b-bg-grad-color': color,
-    '--c-bg-grad-color': cColor
+    '--c-bg-grad-color': aColor
   });
 };
 
@@ -56,7 +56,7 @@ const getSkill = (skillName: string): SkillProps | null => {
   }
 };
 
-const iconSize: number = 0.75;
+const iconSize: number = 0.9;
 const Projects = ({ projects = [] }: ProjectsProps) => {
   const { t } = useTranslation();
   const { isDark } = useContext(ThemeContext);
@@ -92,8 +92,8 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
   const renderNewProject = (it: ProjectProps) => {
     const { data } = it.icon ? usePalette(it.icon) : { data: null };
     const color = isDark
-      ? getColorFromData(data, isDark) || it.color
-      : it.color;
+                  ? getColorFromData(data, isDark) || it.color
+                  : it.color;
     const linkStyles = buildCustomLinkStylesForColor(color, isDark);
     return (
       <a
@@ -106,20 +106,21 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
         rel={'noopener noreferrer'}
         style={linkStyles}
       >
-        <div>
-          <div className={styles.preview}>
-            {it.preview?.length && (
-              <Image
-                src={it.preview}
-                alt={it.title}
-                width={341}
-                height={256}
-                layout={'fixed'}
-                loading={'lazy'}
-              />
-            )}
-          </div>
-          <div className={styles.content}>
+
+        <div className={styles.preview}>
+          {it.preview?.length && (
+            <Image
+              src={it.preview}
+              alt={it.title}
+              width={341}
+              height={256}
+              layout={'fixed'}
+              loading={'lazy'}
+            />
+          )}
+        </div>
+        <div className={styles.content}>
+          <div className={styles.wrapper}>
             <div className={styles.iconTitle}>
               <Image
                 src={it.icon}
@@ -129,7 +130,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
                 layout={'fixed'}
                 loading={'lazy'}
               />
-              <h4>{it.title}</h4>
+              <h5>{it.title}</h5>
             </div>
             <p>{t(`projects:${it.description}`)}</p>
             {renderProjectStack(it.stack)}
@@ -143,7 +144,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
     if (projects.length <= 0) {
       return (
         <>
-          <br />
+          <br/>
           <p>{t('projects:no-projects')} 🙃</p>
         </>
       );
@@ -165,7 +166,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
           </span>
         </h2>
         {/* @ts-ignore */}
-        <Stats className={styles.stats} />
+        <Stats className={styles.stats}/>
       </div>
       {renderProjects()}
     </div>
