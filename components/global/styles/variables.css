@@ -50,6 +50,9 @@
   --projects-card-color: rgba(235, 240, 251, 0.25);
   --projects-card-color-hover: rgba(235, 240, 251, 0.85);
   --projects-card-text-shadow: rgba(235, 240, 251, 0.7);
+
+  --toast-success: rgba(121, 217, 166, 0.9);
+  --toast-error: rgba(243, 137, 156, 0.7);
 }
 
 .dark-mode {
@@ -82,4 +85,7 @@
   --projects-card-color: rgba(8, 15, 30, 0.25);
   --projects-card-color-hover: rgba(8, 15, 30, 0.75);
   --projects-card-text-shadow: rgba(9, 17, 34, 0.4);
+
+  --toast-success: rgba(121, 217, 166, 0.6);
+  --toast-error: rgba(243, 137, 156, 0.5);
 }
