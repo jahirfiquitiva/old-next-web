@@ -87,13 +87,26 @@ const Supporters = ({ supporters }: any) => {
 
   return (
     <div className={styles.supporters}>
-      <h3 className={styles.title}>🙌&nbsp;&nbsp;
-        <span className={'text-gradient grad-g'}>
-          Thanks!
-        </span>
-      </h3>
-      <p>I&apos;m really grateful to all the awesome people that support my
-        work.</p>
+      <div className={styles.header}>
+        <div className={styles.container}>
+          <h3 className={styles.title}>🙌&nbsp;&nbsp;
+            <span className={'text-gradient grad-g'}>
+              Thanks!
+            </span>
+          </h3>
+          <p>I&apos;m really grateful to all the awesome people that support my
+            work.</p>
+        </div>
+        <div className={styles.thanksgif}
+             style={{ width: '100%', minWidth: '256px' }}>
+          <Image
+            layout={'fill'}
+            objectFit={'contain'}
+            loading={'lazy'}
+            src={'/assets/images/gifs/thanks.gif'}
+            alt={'Adventure Time characters hugging each other and saying thanks'}/>
+        </div>
+      </div>
       {/*
       <p>You can sponsor me via <ExtLink label={'GitHub Sponsors'}
                                          to={'https://github.com/sponsors/jahirfiquitiva'}/>,
@@ -106,14 +119,6 @@ const Supporters = ({ supporters }: any) => {
             {renderSupportersCategory(it)}
           </Fragment>);
         })}
-      <div className={styles.thanksgif}>
-        <Image
-          layout={'fill'}
-          objectFit={'contain'}
-          loading={'lazy'}
-          src={'/assets/images/gifs/thanks.gif'}
-          alt={'Adventure Time characters hugging each other and saying thanks'}/>
-      </div>
     </div>
   );
 };
