@@ -80,7 +80,7 @@ const PostsList = ({ posts }: PostsListProps) => {
     return (<div className={styles.details}>
       {renderPostHero(heroUrl, color)}
       <div className={styles.info}>
-        <h5>{post.frontmatter.title}</h5>
+        <h6>{post.frontmatter.title}</h6>
         <p>{post.frontmatter.date}</p>
         <p>{post.frontmatter.description || ''}</p>
       </div>

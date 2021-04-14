@@ -11,8 +11,9 @@
   grid-template-columns: 1fr;
   grid-template-rows: masonry;
   grid-auto-flow: row dense;
-  grid-gap: 1rem;
+  grid-gap: 1.6rem;
   padding: 1rem 0;
+  margin-top: 1rem;
 }
 
 .blog .posts .card {
@@ -33,6 +34,8 @@
 .blog .posts .card .details {
   align-self: flex-start;
   width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .blog .posts .card .hero {
@@ -42,11 +45,12 @@
   justify-content: center;
   align-items: center;
   object-fit: cover;
-  max-height: 168px;
-  width: 100%;
-  height: 168px;
+  width: 96px;
+  min-width: 96px;
+  min-height: 96px;
+  height: auto;
   border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -97,8 +101,8 @@
   transform: translateY(-.1rem);
 }
 
-.blog .posts .card:focus h5,
-.blog .posts .card:hover h5 {
+.blog .posts .card:focus h6,
+.blog .posts .card:hover h6 {
   color: var(--hl-color);
   text-decoration: underline;
   -webkit-text-decoration-style: solid;
@@ -111,9 +115,11 @@
   color: var(--text-primary);
 }
 
-@media (min-width: 660px) {
-  .blog .posts {
-    grid-template-columns: repeat(2, 1fr);
+@media (min-width: 768px) {
+  .blog .posts .card .hero {
+    width: 144px;
+    min-width: 144px;
+    min-height: 108px;
   }
 }
 
@@ -124,6 +130,12 @@
 
   .blog .posts {
     padding: 3rem 0;
-    grid-template-columns: repeat(3, 1fr);
+    margin-top: 0;
+  }
+
+  .blog .posts .card .hero {
+    width: 192px;
+    min-width: 192px;
+    min-height: 126px;
   }
 }
