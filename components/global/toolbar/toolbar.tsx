@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { CSSProperties, useContext, useState } from 'react';
 import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
 import Icon from '@mdi/react';
@@ -30,6 +30,25 @@ const Toolbar = ({ selected }: ToolbarProps) => {
 
   const buildLinkTitle = (destination: string): string => {
     return t('common:social-link', { site: t(`common:${destination}`) });
+  };
+
+  const getLinkStyles = (item: number): CSSProperties => {
+    let letter = 'b';
+    switch (item) {
+      case 2:
+        letter = 'd';
+        break;
+      case 3:
+        letter = 'f';
+        break;
+      case 4:
+        letter = 'a';
+        break;
+      default:
+        break;
+    }
+    // @ts-ignore
+    return { '--shadow-color': `var(--gradients-${letter})` };
   };
 
   return (
@@ -72,9 +91,7 @@ const Toolbar = ({ selected }: ToolbarProps) => {
             <Link href={'/blog'}>
               <a title={buildLinkTitle('blog')}
                  aria-label={buildLinkTitle('blog')}>
-                <span
-                  className={styles.emoji}
-                  style={{ '--shadow-color': 'var(--gradients-b)' }}>
+                <span className={styles.emoji} style={getLinkStyles(1)}>
                   📝
                 </span>
                 <span className={'text-gradient grad-b forced'}>
@@ -89,9 +106,7 @@ const Toolbar = ({ selected }: ToolbarProps) => {
             <Link href={'/blog/uses'}>
               <a title={buildLinkTitle('uses')}
                  aria-label={buildLinkTitle('uses')}>
-                <span
-                  className={styles.emoji}
-                  style={{ '--shadow-color': 'var(--gradients-d)' }}>
+                <span className={styles.emoji} style={getLinkStyles(2)}>
                   ⚡️
                 </span>
                 <span className={'text-gradient grad-d forced'}>
@@ -106,9 +121,7 @@ const Toolbar = ({ selected }: ToolbarProps) => {
             <Link href={'/donate'}>
               <a title={buildLinkTitle('donate')}
                  aria-label={buildLinkTitle('donate')}>
-                <span
-                  className={styles.emoji}
-                  style={{ '--shadow-color': 'var(--gradients-f)' }}>
+                <span className={styles.emoji} style={getLinkStyles(3)}>
                   ❤️
                 </span>
                 <span className={'text-gradient grad-f forced'}>
@@ -123,9 +136,7 @@ const Toolbar = ({ selected }: ToolbarProps) => {
             <Link href={'/contact'}>
               <a title={buildLinkTitle('contact')}
                  aria-label={buildLinkTitle('contact')}>
-                <span
-                  className={styles.emoji}
-                  style={{ '--shadow-color': 'var(--gradients-a)' }}>
+                <span className={styles.emoji} style={getLinkStyles(4)}>
                   📬
                 </span>
                 <span className={'text-gradient grad-a forced'}>
