@@ -24,7 +24,7 @@
 }
 
 .projects .title {
-  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 var(--dark-gradients-d);
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 var(--dark-gradients-c);
 }
 
 .projects .titlecontainer .stats,

@@ -3,7 +3,7 @@
 }
 
 .contact .title {
-  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #fd7d84;
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 var(--dark-gradients-a);
 }
 
 .contact p {
@@ -107,5 +107,9 @@
 
   .contact form .row .field:not(:last-child) {
     margin-right: 1.2rem;
+  }
+
+  .contact form textarea {
+    min-height: 144px;
   }
 }

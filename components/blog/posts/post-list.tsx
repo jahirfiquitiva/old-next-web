@@ -104,7 +104,11 @@ const PostsList = ({ posts }: PostsListProps) => {
 
   return (
     <div className={styles.blog}>
-      <h3 className={styles.title}>📝 &nbsp;&nbsp;Blog</h3>
+      <h3 className={styles.title}>📝 &nbsp;&nbsp;
+        <span className={'text-gradient grad-b'}>
+          Blog
+        </span>
+      </h3>
       <div className={styles.posts}>
         {(posts || []).map((post) => {
           const heroUrl = getHeroUrl(post);

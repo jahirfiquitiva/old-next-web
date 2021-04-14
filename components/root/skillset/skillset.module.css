@@ -3,8 +3,7 @@
 }
 
 .skills .title {
-  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0
-    var(--dark-gradients-c);
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 var(--dark-gradients-b);
 }
 
 .skillset {

@@ -36,6 +36,7 @@
   --gradients-f: #bc2f48;
   --gradients-g: #7a4cbb;
 
+  --dark-gradients-a: var(--accent-light);
   --dark-gradients-b: #81c1e9;
   --dark-gradients-c: #79d9a6;
   --dark-gradients-d: #fad483;

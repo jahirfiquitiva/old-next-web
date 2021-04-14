@@ -101,7 +101,11 @@ const ContactForm = (props: any) => {
 
   return (
     <div className={styles.contact}>
-      <h3 className={styles.title}>📮&nbsp;&nbsp;Contact</h3>
+      <h3 className={styles.title}>📬&nbsp;&nbsp;
+        <span className={'text-gradient grad-a'}>
+        Contact
+      </span>
+      </h3>
       <p><b>Don&apos;t hesitate contacting me!</b></p>
       <p>
         PS: I also have open <ExtLink to={'https://jahir.xyz/twitterdm'}
@@ -154,7 +158,11 @@ const ContactForm = (props: any) => {
           <p className={styles.error}>{errors.message || ''}</p>}
         </div>
         <p className={styles.help}>
-          This site is protected by reCAPTCHA and the Google <ExtLink to={'https://policies.google.com/privacy'} label={'Privacy Policy'}/> and <ExtLink to={'https://policies.google.com/terms'} label={'Terms of Service'}/> apply.
+          This site is protected by reCAPTCHA and the Google <ExtLink
+          to={'https://policies.google.com/privacy'}
+          label={'Privacy Policy'}/> and <ExtLink
+          to={'https://policies.google.com/terms'}
+          label={'Terms of Service'}/> apply.
         </p>
         <input type={'text'} name={'honeypot'} hidden
                value={honeypot}
