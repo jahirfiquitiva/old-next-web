@@ -13,6 +13,7 @@ import styles from './projects.module.css';
 import { SkillProps, skills } from '@components/root/skillset/skillset';
 import Icon from '@mdi/react';
 import useTranslation from 'next-translate/useTranslation';
+import ExtLink from '@components/global/ext-link/ext-link';
 
 export interface ProjectProps {
   title: string;
@@ -159,12 +160,15 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
   return (
     <div className={styles.projects}>
       <div className={styles.titlecontainer}>
-        <h2 className={styles.title}>
-          👨‍💻&nbsp;&nbsp;
-          <span className={'text-gradient grad-c'}>
+        <div className={styles.titlebtncontainer}>
+          <h2 className={styles.title}>
+            👨‍💻&nbsp;&nbsp;
+            <span className={'text-gradient grad-c'}>
             {t('projects:projects')}
           </span>
-        </h2>
+          </h2>
+          <ExtLink label={'View resume'} to={'/resume'} newTab/>
+        </div>
         {/* @ts-ignore */}
         <Stats className={styles.stats}/>
       </div>
