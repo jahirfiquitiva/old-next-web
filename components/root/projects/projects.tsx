@@ -15,23 +15,25 @@ import Icon from '@mdi/react';
 import useTranslation from 'next-translate/useTranslation';
 
 export interface ProjectProps {
-  title: string,
-  description: string,
-  icon: string,
-  preview?: string,
-  link?: string,
-  color?: string,
-  tag?: string,
-  stack?: string[]
+  title: string;
+  description: string;
+  icon: string;
+  preview?: string;
+  link?: string;
+  color?: string;
+  tag?: string;
+  stack?: string[];
 }
 
 interface ProjectsProps {
-  projects?: ProjectProps[]
+  projects?: ProjectProps[];
 }
 
 // @ts-ignore
-const buildCustomLinkStylesForColor = (color?: string | null,
-  isDark?: boolean): CSSProperties => {
+const buildCustomLinkStylesForColor = (
+  color?: string | null,
+  isDark?: boolean
+): CSSProperties => {
   const [aColor, cColor] = getAnalogousColors(color);
   const safeColor = getReadableColor(color, isDark);
   return buildCustomStyles({
@@ -40,14 +42,15 @@ const buildCustomLinkStylesForColor = (color?: string | null,
     '--hl-color': safeColor,
     '--a-bg-grad-color': aColor,
     '--b-bg-grad-color': color,
-    '--c-bg-grad-color': cColor,
+    '--c-bg-grad-color': cColor
   });
 };
 
 const getSkill = (skillName: string): SkillProps | null => {
   try {
-    return skills.filter((it: SkillProps) =>
-      it.name.toLowerCase() === skillName.toLowerCase())[0];
+    return skills.filter(
+      (it: SkillProps) => it.name.toLowerCase() === skillName.toLowerCase()
+    )[0];
   } catch (e: any) {
     return null;
   }
@@ -60,52 +63,72 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
 
   const renderProjectStack = (stack?: string[]) => {
     if (!stack || !stack.length) return null;
-    return (<ul className={styles.stack}>
-      {stack.map((skillName: string, i: number) => {
-        const skill = getSkill(skillName);
-        if (!skill) return null;
-        return (<li key={i}
-                    className={skillName.toLowerCase().includes('kotlin')
-                               ? styles.nomr
-                               : ''}>
-          <span className={styles.skill}>
-            <Icon path={skill.iconPath} color={skill.color}
+    return (
+      <ul className={styles.stack}>
+        {stack.map((skillName: string, i: number) => {
+          const skill = getSkill(skillName);
+          if (!skill) return null;
+          return (
+            <li
+              key={i}
+              className={
+                skillName.toLowerCase().includes('kotlin') ? styles.nomr : ''
+              }
+            >
+              <span className={styles.skill}>
+                <Icon
+                  path={skill.iconPath}
+                  color={skill.color}
                   size={skillName === 'android' ? iconSize * 1.25 : iconSize}
-            />
-          </span>
-        </li>);
-      })}
-    </ul>);
+                />
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    );
   };
 
   const renderNewProject = (it: ProjectProps) => {
     const { data } = it.icon ? usePalette(it.icon) : { data: null };
     const color = isDark
-                  ? getColorFromData(data, isDark) || it.color
-                  : it.color;
+      ? getColorFromData(data, isDark) || it.color
+      : it.color;
     const linkStyles = buildCustomLinkStylesForColor(color, isDark);
     return (
       <a
-        title={`${it.title} link`} aria-label={`${it.title} link`}
-        className={styles.item} href={it.link} key={it.title}
-        target={'_blank'} rel={'noopener noreferrer'}
-        style={linkStyles}>
+        title={`${it.title} link`}
+        aria-label={`${it.title} link`}
+        className={styles.item}
+        href={it.link}
+        key={it.title}
+        target={'_blank'}
+        rel={'noopener noreferrer'}
+        style={linkStyles}
+      >
         <div>
           <div className={styles.preview}>
-            {it.preview?.length
-            && <Image
-              src={it.preview} alt={it.title}
-              width={341} height={256}
-              layout={'fixed'}
-              loading={'lazy'}/>}
+            {it.preview?.length && (
+              <Image
+                src={it.preview}
+                alt={it.title}
+                width={341}
+                height={256}
+                layout={'fixed'}
+                loading={'lazy'}
+              />
+            )}
           </div>
           <div className={styles.content}>
             <div className={styles.iconTitle}>
               <Image
-                src={it.icon} alt={it.title}
-                width={48} height={48}
+                src={it.icon}
+                alt={it.title}
+                width={48}
+                height={48}
                 layout={'fixed'}
-                loading={'lazy'}/>
+                loading={'lazy'}
+              />
               <h4>{it.title}</h4>
             </div>
             <p>{t(`projects:${it.description}`)}</p>
@@ -118,10 +141,12 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
 
   const renderProjects = () => {
     if (projects.length <= 0) {
-      return (<>
-        <br/>
-        <p>{t('projects:no-projects')}{' '}🙃</p>
-      </>);
+      return (
+        <>
+          <br />
+          <p>{t('projects:no-projects')} 🙃</p>
+        </>
+      );
     }
     return (
       <div className={styles.grid}>
@@ -133,10 +158,14 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
   return (
     <div className={styles.projects}>
       <div className={styles.titlecontainer}>
-        <h2 className={styles.title}>👨‍💻&nbsp;&nbsp;{t(
-          'projects:projects')}</h2>
+        <h2 className={styles.title}>
+          👨‍💻&nbsp;&nbsp;
+          <span className={'text-gradient grad-c'}>
+            {t('projects:projects')}
+          </span>
+        </h2>
         {/* @ts-ignore */}
-        <Stats className={styles.stats}/>
+        <Stats className={styles.stats} />
       </div>
       {renderProjects()}
     </div>

@@ -18,7 +18,8 @@
 }
 
 .projects .title {
-  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #d1adf4;
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0
+    var(--dark-gradients-d);
 }
 
 .projects .titlecontainer .stats,
@@ -28,21 +29,21 @@
   align-items: center;
   border: 1px solid var(--divider);
   border-radius: 6px;
-  padding: .4rem;
+  padding: 0.4rem;
   margin-top: 1rem;
   color: var(--text-secondary);
   text-decoration: none;
 }
 
 .projects .titlecontainer .stats svg {
-  margin-right: .4rem;
-  margin-left: .6rem;
-  padding-left: .6rem;
+  margin-right: 0.4rem;
+  margin-left: 0.6rem;
+  padding-left: 0.6rem;
   border-left: 1px solid var(--divider);
 }
 
 .projects .titlecontainer .stats svg:first-of-type {
-  margin-right: .2rem;
+  margin-right: 0.2rem;
   margin-left: 0;
   padding-left: 0;
   border-left: none;
@@ -71,11 +72,11 @@
   flex-direction: column;
   border-radius: 8px;
   border: 1px solid var(--divider);
-  transition: all .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 .projects .grid .item * {
-  transition: all .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 .projects .grid .item:focus,
@@ -90,11 +91,11 @@
   -moz-box-shadow: 0 4px 8px var(--shadow-color);
   -o-box-shadow: 0 4px 8px var(--shadow-color);
   box-shadow: 0 4px 8px var(--shadow-color);
-  -webkit-transform: translateY(-.1rem);
-  -moz-transform: translateY(-.1rem);
-  -ms-transform: translateY(-.1rem);
-  -o-transform: translateY(-.1rem);
-  transform: translateY(-.1rem);
+  -webkit-transform: translateY(-0.1rem);
+  -moz-transform: translateY(-0.1rem);
+  -ms-transform: translateY(-0.1rem);
+  -o-transform: translateY(-0.1rem);
+  transform: translateY(-0.1rem);
 }
 
 .projects .grid .item .preview {
@@ -106,14 +107,29 @@
   border-top-right-radius: 8px;
   max-width: 100%;
   flex: 1;
-  opacity: .7;
+  opacity: 0.7;
   --gradient-angle: 135deg;
   height: 168px;
   max-height: 168px;
   background: var(--b-bg-grad-color);
-  background: -moz-linear-gradient(var(--gradient-angle), var(--a-bg-grad-color) 0%, var(--b-bg-grad-color) 40%, var(--c-bg-grad-color) 100%);
-  background: -webkit-linear-gradient(var(--gradient-angle), var(--a-bg-grad-color) 0%, var(--b-bg-grad-color) 40%, var(--c-bg-grad-color) 100%);
-  background: linear-gradient(var(--gradient-angle), var(--a-bg-grad-color) 0%, var(--b-bg-grad-color) 40%, var(--c-bg-grad-color) 100%);
+  background: -moz-linear-gradient(
+    var(--gradient-angle),
+    var(--a-bg-grad-color) 0%,
+    var(--b-bg-grad-color) 40%,
+    var(--c-bg-grad-color) 100%
+  );
+  background: -webkit-linear-gradient(
+    var(--gradient-angle),
+    var(--a-bg-grad-color) 0%,
+    var(--b-bg-grad-color) 40%,
+    var(--c-bg-grad-color) 100%
+  );
+  background: linear-gradient(
+    var(--gradient-angle),
+    var(--a-bg-grad-color) 0%,
+    var(--b-bg-grad-color) 40%,
+    var(--c-bg-grad-color) 100%
+  );
 }
 
 .projects .grid .item .preview *,
@@ -161,14 +177,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: .4rem;
-  margin-left: -.2rem;
+  margin-bottom: 0.4rem;
+  margin-left: -0.2rem;
 }
 
 .projects .grid .item .content .iconTitle img {
   opacity: 0.8;
 }
-
 
 .projects .grid .item:focus .content .iconTitle img,
 .projects .grid .item:hover .content .iconTitle img {
@@ -181,7 +196,7 @@
 }
 
 .projects .grid .item .content .iconTitle h4 {
-  margin-left: .9rem;
+  margin-left: 0.9rem;
   font-size: calc(var(--base-font-size) * 1.75);
 }
 
@@ -195,7 +210,7 @@
 }
 
 .projects .grid .item .content p {
-  font-size: .95rem;
+  font-size: 0.95rem;
 }
 
 .projects .grid .item .content p,
@@ -214,7 +229,7 @@
   opacity: 0.8;
   display: flex;
   flex-wrap: wrap;
-  margin-top: .4rem;
+  margin-top: 0.4rem;
 }
 
 .projects .grid .item .content .stack li {
@@ -226,7 +241,7 @@
 }
 
 .projects .grid .item .content .stack li:not(:last-of-type):not(.nomr) {
-  margin-right: .25rem;
+  margin-right: 0.25rem;
 }
 
 .projects .grid .item:focus .content .stack,
