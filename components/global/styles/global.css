@@ -1,12 +1,12 @@
 :root,
 .light-mode {
   --system-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol';
+  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol';
   --inter-font: 'Inter', var(--system-font);
   --manrope-font: 'Manrope', var(--inter-font);
   --code-font: Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New',
-    Courier, monospace;
+  Courier, monospace;
   --base-font-size: 1.05rem;
   --toolbar-height: 2.4rem;
   --text-shadow-size: 2px;
@@ -28,13 +28,13 @@
   --toolbar-highlight: rgba(45, 82, 171, 0.08);
   --error-color: #eb3b5a;
 
-  --gradients-a: var(--accent);
-  --gradients-b: #2d98da;
-  --gradients-c: #20bf6b;
-  --gradients-d: #f7b731;
-  --gradients-e: #fa8231;
-  --gradients-f: #eb3b5a;
-  --gradients-g: #8854d0;
+  --gradients-a: var(--accent-dark);
+  --gradients-b: #247aae;
+  --gradients-c: #1a9956;
+  --gradients-d: #c69227;
+  --gradients-e: #c86827;
+  --gradients-f: #bc2f48;
+  --gradients-g: #7a4cbb;
 
   --dark-gradients-b: #81c1e9;
   --dark-gradients-c: #79d9a6;
@@ -323,14 +323,13 @@ textarea {
     animation-iteration-count: infinite;
     transform-origin: 70% 70%;
     text-shadow: calc(
-        var(--text-shadow-size) * var(--huge-hand-shadow-multiplier)
-      )
-      calc(var(--text-shadow-size) * var(--huge-hand-shadow-multiplier)) 0
-      #fed330;
+      var(--text-shadow-size) * var(--huge-hand-shadow-multiplier)
+    ) calc(var(--text-shadow-size) * var(--huge-hand-shadow-multiplier)) 0 #fed330;
   }
 }
 
-.dark-mode .text-gradient {
+.dark-mode .text-gradient,
+.text-gradient.forced {
   text-shadow: none !important;
   --start-grad-color: var(--gradients-a);
   --end-grad-color: var(--gradients-b);
@@ -360,37 +359,37 @@ textarea {
   --end-grad-color: var(--gradients-b);
 }
 
-.dark-mode .text-gradient.grad-b,
+.text-gradient.grad-b,
 .divider.grad-b {
   --start-grad-color: var(--gradients-b);
   --end-grad-color: var(--gradients-c);
 }
 
-.dark-mode .text-gradient.grad-c,
+.text-gradient.grad-c,
 .divider.grad-c {
   --start-grad-color: var(--gradients-c);
   --end-grad-color: var(--gradients-d);
 }
 
-.dark-mode .text-gradient.grad-d,
+.text-gradient.grad-d,
 .divider.grad-d {
   --start-grad-color: var(--gradients-d);
   --end-grad-color: var(--gradients-e);
 }
 
-.dark-mode .text-gradient.grad-e,
+.text-gradient.grad-e,
 .divider.grad-e {
   --start-grad-color: var(--gradients-e);
   --end-grad-color: var(--gradients-f);
 }
 
-.dark-mode .text-gradient.grad-f,
+.text-gradient.grad-f,
 .divider.grad-f {
   --start-grad-color: var(--gradients-f);
   --end-grad-color: var(--gradients-g);
 }
 
-.dark-mode .text-gradient.grad-g,
+.text-gradient.grad-g,
 .divider.grad-g {
   --start-grad-color: var(--gradients-g);
   --end-grad-color: var(--gradients-a);

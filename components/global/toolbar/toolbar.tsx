@@ -20,11 +20,12 @@ const Toolbar = ({ selected }: ToolbarProps) => {
     return (<span
       title={t('common:toggle-theme')}
       aria-label={t('common:toggle-theme')}
-      className={`${styles.item} ${styles.themer} ${mobile ? styles.mobile
-                                                           : styles.desktop}`}
+      className={`${styles.item} ${styles.themer} ${mobile
+                                                    ? styles.mobile
+                                                    : styles.desktop}`}
       onClick={() => toggleTheme()}>
-              <span className={styles.emoji}>{isDark ? '🌞' : '🌚'}</span>
-            </span>);
+      <span className={styles.emoji}>{isDark ? '🌞' : '🌚'}</span>
+    </span>);
   };
 
   const buildLinkTitle = (destination: string): string => {
@@ -47,7 +48,9 @@ const Toolbar = ({ selected }: ToolbarProps) => {
                 */}
                 {/* @ts-ignore */}
                 <Logo className={styles.logosvg}/>
-                Jahir Fiquitiva
+                <span className={'text-gradient grad-a forced'}>
+                  Jahir Fiquitiva
+                </span>
               </a>
             </Link>
           </span>
@@ -64,53 +67,70 @@ const Toolbar = ({ selected }: ToolbarProps) => {
         </div>
         <div className={`${styles.menu} ${menuOpen ? styles.active : ''}`}>
           <span
-            className={`${styles.item} ${selected === 0 ? styles.active : ''}`}>
-            <Link href={'/'}>
-              <a title={buildLinkTitle('home')}
-                 aria-label={buildLinkTitle('home')}>
-                <span className={styles.emoji}>🏡</span>
-                <span>{t('common:home')}</span>
-              </a>
-            </Link>
-          </span>
-          <span
-            className={`${styles.item} ${selected === 1 ? styles.active : ''}`}>
+            className={[styles.item, selected === 1 ? styles.active : ''].join(
+              ' ')}>
             <Link href={'/blog'}>
               <a title={buildLinkTitle('blog')}
                  aria-label={buildLinkTitle('blog')}>
-                <span className={styles.emoji}>📝</span>
-                <span>{t('common:blog')}</span>
+                <span
+                  className={styles.emoji}
+                  style={{ '--shadow-color': 'var(--gradients-b)' }}>
+                  📝
+                </span>
+                <span className={'text-gradient grad-b forced'}>
+                  {t('common:blog')}
+                </span>
               </a>
             </Link>
           </span>
           <span
-            className={`${styles.item} ${selected === 2 ? styles.active : ''}`}>
+            className={[styles.item, selected === 2 ? styles.active : ''].join(
+              ' ')}>
             <Link href={'/blog/uses'}>
-                            <a title={buildLinkTitle('uses')}
-                               aria-label={buildLinkTitle('uses')}>
-                <span className={styles.emoji}>⚡️</span>
-                <span>{t('common:uses')}</span>
+              <a title={buildLinkTitle('uses')}
+                 aria-label={buildLinkTitle('uses')}>
+                <span
+                  className={styles.emoji}
+                  style={{ '--shadow-color': 'var(--gradients-d)' }}>
+                  ⚡️
+                </span>
+                <span className={'text-gradient grad-d forced'}>
+                  {t('common:uses')}
+                </span>
               </a>
             </Link>
           </span>
           <span
-            className={`${styles.item} ${selected === 3 ? styles.active : ''}`}>
+            className={[styles.item, selected === 3 ? styles.active : ''].join(
+              ' ')}>
             <Link href={'/donate'}>
               <a title={buildLinkTitle('donate')}
                  aria-label={buildLinkTitle('donate')}>
-                <span className={styles.emoji}>💙</span>
-                <span>{t('common:donate')}</span>
+                <span
+                  className={styles.emoji}
+                  style={{ '--shadow-color': 'var(--gradients-f)' }}>
+                  ❤️
+                </span>
+                <span className={'text-gradient grad-f forced'}>
+                  {t('common:donate')}
+                </span>
               </a>
             </Link>
           </span>
           <span
-            className={`${styles.item} ${selected === 4 ? styles.active : ''}`}>
+            className={[styles.item, selected === 4 ? styles.active : ''].join(
+              ' ')}>
             <Link href={'/contact'}>
               <a title={buildLinkTitle('contact')}
                  aria-label={buildLinkTitle('contact')}>
                 <span
-                  className={styles.emoji}>📮</span>
-                <span>{t('common:contact')}</span>
+                  className={styles.emoji}
+                  style={{ '--shadow-color': 'var(--gradients-a)' }}>
+                  📬
+                </span>
+                <span className={'text-gradient grad-a forced'}>
+                  {t('common:contact')}
+                </span>
               </a>
             </Link>
           </span>

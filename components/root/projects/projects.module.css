@@ -251,10 +251,12 @@
   text-decoration: none;
   pointer-events: none;
   visibility: hidden;
+  user-select: none;
 }
 
 .projects .grid .item:focus .content p,
 .projects .grid .item:hover .content p {
+  user-select: unset;
   visibility: visible;
   pointer-events: auto;
   opacity: 1;

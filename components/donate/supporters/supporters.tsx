@@ -87,7 +87,11 @@ const Supporters = ({ supporters }: any) => {
 
   return (
     <div className={styles.supporters}>
-      <h3 className={styles.title}>🙌&nbsp;&nbsp;Thanks!</h3>
+      <h3 className={styles.title}>🙌&nbsp;&nbsp;
+        <span className={'text-gradient grad-g'}>
+          Thanks!
+        </span>
+      </h3>
       <p>I&apos;m really grateful to all the awesome people that support my
         work.</p>
       {/*

@@ -139,7 +139,9 @@ nav.nav {
 }
 
 .toolbar .menu span.item .emoji {
+  --shadow-color: rgba(0, 0, 0, 0);
   margin-right: 1.1rem;
+  text-shadow: 1px 1px 0 var(--shadow-color);
 }
 
 .toolbar div span a {
@@ -152,6 +154,7 @@ nav.nav {
   padding: .2rem .4rem;
   margin: 0 .5rem 0 .4rem;
   cursor: pointer;
+  user-select: none;
 }
 
 .toolbar div span.themer.desktop {
