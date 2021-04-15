@@ -1,15 +1,14 @@
-import { Children, createElement, useContext } from 'react';
+import { useContext } from 'react';
 import Link from 'next/link';
 import { usePalette } from 'react-palette';
 import ReactMarkdown from 'react-markdown';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import gfm from 'remark-gfm';
 import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
 import { formatDate } from '@utils/formatDate';
 import UnsizedImage from '@components/global/image/UnsizedImage';
 import ThemeContext from '@components/theme/ThemeContext';
+import { markdownComponents } from '@components/blog/single-post/markdown-components';
 import { FrontmatterProps } from '@components/blog/posts/post-list';
 import styles from './post.module.css';
 
@@ -18,32 +17,15 @@ interface PostProps {
   mdBody: string
 }
 
-const flatten = (text: string, child: any): any => {
-  return typeof child === 'string'
-         ? text + child
-         : Children.toArray(child.props.children).reduce(flatten, text);
-};
-
-const HeadingRenderer = (props: any) => {
-  const children = Children.toArray(props.children);
-  const text = children.reduce(flatten, '');
-  const slug = text.toLowerCase().replace(/\W/g, '-');
-  return createElement(`h${props.level}`, { id: slug }, props.children);
-};
-
 const components: any = {
+  ...markdownComponents,
   // @ts-ignore
   // eslint-disable-next-line react/display-name
-  code({ node, className, ...props }) {
-    const match = /language-(\w+)/.exec(className || '');
-    return match
-           ? <SyntaxHighlighter language={match[1]} PreTag={'div'}
-                                style={dracula} {...props} />
-           : <code className={className} {...props} />;
+  p({ node, className, ...props }) {
+    return <p className={props.children?.[0]?.props?.node?.tagName === 'em'
+                         ? styles.possiblecodetitle
+                         : ''} {...props}/>;
   },
-  // @ts-ignore
-  // eslint-disable-next-line react/display-name
-  heading: ({ node, ...props }) => <HeadingRenderer {...props} />,
 };
 
 const Post = ({ frontmatter, mdBody }: PostProps) => {
@@ -91,7 +73,8 @@ const Post = ({ frontmatter, mdBody }: PostProps) => {
         <ReactMarkdown
           remarkPlugins={[gfm]}
           className={styles.content}
-          components={components}>
+          components={components}
+          linkTarget={'_blank'}>
           {mdBody}
         </ReactMarkdown>
       </article>

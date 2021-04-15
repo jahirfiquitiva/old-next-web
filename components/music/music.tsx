@@ -51,7 +51,7 @@ const SongCard = (props: SongCardProps) => {
       <div className={[styles.overlay,
         shouldRenderDetails ? styles.valid : ''].join(' ')}>
         <div className={styles.album}
-             style={{ minWidth: size }}>
+             style={{ minWidth: shouldRenderDetails ? size : 0 }}>
           {renderAlbumImage()}
         </div>
         <div
@@ -68,14 +68,16 @@ const SongCard = (props: SongCardProps) => {
                            : paletteData.lightVibrant
                          : undefined,
           }}>
-          <h6>{props.title || 'Nothing'}</h6>
+          <h6>{((props.title?.length ?? 0) > 0 && shouldRenderDetails)
+               ? props.title
+               : 'Nothing'}</h6>
           {shouldRenderDetails && (<p>{props.artist}{' • '}{props.album}</p>)}
         </div>
       </div>
     </div>;
   };
 
-  if (props.url) {
+  if (props.url && shouldRenderDetails) {
     return (<Link href={props.url ?? '#'}>
       <a title={props.title} aria-label={props.title}
          target={'_blank'}
