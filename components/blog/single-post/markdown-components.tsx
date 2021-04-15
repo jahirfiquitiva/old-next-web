@@ -5,6 +5,7 @@ import { Children, createElement } from 'react';
 import Link from 'next/link';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import styles from '@components/blog/single-post/post.module.css';
+import UnsizedImage from '@components/global/image/UnsizedImage';
 
 const flatten = (text: string, child: any): any => {
   return typeof child === 'string'
@@ -65,4 +66,5 @@ export const markdownComponents: any = {
   h6: ({ node, ...props }) => <HeadingRenderer {...props} />,
   em: ({ node, ...props }) => <em className={styles.em} {...props} />,
   a: ({ node, ...props }) => <CustomLink {...props} />,
+  img: ({ node, ...props }) => <UnsizedImage {...props} />,
 };
