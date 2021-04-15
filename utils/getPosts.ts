@@ -22,18 +22,13 @@ export const getTableOfContents = (body?: string): string | null => {
   let titleIndex = 0;
   const tableOfContents = lines.map((line) => line.substring(mainTitle.length))
     .map((line) => {
-      let newLine = line;
-      if (newLine.startsWith('#')) {
-        while (newLine.startsWith('#')) {
-          newLine.replace('#', '\t');
-        }
-        return newLine;
-      }
-      newLine = newLine.trim();
+      const newLine = line.trim();
+      if (newLine.length <= 0 || newLine.startsWith('#')) return null;
       titleIndex += 1;
       const slug = newLine.toLowerCase().replace(/\W/g, '-');
       return `${titleIndex}. [${newLine}](#${slug})`;
-    });
+    })
+    .filter((it) => it && it.length > 0);
   return tableOfContents.join('\n');
 };
 
