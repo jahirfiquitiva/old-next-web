@@ -6,6 +6,35 @@
   max-width: 90vw;
 }
 
+.post .toc .title {
+  font-family: var(--manrope-font);
+  font-size: calc(var(--base-font-size) * 1.5);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0;
+}
+
+.post .toc ol,
+.post .toc ul {
+  list-style: none;
+  position: relative;
+  padding-left: 1.6rem;
+  margin-left: .2rem;
+}
+
+.post .toc ol > li:before,
+.post .toc ul > li:before {
+  content: counter(list-item, decimal) ".";
+  position: absolute;
+  font-weight: 400;
+  color: #6b7280;
+  left: 0;
+}
+
+.post .toc ul > li:before {
+  content: counter(list-item, disc) ".";
+}
+
 .post img.hero {
   margin-bottom: 2.4rem;
   object-fit: cover;
@@ -29,6 +58,12 @@
 .post h4 {
   margin-top: 1.6rem;
   margin-bottom: .4rem;
+  scroll-margin-top: calc(var(--toolbar-height) + 1.6rem);
+}
+
+.post h5,
+.post h6 {
+  scroll-margin-top: calc(var(--toolbar-height) + 1.6rem);
 }
 
 .post h1 {

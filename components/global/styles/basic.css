@@ -101,6 +101,7 @@ body {
 
 a,
 a:visited {
+  font-weight: 500;
   color: var(--accent);
   text-decoration: none;
 }

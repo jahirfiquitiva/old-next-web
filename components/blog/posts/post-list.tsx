@@ -19,6 +19,7 @@ export interface FrontmatterProps {
   color?: string,
   link?: string,
   page?: number,
+  tableOfContents?: string,
 }
 
 export interface PostProps {

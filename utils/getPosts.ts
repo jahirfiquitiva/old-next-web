@@ -8,6 +8,35 @@ const defaultColors = [
   '#4b7bec', '#a55eea', '#778ca3',
 ];
 
+export const getTableOfContents = (body?: string): string | null => {
+  if (!body || !body.length) return null;
+  const lines = body.split(/\r\n|\n\r|\n|\r/)
+    .filter((it) => it.trim().startsWith('#'));
+  let mainTitle = '';
+  for (const line of lines) {
+    const titleHashtags = line.trim().substring(0, line.lastIndexOf('#') + 1);
+    if (titleHashtags.length < mainTitle.length || mainTitle.length <= 0) {
+      mainTitle = titleHashtags;
+    }
+  }
+  let titleIndex = 0;
+  const tableOfContents = lines.map((line) => line.substring(mainTitle.length))
+    .map((line) => {
+      let newLine = line;
+      if (newLine.startsWith('#')) {
+        while (newLine.startsWith('#')) {
+          newLine.replace('#', '\t');
+        }
+        return newLine;
+      }
+      newLine = newLine.trim();
+      titleIndex += 1;
+      const slug = newLine.toLowerCase().replace(/\W/g, '-');
+      return `${titleIndex}. [${newLine}](#${slug})`;
+    });
+  return tableOfContents.join('\n');
+};
+
 const getPosts = (context: any) => {
   const keys = context.keys();
   const values = keys.map(context);
@@ -21,7 +50,11 @@ const getPosts = (context: any) => {
                                  ? hero
                                  : `/assets/images/posts/${hero}`
                                : '';
-    const frontmatter = { ...document.data, hero: actualHero };
+    const frontmatter = {
+      ...document.data,
+      hero: actualHero,
+      tableOfContents: getTableOfContents(document.content),
+    };
     const post: PostProps = {
       slug,
       // @ts-ignore

@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { Children, createElement, useContext } from 'react';
 import { usePalette } from 'react-palette';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
@@ -14,6 +14,19 @@ interface PostProps {
   frontmatter: FrontmatterProps,
   mdBody: string
 }
+
+const flatten = (text: string, child: any): any => {
+  return typeof child === 'string'
+         ? text + child
+         : Children.toArray(child.props.children).reduce(flatten, text);
+};
+
+const HeadingRenderer = (props: any) => {
+  const children = Children.toArray(props.children);
+  const text = children.reduce(flatten, '');
+  const slug = text.toLowerCase().replace(/\W/g, '-');
+  return createElement(`h${props.level}`, { id: slug }, props.children);
+};
 
 const Post = ({ frontmatter, mdBody }: PostProps) => {
   const { isDark } = useContext(ThemeContext);
@@ -44,8 +57,17 @@ const Post = ({ frontmatter, mdBody }: PostProps) => {
             src={frontmatter.hero || ''}
             alt={frontmatter.title}/>
         )}
-        <ReactMarkdown source={mdBody} escapeHtml={false}
-                       className={styles.content}/>
+        {((frontmatter.tableOfContents ?? '').length > 0)
+        && (<div className={styles.toc}>
+          <p className={styles.title}>Table of Contents:</p>
+          <ReactMarkdown
+            source={frontmatter.tableOfContents ?? ''} escapeHtml={false}
+            className={styles.content}/>
+        </div>)}
+        <ReactMarkdown
+          source={mdBody} escapeHtml={false}
+          className={styles.content}
+          renderers={{ heading: HeadingRenderer }}/>
       </article>
     </div>
   );

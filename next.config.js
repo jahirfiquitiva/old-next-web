@@ -64,6 +64,7 @@ module.exports = nextTranslate({
       buildRedirect('/resume', '/share/Jahir-Fiquitiva-Resume.pdf'),
       buildRedirect('/support', '/donate'),
       buildRedirect('/thanks', '/donate#thanks'),
+      buildRedirect('/blog/post-of-fame', '/donate#thanks'),
       buildRedirect('/uses', '/blog/uses'),
     ];
   },

@@ -5,6 +5,7 @@ import Layout from '@components/Layout';
 import Post from '@components/blog/single-post/post';
 import { PageProps } from '@components/types';
 import { FrontmatterProps } from '@components/blog/posts/post-list';
+import { getTableOfContents } from '@utils/getPosts';
 
 interface BlogPostProps extends PageProps {
   frontmatter: FrontmatterProps,
@@ -43,6 +44,7 @@ export const getStaticProps: GetStaticProps = async ({ ...ctx }) => {
   const frontmatter = {
     ...data.data,
     hero: actualHero,
+    tableOfContents: getTableOfContents(data.content),
   };
 
   return {
