@@ -17,6 +17,15 @@
   --code-function: #f368e0;
 }
 
+pre,
+code,
+kbd,
+samp {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-family: var(--code-font);
+}
+
 pre::-webkit-scrollbar {
   display: none;
 }
@@ -24,6 +33,44 @@ pre::-webkit-scrollbar {
 pre {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  background-color: var(--primary);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  overflow-x: auto;
+  padding: 0.8rem;
+  white-space: pre;
+  word-wrap: normal;
+  max-width: 90vw;
+  border-radius: 6px;
+  border: 1px solid var(--divider);
+  margin: 1.2rem 0;
+}
+
+.dark-mode pre {
+  background-color: #0b152b;
+}
+
+pre pre {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+pre code {
+  background-color: transparent;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  padding: 0;
+}
+
+code {
+  padding: 0.4rem 0.6rem;
+  background-color: var(--primary);
+  color: var(--text-primary);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 code[class*='language-'],
