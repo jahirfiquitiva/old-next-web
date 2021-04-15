@@ -95,7 +95,11 @@ const ChangesContent = () => {
 
   return (
     <div className={styles.changes}>
-      <h3 className={styles.title}>✨&nbsp;&nbsp;Changes</h3>
+      <h3 className={styles.title}>✨&nbsp;&nbsp;
+        <span className={'text-gradient grad-d'}>
+          Changes
+        </span>
+      </h3>
       {renderChanges()}
     </div>
   );

@@ -51,7 +51,7 @@ module.exports = nextTranslate({
     return config;
   },
   images: {
-    domains: ['images.unsplash.com'],
+    domains: ['images.unsplash.com', 'i.scdn.co', 'spotify.com'],
   },
   async redirects() {
     const postsRedirects = await buildExternalBlogPostsRedirects()

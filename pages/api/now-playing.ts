@@ -16,7 +16,7 @@ export default async (_: NextApiRequest, res: NextApiResponse) => {
   const album = song.item.album.name;
   const preAlbumImage = song.item.album.images.pop();
   const albumImage = song.item.album.images.pop() || preAlbumImage;
-  const songUrl = song.item.external_urls.spotify;
+  const url = song.item.external_urls.spotify;
 
   res.setHeader(
     'Cache-Control',
@@ -24,11 +24,11 @@ export default async (_: NextApiRequest, res: NextApiResponse) => {
   );
 
   return res.status(200).json({
-    album,
-    albumImage,
-    artist,
-    isPlaying,
-    songUrl,
     title,
+    artist,
+    album,
+    url,
+    image: albumImage,
+    isPlaying,
   });
 };

@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getTopTracks } from '@lib/spotify';
 import { unique } from '@utils/unique';
+import { TopTrackData } from '@components/types';
 
 export default async (_: NextApiRequest, res: NextApiResponse) => {
   const response = await getTopTracks();
@@ -8,11 +9,14 @@ export default async (_: NextApiRequest, res: NextApiResponse) => {
 
   const tracks = items.map((track: any) => ({
     // ...track,
-    image: track.album.images.pop(),
-    artist: track.artists.map((_artist: any) => _artist.name).join(', '),
-    songUrl: track.external_urls.spotify,
     title: track.name,
-  }));
+    artist: track.artists.map((_artist: any) => _artist.name).join(', '),
+    album: track.album.name,
+    url: track.external_urls.spotify,
+    image: track.album.images.pop(),
+  })).filter((it: TopTrackData) =>
+    (!(it.title?.toLowerCase().includes('netflix')
+      || it.album?.toLowerCase().includes('netflix'))));
 
   const uniqueArtistTracks = unique(tracks, 'artist').slice(0, 10);
 
