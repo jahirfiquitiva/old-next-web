@@ -55,3 +55,13 @@ export interface TopTrackData {
 export interface TrackData extends TopTrackData {
   isPlaying?: boolean,
 }
+
+export interface BaseInspoItem {
+  link: string;
+  title: string;
+  description?: string;
+}
+
+export interface InspoItem extends BaseInspoItem {
+  favicon?: string;
+}

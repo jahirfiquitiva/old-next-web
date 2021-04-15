@@ -3,16 +3,15 @@ import { PageProps } from '@components/types';
 import Layout from '@components/Layout';
 import MusicContent from '@components/music/music';
 
-const Changes = ({ title, description, keywords }: PageProps) => {
+const Music = ({ title, description, keywords }: PageProps) => {
   return (
     <Layout title={title} description={description} keywords={keywords}>
-      {/* <UnderConstruction/> */}
       <MusicContent/>
     </Layout>
   );
 };
 
-export default Changes;
+export default Music;
 
 export const getStaticProps: GetStaticProps = async () => {
   const configData = await import('../siteconfig.json');
