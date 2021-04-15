@@ -1,13 +1,19 @@
 import { GetStaticProps } from 'next';
-import { BaseInspoItem, PageProps } from '@components/types';
+import { BaseInspoItem, InspoItem, PageProps } from '@components/types';
 import Layout from '@components/Layout';
 import InspirationContent from '@components/inspiration/inspiration';
 import { getWebsiteFavicon } from '@lib/favicons';
 
-const Inspiration = ({ title, description, keywords }: PageProps) => {
+interface InspirationProps extends PageProps {
+  inspirationItems?: InspoItem[];
+}
+
+const Inspiration = ({
+  title, description, keywords, inspirationItems,
+}: InspirationProps) => {
   return (
     <Layout title={title} description={description} keywords={keywords}>
-      <InspirationContent/>
+      <InspirationContent items={inspirationItems || []}/>
     </Layout>
   );
 };
@@ -37,7 +43,7 @@ export const getStaticProps: GetStaticProps = async () => {
       title: `Inspiration ~ ${configData.default.title}`,
       description: configData.default.description,
       keywords: configData.default.keywords,
-      mappedInspo,
+      inspirationItems: mappedInspo,
     },
   };
 };

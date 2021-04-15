@@ -78,6 +78,8 @@ const SongCard = (props: SongCardProps) => {
   if (props.url) {
     return (<Link href={props.url ?? '#'}>
       <a title={props.title} aria-label={props.title}
+         target={'_blank'}
+         rel={'noopener noreferrer'}
          style={{
            color: paletteData
                   ? isDark

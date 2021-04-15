@@ -6,12 +6,12 @@
   text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 var(--dark-gradients-c);
 }
 
-.inspiration h4 {
+.inspiration .noinspo {
   margin-top: 2.6rem;
-  margin-bottom: 1rem;
 }
 
 .inspiration .grid {
+  margin-top: 2.6rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: masonry;
@@ -25,58 +25,31 @@
   overflow: hidden;
   pointer-events: none;
   user-select: none;
-}
-
-.inspiration .card .overlay {
   height: auto;
   height: fit-content;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: .8rem 1rem;
+}
+
+.inspiration .card .url {
+  margin-top: .4rem;
+  display: flex;
   flex-direction: row;
   align-items: center;
-  padding: .8rem;
 }
 
-.inspiration .card .overlay.valid {
-  background-color: var(--text-tertiary);
+.inspiration .card .url img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
-.inspiration .card .album {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.inspiration .card .album img {
-  border-radius: 4px;
-}
-
-.inspiration .card .details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-  max-width: 100%;
-  flex: 1;
-  margin-left: 1rem;
-  margin-right: .2rem;
-}
-
-.inspiration .card .details h6,
-.inspiration .card .details p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: inherit;
-}
-
-.inspiration .card .details h6 {
-  font-size: calc(var(--base-font-size) * 1.1);
-}
-
-.inspiration .card .details p {
-  font-weight: 400;
-  opacity: 0.85;
+.inspiration .card .url p {
+  margin-left: .6rem;
+  font-size: calc(var(--base-font-size) * 0.85);
+  font-weight: 500;
 }
 
 @media (min-width: 660px) {
@@ -88,5 +61,9 @@
 @media (min-width: 960px) {
   .inspiration {
     padding: 1rem 0 3rem;
+  }
+
+  .inspiration .grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
