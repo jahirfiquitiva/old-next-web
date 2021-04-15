@@ -50,7 +50,12 @@ const Post = ({ frontmatter, mdBody }: PostProps) => {
         }}>
           {frontmatter.title}
         </h1>
-        <p className={styles.date}>{formatDate(new Date(frontmatter.date))}</p>
+        <p className={styles.date}>
+          {formatDate(new Date(frontmatter.date))}
+          {((frontmatter.readingTime?.text?.length || 0) > 0) && (<>
+            {' • '}{frontmatter.readingTime?.text}
+          </>)}
+        </p>
         {frontmatter.hero && (
           <UnsizedImage
             className={styles.hero}

@@ -20,6 +20,12 @@ export interface FrontmatterProps {
   link?: string,
   page?: number,
   tableOfContents?: string,
+  readingTime?: {
+    text?: string,
+    minutes?: number,
+    time?: number,
+    words?: number,
+  }
 }
 
 export interface PostProps {

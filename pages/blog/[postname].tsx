@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import matter from 'gray-matter';
+import readingTime from 'reading-time';
 import getSlugs from '@utils/getSlugs';
 import Layout from '@components/Layout';
 import Post from '@components/blog/single-post/post';
@@ -45,6 +46,7 @@ export const getStaticProps: GetStaticProps = async ({ ...ctx }) => {
     ...data.data,
     hero: actualHero,
     tableOfContents: getTableOfContents(data.content),
+    readingTime: readingTime(data.content),
   };
 
   return {
