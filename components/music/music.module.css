@@ -11,6 +11,11 @@
   margin-bottom: 1rem;
 }
 
+.music a {
+  -webkit-text-decoration-color: inherit;
+  text-decoration-color: inherit;
+}
+
 .music .grid {
   display: grid;
   grid-template-columns: 1fr;

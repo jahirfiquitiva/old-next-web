@@ -77,7 +77,14 @@ const SongCard = (props: SongCardProps) => {
 
   if (props.url) {
     return (<Link href={props.url ?? '#'}>
-      <a title={props.title} aria-label={props.title}>
+      <a title={props.title} aria-label={props.title}
+         style={{
+           color: paletteData
+                  ? isDark
+                    ? paletteData.darkMuted
+                    : paletteData.lightVibrant
+                  : undefined,
+         }}>
         {renderActualCard()}
       </a>
     </Link>);
