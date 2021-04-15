@@ -22,7 +22,7 @@ export const markdownComponents: any = {
   pre({ node, ...props }) {
     return <>{props.children}</>;
   },
-  code({ node, className, ...props }) {
+  code({ node, className, inline, ...props }) {
     const match = /language-(\w+)/.exec(className || '');
     return match
            ? <SyntaxHighlighter

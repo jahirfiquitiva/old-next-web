@@ -1,4 +1,5 @@
 import matter from 'gray-matter';
+import readingTime from 'reading-time';
 import getRandomItemFrom from '@utils/getRandomItem';
 import { FrontmatterProps, PostProps } from '@components/blog/posts/post-list';
 
@@ -45,10 +46,12 @@ const getPosts = (context: any) => {
                                  ? hero
                                  : `/assets/images/posts/${hero}`
                                : '';
+    const calculatedTime = readingTime(document.content);
     const frontmatter = {
       ...document.data,
       hero: actualHero,
       tableOfContents: getTableOfContents(document.content),
+      readingTime: calculatedTime?.time > 0 ? calculatedTime : { text: '' },
     };
     const post: PostProps = {
       slug,

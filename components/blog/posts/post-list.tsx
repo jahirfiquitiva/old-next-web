@@ -85,7 +85,12 @@ const PostItem = (props: PostProps) => {
       <div className={styles.info}>
         <h6>{frontmatter.title}</h6>
         {frontmatter.description && <p>{frontmatter.description || ''}</p>}
-        <p className={styles.date}>{formatDate(new Date(frontmatter.date))}</p>
+        <p className={styles.date}>
+          {formatDate(new Date(frontmatter.date))}
+          {((frontmatter.readingTime?.text?.length || 0) > 0) && (<>
+            {' • '}{frontmatter.readingTime?.text}
+          </>)}
+        </p>
       </div>
     </div>);
   };
