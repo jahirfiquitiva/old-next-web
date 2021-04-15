@@ -46,7 +46,9 @@ const socialLinks = [
 ];
 
 const iconSize = 0.9;
-const Social = ({ centered }: { centered?: boolean }) => {
+const Social = ({
+  centered, size = iconSize,
+}: { centered?: boolean, size?: number }) => {
   const { t } = useTranslation();
   return (
     <div className={`${styles.social} ${centered ? styles.centered : ''}`}>
@@ -65,7 +67,7 @@ const Social = ({ centered }: { centered?: boolean }) => {
               rel={'noopener noreferrer'}
               target={'_blank'}
             >
-              <Icon path={it.iconPath} size={iconSize} />
+              <Icon path={it.iconPath} size={size}/>
             </a>
           );
         })}
