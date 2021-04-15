@@ -1,6 +1,8 @@
 // @ts-nocheck
 /* eslint-disable react/display-name */
+
 import { Children, createElement } from 'react';
+import Link from 'next/link';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import styles from '@components/blog/single-post/post.module.css';
 
@@ -8,6 +10,21 @@ const flatten = (text: string, child: any): any => {
   return typeof child === 'string'
          ? text + child
          : Children.toArray(child.props.children).reduce(flatten, text);
+};
+
+const CustomLink = (props) => {
+  const { href } = props;
+  const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'));
+
+  if (isInternalLink) {
+    return (
+      <Link href={href}>
+        <a {...props} />
+      </Link>
+    );
+  }
+
+  return <a target={'_blank'} rel={'noopener noreferrer'} {...props} />;
 };
 
 const HeadingRenderer = (props: any) => {
@@ -47,4 +64,5 @@ export const markdownComponents: any = {
   h5: ({ node, ...props }) => <HeadingRenderer {...props} />,
   h6: ({ node, ...props }) => <HeadingRenderer {...props} />,
   em: ({ node, ...props }) => <em className={styles.em} {...props} />,
+  a: ({ node, ...props }) => <CustomLink {...props} />,
 };
