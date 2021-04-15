@@ -31,10 +31,19 @@ const HeadingRenderer = (props: any) => {
   return createElement(`h${props.level}`, { id: slug }, props.children);
 };
 
-const CodeRenderer = (props: any) => {
-  return <SyntaxHighlighter language={props.language} style={dracula}>
-    {props.children}
-  </SyntaxHighlighter>;
+const components: any = {
+  // @ts-ignore
+  // eslint-disable-next-line react/display-name
+  code({ node, className, ...props }) {
+    const match = /language-(\w+)/.exec(className || '');
+    return match
+           ? <SyntaxHighlighter language={match[1]} PreTag={'div'}
+                                style={dracula} {...props} />
+           : <code className={className} {...props} />;
+  },
+  // @ts-ignore
+  // eslint-disable-next-line react/display-name
+  heading: ({ node, ...props }) => <HeadingRenderer {...props} />,
 };
 
 const Post = ({ frontmatter, mdBody }: PostProps) => {
@@ -80,16 +89,9 @@ const Post = ({ frontmatter, mdBody }: PostProps) => {
           </ReactMarkdown>
         </div>)}
         <ReactMarkdown
-          plugins={[gfm]}
+          remarkPlugins={[gfm]}
           className={styles.content}
-          components={{
-            // @ts-ignore
-            // eslint-disable-next-line react/display-name
-            heading: ({ node, ...props }) => <HeadingRenderer {...props} />,
-            // @ts-ignore
-            // eslint-disable-next-line react/display-name
-            code: ({ node, ...props }) => <CodeRenderer {...props} />,
-          }}>
+          components={components}>
           {mdBody}
         </ReactMarkdown>
       </article>
