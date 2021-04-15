@@ -62,5 +62,5 @@ I use the default macOS terminal with a slightly modified `~/.bash_profile` for 
 
 > **Disclaimer:**
 > 
-> Some of the links above are affiliate links. If you don’t want to click them out of principle, I understand. 
-> Any affiliate income earned goes straight back into powering this website and my other side projects.
+> Some of the links above are affiliate links. I understand if you don’t want to click them but any affiliate income 
+> earned goes straight back into powering this website and my other side projects.
