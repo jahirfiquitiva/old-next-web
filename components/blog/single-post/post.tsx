@@ -1,14 +1,16 @@
 import { Children, createElement, useContext } from 'react';
-import { usePalette } from 'react-palette';
 import Link from 'next/link';
+import { usePalette } from 'react-palette';
 import ReactMarkdown from 'react-markdown';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import gfm from 'remark-gfm';
 import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
+import { formatDate } from '@utils/formatDate';
 import UnsizedImage from '@components/global/image/UnsizedImage';
 import ThemeContext from '@components/theme/ThemeContext';
-import styles from './post.module.css';
 import { FrontmatterProps } from '@components/blog/posts/post-list';
-import { formatDate } from '@utils/formatDate';
+import styles from './post.module.css';
 
 interface PostProps {
   frontmatter: FrontmatterProps,
@@ -26,6 +28,12 @@ const HeadingRenderer = (props: any) => {
   const text = children.reduce(flatten, '');
   const slug = text.toLowerCase().replace(/\W/g, '-');
   return createElement(`h${props.level}`, { id: slug }, props.children);
+};
+
+const CodeRenderer = (props: any) => {
+  return <SyntaxHighlighter language={props.language}>
+    {props.children}
+  </SyntaxHighlighter>;
 };
 
 const Post = ({ frontmatter, mdBody }: PostProps) => {
@@ -66,10 +74,12 @@ const Post = ({ frontmatter, mdBody }: PostProps) => {
         && (<div className={styles.toc}>
           <p className={styles.title}>Table of Contents:</p>
           <ReactMarkdown
-            source={frontmatter.tableOfContents ?? ''} escapeHtml={false}
+            source={frontmatter.tableOfContents ?? ''}
+            escapeHtml={false}
             className={styles.content}/>
         </div>)}
         <ReactMarkdown
+          plugins={[gfm]}
           source={mdBody} escapeHtml={false}
           className={styles.content}
           renderers={{ heading: HeadingRenderer }}/>
