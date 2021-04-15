@@ -12,7 +12,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: .8rem;
-  margin-top: .6rem;
+  margin-top: .2rem;
   transition: all .3s ease-in-out;
 }
 
@@ -94,7 +94,7 @@
   }
 
   .suggestions form textarea {
-    min-height: 56px;
+    min-height: 64px;
   }
 
   .suggestions .result {

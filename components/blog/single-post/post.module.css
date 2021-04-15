@@ -24,16 +24,17 @@
   margin-bottom: 0;
 }
 
-.post .toc ol,
-.post .toc ul {
+.post ol,
+.post ul {
   list-style: none;
   position: relative;
   padding-left: 1.6rem;
   margin-left: .2rem;
+  counter-reset: start 1;
 }
 
-.post .toc ol > li:before,
-.post .toc ul > li:before {
+.post ol > li:before,
+.post ul > li:before {
   content: counter(list-item, decimal) ".";
   position: absolute;
   font-weight: 400;
@@ -41,8 +42,8 @@
   left: 0;
 }
 
-.post .toc ul > li:before {
-  content: counter(list-item, disc) ".";
+.post ul > li:before {
+  content: counter(list-item, disc);
 }
 
 .post img.hero {
@@ -81,15 +82,8 @@
   margin-bottom: 0;
 }
 
-.post p,
-.post ol {
-  margin-top: .6rem;
-  margin-bottom: .6rem;
-}
-
-.post ul {
-  list-style-type: disc;
-  margin-left: 1.4rem;
+.post p {
+  margin: .4rem 0;
 }
 
 .post ul li {
@@ -128,6 +122,16 @@ p.possiblecodetitle {
   margin: 1.2rem 0 0;
   padding: 0.6rem 0.8rem;
   font-weight: 500;
+}
+
+p.possiblecodetitle.possibleimagetitle {
+  border-radius: 6px;
+  margin-bottom: .8rem;
+}
+
+p.possiblecodetitle.possibleimagetitle img {
+  margin-top: .8rem;
+  margin-bottom: .2rem;
 }
 
 p.possiblecodetitle + pre[class*='language-'] {

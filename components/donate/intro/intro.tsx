@@ -6,7 +6,7 @@ import styles from './intro.module.css';
 const Intro = () => {
   return (
     <div className={styles.intro}>
-      <h3 className={styles.title}>❤️&nbsp;&nbsp;
+      <h3 className={styles.title}>🧡️&nbsp;&nbsp;
         <span className={'text-gradient grad-f'}>
           Donate
         </span>

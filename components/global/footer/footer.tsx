@@ -79,7 +79,7 @@ const Footer = () => {
                aria-label={buildLinkTitle('donate')}
                style={getLinkStyles('f')}>
               <span className={styles.emoji}>
-                ❤️
+                🧡
               </span>
               &nbsp;&nbsp;
               <span className={'text-gradient grad-f forced'}>
@@ -151,7 +151,7 @@ const Footer = () => {
                aria-label={buildLinkTitle('thanks')}
                style={getLinkStyles('e')}>
               <span className={styles.emoji}>
-                ❤️
+                🧡
               </span>
               &nbsp;&nbsp;
               <span className={'text-gradient grad-e forced'}>

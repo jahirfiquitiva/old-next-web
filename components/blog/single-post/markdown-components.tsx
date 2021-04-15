@@ -2,7 +2,6 @@
 /* eslint-disable react/display-name */
 import { Children, createElement } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import styles from '@components/blog/single-post/post.module.css';
 
 const flatten = (text: string, child: any): any => {
@@ -28,7 +27,6 @@ export const markdownComponents: any = {
            ? <SyntaxHighlighter
              className={`language-${match[1]}`}
              language={match[1]}
-             style={dracula}
              PreTag={'pre'}
              CodeTag={'code'}
              useInlineStyles={false}

@@ -17,14 +17,30 @@ interface PostProps {
   mdBody: string
 }
 
+const getChildType = (child: any): string | null | undefined => {
+  try {
+    const { type } = child;
+    return type?.name || type;
+  } catch (e) {
+    return null;
+  }
+};
+
 const components: any = {
   ...markdownComponents,
   // @ts-ignore
   // eslint-disable-next-line react/display-name
   p({ node, className, ...props }) {
-    return <p className={props.children?.[0]?.props?.node?.tagName === 'em'
-                         ? styles.possiblecodetitle
-                         : ''} {...props}/>;
+    const classNames = [
+      getChildType(props.children?.[0]) === 'em'
+      ? styles.possiblecodetitle
+      : '',
+      getChildType(props.children?.[2]) === 'img'
+      ? styles.possibleimagetitle
+      : '',
+    ];
+
+    return <p className={classNames.join(' ')} {...props}/>;
   },
 };
 

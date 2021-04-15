@@ -49,7 +49,6 @@ export const Suggestions = (props: SuggestionsProps) => {
   }, [resultMessage]);
 
   return (<div className={styles.suggestions}>
-    <h6>Suggestions</h6>
     <div className={styles.content}>
       <div className={styles.texts}>
         <p>
@@ -58,7 +57,8 @@ export const Suggestions = (props: SuggestionsProps) => {
           to do it more frequently.
         </p>
         <p>
-          That said, I&apos;m open to ideas or topics to blog about.
+          Feel free to share ideas or topics for me to blog about. I&apos;d
+          really appreciate it!  🙌
         </p>
       </div>
       <div className={[styles.result,

@@ -122,7 +122,7 @@ const Toolbar = ({ selected }: ToolbarProps) => {
               <a title={buildLinkTitle('donate')}
                  aria-label={buildLinkTitle('donate')}>
                 <span className={styles.emoji} style={getLinkStyles(3)}>
-                  ❤️
+                  🧡
                 </span>
                 <span className={'text-gradient grad-f forced'}>
                   {t('common:donate')}

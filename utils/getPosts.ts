@@ -21,13 +21,21 @@ export const getTableOfContents = (body?: string): string | null => {
     }
   }
   let titleIndex = 0;
-  const tableOfContents = lines.map((line) => line.substring(mainTitle.length))
+  const tableOfContents = lines
     .map((line) => {
-      const newLine = line.trim();
-      if (newLine.length <= 0 || newLine.startsWith('#')) return null;
-      titleIndex += 1;
-      const slug = newLine.toLowerCase().replace(/\W/g, '-');
-      return `${titleIndex}. [${newLine}](#${slug})`;
+      let title = line.substring(mainTitle.length).trim();
+      let indent = '';
+      if (!title.startsWith('#')) {
+        titleIndex += 1;
+        indent = `${titleIndex}. `;
+      } else {
+        const split = title.split('#');
+        title = split.pop()?.trim() ?? '';
+        indent = `   ${split.join('  ')}* `;
+      }
+      if (!title || !title.length) return null;
+      const slug = title.toLowerCase().replace(/\W/g, '-');
+      return `${indent}[${title}](#${slug})`;
     })
     .filter((it) => it && it.length > 0);
   return tableOfContents.join('\n');
@@ -50,7 +58,6 @@ const getPosts = (context: any) => {
     const frontmatter = {
       ...document.data,
       hero: actualHero,
-      tableOfContents: getTableOfContents(document.content),
       readingTime: calculatedTime?.time > 0 ? calculatedTime : { text: '' },
     };
     const post: PostProps = {

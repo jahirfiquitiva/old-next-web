@@ -79,15 +79,6 @@ const About = () => {
           />{' '}
           {t('home:details.first.c')}
         </p>
-        <p>
-          {t('home:details.fourth.a')}{' '}
-          <ExtLink
-            to={'/uses'}
-            label={t('home:details.fourth.b', { uses: t('common:uses') })}
-            newTab={false}
-          />
-          .
-        </p>
       </div>
       <div className={styles.find}>
         <p>
