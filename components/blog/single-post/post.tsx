@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { usePalette } from 'react-palette';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import gfm from 'remark-gfm';
 import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
@@ -31,7 +32,7 @@ const HeadingRenderer = (props: any) => {
 };
 
 const CodeRenderer = (props: any) => {
-  return <SyntaxHighlighter language={props.language}>
+  return <SyntaxHighlighter language={props.language} style={dracula}>
     {props.children}
   </SyntaxHighlighter>;
 };
@@ -74,15 +75,23 @@ const Post = ({ frontmatter, mdBody }: PostProps) => {
         && (<div className={styles.toc}>
           <p className={styles.title}>Table of Contents:</p>
           <ReactMarkdown
-            source={frontmatter.tableOfContents ?? ''}
-            escapeHtml={false}
-            className={styles.content}/>
+            className={styles.content}>
+            {frontmatter.tableOfContents ?? ''}
+          </ReactMarkdown>
         </div>)}
         <ReactMarkdown
           plugins={[gfm]}
-          source={mdBody} escapeHtml={false}
           className={styles.content}
-          renderers={{ heading: HeadingRenderer }}/>
+          components={{
+            // @ts-ignore
+            // eslint-disable-next-line react/display-name
+            heading: ({ node, ...props }) => <HeadingRenderer {...props} />,
+            // @ts-ignore
+            // eslint-disable-next-line react/display-name
+            code: ({ node, ...props }) => <CodeRenderer {...props} />,
+          }}>
+          {mdBody}
+        </ReactMarkdown>
       </article>
     </div>
   );

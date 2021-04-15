@@ -47,9 +47,9 @@ const ChangesContent = () => {
               {renderVersion(it.version)}
             </div>
             {renderReleaseDate(it.dateStamp, it.date)}
-            <ReactMarkdown
-              source={it.changelog || ''} escapeHtml={false}
-              className={styles.content}/>
+            <ReactMarkdown className={styles.content}>
+              {it.changelog || ''}
+            </ReactMarkdown>
           </div>
           <div className={styles.buttons}>
             <a
