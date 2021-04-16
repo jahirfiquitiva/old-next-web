@@ -13,8 +13,8 @@ footer.footer {
 }
 
 footer.footer .grid {
-  width: calc(100% - 3.2rem);
-  max-width: calc(960px - 3.2rem);
+  width: calc(100% - 2.8rem);
+  max-width: calc(960px - 3rem);
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -93,6 +93,10 @@ footer.footer .container .logito {
   font-weight: 600;
   padding: .4rem 0;
   margin-bottom: .2rem;
+}
+
+footer.footer .container .logito span {
+  flex: 1;
 }
 
 footer.footer .container .logito img,
