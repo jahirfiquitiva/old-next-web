@@ -1,5 +1,7 @@
 ---
-title: 'Redesigning my website' author: 'Jahir' date: '2021-04-15'
+title: 'Redesigning my website' 
+author: 'Jahir' 
+date: '2021-04-15'
 hero: https://images.unsplash.com/photo-1591267990439-bc68529677c3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=ferenc-almasi-ayjnmG4oUX4-unsplash.jpg&w=640
 ---
 
@@ -226,6 +228,8 @@ and config I needed.
 
 The [music dashboard](/music) is a new place in my website, where you can know a little more about me by seeing what I'm
 currently listening to and also the most recent top tracks.
+
+To achieve this I used [Lee Robinson's snippets](https://leerob.io/snippets) to [get the song I'm currently listening to](https://leerob.io/snippets/spotify), and also the [top tracks](https://leerob.io/snippets/spotify-top-tracks). And additionally used [react-palette](https://www.npmjs.com/package/react-palette) to get colors from the song's album and show a more vivid interface.
 
 ### Inspiration links
 
