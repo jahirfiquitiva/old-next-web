@@ -16,14 +16,17 @@ interface SongCardProps extends TrackData {
 
 const SongCard = (props: SongCardProps) => {
   const { isForNowPlaying, isPlaying } = props;
+  const shouldRenderDetails = (!isForNowPlaying || isPlaying);
+
   const { isDark } = useContext(ThemeContext);
-  const { data: paletteData } = usePalette(props.image?.url ?? '')
-  || { data: null };
+  const { data: paletteData }
+    = shouldRenderDetails
+      ? usePalette(props.image?.url ?? '') || { data: null }
+      : { data: null };
 
   const preSize: number = ((props.image?.width ?? 0)
     + (props.image?.height ?? 0));
   const size: number = preSize > 0 ? preSize > 128 ? 96 : 72 : 0;
-  const shouldRenderDetails = (!isForNowPlaying || isPlaying);
 
   const renderAlbumImage = () => {
     if (shouldRenderDetails && props.image) {
