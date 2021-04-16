@@ -5,17 +5,20 @@ import About from '@components/root/about/about';
 import Projects, { ProjectProps } from '@components/root/projects/projects';
 
 interface IndexProps extends PageProps {
-  projects: ProjectProps[],
+  projects: ProjectProps[];
 }
 
 const Index = ({ title, description, keywords, projects }: IndexProps) => {
   return (
     <Layout
-      title={title} description={description} keywords={keywords}
-      page={0}>
-      <About/>
-      <hr id={'projects'}/>
-      <Projects projects={projects}/>
+      title={title}
+      description={description}
+      keywords={keywords}
+      page={0}
+    >
+      <About />
+      <hr id={'projects'} className={'divider grad-b'} />
+      <Projects projects={projects} />
     </Layout>
   );
 };

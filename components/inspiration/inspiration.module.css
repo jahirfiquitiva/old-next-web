@@ -1,0 +1,69 @@
+.inspiration {
+  padding: 1rem 1.2rem 2rem;
+}
+
+.inspiration .title {
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 var(--dark-gradients-c);
+}
+
+.inspiration .noinspo {
+  margin-top: 2.6rem;
+}
+
+.inspiration .grid {
+  margin-top: 2.6rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: masonry;
+  grid-auto-flow: row dense;
+  grid-gap: 1.2rem;
+}
+
+.inspiration .card {
+  border-radius: 6px;
+  border: 1px solid var(--divider);
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  height: auto;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: .8rem 1rem;
+}
+
+.inspiration .card .url {
+  margin-top: .4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.inspiration .card .url img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.inspiration .card .url p {
+  margin-left: .6rem;
+  font-size: calc(var(--base-font-size) * 0.85);
+  font-weight: 500;
+}
+
+@media (min-width: 660px) {
+  .inspiration .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 960px) {
+  .inspiration {
+    padding: 1rem 0 3rem;
+  }
+
+  .inspiration .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

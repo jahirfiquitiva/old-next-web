@@ -29,7 +29,7 @@
 .about .info {
   display: flex;
   flex-direction: column;
-  padding: 3rem 1.2rem .2rem;
+  padding: 3rem 1.2rem 0.2rem;
   grid-row: 2;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .details button svg {
-  margin-right: .6rem;
+  margin-right: 0.6rem;
 }
 
 .details p {
@@ -60,7 +60,7 @@
 }
 
 .find {
-  padding: .2rem 1.2rem 0;
+  padding: 0.2rem 1.2rem 0;
 }
 
 .about .hello {
@@ -80,11 +80,11 @@
     grid-gap: 6rem;
     margin-top: 0;
     padding-top: 4rem;
-    margin-bottom: .8rem;
+    margin-bottom: 0.8rem;
   }
 
   .about .info {
-    padding: 0 0 .2rem;
+    padding: 0 0 0.2rem;
     grid-column: 1;
     grid-row: 1;
   }
@@ -101,6 +101,6 @@
   }
 
   .find {
-    padding-top: .8rem;
+    padding-top: 0.8rem;
   }
 }

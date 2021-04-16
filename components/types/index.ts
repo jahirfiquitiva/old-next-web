@@ -39,3 +39,29 @@ export interface FullRepoData extends ExtendedRepoData {
   changelog?: string,
   download?: string,
 }
+
+export interface TopTrackData {
+  title?: string,
+  artist?: string,
+  album?: string,
+  url?: string,
+  image?: {
+    height?: number,
+    width?: number,
+    url?: string,
+  },
+}
+
+export interface TrackData extends TopTrackData {
+  isPlaying?: boolean,
+}
+
+export interface BaseInspoItem {
+  link: string;
+  title: string;
+  description?: string;
+}
+
+export interface InspoItem extends BaseInspoItem {
+  favicon?: string;
+}

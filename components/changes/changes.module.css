@@ -3,7 +3,7 @@
 }
 
 .changes .title {
-  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #feb67c;
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0  var(--dark-gradients-d);
 }
 
 .changes .grid {

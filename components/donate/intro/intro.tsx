@@ -6,7 +6,11 @@ import styles from './intro.module.css';
 const Intro = () => {
   return (
     <div className={styles.intro}>
-      <h3 className={styles.title}>💙&nbsp;&nbsp;Donate</h3>
+      <h3 className={styles.title}>🧡️&nbsp;&nbsp;
+        <span className={'text-gradient grad-f'}>
+          Donate
+        </span>
+      </h3>
       <p>
         I try really hard to build great apps and provide the best possible
         experience and products to all users, and most of them are <ExtLink

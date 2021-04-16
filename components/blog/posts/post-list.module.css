@@ -1,9 +1,11 @@
 .blog {
   padding: 2rem 1.2rem 3rem;
+  height: 100%;
+  flex: 1;
 }
 
 .blog .title {
-  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #fed330;
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 var(--dark-gradients-c);
 }
 
 .blog .posts {
@@ -11,8 +13,9 @@
   grid-template-columns: 1fr;
   grid-template-rows: masonry;
   grid-auto-flow: row dense;
-  grid-gap: 1rem;
+  grid-gap: 1.6rem;
   padding: 1rem 0;
+  margin-top: 1rem;
 }
 
 .blog .posts .card {
@@ -33,6 +36,8 @@
 .blog .posts .card .details {
   align-self: flex-start;
   width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .blog .posts .card .hero {
@@ -42,11 +47,12 @@
   justify-content: center;
   align-items: center;
   object-fit: cover;
-  max-height: 168px;
-  width: 100%;
-  height: 168px;
+  width: 96px;
+  min-width: 96px;
+  min-height: 96px;
+  height: auto;
   border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -60,8 +66,16 @@
   padding: 1rem;
 }
 
+.blog .posts .card .details .info h6 {
+  font-size: 1.1rem;
+}
+
 .blog .posts .card .details .info p {
   margin-top: .25rem;
+}
+
+.blog .posts .card .details .info .date {
+  color: var(--text-tertiary);
 }
 
 .blog .posts .card,
@@ -97,8 +111,8 @@
   transform: translateY(-.1rem);
 }
 
-.blog .posts .card:focus h5,
-.blog .posts .card:hover h5 {
+.blog .posts .card:focus h6,
+.blog .posts .card:hover h6 {
   color: var(--hl-color);
   text-decoration: underline;
   -webkit-text-decoration-style: solid;
@@ -111,9 +125,48 @@
   color: var(--text-primary);
 }
 
-@media (min-width: 660px) {
-  .blog .posts {
-    grid-template-columns: repeat(2, 1fr);
+.blog .search {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-top: .8rem;
+}
+
+.blog .search input {
+  flex: 1;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid var(--divider);
+  border-radius: 6px;
+  min-height: 32px;
+  padding: .4rem 2.8rem .4rem .6rem;
+}
+
+.blog .search input:focus {
+  outline-color: var(--accent);
+  outline-width: 1px;
+  border: 1px solid var(--accent);
+}
+
+.blog .search svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(50%);
+  margin-right: .8rem;
+  pointer-events: none;
+  user-select: none;
+  color: var(--text-tertiary);
+}
+
+.blog .noposts {
+  margin: 2.4rem 0 1.6rem;
+}
+
+@media (min-width: 768px) {
+  .blog .posts .card .hero {
+    width: 144px;
+    min-width: 144px;
+    min-height: 108px;
   }
 }
 
@@ -124,6 +177,16 @@
 
   .blog .posts {
     padding: 3rem 0;
-    grid-template-columns: repeat(3, 1fr);
+    margin-top: 0;
+  }
+
+  .blog .posts .card .hero {
+    width: 192px;
+    min-width: 192px;
+    min-height: 126px;
+  }
+
+  .blog .search button {
+    margin-left: 1.2rem;
   }
 }

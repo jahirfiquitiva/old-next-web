@@ -89,7 +89,7 @@
     "icon": "/assets/images/projects/android/fabsmenu.png",
     "preview": "/assets/images/projects/android/fabsmenu-preview.png",
     "link": "https://github.com/jahirfiquitiva/FABsMenu/",
-    "color": "#e92566",
+    "color": "#eb3b75",
     "tag": "android",
     "stack": [
       "android",
@@ -103,7 +103,7 @@
     "icon": "/assets/images/projects/web/setup.png",
     "link": "/dashsetup/",
     "preview": "/assets/images/projects/web/dashbud-preview.png",
-    "color": "#7E28FC",
+    "color": "#9853fd",
     "tag": "web",
     "stack": [
       "HTLM5",
@@ -118,7 +118,7 @@
     "icon": "/assets/images/projects/web/changes.png",
     "preview": "/assets/images/projects/web/changes-preview.png",
     "link": "/changes/",
-    "color": "#0FAEB9",
+    "color": "#27b6c0",
     "tag": "web",
     "stack": [
       "HTLM5",

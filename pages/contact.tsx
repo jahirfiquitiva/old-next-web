@@ -10,7 +10,7 @@ interface ContactProps extends PageProps {
 }
 
 const Contact = ({
-  title, description, keywords, form, reCaptchaKey
+  title, description, keywords, form, reCaptchaKey,
 }: ContactProps) => {
   return (
     <Layout title={title} description={description} keywords={keywords}

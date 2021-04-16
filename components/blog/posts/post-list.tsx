@@ -1,14 +1,15 @@
-import { CSSProperties, useContext } from 'react';
-import { usePalette } from 'react-palette';
+import { CSSProperties, useContext, useState } from 'react';
 import Link from 'next/link';
 import Icon from '@mdi/react';
-import { mdiPencil } from '@mdi/js';
+import { mdiMagnify, mdiPencil } from '@mdi/js';
 import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
 import ThemeContext from '@components/theme/ThemeContext';
-import ExtLink from '@components/global/ext-link/ext-link';
 import styles from './post-list.module.css';
 import buildCustomStyles from '@utils/buildCustomStyles';
+import { usePalette } from 'react-palette';
+import { Suggestions } from '@components/blog/suggestions/suggestions';
+import { formatDate } from '@utils/formatDate';
 
 export interface FrontmatterProps {
   title: string,
@@ -18,6 +19,13 @@ export interface FrontmatterProps {
   color?: string,
   link?: string,
   page?: number,
+  tableOfContents?: string,
+  readingTime?: {
+    text?: string,
+    minutes?: number,
+    time?: number,
+    words?: number,
+  }
 }
 
 export interface PostProps {
@@ -29,17 +37,23 @@ export interface PostProps {
 
 export interface PostsListProps {
   posts?: PostProps[]
+  form?: Object
 }
 
-const PostsList = ({ posts }: PostsListProps) => {
+const PostItem = (props: PostProps) => {
+  const { frontmatter, color: defaultColor, slug } = props;
   const { isDark } = useContext(ThemeContext);
-  if ((posts || []).length <= 0) {
-    return (
-      <div>
-        <p>No posts found yet!</p>
-      </div>
-    );
-  }
+
+  const defHero = frontmatter?.hero || '';
+  const heroUrl = defHero.length > 0 ? defHero.startsWith('..') ? null : defHero
+                                     : null;
+
+  const { data: paletteData } = heroUrl ? usePalette(heroUrl) : { data: null };
+  const color = getColorFromData(paletteData, isDark) ||
+    frontmatter.color || defaultColor;
+
+  const rightLink = frontmatter.link && frontmatter.link.length > 0
+                    ? frontmatter.link : `/blog/${slug}`;
 
   const renderPostHero = (url?: string, color?: string) => {
     return (
@@ -56,7 +70,7 @@ const PostsList = ({ posts }: PostsListProps) => {
     );
   };
 
-  const getColorStyle = (color?: string): CSSProperties => {
+  const getColorStyle = (): CSSProperties => {
     if (!color) return {};
     return buildCustomStyles({
       '--shadow-color': hexToRGB(color, 0.15),
@@ -65,74 +79,80 @@ const PostsList = ({ posts }: PostsListProps) => {
     });
   };
 
-  const getHeroUrl = (post: PostProps) => {
-    if (post && post.frontmatter) {
-      const { hero } = post.frontmatter;
-      return hero && hero.length > 0
-             ? hero.startsWith('..') ? null : hero
-             : null;
-    }
-    return null;
-  };
-
-  const renderPostLinkContent = (post: PostProps, heroUrl?: string,
-    color?: string) => {
+  const renderPostLinkContent = (heroUrl?: string) => {
     return (<div className={styles.details}>
       {renderPostHero(heroUrl, color)}
       <div className={styles.info}>
-        <h5>{post.frontmatter.title}</h5>
-        <p>{post.frontmatter.date}</p>
-        <p>{post.frontmatter.description || ''}</p>
+        <h6>{frontmatter.title}</h6>
+        {frontmatter.description && <p>{frontmatter.description || ''}</p>}
+        <p className={styles.date}>
+          {formatDate(new Date(frontmatter.date))}
+          {((frontmatter.readingTime?.text?.length || 0) > 0) && (<>
+            {' • '}{frontmatter.readingTime?.text}
+          </>)}
+        </p>
       </div>
     </div>);
   };
 
-  const renderPostLink = (post: PostProps, heroUrl: string, color?: string,
-    rightLink?: string) => {
+  const renderPostLink = (heroUrl: string, rightLink?: string) => {
     const extras = rightLink && rightLink.length > 0
                    ? {
-        key: post.slug, rel: 'noopener noreferrer', href: rightLink,
+        key: slug, rel: 'noopener noreferrer', href: rightLink,
         target: '_blank'
-      }
-                   : {};
+      } : {};
     return (<a
-      title={post.frontmatter.title} aria-label={post.frontmatter.title}
-      className={styles.card} style={getColorStyle(color)} {...extras}>
-      {renderPostLinkContent(post, heroUrl, color)}
+      title={frontmatter.title} aria-label={frontmatter.title}
+      className={styles.card} style={getColorStyle()} {...extras}>
+      {renderPostLinkContent(heroUrl)}
     </a>);
+  };
+
+  if (rightLink.startsWith('/')) {
+    return (<Link href={rightLink} key={slug}>
+      {renderPostLink(heroUrl || '')}
+    </Link>);
+  }
+  return renderPostLink(heroUrl || '', rightLink);
+};
+
+const PostsList = ({ posts, form }: PostsListProps) => {
+  const [filter, setFilter] = useState('');
+
+  const filteredPosts = (posts || [])
+    .filter(it =>
+      it.frontmatter.title.toLowerCase().includes(filter.toLowerCase()) ||
+      it.frontmatter.description?.toLowerCase().includes(filter.toLowerCase()));
+
+  const renderPostsList = () => {
+    if (filteredPosts.length <= 0) {
+      return (
+        <div className={styles.noposts}>
+          <p>No posts found.</p>
+        </div>
+      );
+    }
+    return (<div className={styles.posts}>
+      {filteredPosts.map((post, index) => {
+        return <PostItem key={index} {...post} />;
+      })}
+    </div>);
   };
 
   return (
     <div className={styles.blog}>
-      <h3 className={styles.title}>📝 &nbsp;&nbsp;Blog</h3>
-      <div className={styles.posts}>
-        {(posts || []).map((post) => {
-          const heroUrl = getHeroUrl(post);
-          const { data } = heroUrl ? usePalette(heroUrl) : { data: null };
-          const color = getColorFromData(data, isDark) ||
-            post.frontmatter.color || post.color;
-          const rightLink = post.frontmatter.link &&
-                            post.frontmatter.link.length > 0
-                            ? post.frontmatter.link : `/blog/${post.slug}`;
-          if (rightLink.startsWith('/')) {
-            return (<Link href={rightLink} key={post.slug}>
-              {renderPostLink(post, heroUrl || '', color)}
-            </Link>);
-          }
-          return renderPostLink(post, heroUrl || '', color, rightLink);
-        })}
+      <h3 className={styles.title}>📝 &nbsp;&nbsp;
+        <span className={'text-gradient grad-b'}>
+          Blog
+        </span>
+      </h3>
+      <div className={styles.search}>
+        <input type={'text'} placeholder={'Search blog posts...'} value={filter}
+               onChange={(e) => {setFilter(e.target.value);}}/>
+        <Icon path={mdiMagnify} size={1}/>
       </div>
-      <p>I&apos;m honestly not the kind of person who blogs much, but I would
-        like to do it more
-        frequently.</p>
-      <p>If you have ideas or topics you would like me to blog about, I&apos;d
-        really appreciate if
-        you <Link href={'/contact'}><a>share them with me</a></Link>.</p>
-      <p>You can also find other posts by me on&nbsp;
-        <ExtLink label={'dev.to'}
-                 to={'https://dev.to/jahirfiquitiva'}/>&nbsp;and&nbsp;
-        <ExtLink label={'medium'} to={'https://medium.com/@jahirfiquitiva'}/>
-      </p>
+      {renderPostsList()}
+      <Suggestions form={form}/>
     </div>
   );
 };

@@ -1,18 +1,48 @@
 import { useContext } from 'react';
-import { usePalette } from 'react-palette';
 import Link from 'next/link';
+import { usePalette } from 'react-palette';
 import ReactMarkdown from 'react-markdown';
+import gfm from 'remark-gfm';
 import hexToRGB from '@utils/hexToRgb';
 import getColorFromData from '@utils/getColorFromData';
+import { formatDate } from '@utils/formatDate';
 import UnsizedImage from '@components/global/image/UnsizedImage';
 import ThemeContext from '@components/theme/ThemeContext';
-import styles from './post.module.css';
+import { markdownComponents } from '@components/blog/single-post/markdown-components';
 import { FrontmatterProps } from '@components/blog/posts/post-list';
+import styles from './post.module.css';
 
 interface PostProps {
   frontmatter: FrontmatterProps,
   mdBody: string
 }
+
+const getChildType = (child: any): string | null | undefined => {
+  try {
+    const { type } = child;
+    return type?.name || type;
+  } catch (e) {
+    return null;
+  }
+};
+
+const components: any = {
+  ...markdownComponents,
+  // @ts-ignore
+  // eslint-disable-next-line react/display-name
+  p({ node, className, ...props }) {
+    const classNames = [
+      getChildType(props.children?.[0]) === 'em'
+      ? styles.possiblecodetitle
+      : '',
+      getChildType(props.children?.[2]) === 'img'
+      ? styles.possibleimagetitle
+      : '',
+    ];
+
+    return <p className={classNames.join(' ')} {...props}/>;
+  },
+};
 
 const Post = ({ frontmatter, mdBody }: PostProps) => {
   const { isDark } = useContext(ThemeContext);
@@ -36,14 +66,32 @@ const Post = ({ frontmatter, mdBody }: PostProps) => {
         }}>
           {frontmatter.title}
         </h1>
+        <p className={styles.date}>
+          {formatDate(new Date(frontmatter.date))}
+          {((frontmatter.readingTime?.text?.length || 0) > 0) && (<>
+            {' • '}{frontmatter.readingTime?.text}
+          </>)}
+        </p>
         {frontmatter.hero && (
           <UnsizedImage
             className={styles.hero}
             src={frontmatter.hero || ''}
             alt={frontmatter.title}/>
         )}
-        <ReactMarkdown source={mdBody} escapeHtml={false}
-                       className={styles.content}/>
+        {((frontmatter.tableOfContents ?? '').length > 0)
+        && (<div className={styles.toc}>
+          <p className={styles.title}>Table of Contents:</p>
+          <ReactMarkdown
+            className={styles.content}>
+            {frontmatter.tableOfContents ?? ''}
+          </ReactMarkdown>
+        </div>)}
+        <ReactMarkdown
+          remarkPlugins={[gfm]}
+          className={styles.content}
+          components={components}>
+          {mdBody}
+        </ReactMarkdown>
       </article>
     </div>
   );

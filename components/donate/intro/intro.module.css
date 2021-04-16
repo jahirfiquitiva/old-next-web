@@ -3,7 +3,7 @@
 }
 
 .intro .title {
-  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #97d0f8;
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 var(--dark-gradients-f);
 }
 
 .intro p {

@@ -1,6 +1,6 @@
 {
-  "i-am": "I am Jahir Fiquitiva",
-  "description": "I'm a passionate and creative full-stack software engineer from",
+  "i-am": "I am",
+  "description": "Passionate and creative full-stack software engineer from",
   "details": {
     "first": {
       "a": "I consider myself a curious and inquisitive person, so on my spare time I like to work on",
@@ -23,6 +23,9 @@
     "fourth": {
       "a": "If you are interested in knowing which tools I use (software + hardware), you can",
       "b": "check out my {{uses}} page"
+    },
+    "fifth": {
+      "a": "I'm currently a software technologist at"
     }
   },
   "find-me-on": "You can find me on",

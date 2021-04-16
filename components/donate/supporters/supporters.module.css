@@ -2,8 +2,22 @@
   padding: 1rem 1.2rem 3rem;
 }
 
+.supporters .header {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 1fr;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.supporters .header .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .supporters .title {
-  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 #fd9644;
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 var(--dark-gradients-g);
 }
 
 .supporters p {
@@ -66,7 +80,7 @@
   height: 170px;
   width: auto;
   max-width: 300px;
-  margin: 2.8rem auto 0;
+  margin: 0 auto;
 }
 
 .supporters h5.sponsortitle {
@@ -82,6 +96,18 @@
   font-size: .85rem;
 }
 
+
+
+@media (min-width: 768px) {
+  .supporters .header {
+    grid-template-columns: minmax(0, auto) minmax(256px, 1fr);
+    grid-gap: 2rem;
+  }
+
+  .supporters .thanksgif {
+    margin: 0 0 0 auto;
+  }
+}
 @media (min-width: 960px) {
   .supporters {
     padding: 1rem 0 3rem;

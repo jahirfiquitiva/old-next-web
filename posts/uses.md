@@ -11,7 +11,7 @@ This site is inspired and featured on [uses.tech](https://uses.tech)
 
 ### 🌐  Website
 
-This website is built using TypeScript, custom CSS (no frameworks/libraries) and [Next.js](https://nextjs.org/) and is deployed on [Vercel](https://vercel.com/)
+This website is built using TypeScript, custom CSS (no frameworks/libraries), [Next.js](https://nextjs.org/) and deployed on [Vercel](https://vercel.com/)
 
 
 ### 📑  Terminal + Editors
@@ -22,26 +22,34 @@ I use the default macOS terminal with a slightly modified `~/.bash_profile` for 
 * [Material Theme UI](https://plugins.jetbrains.com/plugin/8006-material-theme-ui/) plugin
 * [Fira Code](https://github.com/tonsky/FiraCode) font
 
-### 📌  Browser Extensions (Google Chrome)
+### 📌  Browser Extensions (Brave)
 
+* [Auto Tab Discard](https://add0n.com/tab-discard.html)
+* [Distraction Free YouTube](https://chrome.google.com/webstore/detail/df-tube-distraction-free/mjdepdfccjgcndkmemponafgioodelna)
 * [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp)
 * [Ink for Google](https://chrome.google.com/webstore/detail/ink-for-google/hmanckoiohnlgdommlcckcflkmllobgj)
 * [JSON Viewer](https://chrome.google.com/webstore/detail/ink-for-google/hmanckoiohnlgdommlcckcflkmllobgj)
 * [Refined GitHub](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf)
-* [Refined Twitter](https://chrome.google.com/webstore/detail/refined-twitter/nlfgmdembofgodcemomfeimamihoknip)
+* [Minimal Twitter](https://chrome.google.com/webstore/detail/minimal-twitter/pobhoodpcipjmedfenaigbeloiidbflp)
 * [Simplify Gmail](https://chrome.google.com/webstore/detail/simplify-gmail/pbmlfaiicoikhdbjagjbglnbfcbcojpj)
-* [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg)
 * [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
 * [User CSS](https://chrome.google.com/webstore/detail/user-css/okpjlejfhacmgjkmknjhadmkdbcldfcb)
-<!-- * [Tabliss](https://chrome.google.com/webstore/detail/tabliss-a-beautiful-new-t/hipekcciheckooncpjeljhnekcoolahp) -->
 
-### 💡  Desktop Apps
+### 💡  Apps
 
-* [Flow](https://flowapp.info/)
+* [Craft](https://craft.do/)
+* [Notion](https://notion.so/)
+* [GoodNotes](https://www.goodnotes.com/)
+* [1Password](https://1password.com/)
+* [AirBuddy](https://v2.airbuddy.app/)
+* [CleanShot X](https://cleanshot.com/)
+* [Contraste](https://contrasteapp.com/)
+* [Haptic Touch Bar](https://www.haptictouchbar.com/)
+* [Clean My Mac X](https://cleanmymac.com/)
 * [Postman](https://www.getpostman.com/)
 * [Magnet](https://apps.apple.com/co/app/magnet/id441258766)
 * [Swish](https://highlyopinionated.co/swish/)
-* [Bartender 4](https://www.macbartender.com/)
+* [Bartender](https://www.macbartender.com/)
 * [Lungo](https://sindresorhus.com/lungo)
 * [Battery Indicator](https://sindresorhus.com/battery-indicator)
 * [Rocket Pro](http://matthewpalmer.net/rocket/)
@@ -49,8 +57,10 @@ I use the default macOS terminal with a slightly modified `~/.bash_profile` for 
 
 ### 💻  Hardware
 
-* [2020 13" MacBook Pro](https://support.apple.com/kb/SP819) 2.0 GHz Quad-Core Intel Core i5 10th Gen, 512GB SSD and 16GB RAM
-* [LG 27UK850-W 27" 4K Monitor](https://amzn.to/33anjOW) that's on a [Stand Riser](https://amzn.to/35UXMLw)
+* [2019 16" MacBook Pro](https://support.apple.com/kb/SP809) (Work) _2.6 GHz Six-Core Intel Core i7, 512GB SSD and 16GB RAM_
+* [2020 13" MacBook Pro](https://support.apple.com/kb/SP819) (Personal) _2.0 GHz Quad-Core Intel Core i5, 512GB SSD and 16GB RAM_
+* [LG 27UK850-W 27" 4K Monitor](https://amzn.to/33anjOW) that's on a [Stand Riser](https://amzn.to/3a7zEaj)
+* [DeltaHub Carpio](https://deltahub.io/)
 * [HyperDrive Duo 7 in 2 USB C Hub](https://amzn.to/3kTYahM)
 * [Anker 7 in 1 USB C Hub](https://amzn.to/3nSY1wZ)
 * [Apple Magic Keyboard](https://amzn.to/371l3dV)
@@ -59,3 +69,19 @@ I use the default macOS terminal with a slightly modified `~/.bash_profile` for 
 * [Pacific Blue iPhone 12 Pro](https://amzn.to/396rFun)
 * [AirPods Pro](https://amzn.to/3nRtdwx)
 * [iPad Air 4th Gen](https://amzn.to/396fwpp)
+
+### 👾  Gaming PC
+* MotherBoard: [Aorus B450 Pro WiFi](https://amzn.to/3g6mRsu)
+* Processor: [AMD Ryzen 7 3700X](https://amzn.to/32tuHEF)
+* Graphics Card: AMD RX 5600XT
+* Storage: [Western Digital 480GB SSD](https://amzn.to/3v4KAO7)
+* RAM: [ThermalTake Toughram RGB 16GB (2x8)](https://amzn.to/2Q4kJ9Z)
+* Case: [Black Corsair iCue 465X](https://amzn.to/3ssBrgB)
+* Power Supply: [Cooler Master 750W 80+ Gold](https://amzn.to/3dhi7yo)
+* Keyboard: [Logitech G915 TKL](https://amzn.to/3mLmK70)
+* Mouse: [Black Logitech G203](https://amzn.to/3e7stzU)
+
+> **Disclaimer:**
+> 
+> Some of the links above are affiliate links. I understand if you don’t want to click them but any affiliate income 
+> earned goes straight back into powering this website and my other side projects.

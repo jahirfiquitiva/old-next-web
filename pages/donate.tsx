@@ -13,7 +13,7 @@ const Donate = ({ title, description, keywords, supporters }: DonateProps) => {
     <Layout title={title} description={description} keywords={keywords}
             page={3}>
       <Intro/>
-      <hr id={'thanks'}/>
+      <hr id={'thanks'} className={'divider grad-f'}/>
       <Supporters supporters={supporters}/>
     </Layout>
   );

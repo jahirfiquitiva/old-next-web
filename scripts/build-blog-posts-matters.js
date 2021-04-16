@@ -51,7 +51,7 @@ const buildBlogPostsMatters = async (isForRedirects = false) => {
   return filesContents
     .filter((it) => it)
     .map(transformPostToMatter)
-    .filter((it) => isForRedirects ? it && it.link : it);
+    .filter((it) => isForRedirects ? it && it.link && it.link.length > 0 : it);
 };
 
 module.exports = { buildBlogPostsMatters };
