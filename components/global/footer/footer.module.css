@@ -97,6 +97,9 @@ footer.footer .container .logito {
 
 footer.footer .container .logito span {
   flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 footer.footer .container .logito img,
