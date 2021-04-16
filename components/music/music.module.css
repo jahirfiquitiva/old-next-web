@@ -14,6 +14,7 @@
 .music a {
   -webkit-text-decoration-color: inherit;
   text-decoration-color: inherit;
+  max-width: calc(100vw - 2.4rem);
 }
 
 .music .grid {
@@ -22,12 +23,13 @@
   grid-template-rows: masonry;
   grid-auto-flow: row dense;
   grid-gap: 1.2rem;
+  overflow-x: hidden;
 }
 
 .music .card {
   border-radius: 6px;
   border: 1px solid var(--divider);
-  overflow: hidden;
+  overflow-x: hidden;
   pointer-events: none;
   user-select: none;
 }
@@ -60,9 +62,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;
+  overflow-x: hidden;
   max-width: 100%;
-  flex: 1;
   margin-left: 1rem;
   margin-right: .2rem;
 }
@@ -85,6 +86,10 @@
 }
 
 @media (min-width: 660px) {
+  .music a {
+    max-width: 100%;
+  }
+
   .music .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
