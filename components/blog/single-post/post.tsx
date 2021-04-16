@@ -89,8 +89,7 @@ const Post = ({ frontmatter, mdBody }: PostProps) => {
         <ReactMarkdown
           remarkPlugins={[gfm]}
           className={styles.content}
-          components={components}
-          linkTarget={'_blank'}>
+          components={components}>
           {mdBody}
         </ReactMarkdown>
       </article>

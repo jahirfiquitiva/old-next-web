@@ -1,7 +1,5 @@
 ---
-title: 'Redesigning my website' 
-author: 'Jahir' 
-date: '2021-04-15'
+title: 'Redesigning my website' author: 'Jahir' date: '2021-04-15'
 hero: https://images.unsplash.com/photo-1591267990439-bc68529677c3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=ferenc-almasi-ayjnmG4oUX4-unsplash.jpg&w=640
 ---
 
@@ -226,14 +224,16 @@ and config I needed.
 
 ### Music dashboard
 
-This is a new place in my website, where you can know a little more about me by seeing what I'm currently listening to
-and also the most recent top tracks.
+The [music dashboard](/music) is a new place in my website, where you can know a little more about me by seeing what I'm
+currently listening to and also the most recent top tracks.
 
 ### Inspiration links
 
-Based on [Brian Lovin's bookmarks](https://brianlovin.com/bookmarks/website) I wanted to share some links to websites or
-tools that have been inspiring my work and even some of my projects. Probably not enough to recognize their work and
-quality and creativity in what they do.
+Based on [Brian Lovin's bookmarks](https://brianlovin.com/bookmarks/website) I wanted to share
+some [links](/inspiration) to websites or tools that have been inspiring my work and even some of my
+projects. Probably not enough to recognize their work and quality and creativity in what they do.
+
+I'm using the [WebMaster API](https://www.webmasterapi.com/get-favicons) to get the sites favicons.
 
 ## Closing up
 
