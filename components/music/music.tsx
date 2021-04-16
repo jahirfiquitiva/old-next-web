@@ -38,16 +38,25 @@ const SongCard = (props: SongCardProps) => {
     return <Icon path={mdiSpotify} size={2} color={'#1ED760'}/>;
   };
 
+  const backgroundColor: string | undefined = paletteData
+                                              ? isDark
+                                                ? paletteData?.darkMuted
+                                                  ?? undefined
+                                                : paletteData?.lightVibrant
+                                                  ?? undefined
+                                              : undefined;
+
+  const textColor: string | undefined = paletteData
+                                        ? isDark
+                                          ? paletteData?.lightVibrant
+                                            ?? undefined
+                                          : paletteData?.darkMuted ?? undefined
+                                        : undefined;
+
   const renderActualCard = () => {
     return <div
       className={styles.card}
-      style={{
-        backgroundColor: paletteData
-                         ? isDark
-                           ? paletteData?.lightVibrant ?? undefined
-                           : paletteData?.darkMuted ?? undefined
-                         : undefined,
-      }}>
+      style={{ backgroundColor }}>
       <div className={[styles.overlay,
         shouldRenderDetails && paletteData ? styles.valid : ''].join(' ')}>
         <div className={styles.album}
@@ -56,18 +65,7 @@ const SongCard = (props: SongCardProps) => {
         </div>
         <div
           className={styles.details}
-          style={{
-            color: paletteData
-                   ? isDark
-                     ? paletteData?.darkMuted ?? undefined
-                     : paletteData?.lightVibrant ?? undefined
-                   : undefined,
-            borderColor: paletteData
-                         ? isDark
-                           ? paletteData?.darkMuted ?? undefined
-                           : paletteData?.lightVibrant ?? undefined
-                         : undefined,
-          }}>
+          style={{ color: textColor, borderColor: textColor }}>
           <h6>{((props.title?.length ?? 0) > 0 && shouldRenderDetails)
                ? props.title
                : 'Nothing'}</h6>
@@ -82,13 +80,7 @@ const SongCard = (props: SongCardProps) => {
       <a title={props.title} aria-label={props.title}
          target={'_blank'}
          rel={'noopener noreferrer'}
-         style={{
-           color: paletteData
-                  ? isDark
-                    ? paletteData.darkMuted
-                    : paletteData.lightVibrant
-                  : undefined,
-         }}>
+         style={{ color: textColor }}>
         {renderActualCard()}
       </a>
     </Link>);

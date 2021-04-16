@@ -50,7 +50,7 @@
 }
 
 .music .card .overlay.valid {
-  background-color: var(--text-tertiary);
+  background-color: var(--music-cards-overlay-color);
 }
 
 .music .card .album {
