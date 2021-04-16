@@ -44,12 +44,12 @@ const SongCard = (props: SongCardProps) => {
       style={{
         backgroundColor: paletteData
                          ? isDark
-                           ? paletteData.lightVibrant
-                           : paletteData.darkMuted
+                           ? paletteData?.lightVibrant ?? undefined
+                           : paletteData?.darkMuted ?? undefined
                          : undefined,
       }}>
       <div className={[styles.overlay,
-        shouldRenderDetails ? styles.valid : ''].join(' ')}>
+        shouldRenderDetails && paletteData ? styles.valid : ''].join(' ')}>
         <div className={styles.album}
              style={{ minWidth: shouldRenderDetails ? size : 0 }}>
           {renderAlbumImage()}
@@ -59,13 +59,13 @@ const SongCard = (props: SongCardProps) => {
           style={{
             color: paletteData
                    ? isDark
-                     ? paletteData.darkMuted
-                     : paletteData.lightVibrant
+                     ? paletteData?.darkMuted ?? undefined
+                     : paletteData?.lightVibrant ?? undefined
                    : undefined,
             borderColor: paletteData
                          ? isDark
-                           ? paletteData.darkMuted
-                           : paletteData.lightVibrant
+                           ? paletteData?.darkMuted ?? undefined
+                           : paletteData?.lightVibrant ?? undefined
                          : undefined,
           }}>
           <h6>{((props.title?.length ?? 0) > 0 && shouldRenderDetails)

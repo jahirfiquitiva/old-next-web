@@ -16,6 +16,7 @@
   text-decoration-color: inherit;
   max-width: calc(100vw - 2.6rem);
   border-radius: 6px;
+  color: var(--text-primary);
 }
 
 .music .grid {
