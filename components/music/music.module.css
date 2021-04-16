@@ -14,7 +14,8 @@
 .music a {
   -webkit-text-decoration-color: inherit;
   text-decoration-color: inherit;
-  max-width: calc(100vw - 2.4rem);
+  max-width: calc(100vw - 2.6rem);
+  border-radius: 6px;
 }
 
 .music .grid {
@@ -24,12 +25,14 @@
   grid-auto-flow: row dense;
   grid-gap: 1.2rem;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 .music .card {
   border-radius: 6px;
   border: 1px solid var(--divider);
   overflow-x: hidden;
+  max-width: 100%;
   pointer-events: none;
   user-select: none;
 }
@@ -41,6 +44,8 @@
   flex-direction: row;
   align-items: center;
   padding: .8rem;
+  border-radius: 6px;
+  max-width: 100%;
 }
 
 .music .card .overlay.valid {
