@@ -7,6 +7,7 @@ import {
 } from '@mdi/js';
 import fetcher from '@lib/fetcher';
 import { FullRepoData } from '@components/types';
+import { formatDate } from '@utils/formatDate';
 import styles from './changes.module.css';
 
 const ChangesContent = () => {
@@ -15,7 +16,7 @@ const ChangesContent = () => {
   const getLocaleDate = (stamp?: string, def?: string) => {
     if (!stamp) return def ? def.toString() : '';
     try {
-      return new Date(stamp).toLocaleDateString();
+      return formatDate(new Date(stamp));
     } catch (e) {
       return def ? def.toString() : '';
     }

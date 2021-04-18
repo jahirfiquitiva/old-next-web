@@ -3,7 +3,7 @@
 }
 
 .changes .title {
-  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0  var(--dark-gradients-d);
+  text-shadow: var(--text-shadow-size) var(--text-shadow-size) 0 var(--dark-gradients-d);
 }
 
 .changes .grid {
@@ -20,7 +20,7 @@
   height: fit-content;
   display: flex;
   flex-direction: column;
-  padding: .8rem .8rem .6rem;
+  padding: 1.2rem;
   border-radius: 6px;
   border: 1px solid var(--divider);
   word-wrap: break-word;
@@ -46,7 +46,7 @@
 }
 
 .changes .grid .card .details .content {
-  margin: .6rem 0;
+  margin: .8rem 0;
 }
 
 .changes .grid .card .details .content em {
@@ -136,9 +136,5 @@
 @media (min-width: 960px) {
   .changes {
     padding: 1rem 0 3rem;
-  }
-
-  .changes .grid {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
