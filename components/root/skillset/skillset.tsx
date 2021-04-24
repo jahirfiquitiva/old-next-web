@@ -1,19 +1,9 @@
 import Icon from '@mdi/react';
 import {
-  mdiAndroid,
-  mdiGit,
-  mdiLanguageCss3,
-  mdiLanguageHtml5,
-  mdiLanguageJava,
-  mdiLanguageJavascript,
-  mdiLanguageKotlin,
-  mdiLanguagePython,
-  mdiLanguageTypescript,
-  mdiLeaf,
-  mdiMaterialDesign,
-  mdiNodejs,
-  mdiReact,
-  mdiTriangle
+  mdiAndroid, mdiGit, mdiLanguageCss3, mdiLanguageHtml5, mdiLanguageJava,
+  mdiLanguageJavascript, mdiLanguageKotlin, mdiLanguagePython,
+  mdiLanguageTypescript, mdiLeaf, mdiMaterialDesign, mdiNodejs,
+  mdiPuzzleOutline, mdiReact, mdiTriangle
 } from '@mdi/js';
 import hexToRGB from '@utils/hexToRgb';
 import buildCustomStyles from '@utils/buildCustomStyles';
@@ -39,6 +29,7 @@ export const skills: SkillProps[] = [
   { name: 'React', iconPath: mdiReact, color: '#00c2e6' },
   { name: 'NextJS', iconPath: mdiTriangle, color: '#0070f3' },
   { name: 'Mongo DB', iconPath: mdiLeaf, color: '#69a14a' },
+  { name: 'Express', iconPath: mdiPuzzleOutline, color: '#888888' },
   { name: 'Git', iconPath: mdiGit, color: '#fc6d26' },
   { name: 'Material Design', iconPath: mdiMaterialDesign, color: '#888888' },
 ];
@@ -70,7 +61,7 @@ const SkillSet = () => {
             className={styles.skill}
             style={getColorStyle(it.color)}
           >
-            <Icon path={it.iconPath} size={iconSize} />
+            <Icon path={it.iconPath} size={iconSize}/>
             {it.name}
           </span>
         ))}
