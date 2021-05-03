@@ -93,6 +93,16 @@
       "name": "Eduardo Pratti",
       "photo": "https://unavatar.now.sh/twitter/edpratti?fallback=https://pbs.twimg.com/profile_images/560688750247051264/seXz0Y25_400x400.jpeg",
       "link": "https://pratti.design/"
+    },
+    {
+      "name": "Dany Gee",
+      "photo": "https://unavatar.now.sh/github/DanyGee",
+      "link": "https://github.com/DanyGee"
+    },
+    {
+      "name": "Evelyn Hathaway",
+      "photo": "https://unavatar.now.sh/github/evelynhathaway?fallback=https://evelyn.dev/static/bdcd5bb0827ad6143f8e7d1ade45ae20/c1f5f/headshot.webp",
+      "link": "https://evelyn.dev/"
     }
   ]
 }
