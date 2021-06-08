@@ -63,7 +63,7 @@ I use the default macOS terminal with a slightly modified `~/.bash_profile` for 
 * [DeltaHub Carpio](https://deltahub.io/)
 * [HyperDrive Duo 7 in 2 USB C Hub](https://amzn.to/3kTYahM)
 * [Anker 7 in 1 USB C Hub](https://amzn.to/3nSY1wZ)
-* [Apple Magic Keyboard](https://amzn.to/371l3dV)
+* [Keychron K3 with Brown Mechanical Switches](https://www.keychron.com/products/keychron-k3-wireless-mechanical-keyboard?variant=32220198699097)
 * [Logitech MX Master 2S](https://amzn.to/3kO2or6)
 * [Logitech HD Pro C920 WebCam](https://amzn.to/372apDI)
 * [Pacific Blue iPhone 12 Pro](https://amzn.to/396rFun)
