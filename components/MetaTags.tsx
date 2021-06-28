@@ -1,4 +1,4 @@
-import { useContext, useEffect, useMemo, useState } from 'react';
+import { useContext, useMemo, useState } from 'react';
 import NextHead from 'next/head';
 import { PageProps } from '@components/types';
 import ThemeContext from '@components/theme/ThemeContext';
@@ -20,13 +20,10 @@ const MetaTags = (props: MetaTagsProps) => {
   } = props;
   const { isDark = false } = useContext(ThemeContext);
   const [siteColor, setSiteColor] = useState('#ebf0fb');
-  const [actualImage, setActualImage] = useState('');
 
-  useEffect(() => {
-    setActualImage(image
-                   ? image.length > 0 ? image : defaultImage
-                   : defaultImage);
-  }, [image]);
+  const actualImage = image
+                      ? image.length > 0 ? image : defaultImage
+                      : defaultImage;
 
   useMemo(() => {
     setSiteColor(isDark ? '#080f1e' : '#ebf0fb');
