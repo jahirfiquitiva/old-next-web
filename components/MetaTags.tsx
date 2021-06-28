@@ -4,11 +4,14 @@ import { PageProps } from '@components/types';
 import ThemeContext from '@components/theme/ThemeContext';
 
 const defaultImage = 'https://jahir.dev/assets/images/brand/banner.png';
+const defaultLogoImage = 'https://jahir.dev/assets/images/brand/logo-full-me.png';
+
+type MetaImageStyle = 'summary_large_image' | 'summary';
 
 export interface MetaTagsProps extends PageProps {
   exactUrl?: string;
   siteType?: 'portfolio' | 'website' | 'blog';
-  metaImageStyle?: 'summary_large_image' | 'summary';
+  metaImageStyle?: MetaImageStyle;
 }
 
 const MetaTags = (props: MetaTagsProps) => {
@@ -21,9 +24,16 @@ const MetaTags = (props: MetaTagsProps) => {
   const { isDark = false } = useContext(ThemeContext);
   const [siteColor, setSiteColor] = useState('#ebf0fb');
 
+  const actualDefaultImage = metaImageStyle === 'summary'
+                             ? defaultLogoImage
+                             : defaultImage;
   const actualImage = image
-                      ? image.length > 0 ? image : defaultImage
-                      : defaultImage;
+                      ? image.length > 0 ? image : actualDefaultImage
+                      : actualDefaultImage;
+  const actualMetaImageStyle: MetaImageStyle = actualImage === defaultLogoImage
+                                               ? 'summary'
+                                               : metaImageStyle
+                                                 || 'summary_large_image';
 
   useMemo(() => {
     setSiteColor(isDark ? '#080f1e' : '#ebf0fb');
@@ -59,7 +69,7 @@ const MetaTags = (props: MetaTagsProps) => {
       <meta property={'twitter:url'} name={'twitter:url'}
             content={exactUrl}/>
       <meta property={'twitter:card'} name={'twitter:card'}
-            content={metaImageStyle}/>
+            content={actualMetaImageStyle}/>
       <meta property={'twitter:creator'} name={'twitter:creator'}
             content={'@jahirfiquitiva'}/>
       <meta property={'twitter:site'} name={'twitter:site'}
@@ -68,11 +78,9 @@ const MetaTags = (props: MetaTagsProps) => {
       <meta property={'twitter:description'} name={'twitter:description'}
             content={description}/>
       <meta property={'twitter:image'} name={'twitter:image'}
-            content={actualImage
-            || 'https://jahir.dev/assets/images/brand/logo-full-me.png'}/>
+            content={actualImage}/>
       <meta property={'twitter:image:src'} name={'twitter:image:src'}
-            content={actualImage
-            || 'https://jahir.dev/assets/images/brand/logo-full-me.png'}/>
+            content={actualImage}/>
 
       <link href={'https://plus.google.com/+JahirFiquitivaR/'}
             rel={'publisher'}/>
