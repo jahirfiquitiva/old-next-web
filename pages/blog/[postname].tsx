@@ -23,6 +23,7 @@ const BlogPost = ({
     keywords={keywords}
     image={image}
     page={frontmatter.page || 1}
+    siteType={'blog'}
     exactUrl={exactUrl}
     metaImageStyle={'summary_large_image'}
   >
@@ -55,14 +56,13 @@ export const getStaticProps: GetStaticProps = async ({ ...ctx }) => {
 
   // @ts-ignore
   const keywords = (frontmatter?.keywords || '').split('|')
-    ?.map((it: string) => it.trim());
+    ?.map((it: string) => it.trim())
+    ?.filter((it: string) => it.length > 0);
 
   return {
     props: {
-      // @ts-ignore
-      title: frontmatter?.title || config.default.title,
-      // @ts-ignore
-      description: frontmatter?.description | config.default.description,
+      title: config.default.title,
+      description: config.default.description,
       keywords: keywords.length
                 ? keywords || config.default.keywords
                 : config.default.keywords,
