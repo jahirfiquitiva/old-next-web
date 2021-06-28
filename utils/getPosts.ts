@@ -16,8 +16,12 @@ export const getPostDescription = (description?: string, content?: string,
   if (!content || ((content?.length || 0) <= 0)) {
     return defaultDescription || '';
   }
-  const plainText = removeMd(content);
-  const noNewLines = plainText.replace(/[\r\n]+/gm, '  ');
+  const noTitles = content?.split(/[\r\n]+/gm)
+    ?.filter((it: string) => !it.startsWith('#'))
+    ?.join('  ')
+    ?.trim();
+  const plainText = removeMd(noTitles);
+  const noNewLines = plainText.replace(/[\r\n]+/gm, '  ').trim();
   const splitContent = noNewLines.substring(0, 140);
   return splitContent.length > 0
          ? `${splitContent}...`
