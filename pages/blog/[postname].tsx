@@ -7,6 +7,7 @@ import Post from '@components/blog/single-post/post';
 import { FrontmatterProps } from '@components/blog/posts/post-list';
 import { getTableOfContents } from '@utils/getPosts';
 import { MetaTagsProps } from '@components/MetaTags';
+import { unique } from '@utils/unique';
 
 interface BlogPostProps extends MetaTagsProps {
   frontmatter: FrontmatterProps,
@@ -58,14 +59,13 @@ export const getStaticProps: GetStaticProps = async ({ ...ctx }) => {
   const keywords = (frontmatter?.keywords || '').split('|')
     ?.map((it: string) => it.trim())
     ?.filter((it: string) => it.length > 0);
+  const uniqueKeywords = unique([...keywords, ...(config.default.keywords)]);
 
   return {
     props: {
       title: config.default.title,
       description: config.default.description,
-      keywords: keywords.length
-                ? keywords || config.default.keywords
-                : config.default.keywords,
+      keywords: uniqueKeywords,
       image: actualHero.startsWith('/')
              ? `https://jahir.dev${actualHero}`
              : actualHero,
