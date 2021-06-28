@@ -1348,6 +1348,11 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
+"@types/remove-markdown@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@types/remove-markdown/-/remove-markdown-0.3.0.tgz#8014f12e4c45637c4cd190ae66afde189bec41d1"
+  integrity sha512-dmEUST4Olsw+S8OpQW6pyk3BBxogBb0qa6gqHJqmQ94zqhqSn1PnG592vcDbNnBDiQPiqCBagOaYqMduzO3oHA==
+
 "@types/scheduler@*":
   version "0.16.1"
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.1.tgz#18845205e86ff0038517aab7a18a62a6b9f71275"
@@ -4924,6 +4929,11 @@ remark-rehype@^8.0.0:
   integrity sha512-EbCu9kHgAxKmW1yEYjx3QafMyGY3q8noUbNUI5xyKbaFP89wbhDrKxyIQNukNYthzjNHZu6J7hwFg7hRm1svYA==
   dependencies:
     mdast-util-to-hast "^10.2.0"
+
+remove-markdown@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/remove-markdown/-/remove-markdown-0.3.0.tgz#5e4b667493a93579728f3d52ecc1db9ca505dc98"
+  integrity sha1-XktmdJOpNXlyjz1S7MHbnKUF3Jg=
 
 repeat-string@^1.0.0:
   version "1.6.1"

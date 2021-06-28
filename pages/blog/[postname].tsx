@@ -5,7 +5,7 @@ import getSlugs from '@utils/getSlugs';
 import Layout from '@components/Layout';
 import Post from '@components/blog/single-post/post';
 import { FrontmatterProps } from '@components/blog/posts/post-list';
-import { getTableOfContents } from '@utils/getPosts';
+import { getPostDescription, getTableOfContents } from '@utils/getPosts';
 import { MetaTagsProps } from '@components/MetaTags';
 import { unique } from '@utils/unique';
 
@@ -61,10 +61,14 @@ export const getStaticProps: GetStaticProps = async ({ ...ctx }) => {
     ?.filter((it: string) => it.length > 0);
   const uniqueKeywords = unique([...keywords, ...(config.default.keywords)]);
 
+  // @ts-ignore
+  const newDescription = getPostDescription(frontmatter?.description,
+    data?.content, config.default.description);
+
   return {
     props: {
       title: config.default.title,
-      description: config.default.description,
+      description: newDescription,
       keywords: uniqueKeywords,
       image: actualHero.startsWith('/')
              ? `https://jahir.dev${actualHero}`

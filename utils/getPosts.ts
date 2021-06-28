@@ -1,5 +1,6 @@
 import matter from 'gray-matter';
 import readingTime from 'reading-time';
+import removeMd from 'remove-markdown';
 import getRandomItemFrom from '@utils/getRandomItem';
 import { FrontmatterProps, PostProps } from '@components/blog/posts/post-list';
 
@@ -8,6 +9,20 @@ const defaultColors = [
   '#26de81', '#2bcbba', '#45aaf2',
   '#4b7bec', '#a55eea', '#778ca3',
 ];
+
+export const getPostDescription = (description?: string, content?: string,
+  defaultDescription?: string): string => {
+  if (description && ((description?.length || 0) > 0)) return description;
+  if (!content || ((content?.length || 0) <= 0)) {
+    return defaultDescription || '';
+  }
+  const plainText = removeMd(content);
+  const noNewLines = plainText.replace(/[\r\n]+/gm, '  ');
+  const splitContent = noNewLines.substring(0, 140);
+  return splitContent.length > 0
+         ? `${splitContent}...`
+         : defaultDescription || '';
+};
 
 export const getTableOfContents = (body?: string): string | null => {
   if (!body || !body.length) return null;
