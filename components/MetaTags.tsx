@@ -5,7 +5,19 @@ import ThemeContext from '@components/theme/ThemeContext';
 
 const defaultImage = 'https://jahir.dev/assets/images/brand/banner.png';
 
-const MetaTags = ({ title, description, keywords, image }: PageProps) => {
+export interface MetaTagsProps extends PageProps {
+  exactUrl?: string;
+  siteType?: 'portfolio' | 'website' | 'blog';
+  metaImageStyle?: 'summary_large_image' | 'summary';
+}
+
+const MetaTags = (props: MetaTagsProps) => {
+  const {
+    title, description, keywords, image,
+    exactUrl = 'https://jahir.dev',
+    siteType = 'portfolio',
+    metaImageStyle = 'summary',
+  } = props;
   const { isDark = false } = useContext(ThemeContext);
   const [siteColor, setSiteColor] = useState('#ebf0fb');
   const [actualImage, setActualImage] = useState('');
@@ -23,37 +35,47 @@ const MetaTags = ({ title, description, keywords, image }: PageProps) => {
   return (
     <NextHead>
       <meta charSet={'UTF-8'}/>
-      <meta name={'viewport'} content={'width=device-width, initial-scale=1.0'}/>
+      <meta name={'viewport'}
+            content={'width=device-width, initial-scale=1.0'}/>
       <meta httpEquiv={'x-ua-compatible'} content={'ie=edge'}/>
 
       <title>{title}</title>
 
+      <meta name={'title'} content={title}/>
       <meta name={'description'} content={description}/>
       <meta name={'author'} content={'Jahir Fiquitiva'}/>
       <meta name={'keywords'} content={(keywords || []).join(', ')}/>
-      <meta property={'og:title'} content={title}/>
-      <meta property={'og:site_name'} content={title}/>
 
       <meta itemProp={'name'} content={title}/>
       <meta itemProp={'description'} content={description}/>
       <meta itemProp={'image'} content={actualImage}/>
+      <link rel={'canonical'} href={'https://jahir.dev'}/>
 
       <meta property={'og:title'} content={title}/>
-      <meta property={'og:type'} content={'portfolio'}/>
-      <meta property={'og:url'} content={'https://jahir.dev'}/>
+      <meta property={'og:type'} content={siteType}/>
+      <meta property={'og:url'} content={exactUrl}/>
       <meta property={'og:image'} content={actualImage}/>
       <meta property={'og:description'} content={description}/>
       <meta property={'og:site_name'} content={title}/>
       <meta property={'og:locale'} content={'en_US'}/>
-      <link rel={'canonical'} href={'https://jahir.dev'}/>
 
-      <meta name={'twitter:card'} content={'summary'}/>
-      <meta name={'twitter:creator'} content={'@jahirfiquitiva'}/>
-      <meta name={'twitter:site'} content={'@jahirfiquitiva'}/>
-      <meta name={'twitter:title'} content={title}/>
-      <meta name={'twitter:description'} content={description}/>
-      <meta name={'twitter:image:src'}
-            content={'https://jahir.dev/assets/images/brand/logo-full-me.png'}/>
+      <meta property={'twitter:url'} name={'twitter:url'}
+            content={exactUrl}/>
+      <meta property={'twitter:card'} name={'twitter:card'}
+            content={metaImageStyle}/>
+      <meta property={'twitter:creator'} name={'twitter:creator'}
+            content={'@jahirfiquitiva'}/>
+      <meta property={'twitter:site'} name={'twitter:site'}
+            content={'@jahirfiquitiva'}/>
+      <meta property={'twitter:title'} name={'twitter:title'} content={title}/>
+      <meta property={'twitter:description'} name={'twitter:description'}
+            content={description}/>
+      <meta property={'twitter:image'} name={'twitter:image'}
+            content={actualImage
+            || 'https://jahir.dev/assets/images/brand/logo-full-me.png'}/>
+      <meta property={'twitter:image:src'} name={'twitter:image:src'}
+            content={actualImage
+            || 'https://jahir.dev/assets/images/brand/logo-full-me.png'}/>
 
       <link href={'https://plus.google.com/+JahirFiquitivaR/'}
             rel={'publisher'}/>

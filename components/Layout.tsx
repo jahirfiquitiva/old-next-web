@@ -1,8 +1,7 @@
 import Head from 'next/head';
-import { PageProps } from '@components/types';
 import Toolbar from '@components/global/toolbar/toolbar';
 import Content from '@components/global/content/content';
-import MetaTags from '@components/MetaTags';
+import MetaTags, { MetaTagsProps } from '@components/MetaTags';
 
 const defaultSiteDescription = 'Passionate and creative developer from Colombia '
   + '\uD83C\uDDE8\uD83C\uDDF4.\n'
@@ -18,21 +17,30 @@ const fonts = [
   'fira-code/fira-code-v10-latin-500.woff2',
 ];
 
-const Layout = ({
-  children,
-  title = 'Jahir Fiquitiva 💎',
-  description = defaultSiteDescription,
-  keywords = [],
-  image,
-  page = -1,
-}: PageProps) => {
+const Layout = (props: MetaTagsProps) => {
+  const {
+    children,
+    title = 'Jahir Fiquitiva 💎',
+    description = defaultSiteDescription,
+    keywords = [],
+    image,
+    page = -1,
+    exactUrl,
+    siteType,
+    metaImageStyle,
+  } = props;
+
   return (
     <>
       <MetaTags
         title={title}
         description={description}
         keywords={keywords}
-        image={image}/>
+        image={image}
+        exactUrl={exactUrl}
+        siteType={siteType}
+        metaImageStyle={metaImageStyle}
+      />
 
       <Head>
         {fonts.map((it, i) => {

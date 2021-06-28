@@ -4,24 +4,28 @@ import readingTime from 'reading-time';
 import getSlugs from '@utils/getSlugs';
 import Layout from '@components/Layout';
 import Post from '@components/blog/single-post/post';
-import { PageProps } from '@components/types';
 import { FrontmatterProps } from '@components/blog/posts/post-list';
 import { getTableOfContents } from '@utils/getPosts';
+import { MetaTagsProps } from '@components/MetaTags';
 
-interface BlogPostProps extends PageProps {
+interface BlogPostProps extends MetaTagsProps {
   frontmatter: FrontmatterProps,
   markdownBody: string,
 }
 
 const BlogPost = ({
-  frontmatter, markdownBody, title, description, keywords, image,
+  frontmatter, markdownBody, title, description, keywords, image, exactUrl,
 }: BlogPostProps) => {
   if (!frontmatter) return <></>;
   return (<Layout
     title={`${frontmatter.title} | Blog ~ ${title}`}
     description={frontmatter.description || description}
-    keywords={keywords} image={image}
-    page={frontmatter.page || 1}>
+    keywords={keywords}
+    image={image}
+    page={frontmatter.page || 1}
+    exactUrl={exactUrl}
+    metaImageStyle={'summary_large_image'}
+  >
     <Post frontmatter={frontmatter} mdBody={markdownBody}/>
   </Layout>);
 };
@@ -49,14 +53,23 @@ export const getStaticProps: GetStaticProps = async ({ ...ctx }) => {
     readingTime: readingTime(data.content),
   };
 
+  // @ts-ignore
+  const keywords = (frontmatter?.keywords || '').split('|')
+    ?.map((it: string) => it.trim());
+
   return {
     props: {
-      title: config.default.title,
-      description: config.default.description,
-      keywords: config.default.keywords,
+      // @ts-ignore
+      title: frontmatter?.title || config.default.title,
+      // @ts-ignore
+      description: frontmatter?.description | config.default.description,
+      keywords: keywords.length
+                ? keywords || config.default.keywords
+                : config.default.keywords,
       image: actualHero.startsWith('/')
              ? `https://jahir.dev${actualHero}`
              : actualHero,
+      exactUrl: `https://jahir.dev/blog/${postname}`,
       // @ts-ignore
       link: frontmatter.link || '',
       frontmatter,
