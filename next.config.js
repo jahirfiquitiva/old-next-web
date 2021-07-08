@@ -72,10 +72,11 @@ module.exports = nextTranslate({
 
     config.module.rules.push({
       test: /\.svg$/,
-      issuer: {
-        test: /\.(js|ts)x?$/,
-      },
       use: ['@svgr/webpack'],
+      type: 'javascript/auto',
+      issuer: {
+        and: [/\.(ts|tsx|js|jsx|md|mdx)$/],
+      },
     });
     config.module.rules.push({
       test: /\.md$/,
