@@ -65,8 +65,6 @@ export const getStaticProps: GetStaticProps = async ({ ...ctx }) => {
   const newDescription = getPostDescription(frontmatter?.description,
     data?.content, config.default.description);
 
-  console.log(newDescription);
-
   return {
     props: {
       title: config.default.title,

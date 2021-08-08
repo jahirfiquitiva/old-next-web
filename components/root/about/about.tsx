@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import ExtLink from '@components/global/ext-link/ext-link';
 import Social from '@components/global/social/social';
@@ -54,7 +53,7 @@ const About = () => {
           <Image
             loading={'lazy'}
             src={'/assets/images/me/me.jpg'}
-            alt={"Jahir's Photo"}
+            alt={'Jahir\'s Photo'}
             className={styles.photo}
             height={168}
             width={168}

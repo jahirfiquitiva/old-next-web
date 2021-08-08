@@ -52,7 +52,7 @@ const ContactForm = (props: any) => {
         window.grecaptcha
           .execute(props.reCaptchaKey, { action: reCaptchaAction })
           .then(setToken);
-      } catch (e: any) {}
+      } catch (e) {}
     });
   };
 

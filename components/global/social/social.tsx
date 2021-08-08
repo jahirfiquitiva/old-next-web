@@ -3,7 +3,6 @@ import { mdiGithub, mdiInstagram, mdiLinkedin, mdiTwitter } from '@mdi/js';
 import Icon from '@mdi/react';
 import useTranslation from 'next-translate/useTranslation';
 import styles from './social.module.css';
-import PolyworkLogo from './assets/polywork-rubix-icon-color.svg';
 
 const socialLinks = [
   {

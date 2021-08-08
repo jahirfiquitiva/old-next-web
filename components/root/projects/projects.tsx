@@ -52,7 +52,7 @@ const getSkill = (skillName: string): SkillProps | null => {
     return skills.filter(
       (it: SkillProps) => it.name.toLowerCase() === skillName.toLowerCase()
     )[0];
-  } catch (e: any) {
+  } catch (e) {
     return null;
   }
 };
