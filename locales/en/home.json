@@ -26,6 +26,10 @@
     },
     "fifth": {
       "a": "I'm currently a software technologist at"
+    },
+    "sixth": {
+      "a": "Learn more about me on",
+      "b": "my timeline"
     }
   },
   "find-me-on": "You can find me on",

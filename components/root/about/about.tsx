@@ -54,7 +54,7 @@ const About = () => {
           <Image
             loading={'lazy'}
             src={'/assets/images/me/me.jpg'}
-            alt={'Jahir\'s Photo'}
+            alt={"Jahir's Photo"}
             className={styles.photo}
             height={168}
             width={168}
@@ -78,6 +78,15 @@ const About = () => {
             newTab={false}
           />{' '}
           {t('home:details.first.c')}
+        </p>
+        <p>
+          {t('home:details.sixth.a')}{' '}
+          <ExtLink
+            to={'https://timeline.jahir.dev/'}
+            label={t('home:details.sixth.b')}
+            newTab
+          />
+          .
         </p>
       </div>
       <div className={styles.find}>
