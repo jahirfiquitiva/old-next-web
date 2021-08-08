@@ -16,7 +16,7 @@ const InspirationContent = ({ items }: { items: InspoItem[] }) => {
              rel={'noopener noreferrer'}>
             <div className={styles.card}>
               <h6>{it.title}</h6>
-              {(it.description?.length ?? 0 > 0) && (<p>{it.description}</p>)}
+              {((it.description?.length || 0) > 0) && (<p>{it.description}</p>)}
               <div className={styles.url}>
                 <img src={it.favicon ?? ''} width={24} height={24}/>
                 <p>{it.link}</p>

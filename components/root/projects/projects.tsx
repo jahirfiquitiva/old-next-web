@@ -43,7 +43,7 @@ const buildCustomLinkStylesForColor = (
     '--hl-color': safeColor,
     '--a-bg-grad-color': cColor,
     '--b-bg-grad-color': color,
-    '--c-bg-grad-color': aColor
+    '--c-bg-grad-color': aColor,
   });
 };
 
@@ -93,8 +93,8 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
   const renderNewProject = (it: ProjectProps) => {
     const { data } = it.icon ? usePalette(it.icon) : { data: null };
     const color = isDark
-                  ? getColorFromData(data, isDark) || it.color
-                  : it.color;
+      ? getColorFromData(data, isDark) || it.color
+      : it.color;
     const linkStyles = buildCustomLinkStylesForColor(color, isDark);
     return (
       <a
@@ -107,7 +107,6 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
         rel={'noopener noreferrer'}
         style={linkStyles}
       >
-
         <div className={styles.preview}>
           {it.preview?.length && (
             <Image
@@ -145,7 +144,7 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
     if (projects.length <= 0) {
       return (
         <>
-          <br/>
+          <br />
           <p>{t('projects:no-projects')} 🙃</p>
         </>
       );
@@ -164,13 +163,13 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
           <h2 className={styles.title}>
             👨‍💻&nbsp;&nbsp;
             <span className={'text-gradient grad-c'}>
-            {t('projects:projects')}
-          </span>
+              {t('projects:projects')}
+            </span>
           </h2>
-          <ExtLink label={'View resume'} to={'/resume'} newTab/>
+          <ExtLink label={'View resume'} to={'/resume'} newTab />
         </div>
         {/* @ts-ignore */}
-        <Stats className={styles.stats}/>
+        <Stats className={styles.stats} />
       </div>
       {renderProjects()}
     </div>
