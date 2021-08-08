@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useContext } from 'react';
 import Link from 'next/link';
 import { usePalette } from 'react-palette';
