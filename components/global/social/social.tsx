@@ -1,7 +1,9 @@
+import Image from 'next/image';
 import { mdiGithub, mdiInstagram, mdiLinkedin, mdiTwitter } from '@mdi/js';
 import Icon from '@mdi/react';
 import useTranslation from 'next-translate/useTranslation';
 import styles from './social.module.css';
+import PolyworkLogo from './assets/polywork-rubix-icon-color.svg';
 
 const socialLinks = [
   {
@@ -27,9 +29,7 @@ const socialLinks = [
     iconPath: mdiInstagram,
     className: styles.instagram,
     link: 'https://instagram.com/jahirfiquitiva',
-  }, /* {
-  siteName: 'Telegram',
-  iconPath: mdiTelegram,
+  }, /* {  siteName: 'Telegram',  iconPath: mdiTelegram,
   className: styles.telegram,
   link: 'https://t.me/jahirfiquitiva',
 }, {
@@ -43,12 +43,22 @@ const socialLinks = [
   className: styles.email,
   link: '/contact',
 } */
+  {
+    siteName: 'Timeline',
+    iconComponent: '/assets/images/social/polywork.svg',
+    className: styles.polywork,
+    link: 'https://timeline.jahir.dev',
+  },
 ];
 
 const iconSize = 0.9;
 const Social = ({
-  centered, size = iconSize,
-}: { centered?: boolean, size?: number }) => {
+  centered,
+  size = iconSize,
+}: {
+  centered?: boolean;
+  size?: number;
+}) => {
   const { t } = useTranslation();
   return (
     <div className={`${styles.social} ${centered ? styles.centered : ''}`}>
@@ -67,7 +77,10 @@ const Social = ({
               rel={'noopener noreferrer'}
               target={'_blank'}
             >
-              <Icon path={it.iconPath} size={size}/>
+              {it.iconPath && <Icon path={it.iconPath} size={size} />}
+              {it.iconComponent && (
+                <Image src={it.iconComponent} height={23} width={23} />
+              )}
             </a>
           );
         })}

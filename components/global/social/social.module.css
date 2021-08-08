@@ -104,3 +104,14 @@
 .social .button.email:focus {
   background-color: #ca4a51;
 }
+
+.social .button.polywork,
+.social .button.polywork:active {
+  background-color: #6959fc; /* #5846FC */
+  padding-top: .42rem;
+}
+
+.social .button.polywork:hover,
+.social .button.polywork:focus {
+  background-color: #4f3fe3;
+}
