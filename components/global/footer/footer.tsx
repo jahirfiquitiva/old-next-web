@@ -37,7 +37,7 @@ const Footer = () => {
               </span>
             </a>
           </Link>
-          <Social size={0.7}/>
+          <Social size={0.8}/>
           <p>
             {t('copyright')} © {new Date().getFullYear()}
           </p>

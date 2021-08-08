@@ -52,6 +52,7 @@ const socialLinks = [
 ];
 
 const iconSize = 0.9;
+const baseSvgSize = 25.6;
 const Social = ({
   centered,
   size = iconSize,
@@ -59,6 +60,8 @@ const Social = ({
   centered?: boolean;
   size?: number;
 }) => {
+  const svgSize = Math.floor(baseSvgSize * size);
+  const svgPadding = (0.4 + ((1 - size) * 0.25)).toFixed(2);
   const { t } = useTranslation();
   return (
     <div className={`${styles.social} ${centered ? styles.centered : ''}`}>
@@ -76,10 +79,19 @@ const Social = ({
               key={index}
               rel={'noopener noreferrer'}
               target={'_blank'}
+              style={
+                it.iconComponent
+                  ? { paddingTop: `${svgPadding}rem` }
+                  : undefined
+              }
             >
               {it.iconPath && <Icon path={it.iconPath} size={size} />}
               {it.iconComponent && (
-                <Image src={it.iconComponent} height={23} width={23} />
+                <Image
+                  src={it.iconComponent}
+                  height={svgSize}
+                  width={svgSize}
+                />
               )}
             </a>
           );
