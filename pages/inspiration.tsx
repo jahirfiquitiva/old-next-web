@@ -30,7 +30,7 @@ const getItemFavicon = async (item: BaseInspoItem) =>
       const results = await getWebsiteFavicon(item.link);
       resolve({
         ...item,
-        favicon: results?.results?.default ?? ''
+        favicon: results ? results?.results?.default ?? '' : '',
       });
     }
   );

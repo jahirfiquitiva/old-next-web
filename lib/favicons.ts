@@ -15,8 +15,6 @@ export const getWebsiteFavicon = async (website: string) => {
 
     if (response.status >= 200 && response.status < 300) {
       return response.json();
-    } else {
-      console.log(`Couldn't get favicon for website: "${website}"`);
     }
     return {};
   } catch (e) {
