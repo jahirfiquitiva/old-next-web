@@ -5,18 +5,28 @@ import getRandomItemFrom from '@utils/getRandomItem';
 import { FrontmatterProps, PostProps } from '@components/blog/posts/post-list';
 
 const defaultColors = [
-  '#fc5c65', '#fd9644', '#f7b731',
-  '#26de81', '#2bcbba', '#45aaf2',
-  '#4b7bec', '#a55eea', '#778ca3',
+  '#fc5c65',
+  '#fd9644',
+  '#f7b731',
+  '#26de81',
+  '#2bcbba',
+  '#45aaf2',
+  '#4b7bec',
+  '#a55eea',
+  '#778ca3'
 ];
 
-export const getPostDescription = (description?: string, content?: string,
-  defaultDescription?: string): string => {
-  if (description && ((description?.length || 0) > 0)) return description;
-  if (!content || ((content?.length || 0) <= 0)) {
+export const getPostDescription = (
+  description?: string,
+  content?: string,
+  defaultDescription?: string
+): string => {
+  if (description && (description?.length || 0) > 0) return description;
+  if (!content || (content?.length || 0) <= 0) {
     return defaultDescription || '';
   }
-  const noTitles = content?.split(/[\r\n]+/gm)
+  const noTitles = content
+    ?.split(/[\r\n]+/gm)
     ?.filter((it: string) => !it.startsWith('#'))
     ?.join('  ')
     ?.trim();
@@ -24,13 +34,14 @@ export const getPostDescription = (description?: string, content?: string,
   const noNewLines = plainText.replace(/[\r\n]+/gm, '  ').trim();
   const splitContent = noNewLines.substring(0, 140);
   return splitContent.length > 0
-         ? `${splitContent}...`
-         : defaultDescription || '';
+    ? `${splitContent}...`
+    : defaultDescription || '';
 };
 
 export const getTableOfContents = (body?: string): string | null => {
   if (!body || !body.length) return null;
-  const lines = body.split(/\r\n|\n\r|\n|\r/)
+  const lines = body
+    .split(/\r\n|\n\r|\n|\r/)
     .filter((it) => it.trim().startsWith('#'));
   let mainTitle = '';
   for (const line of lines) {
@@ -61,18 +72,19 @@ export const getTableOfContents = (body?: string): string | null => {
 };
 
 const getPosts = (context: any) => {
-  const keys = context.keys();
+  const keys = context.keys().filter((it: string) => it.startsWith('posts'));
   const values = keys.map(context);
+
   const data = keys.map((key: string, index: number) => {
     const slug = key.replace(/^.*[\\/]/, '').slice(0, -3);
     const value = values[index];
     const document = matter(value.default);
     const { hero } = document.data;
     const actualHero: string = hero
-                               ? hero.startsWith('http')
-                                 ? hero
-                                 : `/assets/images/posts/${hero}`
-                               : '';
+      ? hero.startsWith('http')
+        ? hero
+        : `/assets/images/posts/${hero}`
+      : '';
     const calculatedTime = readingTime(document.content);
     const frontmatter = {
       ...document.data,
@@ -92,11 +104,13 @@ const getPosts = (context: any) => {
     return post;
   });
 
-  return (data || []).filter((it: string) => it)
+  return (data || [])
+    .filter((it: string) => it)
     .sort(
-      (a: { frontmatter: FrontmatterProps },
-        b: { frontmatter: FrontmatterProps }) =>
-        (b.frontmatter.date || '').localeCompare((a.frontmatter.date || ''))
+      (
+        a: { frontmatter: FrontmatterProps },
+        b: { frontmatter: FrontmatterProps }
+      ) => (b.frontmatter.date || '').localeCompare(a.frontmatter.date || '')
     );
 };
 

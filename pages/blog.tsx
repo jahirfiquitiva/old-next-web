@@ -13,9 +13,13 @@ interface BlogProps extends PageProps {
 const Blog = ({ posts, form, title, description, keywords }: BlogProps) => {
   return (
     <>
-      <Layout title={title} description={description} keywords={keywords}
-              page={1}>
-        <PostsList posts={posts} form={form}/>
+      <Layout
+        title={title}
+        description={description}
+        keywords={keywords}
+        page={1}
+      >
+        <PostsList posts={posts} form={form} />
       </Layout>
     </>
   );
@@ -32,8 +36,8 @@ export const getStaticProps: GetStaticProps = async () => {
     // @ts-ignore
   })(require.context('../posts', true, /\.md$/));
 
-  const form = await formium.getFormBySlug(
-    process.env.FORMIUM_BLOG_FORM_SLUG || '')
+  const form = await formium
+    .getFormBySlug(process.env.FORMIUM_BLOG_FORM_SLUG || '')
     .catch(() => ({ id: '' }));
 
   return {

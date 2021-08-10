@@ -9,34 +9,39 @@ interface InspirationProps extends PageProps {
 }
 
 const Inspiration = ({
-  title, description, keywords, inspirationItems,
+  title,
+  description,
+  keywords,
+  inspirationItems,
 }: InspirationProps) => {
   return (
     <Layout title={title} description={description} keywords={keywords}>
-      <InspirationContent items={inspirationItems || []}/>
+      <InspirationContent items={inspirationItems || []} />
     </Layout>
   );
 };
 
 export default Inspiration;
 
-const getItemFavicon = async (item: BaseInspoItem) => new Promise(
-// eslint-disable-next-line no-async-promise-executor
-  async (resolve) => {
-    const results = await getWebsiteFavicon(item.link);
-    resolve({
-      ...item,
-      favicon: results?.results?.default ?? '',
-    });
-  });
+const getItemFavicon = async (item: BaseInspoItem) =>
+  new Promise(
+    // eslint-disable-next-line no-async-promise-executor
+    async (resolve) => {
+      const results = await getWebsiteFavicon(item.link);
+      resolve({
+        ...item,
+        favicon: results?.results?.default ?? ''
+      });
+    }
+  );
 
 export const getStaticProps: GetStaticProps = async () => {
   const configData = await import('../siteconfig.json');
 
   const inspoData = await import('../data/inspiration.json');
   const mappedInspo = await Promise.all(
-    (inspoData.default || []).map(getItemFavicon))
-    .catch(() => []);
+    (inspoData.default || []).map(getItemFavicon)
+  ).catch(() => []);
 
   return {
     props: {
