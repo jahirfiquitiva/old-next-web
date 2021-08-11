@@ -5,7 +5,7 @@ interface FaviconGrabberIcon {
   src: string;
 }
 
-export const getWebsiteFavicon = async (website: string) : Promise<string> => {
+export const getWebsiteFavicon = async (website: string): Promise<string> => {
   try {
     const domain = website.replace(/(^\w+:|^)\/\//, '').replace(/\//g, '');
     const faviconGrabber = await fetch(
@@ -15,26 +15,31 @@ export const getWebsiteFavicon = async (website: string) : Promise<string> => {
     if (faviconGrabber.status >= 200 && faviconGrabber.status < 300) {
       const faviconData = await faviconGrabber.json();
       const icons = faviconData?.icons || [];
-      const icon = icons
-        .filter((it:FaviconGrabberIcon) => {
+      const ttPixelsIcons = icons
+        .filter((it: FaviconGrabberIcon) => {
           return (
             (it?.sizes || '')?.includes('32') || (it?.src || '')?.includes('32')
           );
+        }) || [];
+      const icon = (ttPixelsIcons.length > 0 ? ttPixelsIcons : icons)
+        .filter((it: FaviconGrabberIcon) => {
+          return !(it?.src || '')?.startsWith('data');
         })
-        ?.shift() || icons?.shift();
+        .shift();
       return icon?.src || '';
     }
 
-    const webmasterApi = await fetch('https://api.webmasterapi.com/v1/favicon', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        apiKey,
-        url: domain,
-      }),
-    });
+    const webmasterApi = await fetch('https://api.webmasterapi.com/v1/favicon',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          apiKey,
+          url: domain,
+        }),
+      });
 
     if (webmasterApi.status >= 200 && webmasterApi.status < 300) {
       const webmasterApiJson = await webmasterApi.json();
