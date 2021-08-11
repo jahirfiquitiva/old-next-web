@@ -17,15 +17,11 @@ export const getWebsiteFavicon = async (website: string): Promise<string> => {
       const icons = faviconData?.icons || [];
       const ttPixelsIcons = icons
         .filter((it: FaviconGrabberIcon) => {
-          return (
+          return !(it?.src || '')?.startsWith('data') && (
             (it?.sizes || '')?.includes('32') || (it?.src || '')?.includes('32')
           );
         }) || [];
-      const icon = (ttPixelsIcons.length > 0 ? ttPixelsIcons : icons)
-        .filter((it: FaviconGrabberIcon) => {
-          return !(it?.src || '')?.startsWith('data');
-        })
-        .shift();
+      const icon = (ttPixelsIcons.length > 0 ? ttPixelsIcons : icons)?.shift();
       return icon?.src || '';
     }
 
