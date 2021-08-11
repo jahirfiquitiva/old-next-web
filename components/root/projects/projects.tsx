@@ -22,6 +22,7 @@ export interface ProjectProps {
   preview?: string;
   link?: string;
   color?: string;
+  darkColor?: string;
   tag?: string;
   stack?: string[];
 }
@@ -33,10 +34,11 @@ interface ProjectsProps {
 // @ts-ignore
 const buildCustomLinkStylesForColor = (
   color?: string | null,
+  textColor?: string | null,
   isDark?: boolean
 ): CSSProperties => {
   const [aColor, cColor] = getAnalogousColors(color);
-  const safeColor = getReadableColor(color, isDark);
+  const safeColor = getReadableColor(textColor || color, isDark);
   return buildCustomStyles({
     '--shadow-color': hexToRGB(safeColor, 0.3),
     '--border-color': hexToRGB(safeColor, 0.4),
@@ -93,9 +95,15 @@ const Projects = ({ projects = [] }: ProjectsProps) => {
   const renderNewProject = (it: ProjectProps) => {
     const { data } = it.icon ? usePalette(it.icon) : { data: null };
     const color = isDark
-      ? getColorFromData(data, isDark) || it.color
+      ? it?.darkColor
+        ? it.darkColor
+        : getColorFromData(data, isDark) || it?.darkColor || it.color
       : it.color;
-    const linkStyles = buildCustomLinkStylesForColor(color, isDark);
+    const linkStyles = buildCustomLinkStylesForColor(
+      color,
+      it?.darkColor ? it.color : color,
+      isDark
+    );
     return (
       <a
         title={`${it.title} link`}

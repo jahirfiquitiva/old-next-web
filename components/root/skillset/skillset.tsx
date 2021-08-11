@@ -3,7 +3,7 @@ import {
   mdiAndroid, mdiGit, mdiLanguageCss3, mdiLanguageHtml5, mdiLanguageJava,
   mdiLanguageJavascript, mdiLanguageKotlin, mdiLanguagePython,
   mdiLanguageTypescript, mdiLeaf, mdiMaterialDesign, mdiNodejs,
-  mdiPuzzleOutline, mdiReact, mdiTriangle
+  mdiPuzzleOutline, mdiReact, mdiTriangle, mdiAccountGroupOutline,
 } from '@mdi/js';
 import hexToRGB from '@utils/hexToRgb';
 import buildCustomStyles from '@utils/buildCustomStyles';
@@ -14,6 +14,7 @@ export interface SkillProps {
   name: string;
   iconPath: string;
   color: string;
+  hide?: boolean;
 }
 
 export const skills: SkillProps[] = [
@@ -32,6 +33,7 @@ export const skills: SkillProps[] = [
   { name: 'Express', iconPath: mdiPuzzleOutline, color: '#888888' },
   { name: 'Git', iconPath: mdiGit, color: '#fc6d26' },
   { name: 'Material Design', iconPath: mdiMaterialDesign, color: '#888888' },
+  { name: 'Community', iconPath: mdiAccountGroupOutline, color: '#888888', hide: true },
 ];
 
 const iconSize = 0.75;
@@ -55,7 +57,7 @@ const SkillSet = () => {
         </span>
       </h4>
       <div className={styles.skillset}>
-        {skills.map((it: SkillProps, i: number) => (
+        {skills.filter((it) => !it?.hide).map((it: SkillProps, i: number) => (
           <span
             key={i}
             className={styles.skill}

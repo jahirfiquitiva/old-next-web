@@ -7,11 +7,7 @@
     "link": "https://github.com/jahirfiquitiva/Blueprint/",
     "color": "#4d8af0",
     "tag": "android",
-    "stack": [
-      "android",
-      "kotlin",
-      "material design"
-    ]
+    "stack": ["android", "kotlin", "material design"]
   },
   {
     "title": "Frames",
@@ -21,11 +17,7 @@
     "link": "https://github.com/jahirfiquitiva/Frames/",
     "color": "#35b4ef",
     "tag": "android",
-    "stack": [
-      "android",
-      "kotlin",
-      "material design"
-    ]
+    "stack": ["android", "kotlin", "material design"]
   },
   {
     "title": "Kuper",
@@ -35,11 +27,7 @@
     "link": "https://github.com/jahirfiquitiva/Kuper/",
     "color": "#6673C0",
     "tag": "android",
-    "stack": [
-      "android",
-      "kotlin",
-      "material design"
-    ]
+    "stack": ["android", "kotlin", "material design"]
   },
   {
     "title": "Pals",
@@ -49,11 +37,7 @@
     "link": "https://jahir.xyz/PalsApp",
     "color": "#4285F4",
     "tag": "android",
-    "stack": [
-      "android",
-      "kotlin",
-      "material design"
-    ]
+    "stack": ["android", "kotlin", "material design"]
   },
   {
     "title": "Tap",
@@ -63,11 +47,7 @@
     "link": "https://jahir.xyz/TapApp",
     "color": "#E69494",
     "tag": "android",
-    "stack": [
-      "android",
-      "kotlin",
-      "material design"
-    ]
+    "stack": ["android", "kotlin", "material design"]
   },
   {
     "title": "ChipView",
@@ -77,11 +57,7 @@
     "link": "https://github.com/jahirfiquitiva/ChipView/",
     "color": "#3E95FB",
     "tag": "android",
-    "stack": [
-      "android",
-      "kotlin",
-      "material design"
-    ]
+    "stack": ["android", "kotlin", "material design"]
   },
   {
     "title": "FABsMenu",
@@ -91,11 +67,7 @@
     "link": "https://github.com/jahirfiquitiva/FABsMenu/",
     "color": "#eb3b75",
     "tag": "android",
-    "stack": [
-      "android",
-      "java",
-      "material design"
-    ]
+    "stack": ["android", "java", "material design"]
   },
   {
     "title": "Dashbud",
@@ -105,12 +77,7 @@
     "preview": "/assets/images/projects/web/dashbud-preview.png",
     "color": "#9853fd",
     "tag": "web",
-    "stack": [
-      "HTLM5",
-      "css3",
-      "javascript",
-      "react"
-    ]
+    "stack": ["HTLM5", "css3", "javascript", "react"]
   },
   {
     "title": "Changes",
@@ -120,13 +87,7 @@
     "link": "/changes/",
     "color": "#27b6c0",
     "tag": "web",
-    "stack": [
-      "HTLM5",
-      "css3",
-      "typescript",
-      "react",
-      "nextjs"
-    ]
+    "stack": ["HTLM5", "css3", "typescript", "react", "nextjs"]
   },
   {
     "title": "Prev Websites",
@@ -136,11 +97,18 @@
     "preview": "/assets/images/projects/web/websites-preview.png",
     "color": "#88a4e6",
     "tag": "web",
-    "stack": [
-      "HTLM5",
-      "css3",
-      "javascript"
-    ]
+    "stack": ["HTLM5", "css3", "javascript"]
+  },
+  {
+    "title": "BoyaConf",
+    "description": "boyaconf",
+    "icon": "/assets/images/projects/other/boyaconf.png",
+    "link": "https://boyaconf.com",
+    "preview": "/assets/images/projects/other/boyaconf-preview.png",
+    "color": "#4dcc89",
+    "darkColor": "#00202b",
+    "tag": "conference",
+    "stack": ["community", "HTLM5", "css3", "javascript"]
   },
   {
     "title": "Sliding Puzzle",
@@ -150,9 +118,7 @@
     "preview": "/assets/images/projects/other/sliding-puzzle-preview.png",
     "color": "#929292",
     "tag": "python",
-    "stack": [
-      "python"
-    ]
+    "stack": ["python"]
   },
   {
     "title": "Stan",
@@ -161,9 +127,7 @@
     "link": "https://github.com/jahirfiquitiva/stanbot/",
     "color": "#FC8303",
     "tag": "python",
-    "stack": [
-      "python"
-    ]
+    "stack": ["python"]
   },
   {
     "title": "More",
