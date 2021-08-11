@@ -27,11 +27,12 @@ const getItemFavicon = async (item: BaseInspoItem) =>
   new Promise(
     // eslint-disable-next-line no-async-promise-executor
     async (resolve) => {
-      const results = await getWebsiteFavicon(item.link);
-      resolve({
-        ...item,
-        favicon: results ? results?.results?.default ?? '' : '',
-      });
+      let favicon = '';
+      try {
+        favicon = await getWebsiteFavicon(item.link);
+      } catch (e) {
+      }
+      resolve({ ...item, favicon });
     }
   );
 

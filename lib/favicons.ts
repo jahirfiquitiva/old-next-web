@@ -1,23 +1,47 @@
 const apiKey = process.env.WEBMASTER_API_KEY || '';
 
-export const getWebsiteFavicon = async (website: string) => {
+interface FaviconGrabberIcon {
+  sizes?: string;
+  src: string;
+}
+
+export const getWebsiteFavicon = async (website: string) : Promise<string> => {
   try {
-    const response = await fetch('https://api.webmasterapi.com/v1/favicon', {
+    const domain = website.replace(/(^\w+:|^)\/\//, '').replace(/\//g, '');
+    const faviconGrabber = await fetch(
+      `https://favicongrabber.com/api/grab/${domain}?pretty=true`
+    );
+
+    if (faviconGrabber.status >= 200 && faviconGrabber.status < 300) {
+      const faviconData = await faviconGrabber.json();
+      const icons = faviconData?.icons || [];
+      const icon = icons
+        .filter((it:FaviconGrabberIcon) => {
+          return (
+            (it?.sizes || '')?.includes('32') || (it?.src || '')?.includes('32')
+          );
+        })
+        ?.shift() || icons?.shift();
+      return icon?.src || '';
+    }
+
+    const webmasterApi = await fetch('https://api.webmasterapi.com/v1/favicon', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         apiKey,
-        url: website,
+        url: domain,
       }),
     });
 
-    if (response.status >= 200 && response.status < 300) {
-      return response.json();
+    if (webmasterApi.status >= 200 && webmasterApi.status < 300) {
+      const webmasterApiJson = await webmasterApi.json();
+      return webmasterApiJson?.results?.default ?? '';
     }
-    return {};
+    return '';
   } catch (e) {
-    return {};
+    return '';
   }
 };

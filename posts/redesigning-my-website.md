@@ -238,7 +238,7 @@ Based on [Brian Lovin's bookmarks](https://brianlovin.com/bookmarks/website) I w
 some [links](/inspiration) to websites or tools that have been inspiring my work and even some of my
 projects. Probably not enough to recognize their work and quality and creativity in what they do.
 
-I'm using the [WebMaster API](https://www.webmasterapi.com/get-favicons) to get the sites favicons.
+I'm using the [Favicon Grabber API](https://favicongrabber.com/service-api-reference) and [WebMaster API](https://www.webmasterapi.com/get-favicons) to get the sites favicons. The latter is used just in case the first one fails.
 
 ## Closing up
 

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { mdiWeb } from '@mdi/js';
 import Icon from '@mdi/react';
 import { InspoItem } from '@components/types';
@@ -26,7 +25,7 @@ const InspirationContent = ({ items }: { items: InspoItem[] }) => {
                   {(it.description?.length || 0) > 0 && <p>{it.description}</p>}
                   <div className={styles.url}>
                     {it.favicon && (it.favicon?.length || 0)
-                      ? (<Image src={it.favicon ?? ''} width={24} height={24} />)
+                      ? (<img src={it.favicon ?? ''} width={24} height={24} />)
                       : (<Icon path={mdiWeb} size={0.8} />)
                     }
                     <p>{it.link}</p>
