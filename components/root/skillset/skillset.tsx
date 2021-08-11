@@ -3,7 +3,7 @@ import {
   mdiAndroid, mdiGit, mdiLanguageCss3, mdiLanguageHtml5, mdiLanguageJava,
   mdiLanguageJavascript, mdiLanguageKotlin, mdiLanguagePython,
   mdiLanguageTypescript, mdiLeaf, mdiMaterialDesign, mdiNodejs,
-  mdiPuzzleOutline, mdiReact, mdiTriangle, mdiAccountGroupOutline,
+  mdiPuzzleOutline, mdiReact, mdiTriangle, mdiAccountGroupOutline
 } from '@mdi/js';
 import hexToRGB from '@utils/hexToRgb';
 import buildCustomStyles from '@utils/buildCustomStyles';
