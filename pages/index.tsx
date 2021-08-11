@@ -2,7 +2,8 @@ import { GetStaticProps } from 'next';
 import { PageProps } from '@components/types';
 import Layout from '@components/Layout';
 import About from '@components/root/about/about';
-import Projects, { ProjectProps } from '@components/root/projects/projects';
+import Projects from '@components/root/projects/projects';
+import { ProjectProps } from '@components/root/projects/project';
 
 interface IndexProps extends PageProps {
   projects: ProjectProps[];
