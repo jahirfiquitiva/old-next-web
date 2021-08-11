@@ -135,6 +135,7 @@
     "icon": "/assets/images/projects/other/more.png",
     "link": "https://jahir.xyz/github",
     "color": "#92a3b5",
-    "tag": "other"
+    "tag": "other",
+    "stack": ["git"]
   }
 ]

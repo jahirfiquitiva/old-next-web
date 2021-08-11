@@ -321,7 +321,7 @@
   }
 
   .projects .grid .item .preview {
-    transform: translateX(50%) translateY(6%);
+    transform: translateX(25%) translateY(15%);
   }
 
   .projects .grid .item .content .wrapper {
@@ -348,5 +348,9 @@
 @media (min-width: 960px) {
   .projects {
     padding: 1rem 0 3rem;
+  }
+
+  .projects .grid .item .preview {
+    transform: translateX(50%) translateY(6%);
   }
 }
