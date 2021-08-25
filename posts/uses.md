@@ -18,8 +18,8 @@ This website is built using TypeScript, custom CSS (no frameworks/libraries), [N
 
 I use the default macOS terminal with a slightly modified `~/.bash_profile` for it to [show emoji](https://dev.to/anthonydelgado/adding-emoji-to-your-terminal-on-osx-9oj) and the git branch and status in the prompt
 
-* [WebStorm](https://www.jetbrains.com/webstorm/), [IntelliJ IDEA](https://www.jetbrains.com/idea/), [PyCharm](https://www.jetbrains.com/pycharm/) and [Android Studio](https://developer.android.com/studio)
-* [Material Theme UI](https://plugins.jetbrains.com/plugin/8006-material-theme-ui/) plugin
+* VS Code, IntelliJ IDEA and [Android Studio](https://developer.android.com/studio)
+* Material Theme Ocean
 * [Fira Code](https://github.com/tonsky/FiraCode) font
 
 ### 📌  Browser Extensions (Brave)
@@ -38,7 +38,6 @@ I use the default macOS terminal with a slightly modified `~/.bash_profile` for 
 ### 💡  Apps
 
 * [Craft](https://craft.do/)
-* [Notion](https://notion.so/)
 * [GoodNotes](https://www.goodnotes.com/)
 * [1Password](https://1password.com/)
 * [AirBuddy](https://v2.airbuddy.app/)
@@ -54,12 +53,16 @@ I use the default macOS terminal with a slightly modified `~/.bash_profile` for 
 * [Battery Indicator](https://sindresorhus.com/battery-indicator)
 * [Rocket Pro](http://matthewpalmer.net/rocket/)
 * [SoundSource](https://rogueamoeba.com/soundsource/)
+* [LyricsX](https://github.com/ddddxxx/LyricsX)
+* [AppCleaner](https://freemacsoft.net/appcleaner/)
+* [Type Fu](https://type-fu.com/)
+* [Raycast](https://www.raycast.com/) (replaced Spotlight)
 
 ### 💻  Hardware
 
 * [2019 16" MacBook Pro](https://support.apple.com/kb/SP809) (Work) _2.6 GHz Six-Core Intel Core i7, 512GB SSD and 16GB RAM_
 * [2020 13" MacBook Pro](https://support.apple.com/kb/SP819) (Personal) _2.0 GHz Quad-Core Intel Core i5, 512GB SSD and 16GB RAM_
-* [LG 27UK850-W 27" 4K Monitor](https://amzn.to/33anjOW) that's on a [Stand Riser](https://amzn.to/3a7zEaj)
+* [LG 27UK850-W 27" 4K Monitor](https://amzn.to/33anjOW) floating on a [VIVO mount](https://www.amazon.com/dp/B0155LJATK/)
 * [DeltaHub Carpio](https://deltahub.io/)
 * [HyperDrive Duo 7 in 2 USB C Hub](https://amzn.to/3kTYahM)
 * [Anker 7 in 1 USB C Hub](https://amzn.to/3nSY1wZ)
