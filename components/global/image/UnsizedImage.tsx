@@ -20,7 +20,8 @@ const UnsizedImage: FC<UnsizedImageProps> = (props) => {
         // @ts-ignore
         layout={'fill'}
         objectFit={'contain'}
-        {...rest}/>
+        {...rest}
+        unoptimized/>
     </div>);
   }
   return (<img
